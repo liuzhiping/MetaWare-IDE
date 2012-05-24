@@ -1,0 +1,104 @@
+<html>
+<head>
+<title>Setting Breakpoints</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel=StyleSheet href="../default.css">
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000">
+<h1>Setting breakpoints</h1>
+
+<p>The <b>Set Breakpoint</b> dialog allows you to make conditional breakpoints,
+  temporary breakpoints, or add a count.</p>
+
+<p><I>Note:</I> The ability to set breakpoints might be limited by your target
+  hardware configuration or host-to-target interface.</p>
+
+<h3>Setting a breakpoint</h3>
+
+<p>The debugger allows you to set breakpoints on a line of source code, a function
+  name, or an instruction address.</p>
+<p>To set a breakpoint on a line of source code:<a name="set_break_source"></a></p>
+
+<ol>
+  <li>Open the <b>Set Breakpoint</b> dialog by selecting <b>Tools | Set Breakpoint</b> 
+    from the main menu. </li>
+  <li>Select <code>File!line</code>.</li>
+  <li>In the <b>Set Breakpoint On:</b> field, enter the breakpoint line location 
+    using the format: &lt;file&gt;!&lt;line&gt;. Where &lt;file&gt; is the full 
+    path and name of the file and &lt;line&gt; is the line number. The following 
+    examples set a breakpoint on line 32 of the source file queens.c:
+    <ul>
+      <li><code>!32</code></li>
+      <li><code>c:\hcarc\demos\sc\queens.c!32</code></li>
+    </ul>
+  </li>
+  <li>Click <b>Set.</b></li>
+  <li>Click <b>Close</b> when finished<b>.</b></li>
+</ol>
+<p><a name="set_break_function"></a>To set a breakpoint on a function:</p>
+<ol>
+  <li>Open the <b>Set Breakpoint</b> dialog by selecting <b>Tools | Set Breakpoint</b> 
+    from the main menu. </li>
+  <li>Select <code>Function</code>.</li>
+  <li>In the <b>Set Breakpoint On:</b> field, enter the name of the function without 
+    the parentheses ( ). For example, entering <code>Try</code> will set a breakpoint 
+    on the function Try().</li>
+  <li>Click <b>Set.</b></li>
+  <li>Click <b>Close</b> when finished<b>.</b></li>
+</ol>
+<p><a name="set_break_instruction"></a>To set a breakpoint on an instruction address:</p>
+<ol>
+  <li>Open the <b>Set Breakpoint</b> dialog by selecting <b>Tools | Set Breakpoint</b> 
+    from the main menu. </li>
+  <li>Select <code>Address</code>.</li>
+  <li>In the <b>Set Breakpoint On:</b> field, enter a hexidecimal address or symbolic 
+    label such as <code>main+0x24</code> or <code>0x012e4</code>.</li>
+  <li>Click <b>Set.</b></li>
+  <li>Click <b>Close</b> when finished<b>.</b></li>
+</ol>
+
+<h3>Setting the Breakpoint Type</h3>
+<p>
+    Specify the type of breakpoint, either software, hardware, or to let the debugger decide.
+    Select either of the following:
+    <ul>
+      <li><b>Hard</b> to attempt to set a hardware breakpoint</li>
+      <li><b>Soft</b> to set a software breakpoint</li>
+      <li><b>Let the debugger decide</b> and the debugger will set the breakpoint based on the targer system.
+      </li>
+    </ul>
+</p>
+
+<h3><a name="set_break_repeat_count"></a>Setting repeat counts</h3>
+
+<p>Enter an integer <i>N</i> in the <b>Count:</b> field
+  to stop execution after the breakpoint has been encountered <i>N</i>
+  times.</p>
+
+<h3><a name="set_temp_break"></a>Temporary breakpoints</h3>
+
+<p>Check the <b>Temporary:</b> box to make the breakpoint temporary. Temporary
+  breakpoints are disappear after they have been reached. You can combine a repeat
+  count with a temporary breakpoint by setting a repeat count to number <i>N</i>
+  and checking <b>Temporary:</b>. The breakpoint will be skipped <i>N</i> times
+  anbd will be reached only once.</p>
+<h3><a name="set_conditional_break"></a>Setting a conditional breakpoint</h3>
+<p>Enter an <a href="../displays/Regular_Expression_Conventions.htm">expression</a>
+  in the <b>Condition:</b> field to evaluate the expression when the breakpoint
+  is reached. This input field allows you to enter an expression to be evaluated
+  each time a breakpoint is reached. If the expression evaluates to non-zero,
+  execution stops on the breakpoint. Otherwise, execution skips the breakpoint
+  and continues.</p>
+<p>For example, if you enter <code>r1 == 3</code>, execution stops when register
+  r1 <span style="margin-left: 40px;">has the value 3. If you enter <code>I+J
+  == KM</code>, execution stops when the sum of I and J equals K.</span></p>
+<p><span style="margin-left: 40px;">The condition must be a valid expression when
+  the breakpoint occurs. If the condition is not valid the debugger stops execution
+  and show an error message in the <b>Debug Console</b>. The expression is not
+  checked for correctness when you set the breakpoint, and is evaluated only when
+  reached.</span></p>
+
+<p>&nbsp;</p>
+</body>
+</html>

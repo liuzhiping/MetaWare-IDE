@@ -1,0 +1,1750 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+<plugin>
+
+   
+<!--   <extension
+         id="ARCExternalScannerInfoProvider"
+         name="ARC External Scanner Info Provider"
+         point="org.eclipse.cdt.make.core.ExternalScannerInfoProvider">
+      <externalScannerInfoProvider >
+         <run class="org.eclipse.cdt.make.internal.core.scannerconfig.DefaultExternalScannerInfoProvider">
+            <parameter
+                  value="hcac"
+                  name="defaultCommand"/>
+            <parameter
+                  value="-Hbatchnotmp -Hnoobj ${plugin_state_location}/${specs_file}"
+                  name="defaultAttributes"/>
+         </run>
+      </externalScannerInfoProvider>
+   </extension> -->
+   <extension
+         point="org.eclipse.cdt.managedbuilder.core.buildDefinitions">
+      <tool
+            command="mcc"
+            id="com.arc.cdt.toolchain.arc.compiler"
+            isAbstract="true"
+            name="MetaWare ARC C/C++ Compiler"
+            obsoleteIDs="arc.compiler.options.minmax"
+            superClass="com.arc.cdt.toolchain.toolCompiler">
+         <optionCategory
+               id="arc.compiler.options.category.target"
+               name="Processor/Extensions">
+         </optionCategory>
+         <option
+               category="arc.compiler.options.category.target"
+               defaultValue="arc.compiler.options.target.arc600"
+               id="arc.compiler.options.target.version"
+               name="ARC Core Version"
+               tip="Specify the target ARC processor"
+               valueType="enumerated">
+            <enumeratedOptionValue
+                  command="-arcv2em"
+                  id="arc.compiler.options.target.arcv2em"
+                  name="ARCv2EM">
+            </enumeratedOptionValue>
+            <enumeratedOptionValue
+                  command="-arc700"
+                  id="arc.compiler.options.target.arc700"
+                  name="ARC 700">
+            </enumeratedOptionValue>
+            <enumeratedOptionValue
+                  command="-arc600"
+                  id="arc.compiler.options.target.arc600"
+                  isDefault="true"
+                  name="ARC 600">
+            </enumeratedOptionValue>
+            <enumeratedOptionValue
+                  command="-arc601"
+                  id="arc.compiler.options.target.arc601"
+                  name="ARC 601">
+            </enumeratedOptionValue>
+            <enumeratedOptionValue
+                  command="-a5"
+                  id="arc.compiler.options.target.arc5"
+                  isDefault="false"
+                  name="ARC 5">
+            </enumeratedOptionValue>
+         </option>
+         <option
+               applicabilityCalculator="com.arc.cdt.toolchain.arc.ArcApplicabilityCalculator"
+               category="arc.compiler.options.category.target"
+               id="arc.compiler.options.arc5core"
+               name="ARC 5 Core"
+               tip="Specify the ARC 5 core for which to generate code"
+               valueType="enumerated">
+            <enumeratedOptionValue
+                  command="-core1"
+                  id="arc.compiler.options.arc5core.core1"
+                  name="Core 1">
+            </enumeratedOptionValue>
+            <enumeratedOptionValue
+                  command="-core2"
+                  id="arc.compiler.options.arc5core.core2"
+                  name="Core 2">
+            </enumeratedOptionValue>
+            <enumeratedOptionValue
+                  id="arc.compiler.options.arc5core.core3"
+                  isDefault="true"
+                  name="Core 3">
+            </enumeratedOptionValue>
+         </option>
+         <option
+               applicabilityCalculator="com.arc.cdt.toolchain.arc.ArcApplicabilityCalculator"
+               category="arc.compiler.options.category.target"
+               id="arc.compiler.options.arc6core"
+               name="ARC 600 Core"
+               tip="Specify the ARC 600 core for which to generate code"
+               valueType="enumerated">
+            <enumeratedOptionValue
+                  command="-core1"
+                  id="arc.compiler.options.arc6core.core1"
+                  isDefault="true"
+                  name="Core 1">
+            </enumeratedOptionValue>
+            <enumeratedOptionValue
+                  command="-core2"
+                  id="arc.compiler.options.arc6core.core2"
+                  name="Core 2">
+            </enumeratedOptionValue>
+            <enumeratedOptionValue
+                  command="-core3"
+                  id="arc.compiler.options.arc6core.core3"
+                  name="Core 3">
+            </enumeratedOptionValue>
+            <enumeratedOptionValue
+                  command="-core4"
+                  id="arc.compiler.options.arc6core.core4"
+                  name="Core 4">
+            </enumeratedOptionValue>
+            <enumeratedOptionValue
+                  command="-core5"
+                  id="arc.compiler.options.arc6core.core5"
+                  name="Core 5">
+            </enumeratedOptionValue>
+             <enumeratedOptionValue
+                  command="-core6"
+                  id="arc.compiler.options.arc6core.core6"
+                  name="Core 6">
+            </enumeratedOptionValue>
+         </option>
+         <option
+               applicabilityCalculator="com.arc.cdt.toolchain.arc.ArcApplicabilityCalculator"
+               category="arc.compiler.options.category.target"
+               id="arc.compiler.options.arc7core"
+               name="ARC 700 Core"
+               tip="Specify the ARC 700 core for which to generate code"
+               valueType="enumerated">
+            <enumeratedOptionValue
+                  command="-core1"
+                  id="arc.compiler.options.arc7core.core1"
+                  isDefault="false"
+                  name="Core 1">
+            </enumeratedOptionValue>
+            <enumeratedOptionValue
+                  command="-core2"
+                  id="arc.compiler.options.arc7core.core2"
+                  isDefault="true"
+                  name="Core 2">
+            </enumeratedOptionValue>
+            <enumeratedOptionValue
+                  command="-core3"
+                  id="arc.compiler.options.arc7core.core3"
+                  isDefault="false"
+                  name="Core 3"/>
+             <enumeratedOptionValue
+                  command="-core4"
+                  id="arc.compiler.options.arc7core.core4"
+                  isDefault="false"
+                  name="Core 4"/>
+                  
+         </option>
+         <option  category="com.arc.cdt.toolchain.compiler.category.c++"
+                 command="-Hstl"
+                 id="arc.compiler.options.stl"
+                 name="Use STLPort C++ Library (-Hstl)"
+                 tip="Add header file directories for the STLPort C++ Library; also sets the linker option."
+                 valueType="boolean"
+                 resourceFilter="all"
+                 isAbstract="false" />
+         <option
+               applicabilityCalculator="com.arc.cdt.toolchain.arc.ArcApplicabilityCalculator"
+               category="arc.compiler.options.category.target"
+               command="-Xlib"
+               id="arc.compiler.options.xlib"
+               isAbstract="false"
+               name="Common extensions (-Xlib)"
+               resourceFilter="all"
+               tip="Specify standard set of extensions"
+               valueType="boolean">
+         </option>
+         <option
+               applicabilityCalculator="com.arc.cdt.toolchain.arc.ArcApplicabilityCalculator"
+               category="arc.compiler.options.category.target"
+               command="-Xbs"
+               defaultValue="true"
+               id="arc.compiler.options.bs"
+               name="Barrel shifter (-Xbs)"
+               tip="Enable barrel shifter"
+               valueType="boolean">
+         </option>
+         <option
+               applicabilityCalculator="com.arc.cdt.toolchain.arc.ArcApplicabilityCalculator"
+               category="arc.compiler.options.category.target"
+               command="-Xsa"
+               defaultValue="false"
+               id="arc.compiler.options.sa"
+               isAbstract="false"
+               name="Shift Assist (-Xsa)"
+               resourceFilter="all"
+               tip="Enable shift assist"
+               valueType="boolean">
+         </option>
+         <option
+               applicabilityCalculator="com.arc.cdt.toolchain.arc.ArcApplicabilityCalculator"
+               category="arc.compiler.options.category.target"
+               command="-Xmult32"
+               id="arc.compiler.options.mult32"
+               name="32-bit multiply instruction (-Xmult32)"
+               tip="Enable the 32-bit integer multiply instruction"
+               valueType="boolean">
+         </option>
+          <option
+               applicabilityCalculator="com.arc.cdt.toolchain.arc.ArcApplicabilityCalculator"
+               category="arc.compiler.options.category.target"
+               id="arc.compiler.options.mult32_cycles"
+               isAbstract="false"
+               name="mult32 machine cycles (-Xmult32_cycles=)"
+               resourceFilter="all"
+               tip="Specify the number of machine cycles that the mult32 instruction requires (for instruction scheduling purposes)"
+               valueType="enumerated">
+            <enumeratedOptionValue id="mult32_cycles.default" isDefault="true" name="(Default)"/>
+            <enumeratedOptionValue command="-Xmult32_cycles=1" id="mult32_cycles.1" isDefault="false" name="1"/>
+            <enumeratedOptionValue command="-Xmult32_cycles=2" id="mult32_cycles.2" isDefault="false" name="2"/>
+            <enumeratedOptionValue command="-Xmult32_cycles=3" id="mult32_cycles.3" isDefault="false" name="3"/>
+            <enumeratedOptionValue command="-Xmult32_cycles=4" id="mult32_cycles.4" isDefault="false" name="4"/>
+            <enumeratedOptionValue command="-Xmult32_cycles=5" id="mult32_cycles.5" isDefault="false" name="5"/>
+            <enumeratedOptionValue command="-Xmult32_cycles=6" id="mult32_cycles.6" isDefault="false" name="6"/>
+            <enumeratedOptionValue command="-Xmult32_cycles=7" id="mult32_cycles.7" isDefault="false" name="7"/>
+            <enumeratedOptionValue command="-Xmult32_cycles=8" id="mult32_cycles.8" isDefault="false" name="8"/>
+            <enumeratedOptionValue command="-Xmult32_cycles=9" id="mult32_cycles.9" isDefault="false" name="9"/>
+            <enumeratedOptionValue command="-Xmult32_cycles=10" id="mult32_cycles.10" isDefault="false" name="10"/>
+         </option>
+         <option
+               applicabilityCalculator="com.arc.cdt.toolchain.arc.ArcApplicabilityCalculator"
+               category="arc.compiler.options.category.target"
+               command="-Xmpy16"
+               id="arc.compiler.options.mpy16"
+               name="16-by-16-bit multiply(-Xmpy16)"
+               tip="Enable the 16-bit by 16-bit integer multiply that produces a 32-bit result."
+               valueType="boolean">
+         </option>
+         <option
+               applicabilityCalculator="com.arc.cdt.toolchain.arc.ArcApplicabilityCalculator"
+               category="arc.compiler.options.category.target"
+               command="-Xmpy"
+               id="arc.compiler.options.mpy"
+               name="32-bit multiply instruction (-Xmpy)"
+               tip="Enable the 32-bit integer multiply instruction"
+               valueType="boolean">
+         </option>
+         <option
+               applicabilityCalculator="com.arc.cdt.toolchain.arc.ArcApplicabilityCalculator"
+               command="-Xdiv_rem"
+               category="arc.compiler.options.category.target"
+               id="arc.compiler.options.divrem"
+               isAbstract="false"
+               name="Integer divide (-Xdiv_rem)"
+               resourceFilter="all"
+               tip="Enable the 32-bit integer divide instruction."
+               valueType="boolean">
+         </option>
+         <option
+               applicabilityCalculator="com.arc.cdt.toolchain.arc.ArcApplicabilityCalculator"
+               category="arc.compiler.options.category.target"
+               command="-Xnorm"
+               id="arc.compiler.options.norm"
+               name="Normalize instruction (-Xnorm)"
+               tip="Add support for the &quot;norm&quot; instruction"
+               valueType="boolean">
+         </option>
+         <option
+               applicabilityCalculator="com.arc.cdt.toolchain.arc.ArcApplicabilityCalculator"
+               category="arc.compiler.options.category.target"
+               command="-Xbitscan"
+               id="arc.compiler.options.bitscan"
+               name="Bit scan instructions (-Xbitscan)"
+               tip="Add support for the &quot;norm&quot;, &quot;ffs&quot;, and &quot;fls&quot; instructions"
+               valueType="boolean">
+         </option>
+         <option
+               applicabilityCalculator="com.arc.cdt.toolchain.arc.ArcApplicabilityCalculator"
+               category="arc.compiler.options.category.target"
+               command="-Xswap"
+               id="arc.compiler.options.swap"
+               name="Swap instruction (-Xswap)"
+               tip="Add support for the &quot;swap&quot; instruction"
+               valueType="boolean">
+         </option>
+         <option
+               applicabilityCalculator="com.arc.cdt.toolchain.arc.ArcApplicabilityCalculator"
+               category="arc.compiler.options.category.target"
+               command="-Xcd"
+               id="arc.compiler.options.cd"
+               name="Code density extension (-Xcd)"
+               tip="Enable instructions for improving code density."
+               valueType="boolean">
+         </option>
+         <option
+               applicabilityCalculator="com.arc.cdt.toolchain.arc.ArcApplicabilityCalculator"
+               category="arc.compiler.options.category.target"
+               command="-Xatomic"
+               id="arc.compiler.options.atomic"
+               name="Atomic option (-Xatomic)"
+               tip="Enable the atomic option."
+               valueType="boolean">
+         </option>
+         <option
+               applicabilityCalculator="com.arc.cdt.toolchain.arc.ArcApplicabilityCalculator"
+               category="arc.compiler.options.category.target"
+               command="-Xtimer0"
+               id="arc.compiler.options.timers.timer0"
+               name="Use Timer 0 (-Xtimer0)"
+               tip="Indicate that timer 0 is to be supported"
+               valueType="boolean">
+         </option>
+         <option
+               applicabilityCalculator="com.arc.cdt.toolchain.arc.ArcApplicabilityCalculator"
+               category="arc.compiler.options.category.target"
+               command="-Xtimer1"
+               id="arc.compiler.options.timers.timer1"
+               name="Use timer 1 (-Xtimer1)"
+               tip="Indicate that timer 0 is to be supported"
+               valueType="boolean">
+         </option>
+         <option
+               applicabilityCalculator="com.arc.cdt.toolchain.arc.ArcApplicabilityCalculator"
+               category="arc.compiler.options.category.target"
+               command="-rf16"
+               id="arc.compiler.options.rf16"
+               isAbstract="false"
+               name="Reduced register set (-rf16)"
+               resourceFilter="all"
+               tip="Restrict register set to 16 registers"
+               valueType="boolean">
+         </option>
+         <optionCategory
+               id="arc.compiler.options.dsp"
+               name="DSP Extensions">
+         </optionCategory>
+         <optionCategory
+               id="arc.arc.compiler.category.memorymodel"
+               name="Memory Model">
+         </optionCategory>
+         <option
+               applicabilityCalculator="com.arc.cdt.toolchain.arc.ArcApplicabilityCalculator"
+               category="arc.compiler.options.dsp"
+               command="-Xea"
+               id="arc.compiler.options.ea"
+               name="Extended arithmetic (-Xea)"
+               tip="Add support for the &quot;ea&quot; instuction"
+               valueType="boolean">
+         </option>
+         <option
+               applicabilityCalculator="com.arc.cdt.toolchain.arc.ArcApplicabilityCalculator"
+               category="arc.compiler.options.dsp"
+               command="-Xdvbf"
+               id="arc.compiler.options.dvbf"
+               name="Dual viterbi butterfly (-Xdvbf)"
+               tip="Add support for the &quot;dvbf&quot; instruction"
+               valueType="boolean">
+         </option>
+         <option
+               applicabilityCalculator="com.arc.cdt.toolchain.arc.ArcApplicabilityCalculator"
+               category="arc.compiler.options.dsp"
+               command="-Xcrc"
+               id="arc.compiler.options.crc"
+               name="Variable polynomial CRC (-Xcrc)"
+               tip="Add support for the &quot;crc&quot; instruction"
+               valueType="boolean">
+         </option>
+         <option
+               applicabilityCalculator="com.arc.cdt.toolchain.arc.ArcApplicabilityCalculator"
+               category="arc.compiler.options.dsp"
+               command="-Xmul32x16"
+               id="arc.compiler.options.mul32x16"
+               name="32x16 multiply instructions (-Xmul32x16)"
+               tip="Add support for 32x16 multiply DSP instruction"
+               valueType="boolean">
+         </option>
+         <option
+               applicabilityCalculator="com.arc.cdt.toolchain.arc.ArcApplicabilityCalculator"
+               category="arc.compiler.options.dsp"
+               command="-Xxmac_24"
+               id="arc.compiler.options.xmac24"
+               name="24x24 XMAC (-Xxmac_24)"
+               tip="Add support for 24x24 XMAC DSP instruction"
+               valueType="boolean">
+         </option>
+         <option
+               applicabilityCalculator="com.arc.cdt.toolchain.arc.ArcApplicabilityCalculator"
+               category="arc.compiler.options.dsp"
+               command="-Xxmac_d16"
+               id="arc.compiler.options.xmacd16"
+               name="Dual 16x16 XMAC (-Xxmac_d16)"
+               tip="Add support for dual 16x16 XMAC DSP instruction"
+               valueType="boolean">
+         </option>
+         <option
+               applicabilityCalculator="com.arc.cdt.toolchain.arc.ArcApplicabilityCalculator"
+               category="arc.compiler.options.dsp"
+               command="-Xdmulpf"
+               id="arc.compiler.options.dmulpf"
+               name="Dual 32x16 multiply-accumulate (-Xdmulpf) [requires XY memory]"
+               tip="Add support for dual floating point 32x16 multiiply-accumulate DSP instruction; requires XY memory"
+               valueType="boolean">
+         </option>
+         <option
+               applicabilityCalculator="com.arc.cdt.toolchain.arc.ArcApplicabilityCalculator"
+               category="arc.arc.compiler.category.memorymodel"
+               command="-Hharvard"
+               defaultValue="false"
+               id="arc.arc.compiler.options.harvard"
+               isAbstract="false"
+               name="Harvard memory convention (-Hharvard)"
+               tip="Assume code and data are separate address spaces"
+               valueType="boolean">
+         </option>
+         <option
+               applicabilityCalculator="com.arc.cdt.toolchain.arc.ArcApplicabilityCalculator"
+               category="arc.arc.compiler.category.memorymodel"
+               id="arc.arc.compiler.options.model"
+               isAbstract="false"
+               name="Memory Model"
+               tip="Specify defaults in regard to what functions are &quot;near&quot; and &quot;far&quot;"
+               valueType="enumerated">
+            <enumeratedOptionValue
+                  command="-Ms"
+                  id="small"
+                  name="Small  (-Ms)">
+            </enumeratedOptionValue>
+            <enumeratedOptionValue
+                  id="medium"
+                  isDefault="true"
+                  name="Medium (default)">
+            </enumeratedOptionValue>
+            <enumeratedOptionValue
+                  command="-Mb"
+                  id="big"
+                  name="Big (-Mb)">
+            </enumeratedOptionValue>
+            <enumeratedOptionValue
+                  command="-Ml"
+                  id="large"
+                  name="Large (-Ml)">
+            </enumeratedOptionValue>
+         </option>
+         <option
+               applicabilityCalculator="com.arc.cdt.toolchain.arc.ArcApplicabilityCalculator"
+               category="com.arc.cdt.toolchain.compiler.category.storemapping"
+               commandFalse="-Hoff=volatile_cache_bypass"
+               defaultValue="true"
+               id="arc.arc.compiler.options.volatile_cache_bypass"
+               isAbstract="false"
+               name="Bypass cache to reference volatile variables"
+               tip="Indicate whether or not the data cache is to be bypassed to reference &quot;volatile&quot; variables"
+               valueType="boolean">
+         </option>
+         <option
+               category="com.arc.cdt.toolchain.compiler.category.storemapping"
+               commandFalse="-Hoff=uncached_in_own_section"
+               defaultValue="true"
+               id="arc.arc.compiler.options.uncached_in_own_section"
+               isAbstract="false"
+               name="Map uncached data into .ucdata section"
+               tip="Map all uncached data into its own control section"
+               valueType="boolean">
+         </option>
+         <option
+               category="arc.arc.compiler.category.memorymodel"
+               command="-Hpictable"
+               defaultValue="false"
+               id="arc.arc.compiler.options.pictable"
+               isAbstract="false"
+               name="Position-independent code (-Hpictable)"
+               tip="Generate position independent code"
+               valueType="boolean">
+         </option>
+         <option
+               id="arc.arc.compiler.options.nosdata"
+               isAbstract="false"
+               name="Small-data section"
+               superClass="arc.compiler.options.nosdata"
+               tip="Specify the state of the small-data section"
+               valueType="enumerated">
+            <enumeratedOptionValue
+                  id="sdata"
+                  isDefault="true"
+                  name="Enable (Default)">
+            </enumeratedOptionValue>
+            <enumeratedOptionValue
+                  command="-Hsdata0"
+                  id="sdata0"
+                  isDefault="false"
+                  name="Disable but reserve %gp register (-Hsdata0)">
+            </enumeratedOptionValue>
+            <enumeratedOptionValue
+                  command="-Hnosdata"
+                  id="nosdata"
+                  name="Assume no small-data in executable (-Hnosdata)">
+            </enumeratedOptionValue>
+             <enumeratedOptionValue
+                  command="-Hall_sdata"
+                  id="allsdata"
+                  name="Map all into small-data region (-Hall_sdata)">
+            </enumeratedOptionValue>
+         </option>
+         <option
+               applicabilityCalculator="com.arc.cdt.toolchain.arc.ArcApplicabilityCalculator"
+               category="arc.compiler.options.category.target"
+               command="-Xspfp_compact"
+               defaultValue="false"
+               id="arc.compiler.options.spfp"
+               isAbstract="false"
+               name="Compact Single-precision floating point (-Xspfp_compact)"
+               tip="Generate extension instructions for compact single-precision floating point"
+               valueType="boolean">
+         </option>
+         <option
+               applicabilityCalculator="com.arc.cdt.toolchain.arc.ArcApplicabilityCalculator"
+               category="arc.compiler.options.category.target"
+               command="-Xspfp_fast"
+               defaultValue="false"
+               id="arc.compiler.options.spfpfast"
+               isAbstract="false"
+               name="Fast Single-precision floating point (-Xspfp_fast)"
+               tip="Generate extension instructions for fast single-precision floating point"
+               valueType="boolean">
+         </option>
+         <option
+               applicabilityCalculator="com.arc.cdt.toolchain.arc.ArcApplicabilityCalculator"
+               category="arc.compiler.options.category.target"
+               command="-Xdpfp_compact"
+               defaultValue="false"
+               id="arc.compiler.options.dpfp"
+               isAbstract="false"
+               name="Compact Double-precision floating point (-Xdpfp_compact)"
+               tip="Generate extension instructions for compact double-precision floating point"
+               valueType="boolean">
+         </option>
+         <option
+               applicabilityCalculator="com.arc.cdt.toolchain.arc.ArcApplicabilityCalculator"
+               category="arc.compiler.options.category.target"
+               command="-Xdpfp_fast"
+               defaultValue="false"
+               id="arc.compiler.options.dpfpfast"
+               isAbstract="false"
+               name="Fast Double-precision floating point (-Xdpfp_fast)"
+               tip="Generate extension instructions for fast double-precision floating point"
+               valueType="boolean">
+         </option>
+         <option
+               applicabilityCalculator="com.arc.cdt.toolchain.arc.ArcApplicabilityCalculator"
+               category="arc.compiler.options.dsp"
+               command="-Xxy"
+               defaultValue="false"
+               id="arc.compiler.options.xy"
+               isAbstract="false"
+               name="XY Memory (-Xxy)"
+               tip="Specify whether or not XY memory is available"
+               valueType="boolean">
+         </option>
+         <optionCategory
+               id="com.arc.cdt.toolchain.arc.overlayCategory"
+               name="Overlay Support">
+         </optionCategory>
+         <option
+               applicabilityCalculator="com.arc.cdt.toolchain.arc.ArcApplicabilityCalculator"
+               category="com.arc.cdt.toolchain.arc.overlayCategory"
+               command="-Haom"
+               defaultValue="false"
+               id="arc.compiler.options.aom"
+               isAbstract="false"
+               name="Code contains or will use overlays (-Haom)"
+               resourceFilter="all"
+               tip="Indicate that code containing overlays, or using overlays, may be present."
+               valueType="boolean">
+         </option>
+          <option
+               applicabilityCalculator="com.arc.cdt.toolchain.arc.ArcApplicabilityCalculator"
+               category="com.arc.cdt.toolchain.arc.overlayCategory"
+               command="-Hon=aom_rtos_aware"
+               defaultValue="false"
+               id="arc.compiler.options.aomrtosaware"
+               isAbstract="false"
+               name="AOM code subject to multi-tasking (-Hon=aom_rtos_aware)"
+               resourceFilter="all"
+               tip="Indicate that AOM code is subject to multi-tasking."
+               valueType="boolean">
+         </option>
+         <option
+               applicabilityCalculator="com.arc.cdt.toolchain.arc.ArcApplicabilityCalculator"
+               category="com.arc.cdt.toolchain.arc.overlayCategory"
+               command="-Haom_overlay_only"
+               defaultValue="false"
+               id="arc.compiler.options.aom_overlay_only"
+               isAbstract="false"
+               name="Require that all code reside in overlays (-Haom_overlay_only)"
+               resourceFilter="all"
+               tip="Require that the generated code contain overlays only."
+               valueType="boolean">
+         </option>
+         <option
+               applicabilityCalculator="com.arc.cdt.toolchain.arc.ArcApplicabilityCalculator"
+               category="com.arc.cdt.toolchain.arc.overlayCategory"
+               command="-Hmin_overlay_set_pad="
+               id="arc.compiler.options.aom_padding"
+               isAbstract="false"
+               name="Minimum pad bytes between overlays (-Hmin_overlay_set_pad)"
+               resourceFilter="all"
+               tip="The minimum number of bytes that are to pad each overlay."
+               valueType="string">
+         </option>
+         <option
+               applicabilityCalculator="com.arc.cdt.toolchain.arc.ArcApplicabilityCalculator"
+               category="com.arc.cdt.toolchain.compiler.category.opt"
+               command="-Os1"
+               defaultValue="false"
+               id="arc.compiler.options.Os1"
+               isAbstract="false"
+               name="Suppress generation of zero-delay loops (-Os1)"
+               resourceFilter="all"
+               valueType="boolean">
+         </option>
+         <optionCategory
+               id="arc.compiler.options.simd"
+               name="ARC 700 SIMD Support">
+         </optionCategory>
+         <option
+               applicabilityCalculator="com.arc.cdt.toolchain.arc.ArcApplicabilityCalculator"
+               category="arc.compiler.options.simd"
+               command="-Xsimd"
+               defaultValue="false"
+               id="arc.compiler.options.mx"
+               isAbstract="false"
+               name="Enable MX Support (-Xsimd) [ARC700 only]"
+               resourceFilter="all"
+               tip="Target processor is an ARC700 that supports MX SIMD instructions"
+               valueType="boolean">
+         </option>
+         <option
+               applicabilityCalculator="com.arc.cdt.toolchain.arc.ArcApplicabilityCalculator"
+               category="arc.compiler.options.simd"
+               command="-Xvraptor"
+               defaultValue="false"
+               id="arc.compiler.options.vraptor"
+               isAbstract="false"
+               name="Add VRaptor Support (-Xvraptor)"
+               resourceFilter="all"
+               tip="Target processor is an ARC700 that supports VRaptor SIMD instructions"
+               valueType="boolean">
+         </option>
+         
+         <optionCategory
+               id="arc.compiler.options.regwidths"
+               name="Special Register Widths">
+         </optionCategory>
+          <option
+               applicabilityCalculator="com.arc.cdt.toolchain.arc.ArcApplicabilityCalculator"
+               category="arc.compiler.options.regwidths"
+               id="arc.compiler.options.lpc_width"
+               isAbstract="false"
+               name="LP_COUNT register width (-Hlpc_width=)"
+               resourceFilter="all"
+               tip="Width of the LP_COUNT register, in bits."
+               valueType="enumerated">
+              <enumeratedOptionValue
+                   id="com.arc.cdt.toolchain.arc.lpcwidth.8"
+                   command="-Hlpc_width=8"
+                   name="8">
+             </enumeratedOptionValue>
+               <enumeratedOptionValue
+                   id="com.arc.cdt.toolchain.arc.lpcwidth.12"
+                   command="-Hlpc_width=12"
+                   name="12">
+             </enumeratedOptionValue>
+               <enumeratedOptionValue
+                   id="com.arc.cdt.toolchain.arc.lpcwidth.16"
+                   command="-Hlpc_width=16"
+                   name="16">
+             </enumeratedOptionValue>
+               <enumeratedOptionValue
+                   id="com.arc.cdt.toolchain.arc.lpcwidth.20"
+                   command="-Hlpc_width=20"
+                   name="20">
+             </enumeratedOptionValue>
+               <enumeratedOptionValue
+                   id="com.arc.cdt.toolchain.arc.lpcwidth.24"
+                   command="-Hlpc_width=24"
+                   name="24">
+             </enumeratedOptionValue>
+               <enumeratedOptionValue
+                   id="com.arc.cdt.toolchain.arc.lpcwidth.28"
+                   command="-Hlpc_width=28"
+                   name="28">
+             </enumeratedOptionValue>
+             <enumeratedOptionValue
+                   id="com.arc.cdt.toolchain.arc.lpcwidth.32"
+                   isDefault="true"
+                   name="32">
+             </enumeratedOptionValue>
+         </option>
+          <option
+               applicabilityCalculator="com.arc.cdt.toolchain.arc.ArcApplicabilityCalculator"
+               category="arc.compiler.options.regwidths"
+               id="arc.compiler.options.pc_width"
+               isAbstract="false"
+               name="PC register width (-Hpc_width=)"
+               resourceFilter="all"
+               tip="Width of the PC register, in bits."
+               valueType="enumerated">            
+               <enumeratedOptionValue
+                   id="com.arc.cdt.toolchain.arc.pcwidth.16"
+                   command="-Hpc_width=16"
+                   name="16">
+             </enumeratedOptionValue>
+               <enumeratedOptionValue
+                   id="com.arc.cdt.toolchain.arc.pcwidth.20"
+                   command="-Hpc_width=20"
+                   name="20">
+             </enumeratedOptionValue>
+               <enumeratedOptionValue
+                   id="com.arc.cdt.toolchain.arc.pcwidth.24"
+                   command="-Hpc_width=24"
+                   name="24">
+             </enumeratedOptionValue>
+               <enumeratedOptionValue
+                   id="com.arc.cdt.toolchain.arc.pcwidth.28"
+                   command="-Hpc_width=28"
+                   name="28">
+             </enumeratedOptionValue>
+             <enumeratedOptionValue
+                   id="com.arc.cdt.toolchain.arc.pcwidth.32"
+                   isDefault="true"
+                   name="32">
+             </enumeratedOptionValue>
+         </option>
+         <inputType
+               dependencyCalculator="com.arc.cdt.managedbuilder.makegen.HighCDependencyGenerator"
+               dependencyContentType="org.eclipse.cdt.core.cxxHeader"
+               dependencyExtensions="h,H,hpp"
+               id="com.arc.cdt.toolchain.arc.inputTypeCPP"
+               languageId="org.eclipse.cdt.core.g++"
+               primaryInput="true"
+               scannerConfigDiscoveryProfileId="com.arc.cdt.toolchain.arc.ScannerConfigurationDiscoveryProfile"
+               sourceContentType="org.eclipse.cdt.core.cxxSource"
+               sources="cc,cpp,C,CC,ii"
+               superClass="com.arc.cdt.toolchain.inputTypeCPP">
+         </inputType>
+         <inputType
+               dependencyCalculator="com.arc.cdt.managedbuilder.makegen.HighCDependencyGenerator"
+               dependencyContentType="org.eclipse.cdt.core.cHeader"
+               id="com.arc.cdt.toolchain.arc.inputTypeC"
+               languageId="org.eclipse.cdt.core.gcc"
+               primaryInput="true"
+               scannerConfigDiscoveryProfileId="com.arc.cdt.toolchain.arc.ScannerConfigurationDiscoveryProfile"
+               sourceContentType="org.eclipse.cdt.core.cSource"
+               superClass="com.arc.cdt.toolchain.inputTypeC">
+         </inputType>
+        
+      </tool>
+      <tool
+            command="mcc"
+            id="com.arc.cdt.toolchain.arc.assembler"
+            isAbstract="true"
+            name="ARCompact Assembler"
+            superClass="com.arc.cdt.toolchain.assembler">
+         <optionCategory
+               id="com.arc.cdt.toolchain.arc.optionCategory.machine"
+               name="ARCompact Specific">
+         </optionCategory>
+         <option
+               aliases="arc.compiler.options.target.asm.versionLib"
+               category="com.arc.cdt.toolchain.arc.optionCategory.machine"
+               defaultValue="arc.compiler.options.target.arc600"
+               id="arc.compiler.options.target.asm.version"
+               name="ARC Core Version"
+               tip="Specify the target ARC processor"
+               valueType="enumerated">
+            <enumeratedOptionValue
+                  command="-arcv2em"
+                  id="arc.compiler.options.target.arcv2em"
+                  name="ARCv2EM"/>
+            <enumeratedOptionValue
+                  command="-arc700"
+                  id="arc.compiler.options.target.arc700"
+                  name="ARC 700">
+            </enumeratedOptionValue>
+            <enumeratedOptionValue
+                  command="-arc600"
+                  id="arc.compiler.options.target.arc600"
+                  isDefault="true"
+                  name="ARC 600">
+            </enumeratedOptionValue>
+            <enumeratedOptionValue
+                  command="-arc601"
+                  id="arc.compiler.options.target.arc601"
+                  name="ARC 601">
+            </enumeratedOptionValue>
+            <enumeratedOptionValue
+                  command="-a5"
+                  id="arc.compiler.options.target.arc5"
+                  isDefault="false"
+                  name="ARC 5">
+            </enumeratedOptionValue>
+         </option>
+         <option
+               applicabilityCalculator="com.arc.cdt.toolchain.arc.ArcApplicabilityCalculator"
+               category="com.arc.cdt.toolchain.arc.optionCategory.machine"
+               id="arc.compiler.options.asm.arc5core"
+               name="ARC 5 Core"
+               tip="Specify the ARC 5 core for which to generate code"
+               valueType="enumerated">
+            <enumeratedOptionValue
+                  command="-core1"
+                  id="arc.compiler.options.arc5core.core1"
+                  name="Core 1">
+            </enumeratedOptionValue>
+            <enumeratedOptionValue
+                  command="-core2"
+                  id="arc.compiler.options.arc5core.core2"
+                  name="Core 2">
+            </enumeratedOptionValue>
+            <enumeratedOptionValue
+                  id="arc.compiler.options.arc5core.core3"
+                  isDefault="true"
+                  name="Core 3">
+            </enumeratedOptionValue>
+         </option>
+         <option
+               applicabilityCalculator="com.arc.cdt.toolchain.arc.ArcApplicabilityCalculator"
+               category="com.arc.cdt.toolchain.arc.optionCategory.machine"
+               id="arc.compiler.options.asm.arc6core"
+               name="ARC 600 Core"
+               tip="Specify the ARC 600 core for which to generate code"
+               valueType="enumerated">
+            <enumeratedOptionValue
+                  command="-core1"
+                  id="arc.compiler.options.arc6core.core1"
+                  isDefault="true"
+                  name="Core 1">
+            </enumeratedOptionValue>
+            <enumeratedOptionValue
+                  command="-core2"
+                  id="arc.compiler.options.arc6core.core2"
+                  name="Core 2">
+            </enumeratedOptionValue>
+            <enumeratedOptionValue
+                  command="-core3"
+                  id="arc.compiler.options.arc6core.core3"
+                  name="Core 3">
+            </enumeratedOptionValue>
+            <enumeratedOptionValue
+                  command="-core4"
+                  id="arc.compiler.options.arc6core.core4"
+                  name="Core 4"/>
+            <enumeratedOptionValue
+                  command="-core5"
+                  id="arc.compiler.options.arc6core.core5"
+                  name="Core 5">
+            </enumeratedOptionValue>
+            <enumeratedOptionValue
+                  command="-core6"
+                  id="arc.compiler.options.arc6core.core6"
+                  name="Core 6">
+            </enumeratedOptionValue>
+         </option>
+         <option
+               applicabilityCalculator="com.arc.cdt.toolchain.arc.ArcApplicabilityCalculator"
+               category="com.arc.cdt.toolchain.arc.optionCategory.machine"
+               id="arc.compiler.options.asm.arc7core"
+               name="ARC 700 Core"
+               tip="Specify the ARC 700 core for which to generate code"
+               valueType="enumerated">
+            <enumeratedOptionValue
+                  id="arc.compiler.options.arc7core.core1"
+                  isDefault="false"
+                  name="Core 1">
+            </enumeratedOptionValue>
+            <enumeratedOptionValue
+                  command="-core2"
+                  id="arc.compiler.options.arc7core.core2"
+                  isDefault="true"
+                  name="Core 2">
+            </enumeratedOptionValue>
+         </option>
+         <option
+               category="com.arc.cdt.toolchain.asm.optionCategory.misc"
+               commandFalse="-Hasopt=-off=esc"
+               defaultValue="true"
+               id="com.arc.cdt.toolchain.arc.asm.option.cstyle"
+               isAbstract="false"
+               name="Allow C-style escapes in strings"
+               tip="Specify whether or not C-style escape processing is to occur in quoted strings"
+               valueType="boolean">
+         </option>
+         <option
+               command="-Hasopt=-on=mathu"
+               defaultValue="false"
+               id="com.arc.cdt.toolchain.arc.asm.option.umath"
+               isAbstract="false"
+               name="Use unsigned math for integer expressions"
+               tip="Specify whether or not to use unsigned operation in integer expressions"
+               valueType="boolean">
+         </option>
+         <option
+               applicabilityCalculator="com.arc.cdt.toolchain.arc.ArcApplicabilityCalculator"
+               category="com.arc.cdt.toolchain.arc.optionCategory.machine"
+               command="-Xlib"
+               id="arc.asm.options.xlib"
+               isAbstract="false"
+               name="Common extensions (-Xlib)"
+               resourceFilter="all"
+               tip="Specify standard set of extensions"
+               valueType="boolean">
+         </option>
+         <option
+               applicabilityCalculator="com.arc.cdt.toolchain.arc.ArcApplicabilityCalculator"
+               category="com.arc.cdt.toolchain.arc.optionCategory.machine"
+               command="-Xbs"
+               id="arc.asm.options.bs"
+               name="Barrel shifter (-Xbs)"
+               tip="Enable barrel shifter"
+               valueType="boolean">
+         </option>
+         <option
+               applicabilityCalculator="com.arc.cdt.toolchain.arc.ArcApplicabilityCalculator"
+               category="com.arc.cdt.toolchain.arc.optionCategory.machine"
+               command="-Xsa"
+               defaultValue="false"
+               id="arc.asm.options.sa"
+               isAbstract="false"
+               name="Shift Assist (-Xsa)"
+               resourceFilter="all"
+               tip="Enable shift assist"
+               valueType="boolean">
+         </option>
+         <option
+               applicabilityCalculator="com.arc.cdt.toolchain.arc.ArcApplicabilityCalculator"
+               category="com.arc.cdt.toolchain.arc.optionCategory.machine"
+               command="-Xmult32"
+               id="arc.asm.options.mult32"
+               name="32-bit multiply instruction (-Xmult32)"
+               tip="Enable the 32-bit integer multiply instruction"
+               valueType="boolean">
+         </option>
+          <option
+               applicabilityCalculator="com.arc.cdt.toolchain.arc.ArcApplicabilityCalculator"
+               category="com.arc.cdt.toolchain.arc.optionCategory.machine"
+               command="-Xmpy16"
+               id="arc.asm.options.mpy16"
+               name="16-by-16-bit multiply(-Xmpy16)"
+               tip="Enable the 16-bit by 16-bit integer multiply that produces a 32-bit result."
+               valueType="boolean">
+         </option>
+         <option
+               applicabilityCalculator="com.arc.cdt.toolchain.arc.ArcApplicabilityCalculator"
+               category="com.arc.cdt.toolchain.arc.optionCategory.machine"
+               command="-Xmpy"
+               id="arc.asm.options.mpy"
+               name="32-bit multiply instruction (-Xmpy)"
+               tip="Enable the 32-bit integer multiply instruction"
+               valueType="boolean">
+         </option>
+          <option
+               applicabilityCalculator="com.arc.cdt.toolchain.arc.ArcApplicabilityCalculator"
+               category="com.arc.cdt.toolchain.arc.optionCategory.machine"
+               command="-Xdiv_rem"
+               id="arc.asm.options.divrem"
+               isAbstract="false"
+               name="Integer divide (-Xdiv_rem)"
+               resourceFilter="all"
+               tip="Enable the 32-bit integer divide instruction"
+               valueType="boolean">
+         </option>
+         <option
+               applicabilityCalculator="com.arc.cdt.toolchain.arc.ArcApplicabilityCalculator"
+               category="com.arc.cdt.toolchain.arc.optionCategory.machine"
+               command="-Xnorm"
+               id="arc.asm.options.norm"
+               name="Normalize instruction (-Xnorm)"
+               tip="Add support for the &quot;norm&quot; instruction"
+               valueType="boolean">
+         </option>
+         <option
+               applicabilityCalculator="com.arc.cdt.toolchain.arc.ArcApplicabilityCalculator"
+               category="com.arc.cdt.toolchain.arc.optionCategory.machine"
+               command="-Xbitscan"
+               id="arc.asm.options.bitscan"
+               name="Bit scan (includes norm) (-Xbitscan)"
+               tip="Add support for the norm, ffs, and fls instructions"
+               valueType="boolean">
+         </option>
+         <option
+               applicabilityCalculator="com.arc.cdt.toolchain.arc.ArcApplicabilityCalculator"
+               category="com.arc.cdt.toolchain.arc.optionCategory.machine"
+               command="-Xswap"
+               id="arc.asm.options.swap"
+               name="Swap instruction (-Xswap)"
+               tip="Add support for the &quot;swap&quot; instruction"
+               valueType="boolean">
+         </option>
+          <option
+               applicabilityCalculator="com.arc.cdt.toolchain.arc.ArcApplicabilityCalculator"
+               category="com.arc.cdt.toolchain.arc.optionCategory.machine"
+               command="-Xcd"
+               id="arc.asm.options.cd"
+               name="Code density extension (-Xcd)"
+               tip="Enable instructions for improving code density."
+               valueType="boolean">
+         </option>
+         <option
+               applicabilityCalculator="com.arc.cdt.toolchain.arc.ArcApplicabilityCalculator"
+               category="com.arc.cdt.toolchain.arc.optionCategory.machine"
+               command="-Xatomic"
+               id="arc.asm.options.atomic"
+               name="Atomic option (-Xatomic)"
+               tip="Enable the atomic option."
+               valueType="boolean">
+         </option>
+         <option
+               applicabilityCalculator="com.arc.cdt.toolchain.arc.ArcApplicabilityCalculator"
+               category="com.arc.cdt.toolchain.arc.optionCategory.machine"
+               command="-Xtimer0"
+               id="arc.asm.options.timers.timer0"
+               name="Use Timer 0 (-Xtimer0)"
+               tip="Indicate that timer 0 is to be supported"
+               valueType="boolean">
+         </option>
+         <option
+               applicabilityCalculator="com.arc.cdt.toolchain.arc.ArcApplicabilityCalculator"
+               category="com.arc.cdt.toolchain.arc.optionCategory.machine"
+               command="-Xtimer1"
+               id="arc.asm.options.timers.timer1"
+               name="Use timer 1 (-Xtimer1)"
+               tip="Indicate that timer 1 is to be supported"
+               valueType="boolean">
+         </option>
+         <option
+               applicabilityCalculator="com.arc.cdt.toolchain.arc.ArcApplicabilityCalculator"
+               category="com.arc.cdt.toolchain.arc.optionCategory.machine"
+               command="-rf16"
+               id="arc.asm.options.rf16"
+               isAbstract="false"
+               name="Reduced Register Set (-rf16)"
+               resourceFilter="all"
+               tip="Restrict register set to 16 registers"
+               valueType="boolean">
+         </option>
+         <optionCategory
+               id="arc.asm.options.dsp"
+               name="DSP Support">
+         </optionCategory>
+         <option
+               applicabilityCalculator="com.arc.cdt.toolchain.arc.ArcApplicabilityCalculator"
+               category="arc.asm.options.dsp"
+               command="-Xea"
+               id="arc.asm.options.ea"
+               name="Extended arithmetic (-Xea)"
+               tip="Add support for the &quot;ea&quot; instuction"
+               valueType="boolean">
+         </option>
+         <option
+               applicabilityCalculator="com.arc.cdt.toolchain.arc.ArcApplicabilityCalculator"
+               category="arc.asm.options.dsp"
+               command="-Xdvbf"
+               id="arc.asm.options.dvbf"
+               name="Dual viterbi butterfly (-Xdvbf)"
+               tip="Add support for the &quot;dvbf&quot; instuction"
+               valueType="boolean">
+         </option>
+         <option
+               applicabilityCalculator="com.arc.cdt.toolchain.arc.ArcApplicabilityCalculator"
+               category="arc.asm.options.dsp"
+               command="-Xcrc"
+               id="arc.asm.options.crc"
+               name="Variable polynomial CRC (-Xcrc)"
+               tip="Add support for the &quot;crc&quot; instuction"
+               valueType="boolean">
+         </option>
+         <option
+               applicabilityCalculator="com.arc.cdt.toolchain.arc.ArcApplicabilityCalculator"
+               category="arc.asm.options.dsp"
+               command="-Xmul32x16"
+               id="arc.asm.options.mul32x16"
+               name="32x16 multiply instructions (-Xmul32x16)"
+               tip="Add support for 32x16 multiply DSP instruction"
+               valueType="boolean">
+         </option>
+         <option
+               applicabilityCalculator="com.arc.cdt.toolchain.arc.ArcApplicabilityCalculator"
+               category="arc.asm.options.dsp"
+               command="-Xxmac_24"
+               id="arc.asm.options.xmac24"
+               name="24x24 XMAC (-Xxmac_24)"
+               tip="Add support for 24x24 XMAC DSP instruction"
+               valueType="boolean">
+         </option>
+         <option
+               applicabilityCalculator="com.arc.cdt.toolchain.arc.ArcApplicabilityCalculator"
+               category="arc.asm.options.dsp"
+               command="-Xxmac_d16"
+               id="arc.asm.options.xmacd16"
+               name="Dual 16x16 XMAC (-Xxmac_d16)"
+               tip="Add support for dual 16x16 XMAC DSP instruction"
+               valueType="boolean">
+         </option>
+         <option
+               applicabilityCalculator="com.arc.cdt.toolchain.arc.ArcApplicabilityCalculator"
+               category="arc.asm.options.dsp"
+               command="-Xxy"
+               defaultValue="false"
+               id="arc.asm.options.xy"
+               isAbstract="false"
+               name="XY Memory (-Xxy)"
+               tip="Specify whether XY memory is available"
+               valueType="boolean">
+         </option>
+      </tool>
+      <tool
+            command="mcc"
+            id="com.arc.cdt.toolchain.arc.compilerDebug"
+            isAbstract="true"
+            superClass="com.arc.cdt.toolchain.arc.compiler">
+         <option
+               defaultValue="arc.optimization.level.none"
+               id="com.arc.cdt.toolchain.arc.compilerDebugOptLevel"
+               isAbstract="false"
+               superClass="arc.compiler.options.general.optimization.level">
+         </option>
+         <option
+               defaultValue="arc.debugging.level.default"
+               id="com.arc.cdt.toolchain.arc.compilerDebugDebug"
+               isAbstract="false"
+               superClass="arc.compiler.options.debugging.level">
+         </option>
+      </tool>
+      <tool
+            id="com.arc.cdt.toolchain.arc.asmDebug"
+            isAbstract="false"
+            superClass="com.arc.cdt.toolchain.arc.assembler">
+         <option
+               defaultValue="true"
+               id="com.arc.cdt.toolchain.arc.asm.option.g"
+               isAbstract="false"
+               resourceFilter="all"
+               superClass="com.arc.cdt.toolchain.asm.option.g"
+               valueType="boolean">
+         </option>
+      </tool>
+      <tool
+            command="mcc"
+            id="com.arc.cdt.toolchain.arc.Linker"
+            isAbstract="true"
+            name="MetaWare Linker for ARCompact"
+            superClass="com.arc.cdt.toolchain.toolLinker">
+         <option
+               applicabilityCalculator="com.arc.cdt.toolchain.arc.ArcApplicabilityCalculator"
+               category="arc.linker.options.category.extensions"
+               command="-Xlib"
+               id="arc.linker.options.xlib"
+               isAbstract="false"
+               name="Common extensions (-Xlib)"
+               resourceFilter="all"
+               tip="Specify standard set of extensions"
+               valueType="boolean">
+         </option>
+          <option
+                applicabilityCalculator="com.arc.cdt.toolchain.arc.ArcApplicabilityCalculator"
+                category="arc.linker.category.special"
+                command="-Hstl"
+                id="arc.linker.options.cpplib"
+                isAbstract="false"
+                name="Runtime C++ library"
+                resourceFilter="all"
+                tip="Specify the C++ runtime library to link against"
+                valueType="enumerated">
+             <enumeratedOptionValue
+                   id="linker.option.lib.std"
+                   isDefault="true"
+                   name="MetaWare C++ library">
+             </enumeratedOptionValue>
+             <enumeratedOptionValue
+                   command="-Hstl"
+                   id="linker.option.lib.stlnoexcept"
+                   name="STLPort library without exceptions">
+             </enumeratedOptionValue>
+             <enumeratedOptionValue
+                   command="-Hstl -Hexcept"
+                   id="linker.option.lib.stlexcept"
+                   name="STLPort library with exceptions">
+             </enumeratedOptionValue>
+          </option>
+            <option
+               applicabilityCalculator="com.arc.cdt.toolchain.arc.ArcApplicabilityCalculator"
+               category="arc.linker.category.output"
+               id="arc.linker.options.pc_width"
+               isAbstract="false"
+               name="PC register width (-Bpc_width=)"
+               resourceFilter="all"
+               tip="Width of the PC register, in bits."
+               valueType="enumerated">            
+               <enumeratedOptionValue
+                   id="com.arc.cdt.toolchain.arc.pcwidth.16"
+                   command="-Bpc_width=16"
+                   name="16">
+             </enumeratedOptionValue>
+               <enumeratedOptionValue
+                   id="com.arc.cdt.toolchain.arc.pcwidth.20"
+                   command="-Bpc_width=20"
+                   name="20">
+             </enumeratedOptionValue>
+               <enumeratedOptionValue
+                   id="com.arc.cdt.toolchain.arc.pcwidth.24"
+                   command="-Bpc_width=24"
+                   name="24">
+             </enumeratedOptionValue>
+               <enumeratedOptionValue
+                   id="com.arc.cdt.toolchain.arc.pcwidth.28"
+                   command="-Bpc_width=28"
+                   name="28">
+             </enumeratedOptionValue>
+             <enumeratedOptionValue
+                   id="com.arc.cdt.toolchain.arc.pcwidth.32"
+                   isDefault="true"
+                   name="32">
+             </enumeratedOptionValue>
+         </option>
+         <option
+               applicabilityCalculator="com.arc.cdt.toolchain.arc.ArcApplicabilityCalculator"
+               category="arc.linker.options.category.extensions"
+               command="-Xbs"
+               id="arc.linker.options.bs"
+               name="Barrel shifter (-Xbs)"
+               tip="Enable barrel shifter"
+               valueType="boolean">
+         </option>
+         <option
+               applicabilityCalculator="com.arc.cdt.toolchain.arc.ArcApplicabilityCalculator"
+               category="arc.linker.options.category.extensions"
+               command="-Xsa"
+               defaultValue="false"
+               id="arc.linker.options.sa"
+               isAbstract="false"
+               name="Shift Assist (-Xsa)"
+               resourceFilter="all"
+               tip="Enable shift assist"
+               valueType="boolean">
+         </option>
+         <option
+               applicabilityCalculator="com.arc.cdt.toolchain.arc.ArcApplicabilityCalculator"
+               category="arc.linker.options.category.extensions"
+               command="-Xmult32"
+               id="arc.linker.options.mult32"
+               name="32-bit multiply instruction (-Xmult32)"
+               tip="Mark the generated executable as having 32-bit integer multiply enabled"
+               valueType="boolean">
+         </option>
+          <option
+               applicabilityCalculator="com.arc.cdt.toolchain.arc.ArcApplicabilityCalculator"
+               category="arc.linker.options.category.extensions"
+               command="-Xmpy16"
+               id="arc.linker.options.mpy16"
+               name="16-by-16-bit multiply(-Xmpy16)"
+               tip="Enable the 16-bit by 16-bit integer multiply that produces a 32-bit result."
+               valueType="boolean">
+         </option>
+         <option
+               applicabilityCalculator="com.arc.cdt.toolchain.arc.ArcApplicabilityCalculator"
+               category="arc.linker.options.category.extensions"
+               command="-Xmpy"
+               id="arc.linker.options.mpy"
+               name="32-bit multiply instruction (-Xmpy)"
+               tip="Mark the generated executable as having 32-bit integer multiply enabled"
+               valueType="boolean">
+         </option>
+         <option
+               applicabilityCalculator="com.arc.cdt.toolchain.arc.ArcApplicabilityCalculator"
+               category="arc.linker.options.category.extensions"
+               command="-Xdiv_rem"
+               id="arc.linker.options.divrem"
+               isAbstract="false"
+               name="Integer divide (-Xdiv_rem)"
+               resourceFilter="all"
+               tip="Mark the generated executable as having 32-bit integer divide enabled"
+               valueType="boolean">
+         </option>
+         <option
+               applicabilityCalculator="com.arc.cdt.toolchain.arc.ArcApplicabilityCalculator"
+               category="arc.linker.options.category.extensions"
+               command="-Xnorm"
+               id="arc.linker.options.norm"
+               name="Normalize instruction (-Xnorm)"
+               tip="Mark the executable as requiring the &quot;norm&quot; extension instruction"
+               valueType="boolean">
+         </option>
+         <option
+               applicabilityCalculator="com.arc.cdt.toolchain.arc.ArcApplicabilityCalculator"
+               category="arc.linker.options.category.extensions"
+               command="-Xbitscan"
+               id="arc.linker.options.bitscan"
+               name="Bit scan instructions (-Xbitscan)"
+               tip="Mark the executable as requiring the &quot;norm&quot;, &quot;ffs&quot;, and &quot;fls&quot; extension instruction"
+               valueType="boolean">
+         </option>
+         <option
+               applicabilityCalculator="com.arc.cdt.toolchain.arc.ArcApplicabilityCalculator"
+               category="arc.linker.options.category.extensions"
+               command="-Xswap"
+               id="arc.linker.options.swap"
+               name="Swap instruction (-Xswap)"
+               tip="Mark the executable as requiring the &quot;swap&quot; extension instruction"
+               valueType="boolean">
+         </option>
+          <option
+               applicabilityCalculator="com.arc.cdt.toolchain.arc.ArcApplicabilityCalculator"
+               category="arc.linker.options.category.extensions"
+               command="-Xcd"
+               id="arc.linker.options.cd"
+               name="Code density extension (-Xcd)"
+               tip="Mark the generated executable as relying on the code density extension."
+               valueType="boolean">
+         </option>
+         <option
+               applicabilityCalculator="com.arc.cdt.toolchain.arc.ArcApplicabilityCalculator"
+               category="arc.linker.options.category.extensions"
+               command="-Xatomic"
+               id="arc.linker.options.atomic"
+               name="Atomic option (-Xatomic)"
+               tip="Mark the generated executable as relying on the atomic option."
+               valueType="boolean">
+         </option>
+         <option
+               applicabilityCalculator="com.arc.cdt.toolchain.arc.ArcApplicabilityCalculator"
+               category="arc.linker.options.category.extensions"
+               command="-rf16"
+               id="arc.linker.options.rf16"
+               isAbstract="false"
+               name="Reduced Register Set (-rf16)"
+               resourceFilter="all"
+               tip="Link in libraries compiled with restricted register set"
+               valueType="boolean">
+         </option>
+         <option
+               applicabilityCalculator="com.arc.cdt.toolchain.arc.ArcApplicabilityCalculator"
+               category="arc.linker.options.category.extensions"
+               command="-Xea"
+               id="arc.linker.options.ea"
+               name="Extended arithmetic (-Xea)"
+               valueType="boolean">
+         </option>
+         <option
+               applicabilityCalculator="com.arc.cdt.toolchain.arc.ArcApplicabilityCalculator"
+               category="arc.linker.options.category.extensions"
+               command="-Xdvbf"
+               id="arc.linker.options.dvbf"
+               name="Dual viterbi butterfly (-Xdvbf)"
+               valueType="boolean">
+         </option>
+         <option
+               applicabilityCalculator="com.arc.cdt.toolchain.arc.ArcApplicabilityCalculator"
+               category="arc.linker.options.category.extensions"
+               command="-Xcrc"
+               id="arc.linker.options.crc"
+               name="Variable polynomial CRC (-Xcrc)"
+               valueType="boolean">
+         </option>
+         <option
+               applicabilityCalculator="com.arc.cdt.toolchain.arc.ArcApplicabilityCalculator"
+               category="arc.linker.options.category.extensions"
+               command="-Xmul32x16"
+               id="arc.linker.options.mul32x16"
+               name="32x16 multiply instructions (-Xmul32x16)"
+               valueType="boolean">
+         </option>
+         <option
+               applicabilityCalculator="com.arc.cdt.toolchain.arc.ArcApplicabilityCalculator"
+               category="arc.linker.options.category.extensions"
+               command="-Xxmac_24"
+               id="arc.linker.options.xmac24"
+               name="24x24 XMAC (-Xxmac_24)"
+               valueType="boolean">
+         </option>
+         <option
+               applicabilityCalculator="com.arc.cdt.toolchain.arc.ArcApplicabilityCalculator"
+               category="arc.linker.options.category.extensions"
+               command="-Xxmac_d16"
+               id="arc.linker.options.xmacd16"
+               name="Dual 16x16 XMAC (-Xxmac_d16)"
+               valueType="boolean">
+         </option>
+         <option
+               applicabilityCalculator="com.arc.cdt.toolchain.arc.ArcApplicabilityCalculator"
+               category="arc.linker.options.category.extensions"
+               command="-Hharvard"
+               defaultValue="false"
+               id="arc.linker.options.harvard"
+               isAbstract="false"
+               name="Harvard memory convention (-Hharvard)"
+               tip="Link in runtime library compiled with separate code and data spaces"
+               valueType="boolean">
+         </option>
+         <option
+               applicabilityCalculator="com.arc.cdt.toolchain.arc.ArcApplicabilityCalculator"
+               category="arc.linker.options.category.extensions"
+               command="-Xxy"
+               defaultValue="false"
+               id="arc.linker.options.xy"
+               isAbstract="false"
+               name="XY Memory (-Xxy)"
+               tip="Specify whether XY memory is available"
+               valueType="boolean">
+         </option>
+         <option
+               category="arc.linker.category.special"
+               defaultValue="arc.compiler.options.target.arc600"
+               id="arc.linker.options.target.version"
+               name="Target Runtime Libraries"
+               tip="Specify the target runtime library based on processor"
+               valueType="enumerated">
+            <enumeratedOptionValue
+                  command="-arcv2em"
+                  id="arc.compiler.options.target.arcv2em"
+                  name="ARCv2EM"/>
+            <enumeratedOptionValue
+                  command="-arc700"
+                  id="arc.compiler.options.target.arc700"
+                  isDefault="false"
+                  name="ARC 700">
+            </enumeratedOptionValue>
+            <enumeratedOptionValue
+                  command="-arc600"
+                  id="arc.compiler.options.target.arc600"
+                  isDefault="true"
+                  name="ARC 600">
+            </enumeratedOptionValue>
+            <enumeratedOptionValue
+                  command="-arc601"
+                  id="arc.compiler.options.target.arc601"
+                  name="ARC 601">
+            </enumeratedOptionValue>
+            <enumeratedOptionValue
+                  command="-a5"
+                  id="arc.compiler.options.target.arc5"
+                  isDefault="false"
+                  name="ARC 5">
+            </enumeratedOptionValue>
+         </option>
+         <option
+               applicabilityCalculator="com.arc.cdt.toolchain.arc.ArcApplicabilityCalculator"
+               category="arc.linker.category.special"
+               id="arc.arc.linker.options.xtimer"
+               isAbstract="false"
+               name="Timer for hardware profiling"
+               tip="Specify the timer to be used for runtime profiling"
+               valueType="enumerated">
+            <enumeratedOptionValue
+                  id="arc.linker.options.timer.none"
+                  isDefault="true"
+                  name="(None)">
+            </enumeratedOptionValue>
+            <enumeratedOptionValue
+                  command="-Xtimer0"
+                  id="arc.linker.options.timer.timer0"
+                  name="Timer 0 (-Xtimer0)">
+            </enumeratedOptionValue>
+            <enumeratedOptionValue
+                  command="-Xtimer1"
+                  id="arc.linker.options.timer.timer1"
+                  name="Timer 1 (-Xtimer1)">
+            </enumeratedOptionValue>
+         </option>
+         <option
+               applicabilityCalculator="com.arc.cdt.toolchain.arc.ArcApplicabilityCalculator"
+               category="arc.linker.category.special"
+               command="-Xspfp_compact"
+               defaultValue="false"
+               id="arc.linker.options.spfp"
+               isAbstract="false"
+               name="Compact Single-precision floating point libraries (-Xspfp_compact)"
+               tip="Link in runtime library compiled with compact single-precision floating point extension"
+               valueType="boolean">
+         </option>
+         <option
+               applicabilityCalculator="com.arc.cdt.toolchain.arc.ArcApplicabilityCalculator"
+               category="arc.linker.category.special"
+               command="-Xspfp_fast"
+               defaultValue="false"
+               id="arc.linker.options.spfpfast"
+               isAbstract="false"
+               name="Fast Single-precision floating point libraries (-Xspfp_fast)"
+               tip="Link in runtime library compiled with compact single-precision floating point extension"
+               valueType="boolean">
+         </option>
+         <option
+               applicabilityCalculator="com.arc.cdt.toolchain.arc.ArcApplicabilityCalculator"
+               category="arc.linker.category.special"
+               command="-Xdpfp_compact"
+               defaultValue="false"
+               id="arc.linker.options.dpfp"
+               isAbstract="false"
+               name="Compact Double-precision floating point libraries (-Xdpfp_compact)"
+               tip="Link in runtime library compiled with compact double-precision floating point extension"
+               valueType="boolean">
+         </option>
+         <option
+               applicabilityCalculator="com.arc.cdt.toolchain.arc.ArcApplicabilityCalculator"
+               category="arc.linker.category.special"
+               command="-Xdpfp_fast"
+               defaultValue="false"
+               id="arc.linker.options.dpfpfast"
+               isAbstract="false"
+               name="Fast Double-precision floating point libraries (-Xdpfp_fast)"
+               tip="Link in runtime library compiled with fast double-precision floating point extension"
+               valueType="boolean">
+         </option>
+         <optionCategory
+               id="arc.linker.options.category.extensions"
+               name="Extension settings (inherited from Compiler)">
+         </optionCategory>
+         <optionCategory
+               id="arc.linker.options.category.overlaySupport"
+               name="Overlay Support">
+         </optionCategory>
+         <option
+               applicabilityCalculator="com.arc.cdt.toolchain.arc.ArcApplicabilityCalculator"
+               category="arc.linker.options.category.overlaySupport"
+               command="-Haom"
+               defaultValue="false"
+               id="arc.linker.options.aom"
+               isAbstract="false"
+               name="Overlay support required (-Haom)"
+               resourceFilter="all"
+               tip="Indicate that code being linked contains overlays"
+               valueType="boolean">
+         </option>
+         <option
+               applicabilityCalculator="com.arc.cdt.toolchain.arc.ArcApplicabilityCalculator"
+               category="arc.linker.options.category.overlaySupport"
+               commandFalse="-Haom_nolib"
+               id="arc.linker.options.aom_nolib"
+               isAbstract="false"
+               name="Link in AOM library (!-Haom_nolib)"
+               resourceFilter="all"
+               tip="Link in the Automated Overlay Management (AOM) library"
+               valueType="boolean">
+         </option>
+         <option
+               applicabilityCalculator="com.arc.cdt.toolchain.arc.ArcApplicabilityCalculator"
+               category="arc.linker.options.category.overlaySupport"
+               command="-Boverlay_package"
+               defaultValue="false"
+               id="arc.linker.options.aom_overlay_only"
+               isAbstract="false"
+               name="Require that all code reside in overlays (-Haom_overlay_only)"
+               resourceFilter="all"
+               tip="Require that the generated executable contain overlays only."
+               valueType="boolean">
+         </option>
+      </tool>
+      <tool
+            command="arac"
+            id="com.arc.cdt.toolchain.arc.archiver"
+            isAbstract="true"
+            name="MetaWare Archiver for ARCompact"
+            outputFlag="-r"
+            superClass="com.arc.cdt.toolchain.archiver">
+      </tool>
+          
+
+ 
+   
+     <toolChain
+         id="com.arc.cdt.toolchain.arc.toolChain"
+         isAbstract="true"
+         name="ARCompact v1/v2"
+         superClass="com.arc.cdt.toolchain.toolChain">
+
+     	      
+	    </toolChain>
+
+	      <projectType
+             buildProperties="org.eclipse.cdt.build.core.buildArtefactType=org.eclipse.cdt.build.core.buildArtefactType.exe"
+             id="com.arc.cdt.toolchain.arc.exeProject"
+             isAbstract="false"
+             superClass="com.arc.cdt.toolchain.projectType.exe">
+		 <configuration
+         artifactExtension="elf"
+         buildProperties="org.eclipse.cdt.build.core.buildType=org.eclipse.cdt.build.core.buildType.debug"
+         cleanCommand="rm -rf"
+         errorParsers="com.arc.cdt.toolchain.ARCCompilerErrorParser;com.arc.cdt.toolchain.ARCLinkerErrorParser;com.arc.cdt.toolchain.ARCAssemblerErrorParser;org.eclipse.cdt.core.MakeErrorParser"
+         id="com.arc.cdt.toolchain.arc.exeDebugConfig"
+         name="Debug"
+         parent="com.arc.cdt.toolchain.configuration.base">
+		      <toolChain
+              id="com.arc.cdt.toolchain.arc.exeToolChainDebug"
+              isAbstract="false"
+              superClass="com.arc.cdt.toolchain.arc.toolChain">
+			 <tool
+          id="arc.exe.debug.exeCompilerDebug"
+          isAbstract="false"
+          obsoleteIDs="exeCompilerDebug"
+          superClass="com.arc.cdt.toolchain.arc.compilerDebug">
+        </tool>
+	
+        <tool
+              isAbstract="false"
+              id="com.arc.cdt.toolchain.arc.asmDebugExe"
+              superClass="com.arc.cdt.toolchain.arc.asmDebug"/>
+        <tool
+				id="com.arc.cdt.toolchain.arc.exeLinkerDebug"
+				superClass="com.arc.cdt.toolchain.arc.Linker"/>
+		</toolChain>
+		 </configuration>
+         <configuration
+               artifactExtension="elf"
+               buildProperties="org.eclipse.cdt.build.core.buildType=org.eclipse.cdt.build.core.buildType.release"
+               cleanCommand="rm -rf"
+               errorParsers="com.arc.cdt.toolchain.ARCCompilerErrorParser;com.arc.cdt.toolchain.ARCLinkerErrorParser;com.arc.cdt.toolchain.ARCAssemblerErrorParser;org.eclipse.cdt.core.MakeErrorParser"
+               id="com.arc.cdt.toolchain.arc.exeReleaseConfig"
+               name="Release"
+               parent="com.arc.cdt.toolchain.configuration.base">
+            <toolChain
+                  id="com.arc.cdt.toolchain.arc.exeReleaseToolChain"
+                  isAbstract="false"
+                  superClass="com.arc.cdt.toolchain.arc.toolChain">
+               <tool
+                     id="arc.cdt.toolchain.arc.exeCompilerRelease"
+                     isAbstract="false"
+                     obsoleteIDs=".exeCompilerRelease"
+                     superClass="com.arc.cdt.toolchain.arc.compiler">
+               </tool>
+               <tool
+                     isAbstract="false"
+                     id="com.arc.cdt.toolchain.arc.asmReleaseExe"
+                     superClass="com.arc.cdt.toolchain.arc.assembler"/>
+               <tool
+                     id="com.arc.cdt.toolchain.arc.exelinkerRelease"
+                     isAbstract="false"
+                     obsoleteIDs="arc.tool11"
+                     superClass="com.arc.cdt.toolchain.arc.Linker"/>
+               
+            </toolChain>
+         </configuration>
+      </projectType>
+      <projectType
+            buildProperties="org.eclipse.cdt.build.core.buildArtefactType=org.eclipse.cdt.build.core.buildArtefactType.staticLib"
+            id="com.arc.cdt.toolchain.arc.libProject"
+            isAbstract="false"
+            superClass="com.arc.cdt.toolchain.projectType.lib">
+      <configuration
+            artifactExtension="a"
+            buildProperties="org.eclipse.cdt.build.core.buildType=org.eclipse.cdt.build.core.buildType.debug"
+            cleanCommand="rm -rf"
+            errorParsers="com.arc.cdt.toolchain.ARCCompilerErrorParser;com.arc.cdt.toolchain.ARCLinkerErrorParser;com.arc.cdt.toolchain.ARCAssemblerErrorParser;org.eclipse.cdt.core.MakeErrorParser"
+            id="com.arc.cdt.toolchain.arc.libDebugConfig"
+            name="Debug"
+            parent="com.arc.cdt.toolchain.configuration.base">
+         <toolChain
+               id="com.arc.cdt.toolchain.arc.libDebugToolChain"
+               isAbstract="false"
+               scannerConfigDiscoveryProfileId="com.arc.cdt.toolchain.arc.ScannerConfigurationDiscoveryProfile"
+               superClass="com.arc.cdt.toolchain.arc.toolChain">
+            <tool
+                  id="arc.lib.debug.libCompiler"
+                  isAbstract="false"
+                  obsoleteIDs="arc.tool12"
+                  superClass="com.arc.cdt.toolchain.arc.compilerDebug"/>
+            <tool
+                  id="com.arc.cdt.toolchain.arc.libDebugAsm"
+                  isAbstract="false"
+                  obsoleteIDs="arc.tool6"
+                  superClass="com.arc.cdt.toolchain.arc.asmDebug"/>
+            <tool
+                  id="com.arc.cdt.toolchain.arc.ArDebug"
+                  isAbstract="false"
+                  obsoleteIDs="toolArchiver"
+                  superClass="com.arc.cdt.toolchain.arc.archiver"/>
+         </toolChain>
+ 
+           
+         </configuration>
+         <configuration
+               artifactExtension="a"
+               buildProperties="org.eclipse.cdt.build.core.buildType=org.eclipse.cdt.build.core.buildType.release"
+               cleanCommand="rm -rf"
+               errorParsers="com.arc.cdt.toolchain.ARCCompilerErrorParser;com.arc.cdt.toolchain.ARCLinkerErrorParser;com.arc.cdt.toolchain.ARCAssemblerErrorParser;org.eclipse.cdt.core.MakeErrorParser"
+               id="com.arc.cdt.toolchain.arc.libReleaseConfig"
+               name="Release"
+               parent="com.arc.cdt.toolchain.configuration.base">
+            <toolChain
+                  id="com.arc.cdt.toolchain.arc.libReleaseToolChain"
+                  isAbstract="false"
+                  scannerConfigDiscoveryProfileId="com.arc.cdt.toolchain.arc.ScannerConfigurationDiscoveryProfile"
+                  superClass="com.arc.cdt.toolchain.arc.toolChain">
+               <tool
+                     id="com.arc.cdt.toolchain.arc.libCompilerRelease"
+                     isAbstract="false"
+                     obsoleteIDs="arc.tool16"
+                     superClass="com.arc.cdt.toolchain.arc.compiler"/>
+              <tool
+                    id="com.arc.cdt.toolchain.arc.libReleaseAsm"
+                    isAbstract="false"
+                    obsoleteIDs="arc.tool6"
+                    superClass="com.arc.cdt.toolchain.arc.assembler"/>
+               <tool
+                     id="com.arc.cdt.toolchain.arc.ArRelease"
+                     isAbstract="false"
+                     obsoleteIDs="toolArchiver"
+                     superClass="com.arc.cdt.toolchain.arc.archiver"/>
+            </toolChain>
+         </configuration>
+      </projectType>
+      <managedBuildRevision
+            fileVersion="4.0.0">
+      </managedBuildRevision>
+       
+   </extension>
+   
+    <extension
+         id="ScannerConfigurationDiscoveryProfile"
+         name="MetaWare C/C++ Scanner Configuration Discovery Profile"
+         point="org.eclipse.cdt.make.core.ScannerConfigurationDiscoveryProfile">
+      <scannerInfoCollector
+            class="com.arc.cdt.scannerconfig.HighCScannerInfoCollector"
+            scope="project"/>
+      <scannerInfoProvider providerId="HighCSpecsFile">
+         <run
+               arguments="-Hbatchnotmp -Hnoobj ${plugin_state_location}/${specs_file}"
+               class="org.eclipse.cdt.make.internal.core.scannerconfig2.GCCSpecsRunSIProvider"
+               command="mcc"/>
+         <scannerInfoConsoleParser class="com.arc.cdt.scannerconfig.ARCScannerInfoConsoleParser"/>
+      </scannerInfoProvider>
+      <buildOutputProvider>
+         <scannerInfoConsoleParser
+               class="com.arc.cdt.scannerconfig.ARCBuildInfoConsoleParser">
+         </scannerInfoConsoleParser>
+         <open></open>
+      </buildOutputProvider>
+   </extension>
+   
+   <extension
+         point="org.eclipse.cdt.make.ui.DiscoveryProfilePage">
+      <profilePage
+            class="com.arc.cdt.toolchain.ui.HighCDiscoveryPage"
+            name="MetaWare C/C++ Includes &amp; Symbol Discovery for ARCompact"
+            profileId="com.arc.cdt.toolchain.arc.ScannerConfigurationDiscoveryProfile"/>
+   </extension>
+   
+
+</plugin>

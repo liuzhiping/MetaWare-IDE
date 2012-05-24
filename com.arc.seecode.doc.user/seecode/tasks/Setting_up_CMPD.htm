@@ -1,0 +1,46 @@
+<html>
+<head>
+<title>CMPD Setup</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel=StyleSheet href="../default.css">
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000">
+
+<H1>Setting up a multi-process debug session</H1>
+<P>The <b>CMPD Options</b> dialog allows you to add processes to a table one at 
+  a time. You can add, edit, or remove processes. To edit or remove a process, 
+  select the process in the table and click <b>Edit</b> or <b>Remove</b>.</P>
+<h2>Creating a new CMPD session</h2>
+<ol>
+  <li>Launch the debugger.</li>
+  <li>(Optional) Create a new project. This step is not mandatory, but is highly 
+    recommended to keep the CMPD settings separate from any single-process debug 
+    sessions you have. See <a href="Creating_and_Editing_Projects.htm">Creating 
+    and Editing Projects</a> for information on creating a new project.</li>
+  <li>Click <b>Add Process</b>.</li>
+  <li>In the <b>Add process</b> dialog enter a name for the process. The process 
+    name should start with an alpha character and can not contain any spaces.<br>
+    <i>Note: </i>Once the process is created you can not edit the name. </li>
+  <li>Enter a process number or set of numbers. You can enter one number, an integer,
+    to tell the debugger what number applies to the process. This number will
+    coincide to the target processor. You can also enter a process set, which
+    consists of two integers separated by a colon ':' character. A process set
+    spans a number of processors from the lefthand number to the right. For example,
+    process set <b>1:3</b> uses the same program for 3 processes 1 through 3;
+    The next process set might be <b>4:5</b>.</li>
+  <li>Enter the full path of the program in the <b>Command-line</b> field or click
+    the <b>Browse</b> <img src="../images/browse.gif"> button to locate your executable.</li>
+  <li>Click the <a href="Setting_Options.htm">Debugger options</a> button to set 
+    command-line options and program arguments for this process.</li>
+  <li>Click the <a href="Setting_Target_Hardware_Options.htm">Target-specific 
+    options</a> button to set the connection to your target system (hardware or 
+    simulator) for this process.</li>
+  <li>Click <b>OK</b> to add the process.</li>
+  <li>Repeat steps 3 through 9 until all of your processes are created.</li>
+  <li>Click <b>OK</b> to save the CMPD settings.</li>
+  <li>Click <b>OK</b> to start the debug session.</li>
+</ol>
+<p>&nbsp;</p>
+</BODY>
+</HTML>

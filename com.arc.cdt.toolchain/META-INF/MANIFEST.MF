@@ -1,0 +1,31 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: ARC Toolset Integration
+Bundle-SymbolicName: com.arc.cdt.toolchain; singleton:=true
+Bundle-Version: 8.7.0
+Bundle-Vendor: ARC International
+Bundle-Localization: plugin
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.ui.ide,
+ org.eclipse.cdt.managedbuilder.core,
+ org.eclipse.cdt.core,
+ org.eclipse.core.resources,
+ org.eclipse.core.runtime,
+ org.eclipse.cdt.make.core,
+ org.eclipse.ui.forms,
+ org.eclipse.ui.intro,
+ com.arc.mw.util,
+ org.eclipse.cdt.make.ui,
+ org.eclipse.cdt.ui,
+ org.eclipse.ui.cheatsheets,
+ org.dom4j,
+ org.eclipse.debug.core
+Bundle-ActivationPolicy: lazy
+Export-Package: com.arc.cdt.errorparsers,
+ com.arc.cdt.managedbuilder.makegen,
+ com.arc.cdt.managedbuilder.scannerconfig,
+ com.arc.cdt.scannerconfig,
+ com.arc.cdt.toolchain,
+ com.arc.cdt.toolchain.ui
+Bundle-Activator: com.arc.cdt.toolchain.ToolchainPlugin
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6

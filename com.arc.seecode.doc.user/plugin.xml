@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+<plugin>
+   <extension
+         id="seecode"
+         name="Debugger Context help"
+         point="org.eclipse.help.contexts">
+      <contexts
+            file="seecode.xml"
+            plugin="com.arc.cdt.debug.seecode.ui"/>
+      <contexts
+            file="cdt_extensions.xml"
+            plugin="org.eclipse.cdt.debug.ui">
+      </contexts>
+   </extension>
+
+</plugin>

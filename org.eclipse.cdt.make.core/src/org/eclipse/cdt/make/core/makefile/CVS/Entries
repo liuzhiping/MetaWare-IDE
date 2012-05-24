@@ -1,0 +1,24 @@
+/IArchiveTarget.java/1.7/Thu Mar  4 00:57:50 2010//Tcdt_7_0
+/IBadDirective.java/1.6/Thu Mar  4 00:57:50 2010//Tcdt_7_0
+/ICommand.java/1.10/Fri May  7 20:22:47 2010//Tcdt_7_0
+/IComment.java/1.9/Thu Mar  4 00:57:50 2010//Tcdt_7_0
+/IDefaultRule.java/1.6/Thu Mar  4 00:57:50 2010//Tcdt_7_0
+/IDirective.java/1.10/Fri May  7 20:22:49 2010//Tcdt_7_0
+/IEmptyLine.java/1.7/Thu Mar  4 00:57:50 2010//Tcdt_7_0
+/IIgnoreRule.java/1.6/Thu Mar  4 00:57:50 2010//Tcdt_7_0
+/IInferenceRule.java/1.7/Thu Mar  4 00:57:50 2010//Tcdt_7_0
+/IMacroDefinition.java/1.9/Fri May  7 20:22:46 2010//Tcdt_7_0
+/IMakefile.java/1.13/Fri May  7 20:22:50 2010//Tcdt_7_0
+/IMakefileReaderProvider.java/1.3/Thu Mar  4 00:57:50 2010//Tcdt_7_0
+/IMakefileValidator.java/1.6/Thu Mar  4 00:57:50 2010//Tcdt_7_0
+/IParent.java/1.7/Thu Mar  4 00:57:50 2010//Tcdt_7_0
+/IPosixRule.java/1.6/Thu Mar  4 00:57:50 2010//Tcdt_7_0
+/IPreciousRule.java/1.6/Thu Mar  4 00:57:50 2010//Tcdt_7_0
+/IRule.java/1.9/Fri May  7 20:22:46 2010//Tcdt_7_0
+/ISccsGetRule.java/1.6/Thu Mar  4 00:57:50 2010//Tcdt_7_0
+/ISilentRule.java/1.6/Thu Mar  4 00:57:50 2010//Tcdt_7_0
+/ISpecialRule.java/1.6/Thu Mar  4 00:57:50 2010//Tcdt_7_0
+/ISuffixesRule.java/1.6/Thu Mar  4 00:57:50 2010//Tcdt_7_0
+/ITarget.java/1.7/Thu Mar  4 00:57:50 2010//Tcdt_7_0
+/ITargetRule.java/1.7/Thu Mar  4 00:57:50 2010//Tcdt_7_0
+D/gnu////

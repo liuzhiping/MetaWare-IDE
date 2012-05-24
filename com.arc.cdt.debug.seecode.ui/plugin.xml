@@ -1,0 +1,378 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+<plugin>
+
+   <extension
+         point="org.eclipse.cdt.debug.ui.CDebuggerPage">
+<!-- debuggerID must match that ID of the 
+         	org.eclipse.cdt.debug.core.CDebugger  extension -->
+      <debuggerPage
+            class="com.arc.cdt.debug.seecode.internal.ui.SeeCodeConfigPage"
+            debuggerID="com.arc.cdt.debug.seecode.core.SeeCodeDebugger"
+            id="com.arc.seecode.DebuggerPage">
+      </debuggerPage>
+      <debuggerPage
+            class="com.arc.cdt.debug.seecode.internal.ui.CMPDDebuggerTab"
+            debuggerID="com.arc.cdt.debug.seecode.core.SeeCodeCmpdDebugger"
+            id="com.arc.seecode.CMPDDebuggerPage">
+      </debuggerPage>
+      <debuggerPage
+            class="com.arc.cdt.debug.seecode.internal.ui.CMPDAdditionalSettingsTab"
+            debuggerID="com.arc.cdt.debug.seecode.core.SeeCodeCmpdDebugger"
+            id="com.arc.seecode.CMPDAdditioinalSettingsPage">
+      </debuggerPage>
+   </extension>
+   <extension
+         point="org.eclipse.ui.views">
+      <view
+            allowMultiple="true"
+            category="org.eclipse.debug.ui"
+            class="com.arc.cdt.debug.seecode.ui.views.SeeCodeCustomView"
+            fastViewWidthRatio="0.5"
+            icon="icons/small_meta.gif"
+            id="com.arc.cdt.debug.seecode.ui.views.SeeCodeCustomView"
+            name="Special Debugger Display"/>
+            <!--
+      <view
+            icon="icons/register_view.gif"
+            class="com.arc.cdt.debug.seecode.ui.views.SeeCodeRegView"
+            category="org.eclipse.debug.ui"
+            name="Registers (table form)"
+            id="com.arc.cdt.debug.seecode.ui.views.reg"/> -->
+            
+      <view
+            class="com.arc.cdt.debug.seecode.ui.views.SeeCodeDisasmView"
+            icon="icons/disassembly_view.gif"
+            category="org.eclipse.debug.ui"
+            name="Disassembly (MetaWare)"
+            id="com.arc.cdt.debug.seecode.ui.views.disasm"/>
+      <view
+            category="org.eclipse.debug.ui"
+            class="com.arc.cdt.debug.seecode.ui.views.SeeCodeCommandView"
+            icon="icons/command.gif"
+            id="com.arc.cdt.debug.seecode.ui.command"
+            name="%debugger.commands"/>
+      <view
+            category="org.eclipse.debug.ui"
+            class="com.arc.cdt.debug.seecode.ui.views.MemorySearchView"
+            fastViewWidthRatio="0.3"
+            icon="icons/search.gif"
+            id="com.arc.cdt.debug.seecode.ui.views.memsearch"
+            name="Memory Search"/>
+      <view
+            category="org.eclipse.debug.ui"
+            class="com.arc.cdt.debug.seecode.ui.views.SeeCodeErrorLogView"
+            icon="icons/small_meta.gif"
+            id="com.arc.cdt.seecode.errorlog"
+            name="Debugger Error Log"
+            restorable="true">
+      </view>
+      <!--
+      <view
+            category="org.eclipse.debug.ui"
+            class="com.arc.cdt.debug.seecode.ui.views.TerminalSimulatorView"
+            fastViewWidthRatio="0.3"
+            icon="icons/termsim_view.gif"
+            id="com.arc.cdt.debug.seecode.ui.views.termsim"
+            name="Terminal Simulator"/> -->
+   </extension>
+   <extension
+         point="org.eclipse.ui.viewActions">
+      <viewContribution
+            targetID="org.eclipse.debug.ui.DebugView"
+            id="com.arc.cdt.debug.seecode.ui.debugview.toolbar">
+         <action
+               id="com.arc.cdt.debug.seecode.ui.refreshDisplays"
+               toolbarPath="renderGroup"
+               class="com.arc.cdt.debug.seecode.internal.ui.action.RefreshActionDelegate"
+               disabledIcon="icons/disabled_refresh.gif"
+               enablesFor="1"
+               icon="icons/refresh.gif"
+               label="%refresh.label"
+               tooltip="%refresh.tooltip">
+           
+         </action>
+       </viewContribution>
+   </extension>
+   <extension
+         point="org.eclipse.ui.preferencePages">
+      <page
+            name="MetaWare Debugger"
+            category="org.eclipse.cdt.debug.ui.CDebugPreferencePage"
+            class="com.arc.cdt.debug.seecode.internal.ui.SeeCodePreferencePage"
+            id="com.arc.cdt.debug.seecode.ui.preferencePages">
+      </page>
+   </extension>
+   <extension
+         point="org.eclipse.ui.perspectiveExtensions">
+      <perspectiveExtension targetID="org.eclipse.debug.ui.DebugPerspective">
+         <view
+               visible="false"
+               relationship="stack"
+               relative="org.eclipse.ui.views.ContentOutline"
+               id="com.arc.cdt.debug.seecode.ui.views.disasm"/>
+         <viewShortcut id="com.arc.cdt.debug.seecode.ui.views.disasm"/>
+         <viewShortcut id="com.arc.cdt.debug.seecode.ui.command"/>
+         <!--<viewShortcut id="com.arc.cdt.debug.seecode.ui.views.termsim"/>-->
+         <view
+               closeable="true"
+               standalone="true"
+               moveable="true"
+               visible="false"
+               ratio="0.8"
+               showTitle="false"
+               id="com.arc.cdt.debug.seecode.ui.command"
+               relative="org.eclipse.ui.views.ContentOutline"
+               relationship="bottom"/>
+         <viewShortcut id="com.arc.cdt.debug.seecode.ui.views.memsearch"/>
+         <view
+               closeable="true"
+               id="com.arc.cdt.debug.seecode.ui.views.memsearch"
+               moveable="true"
+               relationship="stack"
+               relative="org.eclipse.ui.views.ContentOutline"
+               showTitle="true"
+               standalone="false"
+               visible="false"/>
+         <view
+               closeable="true"
+               id="com.arc.cdt.debug.seecode.ui.views.SeeCodeCustomView:image"
+               moveable="true"
+               ratio=".5"
+               relationship="right"
+               relative="org.eclipse.ui.console.ConsoleView"
+               standalone="false"
+               visible="false">
+         </view>
+           <view
+               id="com.arc.cdt.debug.seecode.ui.views.SeeCodeCustomView:instrhist"
+               relationship="stack"
+               relative="com.arc.cdt.debug.seecode.ui.views.SeeCodeCustomView:image"
+               visible="false">
+         </view>
+         <view
+               id="com.arc.cdt.debug.seecode.ui.views.SeeCodeCustomView:source"
+               ratio="0.5"
+               relationship="right"
+               relative="org.eclipse.ui.editorss"
+               visible="false"/>
+         <view
+               id="com.arc.cdt.debug.seecode.ui.views.SeeCodeCustomView:watch"
+               relationship="stack"
+               relative="com.arc.cdt.debug.seecode.ui.views.SeeCodeCustomView:image"
+               visible="false"/>
+         <view
+               id="com.arc.cdt.debug.seecode.ui.views.SeeCodeCustomView:brk"
+               relationship="stack"
+               relative="com.arc.cdt.debug.seecode.ui.views.SeeCodeCustomView:image"
+               visible="false"/>
+         <view
+               visible="false"
+               relationship="stack"
+               relative="org.eclipse.debug.ui.VariableView"
+               id="com.arc.cdt.debug.seecode.ui.views.SeeCodeCustomView:auxregs"/>
+          <view
+               visible="false"
+               relationship="stack"
+               relative="org.eclipse.debug.ui.VariableView"
+               id="com.arc.cdt.debug.seecode.ui.views.SeeCodeCustomView:mem#1"/>
+          <view
+               visible="false"
+               relationship="stack"
+               relative="org.eclipse.debug.ui.VariableView"
+               id="com.arc.cdt.debug.seecode.ui.views.SeeCodeCustomView:mem#2"/>
+          <view
+               visible="false"
+               relationship="stack"
+               relative="org.eclipse.debug.ui.VariableView"
+               id="com.arc.cdt.debug.seecode.ui.views.SeeCodeCustomView:mem#3"/>
+          <view
+                closeable="true"
+                id="com.arc.cdt.seecode.errorlog"
+                minimized="false"
+                moveable="true"
+                relationship="stack"
+                relative="org.eclipse.ui.console.ConsoleView"
+                showTitle="true"
+                standalone="false"
+                visible="false">
+          </view>
+          <viewShortcut
+                id="com.arc.cdt.seecode.errorlog">
+          </viewShortcut>
+          <!-- view
+          
+          
+               closeable="true"
+               id="com.arc.cdt.debug.seecode.ui.views.termsim"
+               moveable="true"
+               relationship="right"
+               relative="org.eclipse.ui.console.ConsoleView"
+               ratio="0.7"
+               showTitle="true"
+               standalone="false"
+               visible="true" -->
+      </perspectiveExtension>
+      <perspectiveExtension
+            targetID="org.eclipse.cdt.ui.CPerspective">
+      </perspectiveExtension>
+   </extension>
+   <extension
+         point="org.eclipse.ui.themes">
+      <fontDefinition
+            isEditable="true"
+            defaultsTo="org.eclipse.jface.textfont"
+            label="%debugger.font"
+            categoryId="com.arc.cdt.debug.seecode.presentation"
+            id="com.arc.cdt.debug.seecode.ui.SeeCodeFont">
+         <description>The font to be used for the displays that are created by the MetaWare debugger.</description>
+      </fontDefinition>
+     
+      <colorDefinition
+            categoryId="com.arc.cdt.debug.seecode.presentation"
+            id="com.arc.cdt.debug.seecode.ui.SeeCodeColor"
+            isEditable="true"
+            label="%debugger.color"
+            value="0,0,0">
+         <description>
+            The color of the text that makes up the MetaWare debugger displays.
+         </description>
+      </colorDefinition>
+      <colorDefinition
+            categoryId="com.arc.cdt.debug.seecode.presentation"
+            id="com.arc.cdt.debug.seecode.ui.color.background"
+            isEditable="true"
+            label="%debugger.background"
+            value="255,255,255">
+      </colorDefinition>
+     
+      <themeElementCategory
+            id="com.arc.cdt.debug.seecode.presentation"
+            label="MetaWare Debugger"
+            parentId="org.eclipse.debug.ui.presentation">
+      </themeElementCategory>
+      <colorDefinition
+            categoryId="com.arc.cdt.debug.seecode.presentation"
+            id="com.arc.cdt.debug.seecode.ui.color.overlay"
+            isEditable="true"
+            label="%debugger.color.overlay"
+            value="240,240,255">
+      </colorDefinition>
+      <colorDefinition
+            categoryId="com.arc.cdt.debug.seecode.presentation"
+            id="com.arc.cdt.debug.seecode.ui.color.readonly"
+            isEditable="true"
+            label="%debugger.color.readonly"
+            value="240,240,240">
+      </colorDefinition>
+       <colorDefinition
+            categoryId="com.arc.cdt.debug.seecode.presentation"
+            id="com.arc.cdt.debug.seecode.ui.color.misaligned"
+            isEditable="true"
+            label="%debugger.color.misaligned"
+            value="255,240,240">
+      </colorDefinition>
+        <colorDefinition
+            categoryId="com.arc.cdt.debug.seecode.presentation"
+            id="com.arc.cdt.debug.seecode.ui.errorlog.background"
+            isEditable="true"
+            label="%debugger.color.errorlog"
+            value="240,240,240">
+           <description>
+              Color of the background in the MetaWare Debugger Error Log.
+           </description>
+      </colorDefinition>
+      <colorDefinition
+            categoryId="com.arc.cdt.debug.seecode.presentation"
+            id="com.arc.cdt.debug.seecode.ui.errorlog.foreground"
+            isEditable="true"
+            label="%debugger.errorlog.foreground"
+            value="255,0,0">
+         <description>
+            Color of the text in the MetaWare Debugger Error Log.
+         </description>
+      </colorDefinition>
+   </extension>
+   <!-- NOTE: we moved this extension to here from com.arc.cdt.debug.seecode.core plugin to
+        get around an initialization issue that came to light in Eclipse 3.2.
+        See comment in com.arc.cdt.debug.seecode.ui.SeeCodeDebugger for details. -->
+   <extension
+         id="SeeCodeDebugger"
+         point="org.eclipse.cdt.debug.core.CDebugger">
+      <debugger
+            class="com.arc.cdt.debug.seecode.ui.SeeCodeDebugger"
+            cpu="arc,ac,ac2,vc,*"
+            id="com.arc.cdt.debug.seecode.core.SeeCodeDebugger"
+            modes="run,debug"
+            name="%SeeCodeDebugger.name"
+            platform="*"
+            runCommand="com.arc.cdt.debug.seecode.core.RunCommand">
+         <buildIdPattern
+               pattern="com\.arc\.cdt\..*">
+         </buildIdPattern>
+      </debugger>
+   </extension>
+   
+   <extension
+         point="org.eclipse.debug.ui.launchConfigurationTabGroups">
+      <launchConfigurationTabGroup
+            class="com.arc.cdt.debug.seecode.internal.ui.LaunchCMPDTabGroup"
+            id="com.arc.cdt.debug.seecode.ui.launchCMPD"
+            type="com.arc.cdt.debug.seecode.core.CMPDType">
+      </launchConfigurationTabGroup>
+   </extension>
+   <extension
+         point="org.eclipse.debug.ui.launchConfigurationTypeImages">
+      <launchConfigurationTypeImage
+            configTypeID="com.arc.cdt.debug.seecode.core.CMPDType"
+            icon="icons/small_meta.gif"
+            id="com.arc.cdt.debug.seecode.ui.CMPDlaunchConfigurationTypeImage">
+      </launchConfigurationTypeImage>
+   </extension>
+   
+   <extension
+         point="org.eclipse.debug.core.launchConfigurationTypes">
+      <launchConfigurationType
+            delegate="com.arc.cdt.debug.seecode.internal.ui.CMPDLaunchDelegate"
+            delegateDescription="Launches a concurrent multiprocess (CMPD) debugger session."
+            delegateName="MetaWare CMPD Launcher"
+            id="com.arc.cdt.debug.seecode.core.CMPDType"
+            modes="debug"
+            name="%CMPDLaunch.name"
+            public="true"
+            sourceLocatorId="org.eclipse.cdt.debug.core.sourceLocator"
+            sourcePathComputerId="org.eclipse.cdt.debug.core.sourcePathComputer">
+      </launchConfigurationType>
+    </extension>
+    <extension
+         point="org.eclipse.ui.viewActions">
+         <viewContribution
+            targetID="org.eclipse.debug.ui.DebugView"
+            id="com.arc.cdt.debug.seecode.ui.DebugViewActions">
+            <action
+                  class="com.arc.cdt.debug.seecode.internal.ui.action.ShowAnimationWidgetsActionDelegate"
+                  id="com.arc.cdt.debug.seecode.ui.actions.showAnimationWidgets"
+                  label="%showanimation.label"
+                  menubarPath="animation"
+                  style="toggle"
+                  tooltip="%showanimation.tooltip">
+            </action>
+        </viewContribution>
+    </extension>
+    <extension
+          point="org.eclipse.cdt.debug.core.BreakpointActionType">
+       <actionType
+             class="com.arc.cdt.debug.seecode.internal.ui.breakpointactions.CommandBreakpointAction"
+             id="com.arc.cdt.debug.seecode.ui.commandAction"
+             name="Debugger Command">
+       </actionType>
+    </extension>
+    <extension
+          point="org.eclipse.cdt.debug.ui.BreakpointActionPage">
+       <actionPage
+             actionType="com.arc.cdt.debug.seecode.ui.commandAction"
+             class="com.arc.cdt.debug.seecode.internal.ui.breakpointactions.CommandBreakpointPage"
+             id="com.arc.cdt.debug.seecode.ui.commandActionPage">
+       </actionPage>
+    </extension>
+</plugin>

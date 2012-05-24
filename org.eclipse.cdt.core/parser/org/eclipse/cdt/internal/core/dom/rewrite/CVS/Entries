@@ -1,0 +1,12 @@
+/ASTLiteralNode.java/1.8/Thu Mar  4 00:59:36 2010//Tcdt_7_0
+/ASTModification.java/1.2/Fri Jun  4 18:08:59 2010//Tcdt_7_0
+/ASTModificationMap.java/1.4/Fri Jun  4 18:08:58 2010//Tcdt_7_0
+/ASTModificationStore.java/1.2/Fri Jun  4 18:08:57 2010//Tcdt_7_0
+/ASTRewriteAnalyzer.java/1.3/Thu Apr 10 22:00:56 2008//Tcdt_7_0
+/DeclarationGeneratorImpl.java/1.1.2.4/Tue May 24 17:02:58 2011//Tcdt_7_0
+/ICTextFileChangeFactory.java/1.1/Wed Mar 12 09:53:14 2008//Tcdt_7_0
+/TrackedNodePosition.java/1.1/Tue Aug 12 03:39:40 2008//Tcdt_7_0
+D/astwriter////
+D/changegenerator////
+D/commenthandler////
+D/util////

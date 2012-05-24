@@ -1,0 +1,98 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD><meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>ErrorParser</title>
+<style type="text/css">@import url("../../book.css");</style>
+<style type="text/css">@import url("../../schema.css");</style>
+</HEAD>
+<BODY>
+<H1 style="text-align:center">ErrorParser</H1>
+<p></p>
+<h6 class="CaptionFigColumn SchemaHeader">Identifier: </h6>org.eclipse.cdt.core.ErrorParser<p></p>
+<h6 class="CaptionFigColumn SchemaHeader">Since: </h6>CDT 1.2
+<p></p>
+
+<h6 class="CaptionFigColumn SchemaHeader">Description: </h6>This extension point is used to contribute a new Error Parser. A Error Parser is used to parse errors/warnings/info from build output and populate Problems View with them.<p></p>
+<h6 class="CaptionFigColumn SchemaHeader">Configuration Markup:</h6>
+<p></p>
+<p class="code SchemaDtd">&lt;!ELEMENT <a name="e.extension">extension</a> (<a href="#e.errorparser">errorparser</a>)&gt;</p>
+<p class="code SchemaDtd">&lt;!ATTLIST extension</p>
+<p class="code SchemaDtdAttlist">id&nbsp;&nbsp;&nbsp;&nbsp;CDATA #REQUIRED</p><p class="code SchemaDtdAttlist">name&nbsp;&nbsp;CDATA #REQUIRED</p><p class="code SchemaDtdAttlist">point&nbsp;CDATA #REQUIRED</p>&gt;</p>
+<p></p>
+<ul class="ConfigMarkupAttlistDesc">
+<li><b>id</b> - ID of the extension point (Simple ID)</li>
+<li><b>name</b> - Name of the extension point</li>
+</ul>
+<br><p class="code SchemaDtd">&lt;!ELEMENT <a name="e.errorparser">errorparser</a> (<a href="#e.pattern">pattern</a>*)&gt;</p>
+<p class="code SchemaDtd">&lt;!ATTLIST errorparser</p>
+<p class="code SchemaDtdAttlist">id&nbsp;&nbsp;&nbsp;&nbsp;CDATA #IMPLIED</p><p class="code SchemaDtdAttlist">name&nbsp;&nbsp;CDATA #IMPLIED</p><p class="code SchemaDtdAttlist">class&nbsp;CDATA "org.eclipse.cdt.core.errorparsers.RegexErrorParser"</p>&gt;</p>
+<p></p>
+<ul class="ConfigMarkupAttlistDesc">
+<li><b>id</b> - ID of the error parser. If attribute is missing error parser ID is constructed appending Simple ID of extension to plugin ID.</li>
+<li><b>name</b> - Name of the error parser. If this attribute is missing extension name is taken.</li>
+<li><b>class</b> - a fully qualified name of the Java class that implements <samp>org.eclipse.cdt.core.IErrorParser</samp> interface.</li>
+</ul>
+<br><p class="code SchemaDtd">&lt;!ELEMENT <a name="e.pattern">pattern</a> EMPTY&gt;</p>
+<p class="code SchemaDtd">&lt;!ATTLIST pattern</p>
+<p class="code SchemaDtdAttlist">severity&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(Error|Warning|Info|Ignore) </p><p class="code SchemaDtdAttlist">regex&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CDATA "(.*)"</p><p class="code SchemaDtdAttlist">file-expr&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CDATA #IMPLIED</p><p class="code SchemaDtdAttlist">line-expr&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CDATA #IMPLIED</p><p class="code SchemaDtdAttlist">description-expr&nbsp;&nbsp;&nbsp;CDATA "$1"</p><p class="code SchemaDtdAttlist">variable-expr&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CDATA #IMPLIED</p><p class="code SchemaDtdAttlist">eat-processed-line&nbsp;(true | false) </p>&gt;</p>
+<p></p>
+<p class="ConfigMarkupElementDesc">
+Use element "pattern" to configure  RegexErrorParser.</p>
+<br>
+<ul class="ConfigMarkupAttlistDesc">
+<li><b>severity</b> - Attribute "severity" specifies which severity should be used to display the marker in Problems View. There are 3 levels of severity, "Error", "Warning" and "Info". "Ignore" lets stop evaluating the line by the rest of patterns without showing up in Problems View.</li>
+<li><b>regex</b> - Java regular expression to define capturing groups for file-expr, line-expr and description-expr.</li>
+<li><b>file-expr</b> - "Replacement" expression composed from capturing groups defined in regex to define the file.</li>
+<li><b>line-expr</b> - "Replacement" expression composed from capturing groups defined in regex to define the line in file.</li>
+<li><b>description-expr</b> - "Replacement" expression composed from capturing groups defined in regex to define the description (i.e. "$1: $2"). It is possible to specify more than one capturing group in such expression.</li>
+<li><b>variable-expr</b> - "Replacement" expression composed from capturing groups defined in regex to define variable. The value will be assigned to marker attributes but is not used by CDT currently.</li>
+<li><b>eat-processed-line</b> - The attribute defines if a line matched by the pattern is prevented or allowed to be processed by the rest of patterns. "No" allows several patterns to evaluate one line.</li>
+</ul>
+<br><h6 class="CaptionFigColumn SchemaHeader">Examples: </h6><br/>
+package org.eclipse.cdt.example.errorparser;<br/>
+<br/>
+import org.eclipse.cdt.core.IMarkerGenerator;<br/>
+import org.eclipse.cdt.core.errorparsers.AbstractErrorParser;<br/>
+import org.eclipse.cdt.core.errorparsers.ErrorPattern;<br/>
+<br/>
+/**<br/>
+ * Simple error parser parsing lines of kind "FILE,LINE:error DESCRIPTION"<br/>
+ * Enable the errorparser in project Properties->C/C++ Build->Settings->Error Parsers<br/>
+ */<br/>
+public class SampleErrorParser extends AbstractErrorParser {<br/>
+ private static final ErrorPattern[] patterns = {<br/>
+  new ErrorPattern("(.*),(.*):error (.*)", 1, 2, 3, 0, IMarkerGenerator.SEVERITY_ERROR_RESOURCE),<br/>
+  new ErrorPattern("(.*),(.*):warning (.*)", 1, 2, 3, 0, IMarkerGenerator.SEVERITY_WARNING),<br/>
+  new ErrorPattern("(.*),(.*):info (.*)", 1, 2, 3, 0, IMarkerGenerator.SEVERITY_INFO),<br/>
+ };<br/>
+ /**<br/>
+  * Constructor to set the error pattern.<br/>
+  */<br/>
+ public SampleErrorParser() {<br/>
+  super(patterns);<br/>
+ }<br/>
+}<br/>
+<p></p>
+
+<h6 class="CaptionFigColumn SchemaHeader">API Information: </h6>Plug-ins that want to extend this extension point must implement <samp>org.eclipse.cdt.core.IErrorParser</samp> interface.
+<br/>
+For most cases it is sufficient to configure RegexErrorParser which is provided by default.
+Another good choice is to extend <samp>org.eclipse.cdt.core.errorparsers.AbstractErrorParser</samp> as done in the example.
+<br/>
+ErrorParsers dealing with multi-line messages should implement <samp>org.eclipse.cdt.core.IErrorParser2</samp> interface.
+<p></p>
+
+<h6 class="CaptionFigColumn SchemaHeader">Supplied Implementation: </h6>For another example of implementation see org.eclipse.cdt.internal.errorparsers.GCCErrorParser
+<p></p>
+
+<br>
+<p class="note SchemaCopyright">
+Copyright (c) 2005, 2009 Andrew Gvozdev (Quoin Inc.) and others.<br/>
+All rights reserved. This program and the accompanying materials<br/>
+are made available under the terms of the Eclipse Public License v1.0<br/>
+which accompanies this distribution, and is available at<br/>
+http://www.eclipse.org/legal/epl-v10.html<br/>
+
+</p>
+</BODY>
+</HTML>

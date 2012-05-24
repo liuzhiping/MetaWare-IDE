@@ -1,0 +1,13 @@
+/BasicSelectionTransferDragAdapter.java/1.7/Fri Jun  4 19:20:40 2010//Tcdt_7_0
+/CDTViewerDragAdapter.java/1.6/Fri Jun  4 19:20:40 2010//Tcdt_7_0
+/CDTViewerDropAdapter.java/1.4/Fri Jun  4 19:20:40 2010//Tcdt_7_0
+/DelegatingDragAdapter.java/1.7/Fri Jun  4 19:20:40 2010//Tcdt_7_0
+/DelegatingDropAdapter.java/1.4/Fri Jun  4 19:20:40 2010//Tcdt_7_0
+/FileTransferDragAdapter.java/1.9/Fri Jun  4 19:20:40 2010//Tcdt_7_0
+/FileTransferDropAdapter.java/1.4/Fri Jun  4 19:20:40 2010//Tcdt_7_0
+/PluginTransferDropAdapter.java/1.1/Fri Jun  4 19:20:40 2010//Tcdt_7_0
+/ResourceTransferDragAdapter.java/1.9/Fri Jun  4 19:20:40 2010//Tcdt_7_0
+/ResourceTransferDropAdapter.java/1.7/Fri Jun  4 19:20:40 2010//Tcdt_7_0
+/TextViewerDragAdapter.java/1.7/Fri Jun  4 19:20:40 2010//Tcdt_7_0
+/TransferDragSourceListener.java/1.2/Fri Jun  4 19:20:40 2010//Tcdt_7_0
+/TransferDropTargetListener.java/1.2/Fri Jun  4 19:20:40 2010//Tcdt_7_0

@@ -1,0 +1,15 @@
+/IMakeBuilderInfo.java/1.20/Fri May  7 20:22:46 2010//Tcdt_7_0
+/IMakeCommonBuildInfo.java/1.10/Fri May  7 20:22:51 2010//Tcdt_7_0
+/IMakeTarget.java/1.22/Fri May  7 20:22:49 2010//Tcdt_7_0
+/IMakeTargetListener.java/1.10/Thu Mar  4 00:57:48 2010//Tcdt_7_0
+/IMakeTargetManager.java/1.21/Fri May  7 20:22:48 2010//Tcdt_7_0
+/MakeBuilder.java/1.58.2.1/Mon Nov  8 18:01:41 2010//Tcdt_7_0
+/MakeBuilderUtil.java/1.7/Fri May  7 20:22:49 2010//Tcdt_7_0
+/MakeCorePlugin.java/1.44/Fri May  7 20:22:47 2010//Tcdt_7_0
+/MakeProjectNature.java/1.21/Thu Mar  4 00:57:50 2010//Tcdt_7_0
+/MakeScannerInfo.java/1.15/Fri May  7 20:31:06 2010//Tcdt_7_0
+/MakeScannerProvider.java/1.23/Fri May  7 20:22:48 2010//Tcdt_7_0
+/MakeTargetEvent.java/1.13/Thu Mar  4 00:57:50 2010//Tcdt_7_0
+D/makefile////
+D/messages////
+D/scannerconfig////

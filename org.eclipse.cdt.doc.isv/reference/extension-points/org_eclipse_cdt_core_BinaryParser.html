@@ -1,0 +1,60 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD><meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>BinaryParser</title>
+<style type="text/css">@import url("../../book.css");</style>
+<style type="text/css">@import url("../../schema.css");</style>
+</HEAD>
+<BODY>
+<H1 style="text-align:center">BinaryParser</H1>
+<p></p>
+<h6 class="CaptionFigColumn SchemaHeader">Identifier: </h6>org.eclipse.cdt.core.BinaryParser<p></p>
+<h6 class="CaptionFigColumn SchemaHeader">Since: </h6>CDT 2.0
+<p></p>
+
+<h6 class="CaptionFigColumn SchemaHeader">Description: </h6>This extension point is used to contribute a new Binary Parser to CDT. Binary parser analyses object/executable files to display their symbols and other information to a user.<p></p>
+<h6 class="CaptionFigColumn SchemaHeader">Configuration Markup:</h6>
+<p></p>
+<p class="code SchemaDtd">&lt;!ELEMENT <a name="e.extension">extension</a> (<a href="#e.cextension">cextension</a>)&gt;</p>
+<p class="code SchemaDtd">&lt;!ATTLIST extension</p>
+<p class="code SchemaDtdAttlist">id&nbsp;&nbsp;&nbsp;&nbsp;CDATA #IMPLIED</p><p class="code SchemaDtdAttlist">name&nbsp;&nbsp;CDATA #IMPLIED</p><p class="code SchemaDtdAttlist">point&nbsp;CDATA #REQUIRED</p>&gt;</p>
+<p></p>
+<ul class="ConfigMarkupAttlistDesc">
+<li><b>id</b> - ID of the extension point (Simple ID)</li>
+<li><b>name</b> - Name of the extension point</li>
+</ul>
+<br><p class="code SchemaDtd">&lt;!ELEMENT <a name="e.cextension">cextension</a> (<a href="#e.filter">filter</a>? , <a href="#e.run">run</a>)&gt;</p>
+<p></p>
+<br><br>
+<p class="code SchemaDtd">&lt;!ELEMENT <a name="e.run">run</a> EMPTY&gt;</p>
+<p class="code SchemaDtd">&lt;!ATTLIST run</p>
+<p class="code SchemaDtdAttlist">class&nbsp;CDATA #REQUIRED</p>&gt;</p>
+<p></p>
+<ul class="ConfigMarkupAttlistDesc">
+<li><b>class</b> - </li>
+</ul>
+<br><div style="color: red; font-style: italic;">The <b>filter</b> element is deprecated</div> <p class="code SchemaDtd">&lt;!ELEMENT <a name="e.filter">filter</a> EMPTY&gt;</p>
+<p class="code SchemaDtd">&lt;!ATTLIST filter</p>
+<p class="code SchemaDtdAttlist">name&nbsp;&nbsp;(visibility) </p><p class="code SchemaDtdAttlist">value&nbsp;(private) </p>&gt;</p>
+<p></p>
+<p class="ConfigMarkupElementDesc">
+Not recommended for usage. This is used only as a workaround for old code. The filter can only define visibility as private which would prevent the parser appearing in UI. Marked as deprecated as of CDT 6.1 planning to remove in next major release.</p>
+<br>
+<ul class="ConfigMarkupAttlistDesc">
+<li><b>name</b> - </li>
+<li><b>value</b> - </li>
+</ul>
+<br><h6 class="CaptionFigColumn SchemaHeader">API Information: </h6>Plug-ins that want to extend this extension point must implement <samp>org.eclipse.cdt.core.IBinaryParser</samp> interface.
+<p></p>
+
+<br>
+<p class="note SchemaCopyright">
+Copyright (c) 2009, 2009 Andrew Gvozdev (Quoin Inc.) and others.<br/>
+All rights reserved. This program and the accompanying materials<br/>
+are made available under the terms of the Eclipse Public License v1.0<br/>
+which accompanies this distribution, and is available at<br/>
+http://www.eclipse.org/legal/epl-v10.html<br/>
+
+</p>
+</BODY>
+</HTML>

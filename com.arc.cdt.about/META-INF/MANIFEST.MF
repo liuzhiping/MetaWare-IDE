@@ -1,0 +1,14 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: About Plug-in
+Bundle-SymbolicName: com.arc.cdt.about;singleton:=true
+Bundle-Version: 8.7.0
+Bundle-Activator: com.arc.cdt.about.AboutPlugin
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime,
+ com.arc.mw.util
+Bundle-ActivationPolicy: lazy
+Bundle-Vendor: ARC International
+Export-Package: com.arc.cdt.about,
+ com.arc.cdt.about.actions
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6

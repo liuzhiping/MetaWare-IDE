@@ -1,0 +1,14 @@
+Manifest-Version: 1.0
+Bundle-Name: ARCompact Adapter
+Bundle-SymbolicName: com.arc.cdt.toolchain.arc;singleton:=true
+Bundle-Version: 8.7.0
+Bundle-Activator: com.arc.cdt.toolchain.arc.ArcPlugin
+Bundle-Vendor: ARC International
+Bundle-Localization: plugin
+Require-Bundle: org.eclipse.core.runtime,
+ com.arc.cdt.toolchain,
+ org.eclipse.cdt.make.core,
+ org.eclipse.cdt.managedbuilder.core
+Bundle-ActivationPolicy: lazy
+Bundle-ManifestVersion: 2
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6

@@ -1,0 +1,213 @@
+////////////////////////////////////////////////////////////////////////
+// Program Options
+////////////////////////////////////////////////////////////////////////
+( component=container 
+  line_up_columns=1
+  // The first container is selector for cards.
+  ( component=comment
+    ( component=container
+      direction=horizontal
+      ( component=card_trigger_button
+	label="Program name"
+	id=program_name_button
+	card=program_name_card
+	target=program_or_process_cards
+      )
+      ( component=card_trigger_button
+	label="Process ID"
+	id=process_id_button
+	card=process_id_card
+	target=program_or_process_cards
+      )
+    )
+  )
+
+//  ( component=cards id=program_or_process_cards
+    ( component=comment id=program_name_card 
+      ( component=box direction=horizontal
+	( label text="Program & args" )
+	( component=combobox2 
+	  property_name=program default="a.out"
+	  tip="Name of program to debug with arguments"
+	  doc="Specify the name of the program to debug, with its arguments. Path or arguments with embedded white space must be quoted."
+	  id=program
+	  expandable=1
+	  columns=50
+	  arg_action =  { if { exists multi_session } $VALUE }
+	)
+        ( component=filedialog
+	    target=program
+	    id=Program_filedialog
+	    doc="This button allows you to search for the program to debug."
+
+	)
+      ) 
+    )
+    ( comment component=container id=process_id_card
+      ( component=box
+	( component=combobox2 label="Process ID"
+	  property_name=Process_ID default=0
+	  id=Process_ID
+	  tip="ID of process to grab"
+	)
+      )
+    )
+//  )
+  (comment //  box
+     direction=horizontal
+    ( label text="Program arguments" )
+    ( component=combobox2 
+	  property_name=Program_arguments default=""
+	  id=Program_arguments
+	  tip="Command line arguments for program"
+	  expandable=1
+	  doc ="This sets the arguments for program to be debugged."
+	  // Put arguments in .sc.args.X.multi so we can properly define
+	  // the multisession.  Same for program name.
+	  arg_action =  { if { exists multi_session } $VALUE }
+	)
+  )
+  ( box direction=horizontal
+    ( label text="Source path" )
+    ( component=combobox2 
+      property_name=Source_path default=""
+      id=Source_path
+      doc="This sets the source path, which is a sequence of one or more directories separated by ; (on Windows or NT systems) or : (on UNIX systems).  Use it if your source is not located where the debugger is being run."
+      tip="Path of program source files"
+      expandable=1
+      action={
+	  if {not {null "%VALUE%"}} "-cfirstload \"set source_path=%VALUE%\" "
+	  }
+      arg_action = { if {not {null "%VALUE%"}} "-source_path=%VALUE%" }
+     )
+	  ( component=directorydialog
+	    target=Source_path
+	    id=Source_path_filedialog
+	    doc="This button allows you to select a directory to add to your source path."
+
+	  )
+  )
+  ( component=box
+     direction=horizontal
+     (label text="Directory translation" )
+    ( component=combobox2 
+      property_name=Directory_translation default=""
+      id=Directory_translation
+      tip="Directory translation information"
+      expandable=1
+      doc="This sets the directory translation information.  Use this when your source tree is not the same as when the program was compiled.  It is a sequence of P,R pairs where R replaces P if P is a prefix of the directory of the file when compiled.  The pairs are separated by ; (Windows) or : (UNIX)."
+      action={
+	  if {not {null "%VALUE%"}} "-cfirstload \"set dir_xlation=%VALUE%\" "
+	  }
+      arg_action = { if {not {null "%VALUE%"}} "-dir_xlation=%VALUE%" }
+    )
+  )
+  ( component=box
+    ( component=comment 
+      label="Automatically execute to main if function main exists"
+      property_name=Execute_to_main default=1
+      id=Execute_to_main
+      action="-c \"sysprop command_processor goifmain=%VALUE%\""
+      arg_action = { if {value_matches 0} "-nogoifmain" }
+      doc="If checked, the debugger runs the program until the function main is reached."
+    )
+    ( component=checkbox 
+      label="Include local symbols from the ELF symbol table"
+      property_name=Local_symbols default=1
+      id=Local_symbols
+      action="-c \"sysprop command_processor include_local_symbols=%VALUE%\""
+      arg_action = "-toggle=include_local_symbols=%VALUE%"
+      doc="If checked, the debugger uses local symbol information from the ELF symbol table; otherwise it uses only the globals.  If you've compiled with -g (for debug) you don't need to worry about this value."
+    )
+    ( component=checkbox 
+      label="Program is already present; don't download"
+      property_name=Dont_download default=0
+      id=Dont_download
+      doc="Select this to prevent the program from being downloaded.  Use this if your program is already present on the target -- for example, you are debugging a program in ROM.  If the processor is running the debugger attempts to stop it."
+//      action={
+//	 if {value_matches 1}
+//	     {call add_to_systems "download=0"}
+//	     // Don't do anything if not checked, because that's the default.
+//	     // {call add_to_systems "download=1"}
+//	 }
+      arg_action = {
+	 if {value_matches 1}
+	     "-off=download"
+	     // Don't do anything if not checked, because that's the default.
+	     // {call add_to_systems "download=1"}
+	 }
+    )
+
+    ( component=checkbox 
+      label="Verify program downloaded successfully"
+      tip="Re-read memory after download to ensure download was successful."
+      property_name=verify_download default=0
+      id=verify_download
+      arg_action = {if {value_matches 1} "-on=verify_download" }
+      doc="If checked, the debugger re-reads memory after download to verify that the download succeeded.  You might use this if you suspect memory problems.  Note that it takes time to re-read memory from the target."
+    )
+
+    ( component=comment label="Show register differences while instruction stepping"
+      // This feature is on by default so we leave out setting it to false.
+      id=show_register_diff property_name=show_register_diff default=1
+      doc="Upon instruction single-stepping the debugger inspects the value of all registers before and after, and shows you registers that have changed.  This is useful but incurs high register traffic to the target.  If the IO to the target is slow you may want to turn this feature off."
+      arg_action = {if {value_matches 0} "-off=show_reg_diffs" }
+
+    )
+    ( component=checkbox label="Cache target memory"
+      // This feature is on by default so we leave out setting it to false.
+      id=cache_target_mem property_name=cache_target_mem default=1
+      tip="Avoid reading memory more than once between execution events."
+      doc="With this on, the debugger does not read the same target memory twice between execution events.  This reduces traffic to the target.  Turn this off if you have volatile memory that you expect to change each time it is read."
+      arg_action = {if {value_matches 0} "-off=cache_target_memory" }
+    )
+    ( component=checkbox label="Read readonly from executable"
+      id=cache_target_mem property_name=read_ro_from_exe default=0
+      tip="Read code & read-only data from executable"
+      doc="With this on, the debugger does not read code or read-only data from the target memory; instead, it reads it from the executable file.  This reduces traffic to the target.  If your program is overwriting readonly memory, debugger displays such as the disassembly window may be inaccurate.  Leave this off if you are concerned your program may be overwriting readonly memory."
+      arg_action = {if {value_matches 1} "-on=read_ro_from_exe" }
+
+    )
+    ( component=checkbox label="Prefer software breakpoints"
+      id=prefer_sw_bp property_name=prefer_sw_bp 
+      // VC has a different default.  This is reflected in 
+      // the sc.cnf (VC_ARGS) and correspondingly here.
+      DEF_SW_BP={ if { equals "$TARG" VC } 0 1 }
+      CHANGE_BP={ if { equals "$DEF_SW_BP" 0 } 
+	    "-on=prefer_soft_bp" "-off=prefer_soft_bp" }
+      default_evaluated="$DEF_SW_BP"
+      tip="Use software breakpoints before hardware breakpoints"
+      doc="Hardware typically has few hardware breakpoints, so the debugger by default tries to use a software breakpoint first.  If it can't write memory (e.g., ROM), it then tries a hardware breakpoint.  Deselecting this causes the debugger to try hardware breakpoints first."
+      arg_action = {if { not {equals "$VALUE" "$DEF_SW_BP"} }  "$CHANGE_BP" }
+    )
+    ( component=comment label="Show possible breakpoints in source"
+      id=show_breakable property_name=show_breakable 
+      DEF_SHOW_BP=1
+      CHANGE_SHOW_BP={ if { equals "$DEF_SHOW_BP" 0 } 
+	    "-on=show_breakable" "-off=show_breakable" }
+      default_evaluated="$DEF_SHOW_BP"
+      tip="Show lines where you can set breakpoints in the source window"
+      doc="If you deselect this, the little gray dots in the source window will go away."
+      arg_action = {if { not {equals "$VALUE" "$DEF_SHOW_BP"} }  "$CHANGE_SHOW_BP" }
+    )
+    ( component=comment 
+    	label="Restore breakpoints from last run of same program"
+      id=restore_breakable property_name=restore_breakable 
+      DEF_REST_BP=0
+      CHANGE_REST_BP={ if { equals "$DEF_REST_BP" 0 } 
+	    "-on=restore_ap" "-off=restore_ap" }
+      default_evaluated="$DEF_REST_BP"
+      tip="Restore breakpoints from last use of debugger"
+      doc="If you select this, the debugger attempts to restore breakpoints from the last time you ran the debugger on the same program.  Note that if your program has changed, the breakpoints might not be where you want them."
+      arg_action = {if { not {equals "$VALUE" "$DEF_REST_BP"} }  "$CHANGE_REST_BP" }
+    )
+    ( component=if cond={ equals "$TARG" ARM }
+      ( component=checkbox 
+	label="(Manual operation) Program zeros BSS; debugger should not download zeros"
+	id=program_zeros_bss property_name=program_zeros_bss default=0
+	doc="When using the standard MetaWare run-time the debugger automatically determines whether the program zeros BSS, via the presence of the __INIT_BSS__ symbol, and avoids significant download time.  If you circumvent this part of the MetaWare run-time, you can check this option to force the debugger to *not* download BSS."
+	arg_action = {if {value_matches 1} "-on=program_zeros_bss" }
+      )
+    )
+  )
+)

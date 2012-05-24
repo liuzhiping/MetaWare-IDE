@@ -1,0 +1,25 @@
+/CBreakpointManager.java/1.98.2.1/Result of merge+Mon Aug  2 16:18:57 2010//Tcdt_7_0
+/CBreakpointNotifier.java/1.6/Fri Jun 23 17:52:38 2006//Tcdt_7_0
+/CDebugAdapter.java/1.9/Fri Jun  4 02:12:18 2010//Tcdt_7_0
+/CDebugCorePreferenceInitializer.java/1.4/dummy timestamp//Tcdt_7_0
+/CDisassemblyContextProvider.java/1.2/Thu Mar  4 00:57:16 2010//Tcdt_7_0
+/CGlobalVariableManager.java/1.11/dummy timestamp//Tcdt_7_0
+/CMemoryBlockRetrievalExtension.java/1.26/dummy timestamp//Tcdt_7_0
+/CRegisterManager.java/1.21/Fri Jun  4 02:12:01 2010//Tcdt_7_0
+/CRequest.java/1.3/Mon Feb 22 17:49:38 2010//Tcdt_7_0
+/CSettingsManager.java/1.2/Fri Jun  4 02:12:02 2010//Tcdt_7_0
+/CSignalManager.java/1.13/Thu Mar  4 00:57:16 2010/-ko/Tcdt_7_0
+/DebugConfiguration.java/1.24/Thu Mar  4 00:57:18 2010/-ko/Tcdt_7_0
+/ICDebugInternalConstants.java/1.5.20.1/Mon Aug  2 16:18:57 2010/-ko/Tcdt_7_0
+/ICWatchpointTarget.java/1.2/Mon Feb 22 15:07:48 2010//Tcdt_7_0
+/InternalDebugCoreMessages.java/1.5/Fri Jun 23 17:52:38 2006//Tcdt_7_0
+/InternalDebugCoreMessages.properties/1.21/Fri Jun  4 02:12:25 2010//Tcdt_7_0
+/ListenerList.java/1.6/Thu Mar  4 00:57:18 2010//Tcdt_7_0
+/SessionManager.java/1.5/Thu Mar  4 00:57:18 2010//Tcdt_7_0
+D/breakpoints////
+D/disassembly////
+D/executables////
+D/launch////
+D/model////
+D/sourcelookup////
+D/srcfinder////

@@ -1,0 +1,12 @@
+/ASTModificationHelper.java/1.4.14.2/Tue May 24 17:02:57 2011//Tcdt_7_0
+/ChangeGenerator.java/1.18/Fri Jun  4 18:08:58 2010//Tcdt_7_0
+/ChangeGeneratorWriterVisitor.java/1.8/Thu Mar  4 00:59:38 2010//Tcdt_7_0
+/Messages.java/1.2/Thu Mar  4 00:59:38 2010//Tcdt_7_0
+/ModificationScopeStack.java/1.4/Thu Mar  4 00:59:38 2010//Tcdt_7_0
+/ModifiedASTDeclSpecWriter.java/1.3/Thu Mar  4 00:59:38 2010//Tcdt_7_0
+/ModifiedASTDeclarationWriter.java/1.3/Thu Mar  4 00:59:38 2010//Tcdt_7_0
+/ModifiedASTDeclaratorWriter.java/1.5/Thu Mar  4 00:59:38 2010//Tcdt_7_0
+/ModifiedASTExpressionWriter.java/1.7/Fri Jun  4 18:08:57 2010//Tcdt_7_0
+/ModifiedASTStatementWriter.java/1.4/Thu Mar  4 00:59:38 2010//Tcdt_7_0
+/UnhandledASTModificationException.java/1.1/Fri Mar  7 12:13:38 2008//Tcdt_7_0
+/messages.properties/1.2/Thu Jul 10 09:41:48 2008//Tcdt_7_0

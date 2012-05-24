@@ -1,0 +1,51 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD><meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>C/C++ Supported Source Container Types Extension</title>
+<style type="text/css">@import url("../../book.css");</style>
+<style type="text/css">@import url("../../schema.css");</style>
+</HEAD>
+<BODY>
+<H1 style="text-align:center">C/C++ Supported Source Container Types Extension</H1>
+<p></p>
+<h6 class="CaptionFigColumn SchemaHeader">Identifier: </h6>org.eclipse.cdt.debug.core.supportedSourceContainerTypes<p></p>
+<h6 class="CaptionFigColumn SchemaHeader">Description: </h6>The extension point provides a mechanism for contributing source container types to the preference page "C/C++, Debug,Common Source Lookup Path".<p></p>
+<h6 class="CaptionFigColumn SchemaHeader">Configuration Markup:</h6>
+<p></p>
+<p class="code SchemaDtd">&lt;!ELEMENT <a name="e.extension">extension</a> (<a href="#e.sourceContainer">sourceContainer</a>+)+&gt;</p>
+<p class="code SchemaDtd">&lt;!ATTLIST extension</p>
+<p class="code SchemaDtdAttlist">point&nbsp;CDATA #REQUIRED</p><p class="code SchemaDtdAttlist">id&nbsp;&nbsp;&nbsp;&nbsp;CDATA #IMPLIED</p><p class="code SchemaDtdAttlist">name&nbsp;&nbsp;CDATA #IMPLIED</p>&gt;</p>
+<p></p>
+<ul class="ConfigMarkupAttlistDesc">
+</ul>
+<br><p class="code SchemaDtd">&lt;!ELEMENT <a name="e.sourceContainer">sourceContainer</a> EMPTY&gt;</p>
+<p class="code SchemaDtd">&lt;!ATTLIST sourceContainer</p>
+<p class="code SchemaDtdAttlist">id&nbsp;IDREF #REQUIRED</p>&gt;</p>
+<p></p>
+<ul class="ConfigMarkupAttlistDesc">
+<li><b>id</b> - Value of this attribute must be a contribution to the extension point "org.eclipse.debug.core.sourceContainerTypes".</li>
+</ul>
+<br><h6 class="CaptionFigColumn SchemaHeader">Examples: </h6>In the above example, C debugger specifies that it supports absolutePath contaner type.
+<pre class="Example"><span class="code SchemaTag">
+   &lt;extension
+         point=</span><span class="code SchemaCstring">&quot;org.eclipse.cdt.debug.core.supportedSourceContainerTypes&quot;</span><span class="code SchemaTag">&gt;
+      &lt;sourceContainer
+            id=</span><span class="code SchemaCstring">&quot;org.eclipse.cdt.debug.core.containerType.absolutePath&quot;</span><span class="code SchemaTag">/&gt;
+   &lt;/extension&gt;
+</span></pre>
+<p></p>
+
+<h6 class="CaptionFigColumn SchemaHeader">API Information: </h6>Value of the attribute id must be a contribution to the extension point "org.eclipse.debug.core.sourceContainerTypes".
+<p></p>
+
+<br>
+<p class="note SchemaCopyright">
+Copyright (c) 2009 Texas Instruments and others
+All rights reserved. This program and the accompanying materials
+are made available under the terms of the Eclipse Public License v1.0
+which accompanies this distribution, and is available at
+http://www.eclipse.org/legal/epl-v10.html
+
+</p>
+</BODY>
+</HTML>

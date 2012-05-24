@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<introContent>
+  <!-- 
+
+-->
+  <page style="css/overview/overview.css" alt-style="css/overview/swt.properties" id="root" style-id="page">
+    <title style-id="intro-header"> </title>
+    <group style-id="upper-background" filteredFrom="swt"/>
+    <group style-id="navigation-image" filteredFrom="swt"/>
+    <group style-id="curve-image" filteredFrom="swt"/>
+    <group style-id="welcome-image" filteredFrom="swt"/>
+
+    <group style-id="page-content">            
+        <img id="quickstart_img" style-id="quickstart-img" src="css/graphics/contentpage/quickstart.gif" alt="The MetaWare IDE Quick Start Page"></img>
+        <group style-id="overview-links">            
+            <link label="Suggested Tutorial" url="http://org.eclipse.ui.intro/showHelpTopic?id=/com.arc.ide.help/help/mw_w_que.htm" id="tutorials">
+                <text>Learn how to create C projects, build applications, and debug them.</text>
+            </link>
+            <link label="Project and Code Samples" url="http://org.eclipse.ui.intro/showPage?id=toolsets" id="samples">
+                <text>Load sample projects that you can build, run, and debug</text>
+            </link>
+            <link label="Start Working" url="http://org.eclipse.ui.intro/showPage?id=startwork" id="startwork">
+                <text>Begin working with workspaces and projects</text>
+            </link>
+        </group>
+    </group>
+  </page>
+ 
+<!-- 
+  <page style="css/tutorials/tutorials.css" alt-style="css/tutorials/swt.properties" id="tutorials" style-id="page">
+    <title style-id="intro-header"> </title>
+    <group style-id="upper-background" filteredFrom="swt"/>
+    <group style-id="navigation-image" filteredFrom="swt"/>
+    <group style-id="curve-image" filteredFrom="swt"/>    
+    <group style-id="welcome-image" filteredFrom="swt"/>
+    <group style-id="page-content">
+      <img  style-id="tutorials-img" src="css/graphics/contentpage/tutorials.gif" alt="The MetaWare IDE Quick Start Page"></img>
+
+      <group  style-id="tutorials-group">
+        <link label="Creating a New Managed Project with the MetaWare IDE" url="http://org.eclipse.ui.intro/showStandby?partId=org.eclipse.platform.cheatsheet&amp;input=com.arc.cdt.toolchain.managedmake" 
+	id="mm-tutorials" style-id="tutorials-link" >
+	          <text>Learn how to start a new C file from scratch and let the MetaWare IDE generate the makefile.</text>
+        </link>
+        
+        <link label="Creating a Makefile-based project with the MetaWare IDE" url="http://org.eclipse.ui.intro/showStandby?partId=org.eclipse.platform.cheatsheet&amp;input=com.arc.cdt.toolchain.standardmake" 
+        		id="sm-tutorials" style-id="tutorials-link" >
+		          <text>Learn how to start a new C file from scratch and provide your own makefile.</text>
+        </link>
+
+      </group>
+
+    </group>
+
+  </page> 
+ -->
+  
+  <!-- 
+
+-->
+  <page style="css/samples/samples.css" alt-style="css/samples/swt.properties" id="toolsets" style-id="page">
+    <img id="welcome_img"  src="css/graphics/contentpage/welcome.jpg" alt="Welcome to the MetaWare IDE"></img>
+    <title style-id="intro-header"> </title>
+    <group style-id="upper-background" filteredFrom="swt"/>
+    <group style-id="navigation-image" filteredFrom="swt"/>
+    <group style-id="curve-image" filteredFrom="swt"/>
+    <group style-id="welcome-image" filteredFrom="swt"/>
+    <!--include path="overview/navigation-links" -->
+    <contentProvider id="toolsets" class="com.arc.intro.CompilerSamplesProvider"/>
+<!--
+    <group style-id="page-content">
+      <img  style-id="samples-img" src="css/graphics/contentpage/samples.gif" alt="The MetaWare IDE Samples Page"></img>
+      <group label="Select Sample Projects" id="swt" style-id="samples-group">
+	        <text style-id="group-description">We have included a selection of Samples Workspaces, please select from the list below.
+	        </text>
+	</group>
+        
+        <group label="Available Samples" style-id="samples-group">
+	<link label="Compiler Samples" url="http://org.eclipse.ui.intro/showPage?id=samples-compiler" id="mw-examples" style-id="sample-link">
+          <text>These include such projects as Hello World, Queens, and others.</text>
+        </link>   
+     
+	<link label="MQX Samples" url="http://org.eclipse.ui.intro/showPage?id=samples-mqx" id="mw-examples" style-id="sample-link">
+          <text>These include projects that use the MQX Real-Time Operating System.</text>
+        </link>         
+	<link label="Target-Specific Samples" url="http://org.eclipse.ui.intro/showPage?id=samples-target-specific" id="mw-examples" style-id="sample-link">
+          <text>These include projects that are specific to the hardware you are using.</text>
+        </link>  
+            
+      </group>
+    </group>
+-->
+  </page>
+  
+  <page style="css/samples/samples.css" alt-style="css/samples/swt.properties" id="categories" style-id="page">
+    <img id="welcome_img"  src="css/graphics/contentpage/welcome.jpg" alt="Welcome to the MetaWare IDE"></img>
+    <title style-id="intro-header"> </title>
+    <group style-id="upper-background" filteredFrom="swt"/>
+    <group style-id="navigation-image" filteredFrom="swt"/>
+    <group style-id="curve-image" filteredFrom="swt"/>
+    <group style-id="welcome-image" filteredFrom="swt"/>
+    <!--include path="overview/navigation-links" -->
+    <contentProvider id="categories" class="com.arc.intro.CompilerSamplesProvider"/>
+  </page>
+        
+  <page style="css/samples/samples.css" alt-style="css/samples/swt.properties" id="samples" style-id="page">
+    <img  src="css/graphics/contentpage/welcome.jpg" alt="Welcome to the MetaWare IDE"></img>
+    <title style-id="intro-header"> </title>
+    <group style-id="upper-background" filteredFrom="swt"/>
+    <group style-id="navigation-image" filteredFrom="swt"/>
+    <group style-id="curve-image" filteredFrom="swt"/>
+    <group style-id="welcome-image" filteredFrom="swt"/>
+    <!--include path="overview/navigation-links" -->
+    <contentProvider id="samples" class="com.arc.intro.CompilerSamplesProvider"/>
+    <!--
+    <group style-id="page-content">
+      <img id="samples_img" style-id="samples-img" src="css/graphics/contentpage/samples.gif" alt="The MetaWare IDE Samples Page"></img>
+      <anchor id="beginAnchor"/>
+      
+      <group label="Load the Sample Compiler Projects" id="swt" style-id="samples-group">
+	        <text style-id="group-description">Click on any of the icons below to load the Samples Workspace.
+	        Once the workspace is loaded you can build and run any of the included demo projects.
+	        </text>
+	        <text style-id="group-description">Please note that the MetaWare IDE will automatically restart in order to 
+	        load the Samples Workspace.
+	        </text>
+	</group>
+       
+	 <anchor id="beginAnchor"/>  
+        <group label="Available Samples" id="swt" style-id="samples-group">
+	<link label="Hello World" url="http://org.eclipse.ui.intro/runAction?pluginId=com.arc.cdt.toolchain&amp;class=com.arc.intro.OpenSamplesWorkspaceIntroAction&amp;workspace=MetaWare/arc/demos/mide_workspace" id="mw-examples" style-id="sample-link">
+          <text>Hello, World.</text>
+        </link>
+        <link label="Queens" url="http://org.eclipse.ui.intro/runAction?pluginId=com.arc.cdt.toolchain&amp;class=com.arc.intro.OpenSamplesWorkspaceIntroAction&amp;workspace=MetaWare/arc/demos/mide_workspace" style-id="sample-link">
+          <text>Classic programming problem with common sub-expressions in array indexing.</text>
+        </link>
+      
+        <link label="Analyze (Iterator Edition)" url="http://org.eclipse.ui.intro/runAction?pluginId=com.arc.cdt.toolchain&amp;class=com.arc.intro.OpenSamplesWorkspaceIntroAction&amp;workspace=MetaWare/arc/demos/mide_workspace" style-id="sample-link">
+          <text>Analyzes a directed graph and breaks all loops in the graph, using High C iterators.</text>
+        </link>
+        <link label="Analyze1 (Nested Edition)" url="http://org.eclipse.ui.intro/runAction?pluginId=com.arc.cdt.toolchain&amp;class=com.arc.intro.OpenSamplesWorkspaceIntroAction&amp;workspace=MetaWare/arc/demos/mide_workspace" id="mw-examples" style-id="sample-link">
+          <text>Analyzes a directed graph and breaks all loops in the graph, using nested procedures instead of High C iterators.</text>
+        </link>
+        <link label="Greycode" url="http://org.eclipse.ui.intro/runAction?pluginId=com.arc.cdt.toolchain&amp;class=com.arc.intro.OpenSamplesWorkspaceIntroAction&amp;workspace=MetaWare/arc/demos/mide_workspace" id="mw-examples" style-id="sample-link">
+          <text>Enumerates the integers of a series of bits so that
+   successively listed integers differ in only one bit position in their
+   binary representation.</text>
+        </link>
+      
+        <link label="Prime" url="http://org.eclipse.ui.intro/runAction?pluginId=com.arc.cdt.toolchain&amp;class=com.arc.intro.OpenSamplesWorkspaceIntroAction&amp;workspace=MetaWare/arc/demos/mide_workspace" style-id="sample-link">
+          <text>Calculates prime numbers between 3 and 16383.</text>
+        </link>  
+       
+        <link label="Sieve" url="http://org.eclipse.ui.intro/runAction?pluginId=com.arc.cdt.toolchain&amp;class=com.arc.intro.OpenSamplesWorkspaceIntroAction&amp;workspace=MetaWare/arc/demos/mide_workspace" style-id="sample-link">
+          <text>The odd numbers between 3 and 16383 are represented by
+  the numbers between 0 and 8191.</text>
+        </link>
+   
+        <link label="Reset Samples Workspace" url="http://org.eclipse.ui.intro/runAction?pluginId=com.arc.cdt.toolchain&amp;class=com.arc.intro.ResetSamplesWorkspaceIntroAction&amp;workspace=MetaWare/arc/demos/mide_workspace" style-id="refresh-link">
+          <text>Click on this icon if you would like to reset your Samples Workspace with the default projects.  You might want to do this
+          if you made changes to the sample projects and want to reset them back to their initial state.</text>
+        </link>
+        <anchor id="swtGroupAnchor"/>        
+      </group>
+    </group>
+    -->
+  </page>
+<!--
+  <page style="css/samples/samples.css" alt-style="css/samples/swt.properties" id="samples-mqx" style-id="page">
+    <img id="welcome_img"  src="css/graphics/contentpage/welcome.jpg" alt="Welcome to the MetaWare IDE"></img>
+    <title style-id="intro-header"></title>
+    <group style-id="upper-background" filteredFrom="swt"/>
+    <group style-id="navigation-image" filteredFrom="swt"/>
+    <group style-id="curve-image" filteredFrom="swt"/>
+    <include path="overview/navigation-links"/>
+    <group style-id="page-content">
+      <img id="samples_img" style-id="samples-img" src="css/graphics/contentpage/samples.gif" alt="The MetaWare IDE Samples Page"></img>
+      <anchor id="beginAnchor"/>
+      <group label="Load the Sample MQX Projects" id="swt" style-id="samples-group">
+	        <text style-id="group-description">Click on any of the icons below to load the MQX Samples Workspace.
+	        Once the workspace is loaded you can build and run any of the included demo projects.
+	        </text>
+	        <text style-id="group-description">Please note that the MetaWare IDE will automatically restart in order to 
+	        load the MQX Samples Workspace.
+	        </text>
+	</group>
+       
+	 <anchor id="beginAnchor"/>  
+        <group label="Available Samples" id="swt" style-id="samples-group">
+	<link label="MQX Demo" url="http://org.eclipse.ui.intro/runAction?pluginId=com.arc.cdt.toolchain&amp;class=com.arc.intro.OpenSamplesWorkspaceIntroAction&amp;workspace=metaware/arc/demosMQX_workspace" id="mw-examples" style-id="sample-link">
+          <text>A simple MQX example project that uses the required libraries, etc.</text>
+        </link>
+        <link label="MQX Logs" url="http://org.eclipse.ui.intro/runAction?pluginId=com.arc.cdt.toolchain&amp;class=com.arc.intro.OpenSamplesWorkspaceIntroAction&amp;workspace=metaware/arc/demos/MQX_workspace" style-id="sample-link">
+          <text>An example project that makes use of logs.</text>
+        </link>        
+        <link label="Reset Samples Workspace" url="http://org.eclipse.ui.intro/runAction?pluginId=com.arc.cdt.toolchain&amp;class=com.arc.intro.ResetSamplesWorkspaceIntroAction&amp;workspace=metaware/arc/demos/MQX_workspace" style-id="refresh-link">
+          <text>Click on this icon if you would like to reset your Samples Workspace with the default projects.  You might want to do this
+          if you made changes to the sample projects and want to reset them back to their initial state.</text>
+        </link>
+        <anchor id="swtGroupAnchor"/>        
+      </group>
+    </group>
+  </page>
+-->
+<!--
+  <page style="css/samples/samples.css" alt-style="css/samples/swt.properties" id="samples-target-specific" style-id="page">
+    <img id="welcome_img"  src="css/graphics/contentpage/welcome.jpg" alt="Welcome to the MetaWare IDE"></img>
+    <title style-id="intro-header"></title>
+    <group style-id="upper-background" filteredFrom="swt"/>
+    <group style-id="navigation-image" filteredFrom="swt"/>
+    <group style-id="curve-image" filteredFrom="swt"/>
+    <include path="overview/navigation-links"/>
+    <group style-id="page-content">
+      <img id="samples_img" style-id="samples-img" src="css/graphics/contentpage/samples.gif" alt="The MetaWare IDE Samples Page"></img>
+      <anchor id="beginAnchor"/>
+      <group label="Load the Sample Target-Specific Projects" id="swt" style-id="samples-group">
+	        <text style-id="group-description">Click on any of the icons below to load the Target-Specific Samples Workspace.
+	        Once the workspace is loaded you can build and run any of the included demo projects.
+	        </text>
+	        <text style-id="group-description">Please note that the MetaWare IDE will automatically restart in order to 
+	        load the Target-Specific Samples Workspace.
+	        </text>
+	</group>
+       
+	 <anchor id="beginAnchor"/>  
+        <group label="Available Samples" id="swt" style-id="samples-group">
+	<link label="ARCompact Demo" url="http://org.eclipse.ui.intro/runAction?pluginId=com.arc.cdt.toolchain&amp;class=com.arc.intro.OpenSamplesWorkspaceIntroAction&amp;workspace=metaware/arc/demos/ARC600_workspace" id="mw-examples" style-id="sample-link">
+          <text>A simple example project that uses the required libraries, etc.</text>
+        </link>
+        <link label="A4 Demo" url="http://org.eclipse.ui.intro/runAction?pluginId=com.arc.cdt.toolchain&amp;class=com.arc.intro.OpenSamplesWorkspaceIntroAction&amp;workspace=metaware/arc/demos/ARC600_workspace" style-id="sample-link">
+          <text>A simple example project that uses the required libraries, etc.</text>
+        </link>        
+        <link label="Reset Samples Workspace" url="http://org.eclipse.ui.intro/runAction?pluginId=com.arc.cdt.toolchain&amp;class=com.arc.intro.ResetSamplesWorkspaceIntroAction&amp;workspace=metaware/arc/demos/ARC600_workspace" style-id="refresh-link">
+          <text>Click on this icon if you would like to reset your Samples Workspace with the default projects.  You might want to do this
+          if you made changes to the sample projects and want to reset them back to their initial state.</text>
+        </link>
+        <anchor id="swtGroupAnchor"/>        
+      </group>
+    </group>
+  </page>
+  -->
+
+  <!-- 
+
+-->
+  <page style="css/startwork/startwork.css" alt-style="css/startwork/swt.properties" id="startwork" style-id="page">    
+    <img id="welcome_img" src="css/graphics/contentpage/welcome.jpg" alt="Welcome to the MetaWare IDE"></img>
+    <title style-id="intro-header"> </title>
+    <group style-id="upper-background" filteredFrom="swt"/>
+    <group style-id="navigation-image" filteredFrom="swt"/>
+    <group style-id="curve-image" filteredFrom="swt"/>    
+    <group style-id="welcome-image" filteredFrom="swt"/>
+    <group style-id="page-content">
+      <img style-id="startwork-img" src="css/graphics/contentpage/startwork.gif" alt="Start Working with the MetaWare IDE"></img>
+
+      <group  style-id="startwork-group">
+	<link label="Create a New Project" url="http://org.eclipse.ui.intro/runAction?pluginId=com.arc.cdt.toolchain&amp;class=com.arc.intro.NewProjectIntroAction" id="mm-startwork" style-id="startwork-link" >
+          <text>Create a new project in the currently loaded workspace.</text>
+        </link>        
+        <link label="Create a New Workspace" url="http://org.eclipse.ui.intro/runAction?pluginId=com.arc.cdt.toolchain&amp;class=com.arc.intro.NewWorkspaceIntroAction" 
+	id="mm-startwork" style-id="startwork-link" >
+	          <text>Create a new workspace.  You can then create custom projects and begin work.</text>
+        </link>
+        <link label="Open an Existing Workspace" url="http://org.eclipse.ui.intro/runAction?pluginId=com.arc.cdt.toolchain&amp;class=com.arc.intro.OpenWorkspaceIntroAction" 
+	id="mm-startwork" style-id="startwork-link" >
+	          <text>Browse for an existing workspace or sample workspace.</text>
+        </link>
+
+      </group>
+
+    </group>
+
+  </page>
+
+ 
+</introContent>

@@ -1,0 +1,79 @@
+<html>
+<head>
+<title>Setting Watchpoints</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel=StyleSheet href="../default.css">
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000">
+<h1>Setting watchpoints</h1>
+
+<p>The <b>Set Watchpoint</b> dialog allows you to set a watchpoint ot a memory
+  address, machine register, or an expression that evaluates to a value in memory.</p>
+
+<p><I>Note:</I> The ability to set watchpoints might be limited by your target
+  hardware configuration or host-to-target interface.</p>
+
+<h3>Setting a watchpoint</h3>
+
+<p>The debugger allows you to set watchpoints on a memory address, machine register,
+  or using an expression.</p>
+<p>To set a watchpoint on a memory address:<a name="set_watch_memory"></a></p>
+
+<ol>
+  <li>Open the <b>New watchpoint</b> dialog by selecting <b>Tools | Set Watchpoint</b> 
+    from the main menu. </li>
+  <li>Select <code>Address</code>.</li>
+  <li>In the <b>Set Watchpoint On:</b> field, enter the memory address to set 
+    the watchpoint using the format: <code>0xXXXX</code>, which can be a hexidecimal 
+    address or symbolic label (<code>0x01a3c0</code> for example).</li>
+  <li>(Optional) Specify the size of the region of ememory being watched. This 
+    is useful for watching a whole block of memory.</li>
+  <li>Click <b>Set.</b></li>
+  <li>Click <b>Close</b> when finished<b>.</b></li>
+</ol>
+<p>To set a watchpoint on a register:<a name="set_watch_register"></a></p>
+<ol>
+  <li>Open the <b>New watchpoint</b> dialog by selecting <b>Tools | Set Watchpoint</b> 
+    from the main menu. </li>
+  <li>Select <code>Register</code>.</li>
+  <li>In the <b>Set watchpoint On:</b> field, enter the name of the register (<code>r1</code> 
+    for example).</li>
+  <li>Click <b>Set.</b></li>
+  <li>Click <b>Close</b> when finished<b>.</b></li>
+</ol>
+<p>To set a watchpoint on an expression:<a name="set_watch_expression"></a></p>
+<ol>
+  <li>Open the <b>New watchpoint</b> dialog by selecting <b>Tools | Set watchpoint</b> 
+    from the main menu. </li>
+  <li>Select <code>Expression</code>.</li>
+  <li>In the <b>Set watchpoint On:</b> field, enter an <a href="../displays/Regular_Expression_Conventions.htm">expression</a> 
+    that evaluates a value in memory.</li>
+  <li>Click <b>Set.</b></li>
+  <li>Click <b>Close</b> when finished<b>.</b></li>
+</ol>
+<h3>Specifying The Watchpoint Type</h3>
+<p>
+You can set the watchpoint to break on Write, Read, or Read and Write.
+ By default, a watchpoint breaks on write of watched location (address, register, or expression). 
+You can select to break only on Read or both Read and Write by selecting the 
+ <b>Read</b> or <b>Read/Write</b> from Type.
+</p>
+<h3>Setting a conditional watchpoint<a name="set_conditional_watch"></a></h3>
+<p>Enter an <a href="../displays/Regular_Expression_Conventions.htm">expression</a>
+  in the <b>Condition:</b> field to evaluate the expression when the watchpoint
+  is reached. This input field allows you to enter an expression to be evaluated
+  each time a watchpoint is reached. If the expression evaluates to non-zero,
+  execution stops on the watchpoint. Otherwise, execution skips the watchpoint
+  and continues.</p>
+<p>For example, if you enter <code>r1 == 3</code>, execution stops when register
+  r1 <span style="margin-left: 40px;">has the value 3. If you enter <code>I+J
+  == KM</code>, execution stops when the sum of I and J equals K.</span></p>
+<p><span style="margin-left: 40px;">The condition must be a valid expression when
+  the watchpoint occurs. If the condition is not valid the debugger stops execution
+  and show an error message in the <b>Debug Console</b>. The expression is not
+  checked for correctness when you set the watchpoint, and is evaluated only when
+  reached.</span></p>
+<p>&nbsp; </p>
+</body>
+</html>

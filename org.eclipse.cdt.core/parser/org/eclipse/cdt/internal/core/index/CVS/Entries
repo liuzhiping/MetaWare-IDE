@@ -1,0 +1,32 @@
+/CIndex.java/1.42/Thu Mar  4 00:59:40 2010/-kk/Tcdt_7_0
+/CPPTypedefClone.java/1.7/Thu Mar  4 00:59:40 2010//Tcdt_7_0
+/DeclaredBindingsFilter.java/1.8/Fri Jun  4 18:08:57 2010/-kk/Tcdt_7_0
+/DefaultFragmentBindingComparator.java/1.1/Thu Apr 26 16:41:38 2007//Tcdt_7_0
+/EmptyCIndex.java/1.20/Fri Jun  4 18:08:57 2010/-kk/Tcdt_7_0
+/IIndexBindingConstants.java/1.4/Thu Mar  4 00:59:40 2010//Tcdt_7_0
+/IIndexCBindingConstants.java/1.2/Thu Mar  4 00:59:40 2010//Tcdt_7_0
+/IIndexCPPBindingConstants.java/1.11/Thu Mar  4 00:59:40 2010//Tcdt_7_0
+/IIndexFragment.java/1.30/Fri Jun  4 18:08:59 2010/-kk/Tcdt_7_0
+/IIndexFragmentBinding.java/1.9/Thu Mar  4 00:59:40 2010/-kk/Tcdt_7_0
+/IIndexFragmentBindingComparator.java/1.3/Fri Jun  4 18:08:57 2010//Tcdt_7_0
+/IIndexFragmentFile.java/1.7/Fri Jun  4 18:08:58 2010/-kk/Tcdt_7_0
+/IIndexFragmentFileSet.java/1.3/Fri Jun  4 18:08:57 2010//Tcdt_7_0
+/IIndexFragmentInclude.java/1.3/Fri Jun  4 18:08:59 2010/-kk/Tcdt_7_0
+/IIndexFragmentName.java/1.2/Thu Mar  4 00:59:40 2010/-kk/Tcdt_7_0
+/IIndexScope.java/1.2/Thu Mar  4 00:59:40 2010//Tcdt_7_0
+/IIndexType.java/1.1/Wed Dec  6 10:41:24 2006/-kk/Tcdt_7_0
+/IWritableIndex.java/1.19/Thu Mar  4 00:59:40 2010/-kk/Tcdt_7_0
+/IWritableIndexFragment.java/1.16/Fri Jun  4 18:08:59 2010/-kk/Tcdt_7_0
+/IWritableIndexManager.java/1.2/Thu Mar  4 00:59:40 2010/-kk/Tcdt_7_0
+/IndexBasedFileContentProvider.java/1.2/Wed Feb 24 15:44:34 2010//Tcdt_7_0
+/IndexCPPSignatureUtil.java/1.15.2.1/Tue May 24 17:02:57 2011//Tcdt_7_0
+/IndexChangeEvent.java/1.3/Thu Mar  4 00:59:40 2010/-kk/Tcdt_7_0
+/IndexFactory.java/1.14/Fri Jun  4 18:08:59 2010/-kk/Tcdt_7_0
+/IndexFileLocation.java/1.5/Fri Jun  4 18:08:58 2010//Tcdt_7_0
+/IndexFileSet.java/1.4/Fri Jun  4 18:08:58 2010//Tcdt_7_0
+/IndexerStateEvent.java/1.1/Thu Mar  4 00:59:40 2010/-kk/Tcdt_7_0
+/Messages.java/1.2/Thu Mar  4 00:59:40 2010/-kk/Tcdt_7_0
+/WritableCIndex.java/1.22/Thu Mar  4 00:59:40 2010/-kk/Tcdt_7_0
+D/composite////
+/messages.properties/1.3/Thu Jun 14 18:04:00 2007/-kk/Tcdt_7_0
+D/provider////

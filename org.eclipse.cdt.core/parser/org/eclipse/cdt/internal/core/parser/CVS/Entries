@@ -1,0 +1,22 @@
+/CodeReaderAdapter.java/1.1/Wed Nov 11 14:03:50 2009//Tcdt_7_0
+/CodeReaderCacheEntry.java/1.2/Thu Mar  4 00:59:42 2010//Tcdt_7_0
+/CodeReaderFactoryAdapter.java/1.3/Thu Feb 18 08:16:20 2010//Tcdt_7_0
+/CodeReaderLRUCache.java/1.2/Thu Mar  4 00:59:42 2010//Tcdt_7_0
+/EmptyFilesProvider.java/1.1/Wed Nov 11 14:03:50 2009//Tcdt_7_0
+/EmptyIterator.java/1.5/Thu Mar  4 00:59:42 2010//Tcdt_7_0
+/FileContentProviderAdapter.java/1.3/Thu Feb 18 08:16:20 2010//Tcdt_7_0
+/InternalParserUtil.java/1.21/Thu Mar  4 00:59:42 2010/-ko/Tcdt_7_0
+/ParserException.java/1.8/Thu Jul 10 09:41:50 2008/-ko/Tcdt_7_0
+/ParserMessages.java/1.11/Thu Mar  4 00:59:42 2010//Tcdt_7_0
+/ParserMessages.properties/1.27/Thu Mar  4 00:59:42 2010//Tcdt_7_0
+/SavedFilesProvider.java/1.1/Wed Nov 11 14:03:50 2009//Tcdt_7_0
+/SimpleDeclarationStrategy.java/1.5/Thu Mar  4 00:59:42 2010/-ko/Tcdt_7_0
+D/ast////
+D/ast2////
+D/problem////
+D/pst////
+D/scanner////
+D/scanner2////
+D/token////
+D/token2////
+D/util////

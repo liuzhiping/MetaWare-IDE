@@ -1,0 +1,52 @@
+/BuildException.java/1.7/Thu Mar  4 00:56:34 2010/-ko/Tcdt_7_0
+/BuildListComparator.java/1.6/Thu Mar  4 00:56:34 2010//Tcdt_7_0
+/IAdditionalInput.java/1.7/Thu Mar  4 00:56:34 2010//Tcdt_7_0
+/IBuildObject.java/1.8/Thu Mar  4 00:56:34 2010/-ko/Tcdt_7_0
+/IBuildObjectProperties.java/1.3/Thu Mar  4 00:56:34 2010//Tcdt_7_0
+/IBuildObjectPropertiesContainer.java/1.3/Thu Mar  4 00:56:34 2010//Tcdt_7_0
+/IBuildPathResolver.java/1.2/Mon Jun 20 20:52:52 2005//Tcdt_7_0
+/IBuildPropertiesRestriction.java/1.3/Thu Mar  4 00:56:34 2010//Tcdt_7_0
+/IBuilder.java/1.15/Thu Mar  4 00:56:34 2010//Tcdt_7_0
+/IConfiguration.java/1.33/dummy timestamp/-ko/Tcdt_7_0
+/IConfigurationNameProvider.java/1.2/Mon Jun 20 20:52:52 2005//Tcdt_7_0
+/IConfigurationV2.java/1.6/Thu Mar  4 00:56:34 2010//Tcdt_7_0
+/IConvertManagedBuildObject.java/1.1/Thu Mar  4 00:56:34 2010//Tcdt_7_0
+/IEnvVarBuildPath.java/1.4/Thu Mar  4 00:56:34 2010//Tcdt_7_0
+/IFileInfo.java/1.4/Thu Mar  4 00:56:34 2010//Tcdt_7_0
+/IFolderInfo.java/1.4/Thu Mar  4 00:56:34 2010//Tcdt_7_0
+/IHoldsOptions.java/1.8/Thu Mar  4 00:56:34 2010//Tcdt_7_0
+/IInputOrder.java/1.7/Thu Mar  4 00:56:34 2010//Tcdt_7_0
+/IInputType.java/1.12/Thu Mar  4 00:56:34 2010//Tcdt_7_0
+/ILanguageInfoCalculator.java/1.1/Tue Feb 20 17:23:24 2007//Tcdt_7_0
+/IManagedBuildDefinitionsStartup.java/1.1/Thu Mar  4 00:56:34 2010/-kk/Tcdt_7_0
+/IManagedBuildInfo.java/1.25/dummy timestamp/-ko/Tcdt_7_0
+/IManagedCommandLineGenerator.java/1.4/Thu Mar  4 00:56:34 2010//Tcdt_7_0
+/IManagedCommandLineInfo.java/1.6/Thu Mar  4 00:56:34 2010//Tcdt_7_0
+/IManagedConfigElement.java/1.5/Thu Mar  4 00:56:34 2010//Tcdt_7_0
+/IManagedConfigElementProvider.java/1.4/Thu Mar  4 00:56:34 2010//Tcdt_7_0
+/IManagedIsToolChainSupported.java/1.2/Mon Jun 20 20:52:52 2005//Tcdt_7_0
+/IManagedOptionValueHandler.java/1.6/Thu Mar  4 00:56:34 2010//Tcdt_7_0
+/IManagedOutputNameProvider.java/1.2/Mon Jun 20 20:52:52 2005//Tcdt_7_0
+/IManagedProject.java/1.11/Thu Mar  4 00:56:34 2010//Tcdt_7_0
+/IModificationStatus.java/1.3/Thu Mar  4 00:56:34 2010//Tcdt_7_0
+/IMultiConfiguration.java/1.3/Thu Mar  4 00:56:34 2010//Tcdt_7_0
+/IOption.java/1.27/dummy timestamp/-ko/Tcdt_7_0
+/IOptionApplicability.java/1.2/Thu Mar  4 00:56:34 2010//Tcdt_7_0
+/IOptionCategory.java/1.12/Thu Mar  4 00:56:34 2010/-ko/Tcdt_7_0
+/IOptionPathConverter.java/1.4/Fri Jun  4 03:58:25 2010/-kk/Tcdt_7_0
+/IOutputType.java/1.10/Thu Mar  4 00:56:34 2010//Tcdt_7_0
+/IProjectType.java/1.12/Thu Mar  4 00:56:34 2010//Tcdt_7_0
+/IResourceConfiguration.java/1.9/Thu Mar  4 00:56:36 2010//Tcdt_7_0
+/IResourceInfo.java/1.6/dummy timestamp//Tcdt_7_0
+/IReverseOptionPathConverter.java/1.3/Thu Mar  4 00:56:36 2010//Tcdt_7_0
+/ITarget.java/1.19/Thu Mar  4 00:56:36 2010/-ko/Tcdt_7_0
+/ITargetPlatform.java/1.6/Thu Mar  4 00:56:36 2010//Tcdt_7_0
+/ITool.java/1.33/Thu Mar  4 00:56:38 2010/-ko/Tcdt_7_0
+/IToolChain.java/1.18/Thu Mar  4 00:56:38 2010//Tcdt_7_0
+/IToolReference.java/1.9/Thu Mar  4 00:56:38 2010//Tcdt_7_0
+/ManagedBuildManager.java/1.133.2.1/Result of merge/-ko/Tcdt_7_0
+/ManagedBuilderCorePlugin.java/1.28/Fri Jun  4 03:58:01 2010/-ko/Tcdt_7_0
+/ManagedCProjectNature.java/1.9/Thu Mar  4 00:56:40 2010/-ko/Tcdt_7_0
+/ManagedOptionValueHandler.java/1.8/Thu Mar  4 00:56:40 2010//Tcdt_7_0
+/OptionStringValue.java/1.5/Thu Mar  4 00:56:40 2010//Tcdt_7_0
+/ResourceChangeHandler2.java/1.4/Thu Mar  4 00:56:40 2010//Tcdt_7_0

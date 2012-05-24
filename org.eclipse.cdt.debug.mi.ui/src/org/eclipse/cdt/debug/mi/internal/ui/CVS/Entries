@@ -1,0 +1,21 @@
+/ActionFilterAdapterFactory.java/1.4/Fri Jun 23 17:52:28 2006//Tcdt_7_0
+/CygwinDebuggerPage.java/1.12/Fri Jun 23 17:52:28 2006//Tcdt_7_0
+/GDBDebuggerPage.java/1.20/Fri Jun  4 02:11:57 2010//Tcdt_7_0
+/GDBServerDebuggerPage.java/1.18/Fri Jun  4 02:11:57 2010//Tcdt_7_0
+/GDBSolibBlock.java/1.14/Fri Jun 23 17:52:28 2006//Tcdt_7_0
+/GDBTargetActionFilter.java/1.4/Fri Jun 23 17:52:28 2006//Tcdt_7_0
+/IMIHelpContextIds.java/1.6/Fri Jun 23 17:52:28 2006/-ko/Tcdt_7_0
+/IMIUIConstants.java/1.7/Fri Jun 23 17:52:28 2006/-ko/Tcdt_7_0
+/MIUIMessages.java/1.5/Fri Jun 23 17:52:28 2006//Tcdt_7_0
+/MIUIMessages.properties/1.13/Fri Jun  4 02:12:38 2010//Tcdt_7_0
+/MIUIPlugin.java/1.11/Fri Jun  4 02:12:00 2010/-ko/Tcdt_7_0
+/MinGWDebuggerPage.java/1.4/Fri Jun  4 02:12:31 2010//Tcdt_7_0
+/SWTUtil.java/1.4/Fri Jun  4 02:12:25 2010//Tcdt_7_0
+/SerialPortSettingsBlock.java/1.13/Fri Jun  4 02:12:01 2010//Tcdt_7_0
+/SolibSearchPathBlock.java/1.21/Fri Jun  4 02:12:09 2010//Tcdt_7_0
+/StandardGDBDebuggerPage.java/1.15/Fri Jun  4 02:12:08 2010//Tcdt_7_0
+/TCPSettingsBlock.java/1.14/Fri Jun  4 02:11:56 2010//Tcdt_7_0
+D/actions////
+D/dialogfields////
+D/preferences////
+D/propertypages////

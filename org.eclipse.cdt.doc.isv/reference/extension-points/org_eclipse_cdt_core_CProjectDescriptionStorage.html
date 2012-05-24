@@ -1,0 +1,53 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD><meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>%CProjectDescription.name</title>
+<style type="text/css">@import url("../../book.css");</style>
+<style type="text/css">@import url("../../schema.css");</style>
+</HEAD>
+<BODY>
+<H1 style="text-align:center">%CProjectDescription.name</H1>
+<div style="border: 1px solid #990000; padding: 5px; text-align: center; color: red;">This extension point is internal</div>
+<p></p>
+<h6 class="CaptionFigColumn SchemaHeader">Identifier: </h6>org.eclipse.cdt.core.CProjectDescriptionStorage<p></p>
+<h6 class="CaptionFigColumn SchemaHeader">Since: </h6>6.0
+<p></p>
+
+<h6 class="CaptionFigColumn SchemaHeader">Description: </h6>This extension point allows contributors to provide their own implementation of the CProjectDescriptionStorage backing store.<p></p>
+<h6 class="CaptionFigColumn SchemaHeader">Configuration Markup:</h6>
+<p></p>
+<p class="code SchemaDtd">&lt;!ELEMENT <a name="e.extension">extension</a> (<a href="#e.CProjectStorageType">CProjectStorageType</a>)+&gt;</p>
+<p class="code SchemaDtd">&lt;!ATTLIST extension</p>
+<p class="code SchemaDtdAttlist">point&nbsp;CDATA #REQUIRED</p><p class="code SchemaDtdAttlist">id&nbsp;&nbsp;&nbsp;&nbsp;CDATA #IMPLIED</p><p class="code SchemaDtdAttlist">name&nbsp;&nbsp;CDATA #IMPLIED</p>&gt;</p>
+<p></p>
+<ul class="ConfigMarkupAttlistDesc">
+</ul>
+<br><p class="code SchemaDtd">&lt;!ELEMENT <a name="e.CProjectStorageType">CProjectStorageType</a> EMPTY&gt;</p>
+<p class="code SchemaDtd">&lt;!ATTLIST CProjectStorageType</p>
+<p class="code SchemaDtdAttlist">class&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CDATA #REQUIRED</p><p class="code SchemaDtdAttlist">id&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CDATA #REQUIRED</p><p class="code SchemaDtdAttlist">version&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CDATA #REQUIRED</p><p class="code SchemaDtdAttlist">min_version&nbsp;CDATA #IMPLIED</p><p class="code SchemaDtdAttlist">max_version&nbsp;CDATA #IMPLIED</p><p class="code SchemaDtdAttlist">name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CDATA #IMPLIED</p>&gt;</p>
+<p></p>
+<p class="ConfigMarkupElementDesc">
+CProjectDescriptionStorageType is a concrete type of AbstractCProjectDescriptionStorage which is delegated to for persisting ICStorageElement trees</p>
+<br>
+<ul class="ConfigMarkupAttlistDesc">
+<li><b>class</b> - A factory class that implements  ICProjectDescriptionStorageType to create AbstractCProjectDescriptionStorages for given IProjects</li>
+<li><b>id</b> - Id of this particular project description storage type</li>
+<li><b>version</b> - Version number of this storage type if min_version and max_version are specified, this version must be in the range (min_version, max_version] i.e. min_version < version <= max_version 
+This String value must be compatible with org.eclipse.osgi.framework.version</li>
+<li><b>min_version</b> - The minimum version of project description supported by this description storage type.  If this value is not specified then a default Version.emptyVersion is used
+This String value must be compatible with org.eclipse.osgi.framework.version</li>
+<li><b>max_version</b> - The maximum version of project description supported by this description storage type.  If this is not specified then a value equal to version is used.
+This String value must be compatible with org.eclipse.osgi.framework.version</li>
+<li><b>name</b> - Human readable name of this project description type</li>
+</ul>
+<br><h6 class="CaptionFigColumn SchemaHeader">API Information: </h6>[Enter API information here.]
+<p></p>
+
+<h6 class="CaptionFigColumn SchemaHeader">Supplied Implementation: </h6>See the example XmlProjectDescriptionStorage & XmlProjectDescriptionStorage2 in this plugin
+<p></p>
+
+<br>
+<p class="note SchemaCopyright">
+</p>
+</BODY>
+</HTML>

@@ -1,0 +1,15 @@
+Manifest-Version: 1.0
+Bundle-Name: Debugger Context Help
+Bundle-SymbolicName: com.arc.seecode.doc.user;singleton:=true
+Bundle-Version: 8.4.0
+Bundle-ClassPath: seecodedoc.jar
+Bundle-Vendor: ARC International
+Bundle-Localization: plugin
+Bundle-ActivationPolicy: lazy
+Require-Bundle: org.eclipse.help,
+ org.eclipse.osgi,
+ org.eclipse.core.runtime
+Export-Package: com.arc.seecode.doc.user
+Bundle-Activator: com.arc.seecode.doc.user.UserPlugin
+Bundle-ManifestVersion: 2
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6

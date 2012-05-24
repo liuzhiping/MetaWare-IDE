@@ -1,0 +1,223 @@
+<html>
+<!-- #BeginTemplate "/Templates/Help Topic.dwt" --> 
+<head>
+<!-- #BeginEditable "Title" --> 
+<title>ARC Options</title>
+<!-- #EndEditable --> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel=StyleSheet href="../default.css">
+</head>
+<body>
+<h1><!-- #BeginEditable "Heading" -->ARC target options<!-- #EndEditable --></h1>
+<!-- #BeginEditable "BodyText" --> 
+<p>To set options for the ARC family of processors: Launch the debugger and click <b>Target-specific Options</b> in the Debug a process or processes dialog.
+ If the debugger is currently running select <b>Tools | Target-specific Options</b>.</p>
+<h2>Setting Options for ARC targets</h2>
+<p>First, select the type of target:</p>
+<ul>
+  <li><b><a href="#setting_iss_options">ARC instruction-set simulator</a> </b>(<a href="../displays/ISS.htm">Instruction 
+    Set Simulator</a>)</li>
+  <li><b><a href="#setting_cas_options">ARC cycle-accurate simulator</a></b> (CAS)</li>
+  <li><a href="#setting_hardware_options"><b>Hardware</b></a></li>
+</ul>
+<h2>Setting Instruction Set Simulator options<a name="setting_iss_options"></a></h2>
+<p>The following settings are manditory, unless marked (Optional).</p>
+<ul>
+  <li>Select your ARC processor and choose a core version from the drop-down list, if applicable.
+  <br>
+  </li>
+  <li>(Optional) <b>Initialize memory to 0xdead_beef</b><br>
+    By default the simulator initializes its memory with <code>0xdead_beef</code> to help trap 
+    errors. You may wish to uncheck this if have a large amount of memory. This 
+    avoids initialization and host memory page allocation.<br>
+  </li>
+  <li>(Optional) <b>Interrupt on: Bad instruction</b><br>
+    Upon encountering an invalid instruction, the simulator either halts, or, 
+    if this box is checked, takes the standard ARC interrupt. <br>
+  </li>
+  <li>(Optional) <b>Interrupt on: Bad memory access</b><br>
+    Upon encountering a bad memory access, the simulator either halts, or, if 
+    this box is checked, takes the standard ARC interrupt. <br>
+
+  <li>(Optional) <b> Allow interrupts 16-31</b><br>
+    If this option is checked, the simulator allows interrupts 16 through 31,
+    instead of the default 0 through 15.
+  <br>
+  </li>
+
+  <li>(Optional) <b>Gather stats on: Instruction counts</b><br>
+    If checked, the simulator counts the number of times an instruction at each 
+    address is executed. This allows useful profiling, but consumes memory and 
+    simulator execution time.<br>
+  </li>
+  <li>(Optional) <b>Gather stats on: Killed instructions</b><br>
+    If checked, the simulator counts the number of times an instruction at each 
+    address is NOT executed due to the settings of flags. This allows useful profiling, 
+    but consumes memory and simulator execution time.<br></li>
+  <li>Click <a href="#setting_simulator_extensions">Simulator Extensions</a> and 
+    set any additional options for the simulator.</li>
+</ul>
+<h2>Setting ARC Cycle-Accurate Simulator options<a name="setting_cas_options"></a></h2>
+<p>Set the target to cycle-accurate simulator. Also see <a href="#setting_simulator_extensions">Setting 
+  Simulator extensions</a>.</p>
+<ul>
+  <li>In the DLL field, specify the DLL containing the ARC cycle-accurate simulator.</li>
+  <li>Click <a href="#setting_simulator_extensions">Simulator Extensions</a> and 
+    set any additional options for the simulator.</li>
+</ul>
+<h2>Setting Simulator Extensions<a name="setting_simulator_extensions"></a></h2>
+<p>Click the Simulator extensions button to set additional parameters for the 
+  simulator.</p>
+<h3>Setting Built-in Instruction Extensions</h3>
+<ul>
+  <li>Select any number of the ARC simulator extensions: 
+    <ul>
+      <li>Barrel shifter extension</li>
+      <li>32-bit multiply extension</li>
+      <li>Normalize instruction extension</li>
+      <li>Swap instruction extension</li>
+      <li>Min/max instruction extension</li>
+      <li>Programmable timer extension</li>
+      <li>Enhanced programmable timer 0 extension</li>
+      <li>Enhanced programmable timer 1 extension</li>
+      <li>Extended arithmetic extension</li>
+      <li>Dual viterbi butterfly extension</li>
+	<li>ARC 700 32-bit multiply (if you selected an ARC 700 processor)<br>
+      </li>
+    </ul>
+  </li>
+  <li>Select DSP memory, either <b>Scratch RAM</b> extension or <b>XY memory</b> 
+    extension.<br>
+  </li>
+  <li>Select DSP instructions: 
+    <ul>
+
+      <li>24x24 XMAC extension </li>
+      <li>dual 16x16 XMAC extension</li><br>
+      <li>Extended arithmetic</li>
+	<li>Dual viterbi butterfly</li>
+	<li>Variable polynomial CRC</li>
+    </ul>
+  </li>
+</ul>
+<h3>Setting Memory and User extensions<a name="arc_sim_mem_ext"></a></h3>
+<p><i>Note:</i> Memory and user extension options are not available for the Cycle-Accurate 
+  Simulator.</p>
+<blockquote>
+  <p><b>Adding load/store RAM</b></p>
+   <blockquote> 
+   <p>Add load/store RAM to the simulator by specifying the size and base address of your load/store RAM
+   in the rspective fields.</p>
+  </blockquote>
+  <p><b>Adding memory extensions </b></p>
+  <blockquote> 
+    <p>Add noncontiguous memory to the simulator by specifying the low and high 
+      addresses of memory to the <b>First addr</b> and <b>Last addr</b> fields.</p>
+  </blockquote>
+  <p><b>Adding user Extensions</b></p>
+  <blockquote> 
+    <p>If you have implemented ARC extensions in your own DLL, specify that DLL 
+      in the <b>Extension DLL</b> field. For more information see etc/dll/simext.</p>
+  </blockquote>
+</blockquote>
+<h3>Adding Cache Simulation<a name="arc_sim_cache_sim"></a></h3>
+<blockquote> 
+  <p><b>Simulate an instruction cache</b></p>
+  <blockquote> 
+    <p>Check <b>Instruction cache</b> to enable the ARC instruction cache display 
+      and include the <code>ichit</code> and <code>icmiss</code> registers in the <b>Registers</b> window. 
+      You can access the <b>Instruction cache</b> window from the <b>Display</b> 
+      menu. Specify size, line size, ways, and 
+      repeating algorithm (see your processor documentation for legal values). For more information see the <i>MetaWare Debugger User's 
+      Guide</i>.</p>
+  </blockquote>
+  <p><b>Simulate a data cache</b></p>
+  <blockquote> 
+    <p>Check <b>Data cache</b> to enable the ARC data cache display
+      and include the <code>dchit</code> and <code>dcmiss</code> registers in the <b>Registers</b> window. 
+      You can access the <b>Data cache</b> window from the <b>Display</b> menu.
+      Specify size, line size, ways, and repeating algorithm
+      (see your processor documentation for legal values). 
+      For more information see the <i>MetaWare Debugger User's Guide</i>.</p>
+  </blockquote>
+
+  <p><b>Implement cache RAMs</b></p>
+  <blockquote> 
+    <p>Check this option to have ISS-simulated caches implement cache RAMs, meaning that cache data can be different from memory.</p> 
+</blockquote>
+
+<h2>Setting Hardware Options<a name="setting_hardware_options"></a></h2>
+<p>Target hardware can be an ARCangel board or custom hardware. You can set target 
+  hardware options to connect to an FPGA (Field Programmable Gate Array) and specify 
+  a &quot;blast&quot; file. The blast file (typically ending in .xbf) contains 
+  the ARC specification. This file is downloaded to the board to turn the FPGA 
+  into an ARC.</p>
+<h3>Setting parallel port options</h3>
+<blockquote> 
+  <p>Specify the correct parallel port for communicating to the ARC in the <b>Parallel 
+    port address for I/O</b> field. You can use the <b>detectpp</b> program shipped 
+    with the debugger to display your parallel ports.</p>
+  <p>(Optional) <b>Use Fujitsu fast serial host interface</b><br>
+    Use the host communications protocol defined for Fujitsu's 5-wire serial interface 
+    communications module. Communications from the host side are conducted using 
+    the parallel port, (to maintain bandwidth) while on the target side a 5-wire 
+    high-speed clocked serial interface is used (to minimize pinout). An external 
+    pod converts between these 2 physical interfaces. For more information please 
+    contact Fujitsu Microelectronics at http://www.fujitsu-ede.com.</p>
+</blockquote>
+<h3><a name="connecting_to_an_arcangel3_board"></a>Connecting to the ARCangel 
+  3 board</h3>
+<ol>
+  <li> Set up hardware connection. 
+    <ul>
+      <li>Connect the parallel port to your PC, and ensure the correct parallel 
+        port is specified in the<b> Parallel port address for I/O</b> field. Use 
+        the <code>detectpp</code> program to determine the parallel port address.</li>
+      <li>(Troubleshooting) Use commands <code>net stop gportio</code> and <code>net 
+        start gportio </code>to ensure there are no parallel port conflicts.</li>
+      <li>(Troubleshooting) Make sure the correct dip switch is set on the ARCangel 
+        3 board (for best results set switch 2 to the On position).</li>
+    </ul>
+  </li>
+  <li>(Optional) Select a DLL in the execute programs using your DLL interface 
+    to the ARC, otherwise the default interface will be used.</li>
+  <li>Enable a blast file: 
+    <ol>
+      <li>Check <b>Blast the FPGA.</b></li>
+      <li>Enter or browse for the .xbf file in the <b>File name</b> field, make 
+        sure to use an aa3 blast file.</li>
+    </ol>
+  </li>
+  <li>(Optional) Verify download: 
+    <ol>
+      <li>Click <b>OK </b>to save Target-specific options</li>
+      <li>Open <b>Debugger Options</b> (click the <b>Debugger Options</b> button 
+        or select <b>Tools | Debugger Options</b> from the main menu)</li>
+      <li>Check <b>Verify the executable downloaded to the target.</b></li>
+    </ol>
+  </li>
+  <li>Click <b>OK</b> to save options and exit.</li>
+</ol>
+<blockquote>
+<p>If available for your selected target, optionally configure <b>Other options</b>:</p>
+<p><b>Single step instructions, rather than cycles</b><br>
+  Uncheck this to use cycle stepping instead of instructions. 
+  For ARC v7 or later: When you instruction single step the debugger uses the 
+  chip facility to flush the pipeline at each step, which is better for debugging 
+  programs. But if you are debugging VHDL, you may wish the debugger to cycle 
+  step instead. </p>
+<p><b>Enable cache display windows</b><br>
+  This adds the icache/dcache windows to the debugger. Use this if your hardware 
+  supports the icache (instruction cache) or dcache (data cache). These windows 
+  are automatically enabled in the simulator if you are simulating the cache. 
+</p>
+<p><b>Reset target upon restart</b><br>
+If this option is checked, when the debugger processes a restart command, it first attempts to reset the target by sending a <code>reset_board</code> message to the target.
+</p>
+  <p>&nbsp; </p>
+</blockquote>
+<!-- #EndEditable --> 
+<p>&nbsp;</p>
+</body>
+<!-- #EndTemplate -->
+</html>
