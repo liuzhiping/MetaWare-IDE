@@ -1,0 +1,13 @@
+#Thu Jun 19 15:04:01 PDT 2008
+com.arc.cdt.toolchain.arc.exeDebugConfig.1967171072/internalBuilder/enabled=false
+com.arc.cdt.toolchain.arc.exeDebugConfig.1967171072/internalBuilder/ignoreErr=true
+com.arc.cdt.toolchain.arc.exeDebugConfig.1967171072/internalBuilder/parallel=true
+com.arc.cdt.toolchain.arc.exeDebugConfig.1967171072/internalBuilder/paralleldef=true
+com.arc.cdt.toolchain.arc.exeDebugConfig.1967171072/internalBuilder/parallelnumber=1
+com.arc.cdt.toolchain.arc.exeReleaseConfig.1486763645/internalBuilder/enabled=false
+com.arc.cdt.toolchain.arc.exeReleaseConfig.1486763645/internalBuilder/ignoreErr=true
+com.arc.cdt.toolchain.arc.exeReleaseConfig.1486763645/internalBuilder/parallel=true
+com.arc.cdt.toolchain.arc.exeReleaseConfig.1486763645/internalBuilder/paralleldef=true
+com.arc.cdt.toolchain.arc.exeReleaseConfig.1486763645/internalBuilder/parallelnumber=1
+eclipse.preferences.version=1
+environment/project/com.arc.cdt.toolchain.arc.exeDebugConfig.1967171072=<?xml version\="1.0" encoding\="UTF-8"?>\r\n<environment/>\r\n

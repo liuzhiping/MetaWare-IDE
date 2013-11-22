@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CMPD version="1">
+  <PROCESS name="test1">
+    <SWITCH>
+      -nogoifmain
+    </SWITCH>
+    <SWITCH>
+      -pset=1
+    </SWITCH>
+    <SWITCH>
+      -psetname=grmain
+    </SWITCH>
+    <SWITCH>
+      Debug/Test1.elf
+    </SWITCH>
+    <SWITCH>
+      -a7
+    </SWITCH>
+    <SWITCH>
+      -toggle=include_local_symbols=1
+    </SWITCH>
+    <SWITCH>
+      -profile
+    </SWITCH>
+    <SWITCH>
+      -sim
+    </SWITCH>
+    <SWITCH>
+      -on=enable_exceptions
+    </SWITCH>
+    <SWITCH>
+    --
+    </SWITCH>
+    <SWITCH>
+    argument #1
+    </SWITCH>
+    <SWITCH>
+    arg 2
+    </SWITCH>
+    <SWITCH>
+    Argument_3
+    </SWITCH>
+  </PROCESS>
+  <PROCESS name="test2">
+   <SWITCH>
+      -nogoifmain
+    </SWITCH>
+    <SWITCH>
+      -pset=1
+    </SWITCH>
+    <SWITCH>
+      -psetname=grmain
+    </SWITCH>
+    <SWITCH>
+      Debug/Test1.elf
+    </SWITCH>
+    <SWITCH>
+      -a7
+    </SWITCH>
+    <SWITCH>
+      -toggle=include_local_symbols=1
+    </SWITCH>
+    <SWITCH>
+      -profile
+    </SWITCH>
+    <SWITCH>
+      -sim
+    </SWITCH>
+    <SWITCH>
+      -on=enable_exceptions
+    </SWITCH>
+    <SWITCH>
+    --
+    </SWITCH>
+    <SWITCH>
+    first Argument
+    </SWITCH>
+    <SWITCH>
+    2ndArg
+    </SWITCH>
+    <SWITCH>
+    Argument 3
+    </SWITCH>
+     <SWITCH>
+    And the fourth
+    </SWITCH>
+  </PROCESS>
+  <LAUNCH>
+    
+    <SWITCH>
+      -cmpd=soc
+    </SWITCH>
+    <SWITCH>
+      -off=cr_for_more
+    </SWITCH>
+    
+  </LAUNCH>
+</CMPD>
+

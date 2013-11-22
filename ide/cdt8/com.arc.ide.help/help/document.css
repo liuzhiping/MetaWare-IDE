@@ -1,0 +1,301 @@
+body  {font-family: sans-serif;
+       margin-left: 0;
+       margin-right: 0;
+       color: black;
+       overflow-y: scroll}
+
+p   {font-weight: normal;
+     text-align: justify;
+     margin-left: 0;
+     margin-top: 5pt;
+     margin-bottom: 5pt}
+
+p table {margin-top: 0pt;
+     margin-bottom: 0pt}
+
+.both, .blocka5a6 {color: #808000}
+.a5, .blocka5, .blocktitlea5 {color: #FF0000}
+.a6, .blocka6, .blocktitlea6 {color: #008000;}
+.a7, .blocka7, .blocktitlea7 {color: #800080}
+
+.header {border: none; font-size: 100%;}
+.footer {border: none}
+.breadcrumbs {border: none; font-size: 97%;}
+.navigator {border: none; white-space: nowrap;}
+.registerheading {font-size: 80%; font-weight: bold;}
+.registerbody {font-size: 100%}
+.textlayout {border:none;}
+.textlayout td {
+	border: none;
+	vertical-align: top;}
+.textlayout tr {border:none;}
+.notelogo {
+	padding-left: 20px;
+	padding-right: 10px;
+	padding-bottom: 10px;
+	padding-top: 10px;
+	background-image: url(images/note.png);
+	background-repeat: no-repeat;
+}
+.warninglogo {
+	padding-left: 20px;
+	padding-right: 10px;
+	padding-bottom: 10px;
+	padding-top: 10px;
+	background-image: url(images/warning.png);
+	background-repeat: no-repeat;
+}
+.blocktextlayout {border:none;}
+.blocktextlayout td {
+	border: none;
+	vertical-align: top;}
+.blocktextlayout tr {border:none;}
+
+.block, .blocka5, .blocka6, .blocka7, .blocka5a6, .blocktextlayout {margin-left: 40pt;}
+
+
+h1  {color: #000000;
+     font-size: 175%;
+     font-weight: bold;
+     margin-top: 5pt;
+     margin-bottom: 0pt
+     text-align: left;
+    }
+
+p.headnum {color: #000000;
+    font-size: 190%;
+    font-weight: bold;
+    margin-top: 0pt;
+    margin-bottom: 0pt;
+    text-align: right;
+    padding: 0;
+}
+
+h2 {color: #000000;
+    font-size: 150%;
+    font-weight: bold;
+    margin-top: 0pt;
+    margin-bottom: 5pt;
+    /* background-image: url("images/bottomline.gif"); 
+    background-repeat: repeat-x; */}
+
+h3 {color: #000000;
+    font-size: 125%;
+    font-weight: bold;
+     margin-top: 5pt;
+     margin-bottom: 0pt;}
+
+h4 {color: #000000;
+    font-size: 110%;
+    font-weight: bold;
+     margin-top: 5pt;
+     margin-bottom: 0pt}
+
+h5 {font-size: 105%;
+    font-weight: bold;
+     margin-top: 5pt;
+     margin-bottom: 0pt}
+
+h6 {font-size: 100%;
+     font-weight: normal;
+     margin-left: 0;
+     margin-top: 5pt;
+     margin-bottom: 0pt}
+
+li p {margin-top: 0;
+    margin-bottom: 0}
+
+menu li p {margin-top: 0;
+    margin-bottom: 0}
+
+menu li {margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    margin-bottom: 0}
+
+menu {margin-left: 25pt;
+    margin-top: 0;
+    margin-bottom: 0}
+
+dir li p {margin-top: 0;
+    margin-bottom: 0}
+
+dir li {margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    margin-bottom: 0}
+
+dir {margin-left: 40pt;
+    margin-top: 0;
+    margin-bottom: 0}
+
+dd p {margin-left: 40pt;
+    margin-top: 0;
+    margin-bottom: 0}
+
+dt {margin-top: 0;
+    margin-bottom: 0}
+
+dl {margin-left: 10pt;
+    margin-top: 0;
+    margin-bottom: 0}
+
+ol li {margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    margin-bottom: 0}
+
+ol {
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 25pt;
+    list-style-type: decimal
+}
+
+ol li p {margin-top: 0;
+    margin-bottom:0}
+
+ul li {margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    margin-bottom: 0}
+
+ul {margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 25pt;
+    list-style-type: disc;
+    list-style-image: url("images/bullet1.gif")}
+
+ul.block, ul.blocka5, ul.blocka5a6, ul.blocka6, ul.blocka7 {margin-left: 60pt;}
+
+
+ul li ul li {margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    margin-bottom: 0}
+
+ul li ul {list-style-type: circle;
+    list-style-image: url("images/bullet2.gif");
+    margin-left: 12pt}
+
+ul li ul li ul li {margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    margin-bottom: 0}
+
+ul li ul li ul {list-style-type: square;
+    margin-left: 12pt}
+
+ul li menu {list-style-type: circle;
+    margin-left: 12pt}
+
+ul li p {margin-top: 0;
+    margin-bottom:0}
+
+a:link {color: blue;
+   text-decoration: underline}
+
+
+big {font-size: 150%}
+
+small {font-size: 75%}
+
+samp {font-family: monospace; font-size: 100%;}
+
+cite {font-style: italic}
+
+code {font-family: monospace}
+
+dfn {font-style: italic}
+
+em {font-style: italic}
+
+i  {font-style: italic}
+
+b  {font-weight: bold}
+
+kbd {font-weight: bold}
+
+s {text-decoration: line-through}
+
+strike {text-decoration: line-through}
+
+strong {font-weight: bold}
+
+sub {vertical-align: sub}
+
+sup {vertical-align: super}
+
+tt {font-family: monospace}
+
+u {text-decoration: underline}
+
+var {font-style: italic}
+
+table {
+	border-width: 1pt;
+	border-style: solid;
+	border-color: gray;
+	margin-top: 0;
+       	margin-bottom: 0;
+       	margin-left: 0;
+	margin-right: 0
+}
+
+td {
+	border-width: 1pt;
+	border-style: solid;
+	border-color: gray;
+	padding-left: 1pt;
+	padding-right: 1pt;
+	padding-top: 1pt;
+	padding-bottom: 1pt
+}
+
+
+th {
+	border-width: 1pt;
+	border-style: solid;
+	border-color: gray;
+	padding-left: 1pt;
+	padding-right: 1pt;
+	padding-top: 1pt;
+	padding-bottom: 1pt
+}
+
+td p {
+	margin-top: 0;   
+	padding-top: 1pt;
+	padding-bottom: 1pt;
+	padding-left: 1pt;
+	padding-right: 1pt
+}
+
+th p { 
+	margin-top: 0;   
+	font-weight: bold;
+	padding-top: 1pt;
+	padding-bottom: 1pt;
+	padding-left: 1pt;
+	padding-right: 1pt
+}
+
+address {
+	color: blue;
+	font-style: italic
+}
+
+blockquote {
+	margin-top: 0;
+	margin-bottom: 0;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+center {text-align: center}
+
+pre {margin-top: 5pt;
+     margin-bottom: 5pt;
+     font-family: monospace;}
+
+pre p {margin-top: 0}

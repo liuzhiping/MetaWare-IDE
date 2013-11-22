@@ -1,0 +1,13 @@
+Manifest-Version: 1.0
+Bundle-Name: VideoCore Adapter
+Bundle-SymbolicName: com.arc.cdt.toolchain.vc;singleton:=true
+Bundle-Version: 9.0.0
+Bundle-Activator: com.arc.cdt.toolchain.vc.VcPlugin
+Bundle-Vendor: Synopsys Corporation
+Bundle-Localization: plugin
+Require-Bundle: org.eclipse.core.runtime,
+ com.arc.cdt.toolchain,
+ org.eclipse.cdt.make.core,
+ org.eclipse.cdt.managedbuilder.core
+Eclipse-LazyStart: true
+Bundle-ManifestVersion: 2

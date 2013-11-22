@@ -1,0 +1,10 @@
+<view>
+    <table columns="1">
+        <row>
+            <cell>/ARC/MetaWare/arc/inc</cell>
+        </row>
+        <row>
+            <cell>/ARC/MetaWare/arc/incc</cell>
+        </row>
+    </table>
+</view>

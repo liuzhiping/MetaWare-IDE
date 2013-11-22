@@ -1,0 +1,11 @@
+Test	Code Example Reference
+------	-----------------------
+2.07	String compare of Queens output
+2.13	File compare
+2.25.1	Select/Copy data to clip board from console view,
+		get data from clip board and compare.
+2.32	Write info to a file
+2.60	Open a Perspective
+
+CR91796 Make sure Breakpoint view is active
+CR90724 Deal with $ in class name 

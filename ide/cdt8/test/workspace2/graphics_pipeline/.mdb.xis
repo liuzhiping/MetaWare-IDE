@@ -1,0 +1,172 @@
+/* Instance b0_2 */
+b0_2 of bridge ;
+  map  c2_mm 0x3c00000 0xc400000 c1_mm 0x3c00000 			/* Memory mapping specification(s) */ ;
+
+/* Instance b0_3 */
+b0_3 of bridge ;
+  map  c3_mm 0x3c00000 0xc400000 c1_mm 0x3c00000 			/* Memory mapping specification(s) */ ;
+
+/* Instance b0_4 */
+b0_4 of bridge ;
+  map  c4_mm 0x3C00000 0xC400000 c1_mm 0x3C00000 			/* Memory mapping specification(s) */ ;
+
+/* Instance c1 */
+c1 of arc_core ;
+  big_endian  off 			/* Endianess */ ;
+  crc  off 			/* crc instruction */ ;
+  dp_fpx  off 			/* Double-precision floating point */ ;
+  extarith  on 			/* Extended arithmetic unit */ ;
+  major  700 			/* Processor type */ ;
+  mmu  on 			/* MMU unit */ ;
+  mpy32  on 			/* mpy32 instruction */ ;
+  mpy64  on 			/* mpy64 instruction */ ;
+  norm  on 			/* norm instruction */ ;
+  sp_fpx  off 			/* Single-precision floating point */ ;
+  strict_branch  off 			/* Undocumented */ ;
+  swap  on 			/* swap instruction */ ;
+  timer  t1 			/* Timer instance */ ;
+  uclibc  off 			/* UCLibC emulation */ ;
+  uclibc_heap_base  0x4000000 			/* UCLibC heap base */ ;
+  xiss_dcode_cache_size  8192 			/* Simulation heuristic */ ;
+  xiss_dcode_cache_ways  2 			/* Simulation heuristic */ ;
+  xiss_jit  off 			/* JIT fast mode */ ;
+  xiss_jit_keep  off 			/* JIT keep mode */ ;
+  xiss_jit_reuse  off 			/* JIT reuse mode */ ;
+  xiss_jit_with_opt  on 			/* Compiling jit with optimization */ ;
+  xiss_jit_with_trace  off 			/* Producing JIT with trace info */ ;
+  xiss_lockstep  off 			/* Undocumented */ ;
+  xiss_trace  off 			/* Instruction trace */ ;
+  xiss_trans_cache_size  8192 			/* Simulation heuristic */ ;
+  xiss_trans_cache_ways  1 			/* Simulation heuristic */ ;
+  xiss_trans_threshold  60 			/* Simulation heuristic */ ;
+  xiss_trans_time_slice  50000 			/* Simulation heuristic */ ;
+  xmac3216  off 			/* XMAC 32x16-bits instructions */ ;
+  xmacd16  off 			/* XMAC Dual 16-bits instructions */ ;
+  xmacd3216pf  off 			/* XMAC Dual 16-bits PF instructions */ ;
+  xy_mem  off 			/* XY memory */ ;
+
+/* Instance c2 */
+c2 of arc_core ;
+  big_endian  off 			/* Endianess */ ;
+  crc  off 			/* crc instruction */ ;
+  dp_fpx  off 			/* Double-precision floating point */ ;
+  extarith  on 			/* Extended arithmetic unit */ ;
+  major  700 			/* Processor type */ ;
+  mmu  on 			/* MMU unit */ ;
+  mpy32  on 			/* mpy32 instruction */ ;
+  mpy64  on 			/* mpy64 instruction */ ;
+  norm  on 			/* norm instruction */ ;
+  sp_fpx  off 			/* Single-precision floating point */ ;
+  strict_branch  off 			/* Undocumented */ ;
+  swap  on 			/* swap instruction */ ;
+  timer  t2 			/* Timer instance */ ;
+  uclibc  off 			/* UCLibC emulation */ ;
+  uclibc_heap_base  0x4000000 			/* UCLibC heap base */ ;
+  xiss_dcode_cache_size  8192 			/* Simulation heuristic */ ;
+  xiss_dcode_cache_ways  2 			/* Simulation heuristic */ ;
+  xiss_jit  on 			/* JIT fast mode */ ;
+  xiss_jit_keep  off 			/* JIT keep mode */ ;
+  xiss_jit_reuse  off 			/* JIT reuse mode */ ;
+  xiss_jit_with_opt  on 			/* Compiling jit with optimization */ ;
+  xiss_jit_with_trace  off 			/* Producing JIT with trace info */ ;
+  xiss_lockstep  off 			/* Undocumented */ ;
+  xiss_trace  off 			/* Instruction trace */ ;
+  xiss_trans_cache_size  8192 			/* Simulation heuristic */ ;
+  xiss_trans_cache_ways  1 			/* Simulation heuristic */ ;
+  xiss_trans_threshold  60 			/* Simulation heuristic */ ;
+  xiss_trans_time_slice  50000 			/* Simulation heuristic */ ;
+  xmac3216  off 			/* XMAC 32x16-bits instructions */ ;
+  xmacd16  off 			/* XMAC Dual 16-bits instructions */ ;
+  xmacd3216pf  off 			/* XMAC Dual 16-bits PF instructions */ ;
+  xy_mem  off 			/* XY memory */ ;
+
+/* Instance c3 */
+c3 of arc_core ;
+  big_endian  off 			/* Endianess */ ;
+  crc  off 			/* crc instruction */ ;
+  dp_fpx  off 			/* Double-precision floating point */ ;
+  extarith  on 			/* Extended arithmetic unit */ ;
+  major  700 			/* Processor type */ ;
+  mmu  on 			/* MMU unit */ ;
+  mpy32  on 			/* mpy32 instruction */ ;
+  mpy64  on 			/* mpy64 instruction */ ;
+  norm  on 			/* norm instruction */ ;
+  sp_fpx  off 			/* Single-precision floating point */ ;
+  strict_branch  off 			/* Undocumented */ ;
+  swap  on 			/* swap instruction */ ;
+  timer  t3 			/* Timer instance */ ;
+  uclibc  off 			/* UCLibC emulation */ ;
+  uclibc_heap_base  0x4000000 			/* UCLibC heap base */ ;
+  xiss_dcode_cache_size  8192 			/* Simulation heuristic */ ;
+  xiss_dcode_cache_ways  2 			/* Simulation heuristic */ ;
+  xiss_jit  off 			/* JIT fast mode */ ;
+  xiss_jit_keep  off 			/* JIT keep mode */ ;
+  xiss_jit_reuse  off 			/* JIT reuse mode */ ;
+  xiss_jit_with_opt  on 			/* Compiling jit with optimization */ ;
+  xiss_jit_with_trace  off 			/* Producing JIT with trace info */ ;
+  xiss_lockstep  off 			/* Undocumented */ ;
+  xiss_trace  off 			/* Instruction trace */ ;
+  xiss_trans_cache_size  8192 			/* Simulation heuristic */ ;
+  xiss_trans_cache_ways  1 			/* Simulation heuristic */ ;
+  xiss_trans_threshold  60 			/* Simulation heuristic */ ;
+  xiss_trans_time_slice  50000 			/* Simulation heuristic */ ;
+  xmac3216  off 			/* XMAC 32x16-bits instructions */ ;
+  xmacd16  off 			/* XMAC Dual 16-bits instructions */ ;
+  xmacd3216pf  off 			/* XMAC Dual 16-bits PF instructions */ ;
+  xy_mem  off 			/* XY memory */ ;
+
+/* Instance c4 */
+c4 of arc_core ;
+  big_endian  off 			/* Endianess */ ;
+  crc  off 			/* crc instruction */ ;
+  dp_fpx  off 			/* Double-precision floating point */ ;
+  extarith  on 			/* Extended arithmetic unit */ ;
+  major  700 			/* Processor type */ ;
+  mmu  on 			/* MMU unit */ ;
+  mpy32  on 			/* mpy32 instruction */ ;
+  mpy64  on 			/* mpy64 instruction */ ;
+  norm  on 			/* norm instruction */ ;
+  sp_fpx  off 			/* Single-precision floating point */ ;
+  strict_branch  off 			/* Undocumented */ ;
+  swap  on 			/* swap instruction */ ;
+  timer  t4 			/* Timer instance */ ;
+  uclibc  off 			/* UCLibC emulation */ ;
+  uclibc_heap_base  0x4000000 			/* UCLibC heap base */ ;
+  xiss_dcode_cache_size  8192 			/* Simulation heuristic */ ;
+  xiss_dcode_cache_ways  2 			/* Simulation heuristic */ ;
+  xiss_jit  off 			/* JIT fast mode */ ;
+  xiss_jit_keep  off 			/* JIT keep mode */ ;
+  xiss_jit_reuse  off 			/* JIT reuse mode */ ;
+  xiss_jit_with_opt  on 			/* Compiling jit with optimization */ ;
+  xiss_jit_with_trace  off 			/* Producing JIT with trace info */ ;
+  xiss_lockstep  off 			/* Undocumented */ ;
+  xiss_trace  off 			/* Instruction trace */ ;
+  xiss_trans_cache_size  8192 			/* Simulation heuristic */ ;
+  xiss_trans_cache_ways  1 			/* Simulation heuristic */ ;
+  xiss_trans_threshold  60 			/* Simulation heuristic */ ;
+  xiss_trans_time_slice  50000 			/* Simulation heuristic */ ;
+  xmac3216  off 			/* XMAC 32x16-bits instructions */ ;
+  xmacd16  off 			/* XMAC Dual 16-bits instructions */ ;
+  xmacd3216pf  off 			/* XMAC Dual 16-bits PF instructions */ ;
+  xy_mem  off 			/* XY memory */ ;
+
+/* Instance t1 */
+t1 of arc_timer ;
+  core  c1 			/* Core */ ;
+  log  none 			/* Logging */ ;
+
+/* Instance t2 */
+t2 of arc_timer ;
+  core  c2 			/* Core */ ;
+  log  none 			/* Logging */ ;
+
+/* Instance t3 */
+t3 of arc_timer ;
+  core  c3 			/* Core */ ;
+  log  none 			/* Logging */ ;
+
+/* Instance t4 */
+t4 of arc_timer ;
+  core  c4 			/* Core */ ;
+  log  none 			/* Logging */ ;
+

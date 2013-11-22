@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?fileVersion 4.0.0?>
+
+<cproject>
+<storageModule moduleId="org.eclipse.cdt.core.settings">
+<cconfiguration id="com.arc.cdt.toolchain.arc.exeDebugConfig.247479585">
+<storageModule buildSystemId="org.eclipse.cdt.managedbuilder.core.configurationDataProvider" id="com.arc.cdt.toolchain.arc.exeDebugConfig.247479585" moduleId="org.eclipse.cdt.core.settings" name="Debug">
+<externalSettings/>
+<extensions>
+<extension id="org.eclipse.cdt.core.ELF" point="org.eclipse.cdt.core.BinaryParser"/>
+<extension id="com.arc.cdt.toolchain.ARCCompilerErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+<extension id="org.eclipse.cdt.core.MakeErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+<extension id="com.arc.cdt.toolchain.ARCLinkerErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+<extension id="com.arc.cdt.toolchain.ARCAssemblerErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+</extensions>
+</storageModule>
+<storageModule moduleId="cdtBuildSystem" version="4.0.0">
+<configuration artifactExtension="elf" artifactName="gdraw" buildArtefactType="org.eclipse.cdt.build.core.buildArtefactType.exe" buildProperties="org.eclipse.cdt.build.core.buildType=org.eclipse.cdt.build.core.buildType.debug,org.eclipse.cdt.build.core.buildArtefactType=org.eclipse.cdt.build.core.buildArtefactType.exe" cleanCommand="rm -rf" description="" errorParsers="com.arc.cdt.toolchain.ARCCompilerErrorParser;com.arc.cdt.toolchain.ARCLinkerErrorParser;com.arc.cdt.toolchain.ARCAssemblerErrorParser;org.eclipse.cdt.core.MakeErrorParser" id="com.arc.cdt.toolchain.arc.exeDebugConfig.247479585" name="Debug" parent="com.arc.cdt.toolchain.arc.exeDebugConfig">
+<folderInfo id="com.arc.cdt.toolchain.arc.exeDebugConfig.247479585.1073076311" name="/" resourcePath="">
+<toolChain id="com.arc.cdt.toolchain.arc.exeToolChainDebug.271522604" name="ARC EXE Tool Chain" superClass="com.arc.cdt.toolchain.arc.exeToolChainDebug">
+<targetPlatform id="hcTargetPlatform.752736533" isAbstract="false" name="Generic platform" superClass="hcTargetPlatform"/>
+<builder buildPath="${workspace_loc:/gdraw/Debug}" id="makeBuilder.721131132" keepEnvironmentInBuildfile="false" name="Gnu Make Builder" superClass="makeBuilder"/>
+<tool id="arc.exe.debug.exeCompilerDebug.246986720" name="MetaWare ARC C/C++ Compiler" superClass="arc.exe.debug.exeCompilerDebug">
+<option id="com.arc.cdt.toolchain.arc.compilerDebugOptLevel.1888899116" name="Optimization Level (-O...)" superClass="com.arc.cdt.toolchain.arc.compilerDebugOptLevel" value="arc.optimization.level.none" valueType="enumerated"/>
+<inputType id="com.arc.cdt.toolchain.arc.inputTypeCPP.795371226" name="MetaWare C++ Input" superClass="com.arc.cdt.toolchain.arc.inputTypeCPP"/>
+<inputType id="com.arc.cdt.toolchain.arc.inputTypeC.210421581" name="MetaWare C Input" superClass="com.arc.cdt.toolchain.arc.inputTypeC"/>
+</tool>
+<tool id="com.arc.cdt.toolchain.arc.asmDebugExe.948340377" name="ARCompact Assembler" superClass="com.arc.cdt.toolchain.arc.asmDebugExe">
+<inputType id="com.arc.cdt.toolchain.asminput.507005292" name="Assembler Inputs" superClass="com.arc.cdt.toolchain.asminput"/>
+</tool>
+<tool id="com.arc.cdt.toolchain.arc.exeLinkerDebug.999581832" name="MetaWare Linker" superClass="com.arc.cdt.toolchain.arc.exeLinkerDebug"/>
+</toolChain>
+</folderInfo>
+</configuration>
+</storageModule>
+<storageModule moduleId="scannerConfiguration"/>
+<storageModule moduleId="org.eclipse.cdt.core.externalSettings"/>
+</cconfiguration>
+<cconfiguration id="com.arc.cdt.toolchain.arc.exeReleaseConfig.1940159474">
+<storageModule buildSystemId="org.eclipse.cdt.managedbuilder.core.configurationDataProvider" id="com.arc.cdt.toolchain.arc.exeReleaseConfig.1940159474" moduleId="org.eclipse.cdt.core.settings" name="Release">
+<externalSettings/>
+<extensions>
+<extension id="org.eclipse.cdt.core.ELF" point="org.eclipse.cdt.core.BinaryParser"/>
+<extension id="com.arc.cdt.toolchain.ARCCompilerErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+<extension id="org.eclipse.cdt.core.MakeErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+<extension id="com.arc.cdt.toolchain.ARCLinkerErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+<extension id="com.arc.cdt.toolchain.ARCAssemblerErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+</extensions>
+</storageModule>
+<storageModule moduleId="cdtBuildSystem" version="4.0.0">
+<configuration artifactExtension="elf" artifactName="gdraw" buildArtefactType="org.eclipse.cdt.build.core.buildArtefactType.exe" buildProperties="org.eclipse.cdt.build.core.buildType=org.eclipse.cdt.build.core.buildType.release,org.eclipse.cdt.build.core.buildArtefactType=org.eclipse.cdt.build.core.buildArtefactType.exe" cleanCommand="rm -rf" description="" errorParsers="com.arc.cdt.toolchain.ARCCompilerErrorParser;com.arc.cdt.toolchain.ARCLinkerErrorParser;com.arc.cdt.toolchain.ARCAssemblerErrorParser;org.eclipse.cdt.core.MakeErrorParser" id="com.arc.cdt.toolchain.arc.exeReleaseConfig.1940159474" name="Release" parent="com.arc.cdt.toolchain.arc.exeReleaseConfig">
+<folderInfo id="com.arc.cdt.toolchain.arc.exeReleaseConfig.1940159474.897437299" name="/" resourcePath="">
+<toolChain id="com.arc.cdt.toolchain.arc.exeReleaseToolChain.1279484671" name="MetaWare C Toolset" superClass="com.arc.cdt.toolchain.arc.exeReleaseToolChain">
+<targetPlatform id="hcTargetPlatform.97581029" isAbstract="false" name="Generic platform" superClass="hcTargetPlatform"/>
+<builder buildPath="${workspace_loc:/gdraw/Release}" id="makeBuilder.487134389" keepEnvironmentInBuildfile="false" name="Gnu Make Builder" superClass="makeBuilder"/>
+<tool id="arc.cdt.toolchain.arc.exeCompilerRelease.1440095553" name="MetaWare ARC C/C++ Compiler" superClass="arc.cdt.toolchain.arc.exeCompilerRelease">
+<inputType id="com.arc.cdt.toolchain.arc.inputTypeCPP.1281225872" name="MetaWare C++ Input" superClass="com.arc.cdt.toolchain.arc.inputTypeCPP"/>
+<inputType id="com.arc.cdt.toolchain.arc.inputTypeC.2135740132" name="MetaWare C Input" superClass="com.arc.cdt.toolchain.arc.inputTypeC"/>
+</tool>
+<tool id="com.arc.cdt.toolchain.arc.asmReleaseExe.1433465807" name="ARCompact Assembler" superClass="com.arc.cdt.toolchain.arc.asmReleaseExe">
+<inputType id="com.arc.cdt.toolchain.asminput.1312656951" name="Assembler Inputs" superClass="com.arc.cdt.toolchain.asminput"/>
+</tool>
+<tool id="com.arc.cdt.toolchain.arc.exelinkerRelease.126002663" name="MetaWare Linker" superClass="com.arc.cdt.toolchain.arc.exelinkerRelease"/>
+</toolChain>
+</folderInfo>
+</configuration>
+</storageModule>
+<storageModule moduleId="scannerConfiguration"/>
+<storageModule moduleId="org.eclipse.cdt.core.externalSettings"/>
+</cconfiguration>
+</storageModule>
+<storageModule moduleId="cdtBuildSystem" version="4.0.0">
+<project id="gdraw.com.arc.cdt.toolchain.arc.exeProject.953525404" name="ARCompact Executable" projectType="com.arc.cdt.toolchain.arc.exeProject"/>
+</storageModule>
+</cproject>

@@ -1,0 +1,78 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN" "http://www.w3.org/MarkUp/Wilbur/HTML32.dtd">
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+    <meta name="GENERATOR" content="Quadralay WebWorks Publisher 2003 for FrameMaker 8.0.0.1194">
+    <meta name="TEMPLATEBASE" content="temp">
+    <link rel="StyleSheet" href="document.css" type="text/css" media="screen">
+    <title>Editing and Rebuilding in the Debug Perspective</title>
+  </head>
+
+  <body>
+
+    <table width="100%" border="0" cellpadding="0" cellspacing="0" class="header">
+      <tr>
+<!--Disabling Breadcrumbs to use Eclipse version 10/2009
+        <td class="breadcrumbs">
+	<a href="ide_guid.htm"> DesignWare ARC MetaWare IDE User's Guide </a> > <a href="getting_.htm"><br>Getting Started</a> > <a href="tutorial.htm">Tutorials</a> > Editing and Rebuilding in the Debug Perspective
+        </td>
+-->
+        <td align="right" valign="top" class="navigator" nowrap>
+<a href="debuggif.htm"><img src="images/sprev.gif" border="0" alt="Previous"></a><a href="helpful_.htm"><img src="images/snext.gif" border="0" alt="Next"></a>
+        </td>
+      </tr>
+    </table>
+
+    <hr align="left">
+
+    <blockquote>
+<h4 >
+Editing and Rebuilding in the Debug Perspective
+<a name="wp846912"> </a></h4>
+
+<p >
+The MetaWare IDE lets you edit your source in the <b>Debug</b> perspective. However, if you rebuild while debugging, the debugger continues debugging the old executable until you restart the executable, and debugger windows might lose synchronization. 
+<a name="wp846916"> </a></p>
+<p >
+After restart, the debugger engine detects that the file has changed and attempts to re-apply breakpoints at the same source location. If a source file has lines added or deleted, the breakpoints might no longer be in expected places. 
+<a name="wp850029"> </a></p>
+<ol type="1"> <li  value="1">Ensure that the <b>Debug</b> perspective has <code>prime.elf</code> loaded and ready to debug as shown below (see <a href="mw_w_que.htm#wp846721">Building and Debugging</a>). <img src="images/md2_debug_persp_prime.gif" border="0" hspace="0" vspace="0"><a name="wp850033"> </a>
+ <li  value="2">In the <b>Editor</b> view for <code>prime.c</code>, locate the line that reads <code>puts(&quot;\nEnd of Prime Number program.\n&quot;);</code><a name="wp850034"> </a>
+ <li  value="3">Add <code>(rebuilt in the Debug perspective)</code> to the end of the text, so that the whole line now reads as follows: <code>puts(&quot;\nEnd of Prime Number program (rebuilt in the Debug perspective).\n&quot;);<br></code>An asterisk appears next to the filename <code>prime.c</code> in the <b>Editor</b> view to indicate that the file contains unsaved changes. <a name="wp846930"> </a>
+ <li  value="4">Select <b>File &gt; Save</b> then <b>Project &gt; Build All</b>. <a name="wp847466"> </a>
+ <li  value="5">Click the <b>Restart</b> button to inform the debugger that the application has changed: <img src="images/restart.gif" border="0" hspace="0" vspace="0"><a name="wp846938"> </a>
+ <li  value="6">If execution stops at a breakpoint, click <b>Resume</b>: <img src="images/icon_res.gif" border="0" hspace="0" vspace="0"><br><br>The <code>prime.elf</code> application runs to completion with the new output, which you can verify in the <b>Console</b> view:<div align="left"><img src="images/prime_re.gif" border="0" hspace="0" vspace="0"></div><a name="wp846945"> </a>
+ <li  value="7">In the <b>Editor</b> view for <code>prime.c</code>, go back to the line that reads <br><code>puts(&quot;\nEnd of Prime Number program (rebuilt in the Debug perspective).\n&quot;);</code><a name="wp846951"> </a>
+ <li  value="8">Remove <code>(rebuilt in the Debug perspective)</code> to restore the original code:<br><code>puts(&quot;\nEnd of Prime Number program).\n&quot;);</code><a name="wp846953"> </a>
+ <li  value="9">An asterisk appears next to the filename <code>prime.c</code> in the <b>Editor</b> view. Select <b>File &gt; Save</b> then <b>Project &gt; Build All</b> to save and rebuild the file.<a name="wp846955"> </a>
+ <li  value="10">Click the <b>Restart</b> button: <img src="images/restart.gif" border="0" hspace="0" vspace="0"><br>When you run it to completion, the <code>prime.elf</code> now produces the original output, which you can verify in the <b>Console</b> view:<img src="images/md2_prime_cons.gif" border="0" hspace="0" vspace="0"><a name="wp846959"> </a>
+</ol><a name="wp850130">
+  <h5 >
+Related Tutorials
+ </a></h5>
+<ul> <li ><a href="mw_w_que.htm#wp846721">Building and Debugging</a><a name="wp850134"> </a>
+ <li ><a href="debuggif.htm#wp846878">Debugging with Breakpoints</a><a name="wp850138"> </a>
+</ul><a name="wp849708">
+  <h5 >
+Related Reference
+ </a></h5>
+<ul> <li >Eclipse <em>C/C++ Development User Guide</em><a name="wp849712"> </a>
+</ul>
+    </blockquote>
+    <p></p>
+    <hr>
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" class="footer">
+      <tr>
+        <td>
+
+        </td>
+        <td align="right" valign="top" class="navigator">
+<a href="debuggif.htm"><img src="images/sprev.gif" border="0" alt="Previous"></a><a href="helpful_.htm"><img src="images/snext.gif" border="0" alt="Next"></a>
+        </td>
+      </tr>
+    </table>
+<p> <font size="-3">
+Copyright © 2012 Synopsys, Inc. <br />
+Some portions of this document copyright IBM Corporation and others 2000, 2004.</font></p>
+  </body>
+</html>

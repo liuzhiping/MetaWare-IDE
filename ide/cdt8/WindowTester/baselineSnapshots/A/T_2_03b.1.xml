@@ -1,0 +1,36 @@
+<view name="org.eclipse.ui.views.ProblemView">
+    <tree columns="5">
+        <item>
+            <cell>Errors (2 items)</cell>
+            <cell></cell>
+            <cell></cell>
+            <cell></cell>
+            <cell></cell>
+            <item>
+                <cell>make: *** [no_exist_func.elf] Error 1</cell>
+                <cell>no_exist_func</cell>
+                <cell></cell>
+                <cell>line 0</cell>
+                <cell>C/C++ Problem</cell>
+            <item>
+                <cell>Unresolved reference: no_exist_func</cell>
+                <cell>no_exist_func.c</cell>
+                <cell>/no_exist_func</cell>
+                <cell>line 0</cell>
+                <cell>C/C++ Problem</cell>
+        </item>
+        <item>
+            <cell>Warnings (1 item)</cell>
+            <cell></cell>
+            <cell></cell>
+            <cell></cell>
+            <cell></cell>
+            <item>
+                <cell>(#291) no_exist_func: Function called but not declared.</cell>
+                <cell>no_exist_func.c</cell>
+                <cell>/no_exist_func</cell>
+                <cell>line 2</cell>
+                <cell>C/C++ Problem</cell>
+        </item>
+    </tree>
+</view>

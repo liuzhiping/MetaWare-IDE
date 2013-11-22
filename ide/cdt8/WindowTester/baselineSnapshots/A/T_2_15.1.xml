@@ -1,0 +1,9 @@
+<content>
+argc=6
+  argv[1]=one
+  argv[2]=two
+  argv[3]=three
+  argv[4]=four five
+  argv[5]=six
+
+</content>

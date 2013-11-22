@@ -1,0 +1,26 @@
+<view>
+    <label text="Choose program to execute"/>
+    <text text=""/>
+    <label text="Discovered file list"/>
+    <table columns="1">
+        <row>
+            <cell>displaymain</cell>
+        </row>
+        <row>
+            <cell>grmain</cell>
+        </row>
+        <row>
+            <cell>rendermain0</cell>
+        </row>
+        <row>
+            <cell>rendermain1</cell>
+        </row>
+    </table>
+    <label text="Qualifier:"/>
+    <table columns="1">
+        <row>
+            <cell>acle - /graphics_pipeline/generated/software/displaymain/displaymain</cell>
+        </row>
+    </table>
+    <label text=""/>
+</view>

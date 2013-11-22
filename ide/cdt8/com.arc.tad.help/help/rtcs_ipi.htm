@@ -1,0 +1,119 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN" "http://www.w3.org/MarkUp/Wilbur/HTML32.dtd">
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+    <meta name="GENERATOR" content="Quadralay WebWorks Publisher 2003 for Word 8.0.0.1194">
+    <meta name="TEMPLATEBASE" content="ARCTechPubsv6">
+    <meta name="LASTUPDATED" content="01/27/12 13:02:36">
+<link rel="first" href="tad_help.htm">  <link rel="prev" href="rtcs_ipa.htm"><link rel="next" href="rtcs_nat.htm">
+    <link rel="StyleSheet" href="document.css" type="text/css" media="screen">
+    <title>RTCS IPIF Statistics Window</title>
+  </head>
+
+  <body>
+
+    <table width="100%" border="0" cellpadding="0" cellspacing="0" class="header">
+      <tr> 
+        <td class="breadcrumbs">
+	<a href="tad_help.htm"> MQX&#174; Task Aware Debug Help</a> > <a href="rtcs_win.htm"> RTCS Windows</a> > RTCS IPIF Statistics Window
+        </td>
+        <td align="right" valign="top" class="navigator" nowrap>
+<a href="rtcs_ipa.htm"><img src="images/sprev.gif" border="0" alt="Previous" title="Previous"></a><a href="rtcs_nat.htm"><img src="images/snext.gif" border="0" alt="Next" title="Next"></a>
+        </td>
+      </tr>
+    </table>
+
+    <hr align="left">
+
+    <blockquote>
+<h3 ><a name="wp9001289">
+RTCS IPIF Statistics Window</a></h3>
+
+
+<p >
+<a name="wp9001290">The <b>RTCS IPIF Statistics</b> window displays the statistics that RTCS collected for the IP interface.</a></p>
+<p ><b><i><a name="wp9001291">Displayed Fields</a></i></b></p><p ><b><i><a name="wp9001292">IP Interface </a></i></b></p><p >
+<a name="wp9001293">IP address and net mask being serviced by the interface.</a></p>
+<p ><b><i><a name="wp9001294">[R/T]X_TOTAL</a></i></b></p><p >
+<a name="wp9001295">Total number of packets sent or received.</a></p>
+<p ><b><i><a name="wp9001296">[R/T]X_MISSED</a></i></b></p><p >
+<a name="wp9001297">Number of packets discarded due to lack of resources.</a></p>
+<p ><b><i><a name="wp9001298">[R/T]X_DISCARDED</a></i></b></p><p >
+<a name="wp9001299">Number of packets discarded for all other reasons.</a></p>
+<p ><b><i><a name="wp9001300">[R/T]X_ERRORS </a></i></b></p><p >
+<a name="wp9001301">The number of times that an internal error occurred. Internal errors indicate a catastrophic failure, and the <b>Rx Errors</b> and <b>Tx Errors</b> fields record the nature of the failure.</a></p>
+<table border="1" cellpadding="5" cellspacing="0">
+  <caption></caption>
+  <tr>
+    <td><div ><b><a name="wp9000148">Field Value</a></b></div></td>
+    <td><div ><b><a name="wp9000149">Meaning</a></b></div></td>
+  </tr>
+  <tr>
+    <td><p >
+<a name="wp9000150"><code>Error</code></a></p>
+</td>
+    <td><div ><a name="wp9000151">RTCS error code that indicates the type of failure</a></div></td>
+  </tr>
+  <tr>
+    <td><p >
+<a name="wp9000152"><code>Parameter</code></a></p>
+</td>
+    <td><div ><a name="wp9000153">Parameter that might help you debug the failure (parameter type or value depends on the error that occurred)</a></div></td>
+  </tr>
+  <tr>
+    <td><p >
+<a name="wp9000154"><code>Task Id</code></a></p>
+</td>
+    <td><div ><a name="wp9000155">Task ID of the task that was active when the error occurred</a></div></td>
+  </tr>
+  <tr>
+    <td><p >
+<a name="wp9000156"><code>TaskErrCode</code></a></p>
+</td>
+    <td><div ><a name="wp9000157">Task error code of the active task</a></div></td>
+  </tr>
+  <tr>
+    <td><p >
+<a name="wp9000158"><code>MemPtr</code></a></p>
+</td>
+    <td><div ><a name="wp9000159">Current highwater mark for core memory</a></div></td>
+  </tr>
+  <tr>
+    <td><p >
+<a name="wp9000160"><code>Stack</code></a></p>
+</td>
+    <td><div ><a name="wp9000161">If non-zero, indicates that the stack of the active task was out of bounds when the error occurred</a></div></td>
+  </tr>
+</table>
+<p ><b><i><a name="wp9001303">Total bytes received</a></i></b></p><p >
+<a name="wp9001304">Total number of bytes received by the interface.</a></p>
+<p ><b><i><a name="wp9001305">Unicast packets received</a></i></b></p><p >
+<a name="wp9001306">Number of unicast packets received by the interface.</a></p>
+<p ><b><i><a name="wp9001307">Multicast packets received</a></i></b></p><p >
+<a name="wp9001308">Number of multicast packets received by the interface.</a></p>
+<p ><b><i><a name="wp9001309">Broadcast packets received</a></i></b></p><p >
+<a name="wp9001310">Number of broadcast packets received by the interface.</a></p>
+<p ><b><i><a name="wp9001311">Total bytes sent</a></i></b></p><p >
+<a name="wp9001312">Total number of bytes sent by the interface.</a></p>
+<p ><b><i><a name="wp9001313">Unicast packets sent</a></i></b></p><p >
+<a name="wp9001314">Number of unicast packets sent by the interface.</a></p>
+<p ><b><i><a name="wp9001315">Multicast packets sent</a></i></b></p><p >
+<a name="wp9001316">Number of multicast packets sent by the interface.</a></p>
+<p ><b><i><a name="wp9001317">Broadcast packets sent</a></i></b></p><p >
+<a name="wp9001318">Number of broadcast packets sent by the interface.</a></p>
+    </blockquote>
+    <p></p>
+    <hr>
+
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" class="footer">
+      <tr>
+        <td>
+          
+        </td>
+        <td align="right" valign="top" class="navigator">
+<a href="rtcs_ipa.htm"><img src="images/sprev.gif" border="0" alt="Previous" title="Previous"></a><a href="rtcs_nat.htm"><img src="images/snext.gif" border="0" alt="Next" title="Next"></a>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>

@@ -1,0 +1,10 @@
+int func(void) {
+	for(;1;) {
+		break;
+	}
+	if (true) {
+		;
+	} else {
+		;
+	}
+}

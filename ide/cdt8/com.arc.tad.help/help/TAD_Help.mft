@@ -1,0 +1,3 @@
+Arguments: -helpset TAD_Help.hs
+Run-Class: sunw.demo.jhdemo.JHLauncher
+Main-Class: sunw.demo.jhdemo.Runner

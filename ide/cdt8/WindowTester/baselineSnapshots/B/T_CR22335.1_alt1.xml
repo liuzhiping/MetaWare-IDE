@@ -1,0 +1,49 @@
+<view name="org.eclipse.debug.ui.MemoryView">
+    <tree>
+        <item text="&X" selected="true"/>
+    </tree>
+    <label text="Monitors"/>
+    <styledText enabled="false">
+    </styledText>
+    <table columns="6">
+        <row>
+            <cell>00017140</cell>
+            <cell>00000000</cell>
+            <cell>00000001</cell>
+            <cell red="true">00000003</cell>
+            <cell>00000000</cell>
+            <cell></cell>
+        </row>
+        <row>
+            <cell>00017150</cell>
+            <cell>00000000</cell>
+            <cell>00000000</cell>
+            <cell>00000000</cell>
+            <cell>00000000</cell>
+            <cell></cell>
+        </row>
+        <row>
+            <cell>00017160</cell>
+            <cell>00000000</cell>
+            <cell>00000000</cell>
+            <cell>00000000</cell>
+            <cell>00000000</cell>
+            <cell></cell>
+        </row>
+        <row>
+            <cell>00017170</cell>
+            <cell>00000000</cell>
+            <cell>00000000</cell>
+            <cell>00000000</cell>
+            <cell>00000000</cell>
+            <cell></cell>
+        </row>
+    </table>
+    <combo text="Go to Address:">
+        <item>Go to Address:</item>
+        <item>Go to Offset:</item>
+        <item>Jump Memory Units:</item>
+    </combo>
+    <text text=""/>
+    <checkbox text="Input as Hex" selected="1"/>
+</view>

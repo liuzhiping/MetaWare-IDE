@@ -1,0 +1,6 @@
+<content>
+Breakpoints:
+    1:  H ${WORKSPACE}/Queens_AC/queens.c!26 @0x10118
+    2:    ${WORKSPACE}/Queens_AC/queens.c!48 @0x10208
+
+</content>

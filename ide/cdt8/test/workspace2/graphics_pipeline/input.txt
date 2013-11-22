@@ -1,0 +1,3 @@
+[3]eval paint_frame
+[1]eval _grmain
+[2]eval _displaymain

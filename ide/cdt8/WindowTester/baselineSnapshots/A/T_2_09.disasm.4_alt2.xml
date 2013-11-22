@@ -1,0 +1,19 @@
+<TextCanvas>
+    <text lineCount="7" selection="-1">
+        <line content="   37             if (!*Q) {">
+            <range color="9" start="0" end="28" />
+        <line content="Try+0x92     ldb          %r0,[%r16]">
+        <line content="Try+0x96     brnz_s       %r0,0,0x1_01d6 = Try+0xbe = queens.c!46">
+        <line content="   38                Asub(J) = True; ">
+            <range color="9" start="0" end="37" />
+        <line content="Try+0x98     mov_s        %r2,1">
+        <line content="Try+0x9a     add_s        %r0,%r14,%r15">
+        <line content="Try+0x9c     stb          %r2,[%r0,-1]">
+    </text>
+    <icon x="19" y="119">
+        <image width="14" height="15">
+             ff ff ff 45 ff d7 ff 0 ff ff        </image>
+    <icon x="19" y="17">
+        <image width="14" height="15">
+             ff ff ff 0 ff 30 ff 0 ff ff        </image>
+</TextCanvas>

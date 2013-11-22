@@ -1,0 +1,96 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN" "http://www.w3.org/MarkUp/Wilbur/HTML32.dtd">
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+    <meta name="GENERATOR" content="Quadralay WebWorks Publisher 2003 for FrameMaker 8.0.0.1194">
+    <meta name="TEMPLATEBASE" content="temp">
+    <link rel="StyleSheet" href="document.css" type="text/css" media="screen">
+    <title>Launching a Debug Configuration at Startup</title>
+  </head>
+
+  <body>
+
+    <table width="100%" border="0" cellpadding="0" cellspacing="0" class="header">
+      <tr>
+<!--Disabling Breadcrumbs to use Eclipse version 10/2009
+        <td class="breadcrumbs">
+	<a href="ide_guid.htm"> DesignWare ARC MetaWare IDE User's Guide </a> > <a href="tasks.htm"><br>Tasks</a> > Launching a Debug Configuration at Startup
+        </td>
+-->
+        <td align="right" valign="top" class="navigator" nowrap>
+<a href="mw_t_run.htm"><img src="images/sprev.gif" border="0" alt="Previous"></a><a href="mw_o_deb.htm"><img src="images/snext.gif" border="0" alt="Next"></a>
+        </td>
+      </tr>
+    </table>
+
+    <hr align="left">
+
+    <blockquote>
+<h3 >
+Launching a Debug Configuration at Startup
+<a name="wp919935"> </a></h3>
+
+<p >
+By default, the IDE starts in the <b>C/C++</b> perspective. You can save a step by invoking the IDE directly in the <b>Debug</b> perspective for a previously defined debug configuration. The debugger also starts, depending on your settings for <b>Resume at startup</b> and <b>Stop on startup at:</b> in the debug configuration's <b>Debugger</b> tab. Use the following command line: 
+<a name="wp920049"> </a></p>
+<pre >    mide.exe -launch <i>configName</i> 
+<a name="wp919945"></a></pre>
+<p >
+where <i>configName</i> is the name of a debug configuration that is defined in the current workspace.
+<a name="wp919947"> </a></p>
+<blockquote >
+
+
+<table border="1" cellpadding="5" cellspacing="0">
+  <caption></caption>
+  <tr>
+    <td><table border="0" cellpadding="5" cellspacing="0">
+  <caption></caption>
+  <tr valign=top>
+    <td><div ><img border="0" src="images/hint.png">
+</div></td>
+    <td><div ></div></td>
+</tr></table>
+<a name="wp927077"> </a>
+</td>
+    <td><div >Add <i>-data</i> <i>workspace-path</i> to specify an alternate workspace.<a name="wp927079"> </a></div></td>
+  </tr>
+</table>
+
+
+
+
+
+<a name="wp927071"> </a></blockquote>
+ <p >
+Note that the command line is case-sensitive. If the IDE cannot fine a debug configuration with the specified name, it displays a <b>Command-line error</b> box. After you dismiss the error box, the IDE starts as if the <i>-launch</i> option was not specified. 
+<a name="wp919936"> </a></p>
+<a name="wp920031">
+  <h5 >
+Related Tasks
+ </a></h5>
+<ul> <li ><a href="mw_t_run.htm#wp913987">Defining MetaWare Debugger Settings</a><a name="wp920035"> </a>
+</ul><a name="wp920074">
+  <h5 >
+Related Reference
+ </a></h5>
+<ul> <li >Eclipse <em>C/C++ Development User Guide</em><a name="wp920078"> </a>
+</ul>
+    </blockquote>
+    <p></p>
+    <hr>
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" class="footer">
+      <tr>
+        <td>
+
+        </td>
+        <td align="right" valign="top" class="navigator">
+<a href="mw_t_run.htm"><img src="images/sprev.gif" border="0" alt="Previous"></a><a href="mw_o_deb.htm"><img src="images/snext.gif" border="0" alt="Next"></a>
+        </td>
+      </tr>
+    </table>
+<p> <font size="-3">
+Copyright © 2012 Synopsys, Inc. <br />
+Some portions of this document copyright IBM Corporation and others 2000, 2004.</font></p>
+  </body>
+</html>

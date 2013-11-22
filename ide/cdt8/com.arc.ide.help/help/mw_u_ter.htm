@@ -1,0 +1,110 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN" "http://www.w3.org/MarkUp/Wilbur/HTML32.dtd">
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+    <meta name="GENERATOR" content="Quadralay WebWorks Publisher 2003 for FrameMaker 8.0.0.1194">
+    <meta name="TEMPLATEBASE" content="temp">
+    <link rel="StyleSheet" href="document.css" type="text/css" media="screen">
+    <title>Debugger: Terminal Simulator Settings</title>
+  </head>
+
+  <body>
+
+    <table width="100%" border="0" cellpadding="0" cellspacing="0" class="header">
+      <tr>
+<!--Disabling Breadcrumbs to use Eclipse version 10/2009
+        <td class="breadcrumbs">
+	<a href="ide_guid.htm"> DesignWare ARC MetaWare IDE User's Guide </a> > <a href="referenc.htm"><br>Reference</a> > Debugger: Terminal Simulator Settings
+        </td>
+-->
+        <td align="right" valign="top" class="navigator" nowrap>
+<a href="mw_u_reg.htm"><img src="images/sprev.gif" border="0" alt="Previous"></a><a href="mw_u_com.htm"><img src="images/snext.gif" border="0" alt="Next"></a>
+        </td>
+      </tr>
+    </table>
+
+    <hr align="left">
+
+    <blockquote>
+<h3 >
+Debugger: Terminal Simulator Settings
+<a name="wp993280"> </a></h3>
+
+<p >
+This section lists the settings you may make in the <b>Terminal Simulator</b> area of the <b>Debug Configurations dialog</b>. For information about accessing the dialog, see <a href="mw_t_ter.htm#wp917934">Specifying a Terminal or COMM-Port Simulator</a>.
+<a name="wp993283"> </a></p>
+<a name="wp993287">
+  <h5 >
+Terminal Simulator Settings
+ </a></h5>
+<p >
+If you select <b>Terminal Simulator</b>, use the check boxes and drop-down lists to specify the following for your terminal simulator:
+<a name="wp993288"> </a></p>
+<ul> <li ><b>Base address</b>. Default is 0xfc1000. ARC VUARTs are located at 0xfc1000 + 256*N for the Nth device.<a name="wp993293"> </a>
+ <li ><b>COMM </b>Port number<a name="wp993294"> </a>
+ <li ><b>TCP/IP Port</b> for communicating with the terminal-simulator server.<a name="wp993295"> </a>
+ <li >Accept the <b>default interrupt vector</b> or select your own.<a name="wp993296"> </a>
+ <li >Select <b>Use external terminal simulator</b> to use the terminal simulator included with the <i>debugger</i> instead of the terminal simulator included with the IDE.<a name="wp993297"> </a>
+</ul><blockquote >
+
+
+<table border="1" cellpadding="5" cellspacing="0">
+  <caption></caption>
+  <tr>
+    <td><table border="0" cellpadding="5" cellspacing="0">
+  <caption></caption>
+  <tr valign=top>
+    <td><div ><img border="0" src="images/hint.png">
+</div></td>
+    <td><div ></div></td>
+</tr></table>
+<a name="wp997399"> </a>
+</td>
+    <td><div >You might need to scroll the dialog to see additional settings.<a name="wp997401"> </a></div></td>
+  </tr>
+</table>
+
+
+
+
+
+<a name="wp997393"> </a></blockquote>
+ <ul> <li >Check <b>Use default receive timeout</b> to use the default timeout (200 ms) when waiting to receive a character, or select your own.<a name="wp993299"> </a>
+ <li >Check <b>Use default send timeout</b> to use the default timeout (200 ms) when waiting to send a character, or select your own.<a name="wp993300"> </a>
+ <li >(Optional) Log I/O. Select <b>Write log file</b> to log all outbound I/O. By default, the log goes to the terminal-simulator window (Windows hosts) or to <code>stdout</code> (UNIX and Linux hosts). You can enter a filename to send the log to a file or enter <code>stdout</code> to send the log to <code>stdout</code> (the default on UNIX and Linux hosts). <a name="wp993301"> </a>
+</ul><dl>
+  <dt >On Windows, check <b>Omit generating window</b> to send the I/O directly to the log file instead of generating a terminal-simulator window.<a name="wp993303"> </a></dl>
+<ul> <li >(Optional) Specify input file. Check <b>Read input file</b> and type or navigate to a file to read as input rather than the terminal window.<a name="wp993304"> </a>
+</ul><p >
+To specify more than one terminal simulator, specify the properties of each additional simulator on the command line using <i>-simextp</i>. You can use the <i>-simextp=</i><i>install_dir</i><i>/bin/termide</i> entry in the <b>Debugger Options:</b> field at the bottom of the dialog as an example.
+<a name="wp993305"> </a></p>
+<a name="wp993306">
+  <h5 >
+Related Task
+ </a></h5>
+<ul> <li ><a href="mw_t_ter.htm#wp917934">Specifying a Terminal or COMM-Port Simulator</a><a name="wp993310"> </a>
+ <li ><a href="mw_t_run.htm#wp913987">Defining MetaWare Debugger Settings</a><a name="wp993314"> </a>
+</ul><a name="wp993315">
+  <h5 >
+Related Reference
+ </a></h5>
+<ul> <li >Eclipse <em>C/C++ Development User Guide</em><a name="wp993319"> </a>
+</ul>
+    </blockquote>
+    <p></p>
+    <hr>
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" class="footer">
+      <tr>
+        <td>
+
+        </td>
+        <td align="right" valign="top" class="navigator">
+<a href="mw_u_reg.htm"><img src="images/sprev.gif" border="0" alt="Previous"></a><a href="mw_u_com.htm"><img src="images/snext.gif" border="0" alt="Next"></a>
+        </td>
+      </tr>
+    </table>
+<p> <font size="-3">
+Copyright © 2012 Synopsys, Inc. <br />
+Some portions of this document copyright IBM Corporation and others 2000, 2004.</font></p>
+  </body>
+</html>

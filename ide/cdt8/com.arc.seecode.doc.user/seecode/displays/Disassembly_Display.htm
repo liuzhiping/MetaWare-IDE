@@ -1,0 +1,67 @@
+<html>
+<head>
+<title>Disassembly window</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel=StyleSheet href="../default.css">
+</head>
+<body>
+
+<h1>Disassembly window</h1>
+
+<p>The Disassembly window shows disassembled code for your program. Labels of the form <i>.0</i>, <i>.1</i>, <i>.2</i>, and so on, are displayed in the left margin. Each label corresponds to a symbolic label and may be used to represent a symbol. For example, in the following example sequence, the first occurrence of <i>.0</i> corresponds to the &quot;main&quot; symbol.</p>
+
+<code>
+  main<br>
+  main+0x04<br>
+  main+0x08<br>
+  main+0x0c<br>
+  main+0x10<br>
+  main+0x14<br>
+  main+0x1c<br>
+  main+0x24<br>
+  main+0x28<br>
+  main+0x2c<br>
+  main+0x30
+</code>
+
+<p>These labels change their associations when the Disassembly window is updated. You can use a label in a simple expression (for example, to specify the address of a breakpoint) for as long as the same values are on window -- once the Disassembly display is closed, all associations are discarded.</p>
+
+<p>When the left margin shows:</p>
+
+<ul>
+  <li>a green arrow, the program has stopped on the line</li>
+  <li>a magenta arrow, a stack frame is not currently active; the arrow shows where the program will be when control re-enters the stack frame</li>
+  <li>a solid red rectangle, a breakpoint is set on the line; when the letter &quot;T&quot; is displayed, the breakpoint is specific to a thread, which you can identify through the <a href="../displays/Breakpoints_Display.htm">Breakpoints</a> window</li>
+  <li>a grey rectangle, the breakpoint is disabled</li>
+</ul>
+
+<h2>Viewing a specific disassembled address<a name="disassembly_find_address"></a></h2>
+
+<p>Specify an address to disassemble in the <b>Goto:</b> field. Type
+  a hexadecimal constant (for example, <tt>0x50000</tt>), or an expression that evaluates to an
+  address. An expression can include symbolic labels or register names (for example,
+  typing <tt>memcmp</tt> displays the disassembled code for the <b>memcmp</b> routine).</p>
+<p>To change the minimum width of hexadecimal addresses displayed, enter the following in the <b>Command:</b> field, </p><p><code>set addr_width=<i>value</i></code></p><p>where <i>value</i> is the desired width.</p>
+
+<h2>Viewing mixed source and assembly<a name="disassembly_mixed_mode"></a></h2>
+
+<p>The <b>Mix</b> button toggles whether source is shown intermixed with assembly
+  language. Source is displayed only when the assembly language on display corresponds
+  to a module that was compiled with debugging information (the <b>-g</b> option).</p>
+
+<h2>Modifying a disassembly listing<a name="disassembly_toggle_labels"></a></h2>
+
+<p>Click the <b>Lhex</b> button to toggle whether the label in the left margin is displayed in symbolic (if a symbol is available) or hexadecimal form.</p>
+
+<p>Click the <b>Ihex</b> button to toggle on or off the listing of bytes (in hexadecimal) for each instruction.</p>
+
+<h2>Navigating the stack frame<a name="disassembly_navStackFrame"></a></h2>
+
+<p>To scroll up or down through the call stack, click the
+  <b>Stack Up</b> or <b>Stack Dn</b> button.</p>
+
+<p>The <b>Stack Dn</b> button moves to the function that called the currently displayed function. The <b>Stack Up</b> button moves to the function that was called by the currently displayed function (click <b>Stack Up</b> only when the currently displayed function is not at the top of the stack frame).</p>
+
+<p>&nbsp;</p>
+</body>
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN" "http://www.w3.org/MarkUp/Wilbur/HTML32.dtd">
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+    <meta name="GENERATOR" content="Quadralay WebWorks Publisher 2003 for Word 8.0.0.1194">
+    <meta name="TEMPLATEBASE" content="ARCTechPubsv6">
+    <meta name="LASTUPDATED" content="01/27/12 13:02:36">
+<link rel="first" href="tad_help.htm">  <link rel="prev" href="interrup.htm"><link rel="next" href="names_wi.htm">
+    <link rel="StyleSheet" href="document.css" type="text/css" media="screen">
+    <title>Kernel Data Window</title>
+  </head>
+
+  <body>
+
+    <table width="100%" border="0" cellpadding="0" cellspacing="0" class="header">
+      <tr> 
+        <td class="breadcrumbs">
+	<a href="tad_help.htm"> MQX&#174; Task Aware Debug Help</a> > <a href="tad_wind.htm"> TAD Windows</a> > Kernel Data Window
+        </td>
+        <td align="right" valign="top" class="navigator" nowrap>
+<a href="interrup.htm"><img src="images/sprev.gif" border="0" alt="Previous" title="Previous"></a><a href="names_wi.htm"><img src="images/snext.gif" border="0" alt="Next" title="Next"></a>
+        </td>
+      </tr>
+    </table>
+
+    <hr align="left">
+
+    <blockquote>
+<h3 ><a name="wp9000774">
+Kernel Data Window</a></h3>
+
+
+<p >
+<a name="wp9000775">Kernel Data consists of the processor number, the CPU type, the active task, whether MQX is processing an ISR, the default scheduling policy, the default time-slice interval, and the MQX compile-time configuration that was used.</a></p>
+<p >
+<img src="images/kernel_c.gif" height="334" width="576" border="0" hspace="0" vspace="0">
+<a name="wp9000776"> </a></p>
+<p ><b><i><a name="wp9000777">Displayed Fields</a></i></b></p><p >
+<a name="wp9000778"><b>Active Task:</b></a></p>
+<p >
+<a name="wp9000779">Task that is active on this processor. In a multitasking environment, only one task runs at any time on a given processor.</a></p>
+<p >
+<a name="wp9000780"><b>CPU Type:</b></a></p>
+<p >
+<a name="wp9000781">Target processor type.</a></p>
+<p >
+<a name="wp9000782"><b>Processor No.:</b></a></p>
+<p >
+<a name="wp9000783">Number that identifies the processor. The application sets the processor number in the MQX initialization structure. The number is unique across all initialization structures in the application.</a></p>
+<p >
+<a name="wp9000784"><b>In an ISR?</b></a></p>
+<p >
+<a name="wp9000785">Indicates whether MQX was servicing an interrupt when data was obtained from the target.</a></p>
+<p >
+<a name="wp9000786"><b>Scheduler Policy:</b> and <b>Time Slice:</b></a></p>
+<p >
+<a name="wp9000787">Scheduler Policy and Time Slice are assigned per task. The fields indicate the default values that MQX uses if it creates a task that does not have a scheduling policy or time slice specified. To determine the values in effect for a task, open the <b>Examine Task</b> window for the task.</a></p>
+<p >
+<a name="wp9000788"><b>Embedded IO:</b></a></p>
+<p >
+<a name="wp9000789">Indicates which ARC embedded I/O components are installed (for example, RTCS, the ARC SMTP embedded e-mail sender, the ARC POP3 embedded e-mail receiver, and the ARC HTTP embedded web server).</a></p>
+<p ><b><i><a name="wp9000790">Displayed fields-Compile Time Configuration</a></i></b></p><p >
+<a name="wp9000791">The MQX compile-time configuration options are shown:</a></p>
+<p >
+<a name="wp9000792"><b>Floating Point IO:</b></a></p>
+<p >
+<a name="wp9000793">Floating-point I/O code is included in <strong>_io_printf</strong>() and <strong>_io_scanf</strong>().</a></p>
+<p >
+<a name="wp9000794"><b>Use Inline Macros:</b></a></p>
+<p >
+<a name="wp9000795">Certain internal MQX utility functions are made inline rather than by function calls.</a></p>
+<p >
+<a name="wp9000796"><b>Kernel Logging:</b></a></p>
+<p >
+<a name="wp9000797">Log entries are written into the kernel log on function entry and function exit.</a></p>
+<p >
+<a name="wp9000798"><b>Monitor Stack:</b></a></p>
+<p >
+<a name="wp9000799">MQX fills all task and interrupt stacks with a known value when it initializes the stacks. The known value lets utility software and debuggers calculate how much of the stack is used.</a></p>
+<p >
+<a name="wp9000800"><b>Task Creation Blocks:</b></a></p>
+<p >
+<a name="wp9000801">MQX blocks the task that calls <strong>_task_create</strong>() to create a task on a different processor. MQX blocks the creator task until the target task is created and an error code is returned.</a></p>
+<p ><b><i><a name="wp9000802">Task Destruction</a></i></b></p><p >
+<a name="wp9000803">MQX lets tasks be destroyed. MQX includes code that allows for the release of all resources that are owned by the task when the task is destroyed. </a></p>
+<p >
+<a name="wp9000804">Component Destruction</a></p>
+<p >
+<a name="wp9000805">MQX can handle the destruction of an MQX component object (such as a semaphore or event).</a></p>
+<p ><b><i><a name="wp9000806">Error Checking</a></i></b></p><p >
+<a name="wp9000807">MQX functions perform error checking on all their parameters. Set the option while you test and verify your application.</a></p>
+<p ><b><i><a name="wp9000808">Validity Checking</a></i></b></p><p >
+<a name="wp9000809">MQX functions check the <code>VALID</code> fields of all structures when they access the structures.</a></p>
+<p ><b><i><a name="wp9000810">Memory Allocation Errors</a></i></b></p><p >
+<a name="wp9000811">MQX functions check all memory allocations for errors. All MQX functions verify that memory allocations are successful.</a></p>
+<p ><b><i><a name="wp9000812">32 bit Queue IDs</a></i></b></p><p >
+<a name="wp9000813">Message component data types can be <font ><i>uint_32</i></font> instead of <font ><i>uint_16</i></font>. This allows for more than 256 message queues on a CPU, and more than 256 processors in a multiprocessor network.</a></p>
+<p ><b><i><a name="wp9000814">Sorting Memory-Free List</a></i></b></p><p >
+<a name="wp9000815">Free memory blocks can be stored in order of address to reduce fragmentation. Storing free memory blocks in address order increases code size and the time it takes to free memory.</a></p>
+<p ><b><i><a name="wp9000816">Default Time Slice</a></i></b></p><p >
+<a name="wp9000817">The default time slice in the task template structure can be in ticks or in milliseconds.</a></p>
+<p ><b><i><a name="wp9000818">LWLog Time Stamp</a></i></b></p><p >
+<a name="wp9000819">The time stamp in the lightweight log component can be in ticks or in second-millisecond-microsecond format.</a></p>
+<p ><b><i><a name="wp9000820">Enabling Profiling </a></i></b></p><p >
+<a name="wp9000821">MQX includes code to support an external profiling tool. When <b>Profiling Enable</b> is <b>Yes</b>, the code is compiled into MQX.</a></p>
+<p ><b><i><a name="wp9000822">Run-Time Error Checking</a></i></b></p><p >
+<a name="wp9000823">MQX includes code to support an external run-time error-checking tool. When <b>Run Time Err Check Enable</b> is <b>Yes</b>, the code is compiled into MQX.</a></p>
+<p ><b><i><a name="wp9000824">Using 32Bit Types</a></i></b></p><p >
+<a name="wp9000825">MQX can be forced into 32-bit mode regardless of the natural size of the processor. This may reduce the number of warnings generated at compile time when linking MQX version 2.5x applications against later versions of MQX.</a></p>
+<p ><b><i><a name="wp9000826">PSP Kernel Logging</a></i></b></p><p >
+<a name="wp9000827">The PSP-specific functions include kernel logging.</a></p>
+<p ><b><i><a name="wp9000828">PSP Floating-Point Registers</a></i></b></p><p >
+<a name="wp9000829">The PSP supports floating-point registers.</a></p>
+<p ><b><i><a name="wp9000830">PSP MMU Context</a></i></b></p><p >
+<a name="wp9000831">A task may have an associated MMU context.</a></p>
+<p ><b><i><a name="wp9000832">PSP Profiling Enable</a></i></b></p><p >
+<a name="wp9000833">The MQX PSP may include code to support an external profiling tool.</a></p>
+<p ><b><i><a name="wp9000834">PSP Run-Time Error Checking</a></i></b></p><p >
+<a name="wp9000835">The MQX PSP may include code to support an external run-time error-checking tool.</a></p>
+    </blockquote>
+    <p></p>
+    <hr>
+
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" class="footer">
+      <tr>
+        <td>
+          
+        </td>
+        <td align="right" valign="top" class="navigator">
+<a href="interrup.htm"><img src="images/sprev.gif" border="0" alt="Previous" title="Previous"></a><a href="names_wi.htm"><img src="images/snext.gif" border="0" alt="Next" title="Next"></a>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>

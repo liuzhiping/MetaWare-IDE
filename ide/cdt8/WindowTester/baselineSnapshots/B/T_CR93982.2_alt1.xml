@@ -1,0 +1,17 @@
+<view name="com.arc.cdt.debug.seecode.ui.views.SeeCodeCustomView:source">
+<TextCanvas>
+    <text lineCount="11" selection="-1">
+        <line content="  21 #include "screen.h"">
+        <line content="  22 #include "grapi.h"">
+        <line content="  23 #include "config.h"">
+        <line content="  24 ">
+        <line content="  25 #define FPS 45.0">
+        <line content="  26 ">
+        <line content="  27 #define SQR 1.45">
+        <line content="  28 ">
+        <line content="  29 static real globalr = 15.;">
+        <line content="  30 static real globaltheta = 90.;">
+        <line content="  31 static real globalz = 6.0 * SQR;">
+    </text>
+</TextCanvas>
+</view>

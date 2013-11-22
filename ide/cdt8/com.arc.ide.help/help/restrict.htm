@@ -1,0 +1,92 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN" "http://www.w3.org/MarkUp/Wilbur/HTML32.dtd">
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+    <meta name="GENERATOR" content="Quadralay WebWorks Publisher 2003 for FrameMaker 8.0.0.1194">
+    <meta name="TEMPLATEBASE" content="temp">
+    <link rel="StyleSheet" href="document.css" type="text/css" media="screen">
+    <title>Restricting Displayed Instructions</title>
+  </head>
+
+  <body>
+
+    <table width="100%" border="0" cellpadding="0" cellspacing="0" class="header">
+      <tr>
+<!--Disabling Breadcrumbs to use Eclipse version 10/2009
+        <td class="breadcrumbs">
+	<a href="ide_guid.htm"> DesignWare ARC MetaWare IDE User's Guide </a> > <a href="tasks.htm"><br>Tasks</a> > <a href="mw_t_ins.htm">Debugging with Instruction History</a> > Restricting Displayed Instructions
+        </td>
+-->
+        <td align="right" valign="top" class="navigator" nowrap>
+<a href="filterin.htm"><img src="images/sprev.gif" border="0" alt="Previous"></a><a href="marking_.htm"><img src="images/snext.gif" border="0" alt="Next"></a>
+        </td>
+      </tr>
+    </table>
+
+    <hr align="left">
+
+    <blockquote>
+<h4 >
+Restricting Displayed Instructions
+<a name="wp696799"> </a></h4>
+
+<p >
+You can restrict the instructions displayed in the <b>Instruction history - Simulator trace</b> window using a regular expression or a Boolean expression.
+<a name="wp696800"> </a></p>
+<p >
+To restrict the displayed instructions using a regular expression, do the following:
+<a name="wp696801"> </a></p>
+<ol type="1"> <li  value="1">Click the <b>Find</b> drop-down list.<a name="wp696802"> </a>
+ <li  value="2">Select <b>Reg expn</b>.<a name="wp696803"> </a>
+ <li  value="3">Enter a regular expression (such as <code>*r3*</code> or <code>*add*</code>) in the <b>Reg expn</b> input field. <a name="wp696807"> </a>
+ <li  value="4">The expression is added to the <b>Reg expn</b> drop-down list so you can use it again. Click the down or up arrow (<b>Next</b> or <b>Prev</b>) or the <b>Match</b> icon.<a name="wp696815"> </a>
+</ol><blockquote >
+<div align="left"><img src="images/sc_find_.gif" alt="Finding a Regular Expression" border="0" hspace="0" vspace="0"></div>
+
+<a name="wp696820"> </a></blockquote>
+ <p >
+To restrict displayed instructions by fields using a Boolean expression, do the following:
+<a name="wp696825"> </a></p>
+<ol type="1"> <li  value="1">Click the <b>Show Field Values</b> button <b>[...]</b> to show the available fields, such as <code>[addr=0x10084 pc=0x10084]</code>.<a name="wp696826"> </a>
+ <li  value="2">Click the <b>Find</b> drop-down list.<a name="wp696827"> </a>
+ <li  value="3">Select <b>Bool expn</b>.<a name="wp696828"> </a>
+ <li  value="4">Enter your Boolean expression.<br>Here are some examples of Boolean expressions:<br><code>$addr &gt;= 0x2000<br>$reg = 13 &amp;&amp; $value &lt; 10<br>$reg == 13 ? $value == 10 : $value = 1</code><a name="wp853430"> </a>
+ <li  value="5">Click the down or up arrow (<b>Next</b> or <b>Prev</b>) or the <b>Match</b> icon.<div align="left"><img src="images/sc_finda.gif" alt="Finding a Boolean Expression" border="0" hspace="0" vspace="0"></div><a name="wp853431"> </a>
+</ol><p >
+The display is restricted to the instructions that match your criteria.
+<a name="wp696844"> </a></p>
+<a name="wp917292">
+  <h5 >
+Related Tasks
+ </a></h5>
+<ul> <li ><a href="openingb.htm#wp917111">Opening an Instruction history - Simulator trace Window</a><a name="wp917296"> </a>
+ <li ><a href="stepping.htm#wp696765">Stepping through a History of Instructions</a><a name="wp917300"> </a>
+ <li ><a href="filterin.htm#wp696785">Filtering Trace Items and Configuring Buffers</a><a name="wp917304"> </a>
+ <li ><a href="marking_.htm#wp696845">Marking Lines of Instruction History to Return to</a><a name="wp917308"> </a>
+ <li ><a href="configur.htm#wp696861">Configuring Trace Capture</a><a name="wp917312"> </a>
+ <li ><a href="debuggic.htm#wp929577">Debugging with SmaRT Real-Time Trace</a><a name="wp917410"> </a>
+</ul><a name="wp917411">
+  <h5 >
+Related Reference
+ </a></h5>
+<ul> <li ><a href="mw_u_reg.htm#wp993229">Debugger Conventions for Regular Expressions</a><a name="wp917529"> </a>
+ <li >Eclipse <em>C/C++ Development User Guide</em><a name="wp917415"> </a>
+</ul>
+    </blockquote>
+    <p></p>
+    <hr>
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" class="footer">
+      <tr>
+        <td>
+
+        </td>
+        <td align="right" valign="top" class="navigator">
+<a href="filterin.htm"><img src="images/sprev.gif" border="0" alt="Previous"></a><a href="marking_.htm"><img src="images/snext.gif" border="0" alt="Next"></a>
+        </td>
+      </tr>
+    </table>
+<p> <font size="-3">
+Copyright © 2012 Synopsys, Inc. <br />
+Some portions of this document copyright IBM Corporation and others 2000, 2004.</font></p>
+  </body>
+</html>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?fileVersion 3.1.0?>
+
+<ManagedProjectBuildInfo>
+<project id="Queens_AC.com.arc.cdt.toolchain.arc.exeProject.1989131528" name="ARCompact Executable" projectType="com.arc.cdt.toolchain.arc.exeProject">
+<configuration artifactExtension="elf" artifactName="Queens_AC" cleanCommand="rm -rf" description="" errorParsers="com.arc.cdt.toolchain.ARCCompilerErrorParser;com.arc.cdt.toolchain.ARCLinkerErrorParser;com.arc.cdt.toolchain.ARCAssemblerErrorParser;org.eclipse.cdt.core.MakeErrorParser" id="com.arc.cdt.toolchain.arc.exeDebugConfig.1967171072" name="Debug" parent="com.arc.cdt.toolchain.arc.exeDebugConfig">
+<toolChain id="com.arc.cdt.toolchain.arc.exeToolChainDebug.1922677673" name="ARC EXE Tool Chain" superClass="com.arc.cdt.toolchain.arc.exeToolChainDebug">
+<tool id="arc.exe.debug.exeCompilerDebug.606921162" name="MetaWare ARC C/C++ Compiler" superClass="arc.exe.debug.exeCompilerDebug">
+<option id="com.arc.cdt.toolchain.arc.compilerDebugOptLevel.1415928098" superClass="com.arc.cdt.toolchain.arc.compilerDebugOptLevel" value="arc.optimization.level.O6" valueType="enumerated"/>
+</tool>
+<tool id="com.arc.cdt.toolchain.arc.asmDebugExe.2029328003" name="ARCompact Assembler" superClass="com.arc.cdt.toolchain.arc.asmDebugExe"/>
+<tool id="com.arc.cdt.toolchain.arc.exeLinkerDebug.1400920579" name="MetaWare Linker" superClass="com.arc.cdt.toolchain.arc.exeLinkerDebug"/>
+<macros/>
+</toolChain>
+</configuration>
+<configuration artifactExtension="elf" artifactName="Queens_AC" cleanCommand="rm -rf" description="" errorParsers="com.arc.cdt.toolchain.ARCCompilerErrorParser;com.arc.cdt.toolchain.ARCLinkerErrorParser;com.arc.cdt.toolchain.ARCAssemblerErrorParser;org.eclipse.cdt.core.MakeErrorParser" id="com.arc.cdt.toolchain.arc.exeReleaseConfig.1486763645" name="Release" parent="com.arc.cdt.toolchain.arc.exeReleaseConfig">
+<toolChain id="com.arc.cdt.toolchain.arc.exeReleaseToolChain.1404061272" name="MetaWare C Toolset" superClass="com.arc.cdt.toolchain.arc.exeReleaseToolChain">
+<tool id="arc.cdt.toolchain.arc.exeCompilerRelease.53202309" name="MetaWare ARC C/C++ Compiler" superClass="arc.cdt.toolchain.arc.exeCompilerRelease"/>
+<tool id="com.arc.cdt.toolchain.arc.asmReleaseExe.2043831144" name="ARCompact Assembler" superClass="com.arc.cdt.toolchain.arc.asmReleaseExe"/>
+<tool id="com.arc.cdt.toolchain.arc.exelinkerRelease.603029927" name="MetaWare Linker" superClass="com.arc.cdt.toolchain.arc.exelinkerRelease"/>
+</toolChain>
+</configuration>
+</project>
+</ManagedProjectBuildInfo>

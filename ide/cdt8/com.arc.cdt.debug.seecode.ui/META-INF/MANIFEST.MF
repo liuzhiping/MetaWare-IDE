@@ -1,0 +1,30 @@
+Manifest-Version: 1.0
+Bundle-Name: SeeCode Display Renderer
+Bundle-ManifestVersion: 2
+Bundle-SymbolicName: com.arc.cdt.debug.seecode.ui; singleton:=true
+Bundle-Version: 9.2
+Bundle-Activator: com.arc.cdt.debug.seecode.ui.UISeeCodePlugin
+Bundle-Vendor: Synopsys Corporation
+Bundle-Localization: plugin
+Require-Bundle: com.arc.seecode.engine,
+ com.arc.cdt.debug.seecode.core,
+ org.eclipse.cdt.launch,
+ org.eclipse.cdt.core,
+ org.eclipse.core.runtime,
+ org.eclipse.debug.ui,
+ org.eclipse.cdt.debug.core,
+ com.arc.mw.util,
+ org.eclipse.cdt.managedbuilder.core,
+ org.eclipse.ui,
+ org.eclipse.cdt.debug.ui,
+ org.eclipse.cdt.ui,
+ org.eclipse.ui.workbench.texteditor,
+ org.eclipse.tm.arc.terminal.view,
+ org.eclipse.tm.arc.terminal,
+ com.arc.debugger,
+ org.eclipse.help,
+ org.dom4j;bundle-version="1.0.0",
+ com.arc.cdt.toolchain.ui.bcf;bundle-version="9.2.0"
+Bundle-ActivationPolicy: lazy
+Export-Package: com.arc.cdt.debug.seecode.ui
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6

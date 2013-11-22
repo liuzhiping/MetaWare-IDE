@@ -1,0 +1,1 @@
+mdb C:\ARC\mqx_rtos2.52_arc\examples\demo\arca7.met\demo.elf -OS=MQX -arc700 -off=cache_target_memory -sim "-simextp=C:\ARC\MetaWare\arc\bin\termsim,term_base=0xc0fc1000,term_port=1" -targs=AC -toggle=deadbeef=1 -toggle=include_local_symbols=1 -nogoifmain -OK

@@ -1,0 +1,1120 @@
+<?xml version="1.0" ?>
+<!--
+/*
+ * CONFIDENTIAL AND PROPRIETARY INFORMATION.
+ * Copyright 2004-2008 ARC International (Unpublished).
+ * All Rights Reserved.
+ * This document, material and/or software contains confidential and
+ * proprietary information of ARC International and is protected by copyright,
+ * trade secret and other state, federal, and international laws, and may be
+ * embodied in patents issued or pending. Its receipt or possession does not
+ * convey any rights to use, reproduce, disclose its contents, or to
+ * manufacture, or sell anything it may describe.  Reverse engineering is
+ * prohibited, and reproduction, disclosure or use without specific written
+ * authorization of ARC International is strictly forbidden.  ARC and the ARC
+ * logotype are trademarks of ARC International.
+ */
+ -->
+
+<!-- This serves as the "meta" definition of guihili -->
+<!--
+NOTE: the old "guihili" logic of the old AWT-based Debugger gui
+was merged into here. That's why things are not as regular as
+they could be.
+
+Here are some quirky things about guihili that you should know:
+
+Each "action" attribute on comboboxes and checkboxes is evaluated
+when the action "OK" is fired. Each will be evaluated to a string
+that is appended to a list. The list is retreivable from the property
+named "action". It is an instance of "java.util.List".
+
+Likewise, each "arg_action" attribute is handled correspondingly,
+and appended to a list named "arg_action".
+
+Thus, the "arg_action" and "action" properties will likely need
+to be cleared when displaying a dialog box that was previously
+displayed.
+
+-->
+
+<bindings version="100">
+  <binding tag="gui" class=".GuiBuilder">
+    <!--********************************************************
+     * A comment is simply ignored
+     **********************************************************-->
+    <binding tag="comment" class=".legacy.CommentBuilder" />
+    <!--********************************************************
+     * Call a "gui_proc" to instantiate a component.
+     * There are arbitrary attributes that can be set.
+     **********************************************************-->
+    <binding tag="call" class=".legacy.CallBuilder" >
+	<attr name="name" required="true" />  <!-- name of gui proc -->
+	<!-- attr name="...any..." -->
+    </binding>
+    <!--********************************************************
+     * Set a symbol to a string value in the current environment.
+     * Subsequent occurrences of the symbol in a string ("$foo") will
+     * be back-substituted with the value.
+     **********************************************************-->
+    <binding tag="set" class=".legacy.SetBuilder" />
+    <!--********************************************************
+     * Instantiate a component conditionally
+     **********************************************************-->
+    <binding tag="if" class=".legacy.IfBuilder" >
+	<attr name="cond" required="true" type="boolean" />  <!-- expression that evaluates to boolean -->
+	<binding tag="component" />
+	<binding tag="call" />
+	<binding tag="upto" />
+	<binding tag="if" />
+	<binding tag="set" />
+    </binding>
+    <!--***********************************************************************************
+	* Common behaviour for all components
+	*
+	* If <component> tag explicitly appears, then its name attribute must reference
+	* a component that has either been previously defined in XML or has been
+	* programmatically defined via the "setComponent" method code.
+	*
+	* The "enabled" attribute is often used for buttons and text fields.
+	* It is set to a property that  is assumed to have the value "true" or "false".
+	* If the value of the property is defined and is not false, then the component is
+	* enabled; otherwise it is disabled. Often, this property is defined by the
+	* "toggle" attribute of a button.
+	*
+	* Sometimes we need "enabled" set if all of several properties are set to true.
+	* We handle this by specifying multiple properties separated by spaces:
+	*      enabled="button1On button2On"
+	*
+	* Don't use "enable_if"! It causes a property change listener to be
+	* invoked on EVERY property change to re-evaluate if the component needs
+	* to be enabled or disabled. Use "enabled" instead!
+	***********************************************************************************-->
+    <binding tag="component" class=".ComponentBuilder" >
+	<attr name="name" />
+	<attr name="id" alias="name" />	 <!-- Tom's alias for "name" -->
+	<attr name="width" type="int" />
+	<attr name="height" type="int" />
+	<attr name="preferredWidth" type="int" />
+	<attr name="preferredHeight" type="int" />
+	<attr name="tooltip" />
+	<attr name="tip" alias="tooltip" />
+	<attr name="visible"  type="action" />
+	<attr name="enabled" />	 <!-- may be a property (e.g., "foo")-->
+	<attr name="enabled_property_name" alias="enabled"/> <!-- from guihili -->
+	<attr name="enable_if" type="action" /> <!-- very expensive; must eval at each prop change -->
+	<attr name="alignmentX"  type="float" />
+	<attr name="alignmentY"  type="float" />
+	<attr name="font" />
+	<attr name="foreground" />
+	<attr name="background" />
+        <attr name="halign" />	<!-- left, center, right, fill -->
+	<attr name="valign" />	<!-- top, center, bottom, fill -->
+	<attr name="border" />
+	<attr name="borderTitle" />
+	<attr name="doc" />	<!-- consession to guihili; sets a "doc" property -->
+	<attr name="doc_title"/>   <!--  Help document -->
+	<attr name="legacy" type="boolean" />  <!--Implicitly inserted for old Guihili code-->
+	<attr name="rows" type="int" /> <!-- number of row in grid layout (default=1)-->
+	<attr name="cols" type="int" /> <!-- number of columns in grid layout (default=1)-->
+	<attr name="expandable"  type="boolean"/>  <!-- fills horizontally in container-->
+	<attr name="arg_action" type="action"/> <!-- appends to args -->
+
+    </binding>
+    <!--********************************************************
+     *  This is a "procedure". The enclosed component can
+     * be instantiated multiple times via the "call" node.
+     **********************************************************-->
+    <binding tag="gui_proc" class=".legacy.GuiProcBuilder" >
+	<attr name="name" required="true"/>  <!-- the function name -->
+	<binding tag="component" />
+    </binding>
+    <!--********************************************************
+     * Procedure that is called from lisp "call" operator.
+     **********************************************************-->
+    <binding tag="proc" class=".legacy.ProcBuilder" >
+	<attr name="name" required="true" />
+	<attr name="body" type="action" required="true" />
+    </binding>
+    <!--********************************************************
+     * Instantiate a component as a variable iterates from lo to high.
+     **********************************************************-->
+    <binding tag="upto" class=".legacy.UpToBuilder" >
+	<attr name="lo" type="int" required="true" />  <!-- low bound -->
+	<attr name="hi" type="int" required="true" />  <!-- high bound -->
+	<attr name="var" required="true" />  <!-- var index name -->
+	<binding tag="component" />
+	<binding tag="call" />
+	<binding tag="upto" />
+    </binding>
+    <!--***********************************************************************************
+	* Common behaviour for all border definitions
+	*
+	* Define a border with the name specified by the "name" attribute.
+	***********************************************************************************-->
+    <binding tag="border" >
+	<attr name="name" required="true" />
+    </binding>
+     <!--***********************************************************************************
+	* Define a string property with a default value.
+	* The property will be set to the default value only if it hasn't already been
+	* assigned programatically.
+	* "type", if specified, will restrict the value of the property:
+	*    "int"  an integer
+	*    "uint"  a non-negative integer
+	*    "hex"   integer, preferred in hex.
+	*    "alpha"  an alphanumeric identifier.
+	***********************************************************************************-->
+    <binding tag="property" class=".PropertyDefiner">
+	<attr name="name" required="true"/>
+	<attr name="default"/>
+	<!-- "value" is re-evaluated each time any property is changed. So use sparingly-->
+	<attr name="value" type="action" />
+	<attr name="type"/>
+    </binding>
+    <!--***********************************************************************************
+	* A compound border.
+	* "inner" is the name of the border to serve as the inner border.
+	* "outer" is the name of the outer border.
+	*
+	***********************************************************************************-->
+    <binding tag="compoundBorder" class=".CompundBorderBuilder"
+		inherits="border">
+	<attr name="inner" />
+	<attr name="outer" />
+    </binding>
+    <!--***********************************************************************************
+	* A titled border.
+	* Rarely do you need to explicitly define a title border.
+	* Each of the layouts has a "borderTitle" attribute that will
+	* automatically create a titled, etched border.
+	*
+	***********************************************************************************-->
+    <binding tag="titledBorder" class=".TitledBorderBuilder" inherits="border">
+	<attr name="title" required="true" />
+	<attr name="position"/>
+	<attr name="justification"/>
+	<attr name="border"/>	 <!-- defaults to etched -->
+    </binding>
+
+    <!--***********************************************************************************
+	* An etched border.
+	* A border named "etched" is predefined with default characteristics.
+	* You need only define your own etched border if you need a raised etched border
+	* or if you need alternate highlight/shadow colors.
+	*
+	***********************************************************************************-->
+    <binding tag="etchedBorder" class=".EtchedBorderBuilder" inherits="border">
+	<attr name="highlight" />
+	<attr name="shadow" />
+	<attr name="type" /> <!-- RAISED or LOWERED -->
+    </binding>
+
+    <!--***********************************************************************************
+	* A bevelled border.
+	* A border named "bevel" is predefined with default characteristics.
+	* You need only define your own bevel border if you need one with other
+	* than default attributes.
+	*
+	***********************************************************************************-->
+    <binding tag="bevelBorder" class=".BevelBorderBuilder" inherits="border">
+	<attr name="highlight" />
+	<attr name="shadow" />
+	<attr name="type" /> <!-- RAISED or LOWERED -->
+    </binding>
+    <!--***********************************************************************************
+	* An empty border is used to create an inset around a layout panel.
+	*
+	***********************************************************************************-->
+    <binding tag="emptyBorder" class=".emptyBorderBuilder" inherits="border">
+	<attr name="width" type="int"/> 
+    </binding>
+
+    <!--***********************************************************************************
+	* A container is the base behaviour of all layouts.
+	* If used explicitly, a "flow" layout will be used.
+	*
+	* If "direction" specified, then "horizontal" will cause a horizontal Box
+	* layout. "vertical" will cause a vertical box layout.
+	*
+	* "on_save" is from guihili. It registers an action to be performed when
+	* "save" action is fired.
+	***********************************************************************************-->
+    <binding tag="container" class=".ContainerBuilder" 
+							inherits="component">
+	<attr name="title" />	 <!-- title of options dialog if this is top level. -->
+	<attr name="direction" /> <!-- consession to Guihili -->
+	<attr name="gap" type="int" /> <!-- concession to guihili; gaps between components -->
+	<attr name="line_up_columns" type="boolean" />  <!-- anachronism from guihili -->
+	<attr name="line_up_colums" alias="line_up_columns" />  <!-- an inherited stupidity! -->
+	<attr name="on_save" type="action"/> <!-- a thingy from guihili -->
+	<attr name="label" alias="borderTitle"/> <!-- Tom name for border title -->
+	<attr name="leftMargin" type="int" />
+	<attr name="leftmargin" alias="leftMargin" />
+	<attr name="topMargin" type="int" />
+	<attr name="topmargin" alias="topMargin" />
+	<attr name="rightMargin" type="int" />
+	<attr name="rightmargin" alias="rightMargin" />
+	<attr name="bottomMargin" type="int" />
+	<attr name="bottommargin" alias="bottomMargin" />
+	<binding tag="component" />
+	<binding tag="comment" />
+	<binding tag="if" />
+	<binding tag="gui_proc" />
+	<binding tag="call" />
+	<binding tag="proc" />
+	<binding tag="set" />
+	<binding tag="upto" />
+	<binding tag="dummy" />
+	<binding tag="property" />
+	<binding tag="fileChooser" />
+    </binding>
+    <binding tag="panel" class=".ContainerBuilder" inherits="container"/>
+    <binding tag="flowLayout" class=".ContainerBuilder" inherits="container"/>
+    <!--***********************************************************************************
+	* A card layout consists of a collection of cards in which only one is visible
+	* at a time. Each card has a name. The cardLayout has a property. The property
+	* value is that of one of the card names. Whenever the property has the name
+	* of one of the cards, that card will appear.
+	***********************************************************************************-->
+    <binding tag="cardLayout" class=".CardLayoutBuilder" inherits="container">
+	<attr name="property" required="true" />
+	<attr name="scrollable" type="boolean" />
+	<attr name="vgap" type="int" />  <!-- margin at top/bottom of cards -->
+	<attr name="hgap" type="int" />  <!-- margin at left/right of card -->
+	<binding tag="card" class=".CardBuilder" >
+	    <!-- NOTE: a name of "*" will match any otherwise unrecognized property name -->
+	    <attr name="name" required="true" />
+	    <binding tag="component" />
+	</binding>
+    </binding>
+    <!--***********************************************************************************
+	* This nothing less than Java'a imfamous GridBagLayout
+	* See the API documentation for details.
+	*
+	* gridx and gridy are set as integers. The default "RELATIVE" is achieved by not
+	* specifying them at all.
+	***********************************************************************************-->
+    <binding tag="gridBagLayout" class=".GridBagBuilder" inherits="container">
+	<binding tag="constraint" class=".GridBagConstraintBuilder" >
+	    <attr name="gridx" type="int" />	 <!-- defaults to RELATIVE -->
+	    <attr name="gridy" type="int" />	 <!-- defaults to RELATIVE -->
+	    <attr name="gridwidth" />  <!-- integer, or "RELATIVE" or "REMAINDER" -->
+	    <attr name="gridheight" />  <!-- integer, or "RELATIVE" or "REMAINDER" -->
+	    <attr name="fill" />  <!-- "NONE" "VERTICAL" "HORIZONTAL" "BOTH" -->
+	    <attr name="insets" />  <!-- "int,int,int,int" -->
+	    <attr name="ipadx" type="int" />  
+	    <attr name="ipady" type="int" />  
+	    <attr name="anchor" />  	 <!-- NORTH SOUTH EAST WEST CENTER NORTHEAST SOUTHWEST...-->
+	    <attr name="weightx" type="float" /> 
+	    <attr name="weighty" type="float" /> 
+	    <binding tag="component" />
+	</binding>
+	<binding tag="constraints" class=".GridGagConstraintBuilder"  
+			inherits="constraint" />
+	<binding tag="component" />   <!-- uses default constraint -->
+    </binding>
+
+    <!--***********************************************************************************
+	* A grid layout consists of components mapped into a grid of a
+	* constant number of columns. Components are added from left to right
+	* and top-down.
+	* A component may occupy more than one row or more than one column
+	* with the rows/cols attributes.
+	*
+	* Rows may be specified to be equal height and columns may be 
+	* specified to be equal width.
+	*
+	***********************************************************************************-->
+    <binding tag="gridLayout" class=".GridPanelBuilder" inherits="container">
+	<attr name="rows" type="int"/>
+	<attr name="columns" type="int" required="true"/>
+	<attr name="equalWidth" type="boolean"/> <!-- columns equal width -->
+	<attr name="equalHeight" type="boolean"/>  <!-- rows equal height -->
+    </binding>
+
+    <!--***********************************************************************************
+	* A border layout consists of 5 areas:
+	*
+	* A "north" area occupies the full width of the layout at the top, but is only
+	* as tall as necessary to accomodate whatever component is placed there.
+	*
+	* A "south" area occupies the full width of the layout at the bottom, but is only
+	* as tall as necessary to accomodate whatever component is placed there.
+	*
+	* A "west" area occupies a left-side column. Its top and bottom borders the
+	* "north" and "south" areas, respectively.
+	*
+	* Likewise, the "east" area occupies the right-side column.
+	*
+	* The "center" area fills the center.
+	*
+	***********************************************************************************-->
+    <binding tag="borderLayout" class=".BorderPanelBuilder"
+		inherits="container">
+	<binding tag="north" class=".BorderConstraintBuilder">
+	    <binding tag="component"/>
+	</binding>
+	<binding tag="south" class=".BorderConstraintBuilder">
+	    <binding tag="component"/>
+	</binding>
+	<binding tag="center" class=".BorderConstraintBuilder">
+	    <binding tag="component"/>
+	</binding>
+	<binding tag="east" class=".BorderConstraintBuilder">
+	    <binding tag="component"/>
+	</binding>
+	<binding tag="west" class=".BorderConstraintBuilder">
+	    <binding tag="component"/>
+	</binding>
+    </binding>
+    <!--***********************************************************************************
+	* A vertical layout places its content in a vertical column.
+	* Each component in the column is aligned horizontally according to its
+	* "alignmentX" attribute.
+	*
+	***********************************************************************************-->
+    <binding tag="verticalLayout" class=".BoxBuilder"
+			inherits="container" >
+	<attr name="align" />  <!-- left center right-->
+    </binding>
+    <!--***********************************************************************************
+	* A horizontal layout places its content in a horizontal row.
+	* Each component in the row is aligned vertically according to its
+	* "alignmentY" attribute.
+	*
+	***********************************************************************************-->
+    <binding tag="horizontalLayout" class=".BoxBuilder"
+			inherits="container" >
+	<attr name="align" />  <!-- top center bottom-->
+    </binding>
+
+    <!--***********************************************************************************
+	* A frame is a displayable window.
+	*
+	***********************************************************************************-->
+    <binding tag="frame" class=".FrameBuilder" inherits="container">
+	<attr name="menuBar" /> <!-- name of menubar component -->
+    </binding>
+    <!--***********************************************************************************
+	* A tabbed pane is a sequence of panels with named tabs.
+	*
+	* Each tab must have a title and can optionally have a tooltip, colors, and
+	* an icon.
+	*
+	***********************************************************************************-->
+    <binding tag="tabbedPane" class=".TabbedPaneBuilder"
+		inherits="component" >
+	<attr name="position" />  <!-- top, bottom, left, right -->
+	<binding tag="comment" />
+	<binding tag="tab" class=".TabBuilder" >
+	    <attr name="title" required="true" />
+	    <attr name="tooltip" />
+	    <attr name="foreground" />
+	    <attr name="background" />
+	    <attr name="icon" />
+	    <binding tag="component" />
+	</binding>
+    </binding>
+    <!--***********************************************************************************
+	* A preferences panel has a tree of options on the left. When an option
+	* is selected, a property page appears on the right.
+	*
+	* The options may be grouped into categories.
+	*
+	* Each option must have a title and can optionally have a tooltip, colors, and
+	* an icon.
+	*
+	***********************************************************************************-->
+    <binding tag="preferencesPanel" class=".PreferencesPanelBuilder"
+		inherits="component" >
+	<binding tag="comment" />
+	<binding tag="set" />
+	<binding tag="gui_proc" />
+	<binding tag="call" />
+	<binding tag="proc" />
+	<binding tag="if" />
+	<binding tag="category" class=".PreferencesCategoryBuilder" >
+	    <attr name="title" required="true" />
+	    <attr name="label" alias="title" />
+	    <attr name="tooltip" />
+	    <attr name="tip" alias="tooltip" />
+	    <attr name="icon" />
+	    <!-- scroll defaults to true; turn off if cardlayout is embedded-->
+	    <attr name="scroll" type="boolean" />
+	    <!-- if cond is false, then category is skipped -->
+	    <attr name="cond" type="boolean" />  
+	    <binding tag="set" />
+	    <binding tag="component"/>
+	    <binding tag="category"/>
+	</binding>
+    </binding>
+
+    <!--***********************************************************************************
+	* A generic button. This also serves as the base behaviour to all other
+	* kinds of button.
+	*
+	* The generic button is pressed to fire an action. It does not stay selected
+	* after the action is fired.
+	*
+	* The "text" of a button may be a property by prefixing the attribute value with "*".
+	* That is: <button text="*foo"...> would have a button labeled with the
+	* value of the property "foo", which would be converted to a string.
+	*
+	* The icon attribute can be the name of a GIF resource, or a property (prefixed with "*").
+	* If a property, the value of the property is either an "Icon" object (which is set
+	* programatically) or the name of a GIF resource.
+	*
+	* "action" is the name of an action listener to be fired when the button is selected.
+	* An action is set either programmatically with the "setAction" method, or
+	* by certain XML components that create actions (e.g., dialog, filechooser).
+	*
+	* "on_push" is from old guihili. It is either a simple name or a Lisp expression.
+	* If a name, then it is assumed to be the name of a Window or JInternalFrame
+	* which is to be made visible. Otherwise, an action expression to execute.
+	* 
+	***********************************************************************************-->
+    <binding tag="button" class=".ButtonBuilder" inherits="component">
+	<attr name="text" />
+	<attr name="label" alias="text" />   <!-- Tom's alias for "text" attribute -->
+	<attr name="icon" />
+	<attr name="action" />
+	<attr name="on_push" type="action" /> 
+    </binding>
+
+    <!--***********************************************************************************
+	* A radio button is intended to be part of a group of buttons, of which only one
+	* is selected.
+	*
+	* The "property" attribute is a name of a property that will be set when this
+	* button is selected. The "value" attribute is the value that the property will be
+	* set to when the button is selected. 
+	*
+	* radio buttons that are part of the same group must have the same property name, but
+	* have difference "value" attributes.
+	* 
+	* When the property is changed to a value other than the "value" attribute, the
+	* button will automatically be de-selected.
+	*
+	* The "toggle" attribute is the name of a property that will be set to "true" or "false",
+	* to indicate whether or not the button is selected.
+	* Typically, this attribute is used to enable or disable other components.
+	* 
+	***********************************************************************************-->
+    <binding tag="radioButton" class=".RadioButtonBuilder" 
+		inherits="button" >
+	<attr name="toggle" />  <!-- name of boolean property to set-->
+	<attr name="property" />
+	<attr name="property_name" alias="property" />  <!-- consession to guihili -->
+	<attr name="label" alias="text" />  <!-- consession to guihili -->
+	<attr name="value" />
+	<attr name="default" type="boolean"/> 	<!-- initial setting  -->
+    </binding>
+
+    <!--***********************************************************************************
+	* A check box button is used to indicate that a property is set or not set.
+	*
+	* The "property" attribute is a name of a property that will be set when this
+	* button is selected. The "value" attribute is the value that the property will be
+	* set to when the button is selected.  Typically, "value" is not explicitly present; 
+	* it defaults to the string "true".
+	*
+	* When the property is changed to a value other than the "value" attribute, the
+	* button will automatically be de-selected.
+	*
+	* The "toggle" attribute is the name of a property that will be set to "true" or "false",
+	* to indicate whether or not the button is selected.
+	* Typically, this attribute is used to enable or disable other components.
+	*
+	* "action" is a guihili thing. It is evaluated to a string when "OK" action is
+	* fired and appended to a list named "action".
+	*
+	* "arg_action" is a guihili thing. It is evaluated to a string when "OK" action is
+	* fired and appended to a list named "arg_action".
+	* 
+	***********************************************************************************-->
+    <binding tag="checkBox" class=".CheckBoxBuilder" inherits="button">
+	<attr name="toggle" />  <!-- name of boolean property to set-->
+	<attr name="property" />
+	<attr name="property_name" alias="property" />   <!-- consession to guihili -->
+	<attr name="label" alias="text" />   <!-- consession to guihili -->
+	<attr name="value" />   <!-- defaults to "true" -->
+	<attr name="default" type="boolean"/> 	<!-- initial setting  -->
+	<attr name="default_evaluated" type="boolean"/> 	<!-- whats the difference?-->
+	<attr name="target" />   <!-- ignored; not used but appears in old options files -->
+	<attr name="action" type="action" /> <!-- deprecated; old guihili-->
+    </binding>
+
+    <!--***********************************************************************************
+	* The label tag simply emits text as a label.
+	* It uses the "font" and color attributes of the inherited "component" behaviour.
+	***********************************************************************************-->
+    <binding tag="label" class=".LabelBuilder" inherits="component" >
+	<attr name="text"  />	<!-- legacy code permits this to be optional! -->
+	<attr name="label"  alias="text" />	<!-- concession to guihili -->
+	<attr name="expandable"  type="boolean" />	<!-- concession to guihili -->
+	<attr name="wrap" type="boolean" />
+	<attr name="italic" type="boolean" />
+    </binding>
+
+    <!--***********************************************************************************
+	* The textField tag is used to receive text from the user.
+	* The "text" attribute is typically a property (prefixed by "*").
+	* [!!NOTE: we currently have no way to communicate the value of the field if it
+	* isn't a property]
+	* The field is initialized to the initial value of the property. If the property isn't
+	* defined, it is blank.
+	*
+	* When the user types in a value into this field, the property is 
+	* not immediately updated  until the enter key is selected.
+	* This isn't often obvious to the user. Therefore, we
+	* permit the textField to be tied to an arbitrary number of
+	* Buttons (actually, and component that fires action events). 
+	* If any of the actions is fired, then
+	* the property associated with the text field will be put
+	* in synch with the property.
+	*
+	* When the property changes programmatically, the text
+	* appearing in the field will change likewise.
+	*
+	* "columns" is the approximate number of characters to appear in the field. It is
+	* used to compute the preferred width.
+	*
+	* "editable" may be used to make the text field uneditable. In such a case, it
+	* is used to, say, display status information.
+	*
+	* "list" is the name of a property that is the model of a <list> tag.
+	* If specified, the text that entered in the text field will be appended to
+	* the list.
+	***********************************************************************************-->
+    <binding tag="textField" class=".TextFieldBuilder" inherits="component" >
+	<attr name="text"/>
+	<attr name="property"/>
+	<attr name="list"/>	<!-- a list model property -->
+	<attr name="columns" type="int"/>
+	<attr name="editable" type="boolean" />
+	<binding tag="button" class=".TextFieldButtonBuilder">
+	    <attr name="name" required="true"/>
+	</binding>
+	<binding tag="action" class=".TextFieldActionBuilder">
+	    <attr name="name" required="true"/>
+	</binding>
+    </binding>
+
+    <!--***********************************************************************************
+	* The table layout is loosely based on the HTML <table> tag and is intended as
+	* a simpler alternative to gridBagLayout.
+	* 
+	* It creates a layout of cells that are organized into rows and columns.
+	* A cell my occupy one or more rows and one or more columns.
+	*
+	* The width of each column is not necessarily the same. They are each computed
+	* based on the contents of each column. Likewise, the height of each row is determined
+	* by its contents.
+	*
+	* The "row" tag is used to define a row of cells.
+	*
+	* A "cell" is used to define a cell within a row.
+	*
+	* Any component that appears in the tableLayout outside of a row is assume to
+	* occupy one row and be one column wide. However, the tableLayout's "rowspan" and
+	* "colspan" attributes can be used to alter this default.
+	*
+	* Any component within a row that is not within a cell tag, is assumed to occupy
+	* a single column in the row. The row tag may have a rowspan and colspan attributes
+	* to set the default size of cells that do not appear within "cell" nodes.
+	*
+	* "halign" has one of the following values: left, center, right, fill. It determines
+	* how components are to be aligned horizontally in each cell. "fill" means to stretch the
+	* conponent so that it fills the cell horizontally.
+	*
+	* Likewise, "valign" has one of the following values: top, center, bottom, fill. 
+	* It  determines how componetns are to be aligned horizontally in each cell. "fill" means
+	* to stretch the conmponent so that it fills the call vertically.
+	*
+	* "usePreferred" means that the component in the cell is to be sized according to
+	* its "preferred size" even when the call is larger. Otherwise, the component will
+	* fill up to its "maximum size"
+	*
+	* "gap" is the number of pixels to pad between calls. It defaults to zero.
+	***********************************************************************************-->
+    <binding tag="tableLayout" class=".TableBuilder" inherits="component" >
+	<attr name="gap" />	 <!-- Gap between cells -->
+	<attr name="rowspan" type="int"/>
+	<attr name="colspan" type="int"/>
+	<attr name="valign" />
+	<attr name="halign" />
+	<attr name="usePreferred" type="boolean"/>
+	<binding tag="row" class=".TableRowBuilder">
+	    <attr name="rowspan" type="int"/>
+	    <attr name="colspan" type="int"/>
+	    <attr name="valign" />
+	    <attr name="halign" />
+	    <attr name="usePreferred" type="boolean"/>
+	    <binding tag="cell" class=".TableDataBuilder">
+		<attr name="rowspan" type="int"/>
+		<attr name="colspan" type="int"/>
+		<attr name="valign" />
+		<attr name="halign" />
+		<attr name="usePreferred" type="boolean"/>
+		<binding tag="component"/>
+	    </binding>
+	    <binding tag="component" />
+	</binding>
+	<binding tag="component" />
+    </binding>
+
+    <!--***********************************************************************************
+	* Define  toolbar
+	***********************************************************************************-->
+    <binding tag="toolBar" class=".ToolBarBuilder" inherits="component">
+	<attr name="floatable" type="boolean" />
+	<binding tag="button" />
+	<binding tag="separator"  class=".SeparatorBuilder" />
+    </binding>
+
+    <!--***********************************************************************************
+	* Define a splitpane. We permit the position attribute to be
+	* a property ("*name") so that it can be set programmatically.
+	***********************************************************************************-->
+    <binding tag="splitPane"  class=".SplitPaneBuilder" inherits="component" >
+	<attr name="divider" />  <!-- floating point constant or "*property" -->
+	<attr name="orientation" /> <!-- "vertical" or "horizontal" -->
+	<attr name="continuous" type="boolean" /> <!-- continuous repaint? -->
+	<attr name="resizeWeight" type="float" /> <!-- how left/top panel changes -->
+	<binding tag="component" /> <!-- must be 2 instances -->
+    </binding>
+
+
+    <!--***********************************************************************************
+	* Define a menubar...
+	***********************************************************************************-->
+    <binding tag="menuBar" class=".MenuBarBuilder">
+	<attr name="name" />
+	<!--***********************************************************************************
+	    * Define a menu of a menubar
+	    ***********************************************************************************-->
+	<binding tag="menu" class=".MenuBuilder" inherits="component" >
+	    <attr name="text" />
+	    <attr name="key" />
+	    <binding tag="menuItem" class=".MenuItemBuilder" 
+			    inherits="button" >
+		<attr name="key" />
+	    </binding>
+	    <binding tag="separator" class=".SeparatorBuilder" />
+	    <binding tag="menu"/>
+	    <binding tag="checkBox" class=".CheckBoxMenuItemBuilder"
+				inherits="checkBox" />
+	    <binding tag="radioButton" class=".RadioMenuItemBuilder"
+				inherits="radioButton" />
+	</binding>
+    </binding>
+
+    <!--***********************************************************************************
+	* Define a combo box. That is, a selection of values based on a pulldown list.
+	*
+	* "property" is the name of a property that will be set to a value in the list.
+	*
+	* "editable" is a boolean attribute to determine if the combo box is editable.
+	*
+	* Each child of the "select" tag is a "option" node.
+	* The option node has a "text" which appears in the combo box and a "value" which
+	* will be assigned to the property when the option is selected. "value" may be
+	* omitted, in which case it will default to the value of "text".
+	*
+	* Alternatively, the option list may be created dynamically by the client setting
+	* the value of the optionsProperty. If specified, it assumed to be a list of objects.
+	* Each "toString()" method will be called to show the text. The object itself serves
+	* as the value to assign into the "property".
+	*
+	* In conjunction with "optionsProperty", the "valuesProperty" defines a property
+	* that assumed to be a list of values that is parrallel with those of optionsProperty.
+	***********************************************************************************-->
+    <binding tag="select" class=".SelectBuilder" inherits="component" >
+	<attr name="editable" type="boolean"/>
+	<attr name="property" />
+	<attr name="label" />
+	<attr name="optionsProperty" />
+	<attr name="valuesProperty" />
+	<binding tag="option" class=".OptionBuilder" >
+	    <attr name="text" required="true" />
+	    <attr name="value" />
+	    <attr name="arg_action" type="action" />
+	    <attr name="cond" type="boolean" />
+	</binding>
+    </binding>
+    <!--***********************************************************************************
+	* horizontal glue is an invisible component that may be placed in a layout to
+	* take up space. It can stretched horizontally arbitrarily to fill in, say, a table cell.
+	***********************************************************************************-->
+    <binding tag="horizontalGlue" class=".GlueBuilder"
+		inherits="component" />
+    <!--***********************************************************************************
+	* vertical glue is an invisible component that may be placed in a layout to
+	* take up space. It can stretched vertically arbitrarily to fill in, say, a table cell.
+	***********************************************************************************-->
+    <binding tag="verticalGlue" class=".GlueBuilder"
+		inherits="component" />
+    <!--***********************************************************************************
+	* a struct is a fixed-size invisible component that may be used to take up space
+	* in a layout.
+	***********************************************************************************-->
+    <binding tag="strut" class=".StrutBuilder"
+		inherits="component" >
+	<attr  name="width" type="int"/>  <!--Only one need  be specified -->
+	<attr  name="height" type="int"/>
+    </binding>
+    <!--****************************************************************
+	*
+	* <fileChooser action="foo" property="fileName" directory="*dir"
+	*             list="property"
+	*             multiselect="true"
+	*              title="..." >
+	*     <filter text="source files">
+	*          <suffix text=".c"/>
+	*          <suffix text=".cpp"/>
+	*          <suffix text=".s"/>
+	*     </filter>
+	*
+	* Defines action "foo" so that when fired (e.g., from a button),
+	* the file chooser dialog will pop up. Upon return, the property
+	* "fileName" will have the selected file (an instance of "File"!)
+	*
+	* "list", if specified, is a property that denotes a list that will have file(s) 
+	* appended. It is ordinarily the "model" property of a "list" component.
+	* It must implement the MutableComboBoxModel interface.
+	*
+	* "multiselect" determines whether multiple files can be selected.
+	* In such a case. the "property" will be set to an array of File instances.
+	*
+	***************************************************************-->
+    <binding tag="fileChooser" class=".FileChooserBuilder" >
+	<attr name="action" required="true"/>	<!-- action that will trigger it -->
+	<attr name="property" />	<!-- set with the file name -->
+	<attr name="directory" />	<!-- initial directory -->
+	<attr name="title" />	<!-- title on file chooser dialog -->
+	<attr name="list" />   <!-- list to be appended to -->
+	<attr name="tooltip" />   <!-- tooltip for approve button -->
+	<attr name="multiselect" type="boolean" />   <!-- permit multi-selections?-->
+	<attr name="parent" />   <!-- name of component that serves as parent -->
+	<attr name="buttonLabel" />   <!-- label on approve button -->
+	<attr name="mode" />   <!-- dirs_only files_only dirs_and_files -->
+	<!--****************************************************************
+	    * Filter for a file chooser:
+	    * If "directory" is set, then we are looking for a directory name.
+	    * In such a case the file chooser dialog will have a separate button
+	    * for searching a directory and choosing a directory.
+	    ***************************************************************-->
+	<binding tag="filter" class=".FileFilterBuilder" >
+	    <attr name="text" />
+	    <attr name="directory" type="boolean"/>
+	    <binding tag="suffix" class=".FileFilterSuffixBuilder" >
+		<attr name="text"/>
+	    </binding>
+	</binding>
+    </binding>
+
+    <!--****************************************************************
+	* An arbitrary list.
+	*
+	* The "model" attribute is the name of a property that is to
+	* serve as the "model" of the list. 
+	*
+	* "init" is the name of the property containing the initial settings of the
+	* list.  It is either an array, an instance of java.util.List, or an instance of
+	* javax.swing.ListModel.
+	*
+	* If defined, it must either be an array, an instance of java.util.List, or
+	* an instance of javax.swing.ListModel.
+	*
+	* "property" is the name of a property that is set to the selected
+	* item or items. If "multiselect" is true, then this property will be
+	* set to an array of selected items.
+	*
+	* "rows" is the number of visible rows. If the list is longer than this,
+	* a scroll bar will appear.
+	*
+	* "columns" is the approximate number of characters per row. If the list is 
+	* wider than this, then a horizontal scrollbar appears.
+	*
+	* Three actions are potentially defined and can be referenced from, say, a
+	* button:
+	*    removeAction - removes the selected item(s) from the list.
+	*    moveUpAction - moves the selected items up one row.
+	*    moveDownAction - moves the selected items down one row.
+	* 
+	***************************************************************-->
+    <binding tag="list" class=".ListBuilder" inherits="component" >
+	<attr name="model" />   <!-- a property name -->
+	<attr name="init" />   <!-- a property name -->
+	<attr name="property" />  <!-- property to be set to selected list element -->
+	<attr name="rows" type="int" />  <!-- visible rows -->
+	<attr name="columns" type="int" />  <!-- preferred number of columns -->
+	<attr name="multiselect" type="boolean" />  <!-- true if multiple selections possible -->
+	<attr name="removeAction" />  <!-- action defined to remove selected rows -->
+	<attr name="moveUpAction" />  <!-- action defined to move selected rows up-->
+	<attr name="moveDownAction" />  <!-- action defined to move selected rows down-->
+    </binding>
+
+    <!--****************************************************************
+	* A Dialog is a window that pops up in response to an action.
+	* 
+	* The "owner" is the name of a component (typically a frame) that
+	* is associated with this dialog.
+	*
+	* "title" is the title of the dialog.
+	*
+	* "modal" determines if the dialog is modal.
+	*
+	* "createAction" is the name of an action defined to bring up the dialog.
+	* "disposeAction" is the name of an action that will put the dialog away.
+	*
+	* 
+	***************************************************************-->
+    <binding tag="dialog" class=".DialogBuilder" inherits="container" >
+	<attr name="owner" />
+	<attr name="title" />
+	<attr name="modal" type="boolean" />
+	<attr name="createAction" />
+	<attr name="disposeAction" />
+	<attr name="menuBar" /> <!-- name of menubar component -->
+    </binding>
+
+
+    <!--*****************************************************************
+	*
+	* Define an "action" that can be referenced from a button or 
+	* menu-item.
+	* If the action is already defined programatically, and it is
+	* of type "Action", then apply the attributes to it.
+	* Otherwise, create an action that does nothing.
+	*
+	* Each of these attributes may be a property, in which case, the
+	* name is prefixed with "*".
+	*
+	***************************************************************-->
+    <binding tag="action" class=".ActionBuilder" >
+	<attr name="name" required="true" />
+	<attr name="icon" />
+	<attr name="label" />
+	<attr name="tooltip" />
+	<attr name="enabled" />	<!-- property name of boolean -->
+    </binding>
+
+    <!--**********************************************************
+     * Hook for calling a Java static method.
+     * The "Gui" object is passed as an argument.
+     * Such a call can plug in predefined components, etc.
+     *************************************************************-->
+     <binding tag="callMethod" class=".CallBuilder" >
+	 <attr name="class" required="true"/>
+	 <attr name="method" required="true"/>
+     </binding>
+
+    <!--********************************************************
+     *  Here we start the old "options" stuff.
+     ***********************************************************-->
+    <!--********************************************************
+     *  box is similar to a titled container
+     *  line_up_columns affects how embedded labelled panels
+     *  are layed out.
+     ***********************************************************-->
+    <binding tag="box" class=".legacy.BoxBuilder" inherits="container" >
+	<attr name="label" alias="borderTitle" />
+    </binding>
+    <!--********************************************************
+     *  A painfully misdesigned tabbed panel of a JTabbedPanel.
+     *  Unnecessary indirection is used.
+     *  "card" is the id of a container to be placed in JTabbedPanel (a "cards" panel)
+     *  "target" is the JTabbedPanel ("cards")
+     *  "label" is the title on the tab.
+     * This will be deprecated soon!
+     * (It down't really inherit anything from "component" but we must permit
+     * it in any context that takes a component)
+     ***********************************************************-->
+    <binding tag="card_trigger_button" class=".legacy.CardTriggerButtonBuilder" inherits="component" >
+	<attr name="card" required="true"/> <!-- the tabbed panel to be displayed; referenced by name -->
+	<attr name="target" required="true" /> <!-- the target JTabbedPane, referenced by name -->
+	<attr name="label" required="true" /> <!-- the tab title -->
+	<attr name="doc" /> 
+	<attr name="tip" />		<!-- tooltip on panel-->
+	<attr name="id" />
+    </binding>
+    <!--********************************************************
+     *  A JTabbedPanel where tabs are added by the "card_trigger_button"
+     * processor. This is poorly designed. the "tabbedPane" is an order-of-magnitude
+     * better. The subnodes of the "cards" have no positional meaning.
+     * The contents of the tabbed panes is done by "card_trigger_button" specifications.
+     ***********************************************************-->
+    <binding tag="cards" class=".legacy.CardsBuilder" inherits="component" >
+	<attr name="name" required="true" />
+	<attr name="id" alias="name" />
+	<binding tag="component" />	 <!-- no positional significance -->
+	<binding tag="property" />
+	<binding tag="comment" />
+    </binding>
+    <!--********************************************************
+     *  This is a checkbox that enable/disables a component
+     * or container of components. A cleaner way is to use
+     *  the "enable" attribute with a property.
+     **********************************************************-->
+    <binding tag="enable_trigger_checkbox" class=".legacy.EnableTriggerButtonBuilder" inherits="checkBox" >
+	<attr name="target" type="list" required="true"/>   <!--  component or container of components to enable/disable -->
+	<attr name="default" type="boolean"/>
+    </binding>
+    <!--********************************************************
+     *  This is a radiobutton that enable/disables a component
+     * or container of components. A cleaner way is to use
+     *  the "enable" attribute with a property.
+     **********************************************************-->
+    <binding tag="enable_trigger_radiobutton" class=".legacy.EnableTriggerButtonBuilder" inherits="radioButton" >
+	<attr name="target" type="list" required="true"/>   <!--  component or container of components to enable/disable -->
+	<attr name="default" type="boolean"/>
+    </binding>
+    <!--********************************************************
+     *  This is a modal dialog with a "Cancel" and optional "Save"
+     * button on the bottom. Also has "Help" if doc_title set.
+     * The id of the window also serves as the name of the action
+     * that displays it. (behevior from old guihili)
+     **********************************************************-->
+    <binding tag="window" class=".legacy.WindowBuilder" inherits="dialog" >
+	<attr name="name" />  <!-- Serves as the title also -->
+	<attr name="show_save" type="boolean" />   <!-- show "save" button -->
+	<attr name="doc_title"/>   <!--  Help document -->
+    </binding>
+    <!--********************************************************
+     * A radiobutton group is a container of mutually exclusive 
+     * radiobuttons.
+     * "property" is the name of a property to be set. It will
+     * be set to the name of the radiobutton in the group that is selected.
+     * "default" is the name of a radiobutton that is the initially
+     * selected one.
+     **********************************************************-->
+    <binding tag="radiobutton_group" class=".legacy.RadioButtonGroupBuilder" inherits="container">
+	<attr name="property" />
+	<attr name="property_name" alias="property" />
+	<attr name="default" />
+	<attr name="default_evaluated" alias="default" />
+	<binding tag="component" />
+    </binding>
+    <!--********************************************************
+     * A checkbox group is a container of mutually exclusive 
+     * checkbox. [NOTE: this is stupid; there is confusion here
+     * with radiobuttons; in fact, we convert them to radio buttons!]
+     * "property" is the name of a property to be set. It will
+     * be set to the name of the radiobutton in the group that is selected.
+     * "default" is the name of a radiobutton that is the initially
+     * selected one.
+     **********************************************************-->
+    <binding tag="checkbox_group" class=".legacy.CheckBoxGroupBuilder" inherits="radiobutton_group"/>
+    <!--********************************************************
+     * A non-editable combobox that is quite involved.
+     * It cat get items from a string list "list", or from an expression (eval_list)
+     * or from taking the output of an external command (exec_list_lines).
+     * timeout is how long to wait for the external command to complete.
+     **********************************************************-->
+    <binding tag="choice" class=".legacy.ChoiceBuilder" inherits="component">
+	<attr name="columns" type="int" />  <!-- column width -->
+	<attr name="width" alias="columns" />  <!-- column width -->
+	<attr name="list" type="list" /> 
+	<attr name="values" type="list" />  <!-- parrellels list; actual property values-->
+	<attr name="eval_list"  alias="list" />  <!--A list of strings-->
+	<attr name="label" />  <!-- Prefixes the combobox-->
+	<attr name="exec_list_lines" type="list" />  <!-- Invokes external program -->
+	<attr name="property" />  <!-- name of property to set -->
+	<attr name="default" />  <!-- initial selection -->
+	<attr name="default_evaluated" type="list"/>  <!-- initial selection -->
+	<attr name="property_name" alias="property" />  <!-- name of property to set -->
+	<attr name="expandable"  type="boolean"/>  
+    </binding>
+    <!--********************************************************
+     * An editable combobox 
+     * The "action" is the guihili way of setting state information.
+     * It is evaluated to a string when OK action is fired, and
+     * the string is appending to an "actions" property as a list.
+     *
+     * The "arg_action" is the guihili way of setting command line stuff.
+     * When the OK action is fired, the "arg_action" is evaluated to
+     * a string, which is appended to a list with property name "arg_action".
+     *
+     * "property" is the name of a property that gets the value of
+     * the combobox.
+     **********************************************************-->
+    <binding tag="combobox" class=".legacy.ComboBoxBuilder" inherits="component">
+	<attr name="columns" type="int" />  <!-- column width -->
+	<attr name="width" alias="columns" />  <!-- column width -->
+	<attr name="list" type="list"/>  <!-- choices -->
+	<attr name="label" />  <!-- Appears in previous panel -->
+	<attr name="expandable"  type="boolean"/>  
+	<attr name="property" />
+	<attr name="property_name" alias="property" />  <!-- consession to guihili -->
+	<attr name="default"  />  <!-- initial setting -->
+	<attr name="default_evaluated" type="list"/>  <!-- initial selection -->
+	<attr name="action" type="action" /> <!-- deprecated; old guihili-->
+    </binding>
+    <binding tag="combobox2" class=".legacy.ComboBoxBuilder" inherits="combobox"/>
+    <!--********************************************************
+     * A button the that brings up a file dialog.
+     * The "property" is set to the File instance.
+     * "directory" is the initial directory setting relative to
+     * a global directory.
+     * "target" is the name of a text field or combobox to get
+     * the value of the component (for legacy guihili)
+     *
+     * Atrribute unix means to convert DOS path to Unix like (forward slashes)
+     * Attribute "quoteIfSpaces" means to enclose in quotes if spaces present.
+     **********************************************************-->
+    <binding tag="filedialog" class=".legacy.FileDialogBuilder" inherits="button" >
+	<attr name="label" alias="text" />
+	<attr name="property" />  <!-- property to contain File instance -->
+	<attr name="property_name" alias="property" />
+	<attr name="target" />    
+	<attr name="directory" /> 
+	<attr name="unix" type="boolean" />
+	<attr name="quoteIfSpaces" type="boolean" />
+	</binding>
+    <!--********************************************************
+     * Directory dialog box
+     **********************************************************-->
+    <binding tag="directorydialog" class=".legacy.DirectoryDialogBuilder" inherits="filedialog" >
+	<attr name="property_name" alias="property" />
+    </binding>
+    <!--********************************************************
+     * List directory (not sure what this does)
+     **********************************************************-->
+    <binding tag="list_directory" class=".legacy.ListDirectoryBuilder" >
+	<attr name="label" />
+	<attr name="exclude" />
+    </binding>
+    <!--********************************************************
+     * dummy (not sure what this does)
+     **********************************************************-->
+    <binding tag="dummy" class=".legacy.DummyBuilder" >
+	<attr name="id" required="true" />
+    </binding>
+    <!--********************************************************
+     * An editable combobox that has a "browse" button.
+     **********************************************************-->
+    <binding tag="fileordirectorypanel" class=".legacy.FileOrDirectoryPanelBuilder" inherits="component"  >
+	<attr name="label" />
+	<attr name="directory" />
+	<attr name="property_name" />
+	<attr name="width" type="int" />
+	<attr name="expandable" type="boolean" />
+    </binding>
+    <!--********************************************************
+     * Text field
+     * "enter_is_save" attribute causes parent dialog to be 
+     * dismissed when enter key is struck.
+     **********************************************************-->
+    <binding tag="text" class=".legacy.TextBuilder" inherits="textField" >
+	<attr name="label" />
+	<attr name="default" />
+	<attr name="width" alias="columns" />
+	<attr name="property_name" alias="property" />
+	<attr name="expandable" type="boolean" />
+	<attr name="enter_is_save" type="boolean" />
+    </binding>
+
+  </binding>
+</bindings>

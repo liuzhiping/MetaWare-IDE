@@ -1,0 +1,28 @@
+Manifest-Version: 1.0
+Bundle-Name: MetaWare Debugger Core Plug-in
+Bundle-ManifestVersion: 2
+Bundle-SymbolicName: com.arc.cdt.debug.seecode.core; singleton:=true
+Bundle-Version: 9.0.1
+Bundle-Activator: com.arc.cdt.debug.seecode.core.SeeCodePlugin
+Bundle-Vendor: Synopsys Corporation
+Bundle-Localization: plugin
+Require-Bundle: org.eclipse.cdt.debug.core,
+ org.eclipse.cdt.core,
+ org.eclipse.core.resources,
+ org.eclipse.debug.core,
+ com.arc.seecode.engine,
+ org.eclipse.core.runtime,
+ org.eclipse.cdt.managedbuilder.core,
+ org.dom4j,
+ com.arc.mw.util,
+ org.eclipse.cdt.launch,
+ com.arc.debugger,
+ com.arc.symbols
+Bundle-ActivationPolicy: lazy
+Export-Package: com.arc.cdt.debug.seecode.core,
+ com.arc.cdt.debug.seecode.core.cdi,
+ com.arc.cdt.debug.seecode.core.launch,
+ com.arc.cdt.debug.seecode.internal.core.launch;x-friends:="com.arc.cdt.debug.seecode.ui",
+ com.arc.cdt.debug.seecode.options
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+

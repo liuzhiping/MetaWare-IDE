@@ -1,0 +1,8 @@
+
+macro multi_grmain 
+     prop cpunum=$cid simext)=^SCDIR/bin/arcmmu^ recursive_delay_slot=0 prefer_soft_bp=0 arcver=50 simext)=^/home/pickens/redhat/MetaWare/arc/bin/mwextlib^ dummy=1 simext)=^/home/pickens/redhat/MetaWare/arc/bin/mwextea^ simext)=^name=ssramInst_mmap_bank1_ram01.initiator,out=0x00e00000^ simext)=^name=ssramInst_mmap_bank1_ram02.initiator,out=0x00e00000^ simext)=^name=ssramInst_mmap_bank1_ram03.initiator,out=0x00e00000^ simext)=^name=ssramInst1.initiator,out=0x02000000^ simext)=^name=ssramInst2.initiator,out=0x02000000^ simext)=^name=ssramInst3.initiator,out=0x02000000^ iss_internal_timers=1 xbarrel_shifter=1 xmpy=1 xswap=1 xnorm=1 xtimer0=1 timer0_regs=1 xtimer1=1 timer1_regs=1 icnts=1 killeds=1 delay_killeds=1 semint)=^/home/pickens/redhat/MetaWare/arc/bin/mwprof^ semint)=^/home/pickens/redhat/MetaWare/arc/bin/archw,^ ident=0 instrs_per_pass=500 include_local_symbols=1 stop_all=1 include_local_symbols=1 deadbeef=1 dname=MetaWare sys_cmpd=1 
+endm 
+defclass name=class_multi_grmain newsys=multi_grmain clone_noprops=1 system1=ARC_simulator system2=BRC_simulator 
+defset grmain [1] 
+newcmd [grmain] class_multi_grmain 
+[grmain] defargs grmain/grmain 

@@ -1,0 +1,251 @@
+;HEADER******************************************************************
+;*************************************************************************
+;** 
+;** Copyright (c) 1989-2007 ARC International.
+;** All rights reserved                                          
+;**                                                              
+;** This software embodies materials and concepts which are      
+;** confidential to ARC International and is made
+;** available solely pursuant to the terms of a written license   
+;** agreement with ARC International             
+;**
+;** File: types.met
+;**
+;** Comments:      
+;**   This file contains the assembler offsets calculated by the
+;**   program KRNL_OFF.C.  These offsets are to be included in
+;**   any assembler program that wishes to access kernel data
+;**   structures.
+;**                                                               
+;*************************************************************************
+;END*********************************************************************/
+;
+; 'PSP_INT_CONTEXT_STRUCT' size = 12 , 0xc
+;
+.equ IC_STRUCT_SIZE                     ,  12  ;  0xc
+.equ IC_ERROR_CODE                      ,   0  ;  0x0
+.equ IC_ENABLE_SR                       ,   4  ;  0x4
+.equ IC_EXCEPTION_NUMBER                ,   6  ;  0x6
+.equ IC_PREV_CONTEXT                    ,   8  ;  0x8
+;
+; 'INTERRUPT_TABLE_STRUCT' size = 12 , 0xc
+;
+.equ IT_STRUCT_SIZE                     ,  12  ;  0xc
+.equ IT_APP_ISR                         ,   0  ;  0x0
+.equ IT_APP_ISR_EXCEPTION_HANDLER       ,   4  ;  0x4
+.equ IT_APP_ISR_DATA                    ,   8  ;  0x8
+;
+; 'READY_Q_STRUCT' size = 16 , 0x10
+;
+.equ RQ_STRUCT_SIZE                     ,  16  ;  0x10
+.equ RQ_HEAD_READY_Q                    ,   0  ;  0x0
+.equ RQ_TAIL_READY_Q                    ,   4  ;  0x4
+.equ RQ_NEXT_Q                          ,   8  ;  0x8
+.equ RQ_ENABLE_SR                       ,  12  ;  0xc
+.equ RQ_PRIORITY                        ,  14  ;  0xe
+
+; Start CR 2396
+;
+; 'PMU_STRUCT_PTR' size = 88 , 0x58
+;
+.equ EP_PMU_STRUCT_SIZE                     , 32 ; 0x20
+.equ EP_PMU_STRUCT_SLEEP_THRSHLD            ,  0 ; 0x0
+.equ EP_PMU_STRUCT_MAX_SLOW_DOWN_NUM        ,  4 ; 0x4
+.equ EP_PMU_STRUCT_CURRENT_NUM_SLOW_DOWN    ,  8 ; 0x8
+.equ EP_PMU_STRUCT_PMU_MODE                 , 12 ; 0xc
+.equ EP_PMU_STRUCT_SLOW_CLOCK_INTERVAL_FLAG , 13 ; 0xd
+.equ EP_PMU_STRUCT_GLOBAL_DVFS_MODE         , 14 ; 0xe
+.equ EP_PMU_STRUCT_SAVED_GLOBAL_DVFS_MODE   , 15 ; 0xf
+.equ EP_PMU_STRUCT_AUTO_DVFS_ENABLE         , 16 ; 0x10
+.equ EP_PMU_STRUCT_AUTO_THRESHOLD_0         , 17 ; 0x11
+.equ EP_PMU_STRUCT_AUTO_THRESHOLD_1         , 18 ; 0x12
+.equ EP_PMU_STRUCT_AUTO_THRESHOLD_2         , 19 ; 0x13
+.equ EP_PMU_STRUCT_AUTO_DVFS_PERIOD         , 20 ; 0x14
+.equ EP_PMU_STRUCT_AUTO_DVFS_TICKS          , 24 ; 0x18
+.equ EP_PMU_STRUCT_AUTO_DVFS_IDLE_CNT       , 28 ; 0x1c
+.equ EP_PMU_STRUCT_TIMER_FREQUNCY           , 32 ; 0x20
+.equ EP_PMU_STRUCT_HW_TICKS_PER_INTERRUPT   , 48 ; 0x30
+.equ EP_PMU_STRUCT_POWER_CONSUMPTION        , 64 ; 0x40
+.equ EP_PMU_STRUCT_IDLE_LOOP_COUNT          , 80 ; 0x50
+.equ EP_PMU_STRUCT_TICKS_COUNT              , 84 ; 0x54
+; End CR 2396 
+
+;
+; 'TD_STRUCT' size = 220 , 0xdc
+;
+; Start CR 2396 
+;.equ TD_STRUCT_SIZE                     , 216  ;  0xd8
+; End CR 2396
+.equ TD_STRUCT_SIZE                     , 220  ;  0xdc
+.equ TD_TD_NEXT                         ,   0  ;  0x0
+.equ TD_TD_PREV                         ,   4  ;  0x4
+.equ TD_STATE                           ,   8  ;  0x8
+.equ TD_TASK_ID                         ,  12  ;  0xc
+.equ TD_STACK_BASE                      ,  16  ;  0x10
+.equ TD_STACK_PTR                       ,  20  ;  0x14
+.equ TD_STACK_LIMIT                     ,  24  ;  0x18
+.equ TD_MY_QUEUE                        ,  28  ;  0x1c
+.equ TD_MSG_QUEUE_HEAD                  ,  32  ;  0x20
+.equ TD_MSG_QUEUE_TAIL                  ,  36  ;  0x24
+.equ TD_MESSAGES_AVAILABLE              ,  40  ;  0x28
+.equ TD_MESSAGE                         ,  44  ;  0x2c
+.equ TD_INFO                            ,  48  ;  0x30
+.equ TD_MEMORY_RESOURCE_LIST            ,  52  ;  0x34
+.equ TD_TASK_ERROR_CODE                 ,  56  ;  0x38
+.equ TD_PARENT                          ,  60  ;  0x3c
+.equ TD_TEMPLATE_INDEX                  ,  64  ;  0x40
+.equ TD_STDIN_STREAM                    ,  68  ;  0x44
+.equ TD_STDOUT_STREAM                   ,  72  ;  0x48
+.equ TD_STDERR_STREAM                   ,  76  ;  0x4c
+.equ TD_TASK_SR                         ,  80  ;  0x50
+.equ TD_RESERVED1                       ,  82  ;  0x52
+.equ TD_TASK_TEMPLATE_PTR               ,  84  ;  0x54
+.equ TD_TAD_RESERVED                    ,  88  ;  0x58
+.equ TD_TIMEOUT                         ,  92  ;  0x5c
+.equ TD_DISABLED_LEVEL                  , 104  ;  0x68
+.equ TD_FLAGS                           , 108  ;  0x6c
+.equ TD_TIME_SLICE                      , 112  ;  0x70
+.equ TD_CURRENT_TIME_SLICE              , 124  ;  0x7c
+.equ TD_BOOSTED                         , 136  ;  0x88
+.equ TD_HOME_QUEUE                      , 140  ;  0x8c
+.equ TD_WATCHDOG_TIME                   , 144  ;  0x90
+.equ TD_PROFILER_CONTEXT_PTR            , 156  ;  0x9c
+.equ TD_RUNTIME_ERROR_CHECK_PTR         , 160  ;  0xa0
+.equ TD_MMU_VIRTUAL_CONTEXT_PTR         , 164  ;  0xa4
+.equ TD_ENVIRONMENT_PTR                 , 168  ;  0xa8
+.equ TD_EXIT_HANDLER_PTR                , 172  ;  0xac
+.equ TD_EXCEPTION_HANDLER_PTR           , 176  ;  0xb0
+.equ TD_TD_LIST_INFO                    , 180  ;  0xb4
+.equ TD_AUX_QUEUE                       , 188  ;  0xbc
+.equ TD_LWEVENT_BITS                    , 196  ;  0xc4
+.equ TD_DSP_CONTEXT_PTR                 , 200  ;  0xc8
+.equ TD_FLOAT_CONTEXT_PTR               , 204  ;  0xcc
+.equ TD_CRT_TLS                         , 208  ;  0xd0
+.equ TD_TOS_RESERVED                    , 212  ;  0xd4
+; Start CR 2396
+.equ TD_TASK_DVFS_MODE                  , 216  ;  0xd8
+; End CR 2396
+
+
+;
+; 'KERNEL_DATA_STRUCT' size = 1144 , 0x478
+;
+
+; Start CR 1625
+;.equ KD_STRUCT_SIZE                     ,1144  ;  0x478
+
+.equ KD_STRUCT_SIZE                     ,1184  ;  0x4a0
+; End CR 1625
+
+.equ KD_ADDRESSING_CAPABILITY           ,   0  ;  0x0
+.equ KD_ENDIANESS                       ,   4  ;  0x4
+.equ KD_CPU_TYPE                        ,   8  ;  0x8
+.equ KD_PSP_CFG_MEMORY_ALIGNMENT        ,  10  ;  0xa
+.equ KD_PSP_CFG_STACK_ALIGNMENT         ,  12  ;  0xc
+.equ KD_PSP_CFG_MEM_STOREBLOCK_ALIGNMENT,  14  ;  0xe
+.equ KD_CONFIG1                         ,  16  ;  0x10
+.equ KD_CONFIG2                         ,  18  ;  0x12
+.equ KD_FLAGS                           ,  20  ;  0x14
+.equ KD_DISABLE_SR                      ,  22  ;  0x16
+.equ KD_IN_ISR                          ,  24  ;  0x18
+.equ KD_ACTIVE_SR                       ,  26  ;  0x1a
+.equ KD_ACTIVE_PTR                      ,  28  ;  0x1c
+.equ KD_FP_ACTIVE_PTR                   ,  32  ;  0x20
+.equ KD_DSP_ACTIVE_PTR                  ,  36  ;  0x24
+.equ KD_READY_Q_LIST                    ,  40  ;  0x28
+.equ KD_CURRENT_READY_Q                 ,  44  ;  0x2c
+.equ KD_PROCESSOR_NUMBER                ,  48  ;  0x30
+.equ KD_TIME                            ,  52  ;  0x34
+.equ KD_TIME_OFFSET                     ,  64  ;  0x40
+.equ KD_TIMEOUT_QUEUE                   ,  76  ;  0x4c
+.equ KD_MY_IPC_ID                       ,  88  ;  0x58
+.equ KD_MY_IPC_TD_PTR                   ,  92  ;  0x5c
+.equ KD_INTERRUPT_STACK_PTR             ,  96  ;  0x60
+.equ KD_KD_POOL                         , 100  ;  0x64
+.equ KD_PROCESSOR_STDIN                 , 184  ;  0xb8
+.equ KD_PROCESSOR_STDOUT                , 188  ;  0xbc
+.equ KD_PROCESSOR_STDERR                , 192  ;  0xc0
+.equ KD_NUM_TASK_TEMPLATES              , 196  ;  0xc4
+.equ KD_TASK_TEMPLATE_LIST_PTR          , 200  ;  0xc8
+.equ KD_COUNTER                         , 204  ;  0xcc
+.equ KD_IDLE_LOOP1                      , 208  ;  0xd0
+.equ KD_IDLE_LOOP2                      , 212  ;  0xd4
+.equ KD_IDLE_LOOP3                      , 216  ;  0xd8
+.equ KD_IDLE_LOOP4                      , 220  ;  0xdc
+.equ KD_IDLE_TASK_TEMPLATE              , 224  ;  0xe0
+.equ KD_INIT                            , 256  ;  0x100
+.equ KD_EXIT_HANDLER                    , 304  ;  0x130
+.equ KD_TD_LIST                         , 308  ;  0x134
+.equ KD_TASK_NUMBER                     , 320  ;  0x140
+.equ KD_INSERT_TD_PTR                   , 324  ;  0x144
+.equ KD_MEM_COMP                        , 328  ;  0x148
+.equ KD_USERS_STACK                     , 372  ;  0x174
+.equ KD_USERS_VBR                       , 376  ;  0x178
+.equ KD_USERS_ERROR                     , 380  ;  0x17c
+.equ KD_IPC_NAMED_POOL                  , 384  ;  0x180
+.equ KD_LOWEST_TASK_PRIORITY            , 388  ;  0x184
+.equ KD_SCHED_POLICY                    , 392  ;  0x188
+.equ KD_SCHED_TIME_SLICE                , 396  ;  0x18c
+.equ KD_KERNEL_COMPONENTS               , 408  ;  0x198
+.equ KD_COMPONENT_CREATE_LWSEM          , 472  ;  0x1d8
+.equ KD_KERNEL_ALARM_RESOLUTION         , 500  ;  0x1f4
+.equ KD_SYSTEM_CLOCK_INT_NUMBER         , 504  ;  0x1f8
+.equ KD_TIMER_HW_REFERENCE              , 508  ;  0x1fc
+.equ KD_TICKS_PER_SECOND                , 512  ;  0x200
+.equ KD_HW_TICKS_PER_TICK               , 516  ;  0x204
+.equ KD_GET_HWTICKS                     , 520  ;  0x208
+.equ KD_GET_HWTICKS_PARAM               , 524  ;  0x20c
+.equ KD_KERNEL_TASK_QUEUES              , 528  ;  0x210
+.equ KD_LOG_CONTROL                     , 540  ;  0x21c
+.equ KD_LOG_OLD_TD                      , 544  ;  0x220
+.equ KD_INT_KERNEL_ISR_ADDR             , 548  ;  0x224
+.equ KD_DEFAULT_ISR                     , 552  ;  0x228
+.equ KD_FIRST_USER_ISR_VECTOR           , 556  ;  0x22c
+.equ KD_LAST_USER_ISR_VECTOR            , 560  ;  0x230
+.equ KD_INTERRUPT_CONTEXT_PTR           , 564  ;  0x234
+.equ KD_INTERRUPT_TABLE_PTR             , 568  ;  0x238
+.equ KD_LWSEM                           , 572  ;  0x23c
+.equ KD_TASK_CREATE_LWSEM               , 584  ;  0x248
+.equ KD_COMPONENT_CLEANUP               , 612  ;  0x264
+.equ KD_IO_COMPONENTS                   , 676  ;  0x2a4
+.equ KD_IO_COMPONENT_CLEANUP            , 740  ;  0x2e4
+.equ KD_TIMER_COMPONENT_ISR             , 804  ;  0x324
+.equ KD_IO_DEVICES                      , 808  ;  0x328
+.equ KD_IO_LWSEM                        , 820  ;  0x334
+.equ KD_IPC                             , 848  ;  0x350
+.equ KD_IPC_COMPONENT_PTR               , 852  ;  0x354
+.equ KD_PSP_SUPPORT_PTR                 , 856  ;  0x358
+.equ KD_TIMER2                          , 860  ;  0x35c
+.equ KD_SYSTEM_TD                       , 864  ;  0x360
+
+; Start CR 1625
+; .equ KD_IO_PCB_POOLS                    ,1068  ;  0x42c
+; .equ KD_LWMEM_POOLS                     ,1080  ;  0x438
+; .equ KD_KERNEL_LWMEM_POOL               ,1092  ;  0x444
+; .equ KD_LWMEM_CLEANUP                   ,1096  ;  0x448
+; .equ KD_LWEVENTS                        ,1100  ;  0x44c
+; .equ KD_LWTIMERS                        ,1112  ;  0x458
+; .equ KD_LWTIMER_ISR                     ,1124  ;  0x464
+; .equ KD_TOS_RESERVED_SIZE               ,1128  ;  0x468
+; .equ KD_TOS_RESERVED_ALIGN_MASK         ,1132  ;  0x46c
+; .equ KD_END_OF_KERNEL_DATA_STRUCT       ,1136  ;  0x470
+
+.equ KD_IO_PCB_POOLS                    ,1084  ;  0x43c
+.equ KD_LWMEM_POOLS                     ,1096  ;  0x448
+.equ KD_KERNEL_LWMEM_POOL               ,1108  ;  0x454
+.equ KD_LWMEM_CLEANUP                   ,1112  ;  0x458
+.equ KD_LWEVENTS                        ,1116  ;  0x45c
+.equ KD_LWTIMERS                        ,1128  ;  0x468
+.equ KD_LWTIMER_ISR                     ,1140  ;  0x474
+.equ KD_TOS_RESERVED_SIZE               ,1144  ;  0x478
+.equ KD_TOS_RESERVED_ALIGN_MASK         ,1148  ;  0x47c
+.equ KD_LWMSGQS                         ,1152  ;  0x480
+; Start CR 2396
+.equ KD_PMU_STRUCT_PTR                  ,1164  ;  0x48c  
+.equ KD_CURRENT_KERNEL_DVFS_MODE        ,1168  ;  0x490
+; End CR 2396
+.equ KD_END_OF_KERNEL_DATA_STRUCT       ,1176  ;  0x498
+
+; End CR 1625
+
+; EOF

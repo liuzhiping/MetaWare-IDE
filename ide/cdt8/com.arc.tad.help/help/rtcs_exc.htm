@@ -1,0 +1,119 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN" "http://www.w3.org/MarkUp/Wilbur/HTML32.dtd">
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+    <meta name="GENERATOR" content="Quadralay WebWorks Publisher 2003 for Word 8.0.0.1194">
+    <meta name="TEMPLATEBASE" content="ARCTechPubsv6">
+    <meta name="LASTUPDATED" content="01/27/12 13:02:36">
+<link rel="first" href="tad_help.htm">  <link rel="prev" href="rtcs_exb.htm"><link rel="next" href="rtcs_exd.htm">
+    <link rel="StyleSheet" href="document.css" type="text/css" media="screen">
+    <title>RTCS Examine Socket Window</title>
+  </head>
+
+  <body>
+
+    <table width="100%" border="0" cellpadding="0" cellspacing="0" class="header">
+      <tr> 
+        <td class="breadcrumbs">
+	<a href="tad_help.htm"> MQX&#174; Task Aware Debug Help</a> > <a href="rtcs_win.htm"> RTCS Windows</a> > RTCS Examine Socket Window
+        </td>
+        <td align="right" valign="top" class="navigator" nowrap>
+<a href="rtcs_exb.htm"><img src="images/sprev.gif" border="0" alt="Previous" title="Previous"></a><a href="rtcs_exd.htm"><img src="images/snext.gif" border="0" alt="Next" title="Next"></a>
+        </td>
+      </tr>
+    </table>
+
+    <hr align="left">
+
+    <blockquote>
+<h3 ><a name="wp9001048">
+RTCS Examine Socket Window</a></h3>
+
+
+<p >
+<a name="wp9001049">The <b>RTCS Examine Socket</b> window displays the current state of a socket</a></p>
+<p ><b><i><a name="wp9001050">Displayed Fields</a></i></b></p><p >
+<a name="wp9001051"><b>Socket</b></a></p>
+<p >
+<a name="wp9001052">Socket handle being examined.</a></p>
+<p >
+<a name="wp9001053"><b>Socket - State</b></a></p>
+<p >
+<a name="wp9001054">State of the socket; one of the following:</a></p>
+<ul> <li ><code>Abort</code><a name="wp9001055"> </a>
+ <li ><code>Bound</code><a name="wp9001056"> </a>
+ <li ><code>Closing</code><a name="wp9001057"> </a>
+ <li ><code>Connected</code><a name="wp9001058"> </a>
+ <li ><code>Connecting</code><a name="wp9001059"> </a>
+ <li ><code>Listening</code><a name="wp9001060"> </a>
+ <li ><code>Unbound</code><a name="wp9001061"> </a>
+</ul><p >
+<a name="wp9001062"><b>Socket - Type</b></a></p>
+<p >
+<a name="wp9001063">Type of socket, either <code>Stream</code> or <code>Datagram</code>.</a></p>
+<p >
+<a name="wp9001064"><b>Local End Point </b></a></p>
+<p >
+<a name="wp9001065">Port number and IP address of the local endpoint. The fields are set when the socket is bound.</a></p>
+<p >
+<a name="wp9001066"><b>Remote End Point</b></a></p>
+<p >
+<a name="wp9001067">Port number and IP address of the remote endpoint. The fields are used only for stream sockets that are in a connected state.</a></p>
+<p >
+<a name="wp9001068"><b>Options </b></a></p>
+<p >
+<a name="wp9001069">Current values of the socket options. For information on each option, see RTCS User's Guide.</a></p>
+<p >
+<a name="wp9001070"><b>Listen Error</b></a></p>
+<p >
+<a name="wp9001071">Error that occurred if a socket listen operation failed.</a></p>
+<p >
+<a name="wp9001072"><b>Last Error</b></a></p>
+<p >
+<a name="wp9001073">Last error that occurred during the operation of the socket.</a></p>
+<p >
+<a name="wp9001074"><b>Outstanding Accept</b></a></p>
+<p >
+<a name="wp9001075">If the field is <code>True</code>, the socket has an accept operation pending.</a></p>
+<p >
+<a name="wp9001076"><b>Outstanding Connect</b></a></p>
+<p >
+<a name="wp9001077">If the field is <code>True</code>, the socket has a connect operation pending.</a></p>
+<p >
+<a name="wp9001078"><b>TCP Control Block</b></a></p>
+<p >
+<a name="wp9001079">Address of the TCP control block for the socket. The field is used only for stream sockets.</a></p>
+<p >
+<a name="wp9001080"><b>UDP Control Block</b></a></p>
+<p >
+<a name="wp9001081">Address of the UDP control block for the socket. The field is used only for datagram sockets.</a></p>
+<p >
+<a name="wp9001082"><b>Owners</b></a></p>
+<p >
+<a name="wp9001083">List of the tasks that own the socket. </a></p>
+<p >
+<a name="wp9001084"><b>Controls</b></a></p>
+<p >
+<a name="wp9001085"><b>TCP Control Block line</b></a></p>
+<p >
+<a name="wp9001086">Double-click to open the Examine TCP Control Block window for the stream socket.</a></p>
+<p >
+<a name="wp9001087"><b>UDP Control Block line</b></a></p>
+<p >
+<a name="wp9001088">Double-click to open the UDP Configuration window for the datagram socket. </a></p>
+    </blockquote>
+    <p></p>
+    <hr>
+
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" class="footer">
+      <tr>
+        <td>
+          
+        </td>
+        <td align="right" valign="top" class="navigator">
+<a href="rtcs_exb.htm"><img src="images/sprev.gif" border="0" alt="Previous" title="Previous"></a><a href="rtcs_exd.htm"><img src="images/snext.gif" border="0" alt="Next" title="Next"></a>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>

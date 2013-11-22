@@ -1,0 +1,5 @@
+<view name="org.eclipse.debug.ui.BreakpointView">
+    <tree>
+        <item text="${WORKSPACE}/graphics_pipeline/generated/software/grmain/grmain [expression: '0x00016000']" checked="true"/>
+    </tree>
+</view>

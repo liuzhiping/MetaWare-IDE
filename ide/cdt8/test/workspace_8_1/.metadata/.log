@@ -1,0 +1,17 @@
+!SESSION 2008-03-31 17:31:26.311 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.5.0_09
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY org.eclipse.help.base 4 4 2008-03-31 17:33:25.686
+!MESSAGE Help documentation could not be indexed completely.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2008-03-31 17:33:25.686
+!MESSAGE Help document /org.eclipse.cdt.doc.user/reference/cdt_u_call_hierarchy_view.htm cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2008-03-31 17:33:25.686
+!MESSAGE Help document /org.eclipse.cdt.doc.user/reference/cdt_u_project_explorer_view.htm cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2008-03-31 17:33:25.686
+!MESSAGE Help document /org.eclipse.cdt.doc.user/reference/BCR.htm cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2008-03-31 17:33:25.686
+!MESSAGE Help document /org.eclipse.cdt.doc.user/Breakpoints_Display.htm cannot be opened.

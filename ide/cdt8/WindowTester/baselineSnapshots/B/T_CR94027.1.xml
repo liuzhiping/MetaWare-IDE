@@ -1,0 +1,8 @@
+<view name="org.eclipse.debug.ui.BreakpointView">
+    <tree>
+        <item text="displaymain [address: 0x0000080c]" checked="true"/>
+        <item text="grmain [address: 0x0000080c]" checked="true"/>
+        <item text="rendermain0 [address: 0x0000080c]" checked="true"/>
+        <item text="rendermain1 [address: 0x0000080c]" selected="true" checked="true"/>
+    </tree>
+</view>

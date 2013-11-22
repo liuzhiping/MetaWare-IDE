@@ -1,0 +1,192 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN" "http://www.w3.org/MarkUp/Wilbur/HTML32.dtd">
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+    <meta name="GENERATOR" content="Quadralay WebWorks Publisher 2003 for FrameMaker 8.0.0.1194">
+    <meta name="TEMPLATEBASE" content="temp">
+    <link rel="StyleSheet" href="document.css" type="text/css" media="screen">
+    <title>Defining MetaWare Build Settings</title>
+  </head>
+
+  <body>
+
+    <table width="100%" border="0" cellpadding="0" cellspacing="0" class="header">
+      <tr>
+<!--Disabling Breadcrumbs to use Eclipse version 10/2009
+        <td class="breadcrumbs">
+	<a href="ide_guid.htm"> DesignWare ARC MetaWare IDE User's Guide </a> > <a href="tasks.htm"><br>Tasks</a> > <a href="compilaa.htm">Compilation Extensions </a> > Defining MetaWare Build Settings
+        </td>
+-->
+        <td align="right" valign="top" class="navigator" nowrap>
+<a href="mw_t_add.htm"><img src="images/sprev.gif" border="0" alt="Previous"></a><a href="mw_t_stl.htm"><img src="images/snext.gif" border="0" alt="Next"></a>
+        </td>
+      </tr>
+    </table>
+
+    <hr align="left">
+
+    <blockquote>
+<h4 >
+Defining MetaWare Build Settings
+<a name="wp865705"> </a></h4>
+
+<p >
+By default, the IDE is preconfigured with the most useful build settings (options and toggles) for your target processor. You can change these options and toggles and specify new options, toggles, and pragmas. The following topics tell you how.
+<a name="wp903359"> </a></p>
+<ul> <li ><a href="mw_t_set.htm#wp695251">Specifying Options, Toggles, and Pragmas Using the GUI</a><a name="wp913865"> </a>
+ <li ><a href="mw_t_set.htm#wp695259">Manually Adding Options, Toggles, and Pragmas</a><a name="wp913873"> </a>
+ <li ><a href="mw_t_set.htm#wp884957">Adding Assembler and Linker Options to the mcc Driver</a><a name="wp913878"> </a>
+ <li ><a href="mw_t_set.htm#wp695262">Applying Settings to a Single Source File</a><a name="wp913883"> </a>
+ <li ><a href="mw_t_set.htm#wp695272">Specifying Options, Toggles, and Pragmas for Makefile Projects</a><a name="wp913888"> </a>
+ <li ><a href="mw_t_stl.htm#wp847893">Selecting C++ Run-Time Libraries</a><a name="wp928256"> </a>
+</ul><a name="wp695251">
+  <h5 >
+4.2.2.1	 Specifying Options, Toggles, and Pragmas Using the GUI
+ </a></h5>
+<p >
+To specify options, toggles, and pragmas to the compiler, linker, and assembler for your project, do the following:
+<a name="wp695252"> </a></p>
+<ol type="1"> <li  value="1">Select <b>Project &gt; Properties</b> for your project.<a name="wp695253"> </a>
+ <li  value="2">Expand <b>C/C++ Build</b> and click <b>Settings</b>. <a name="wp882645"> </a>
+ <li  value="3">Change the pre-specified options and add new ones using the dialogs that appear when you click the items in the <b>Tool Settings</b> tab.<a name="wp695254"> </a>
+</ol><blockquote >
+<div align="left"><img src="images/md2_build_opts.gif" alt="Tool Settings" border="0" hspace="0" vspace="0"></div>
+
+<a name="wp695258"> </a></blockquote>
+ <a name="wp695259">
+  <h5 >
+4.2.2.2	 Manually Adding Options, Toggles, and Pragmas
+ </a></h5>
+<p >
+You can also make settings manually. This is handy if you know the name of the option (&quot;flag&quot;), toggle, or pragma from the listings in the toolkit manuals:
+<a name="wp882676"> </a></p>
+<ul> <li ><i>MetaWare C/C++ Programmer's Guide</i><a name="wp882815"> </a>
+ <li ><i>ELF Assembler User's Guide</i><a name="wp882819"> </a>
+ <li ><i>ELF Linker and Utilities User's Guide</i><a name="wp913904"> </a>
+</ul><a name="wp913905">
+  <h5 >
+Specifying the Controls
+ </a></h5>
+<ol type="1"> <li  value="1">On the <b>Tool settings</b> tab, click <b>General</b>. <a name="wp913906"> </a>
+ <li  value="2">Click the <b>Add</b> button in <b>Additional Compiler Flags</b> or <b>Pragma specifications</b>.<div align="left"><img src="images/settings.gif" border="0" hspace="0" vspace="0"></div><a name="wp882713"> </a>
+</ol><p >
+Here you can specify any of the mcc compiler and driver controls acceptable on the command line.
+<a name="wp882716"> </a></p>
+<a name="wp946474">
+  <h5 >
+Additional Compiler Flags
+ </a></h5>
+<ul><ul>  <li >For options, click the <img src="images/add_opta.gif" border="0" hspace="0" vspace="0"> <b>Add...</b> button in the <b>Additional Compiler Flags</b> area and type the option in the <b>Enter Value</b> dialog that appears. <div align="left"><img src="images/enter_va.gif" border="0" hspace="0" vspace="0"></div><a name="wp921237"> </a>
+  <li >If the option you specify requires macro-like variables such as the path of the project or workspace, you can use the <b>Build Variable...</b> button to reference them. <a name="wp925626"> </a>
+  <li >For toggles, use option <i>-Hon=</i><i>toggle_name</i><div align="left"><img src="images/enter_vb.gif" border="0" hspace="0" vspace="0"></div> or <i>-Hoff=</i><i>toggle_name</i>.<a name="wp925630"> </a>
+  <li >If the toggle you specify requires macro-like variables such as the path of the project or workspace, you can use the <b>Build Variable...</b> button to reference them. <a name="wp925631"> </a>
+</ul></ul><a name="wp882745">
+  <h5 >
+Pragma Specifications
+ </a></h5>
+<ul><ul>  <li >For pragmas, click the <img src="images/add_options_button.gif" border="0" hspace="0" vspace="0"> <b>Add...</b> button in the <b>Pragma specifications [e.g., offwarn(123)]</b> area and enter pragma and its parameters in the <b>Enter Value</b> dialog that appears.<div align="left"><img src="images/enter_vc.gif" border="0" hspace="0" vspace="0"></div><a name="wp921248"> </a>
+  <li >If the pragma you specify requires macro-like variables such as the path of the project or workspace, you can use the <b>Build Variable...</b> button to reference them. <a name="wp925617"> </a>
+</ul></ul><a name="wp884957">
+  <h5 >
+4.2.2.3	 Adding Assembler and Linker Options to the mcc Driver
+ </a></h5>
+<p >
+Technically, <i>mcc</i> is a driver program that controls the compiler, linker, and assembler.
+<a name="wp884961"> </a></p>
+<ul> <li >You can manually add assembler options under <b>ARCompact Assembler &gt; General</b>.<a name="wp882789"> </a>
+ <li >You can manually add linker options under <b>MetaWare Linker &gt; Miscellaneous</b>.<a name="wp882801"> </a>
+</ul><a name="wp695262">
+  <h5 >
+4.2.2.4	 Applying Settings to a Single Source File
+ </a></h5>
+<p >
+Some options, toggles, and pragmas can be applied to some source files while excluding other files. To apply a setting to one file only, proceed as follows:
+<a name="wp882672"> </a></p>
+<ol type="1"> <li  value="1">Right-click the source file in the <b>C/C++ Projects</b> pane and select <b>Properties</b>.<a name="wp695263"> </a>
+</ol><blockquote >
+<div align="left"><img src="images/fileprop.gif" height="736" width="945" border="0" hspace="0" vspace="0"></div>
+
+<a name="wp929020"> </a></blockquote>
+ <ol type="1"> <li  value="2">Select <b>C/C++ Build &gt; Settings</b>. <a name="wp695264"> </a>
+ <li  value="3">Select an item in the <b>Tool Settings</b> tab and make your file-specific settings in the dialog that appears for that item.<div align="left"><img src="images/md2_file.gif" alt="Build Settings for a File" border="0" hspace="0" vspace="0"></div><a name="wp695265"> </a>
+ <li  value="4">Click <b>OK</b>. <a name="wp695270"> </a>
+ <li  value="5">Repeat for other files as necessary. <a name="wp695271"> </a>
+</ol><a name="wp695272">
+  <h5 >
+4.2.2.5	 Specifying Options, Toggles, and Pragmas for Makefile Projects
+ </a></h5>
+<p >
+For makefile projects, add the options, toggles and pragmas to the build command in your makefile (for toggles, use <i>-Hon=</i><i>toggle_name</i>; for pragmas, use <i>-Hpragma=</i><i>pragma_name</i>).
+<a name="wp695273"> </a></p>
+<a name="wp695274">
+  <h5 >
+Obtaining Listings from the Toolkit Manuals
+ </a></h5>
+<p >
+For lists of available options, toggles, and pragmas, see the following manuals:
+<a name="wp882841"> </a></p>
+<ul> <li ><i>MetaWare C/C++ Programmer's Guide</i><a name="wp882834"> </a>
+ <li ><i>ELF Assembler User's Guide</i><a name="wp882835"> </a>
+ <li ><i>ELF Linker and Utilities User's Guide</i><a name="wp882836"> </a>
+</ul><p >
+Obtaining Listings from the Tools
+<a name="wp882831"> </a></p>
+<p >
+You can also view a listing of available options, toggles, and pragmas using the command-line help for each tool.
+<a name="wp882851"> </a></p>
+<ul> <li >For a list of compiler options, toggles, and pragmas, type <i>-h</i> on the driver command line, for example: <a name="wp695275"> </a>
+</ul><pre >       mcc -h
+<a name="wp695276"></a></pre>
+<ul> <li >For a list of assembler options, type <i>-h</i> on the <i>as</i><i>target</i> command line, for example: <a name="wp695277"> </a>
+</ul><pre >       asac -h
+<a name="wp695278"></a></pre>
+<ul> <li >For a list of linker options, type <i>-h</i> on the <i>ld</i><i>target</i> command line, for example: <a name="wp695279"> </a>
+</ul><blockquote >
+
+
+<table border="0" cellpadding="5" cellspacing="1" class="textlayout">
+
+  <tr>
+    <td><pre >ldac -h
+<a name="wp927051"></a></pre>
+</td>
+  </tr>
+</table>
+
+
+
+
+
+<a name="wp927041"> </a></blockquote>
+ <a name="wp913845">
+  <h5 >
+Related Tasks
+ </a></h5>
+<ul> <li ><a href="mw_t_con.htm#wp695471">Creating a Build Configuration</a><a name="wp913852"> </a>
+</ul><a name="wp919701">
+  <h5 >
+Related Reference
+ </a></h5>
+<ul> <li >Eclipse <em>C/C++ Development User Guide</em><a name="wp913849"> </a>
+ <li ><i>ELF Assembler User's Guide</i><a name="wp913911"> </a>
+ <li ><i>ELF Linker and Utilities User's Guide</i><a name="wp913912"> </a>
+ <li ><i>MetaWare C/C++ Programmer's Guide</i><a name="wp913921"> </a>
+</ul>
+    </blockquote>
+    <p></p>
+    <hr>
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" class="footer">
+      <tr>
+        <td>
+
+        </td>
+        <td align="right" valign="top" class="navigator">
+<a href="mw_t_add.htm"><img src="images/sprev.gif" border="0" alt="Previous"></a><a href="mw_t_stl.htm"><img src="images/snext.gif" border="0" alt="Next"></a>
+        </td>
+      </tr>
+    </table>
+<p> <font size="-3">
+Copyright © 2012 Synopsys, Inc. <br />
+Some portions of this document copyright IBM Corporation and others 2000, 2004.</font></p>
+  </body>
+</html>

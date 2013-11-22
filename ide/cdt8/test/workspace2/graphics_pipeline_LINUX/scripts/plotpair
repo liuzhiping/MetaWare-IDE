@@ -1,0 +1,22 @@
+
+
+# Parameters to this script:
+# 1: name of event variable
+# 2: name of response variable
+ 
+# Two variables: event and response.
+# Plot either of them in a single channel.  If event changes, send a + number.
+# If response changes, send a - negative number.
+
+// plot define (value name=v_stuff eval="$val")
+
+macro sendit E 
+    evalq $val = $E
+    plot send channel=events
+    endm
+
+watch $1, exec sendit $1 , eval 0
+watch $2, exec sendit -$2 , eval 0
+
+# Set cpu_mangle=1 to mangle the channel name with CMPD.
+plot channel name=events (value name=v_stuff eval="$val") cpu_mangle=1

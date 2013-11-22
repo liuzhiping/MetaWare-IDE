@@ -1,0 +1,6 @@
+<content>
+Breakpoints:
+    1:  - ${WORKSPACE}/Queens_AC/Debug/../queens.c!32 @0x1018c [hit:1 times]
+    2:    ${WORKSPACE}/Queens_AC/Debug/../queens.c!36 @0x101ae [hit:1 times]
+
+</content>

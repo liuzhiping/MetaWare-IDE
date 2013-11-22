@@ -1,0 +1,8 @@
+<plugin>
+   <extension point="org.eclipse.help.toc">
+      <toc file="help/EHtoc.xml" primary="true" />
+   </extension>
+   <extension point="org.eclipse.help.index">
+     <index file="help/EHindex.xml"/>
+ </extension>
+</plugin>

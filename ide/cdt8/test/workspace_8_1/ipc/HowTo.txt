@@ -1,0 +1,13 @@
+How to run IPC demo application using PC application which simulates one CPU:
+
+1 - Build the "ipc" example.
+2 - Download the image into the AA4 target board.
+3 - Run the PC application, pc_com1.exe or pc_com2.exe depend on the COM port you are using. PC application can be found in examples\ipc directory. You will see "Receiver running..."
+4 - Run the application on the AA4 target board.
+5 - Once it starts to run, the PC version will print out dots showing that it's receiving messages and echoing them back to the AA4 target board. 
+
+Note 1: Connect serial port on the AA4 to the serial port on the PC (either COM1 or COM2).
+Note 2: Use 9-pin null-modem serial cable.
+Note 3: When closing PC application, Windows open a dialog indicating, "Windows cannot end this program". To end the program you need to use "End Now" button on the Windows dialog.
+
+

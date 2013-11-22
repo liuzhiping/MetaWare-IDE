@@ -1,0 +1,2 @@
+# Every N ticks, send a the last N pc values to the plotter.
+plot send_pc name=pc_channel period=500 namespace=

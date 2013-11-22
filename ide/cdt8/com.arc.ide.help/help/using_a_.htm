@@ -1,0 +1,93 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN" "http://www.w3.org/MarkUp/Wilbur/HTML32.dtd">
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+    <meta name="GENERATOR" content="Quadralay WebWorks Publisher 2003 for FrameMaker 8.0.0.1194">
+    <meta name="TEMPLATEBASE" content="temp">
+    <link rel="StyleSheet" href="document.css" type="text/css" media="screen">
+    <title>Using a Digilent Cable to Connect to Hardware</title>
+  </head>
+
+  <body>
+
+    <table width="100%" border="0" cellpadding="0" cellspacing="0" class="header">
+      <tr>
+<!--Disabling Breadcrumbs to use Eclipse version 10/2009
+        <td class="breadcrumbs">
+	<a href="ide_guid.htm"> DesignWare ARC MetaWare IDE User's Guide </a> > <a href="tasks.htm"><br>Tasks</a> > Using a Digilent Cable to Connect to Hardware
+        </td>
+-->
+        <td align="right" valign="top" class="navigator" nowrap>
+<a href="extracti.htm"><img src="images/sprev.gif" border="0" alt="Previous"></a><a href="debuggie.htm"><img src="images/snext.gif" border="0" alt="Next"></a>
+        </td>
+      </tr>
+    </table>
+
+    <hr align="left">
+
+    <blockquote>
+<h3 >
+Using a Digilent Cable to Connect to Hardware
+<a name="wp945456"> </a></h3>
+
+<p >
+You can connect the debugger to an ML50x development board using a Digilent cable. 
+<a name="wp945459"> </a></p>
+<p >
+Do the following to debug on an ML50x board using a Digilent cable:
+<a name="wp945461"> </a></p>
+<ol type="1"> <li  value="1">In the <b>C/C++ Projects</b> view, select a project. <a name="wp945462"> </a>
+ <li  value="2">Open the drop-down menu next to the <b>Debug</b> button and select<b> Debug Configurations...</b>. <div align="left"><img src="images/md2_debug.gif" alt="Opening the Debug dialog" border="0" hspace="0" vspace="0"></div><a name="wp945466"> </a>
+ <li  value="3">Click the <b>Debugger</b> tab.<a name="wp945467"> </a>
+ <li  value="4">Ensure that <b>MetaWare Debugger</b> is selected in the drop-down menu.<a name="wp945471"> </a>
+ <li  value="5"><font >In the </font><b>Debugger Options</b><font > tree view, select </font><b>Target Selection</b><font >.</font><a name="wp945472"> </a>
+ <li  value="6">Select Hardware and <b>Digelent JTAG cable</b> from the drop-down lists:<div align="left"><img src="images/seldigil.gif" height="387" width="875" alt="Selecting xISS in Select the target:" border="0" hspace="0" vspace="0"></div><a name="wp945476"> </a>
+</ol><dl>
+  <dt >A standard four-wire connection is used by default. If your hardware has a two-wire JTAG interface, you can use the <b>JTAG wire protocol</b> drop-down to select two ways to use it:<a name="wp945481"> </a><ul>  <li ><b>2-wire</b> connects only if the two-wire JTAG connection is available.<a name="wp945483"> </a>
+  <li ><b>2-if-4-fails</b> tries a four-wire connection first, then tries a two-wire connection if four-wire fails.<a name="wp945484"> </a>
+</ul></dl>
+<ol type="1"> <li  value="7">Click OK after making your selections. <a name="wp945485"> </a>
+ <li  value="8">Click <b>Debug</b> to start debugging.<a name="wp945486"> </a>
+</ol><a name="wp945487">
+  <h5 >
+Switching Dynamically While Debugging
+ </a></h5>
+<p >
+You can use the <code>prop</code> command to switch between two-wire and four-wire mode dynamically while debugging:
+<a name="wp945488"> </a></p>
+<ul> <li >Use <code>prop</code> <code>jtag_wire=2</code> or <code>jtag_wire=4</code> to shift between two-wire and four-wire connections.<a name="wp945489"> </a>
+ <li >Use <code>prop jtag_status</code> to display the current JTAG status (two-wire or four-wire connection).<a name="wp945490"> </a>
+</ul><p >
+You can use the <b>prop</b> command on the command line or in the <b>Command:</b> input field.
+<a name="wp945491"> </a></p>
+<a name="wp945492">
+  <h5 >
+Related Tasks
+ </a></h5>
+<ul> <li ><a href="mw_t_run.htm#wp913987">Defining MetaWare Debugger Settings</a><a name="wp945496"> </a>
+ <li ><a href="mw_t_cmd.htm#wp918174">Using Debugger Commands</a><a name="wp945500"> </a>
+</ul><a name="wp945501">
+  <h5 >
+Related Reference
+ </a></h5>
+<ul> <li ><em>ML50x Development Board Getting Started</em> <a name="wp945502"> </a>
+ <li ><i>MetaWare Debugger User's Guide</i><a name="wp945503"> </a>
+</ul>
+    </blockquote>
+    <p></p>
+    <hr>
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" class="footer">
+      <tr>
+        <td>
+
+        </td>
+        <td align="right" valign="top" class="navigator">
+<a href="extracti.htm"><img src="images/sprev.gif" border="0" alt="Previous"></a><a href="debuggie.htm"><img src="images/snext.gif" border="0" alt="Next"></a>
+        </td>
+      </tr>
+    </table>
+<p> <font size="-3">
+Copyright © 2012 Synopsys, Inc. <br />
+Some portions of this document copyright IBM Corporation and others 2000, 2004.</font></p>
+  </body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN" "http://www.w3.org/MarkUp/Wilbur/HTML32.dtd">
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+    <meta name="GENERATOR" content="Quadralay WebWorks Publisher 2003 for Word 8.0.0.1194">
+    <meta name="TEMPLATEBASE" content="ARCTechPubsv6">
+    <meta name="LASTUPDATED" content="01/27/12 13:02:36">
+<link rel="first" href="tad_help.htm">  <link rel="prev" href="lightwei.htm"><link rel="next" href="lightweb.htm">
+    <link rel="StyleSheet" href="document.css" type="text/css" media="screen">
+    <title>Lightweight Timers Window</title>
+  </head>
+
+  <body>
+
+    <table width="100%" border="0" cellpadding="0" cellspacing="0" class="header">
+      <tr> 
+        <td class="breadcrumbs">
+	<a href="tad_help.htm"> MQX&#174; Task Aware Debug Help</a> > <a href="tad_wind.htm"> TAD Windows</a> > Lightweight Timers Window
+        </td>
+        <td align="right" valign="top" class="navigator" nowrap>
+<a href="lightwei.htm"><img src="images/sprev.gif" border="0" alt="Previous" title="Previous"></a><a href="lightweb.htm"><img src="images/snext.gif" border="0" alt="Next" title="Next"></a>
+        </td>
+      </tr>
+    </table>
+
+    <hr align="left">
+
+    <blockquote>
+<h3 ><a name="wp9000859">
+Lightweight Timers Window</a></h3>
+
+
+<p >
+<a name="wp9000860">The <b>Lightweight Timers</b> window shows lightweight timers, if your application includes the Lightweight Timers component.</a></p>
+<p >
+<img src="images/lightwee.gif" height="136" width="576" border="0" hspace="0" vspace="0">
+<a name="wp9000861"> </a></p>
+<p ><b><i><a name="wp9000862">Displayed Fields </a></i></b></p><p >
+<a name="wp9000863"><b>No.</b> - Queue number  </a></p>
+<p >
+<a name="wp9000864"><b>LWTimer Queue</b> - Address serving as identifier of the queue that is created.&nbsp; The application creates a queue structure (as a global or using <strong>malloc()</strong>) and uses that address to identify which queue it is operating on </a></p>
+<p >
+<a name="wp9000865"><b>Valid</b> - indicates whether or not the timer queue appears valid. If <b>No</b>, then the data structure is corrupt.</a></p>
+<p >
+<a name="wp9000866"><b>Number</b> - the number of timers in this queue. A given period queue can have a number of timers with different offsets.</a></p>
+<p >
+<a name="wp9000867"><b>Timer Period</b> - The period of each timer in MQX ticks (all lightweight components operate on ticks only)</a></p>
+<p >
+<a name="wp9000868"><b>Time to Fire</b> - The time in ticks before the timers fire</a></p>
+<p ><b><i><a name="wp9000869">Timer-Detail Fields</a></i></b></p><p >
+<a name="wp9000870"><b>LWTimer Address</b> - the address of the timer</a></p>
+<p >
+<a name="wp9000871"><b>Valid</b> - indicates whether or not the timer descriptor appears valid. If <b>No</b>, then the data structure is corrupt.</a></p>
+<p >
+<a name="wp9000872"><b>Timer Offset</b> - Number of ticks to offset from the period.&nbsp; Every all timers in the queue fire every <i>period</i> ticks (as defined by the queue), unless there is an offset, at which point firing is delayed by <i>offset</i> ticks.</a></p>
+<p >
+<a name="wp9000873"><b>Timer Function</b> - The name and/or address of the function to be called each time the timer is fired</a></p>
+<p >
+<a name="wp9000874"><b>Function Parameter</b> - The parameter that is passed to the Timer Function.</a></p>
+    </blockquote>
+    <p></p>
+    <hr>
+
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" class="footer">
+      <tr>
+        <td>
+          
+        </td>
+        <td align="right" valign="top" class="navigator">
+<a href="lightwei.htm"><img src="images/sprev.gif" border="0" alt="Previous" title="Previous"></a><a href="lightweb.htm"><img src="images/snext.gif" border="0" alt="Next" title="Next"></a>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>

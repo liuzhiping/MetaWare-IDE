@@ -1,0 +1,40 @@
+nolog
+//**HEADER******************************************************************
+//**************************************************************************
+//*** 
+//*** Copyright (c) 1989-2007 ARC International. 
+//*** All rights reserved                                           
+//*** 
+//*** This software embodies materials and concepts which are       
+//*** confidential to ARC International and is made
+//*** available solely pursuant to the terms of a written license   
+//*** agreement with ARC International             
+//*** 
+//*** File: arcangel.met
+//*** 
+//*** Comments: 
+//***    This file contains initialization parameters for the ARCangel
+//***    development board.
+//***
+//**************************************************************************
+//*END*********************************************************************/
+
+print ** Initializing the ARCangel **
+on=reset_board
+
+// Setup BVCI memory controller
+
+// Set wait states to zero for SRAM - CS0
+evalq *0xFC6004 = 0
+evalq *0xFC6008 = 0
+// Set the mask and location bits for 2megs of SRAM to reside at 0
+evalq *0xFC600C = 0xE0000000
+
+// Set wait states for flash - CS1
+evalq *0xFC6014 = 0x01040101
+evalq *0xFC6018 = 0x01020101
+// Set the mask and location bits for 2megs of flash to reside at 0x800000
+evalq *0xFC601C = 0x80008000
+
+print ** Initialization complete **
+// EOF

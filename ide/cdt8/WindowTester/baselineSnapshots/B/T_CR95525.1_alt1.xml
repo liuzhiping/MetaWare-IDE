@@ -1,0 +1,17 @@
+<content>
+
+**** Build of configuration Debug for project No Cygwin ****
+
+gmake all 
+'Building file: ../queens.c'
+'Invoking: MetaWare ARC C/C++ Compiler'
+mcc -c -O1 -g -Hnocopyr -arc600 -core1 -Humake -Hdepend="depend" -o "queens.o" "../queens.c"
+'Finished building: ../queens.c'
+' '
+'Building target: NoCygwin.elf'
+'Invoking: MetaWare Linker'
+mcc  -Hldopt=-q -e_start -arc600 -o "NoCygwin.elf"  ./queens.o   
+'Finished building target: NoCygwin.elf'
+' '
+
+</content>

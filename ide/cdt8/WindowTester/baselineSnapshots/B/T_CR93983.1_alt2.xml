@@ -1,0 +1,39 @@
+<view name="com.arc.cdt.debug.seecode.ui.views.SeeCodeCustomView:source">
+<TextCanvas>
+    <text lineCount="9" selection="-1">
+        <line content="  63    for (I = -size+1; I <=  size-1; Csub(I++) = True);">
+        <line content="  64    Try(1,&Q);">
+        <line content="  65    if (Q)">
+        <line content="  66       for (I = 1; I <= size;) {">
+        <line content="  67          printf("%4d",Xsub(I++));">
+        <line content="  68          }">
+        <line content="  69    printf("\n");">
+        <line content="  70    exit(!Q);">
+        <line content="  71    }">
+    </text>
+    <icon x="2" y="0">
+        <image width="14" height="15">
+             1 1 1 1 1 1 1 1 1 1        </image>
+    <icon x="2" y="20">
+        <image width="14" height="15">
+             1 1 1 1 1 1 1 1 1 1        </image>
+    <icon x="2" y="40">
+        <image width="14" height="15">
+             1 1 1 1 1 1 1 1 1 1        </image>
+    <icon x="2" y="60">
+        <image width="14" height="15">
+             1 1 1 1 1 1 1 1 1 1        </image>
+    <icon x="2" y="80">
+        <image width="14" height="15">
+             1 1 1 1 1 1 1 1 1 1        </image>
+    <icon x="2" y="120">
+        <image width="14" height="15">
+             1 1 1 1 1 1 1 1 1 1        </image>
+    <icon x="2" y="140">
+        <image width="14" height="15">
+             1 1 1 1 1 1 1 1 1 1        </image>
+    <icon x="2" y="160">
+        <image width="14" height="15">
+             1 1 1 1 1 1 1 1 1 1        </image>
+</TextCanvas>
+</view>

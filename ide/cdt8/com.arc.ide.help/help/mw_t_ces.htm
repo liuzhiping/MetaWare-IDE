@@ -1,0 +1,91 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN" "http://www.w3.org/MarkUp/Wilbur/HTML32.dtd">
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+    <meta name="GENERATOR" content="Quadralay WebWorks Publisher 2003 for FrameMaker 8.0.0.1194">
+    <meta name="TEMPLATEBASE" content="temp">
+    <link rel="StyleSheet" href="document.css" type="text/css" media="screen">
+    <title>Using the Cycle-Estimating Simulator</title>
+  </head>
+
+  <body>
+
+    <table width="100%" border="0" cellpadding="0" cellspacing="0" class="header">
+      <tr>
+<!--Disabling Breadcrumbs to use Eclipse version 10/2009
+        <td class="breadcrumbs">
+	<a href="ide_guid.htm"> DesignWare ARC MetaWare IDE User's Guide </a> > <a href="tasks.htm"><br>Tasks</a> > <a href="debuggie.htm">Debugging with Special Simulators</a> > Using the Cycle-Estimating Simulator
+        </td>
+-->
+        <td align="right" valign="top" class="navigator" nowrap>
+<a href="mw_t_use.htm"><img src="images/sprev.gif" border="0" alt="Previous"></a><a href="debuggig.htm"><img src="images/snext.gif" border="0" alt="Next"></a>
+        </td>
+      </tr>
+    </table>
+
+    <hr align="left">
+
+    <blockquote>
+<h4 >
+Using the Cycle-Estimating Simulator
+<a name="wp705744"> </a></h4>
+
+<p >
+The ARC Cycle-Estimating Simulator (CES) is a component of the ARC ISS that estimates machine cycles in executing programs. The CES also includes a cache thrash analysis routine to point out cache thrashing.
+<a name="wp705745"> </a></p>
+<p >
+CES works with both instruction and data caches. Cycle estimation is not available for code fetch where no icache is present.
+<a name="wp922217"> </a></p>
+<p >
+To enable cycle estimation, select <b>Enable estimated instruction cycle counting</b> in <b>Simulator extensions &gt; Cycle Counting</b> in the <b>Debugger</b> tab tree view when you create your launch configuration for debugging. 
+<a name="wp922218"> </a></p>
+<p >
+To analyze performance of icache or dcache:
+<a name="wp705748"> </a></p>
+<ol type="1"> <li  value="1">Before launching your Debug configuration, select <b>Simulator extensions &gt; Cache simulation </b>and check <b>Instruction cache</b> or <b>Data cache</b> (or both) in the <b>Debugger</b> tab of the <b>Debug Configurations </b>dialog. <a name="wp705749"> </a>
+ <li  value="2">Debug your application. The debugger adds additional cycle-estimating registers in the <b>Registers</b> window. <a name="wp705750"> </a>
+ <li  value="3">Select <b>Debugger &gt; Instruction cache</b> or <b>Debugger &gt; Data cache</b> to open an <b>Instruction cache</b> or <b>Data cache</b> window. <a name="wp705751"> </a>
+ <li  value="4">Click the <b>Analyze</b> button to open an <b>Instruction cache analysis</b> or <b>Data cache analysis</b> window with cache analysis for the selected cache. <a name="wp853473"> </a>
+</ol><blockquote >
+<div align="left"><img src="images/analyze.gif" alt="Cache Analysis Window" border="0" hspace="0" vspace="0"></div>
+
+<a name="wp884160"> </a></blockquote>
+ <p >
+The <b>Data cache analysis</b> or <b>Instruction cache analysis</b> window opens.
+<a name="wp705863"> </a></p>
+<blockquote >
+<div align="left"><img src="images/md2_cach.gif" alt="Cache Analysis Window" border="0" hspace="0" vspace="0"></div>
+
+<a name="wp884173"> </a></blockquote>
+ <ul> <li >To restrict the display, enter a regular expression such as <code>Set 02*</code> in the <b>Reg expn</b> input field, or choose a previous entry from the drop-down list, and press <font >Enter</font>. <a name="wp884165"> </a>
+ <li >To show or hide line numbers, click the <img src="images/sc_linea.gif" alt="Line Numbers Button" border="0" hspace="0" vspace="0"> button. <a name="wp705952"> </a>
+</ul><a name="wp918092">
+  <h5 >
+Related Task
+ </a></h5>
+<ul> <li ><a href="mw_t_run.htm#wp913987">Defining MetaWare Debugger Settings</a><a name="wp918096"> </a>
+</ul><a name="wp918097">
+  <h5 >
+Related Reference
+ </a></h5>
+<ul> <li ><a href="mw_u_cac.htm#wp911015">Cache Analysis Window</a><a name="wp918108"> </a>
+ <li >Eclipse <em>C/C++ Development User Guide</em><a name="wp918104"> </a>
+</ul>
+    </blockquote>
+    <p></p>
+    <hr>
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" class="footer">
+      <tr>
+        <td>
+
+        </td>
+        <td align="right" valign="top" class="navigator">
+<a href="mw_t_use.htm"><img src="images/sprev.gif" border="0" alt="Previous"></a><a href="debuggig.htm"><img src="images/snext.gif" border="0" alt="Next"></a>
+        </td>
+      </tr>
+    </table>
+<p> <font size="-3">
+Copyright © 2012 Synopsys, Inc. <br />
+Some portions of this document copyright IBM Corporation and others 2000, 2004.</font></p>
+  </body>
+</html>

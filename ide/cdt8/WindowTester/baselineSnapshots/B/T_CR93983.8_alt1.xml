@@ -1,0 +1,34 @@
+<view name="com.arc.cdt.debug.seecode.ui.views.SeeCodeCustomView:source">
+<TextCanvas>
+    <text lineCount="10" selection="-1">
+        <line content="  52        long i = atoi(argv[1]);">
+        <line content="  53        if (i <= 0 ) printf("Bad size; 8 assumed\n");">
+        <line content="  54        else">
+        <line content="  55        if ( i > MAX_SIZE) printf("Size too big; %d assumed\n",MAX_SIZE),">
+        <line content="  56                  size = MAX_SIZE;">
+        <line content="  57        else">
+        <line content="  58             size = i;">
+        <line content="  59        }">
+        <line content="  60    printf("%s\n","go");">
+        <line content="  61    for (I =  1; I <=  size; Asub(I++) = True);">
+    </text>
+    <icon x="2" y="0">
+        <image width="14" height="15">
+             ff ff ff ff ff ff ff c7 ff ff        </image>
+    <icon x="2" y="17">
+        <image width="14" height="15">
+             ff ff ff ff ff ff ff c7 ff ff        </image>
+    <icon x="2" y="51">
+        <image width="14" height="15">
+             ff ff ff ff ff ff ff c7 ff ff        </image>
+    <icon x="2" y="102">
+        <image width="14" height="15">
+             ff ff ff ff ff ff ff c7 ff ff        </image>
+    <icon x="2" y="136">
+        <image width="14" height="15">
+             ff ff ff ff ff ff ff c7 ff ff        </image>
+    <icon x="2" y="153">
+        <image width="14" height="15">
+             ff ff ff ff ff ff ff c7 ff ff        </image>
+</TextCanvas>
+</view>

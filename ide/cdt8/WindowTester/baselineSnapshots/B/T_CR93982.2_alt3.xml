@@ -1,0 +1,21 @@
+<view name="com.arc.cdt.debug.seecode.ui.views.SeeCodeCustomView:source">
+<TextCanvas>
+    <text lineCount="15" selection="-1">
+        <line content="  21 ">
+        <line content="  22 #define SQR 1.45">
+        <line content="  23 ">
+        <line content="  24 static real globalr = 15.;">
+        <line content="  25 static real globaltheta = 90.;">
+        <line content="  26 static real globalz = 6.0 * SQR;">
+        <line content="  27 static real globalx;">
+        <line content="  28 static real globaly;">
+        <line content="  29 static point3d m;">
+        <line content="  30 ">
+        <line content="  31 static int frame_number = 0;">
+        <line content="  32 ">
+        <line content="  33 ">
+        <line content="  34 static void">
+        <line content="  35 update (void)">
+    </text>
+</TextCanvas>
+</view>

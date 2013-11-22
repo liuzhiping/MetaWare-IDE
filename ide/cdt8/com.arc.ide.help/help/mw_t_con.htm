@@ -1,0 +1,85 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN" "http://www.w3.org/MarkUp/Wilbur/HTML32.dtd">
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+    <meta name="GENERATOR" content="Quadralay WebWorks Publisher 2003 for FrameMaker 8.0.0.1194">
+    <meta name="TEMPLATEBASE" content="temp">
+    <link rel="StyleSheet" href="document.css" type="text/css" media="screen">
+    <title>Creating a Build Configuration</title>
+  </head>
+
+  <body>
+
+    <table width="100%" border="0" cellpadding="0" cellspacing="0" class="header">
+      <tr>
+<!--Disabling Breadcrumbs to use Eclipse version 10/2009
+        <td class="breadcrumbs">
+	<a href="ide_guid.htm"> DesignWare ARC MetaWare IDE User's Guide </a> > <a href="tasks.htm"><br>Tasks</a> > <a href="workbena.htm">Workbench Extensions</a> > Creating a Build Configuration
+        </td>
+-->
+        <td align="right" valign="top" class="navigator" nowrap>
+<a href="workbena.htm"><img src="images/sprev.gif" border="0" alt="Previous"></a><a href="changing.htm"><img src="images/snext.gif" border="0" alt="Next"></a>
+        </td>
+      </tr>
+    </table>
+
+    <hr align="left">
+
+    <blockquote>
+<h4 >
+Creating a Build Configuration
+<a name="wp695471"> </a></h4>
+
+<p >
+The IDE provides build configurations appropriate for debug and release.You can create additional configurations to save build settings you use frequently. For example, you might want to switch easily to an alternate build with a different optimization level.
+<a name="wp695472"> </a></p>
+<p >
+To create a new project configuration:
+<a name="wp695116"> </a></p>
+<ol type="1"> <li  value="1">Right click on the project and select <b>Properties &gt; C/C++ Build</b>. <a name="wp695117"> </a>
+ <li  value="2">Click the <b>Manage configurations</b> button in the <b>Configuration:</b> area.<a name="wp695118"> </a>
+</ol><blockquote >
+<div align="left"><img src="images/manageco.gif" border="0" hspace="0" vspace="0"></div>
+
+<a name="wp942521"> </a></blockquote>
+ <dl>
+  <dt >The <b>Manage Configurations...</b> dialog appears (the title bar contains your project name, such as <b>prime</b>, followed by a colon and <b>Manage Configurations</b>).<a name="wp928877"> </a>  <dt >Here you can add, delete, and select configurations for the project.<div align="left"><img src="images/md2_mg_c.gif" alt="Manage Configurations" border="0" hspace="0" vspace="0"></div><a name="wp882519"> </a></dl>
+<ol type="1"> <li  value="3">Click <b>New....</b> <br>The <b>Create New Configuration</b> dialog appears:<div align="left"><img src="images/md2_crea.gif" alt="Create Configuration" border="0" hspace="0" vspace="0"></div><a name="wp695124"> </a>
+ <li  value="4">Type a name for your configuration (for example, <code>SmallCode</code>) in the <b>Name:</b> box. <a name="wp695130"> </a>
+ <li  value="5">Optionally enter a description in the <b>Description:</b> box.<a name="wp849383"> </a>
+ <li  value="6">Select whether to Import from projects in your workspace (you can change the imported settings in Step <a href="mw_t_con.htm#wp923184">Adjust the build settings for the new configuration in Properties &gt; C/C++ Build &gt; Settings.</a>).<a name="wp928925"> </a>
+ <li  value="7">Select whether to Import predefined initial configuration settings from a selection that is supplied (you can change the settings in Step <a href="mw_t_con.htm#wp923184">Adjust the build settings for the new configuration in Properties &gt; C/C++ Build &gt; Settings.</a>).<a name="wp928929"> </a>
+ <li  value="8">Click OK to return to the Manage Configurations... dialog. <a name="wp695132"> </a>
+ <li  value="9">Set your new configuration as the active configuration by selecting it in the Manage Configurations dialog and clicking <b>Set Active</b>. <div align="left"><img src="images/set_acti.gif" border="0" hspace="0" vspace="0"></div><a name="wp882552"> </a>
+ <li  value="10">Note that the <b>Status</b> for the new configuration now reads <b>Active</b>, and click <b>OK</b>.<a name="wp882579"> </a>
+ <li  value="11">Adjust the build settings for the new configuration in <b>Properties &gt; C/C++ Build &gt; Settings</b>.<a name="wp923184"> </a>
+ <li  value="12">Click <b>OK</b> again to save the settings and return to editing. <a name="wp882590"> </a>
+</ol><p >
+After you rebuild your project with the new configuration set active, the new configuration's folder appears in the <b>Project Explorer</b>. Your generated executable is placed in the corresponding folder.<div align="left"><img src="images/proj_pro.gif" alt="Project with New Configuration Added" border="0" hspace="0" vspace="0"></div>
+<a name="wp882580"> </a></p>
+<a name="wp709237">
+  <h5 >
+Related Reference
+ </a></h5>
+<ul> <li ><a href="mw_t_set.htm#wp865705">Defining MetaWare Build Settings</a><a name="wp922710"> </a>
+ <li ><a href="building.htm#wp928111">Building Projects from the Command Line</a><a name="wp925233"> </a>
+ <li >Eclipse <em>C/C++ Development User Guide</em><a name="wp923188"> </a>
+</ul>
+    </blockquote>
+    <p></p>
+    <hr>
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" class="footer">
+      <tr>
+        <td>
+
+        </td>
+        <td align="right" valign="top" class="navigator">
+<a href="workbena.htm"><img src="images/sprev.gif" border="0" alt="Previous"></a><a href="changing.htm"><img src="images/snext.gif" border="0" alt="Next"></a>
+        </td>
+      </tr>
+    </table>
+<p> <font size="-3">
+Copyright © 2012 Synopsys, Inc. <br />
+Some portions of this document copyright IBM Corporation and others 2000, 2004.</font></p>
+  </body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN" "http://www.w3.org/MarkUp/Wilbur/HTML32.dtd">
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+    <meta name="GENERATOR" content="Quadralay WebWorks Publisher 2003 for Word 8.0.0.1194">
+    <meta name="TEMPLATEBASE" content="ARCTechPubsv6">
+    <meta name="LASTUPDATED" content="01/27/12 13:02:36">
+<link rel="first" href="tad_help.htm">  <link rel="prev" href="partitio.htm"><link rel="next" href="task_sum.htm">
+    <link rel="StyleSheet" href="document.css" type="text/css" media="screen">
+    <title>Semaphores Window</title>
+  </head>
+
+  <body>
+
+    <table width="100%" border="0" cellpadding="0" cellspacing="0" class="header">
+      <tr> 
+        <td class="breadcrumbs">
+	<a href="tad_help.htm"> MQX&#174; Task Aware Debug Help</a> > <a href="tad_wind.htm"> TAD Windows</a> > Semaphores Window
+        </td>
+        <td align="right" valign="top" class="navigator" nowrap>
+<a href="partitio.htm"><img src="images/sprev.gif" border="0" alt="Previous" title="Previous"></a><a href="task_sum.htm"><img src="images/snext.gif" border="0" alt="Next" title="Next"></a>
+        </td>
+      </tr>
+    </table>
+
+    <hr align="left">
+
+    <blockquote>
+<h3 ><a name="wp9000603">
+Semaphores Window</a></h3>
+
+
+<p >
+<a name="wp9000604">The <b>Semaphores</b> window lists the semaphores. Each entry contains the current state of the semaphore, the semaphore's attributes, the tasks waiting for the semaphore, and the tasks that own the semaphore.</a></p>
+<p >
+<img src="images/semaphob.gif" height="134" width="522" border="0" hspace="0" vspace="0">
+<a name="wp9000605"> </a></p>
+<p ><b><i><a name="wp9000606">Displayed Fields</a></i></b></p><p >
+<a name="wp9000607"><b>Sem</b></a></p>
+<p ><b><i><a name="wp9000608">The address or variable name of the semaphore descriptor.</a></i></b></p><p >
+<a name="wp9000609"><b>Owning#</b></a></p>
+<p ><b><i><a name="wp9000610">The number of tasks that own the semaphore.</a></i></b></p><p >
+<a name="wp9000611"><b>Waiting#</b></a></p>
+<p >
+<a name="wp9000612">The number of tasks waiting for the semaphore</a></p>
+<p >
+<a name="wp9000613"><b>Destroy</b></a></p>
+<p >
+<a name="wp9000614">Indicates if the semaphore is in a delayed destroy state.</a></p>
+<p >
+<a name="wp9000615"><b>Count</b></a></p>
+<p >
+<a name="wp9000616">Number of available connections to the semaphore. When a task waits for a semaphore, MQX decrements <b>Count</b> and connects the task to the semaphore. When <b>Count</b> reaches <code>0</code>, tasks that attempt to wait for the semaphore are suspended until the semaphore becomes available. When a task posts or closes a semaphore connection, MQX increments <b>Count</b>.</a></p>
+<p >
+<a name="wp9000617"><b>Name</b></a></p>
+<p >
+<a name="wp9000618">Identifier that was given to the semaphore.</a></p>
+<p >
+<a name="wp9000619">Additional Semaphore Details</a></p>
+<p >
+<a name="wp9000620">You can see additional details about a semaphore by expanding its entry in the table:</a></p>
+<p >
+<img src="images/semaphoc.gif" height="409" width="556" border="0" hspace="0" vspace="0">
+<a name="wp9000621"> </a></p>
+<p >
+<a name="wp9000622"><b>Max Count</b></a></p>
+<p >
+<a name="wp9000623">Maximum number of semaphore connections that can be available at any time. The task that creates the semaphore sets the value. </a></p>
+<p >
+<a name="wp9000624"><b>Priority Q'ing?</b></a></p>
+<p >
+<a name="wp9000625">If <code>Yes</code>, then the highest priority task obtains the semaphore.  If <code>No</code>, then the first task to request the semaphore obtains it.</a></p>
+<p >
+<a name="wp9000626"><b>Priority Inherit?</b></a></p>
+<p >
+<a name="wp9000627">Priority inheritance might affect the priority of tasks that own the semaphore. If <b>Priority Inherit?</b> is <code>Yes</code> and if a task waiting for the semaphore is of higher priority than any of the owning tasks, MQX boosts the priority of the lower-priority owning tasks to the priority level of the waiting task. When the owning tasks release the semaphore, MQX returns their priority to the original level.</a></p>
+<p >
+<a name="wp9000628">If <b>Priority Inherit?</b> is <code>No</code>, MQX takes no action.</a></p>
+<p ><b><i><a name="wp9000629">Task List</a></i></b></p><p >
+<a name="wp9000630">This list contains an entry for each task that owns the semaphore and an entry for each task that is waiting for the semaphore.</a></p>
+    </blockquote>
+    <p></p>
+    <hr>
+
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" class="footer">
+      <tr>
+        <td>
+          
+        </td>
+        <td align="right" valign="top" class="navigator">
+<a href="partitio.htm"><img src="images/sprev.gif" border="0" alt="Previous" title="Previous"></a><a href="task_sum.htm"><img src="images/snext.gif" border="0" alt="Next" title="Next"></a>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>

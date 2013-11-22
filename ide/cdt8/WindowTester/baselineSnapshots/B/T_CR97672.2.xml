@@ -1,0 +1,27 @@
+<view>
+    <tree>
+        <item text="MetaWare ARC C/C++ Compiler" selected="true">
+            <item text="General"/>
+            <item text="Optimization/Debugging"/>
+            <item text="Storage Mapping"/>
+            <item text="Preprocessor"/>
+            <item text="Include Directories"/>
+            <item text="Language Compatibility"/>
+            <item text="C++"/>
+            <item text="Esoteric Toggles"/>
+            <item text="Processor/Extensions"/>
+            <item text="DSP Extensions"/>
+            <item text="Memory Model"/>
+            <item text="Overlay Support"/>
+            <item text="ARC 700 SIMD Support"/>
+        </item>
+        <item text="ARCompact Assembler">
+            <item text="Assembler Preprocessor"/>
+            <item text="General"/>
+            <item text="Include paths"/>
+            <item text="ARCompact Specific"/>
+            <item text="DSP Support"/>
+        </item>
+        <item text="MetaWare Archiver for ARCompact"/>
+    </tree>
+</view>

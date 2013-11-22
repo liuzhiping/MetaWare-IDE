@@ -1,0 +1,24 @@
+<view>
+    <label text=""/>
+    <label text="A valid license for the MetaWare Debugger was not found.
+
+    The license manager cannot find your license file.
+
+    Make sure that your license file is in the <install_dir>/license
+    directory in your tools distribution.
+
+Contact ARC International at license@arc.com to purchase a
+license to use this software, to request a free evaluation, or to upgrade
+to the latest version.
+
+
+Error text from FLEXlm:
+ The license files (or server network addresses) attempted are 
+ listed below.  Use LM_LICENSE_FILE to use a different license file,
+ or contact your software provider for a license file.
+
+The license file path is: /tmp\*.lic
+
+Licensing DLL version: 9.6.1
+"/>
+</view>

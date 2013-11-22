@@ -1,0 +1,8 @@
+read ".sc.project/.sc.args.grmain.multi" 
+read ".sc.project/.sc.args.displaymain.multi" 
+read ".sc.project/.sc.args.rendermain0.multi" 
+read ".sc.project/.sc.args.rendermain1.multi" 
+select 
+load 
+nohist readq .scrc 
+nohist nolog gui E> ok_to_load_windows 

@@ -1,0 +1,63 @@
+
+/home/chuckj/vdk/trunk/mcsg/examples/arc700_demos/graphics_pipeline/generated/software/grmain/grmain:     file format elf32-little
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .init         00000012  000001b4  000001b4  000001b4  2**0
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .text         0000f500  000001c8  000001c8  000001c8  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  2 .fini         0000000e  0000f6c8  0000f6c8  0000f6c8  2**0
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  3 .rodata       00000dd4  0000f6d8  0000f6d8  0000f6d8  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+  4 .data         00004a14  00011500  00011500  00010500  2**8
+                  CONTENTS, ALLOC, LOAD, DATA
+  5 .ctors        00000008  00015f14  00015f14  00014f14  2**2
+                  CONTENTS, ALLOC, LOAD, DATA
+  6 .dtors        00000008  00015f1c  00015f1c  00014f1c  2**2
+                  CONTENTS, ALLOC, LOAD, DATA
+  7 .jcr          00000004  00015f24  00015f24  00014f24  2**2
+                  CONTENTS, ALLOC, LOAD, DATA
+  8 .sdata        00000038  00015f28  00015f28  00014f28  2**2
+                  CONTENTS, ALLOC, LOAD, DATA
+  9 .sbss         00000038  00015f60  00015f60  00014f60  2**2
+                  ALLOC
+ 10 .bss          000003b4  00015f98  00015f98  00014f60  2**2
+                  ALLOC
+ 11 .heap         00040000  0001634c  0001634c  00014f60  2**0
+                  ALLOC
+ 12 .stack        00004000  00056350  00056350  00014f60  2**0
+                  ALLOC
+ 13 .comment      00002328  00000000  00000000  00057430  2**0
+                  CONTENTS, READONLY
+ 14 .arcextmap    0000016b  00000000  00000000  00059758  2**0
+                  CONTENTS, READONLY
+ 15 .debug_aranges 000008e0  00000000  00000000  000598c3  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 16 .debug_pubnames 00001296  00000000  00000000  0005a1a3  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 17 .debug_info   0001ca6d  00000000  00000000  0005b439  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 18 .debug_abbrev 000059b3  00000000  00000000  00077ea6  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 19 .debug_line   0000be2d  00000000  00000000  0007d859  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 20 .debug_frame  00003c5c  00000000  00000000  00089688  2**2
+                  CONTENTS, READONLY, DEBUGGING
+ 21 .debug_str    000026fc  00000000  00000000  0008d2e4  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 22 .debug_loc    0000d5ce  00000000  00000000  0008f9e0  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 23 .grcmd_pool   00010010  00e00008  00e00008  00015008  2**2
+                  ALLOC
+ 24 .raster_pool  00031850  00e10018  00e10018  00025018  2**2
+                  ALLOC
+ 25 .zbarrier     00000010  00e41868  00e41868  00056868  2**3
+                  ALLOC
+ 26 .render_channel0 00000210  02000010  02000010  00057010  2**2
+                  ALLOC
+ 27 .render_channel1 00000210  02000220  02000220  00057220  2**2
+                  ALLOC
+ 28 .debug_ranges 00000650  02000430  02000430  0009cfae  2**0
+                  CONTENTS, READONLY, DEBUGGING

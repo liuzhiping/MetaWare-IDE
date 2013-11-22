@@ -1,0 +1,156 @@
+<vdk:software xmlns:vdk="http://www.arc.com/XMLSchema/VDK/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:schemaLocation="http://www.arc.com/XMLSchema/VDK/1.0 http://www.arc.com/XMLSchema/VDK/1.0/softwareArchitecture.xsd"
+              name="swarch" hardwareRef="hwarch.xml">
+    <vdk:sourceset name="my_source_set0">
+        <vdk:source file="src/grmain.c"/>
+        <vdk:source file="src/grapi.c"/>
+        <vdk:source file="src/screen.c"/>
+    </vdk:sourceset>
+    <vdk:sourceset name="my_source_set1">
+        <vdk:source file="src/displaymain.c"/>
+        <vdk:source file="src/plot.c"/>
+        <vdk:source file="src/screen.c"/>
+    </vdk:sourceset>
+    <vdk:sourceset name="my_source_set2">
+        <vdk:source file="src/rendermain.c"/>
+        <vdk:source file="src/plot3d.c"/>
+        <vdk:source file="src/plot.c"/>
+        <vdk:source file="src/screen.c"/>
+    </vdk:sourceset>
+    <vdk:sourceset name="my_source_set3">
+        <vdk:source file="src/rendermain.c"/>
+        <vdk:source file="src/plot3d.c"/>
+        <vdk:source file="src/plot.c"/>
+        <vdk:source file="src/screen.c"/>
+    </vdk:sourceset>
+    <vdk:os name="OS_0" type="no_os_legacy">
+        <vdk:processorRef name="cpu0.core"/>
+        <vdk:process name="grmain">
+            <vdk:sourcesetRef name="my_source_set0"/>
+            <vdk:symbol name="NUMBER_OF_CPU_ISLANDS" value="4"/>
+            <vdk:symbol name="OUT_CHANNEL_LIST" value="{ render_channel0, render_channel1 }"/>
+            <vdk:property name="master" value="true"/>
+        </vdk:process>
+        <vdk:property name="physical_base_address" value="50331648"/>
+        <vdk:property name="size" value="3145728"/>
+        <vdk:property name="heap_size" value="262144"/>
+        <vdk:property name="system_stack_size" value="16384"/>
+    </vdk:os>
+    <vdk:os name="OS_1" type="no_os_legacy">
+        <vdk:processorRef name="cpu1.core"/>
+        <vdk:process name="displaymain">
+            <vdk:sourcesetRef name="my_source_set1"/>
+            <vdk:symbol name="NUMBER_OF_CPU_ISLANDS" value="4"/>
+            <vdk:symbol name="IN_CHANNEL_LIST" value="{ display_channel0, display_channel1 }"/>
+        </vdk:process>
+        <vdk:property name="physical_base_address" value="53477376"/>
+        <vdk:property name="size" value="3145728"/>
+        <vdk:property name="heap_size" value="262144"/>
+        <vdk:property name="system_stack_size" value="16384"/>
+    </vdk:os>
+    <vdk:os name="OS_2" type="no_os_legacy">
+        <vdk:processorRef name="cpu2.core"/>
+        <vdk:process name="rendermain0">
+            <vdk:sourcesetRef name="my_source_set2"/>
+            <vdk:symbol name="NUMBER_OF_CPU_ISLANDS" value="4"/>
+            <vdk:symbol name="IN_CHANNEL" value="render_channel0"/>
+            <vdk:symbol name="OUT_CHANNEL" value="display_channel0"/>
+        </vdk:process>
+        <vdk:property name="physical_base_address" value="56623104"/>
+        <vdk:property name="size" value="3145728"/>
+        <vdk:property name="heap_size" value="262144"/>
+        <vdk:property name="system_stack_size" value="16384"/>
+    </vdk:os>
+    <vdk:os name="OS_3" type="no_os_legacy">
+        <vdk:processorRef name="cpu3.core"/>
+        <vdk:process name="rendermain1">
+            <vdk:sourcesetRef name="my_source_set3"/>
+            <vdk:symbol name="NUMBER_OF_CPU_ISLANDS" value="4"/>
+            <vdk:symbol name="IN_CHANNEL" value="render_channel1"/>
+            <vdk:symbol name="OUT_CHANNEL" value="display_channel1"/>
+        </vdk:process>
+        <vdk:property name="physical_base_address" value="59768832"/>
+        <vdk:property name="size" value="3145728"/>
+        <vdk:property name="heap_size" value="262144"/>
+        <vdk:property name="system_stack_size" value="16384"/>
+    </vdk:os>
+    <vdk:thread name="thd_grmain" function="_grmain">
+        <vdk:processRef name="grmain"/>
+    </vdk:thread>
+    <vdk:thread name="thd_displaymain" function="_displaymain">
+        <vdk:processRef name="displaymain"/>
+    </vdk:thread>
+    <vdk:thread name="thd_rendermain0" function="_rendermain">
+        <vdk:processRef name="rendermain0"/>
+    </vdk:thread>
+    <vdk:thread name="thd_rendermain1" function="_rendermain">
+        <vdk:processRef name="rendermain1"/>
+    </vdk:thread>
+    <vdk:channel name="render_channel0" type="arc_memory_channel">
+        <vdk:producer name="thd_grmain"/>
+        <vdk:consumer name="thd_rendermain0"/>
+        <vdk:property name="memory_component_instance_name" value="imemory_model"/>
+        <vdk:property name="memory_bank_path" value="xsdram_memoryMapRef.xsdram_Bank0.bank0"/>
+        <vdk:property name="buffer_size" value="512"/>
+        <vdk:property name="instrument" value="true"/>
+    </vdk:channel>
+    <vdk:channel name="display_channel0" type="arc_memory_channel">
+        <vdk:producer name="thd_rendermain0"/>
+        <vdk:consumer name="thd_displaymain"/>
+        <vdk:property name="memory_component_instance_name" value="imemory_model"/>
+        <vdk:property name="memory_bank_path" value="xsdram_memoryMapRef.xsdram_Bank0.bank0"/>
+        <vdk:property name="buffer_size" value="256"/>
+        <vdk:property name="instrument" value="true"/>
+    </vdk:channel>
+    <vdk:channel name="render_channel1" type="arc_memory_channel">
+        <vdk:producer name="thd_grmain"/>
+        <vdk:consumer name="thd_rendermain1"/>
+        <vdk:property name="memory_component_instance_name" value="imemory_model"/>
+        <vdk:property name="memory_bank_path" value="xsdram_memoryMapRef.xsdram_Bank0.bank0"/>
+        <vdk:property name="buffer_size" value="512"/>
+        <vdk:property name="instrument" value="true"/>
+    </vdk:channel>
+    <vdk:channel name="display_channel1" type="arc_memory_channel">
+        <vdk:producer name="thd_rendermain1"/>
+        <vdk:consumer name="thd_displaymain"/>
+        <vdk:property name="memory_component_instance_name" value="imemory_model"/>
+        <vdk:property name="memory_bank_path" value="xsdram_memoryMapRef.xsdram_Bank0.bank0"/>
+        <vdk:property name="buffer_size" value="256"/>
+        <vdk:property name="instrument" value="true"/>
+    </vdk:channel>
+    <vdk:memorypool name="raster_pool" type="arc_circular_buffer_memory_pool" numNodes="8"
+                    nodeSize="25344">
+        <vdk:description>raster_pool holds the rasters for the display</vdk:description>
+        <vdk:producer name="thd_displaymain"/>
+        <vdk:consumer name="thd_rendermain0"/>
+        <vdk:consumer name="thd_rendermain1"/>
+        <vdk:property name="memory_component_instance_name" value="imemory_model"/>
+        <vdk:property name="memory_bank_path" value="xsdram_memoryMapRef.xsdram_Bank0.bank0"/>
+    </vdk:memorypool>
+    <vdk:memorypool name="grcmd_pool" type="arc_memory_pool" numNodes="512" nodeSize="128">
+        <vdk:description>grcmd_pool holds the messages to the renderer</vdk:description>
+        <vdk:producer name="thd_rendermain0"/>
+        <vdk:producer name="thd_rendermain1"/>
+        <vdk:consumer name="thd_grmain"/>
+        <vdk:property name="memory_component_instance_name" value="imemory_model"/>
+        <vdk:property name="memory_bank_path" value="xsdram_memoryMapRef.xsdram_Bank0.bank0"/>
+    </vdk:memorypool>
+    <vdk:section name=".aframe" process="displaymain">
+        <vdk:map instance="imemory_model" path="xsdram_memoryMapRef.xsdram_Bank0.bank0"/>
+    </vdk:section>
+    <vdk:vendorExtensions>
+        <systemDesigner>
+            <routing router ="1"/>
+            <element name="thd_grmain" x="20" y="95" width="100" height="50"/>
+            <element name="render_channel0" x="170" y="32" width="100" height="25"/>
+            <element name="display_channel0" x="470" y="32" width="100" height="25"/>
+            <element name="thd_rendermain0" x="320" y="20" width="100" height="50"/>
+            <element name="render_channel1" x="170" y="182" width="100" height="25"/>
+            <element name="display_channel1" x="470" y="182" width="100" height="25"/>
+            <element name="thd_rendermain1" x="320" y="170" width="100" height="50"/>
+            <element name="thd_displaymain" x="620" y="95" width="100" height="50"/>
+            <element name="grcmd_pool" x="170" y="320" width="100" height="50"/>
+            <element name="raster_pool" x="470" y="320" width="100" height="50"/>
+        </systemDesigner>
+    </vdk:vendorExtensions>
+</vdk:software>

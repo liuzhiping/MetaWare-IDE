@@ -1,0 +1,6 @@
+<view name="org.eclipse.debug.ui.BreakpointView">
+    <tree>
+        <item text="${WORKSPACE}/Queens_AC/queens.c [function: Try] [type: Hardware]" checked="true"/>
+        <item text="${WORKSPACE}/Queens_AC/queens.c [function: main]" selected="true" checked="true"/>
+    </tree>
+</view>

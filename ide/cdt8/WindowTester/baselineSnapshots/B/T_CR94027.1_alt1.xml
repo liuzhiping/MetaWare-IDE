@@ -1,0 +1,8 @@
+<view name="org.eclipse.debug.ui.BreakpointView">
+    <tree>
+        <item text="${WORKSPACE}/graphics_pipeline_LINUX/code/displaymain/displaymain [address: 0x0000080c]" checked="true"/>
+        <item text="${WORKSPACE}/graphics_pipeline_LINUX/code/rendermain0/rendermain0 [address: 0x0000080c]" checked="true"/>
+        <item text="${WORKSPACE}/graphics_pipeline_LINUX/code/rendermain1/rendermain1 [address: 0x0000080c]" selected="true" checked="true"/>
+        <item text="${WORKSPACE}/graphics_pipeline_LINUX/src/grmain.c [line: 121]+0x8" checked="true"/>
+    </tree>
+</view>

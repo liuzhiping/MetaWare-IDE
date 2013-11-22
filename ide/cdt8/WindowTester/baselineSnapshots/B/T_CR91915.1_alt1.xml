@@ -1,0 +1,17 @@
+<view>
+    <combo text="MetaWare C/C++ Includes & Symbol Discovery for ARCompact">
+        <item>ScannerConfigurationDiscoveryProfile</item>
+        <item>MetaWare C/C++ Includes & Symbol Discovery for ARCompact</item>
+        <item>MetaWare C/C++ Includes & Symbol Discovery for ARC 4</item>
+        <item>MetaWare C/C++ Includes & Symbol Discovery for ARM</item>
+        <item>MetaWare C/C++ Includes & Symbol Discovery for Linux Native</item>
+        <item>MetaWare C/C++ Includes & Symbol Discovery for VideoCore</item>
+        <item>GCC per project scanner info profile</item>
+        <item>Managed Build System - per project scanner info profile (GCCManagedMakePerProjectProfile)</item>
+        <item>Managed Build System - per project scanner info profile (GCCManagedMakePerProjectProfileC)</item>
+        <item>Managed Build System - per project scanner info profile (GCCManagedMakePerProjectProfileCPP)</item>
+        <item>Managed Build System - per project scanner info profile (GCCWinManagedMakePerProjectProfile)</item>
+        <item>Managed Build System - per project scanner info profile (GCCWinManagedMakePerProjectProfileC)</item>
+        <item>Managed Build System - per project scanner info profile (GCCWinManagedMakePerProjectProfileCPP)</item>
+    </combo>
+</view>

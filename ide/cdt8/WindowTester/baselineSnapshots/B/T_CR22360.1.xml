@@ -1,0 +1,204 @@
+<toolSettings>
+    <compiler name="MetaWare ARC C/C++ Compiler" options="-O1 -g -Hnocopyr -arc600 -core1 -Haom -Hon=aom_rtos_aware">
+        <option name="Include Profiling Information (-pg) (affects linking also)" command="-pg" value="false"/>
+        <option name="Display copyright (-Hnocopyr)" commandFalse="-Hnocopyr" value="false"/>
+        <option name="Additional Compiler Flags">
+        </option>
+        <option name="Pragma specifications [e.g., offwarn(123)]" command="-Hpragma=">
+        </option>
+        <option name="Preserve generated assembly files" command="-Hkeepasm" value="false"/>
+        <option name="Annotate assembly files (-Hanno)" command="-Hanno" enabled="false"/>
+        <option name="Optimization Level (-O...)" value="Fastest compile (-O1)"/>
+        <option name="Debug Level (-g, -g0, -g1)" value="Emit full debug information (-g)"/>
+        <option name="Inline certain ANSI functions" commandFalse="-Hoff=recognize_library" value="true"/>
+        <option name="Suppress all function inlining (-Hnoinline)" command="-Hnoinline" value="false"/>
+        <option name="Suppress generation of zero-delay loops (-Os1)" command="-Os1" enabled="false"/>
+        <option name="Always map enum types to full word" command="-Hon=long_enums" value="false"/>
+        <option name="Map uninitialized globals as "common"" command="-Hon=multiple_var_defs" value="false"/>
+        <option name="Small-data section" commandFalse="-Hnosdata" value="Enable (Default)"/>
+        <option name="Endian" value="Little Endian"/>
+        <option name="Map each function in its own text section" command="-Hon=each_function_in_own_section" value="false"/>
+        <option name="Bypass cache to reference volatile variables" commandFalse="-Hoff=volatile_cache_bypass" value="true"/>
+        <option name="Map uncached data into .ucdata section" commandFalse="-Hoff=uncached_in_own_section" value="true"/>
+        <option name="Preprocessor Defines (one per line)" command="-D">
+        </option>
+        <option name="Preprocessor Undefines (one per line)" command="-U">
+        </option>
+        <option name="Include Directories (one per line)" command="-I">
+        </option>
+        <option name="Make all pointers assignment compatible" command="-Hon=pointers_compatible" value="false"/>
+        <option name="Make pointers compatible with integers" command="-Hon=pointers_compatible_with_ints" value="false"/>
+        <option name="Make "char" signed by default" command="-Hoff=char_default_unsigned" value="false"/>
+        <option name="Treat "char" and the signed/unsigned equivalent the same" command="-Hon=char_is_rep" value="false"/>
+        <option name="Be compatible with the Portable C Compiler (PCC)" command="-Hpcc" value="false"/>
+        <option name="Embedded C++ (-Hecpp)" command="-Hecpp" value="false"/>
+        <option name="Generate Exception-Aware Code (-Hexcept)" command="-Hexcept" value="false"/>
+        <option name="Recognize "bool" keyword (C++ only)" commandFalse="-Hoff=bool" value="true"/>
+        <option name="Restrict scope of for-loop variables" commandFalse="-Hoff=for_dcln_local" value="true"/>
+        <option name="Behaved - assume program is "behaved"" value="Default"/>
+        <option name="Call_trace - Generate tracing code at each call" command="-Hon=Call_trace" value="false"/>
+        <option name="Command_line_ident - emit compiler version in object file" commandFalse="-Hoff=command_line_ident" value="true"/>
+        <option name="Common_in_small_data" commandFalse="-Hoff=common_in_small_data" value="true"/>
+        <option name="Define_static_members - implicitly define static class variables (C++)" command="-Hon=define_static_members" value="false"/>
+        <option name="Double_math_only - do floating point in double precision" value="Default"/>
+        <option name="Double_return - non-prototyped functions returning "float" treated as double" command="-Hon=double_return" value="false"/>
+        <option name="Downshift_file_names - downshift file names in all #include directives" command="-Hon=downshift_file_names" value="false"/>
+        <option name="Epilog_trace - display each function exit" command="-Hon=epilog_trace" value="false"/>
+        <option name="Int_function_warnings -- warn about functions with no return type" command="-Hon=int_function_warnings" value="false"/>
+        <option name="Normalize_file_names" command="-Hon=normalize_file_names" value="false"/>
+        <option name="Packed_means_unaligned - Suppress the alignment of packed structs" command="-Hon=packed_means_unaligned" value="false"/>
+        <option name="Parm_assignment_warnings - warn about assignments into parameters" command="-Hon=parm_assignment_warnings" value="false"/>
+        <option name="Prolog_trace - display function name in prolog" command="-Hon=prolog_trace" value="false"/>
+        <option name="Read_only_strings -- map all strings in read-only section" value="Default"/>
+        <option name="Recognize_library - Inline certain functions of ANSI C library" commandFalse="-Hoff=recognize_library" value="true"/>
+        <option name="Recognize_trigraphs" value="Default"/>
+        <option name="ARC Core Version" value="ARC 600"/>
+        <option name="ARC 5 Core" enabled="false"/>
+        <option name="ARC 600 Core" value="Core 1"/>
+        <option name="ARC 700 Core" enabled="false"/>
+        <option name="Common extensions (-Xlib)" command="-Xlib" value="false"/>
+        <option name="Barrel shifter (-Xbs)" command="-Xbs" enabled="false"/>
+        <option name="Shift Assist (-Xsa)" command="-Xsa" enabled="false"/>
+        <option name="32-bit multiply instruction (-Xmult32)" command="-Xmult32" value="false"/>
+        <option name="Machine cycles for mult32 instruction (-Xmult32_cycles=)" enabled="false"/>
+        <option name="16-by-16-bit multiply(-Xmpy16)" command="-Xmpy16" value="false"/>
+        <option name="32-bit multiply instruction (-Xmpy)" command="-Xmpy" enabled="false"/>
+        <option name="Integer divide (-Xdiv_rem)" command="-Xdiv_rem" enabled="false"/>
+        <option name="Normalize instruction (-Xnorm)" command="-Xnorm" value="false"/>
+        <option name="Swap instruction (-Xswap)" command="-Xswap" value="false"/>
+        <option name="Code density extension (-Xcd)" command="-Xcd" enabled="false"/>
+        <option name="Atomic option (-Xatomic)" command="-Xatomic" enabled="false"/>
+        <option name="Use Timer 0 (-Xtimer0)" command="-Xtimer0" value="false"/>
+        <option name="Use timer 1 (-Xtimer1)" command="-Xtimer1" value="false"/>
+        <option name="Reduced register set (-rf16)" command="-rf16" enabled="false"/>
+        <option name="Compact Single-precision floating point (-Xspfp_compact)" command="-Xspfp_compact" value="false"/>
+        <option name="Fast Single-precision floating point (-Xspfp_fast)" command="-Xspfp_fast" value="false"/>
+        <option name="Compact Double-precision floating point (-Xdpfp_compact)" command="-Xdpfp_compact" value="false"/>
+        <option name="Fast Double-precision floating point (-Xdpfp_fast)" command="-Xdpfp_fast" value="false"/>
+        <option name="Extended arithmetic (-Xea)" command="-Xea" value="false"/>
+        <option name="Dual viterbi butterfly (-Xdvbf)" command="-Xdvbf" value="false"/>
+        <option name="Variable polynomial CRC (-Xcrc)" command="-Xcrc" value="false"/>
+        <option name="32x16 multiply instructions (-Xmul32x16)" command="-Xmul32x16" value="false"/>
+        <option name="24x24 XMAC (-Xxmac_24)" command="-Xxmac_24" value="false"/>
+        <option name="Dual 16x16 XMAC (-Xxmac_d16)" command="-Xxmac_d16" value="false"/>
+        <option name="Dual 32x16 multiply-accumulate (-Xdmulpf) [requires XY memory]" command="-Xdmulpf" enabled="false"/>
+        <option name="XY Memory (-Xxy)" command="-Xxy" value="false"/>
+        <option name="Harvard memory convention (-Hharvard)" command="-Hharvard" value="false"/>
+        <option name="Memory Model" value="Medium (default)"/>
+        <option name="Position-independent code (-Hpictable)" command="-Hpictable" value="false"/>
+        <option name="Code contains or will use overlays (-Haom)" command="-Haom" value="true"/>
+        <option name="AOM code subject to multi-tasking (-Hon=aom_rtos_aware)" command="-Hon=aom_rtos_aware" value="true"/>
+        <option name="Require that all code reside in overlays (-Haom_overlay_only)" command="-Haom_overlay_only" value="false"/>
+        <option name="Minimum pad bytes between overlays (-Hmin_overlay_set_pad)" command="-Hmin_overlay_set_pad=" value=""/>
+        <option name="Enable MX Support (-Xsimd) [ARC700 only]" command="-Xsimd" enabled="false"/>
+        <option name="Add VRaptor Support (-Xvraptor)" command="-Xvraptor" enabled="false"/>
+    </compiler>
+    <linker name="MetaWare Linker" options="-Hldopt=-q -e_start -arc600 -Haom -Haom_nolib">
+        <option name="Link in the Hostlink Libraries" commandFalse="-Hhostlib=" value="true"/>
+        <option name="Include profiling code (-pg)" command="-pg" value="false"/>
+        <option name="Endian" value="Little Endian"/>
+        <option name="Link in default startup code (-Hnocrt)" commandFalse="-Hnocrt" value="true"/>
+        <option name="Link in standard C/C++ library (-Hnolib)" commandFalse="-Hnolib" value="true"/>
+        <option name="Include RTOS-specific thread library" value="(None)"/>
+        <option name="Target Runtime Libraries" value="ARC 600"/>
+        <option name="Timer for hardware profiling" enabled="false"/>
+        <option name="Compact Single-precision floating point libraries (-Xspfp_compact)" command="-Xspfp_compact" value="false"/>
+        <option name="Fast Single-precision floating point libraries (-Xspfp_fast)" command="-Xspfp_fast" value="false"/>
+        <option name="Compact Double-precision floating point libraries (-Xdpfp_compact)" command="-Xdpfp_compact" value="false"/>
+        <option name="Fast Double-precision floating point libraries (-Xdpfp_fast)" command="-Xdpfp_fast" value="false"/>
+        <option name="Library Search Paths (for -lx)" command="-L">
+        </option>
+        <option name="Additional Object Files && Libraries">
+        </option>
+        <option name="SVR3-style command files">
+        </option>
+        <option name="SVR4-style command files" command="-Hldopt=-M">
+        </option>
+        <option name="Generate listing file (=.map)" command="-Hldopt=-Coutput=${BuildArtifactFileBaseName}.map" value="false"/>
+        <option name="Display cross-reference in map file (-Ccrossref)" command="-Hldopt=-Ccrossref" enabled="false"/>
+        <option name="Display cross-reference against referencing function (-Ccrossfunc)" command="-Hldopt=-Ccrossfunc" enabled="false"/>
+        <option name="Display globals in map file (-Cglobals)" command="-Hldopt=-Cglobals" enabled="false"/>
+        <option name="Display symbols referenced from each function (-Cfunctions)" command="-Hldopt=-Cfunctions" enabled="false"/>
+        <option name="Display section mappings (-Csections)" command="-Hldopt=-Csections" enabled="false"/>
+        <option name="Display symbol table (-Csymbols)" command="-Hldopt=-Csymbols" enabled="false"/>
+        <option name="Display summary of linker-generated tables (-Ctables)" command="-Hldopt=-Ctables" enabled="false"/>
+        <option name="Unmangle C++ names (-Cunmangle)" command="-Hldopt=-Cunmangle" enabled="false"/>
+        <option name="List unreferenced files or sections (-zlistunref)" command="-Hldopt=-zlistunref" value="false"/>
+        <option name="Generate PIC table (-Hpictable)" command="-Hpictable" value="false"/>
+        <option name="Initialize read/write data from ROM .initdat section (-Bcopydata)" command="-Bcopydata" value="false"/>
+        <option name="Zero BSS at startup (-Bzerobss)" command="-Bzerobss" value="false"/>
+        <option name="Purge unreferenced text sections (-zpurgetext)" command="-zpurgetext" value="false"/>
+        <option name="Compress the .initdat section content (-Xnocompress)" commandFalse="-Hldopt=-Xnocompress" value="true"/>
+        <option name="Show compression statistics for .initdata section (-Xcompress_stats)" command="-Hldopt=-Xcompress_stats" value="false"/>
+        <option name="Display copyright (-q)" commandFalse="-Hldopt=-q" value="false"/>
+        <option name="Additional options for linking (one per line)">
+        </option>
+        <option name="Search libraries together as a group (-Bgrouplib)" command="-Bgrouplib" value="false"/>
+        <option name="Entry point (-e)" command="-e" value="_start"/>
+        <option name="Permit duplicate symbols with warning (-zdups)" command="-zdup" value="false"/>
+        <option name="Common extensions (-Xlib)" command="-Xlib" value="false"/>
+        <option name="Barrel shifter (-Xbs)" command="-Xbs" enabled="false"/>
+        <option name="Shift Assist (-Xsa)" command="-Xsa" enabled="false"/>
+        <option name="32-bit multiply instruction (-Xmult32)" command="-Xmult32" value="false"/>
+        <option name="16-by-16-bit multiply(-Xmpy16)" command="-Xmpy16" value="false"/>
+        <option name="32-bit multiply instruction (-Xmpy)" command="-Xmpy" enabled="false"/>
+        <option name="Integer divide (-Xdiv_rem)" command="-Xdiv_rem" enabled="false"/>
+        <option name="Normalize instruction (-Xnorm)" command="-Xnorm" value="false"/>
+        <option name="Swap instruction (-Xswap)" command="-Xswap" value="false"/>
+        <option name="Code density extension (-Xcd)" command="-Xcd" enabled="false"/>
+        <option name="Atomic option (-Xatomic)" command="-Xatomic" enabled="false"/>
+        <option name="Reduced Register Set (-rf16)" command="-rf16" enabled="false"/>
+        <option name="Extended arithmetic (-Xea)" command="-Xea" value="false"/>
+        <option name="Dual viterbi butterfly (-Xdvbf)" command="-Xdvbf" value="false"/>
+        <option name="Variable polynomial CRC (-Xcrc)" command="-Xcrc" value="false"/>
+        <option name="32x16 multiply instructions (-Xmul32x16)" command="-Xmul32x16" value="false"/>
+        <option name="24x24 XMAC (-Xxmac_24)" command="-Xxmac_24" value="false"/>
+        <option name="Dual 16x16 XMAC (-Xxmac_d16)" command="-Xxmac_d16" value="false"/>
+        <option name="Harvard memory convention (-Hharvard)" command="-Hharvard" value="false"/>
+        <option name="XY Memory (-Xxy)" command="-Xxy" value="false"/>
+        <option name="Overlay support required (-Haom)" command="-Haom" value="true"/>
+        <option name="Link in AOM library (!-Haom_nolib)" commandFalse="-Haom_nolib" value="false"/>
+        <option name="Require that all code reside in overlays (-Haom_overlay_only)" command="-Boverlay_package" value="false"/>
+    </linker>
+    <assembler name="ARCompact Assembler" options="-Hldopt=-q -e_start -arc600 -Haom -Haom_nolib">
+        <option name="Preprocessor Defines (one per line)" command="-Hasopt=-D">
+        </option>
+        <option name="Preprocessor Undefines (one per line)" command="-Hasopt=-U">
+        </option>
+        <option name="Place private labels into symbol table (-L)" command="-Hasopt=-L" value="false"/>
+        <option name="Include debug line information (-g)" command="-Hasopt=-g" value="true"/>
+        <option name="Display copyright (-Hnocopyr)" commandFalse="-Hnocopyr" value="false"/>
+        <option name="Additional assembler options">
+        </option>
+        <option name="Suppress warning messages (-w)" command="-Hasopt=-w" value="false"/>
+        <option name="Endian" value="Little Endian"/>
+        <option name="Allow C-style escapes in strings" commandFalse="-Hasopt=-off=esc" value="true"/>
+        <option name="Directories to search for .include files" command="-Hasopt=-I">
+        </option>
+        <option name="ARC Core Version" value="ARC 600"/>
+        <option name="ARC 5 Core" enabled="false"/>
+        <option name="ARC 600 Core" value="Core 1"/>
+        <option name="ARC 700 Core" enabled="false"/>
+        <option name="Common extensions (-Xlib)" command="-Xlib" value="false"/>
+        <option name="Barrel shifter (-Xbs)" command="-Xbs" enabled="false"/>
+        <option name="Shift Assist (-Xsa)" command="-Xsa" enabled="false"/>
+        <option name="32-bit multiply instruction (-Xmult32)" command="-Xmult32" value="false"/>
+        <option name="16-by-16-bit multiply(-Xmpy16)" command="-Xmpy16" value="false"/>
+        <option name="32-bit multiply instruction (-Xmpy)" command="-Xmpy" enabled="false"/>
+        <option name="Integer divide (-Xdiv_rem)" command="-Xdiv_rem" enabled="false"/>
+        <option name="Normalize instruction (-Xnorm)" command="-Xnorm" value="false"/>
+        <option name="Swap instruction (-Xswap)" command="-Xswap" value="false"/>
+        <option name="Code density extension (-Xcd)" command="-Xcd" enabled="false"/>
+        <option name="Atomic option (-Xatomic)" command="-Xatomic" enabled="false"/>
+        <option name="Use Timer 0 (-Xtimer0)" command="-Xtimer0" value="false"/>
+        <option name="Use timer 1 (-Xtimer1)" command="-Xtimer1" value="false"/>
+        <option name="Reduced Register Set (-rf16)" command="-rf16" enabled="false"/>
+        <option name="Extended arithmetic (-Xea)" command="-Xea" value="false"/>
+        <option name="Dual viterbi butterfly (-Xdvbf)" command="-Xdvbf" value="false"/>
+        <option name="Variable polynomial CRC (-Xcrc)" command="-Xcrc" value="false"/>
+        <option name="32x16 multiply instructions (-Xmul32x16)" command="-Xmul32x16" value="false"/>
+        <option name="24x24 XMAC (-Xxmac_24)" command="-Xxmac_24" value="false"/>
+        <option name="Dual 16x16 XMAC (-Xxmac_d16)" command="-Xxmac_d16" value="false"/>
+        <option name="XY Memory (-Xxy)" command="-Xxy" value="false"/>
+    </assembler>
+</toolSettings>

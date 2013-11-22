@@ -1,0 +1,103 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN" "http://www.w3.org/MarkUp/Wilbur/HTML32.dtd">
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+    <meta name="GENERATOR" content="Quadralay WebWorks Publisher 2003 for FrameMaker 8.0.0.1194">
+    <meta name="TEMPLATEBASE" content="temp">
+    <link rel="StyleSheet" href="document.css" type="text/css" media="screen">
+    <title>Entering Input to the Application Being Debugged</title>
+  </head>
+
+  <body>
+
+    <table width="100%" border="0" cellpadding="0" cellspacing="0" class="header">
+      <tr>
+<!--Disabling Breadcrumbs to use Eclipse version 10/2009
+        <td class="breadcrumbs">
+	<a href="ide_guid.htm"> DesignWare ARC MetaWare IDE User's Guide </a> > <a href="tasks.htm"><br>Tasks</a> > <a href="debuggih.htm">Debugging with Application Input and Output</a> > Entering Input to the Application Being Debugged
+        </td>
+-->
+        <td align="right" valign="top" class="navigator" nowrap>
+<a href="debuggih.htm"><img src="images/sprev.gif" border="0" alt="Previous"></a><a href="mw_t_pou.htm"><img src="images/snext.gif" border="0" alt="Next"></a>
+        </td>
+      </tr>
+    </table>
+
+    <hr align="left">
+
+    <blockquote>
+<h4 >
+Entering Input to the Application Being Debugged
+<a name="wp918116"> </a></h4>
+
+<p >
+You can enter input into the application you are debugging using the <b>Console</b> view as <code>stdin</code>.
+<a name="wp710878"> </a></p>
+<a name="wp710879">
+  <h5 >
+Example
+ </a></h5>
+<ol type="1"> <li  value="1">Open your application source in the <b>Editor</b> view. <a name="wp710880"> </a>
+ <li  value="2">Enter the following code: <a name="wp710881"> </a>
+</ol><blockquote >
+
+
+<table border="0" cellpadding="5" cellspacing="1" class="textlayout">
+
+  <tr>
+    <td><pre ><code>#include stdio.h
+char c;
+c = getc(stdin);
+putc (c, stdout);
+fflush(stdout);
+</code><a name="wp927604"></a></pre>
+</td>
+  </tr>
+</table>
+
+
+
+
+
+<a name="wp927590"> </a></blockquote>
+ <ol type="1"> <li  value="3">Save the file and select <b>Project &gt; Build All</b>.<a name="wp710886"> </a>
+ <li  value="4">Select or specify a debug configuration, and start debugging. <a name="wp884189"> </a>
+ <li  value="5">Step until you reach <code>c = getc(stdin);</code> <a name="wp710887"> </a>
+ <li  value="6">Click in the <b>Console</b> view and enter a character, then press <font >Enter</font>. <div align="left"><img src="images/sc_enter.gif" alt="Enter a character in the console" border="0" hspace="0" vspace="0"></div><a name="wp710888"> </a>
+ <li  value="7">Step again. <a name="wp710893"> </a>
+ <li  value="8">Open a <b>Variables</b> window and note the value of <code>c</code>. <a name="wp710894"> </a>
+ <li  value="9">Step until the character you entered is echoed to the screen. <a name="wp710895"> </a>
+</ol><blockquote >
+<div align="left"><img src="images/sc_char_.gif" alt="Character echoed to stdout" border="0" hspace="0" vspace="0"></div>
+
+<a name="wp710899"> </a></blockquote>
+ <a name="wp918139">
+  <h5 >
+Related Tasks
+ </a></h5>
+<ul> <li ><a href="mw_t_run.htm#wp913987">Defining MetaWare Debugger Settings</a><a name="wp918143"> </a>
+ <li ><a href="mw_o_var.htm#wp866220">Debugging: Working with Variables</a><a name="wp918151"> </a>
+</ul><a name="wp918144">
+  <h5 >
+Related Reference
+ </a></h5>
+<ul> <li >Eclipse <em>C/C++ Development User Guide</em><a name="wp918148"> </a>
+</ul>
+    </blockquote>
+    <p></p>
+    <hr>
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" class="footer">
+      <tr>
+        <td>
+
+        </td>
+        <td align="right" valign="top" class="navigator">
+<a href="debuggih.htm"><img src="images/sprev.gif" border="0" alt="Previous"></a><a href="mw_t_pou.htm"><img src="images/snext.gif" border="0" alt="Next"></a>
+        </td>
+      </tr>
+    </table>
+<p> <font size="-3">
+Copyright © 2012 Synopsys, Inc. <br />
+Some portions of this document copyright IBM Corporation and others 2000, 2004.</font></p>
+  </body>
+</html>

@@ -1,0 +1,20 @@
+#Tue Dec 18 09:39:08 PST 2007
+com.arc.cdt.toolchain.arc.exeDebugConfig.1613681369/internalBuilder/enabled=false
+com.arc.cdt.toolchain.arc.exeDebugConfig.1613681369/internalBuilder/ignoreErr=true
+com.arc.cdt.toolchain.arc.exeDebugConfig.600732109/internalBuilder/enabled=false
+com.arc.cdt.toolchain.arc.exeDebugConfig.600732109/internalBuilder/ignoreErr=true
+com.arc.cdt.toolchain.arc.exeReleaseConfig.1456689645/internalBuilder/enabled=false
+com.arc.cdt.toolchain.arc.exeReleaseConfig.1456689645/internalBuilder/ignoreErr=true
+com.arc.cdt.toolchain.arc.exeReleaseConfig.1657912486/internalBuilder/enabled=false
+com.arc.cdt.toolchain.arc.exeReleaseConfig.1657912486/internalBuilder/ignoreErr=true
+com.arc.cdt.toolchain.arc.libDebugConfig.783446289/internalBuilder/enabled=false
+com.arc.cdt.toolchain.arc.libDebugConfig.783446289/internalBuilder/ignoreErr=true
+com.arc.cdt.toolchain.arc.libReleaseConfig.1231848185/internalBuilder/enabled=false
+com.arc.cdt.toolchain.arc.libReleaseConfig.1231848185/internalBuilder/ignoreErr=true
+com.arc.cdt.toolchain.arc4.exeDebugConfig.1449688710/internalBuilder/enabled=false
+com.arc.cdt.toolchain.arc4.exeDebugConfig.1449688710/internalBuilder/ignoreErr=true
+com.arc.cdt.toolchain.arc4.exeReleaseConfig.1679263139/internalBuilder/enabled=false
+com.arc.cdt.toolchain.arc4.exeReleaseConfig.1679263139/internalBuilder/ignoreErr=true
+eclipse.preferences.version=1
+environment/project=<?xml version\="1.0" encoding\="UTF-8"?>\r\n<environment/>\r\n
+environment/project/com.arc.cdt.toolchain.arc.exeDebugConfig.600732109=<?xml version\="1.0" encoding\="UTF-8"?>\r\n<environment/>\r\n

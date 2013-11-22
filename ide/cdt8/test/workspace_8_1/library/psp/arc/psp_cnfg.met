@@ -1,0 +1,77 @@
+;HEADER******************************************************************
+;*************************************************************************
+;** 
+;** Copyright (c) 1989-2007 ARC International.
+;** All rights reserved                                          
+;**                                                              
+;** This software embodies materials and concepts which are      
+;** confidential to ARC International and is made
+;** available solely pursuant to the terms of a written license   
+;** agreement with ARC International             
+;**
+;** File: psp_cnfg.met
+;**
+;** Comments:      
+;**   This file contains the assembly language definitions used
+;**   to select the optional behaviour of MQX.
+;**                                                               
+;**
+;*************************************************************************
+;END*********************************************************************/
+
+; If MQX_KERNEL_LOGGING is set to 1,
+; then extra code is compile in to log kernel assembler functions
+.ifndef MQX_KERNEL_LOGGING
+.equ MQX_KERNEL_LOGGING,1
+.endif
+
+; If MQX_SMALL_CODE_SIZE is set to 1,
+; then code is compile in such a fashion to be smaller, but maybe slower
+.ifndef MQX_SMALL_CODE_SIZE
+.equ MQX_SMALL_CODE_SIZE,0
+.endif
+
+; If MQX_FP_REGISTERS_EXIST is set to 1,
+; then the floating point context (registers) are managed by the kernel
+.ifndef MQX_FP_REGISTERS_EXIST
+.equ MQX_FP_REGISTERS_EXIST,0
+.endif
+
+; If MQX_DSP_REGISTERS_EXIST is set to 1,
+; then the dsp context (registers) are managed by the kernel
+.ifndef MQX_DSP_REGISTERS_EXIST
+.equ MQX_DSP_REGISTERS_EXIST,0
+.endif
+
+; If PSP_EXTENDED_INTS_EXIST is set to 1,
+; then the full 32 interrupts will be  supported, otherwise just 16
+; Note: This macro must be set to 1 for ARC700
+.ifndef PSP_EXTENDED_INTS_EXIST
+.equ PSP_EXTENDED_INTS_EXIST,1
+.endif
+
+; If MQX_GUERRILLA_INTERRUPTS_EXIST is set to 1,
+; then extra code is compiled in to minimize the time that interrupts
+; of higher priority than MQX are locked out.
+.ifndef MQX_GUERRILLA_INTERRUPTS_EXIST
+.equ MQX_GUERRILLA_INTERRUPTS_EXIST,0
+.endif
+
+; PSP_ARC700_INTS_EXIST must be set to 1 for ARC700. If it is set to 1,
+; then all interrupts including exceptions will be supported, otherwise 
+; depend on the value of PSP_EXTENDED_INTS_EXIST either full 32 or just
+; 16 interrupts will be supported.
+.ifndef PSP_ARC700_INTS_EXIST
+.equ PSP_ARC700_INTS_EXIST,0
+.endif
+
+; Start CR 2396
+; If MQX_USE_PMU is set to 1,
+; then Power Management Unit is supported in MQX.
+.ifndef MQX_USE_PMU
+.equ MQX_USE_PMU,1
+.endif
+; End CR 2396
+
+
+; EOF

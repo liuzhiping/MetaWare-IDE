@@ -1,0 +1,100 @@
+## Start CR 2346
+-u_int_vector_0
+## End CR2346
+
+MEMORY
+{
+   ## NOTE: MQX builder recognizes these memory names and depends
+   ##       upon them to configure MQX graphically.
+
+   ## Default memory map, EP30.
+   vtable:            origin = 0x00000000, length = 0x00000200
+   romem:             origin = 0x00000800, length = 0x00FFF800 # 16 Meg
+   rwmem:             origin = 0x01000000, length = 0x01000000
+
+   ## Align kernel data_ram to worst case cache line size of 256 bytes
+   kernel_data_ram:   origin = 0x02000000, length = 0x01000000
+
+   flash:             origin = 0x00200000, length = 0x00200000
+
+   ## Memory map for EP20 with no DRAM.
+   ##romem:             origin = 0x00000200, length = 0x00020000 # 128k
+   ##rwmem:             origin = 0x00020200, length = 0x00020000 # 128k
+   ##kernel_data_ram:   origin = 0x00040200, length = 0x00020000 # 128k
+
+}
+
+SECTIONS
+{
+   GROUP : {
+      .vectors: {}
+   } > vtable
+
+   ## Read only code and initialized data.
+   GROUP : {
+      *(TEXT) : {}
+      *(LIT)  : {}
+   } > romem
+
+## Start CR 2036
+   GROUP : {
+   ## Read/write initialized data.
+      .tls? : {}  ## Thread local storage
+      .Xdata? ALIGN(4) BLOCK(4): { * (.Xdata*) }
+      .Ydata? ALIGN(4) BLOCK(4): { * (.Ydata*) }
+      *(DATA) : {}
+
+   ## Read/write "uncacheable" initialized and uninitialized data.
+   ## You will likely locate this to a specific memory region
+   ## containing memory mapped peripherals.
+      .ucdata? : {}
+
+   ## Read/write "small" initialized and uninitialized data.
+      .sdata? : { *(.sdata*) } ## Small initialized data
+      .sbss?  : { *(.sbss*) }  ## Small uninitialized data
+
+   ## Read/write uninitialized data.
+      *(BSS) : {}
+      End_of_Image = ALIGN(16);
+      _end = ALIGN(16);
+      .heap? SIZE(DEFINED _HEAPSIZE?_HEAPSIZE:0) ALIGN(16): {}
+      .stack SIZE(DEFINED _STACKSIZE?_STACKSIZE:1024) ALIGN(16): {}
+   } > rwmem
+## End CR 2036
+}
+
+## Start CR 2282
+## Set system clock for BSP reference
+## __SYSCLKM = 95000000;
+## __SYSCLKM = 70000000;
+__SYSCLKM = 48000000;
+## End CR 2282
+
+## Start CR 2396
+## Set different clock frequency for different DVFS mode 
+## These are currently all set to match the system clock
+## Since the ISS and ARCangel4 don't change frequencies
+## This allows the modes to be used and accurately log
+## The time spent in each mode
+__DVFS_SYSCLK_1 = 48000000;
+__DVFS_SYSCLK_2 = 48000000;
+__DVFS_SYSCLK_3 = 48000000;
+
+## Power consumption for different DVFS mode in micro watts per sec. 
+__DVFS_PWR_CONSUMPTION_0 = 10000;
+__DVFS_PWR_CONSUMPTION_1 =  5600;
+__DVFS_PWR_CONSUMPTION_2 =  4700;
+__DVFS_PWR_CONSUMPTION_3 =  2800;
+
+## Power concumption for power down in micro watts per sec.
+__PMU_PWR_CONSUMPTION = 1000;
+## End CR 2396
+
+## Verify that kernel memory can be read/written correctly
+__KERNEL_DATA_VERIFY_ENABLE = 0;
+
+## Align kernel data to worst case cache line size of 256 bytes
+__KERNEL_DATA_START    = ADDR(kernel_data_ram);
+__KERNEL_DATA_END      = ADDR(kernel_data_ram) + SIZEOF(kernel_data_ram) - 1;
+
+/* EOF */

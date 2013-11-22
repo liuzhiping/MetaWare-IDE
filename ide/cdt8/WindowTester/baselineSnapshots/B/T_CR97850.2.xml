@@ -1,0 +1,3 @@
+<content>
+-targs=AC -toggle=include_local_symbols=1 -OS=MQX -profile -sim -a6 -Xno_bs -toggle=deadbeef=1 -simextp=SCDIR/bin/termide,term_base=0xfc1000,term_port=1,term_tcpport=5000
+</content>

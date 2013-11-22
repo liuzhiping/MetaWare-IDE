@@ -1,0 +1,149 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN" "http://www.w3.org/MarkUp/Wilbur/HTML32.dtd">
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+    <meta name="GENERATOR" content="Quadralay WebWorks Publisher 2003 for Word 8.0.0.1194">
+    <meta name="TEMPLATEBASE" content="ARCTechPubsv6">
+    <meta name="LASTUPDATED" content="01/27/12 13:02:36">
+<link rel="first" href="tad_help.htm">  <link rel="prev" href="rtcs_igm.htm"><link rel="next" href="rtcs_ipa.htm">
+    <link rel="StyleSheet" href="document.css" type="text/css" media="screen">
+    <title>RTCS IP Configuration Window</title>
+  </head>
+
+  <body>
+
+    <table width="100%" border="0" cellpadding="0" cellspacing="0" class="header">
+      <tr> 
+        <td class="breadcrumbs">
+	<a href="tad_help.htm"> MQX&#174; Task Aware Debug Help</a> > <a href="rtcs_win.htm"> RTCS Windows</a> > RTCS IP Configuration Window
+        </td>
+        <td align="right" valign="top" class="navigator" nowrap>
+<a href="rtcs_igm.htm"><img src="images/sprev.gif" border="0" alt="Previous" title="Previous"></a><a href="rtcs_ipa.htm"><img src="images/snext.gif" border="0" alt="Next" title="Next"></a>
+        </td>
+      </tr>
+    </table>
+
+    <hr align="left">
+
+    <blockquote>
+<h3 ><a name="wp9001223">
+RTCS IP Configuration Window</a></h3>
+
+
+<p >
+<a name="wp9001224">The <b>RTCS IP Configuration</b> window displays the configuration specific to IP.</a></p>
+<p ><b><i><a name="wp9001225">Displayed Fields</a></i></b></p><p ><b><i><a name="wp9001226">Next Packet ID</a></i></b></p><p >
+<a name="wp9001227">Next packet identification number to be used.</a></p>
+<p ><b><i><a name="wp9001228">IP Control Blocks?</a></i></b></p><p >
+<a name="wp9001229">Indicates whether any current IP control blocks (ICBs) exist. Any current ICBs are listed.</a></p>
+<p >
+<a name="wp9001230">RTCS uses ICBs to maintain a connection between IP and the upper-layer protocols. </a></p>
+<table border="1" cellpadding="5" cellspacing="0">
+  <caption></caption>
+  <tr>
+    <td><div ><b><a name="wp9000106">Field Value</a></b></div></td>
+    <td><div ><b><a name="wp9000107">Meaning</a></b></div></td>
+  </tr>
+  <tr>
+    <td><p >
+<a name="wp9000108"><code>ICB</code></a></p>
+</td>
+    <td><div ><a name="wp9000109">Address of the ICB</a></div></td>
+  </tr>
+  <tr>
+    <td><p >
+<a name="wp9000110"><code>Protocol</code></a></p>
+</td>
+    <td><div ><a name="wp9000111">Protocol identifier of the upper-layer protocol that the ICB services</a></div></td>
+  </tr>
+  <tr>
+    <td><p >
+<a name="wp9000112"><code>ServiceFn</code></a></p>
+</td>
+    <td><div ><a name="wp9000113">Address of the function called to service the ICB</a></div></td>
+  </tr>
+  <tr>
+    <td><p >
+<a name="wp9000114"><code>Config Data</code></a></p>
+</td>
+    <td><div ><a name="wp9000115">Parameter for the service function</a></div></td>
+  </tr>
+</table>
+<p ><b><i><a name="wp9001232">Gateways Defined?</a></i></b></p><p >
+<a name="wp9001233">Indicates whether gateways have been defined. Any defined gateways are listed.</a></p>
+<table border="1" cellpadding="5" cellspacing="0">
+  <caption></caption>
+  <tr>
+    <td><div ><b><a name="wp9000116">Field Value</a></b></div></td>
+    <td><div ><b><a name="wp9000117">Meaning</a></b></div></td>
+  </tr>
+  <tr>
+    <td><p >
+<a name="wp9000118"><code>Gateway</code></a></p>
+</td>
+    <td><div ><a name="wp9000119">IP address of the gateway</a></div></td>
+  </tr>
+  <tr>
+    <td><p >
+<a name="wp9000120"><code>NetMask</code></a></p>
+</td>
+    <td><div ><a name="wp9000121">IP (sub)network mask to route</a></div></td>
+  </tr>
+  <tr>
+    <td><p >
+<a name="wp9000122"><code>Network</code></a></p>
+</td>
+    <td><div ><a name="wp9000123">IP (sub)network to route</a></div></td>
+  </tr>
+</table>
+<p ><b><i><a name="wp9001235">Connected Interfaces?</a></i></b></p><p >
+<a name="wp9001236">Indicates whether there are any connected interfaces. Connected interfaces are listed.</a></p>
+<table border="1" cellpadding="5" cellspacing="0">
+  <caption></caption>
+  <tr>
+    <td><div ><b><a name="wp9000124">Field value</a></b></div></td>
+    <td><div ><b><a name="wp9000125">Meaning</a></b></div></td>
+  </tr>
+  <tr>
+    <td><p >
+<a name="wp9000126"><code>NetIF</code></a></p>
+</td>
+    <td><div ><a name="wp9000127">Address of the network interface structure used to maintain the interface</a></div></td>
+  </tr>
+  <tr>
+    <td><p >
+<a name="wp9000128"><code>Address</code></a></p>
+</td>
+    <td><div ><a name="wp9000129">IP address for the interface</a></div></td>
+  </tr>
+  <tr>
+    <td><p >
+<a name="wp9000130"><code>LocMask</code></a></p>
+</td>
+    <td><div ><a name="wp9000131">IP (sub)network mask for the address</a></div></td>
+  </tr>
+  <tr>
+    <td><p >
+<a name="wp9000132"><code>NetMask</code></a></p>
+</td>
+    <td><div ><a name="wp9000133">IP (sub)network mask for the interface</a></div></td>
+  </tr>
+</table>
+<p ><b><i><a name="wp9001238">Controls</a></i></b></p><p ><b><i><a name="wp9001239">Connected Interfaces</a></i></b></p><p >
+<a name="wp9001240">Double-click one of the interfaces in the list to open the RTCS Examine Interface Connection window for the interface.</a></p>
+    </blockquote>
+    <p></p>
+    <hr>
+
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" class="footer">
+      <tr>
+        <td>
+          
+        </td>
+        <td align="right" valign="top" class="navigator">
+<a href="rtcs_igm.htm"><img src="images/sprev.gif" border="0" alt="Previous" title="Previous"></a><a href="rtcs_ipa.htm"><img src="images/snext.gif" border="0" alt="Next" title="Next"></a>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>

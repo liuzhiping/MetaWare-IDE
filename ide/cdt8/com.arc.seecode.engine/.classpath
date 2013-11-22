@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.6"/>
+	<classpathentry kind="con" path="org.eclipse.pde.core.requiredPlugins"/>
+	<classpathentry excluding="**/.svn/**" kind="src" path="Config"/>
+	<classpathentry excluding="**/.svn/**" kind="src" path="CommandLine"/>
+	<classpathentry excluding="**/.svn/**" kind="src" path="Plugin"/>
+	<classpathentry excluding="**/.svn/**" kind="src" path="WireTransport"/>
+	<classpathentry excluding="**/.svn/**" kind="src" path="EngineAPI"/>
+	<classpathentry excluding="**/.svn/**" kind="src" path="guihili"/>
+	<classpathentry excluding="**/.svn/**" kind="src" path="SwtAwtWidgets"/>
+	<classpathentry excluding="**/.svn/**" kind="src" path="Display"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

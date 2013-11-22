@@ -1,0 +1,74 @@
+<HTML>
+<HEAD>
+ <TITLE>Profiling</TITLE>
+ <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+ <LINK rel="StyleSheet" href="../default.css">
+
+</HEAD>
+<BODY>
+<H1>Profiling your program</H1>
+
+<P>You can view a statistical profile of your application in any of the following
+  ways:</P>
+<ul>
+  <li>using the <a href="../displays/Profiling_Display.htm">Profiling</a> window</li>
+  <li>as a separate column in selected windows</li>
+  <li>using profiling-specific windows</li>
+</ul>
+<h3><a name="enabling_profiling"></a>Enabling profiling in a debug session</h3>
+<ol>
+  <li>Compile and link your application with profiling information using options
+    <b><code>-p</code></b> or <b><code>-pg</code></b>.</li>
+  <li>Start the debugger normally. The debugger automatically detects profiling 
+    information in your executable and constructs menus and display windows according 
+    to your target and level of compiled profiling information.</li>
+</ol>
+<ul>
+<li><i>Tip:</i> For ARC targets, you can enable profiling for instruction counts and killed instructions by setting options using the <a href="arctangent_options.htm">Target-Specific Options</a> dialog for ARC targets.</li>
+</ul>
+<h3><a name="disabling_profiling"></a>Disabling profiling</h3>
+<ol>
+  <li>Select <b>Tools | Debugger Options</b>.</li>
+  <li>Click the <b>Command-Line Options</b> tab.</li>
+  <li>Deselect <b>Enable profiling window</b>.<br>
+    <br>
+    You can also disable profiling by using the <code><b>-noprofile</b></code> 
+    option when invoking the debugger on the command-line or adding it to your 
+    <code>.args</code> file. For more information on editing the <code>.sc.args</code> 
+    file, see the <i>MetaWare Debugger User's Guide</i>.</li>
+</ol>
+<h3><a name="viewing_profiling_data"></a>Viewing columns of profiling data or 
+  profiling specific windows</h3>
+<ol>
+  <li>Open the window for which you wish to view profiling information. Displays 
+    that commonly include profiling information are: <b>Source</b>, <b>Disassembly</b>, 
+    <b>Global Functions</b>, <b>Memory</b>, and <b>Hardware Stack</b>. Inclusion 
+    of profiling information in different windows depends on your target.</li>
+  <li>Right-click in the window.</li>
+  <li>Select <b>Profiling | &lt;menuitem&gt;</b>, where <b>&lt;menuitem&gt;</b> 
+    is any of the available menu items. Menu items on the top of the menu add 
+    columns of profiling information such as interrupt counts on the left of the 
+    window. Menu items on the bottom open profiling-specific windows.</li>
+</ol>
+<h3>Troubleshooting profiling</h3>
+<P><span style="font-style: italic;">Problem:</span> </P>
+<P><b>Profiling</b> menu item does not appear in <b>Displays</b> menu or <b>Profiling</b> 
+  menu item is not available in the right-click menu of any window. </P>
+<P><i>Possible solutions:</i></P>
+<ul>
+  <li>Recompile your program with profiling information using the <b>-p</b> or
+    <b>-pg</b> options. Also compile with debug information using the <b>-g</b>
+    option.</li>
+  <li>Restart the debugger on the command line using option <b>-profile</b>. Profiling
+    information is enabled by default, but option <b>-noprofile</b> may have been
+    previously set for the debug project.</li>
+  <li>The problem may be a result of your target not supporting profiling for
+    a hardware target or DLL. The <a href="../displays/ISS.htm">ISS</a> fully
+    supports profiling. Try changing your target to the ISS; see Selecting your
+    Target.</li>
+</ul><!--
+<P><span style="font-style: italic;">Problem: </span>Profiling display provides the following warning: &quot;Warning: profiling
+  timer not present!&quot;</P>-->
+<p>&nbsp;</p>
+</BODY>
+</HTML>

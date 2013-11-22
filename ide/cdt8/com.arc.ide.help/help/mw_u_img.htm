@@ -1,0 +1,152 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN" "http://www.w3.org/MarkUp/Wilbur/HTML32.dtd">
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+    <meta name="GENERATOR" content="Quadralay WebWorks Publisher 2003 for FrameMaker 8.0.0.1194">
+    <meta name="TEMPLATEBASE" content="temp">
+    <link rel="StyleSheet" href="document.css" type="text/css" media="screen">
+    <title>Image Window</title>
+  </head>
+
+  <body>
+
+    <table width="100%" border="0" cellpadding="0" cellspacing="0" class="header">
+      <tr>
+<!--Disabling Breadcrumbs to use Eclipse version 10/2009
+        <td class="breadcrumbs">
+	<a href="ide_guid.htm"> DesignWare ARC MetaWare IDE User's Guide </a> > <a href="referenc.htm"><br>Reference</a> > <a href="mw_u_db_.htm">Debugger Windows and Views</a> > Image Window
+        </td>
+-->
+        <td align="right" valign="top" class="navigator" nowrap>
+<a href="mw_u_cac.htm"><img src="images/sprev.gif" border="0" alt="Previous"></a><a href="img_mem.htm"><img src="images/snext.gif" border="0" alt="Next"></a>
+        </td>
+      </tr>
+    </table>
+
+    <hr align="left">
+
+    <blockquote>
+<h4 >
+Image Window
+<a name="wp911053"> </a></h4>
+
+<p >
+The <b>Image</b> window displays an image from data memory or other sources such as registers. 
+<a name="wp911054"> </a></p>
+<p >
+The image may be in one of several formats:
+<a name="wp911056"> </a></p>
+<ul> <li >		a sequence of bytes representing an 8-bit grayscale image <a name="wp911057"> </a>
+ <li >		a sequence of halfwords representing a 16-bit grayscale image <a name="wp911058"> </a>
+ <li >		a sequence of 32-bit words representing an ARGB (alpha-red-green-blue) image <a name="wp911059"> </a>
+ <li >		a sequence of halfwords representing packed RGB (R5, G6, B5) <a name="wp911060"> </a>
+ <li >		4:2:0 YUV color<a name="wp911061"> </a>
+</ul><a name="wp911064">
+  <h5 >
+5.5.6.1	 Configuring the Image Window
+ </a></h5>
+<p >
+To specify the image display:
+<a name="wp911065"> </a></p>
+<ol type="1"> <li  value="1">Open the Image window by selecting <b>Debugger &gt; Image</b> when your application is running in the debugger. <a name="wp911066"> </a>
+ <li  value="2">Right-click in the Image window and select <b>Configure &gt; Configure image parameters</b>. <a name="wp911067"> </a>
+ <li  value="3">Specify parameters in the <b>Configure image parameters</b> dialog. <a name="wp911068"> </a>
+</ol><a name="wp911069">
+  <h5 >
+Reloading Image Parameters
+ </a></h5>
+<p >
+After you specify the parameters and save them, you can reload them:
+<a name="wp911070"> </a></p>
+<ol type="1"> <li  value="1">Open the Image window by selecting <b>Debugger &gt; Image</b> when your application is running in the debugger. <a name="wp911071"> </a>
+ <li  value="2">Right-click in the <b>Image</b> window and select <b>Configure &gt; Reload prior parameters</b>. <a name="wp911072"> </a>
+</ol><blockquote >
+
+
+<table border="1" cellpadding="5" cellspacing="0">
+  <caption></caption>
+  <tr>
+    <td><table border="0" cellpadding="5" cellspacing="0">
+  <caption></caption>
+  <tr valign=top>
+    <td><div ><img border="0" src="images/note.png">
+</div></td>
+    <td><div ></div></td>
+</tr></table>
+<a name="wp997501"> </a>
+</td>
+    <td><div >The image configuration applies to all <b>Image</b> windows. <a name="wp997503"> </a></div></td>
+  </tr>
+</table>
+
+
+
+
+
+<a name="wp997495"> </a></blockquote>
+ <a name="wp911074">
+  <h5 >
+5.5.6.2	 Updating the Image Window
+ </a></h5>
+<p >
+Using the <b>Configure image parameters</b> dialog you can specify whether the display updates the image every time execution stops. If you choose not to do this, such as to save memory traffic, you can click on the <b>Update</b> button to update the window at any time.
+<a name="wp911075"> </a></p>
+<a name="wp911076">
+  <h5 >
+5.5.6.3	 Adjusting the Image Display
+ </a></h5>
+<p >
+An 8-bit grayscale image can be automatically &quot;scaled,&quot; i.e., the range of values found in the image can be expanded to fill the entire 0...255 range. The 16-bit grayscale image is already scaled to 0...255.
+<a name="wp911077"> </a></p>
+<p >
+The image can be flipped and rotated and zoomed by clicking the <b>Flip</b> and <b>Rotate</b> buttons.
+<a name="wp911078"> </a></p>
+<blockquote >
+
+
+<table border="1" cellpadding="5" cellspacing="0">
+  <caption></caption>
+  <tr>
+    <td><table border="0" cellpadding="5" cellspacing="0">
+  <caption></caption>
+  <tr valign=top>
+    <td><div ><img border="0" src="images/note.png">
+</div></td>
+    <td><div ></div></td>
+</tr></table>
+<a name="wp997518"> </a>
+</td>
+    <td><div >Zooming might not work on some versions of Windows. The symptom is that the image disappears for all zoom settings except 1:1.<a name="wp997520"> </a></div></td>
+  </tr>
+</table>
+
+
+
+
+
+<a name="wp997512"> </a></blockquote>
+ <a name="wp992004">
+  <h5 >
+Related Reference
+ </a></h5>
+<ul> <li >Eclipse <em>C/C++ Development User Guide</em><a name="wp992008"> </a>
+ <li ><a href="img_mem.htm#wp911101">Image Memory Window</a><a name="wp990812"> </a>
+</ul>
+    </blockquote>
+    <p></p>
+    <hr>
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" class="footer">
+      <tr>
+        <td>
+
+        </td>
+        <td align="right" valign="top" class="navigator">
+<a href="mw_u_cac.htm"><img src="images/sprev.gif" border="0" alt="Previous"></a><a href="img_mem.htm"><img src="images/snext.gif" border="0" alt="Next"></a>
+        </td>
+      </tr>
+    </table>
+<p> <font size="-3">
+Copyright © 2012 Synopsys, Inc. <br />
+Some portions of this document copyright IBM Corporation and others 2000, 2004.</font></p>
+  </body>
+</html>

@@ -1,0 +1,4 @@
+(WARN: file=../vr_dbg.c line=363) Changed mode to INFO
+(INFO: file=../vr_dbg.c line=194) vr_dbg_fa[0:NODE] = 0xC0000001
+(INFO: file=../vr_dbg.c line=194) vr_dbg_fa[1:DSET] = 0xC0000001
+(INFO: file=../vr_dbg.c line=194) vr_dbg_fa[2:SYS] = 0x00000009

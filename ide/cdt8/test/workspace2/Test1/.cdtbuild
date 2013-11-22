@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?fileVersion 3.1.0?>
+
+<ManagedProjectBuildInfo>
+<project id="Test1.com.arc.cdt.toolchain.arc.exeProject.272821998" name="ARCompact Executable" projectType="com.arc.cdt.toolchain.arc.exeProject">
+<configuration artifactExtension="elf" artifactName="Test1" cleanCommand="rm -rf" description="" errorParsers="com.arc.cdt.toolchain.ARCCompilerErrorParser;com.arc.cdt.toolchain.ARCLinkerErrorParser;com.arc.cdt.toolchain.ARCAssemblerErrorParser;org.eclipse.cdt.core.MakeErrorParser" id="com.arc.cdt.toolchain.arc.exeDebugConfig.486731275" name="Debug" parent="com.arc.cdt.toolchain.arc.exeDebugConfig">
+<toolChain id="com.arc.cdt.toolchain.arc.exeToolChainDebug.870376034" name="ARC EXE Tool Chain" superClass="com.arc.cdt.toolchain.arc.exeToolChainDebug">
+<tool id="arc.exe.debug.exeCompilerDebug.1953691171" name="MetaWare ARC C/C++ Compiler" superClass="arc.exe.debug.exeCompilerDebug">
+<option id="arc.compiler.options.aom.70526667" superClass="arc.compiler.options.aom" value="true" valueType="boolean"/>
+<option id="arc.compiler.options.target.version.1921374866" superClass="arc.compiler.options.target.version" value="arc.compiler.options.target.arc700" valueType="enumerated"/>
+<option id="arc.compiler.options.norm.1190796709" superClass="arc.compiler.options.norm" value="true" valueType="boolean"/>
+<option id="arc.compiler.options.swap.1140860560" superClass="arc.compiler.options.swap" value="true" valueType="boolean"/>
+<option id="arc.compiler.options.ea.602315675" superClass="arc.compiler.options.ea" value="true" valueType="boolean"/>
+<option id="arc.compiler.options.timers.timer0.663666419" superClass="arc.compiler.options.timers.timer0" value="true" valueType="boolean"/>
+<option id="arc.compiler.options.timers.timer1.1747569890" superClass="arc.compiler.options.timers.timer1" value="true" valueType="boolean"/>
+</tool>
+<tool id="com.arc.cdt.toolchain.arc.asmDebugExe.948649372" name="ARCompact Assembler" superClass="com.arc.cdt.toolchain.arc.asmDebugExe">
+<option id="arc.compiler.options.target.asm.version.876309091" superClass="arc.compiler.options.target.asm.version" value="arc.compiler.options.target.arc700" valueType="enumerated"/>
+<option id="arc.asm.options.norm.991733637" superClass="arc.asm.options.norm" value="true" valueType="boolean"/>
+<option id="arc.asm.options.swap.1222932338" superClass="arc.asm.options.swap" value="true" valueType="boolean"/>
+<option id="arc.asm.options.ea.805976161" superClass="arc.asm.options.ea" value="true" valueType="boolean"/>
+<option id="arc.asm.options.bs.2140116547" superClass="arc.asm.options.bs" value="true" valueType="boolean"/>
+<option id="arc.asm.options.timers.timer0.1435541990" superClass="arc.asm.options.timers.timer0" value="true" valueType="boolean"/>
+<option id="arc.asm.options.timers.timer1.1947688960" superClass="arc.asm.options.timers.timer1" value="true" valueType="boolean"/>
+</tool>
+<tool id="com.arc.cdt.toolchain.arc.exeLinkerDebug.1221048827" name="MetaWare Linker" superClass="com.arc.cdt.toolchain.arc.exeLinkerDebug">
+<option id="arc.linker.options.aom.157697239" superClass="arc.linker.options.aom" value="true" valueType="boolean"/>
+<option id="arc.linker.options.target.version.1663319950" superClass="arc.linker.options.target.version" value="arc.compiler.options.target.arc700" valueType="enumerated"/>
+<option id="arc.linker.options.norm.10747879" superClass="arc.linker.options.norm" value="true" valueType="boolean"/>
+<option id="arc.linker.options.swap.1438469897" superClass="arc.linker.options.swap" value="true" valueType="boolean"/>
+<option id="arc.linker.options.ea.1888317047" superClass="arc.linker.options.ea" value="true" valueType="boolean"/>
+<option id="arc.linker.options.bs.18276708" superClass="arc.linker.options.bs" value="true" valueType="boolean"/>
+</tool>
+<macros/>
+</toolChain>
+</configuration>
+<macros/>
+</project>
+</ManagedProjectBuildInfo>

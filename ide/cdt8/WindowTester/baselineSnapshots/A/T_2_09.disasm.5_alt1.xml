@@ -1,0 +1,16 @@
+<TextCanvas>
+    <text lineCount="8" selection="-1">
+        <line content="   30       if (Asub(J) && Bsub(I+J) && Csub(I-J)) {">
+            <range start="0" end="52" foreground="#0000ff">
+        <line content="Try+0x2c     mov_s        %r14,0x1_70ac   ; A">
+        <line content="Try+0x32     add_s        %r0,%r14,%r15">
+        <line content="Try+0x34     ldb          %r0,[%r0,-1]">
+        <line content="Try+0x38     breq         %r0,0,0x1_01e2 = Try+0xbe = queens.c!46">
+        <line content="Try+0x3c     add          %r0,%r15,%r17">
+        <line content="Try+0x40     add_s        %r0,%r0,%r14">
+        <line content="Try+0x42     ldb_s        %r0,[%r0,30]">
+    </text>
+    <icon x="19" y="17">
+        <image width="14" height="15">
+             ff ff ff 45 ff d7 ff 0 ff ff        </image>
+</TextCanvas>

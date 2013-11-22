@@ -1,0 +1,39 @@
+#Tue Dec 11 22:43:09 PST 2007
+com.arc.cdt.toolchain.arc.exeDebugConfig.1202055401/internalBuilder/enabled=false
+com.arc.cdt.toolchain.arc.exeDebugConfig.1202055401/internalBuilder/ignoreErr=false
+com.arc.cdt.toolchain.arc.exeDebugConfig.1202055401/internalBuilder/parallel=false
+com.arc.cdt.toolchain.arc.exeDebugConfig.1202055401/internalBuilder/paralleldef=false
+com.arc.cdt.toolchain.arc.exeDebugConfig.1202055401/internalBuilder/parallelnumber=1
+com.arc.cdt.toolchain.arc.exeDebugConfig.131435570/internalBuilder/enabled=false
+com.arc.cdt.toolchain.arc.exeDebugConfig.131435570/internalBuilder/ignoreErr=false
+com.arc.cdt.toolchain.arc.exeDebugConfig.131435570/internalBuilder/parallel=false
+com.arc.cdt.toolchain.arc.exeDebugConfig.131435570/internalBuilder/paralleldef=false
+com.arc.cdt.toolchain.arc.exeDebugConfig.131435570/internalBuilder/parallelnumber=1
+com.arc.cdt.toolchain.arc.exeDebugConfig.1934974868/internalBuilder/enabled=false
+com.arc.cdt.toolchain.arc.exeDebugConfig.1934974868/internalBuilder/ignoreErr=true
+com.arc.cdt.toolchain.arc.exeDebugConfig.1934974868/internalBuilder/parallel=true
+com.arc.cdt.toolchain.arc.exeDebugConfig.1934974868/internalBuilder/paralleldef=true
+com.arc.cdt.toolchain.arc.exeDebugConfig.1934974868/internalBuilder/parallelnumber=1
+com.arc.cdt.toolchain.arc.exeDebugConfig.215003907/internalBuilder/enabled=false
+com.arc.cdt.toolchain.arc.exeDebugConfig.215003907/internalBuilder/ignoreErr=true
+com.arc.cdt.toolchain.arc.exeDebugConfig.215003907/internalBuilder/parallel=true
+com.arc.cdt.toolchain.arc.exeDebugConfig.215003907/internalBuilder/paralleldef=true
+com.arc.cdt.toolchain.arc.exeDebugConfig.215003907/internalBuilder/parallelnumber=1
+com.arc.cdt.toolchain.arc.exeDebugConfig.389280931/internalBuilder/enabled=false
+com.arc.cdt.toolchain.arc.exeDebugConfig.389280931/internalBuilder/ignoreErr=true
+com.arc.cdt.toolchain.arc.exeDebugConfig.389280931/internalBuilder/parallel=true
+com.arc.cdt.toolchain.arc.exeDebugConfig.389280931/internalBuilder/paralleldef=true
+com.arc.cdt.toolchain.arc.exeDebugConfig.389280931/internalBuilder/parallelnumber=1
+com.arc.cdt.toolchain.arc.exeDebugConfig.736376277/internalBuilder/enabled=false
+com.arc.cdt.toolchain.arc.exeDebugConfig.736376277/internalBuilder/ignoreErr=false
+com.arc.cdt.toolchain.arc.exeDebugConfig.736376277/internalBuilder/parallel=false
+com.arc.cdt.toolchain.arc.exeDebugConfig.736376277/internalBuilder/paralleldef=false
+com.arc.cdt.toolchain.arc.exeDebugConfig.736376277/internalBuilder/parallelnumber=1
+com.arc.cdt.toolchain.arc.exeDebugConfig.792392316/internalBuilder/enabled=false
+com.arc.cdt.toolchain.arc.exeDebugConfig.792392316/internalBuilder/ignoreErr=false
+com.arc.cdt.toolchain.arc.exeDebugConfig.792392316/internalBuilder/parallel=false
+com.arc.cdt.toolchain.arc.exeDebugConfig.792392316/internalBuilder/paralleldef=false
+com.arc.cdt.toolchain.arc.exeDebugConfig.792392316/internalBuilder/parallelnumber=1
+eclipse.preferences.version=1
+environment/project=<?xml version\="1.0" encoding\="UTF-8"?>\r\n<environment/>\r\n
+environment/project/com.arc.cdt.toolchain.arc.exeDebugConfig.215003907=<?xml version\="1.0" encoding\="UTF-8"?>\r\n<environment/>\r\n

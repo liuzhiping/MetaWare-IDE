@@ -1,0 +1,8 @@
+#Fri Mar 05 15:46:27 PST 2010
+eclipse.preferences.version=1
+environment/project/com.arc.cdt.toolchain.arc.exeDebugConfig.1114883391=
+environment/project/com.arc.cdt.toolchain.arc.exeDebugConfig.1114883391/PATH/delimiter=;
+environment/project/com.arc.cdt.toolchain.arc.exeDebugConfig.1114883391/PATH/operation=replace
+environment/project/com.arc.cdt.toolchain.arc.exeDebugConfig.1114883391/PATH/value=C\:\\ARC\\MetaWare\\arc\\bin
+environment/project/com.arc.cdt.toolchain.arc.exeDebugConfig.1114883391/append=true
+environment/project/com.arc.cdt.toolchain.arc.exeDebugConfig.1114883391/appendContributed=true

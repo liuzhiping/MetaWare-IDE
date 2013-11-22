@@ -1,0 +1,15 @@
+<TextCanvas>
+    <text lineCount="6" selection="-1">
+        <line content="   65    if (Q)">
+            <range color="9" start="0" end="15" />
+        <line content="main+0xfc    ldb          %r0,[%fp,-4]">
+        <line content="main+0x100   brz_s        %r0,0,0x1_0338 = main+0x130 = queens.c!69">
+        <line content="   66       for (I = 1; I <= size;) {">
+            <range color="9" start="0" end="37" />
+        <line content="main+0x102   mov_s        %r13,%r16">
+        <line content="main+0x104   mov          %r18,0x1_6000   ; size">
+    </text>
+    <icon x="19" y="20">
+        <image width="14" height="15">
+             ff ff ff ae ff ae ff ae ff ff        </image>
+</TextCanvas>

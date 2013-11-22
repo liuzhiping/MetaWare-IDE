@@ -1,0 +1,97 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN" "http://www.w3.org/MarkUp/Wilbur/HTML32.dtd">
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+    <meta name="GENERATOR" content="Quadralay WebWorks Publisher 2003 for FrameMaker 8.0.0.1194">
+    <meta name="TEMPLATEBASE" content="temp">
+    <link rel="StyleSheet" href="document.css" type="text/css" media="screen">
+    <title>Defining MetaWare Debugger Settings</title>
+  </head>
+
+  <body>
+
+    <table width="100%" border="0" cellpadding="0" cellspacing="0" class="header">
+      <tr>
+<!--Disabling Breadcrumbs to use Eclipse version 10/2009
+        <td class="breadcrumbs">
+	<a href="ide_guid.htm"> DesignWare ARC MetaWare IDE User's Guide </a> > <a href="tasks.htm"><br>Tasks</a> > Defining MetaWare Debugger Settings
+        </td>
+-->
+        <td align="right" valign="top" class="navigator" nowrap>
+<a href="mw_t_bat.htm"><img src="images/sprev.gif" border="0" alt="Previous"></a><a href="mw_t_deb.htm"><img src="images/snext.gif" border="0" alt="Next"></a>
+        </td>
+      </tr>
+    </table>
+
+    <hr align="left">
+
+    <blockquote>
+<h3 >
+Defining MetaWare Debugger Settings
+<a name="wp913987"> </a></h3>
+
+<p >
+In the IDE, you use a <i>debug configuration</i> to launch an executable in the debugger. The debug configuration contains all the debugger settings for your executable.
+<a name="wp921377"> </a></p>
+<p >
+To define MetaWare debugger settings, you create a debug configuration:
+<a name="wp923807"> </a></p>
+<ol type="1"> <li  value="1">In the <b>C/C++</b> perspective, select a project in the <b>Project Explorer</b> pane. <div align="left"><img src="images/prime_in_pe.gif" border="0" hspace="0" vspace="0"></div><a name="wp921381"> </a>
+</ol><ol type="1"> <li  value="2">Open the drop-down menu next to the <b>Debug</b> button and select <b>Debug Configurations...</b>. <div align="left"><img src="images/md2_debug.gif" alt="Opening the Debug dialog" border="0" hspace="0" vspace="0"></div><a name="wp891236"> </a>
+</ol><dl>
+  <dt >The <b>Debug Configurations</b> dialog opens. Here you can create, manage, and launch debug configurations.<a name="wp891190"> </a>  <dl>
+    <dt >
+<div align="left"><img src="images/debug_co.gif" border="0" hspace="0" vspace="0"></div><a name="wp923815"> </a>  </dl>
+</dl>
+<ol type="1"> <li  value="3">In the <b>Name:</b> field, specify a for your debug configuration or accept the default.<a name="wp923864"> </a>
+ <li  value="4">Click the <b>Debugger</b> tab.<a name="wp923794"> </a>
+</ol><blockquote >
+<div align="left"><img src="images/debugger.gif" border="0" hspace="0" vspace="0"></div>
+
+<a name="wp891253"> </a></blockquote>
+ <ol type="1"> <li  value="5">Set debugger options by selecting an item from the tree in the <b>Debugger Options</b> area. <a name="wp891262"> </a>
+</ol><dl>
+  <dt >The command-line version of the current options is shown in the <b>Debugger Options:</b> text box. To set command-line options and toggles manually, select <b>Command-Line Options</b> in the <b>Debugger Options</b> tree.<a name="wp920106"> </a>  <dt ><b>Under Target Selection, </b><font >the </font><b>Select the target:</b> drop-down lets you select debugging on hardware and various simulators (not all options are available for all target processors).<a name="wp945377"> </a></dl>
+<ul><ul><ul><ul><ul>     <li >MetaWare ARC Simulator<a name="wp945386"> </a>
+     <li >Synopsys Virtualizer<a name="wp945390"> </a>
+     <li >Hardware<a name="wp945391"> </a>
+     <li >nSIM<a name="wp945392"> </a>
+     <li >SystemC<a name="wp945393"> </a>
+     <li >xCAM or RTL simulation<a name="wp945397"> </a>
+</ul></ul></ul></ul></ul><dl>
+  <dt >See also <a href="debuggie.htm#wp922246">Debugging with Special Simulators</a> and <a href="using_a_.htm#wp945456">Using a Digilent Cable to Connect to Hardware</a>.<a name="wp945404"> </a></dl>
+<ol type="1"> <li  value="6">Leave <b>Resume at startup</b> checked to have the debugger implicitly start running the application, or uncheck <b>Resume at startup</b> to stop at the entry-point address (typically <code>_start</code>). <a name="wp921143"> </a>
+ <li  value="7">Check <b>Stop on startup at:</b> to have the debugger set an initial temporary breakpoint at the address of the function specified (default is <b>main()</b>) or another function you name. The initial resume is expected to stop there.<a name="wp921144"> </a>
+ <li  value="8">Click <b>Debug</b> to switch to the <b>Debug</b> perspective and start debugging.<a name="wp921063"> </a>
+</ol><a name="wp914283">
+  <h5 >
+Related Tasks
+ </a></h5>
+<ul> <li ><a href="using_ns.htm#wp917885">Using nSIM</a><a name="wp919739"> </a>
+ <li ><a href="mw_o_cmp.htm#wp918309">Debugging with CMPD Extensions</a><a name="wp928696"> </a>
+ <li ><a href="mw_t_deb.htm#wp919935">Launching a Debug Configuration at Startup</a><a name="wp920069"> </a>
+</ul><a name="wp919733">
+  <h5 >
+Related Reference
+ </a></h5>
+<ul> <li >Eclipse <em>C/C++ Development User Guide</em><a name="wp914292"> </a>
+ <li ><a href="mw_u_db_.htm#wp992752">Debugger Windows and Views</a><a name="wp914327"> </a>
+</ul>
+    </blockquote>
+    <p></p>
+    <hr>
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" class="footer">
+      <tr>
+        <td>
+
+        </td>
+        <td align="right" valign="top" class="navigator">
+<a href="mw_t_bat.htm"><img src="images/sprev.gif" border="0" alt="Previous"></a><a href="mw_t_deb.htm"><img src="images/snext.gif" border="0" alt="Next"></a>
+        </td>
+      </tr>
+    </table>
+<p> <font size="-3">
+Copyright © 2012 Synopsys, Inc. <br />
+Some portions of this document copyright IBM Corporation and others 2000, 2004.</font></p>
+  </body>
+</html>

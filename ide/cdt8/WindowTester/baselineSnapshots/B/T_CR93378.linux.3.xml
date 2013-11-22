@@ -1,0 +1,13 @@
+<TextCanvas>
+    <text lineCount="6" selection="-1">
+        <line content="unsigned int C.0.3391 = 7406312 (0x7102e8)">
+        <line content="unsigned int blanks.3312 = 538976288 (0x20202020)">
+        <line content="unsigned int buf.1506 = 0">
+        <line content="unsigned int buf.1788 = 0">
+        <line content="char *charset = (0x710c50) "ISO-8859-1"">
+        <line content="int cmd_count = 0">
+    </text>
+    <icon x="19" y="68">
+        <image width="12" height="12">
+             ff 49 e7 ff e7 4a e7 ff e7 4a ff        </image>
+</TextCanvas>

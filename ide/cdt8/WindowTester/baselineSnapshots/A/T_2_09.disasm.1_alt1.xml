@@ -1,0 +1,18 @@
+<TextCanvas>
+    <text lineCount="8" selection="-1">
+        <line content="   27    Integer J = 0;">
+            <range start="0" end="23" foreground="#0000ff">
+        <line content="Try+0x22     mov_s        %r15,0">
+        <line content="   29       J++; *Q = False;">
+            <range start="0" end="28" foreground="#0000ff">
+        <line content="Try+0x24     add_s        %r15,%r15,1">
+        <line content="Try+0x26     mov_s        %r2,0">
+        <line content="Try+0x28     stb          %r2,[%r16]">
+        <line content="   30       if (Asub(J) && Bsub(I+J) && Csub(I-J)) {">
+            <range start="0" end="52" foreground="#0000ff">
+        <line content="Try+0x2c     mov_s        %r14,0x1_70ac   ; A">
+    </text>
+    <icon x="19" y="119">
+        <image width="14" height="15">
+             ff ff ff 45 ff d7 ff 0 ff ff        </image>
+</TextCanvas>

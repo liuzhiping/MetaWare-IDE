@@ -1,0 +1,17 @@
+com.arc.seecode.engine/debug=true
+com.arc.seecode.engine/client/client=false
+com.arc.seecode.engine/client/serializer=false
+com.arc.seecode.engine/client/packetreceiver=false
+com.arc.seecode.engine/client/packetsender=false
+com.arc.seecode.engine/client/commandrouter=false
+com.arc.seecode.engine/server/server=false
+com.arc.seecode.engine/server/serializer=false
+com.arc.seecode.engine/server/callback=false
+com.arc.seecode.engine/server/engine=false
+com.arc.seecode.engine/server/java_trap=true
+com.arc.seecode.engine/server/vars=false
+com.arc.seecode.engine/server/sockets=false
+com.arc.seecode.engine/server/debugbreak=false
+com.arc.seecode.engine/serverDebugEnabled=false
+com.arc.seecode.engine/server/packetreceiver=false
+com.arc.seecode.engine/server/packetsender=false

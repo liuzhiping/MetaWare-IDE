@@ -1,0 +1,10 @@
+<TextCanvas>
+    <text lineCount="6" selection="-1">
+        <line content="unsigned int L0001TMP.L51 = 50371492 (0x3009ba4)">
+        <line content="unsigned int L0001TMP.L58 = 0">
+        <line content="unsigned long long b.L70 = 216344426237172747 (0x3009c1c03009c0b)">
+        <line content="unsigned int blen.L62 = 8">
+        <line content="unsigned int buf.L16 = 0">
+        <line content="unsigned int buf.L18 = 0">
+    </text>
+</TextCanvas>

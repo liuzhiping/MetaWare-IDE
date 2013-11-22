@@ -1,0 +1,24 @@
+if ($# == 1) then
+  [grmain] del wp all
+  [grmain] plot send_pc name=grmain_pc_channel burst=500 period=100 namespace=$1 pcname=grmain
+  [grmain] read $ARCPLOTTER/bin/plot_event $1 grmain_events render_channel0_channel_impl_send_count render_channel0_channel_impl_send_count
+  [grmain] read $ARCPLOTTER/bin/plot_event $1 grmain_events render_channel1_channel_impl_send_count render_channel1_channel_impl_send_count
+
+  [displaymain] del wp all
+  [displaymain] plot send_pc name=displaymain_pc_channel burst=500 period=100 namespace=$1 pcname=displaymain
+  [displaymain] read $ARCPLOTTER/bin/plot_event $1 displaymain_events display_channel0_channel_impl_recv_count -display_channel0_channel_impl_recv_count
+  [displaymain] read $ARCPLOTTER/bin/plot_event $1 displaymain_events display_channel1_channel_impl_recv_count -display_channel1_channel_impl_recv_count
+
+  [rendermain0] del wp all
+  [rendermain0] plot send_pc name=rendermain0_pc_channel burst=500 period=100 namespace=$1 pcname=rendermain0
+  [rendermain0] read $ARCPLOTTER/bin/plot_event $1 rendermain0_events render_channel0_channel_impl_recv_count -render_channel0_channel_impl_recv_count
+  [rendermain0] read $ARCPLOTTER/bin/plot_event $1 rendermain0_events display_channel0_channel_impl_send_count display_channel0_channel_impl_send_count
+
+  [rendermain1] del wp all
+  [rendermain1] plot send_pc name=rendermain1_pc_channel burst=500 period=100 namespace=$1 pcname=rendermain1
+  [rendermain1] read $ARCPLOTTER/bin/plot_event $1 rendermain1_events render_channel1_channel_impl_recv_count -render_channel1_channel_impl_recv_count
+  [rendermain1] read $ARCPLOTTER/bin/plot_event $1 rendermain1_events display_channel1_channel_impl_send_count display_channel1_channel_impl_send_count
+
+else
+  print "ERROR: missing namespace argument for 'instrument' script
+endif

@@ -1,0 +1,87 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN" "http://www.w3.org/MarkUp/Wilbur/HTML32.dtd">
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+    <meta name="GENERATOR" content="Quadralay WebWorks Publisher 2003 for Word 8.0.0.1194">
+    <meta name="TEMPLATEBASE" content="ARCTechPubsv6">
+    <meta name="LASTUPDATED" content="01/27/12 13:02:36">
+<link rel="first" href="tad_help.htm">  <link rel="prev" href="message_.htm"><link rel="next" href="messagea.htm">
+    <link rel="StyleSheet" href="document.css" type="text/css" media="screen">
+    <title>Memory Blocks Window</title>
+  </head>
+
+  <body>
+
+    <table width="100%" border="0" cellpadding="0" cellspacing="0" class="header">
+      <tr> 
+        <td class="breadcrumbs">
+	<a href="tad_help.htm"> MQX&#174; Task Aware Debug Help</a> > <a href="tad_wind.htm"> TAD Windows</a> > Memory Blocks Window
+        </td>
+        <td align="right" valign="top" class="navigator" nowrap>
+<a href="message_.htm"><img src="images/sprev.gif" border="0" alt="Previous" title="Previous"></a><a href="messagea.htm"><img src="images/snext.gif" border="0" alt="Next" title="Next"></a>
+        </td>
+      </tr>
+    </table>
+
+    <hr align="left">
+
+    <blockquote>
+<h3 ><a name="wp9000482">
+Memory Blocks Window</a></h3>
+
+
+<p >
+<a name="wp9000483">The <b>MQX</b><b> Memory Blocks </b><b>window</b> lets you examine a memory block allocated by MQX. <img src="images/memory_a.gif" height="376" width="495" border="0" hspace="0" vspace="0"></a></p>
+<p >
+<a name="wp9000484">Memory blocks are allocated in a Memory Pool, which has a start and end address.</a></p>
+<p ><b><i><a name="wp9000485">Displayed Fields</a></i></b></p><p >
+<a name="wp9000486"><b>Memory Pool Start</b></a></p>
+<p ><b><i><a name="wp9000487">The start address of the memory pool.</a></i></b></p><p >
+<a name="wp9000488"><b>Memory Pool End</b></a></p>
+<p ><b><i><a name="wp9000489">The end address of the memory pool. All memory blocks reside within the address range of the memory pool.</a></i></b></p><p >
+<a name="wp9000490"><b>Memory Pool Size</b></a></p>
+<p ><b><i><a name="wp9000491">The total size of the memory pool, including pool-descriptor information.</a></i></b></p><p >
+<a name="wp9000492"><b>Highest Memory</b></a></p>
+<p ><b><i><a name="wp9000493">The highest address allocated.</a></i></b></p><p >
+<a name="wp9000494"><b>Memory Block List</b></a></p>
+<p ><b><i><a name="wp9000495">List of blocks. Each row of the list corresponds to a single memory block.</a></i></b></p><p >
+<a name="wp9000496"><b>Block Address</b></a></p>
+<p ><b><i><a name="wp9000497">The address of the block within the memory pool.</a></i></b></p><p >
+<a name="wp9000498"><b>Block Size</b></a></p>
+<p >
+<a name="wp9000499">Number of bytes in the memory block.</a></p>
+<p >
+<a name="wp9000500"><b>Owner/Status</b></a></p>
+<p >
+<a name="wp9000501">Current state of the memory block:</a></p>
+<ul> <li ><code>Free</code>-No Owner<a name="wp9000502"> </a>
+ <li ><code>System</code>-a system block that is not owned by any task.<a name="wp9000503"> </a>
+ <li ><code>Task ID...</code>-a block owned by the specified task.<a name="wp9000504"> </a>
+ <li ><code>In Error</code>-the block is corrupted (its checksum is not valid).<a name="wp9000505"> </a>
+</ul><p ><b><i><a name="wp9000506">Memory Fragmentation</a></i></b></p><p >
+<a name="wp9000507">When memory becomes fragmented, small free (available) memory blocks are interspersed with allocated memory blocks. Fragmentation is a problem if a task requests a memory block that is larger than any of the available blocks. The amount of available core memory might be large enough, but no single available block is large enough. MQX cannot coalesce free blocks to form one that is large enough to satisfy the request.</a></p>
+<p >
+<a name="wp9000508">From the <b>Memory Block Summary</b> window, you can determine if memory is fragmented. The window lists the blocks in order of their physical address, so you can detect free blocks that might be interspersed with allocated blocks. You can see whether the size of each free block is large enough to meet the application's needs.</a></p>
+<p ><b><i><a name="wp9000509">Insufficient Memory</a></i></b></p><p >
+<a name="wp9000510">Under ideal conditions, the list of memory blocks ends with one large free block. If the list ends with a small free block or an allocated block, the application might have tried to use more memory than is available. If this is the case, do any of the following:</a></p>
+<ul> <li >change the start or end of core memory specified in the MQX initialization structure<a name="wp9000511"> </a>
+ <li >extend core memory by calling <strong>_mem_extend</strong>()<a name="wp9000512"> </a>
+ <li >reduce the application's memory requirements<a name="wp9000513"> </a>
+</ul><p ><b><i><a name="wp9000514">Memory Block Errors</a></i></b></p><div ><a name="wp9000515">MQX maintains management information in the header of each memory block. It calculates a checksum of the management information as it runs. If a task overwrites the management information, the verification of the checksum fails, and MQX notifies the application. </a></div><p >
+<a name="wp9000516">A checksum failure usually indicates that a task wrote past the end of an allocated memory block, overwriting the information in the next contiguous block. This can occur when a pointer goes out of range, a task incorrectly specifies the size of the buffer it needs, or a task overflows its stack. A checksum failure might also indicate that an application task is randomly overwriting memory.</a></p>
+    </blockquote>
+    <p></p>
+    <hr>
+
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" class="footer">
+      <tr>
+        <td>
+          
+        </td>
+        <td align="right" valign="top" class="navigator">
+<a href="message_.htm"><img src="images/sprev.gif" border="0" alt="Previous" title="Previous"></a><a href="messagea.htm"><img src="images/snext.gif" border="0" alt="Next" title="Next"></a>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>

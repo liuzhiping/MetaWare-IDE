@@ -1,0 +1,42 @@
+<view name="org.eclipse.ui.views.ProblemView">
+    <tree columns="5">
+        <item>
+            <cell>Errors (2 items)</cell>
+            <cell></cell>
+            <cell></cell>
+            <cell></cell>
+            <cell></cell>
+            <item>
+                <cell>y: Identifier is undeclared.</cell>
+                <cell>unresolved_sym.c</cell>
+                <cell>/unresolved_symbols</cell>
+                <cell>line 3</cell>
+                <cell>C/C++ Problem</cell>
+            <item>
+                <cell>make: *** [unresolved_sym.o] Error 1</cell>
+                <cell>unresolved_symbols</cell>
+                <cell></cell>
+                <cell>line 0</cell>
+                <cell>C/C++ Problem</cell>
+        </item>
+        <item>
+            <cell>Warnings (2 items)</cell>
+            <cell></cell>
+            <cell></cell>
+            <cell></cell>
+            <cell></cell>
+            <item>
+                <cell>(#291) nonfunc1: Function called but not declared.</cell>
+                <cell>unresolved_sym.c</cell>
+                <cell>/unresolved_symbols</cell>
+                <cell>line 4</cell>
+                <cell>C/C++ Problem</cell>
+            <item>
+                <cell>(#291) nonfunc2: Function called but not declared.</cell>
+                <cell>unresolved_sym.c</cell>
+                <cell>/unresolved_symbols</cell>
+                <cell>line 5</cell>
+                <cell>C/C++ Problem</cell>
+        </item>
+    </tree>
+</view>

@@ -1,0 +1,96 @@
+<view name="com.arc.cdt.debug.seecode.ui.views.SeeCodeCustomView:mem#1">
+<TextCanvas>
+    <text lineCount="10" selection="-1">
+        <line content="016000: 3412cdab 3412cdab 3412cdab 3412cdab ...4...4|...4...4">
+            <range start="8" end="16" foreground="#ffffff" background="#ff0000">
+            <range start="17" end="25" foreground="#ffffff" background="#ff0000">
+            <range start="26" end="34" foreground="#ffffff" background="#ff0000">
+            <range start="35" end="43" foreground="#ffffff" background="#ff0000">
+            <range start="47" end="48" foreground="#ffffff" background="#ff0000">
+            <range start="51" end="52" foreground="#ffffff" background="#ff0000">
+            <range start="56" end="57" foreground="#ffffff" background="#ff0000">
+            <range start="60" end="61" foreground="#ffffff" background="#ff0000">
+        <line content="016010: 3412cdab 3412cdab 3412cdab 3412cdab ...4...4|...4...4">
+            <range start="8" end="16" foreground="#ffffff" background="#ff0000">
+            <range start="17" end="25" foreground="#ffffff" background="#ff0000">
+            <range start="26" end="34" foreground="#ffffff" background="#ff0000">
+            <range start="35" end="43" foreground="#ffffff" background="#ff0000">
+            <range start="47" end="48" foreground="#ffffff" background="#ff0000">
+            <range start="51" end="52" foreground="#ffffff" background="#ff0000">
+            <range start="56" end="57" foreground="#ffffff" background="#ff0000">
+            <range start="60" end="61" foreground="#ffffff" background="#ff0000">
+        <line content="016020: 3412cdab 3412cdab 3412cdab 3412cdab ...4...4|...4...4">
+            <range start="8" end="16" foreground="#ffffff" background="#ff0000">
+            <range start="17" end="25" foreground="#ffffff" background="#ff0000">
+            <range start="26" end="34" foreground="#ffffff" background="#ff0000">
+            <range start="35" end="43" foreground="#ffffff" background="#ff0000">
+            <range start="47" end="48" foreground="#ffffff" background="#ff0000">
+            <range start="51" end="52" foreground="#ffffff" background="#ff0000">
+            <range start="56" end="57" foreground="#ffffff" background="#ff0000">
+            <range start="60" end="61" foreground="#ffffff" background="#ff0000">
+        <line content="016030: 3412cdab 3412cdab 3412cdab 3412cdab ...4...4|...4...4">
+            <range start="8" end="16" foreground="#ffffff" background="#ff0000">
+            <range start="17" end="25" foreground="#ffffff" background="#ff0000">
+            <range start="26" end="34" foreground="#ffffff" background="#ff0000">
+            <range start="35" end="43" foreground="#ffffff" background="#ff0000">
+            <range start="47" end="48" foreground="#ffffff" background="#ff0000">
+            <range start="51" end="52" foreground="#ffffff" background="#ff0000">
+            <range start="56" end="57" foreground="#ffffff" background="#ff0000">
+            <range start="60" end="61" foreground="#ffffff" background="#ff0000">
+        <line content="016040: 3412cdab 3412cdab 3412cdab 3412cdab ...4...4|...4...4">
+            <range start="8" end="16" foreground="#ffffff" background="#ff0000">
+            <range start="17" end="25" foreground="#ffffff" background="#ff0000">
+            <range start="26" end="34" foreground="#ffffff" background="#ff0000">
+            <range start="35" end="43" foreground="#ffffff" background="#ff0000">
+            <range start="47" end="48" foreground="#ffffff" background="#ff0000">
+            <range start="51" end="52" foreground="#ffffff" background="#ff0000">
+            <range start="56" end="57" foreground="#ffffff" background="#ff0000">
+            <range start="60" end="61" foreground="#ffffff" background="#ff0000">
+        <line content="016050: 3412cdab 3412cdab 3412cdab 3412cdab ...4...4|...4...4">
+            <range start="8" end="16" foreground="#ffffff" background="#ff0000">
+            <range start="17" end="25" foreground="#ffffff" background="#ff0000">
+            <range start="26" end="34" foreground="#ffffff" background="#ff0000">
+            <range start="35" end="43" foreground="#ffffff" background="#ff0000">
+            <range start="47" end="48" foreground="#ffffff" background="#ff0000">
+            <range start="51" end="52" foreground="#ffffff" background="#ff0000">
+            <range start="56" end="57" foreground="#ffffff" background="#ff0000">
+            <range start="60" end="61" foreground="#ffffff" background="#ff0000">
+        <line content="016060: 3412cdab 3412cdab 3412cdab 3412cdab ...4...4|...4...4">
+            <range start="8" end="16" foreground="#ffffff" background="#ff0000">
+            <range start="17" end="25" foreground="#ffffff" background="#ff0000">
+            <range start="26" end="34" foreground="#ffffff" background="#ff0000">
+            <range start="35" end="43" foreground="#ffffff" background="#ff0000">
+            <range start="47" end="48" foreground="#ffffff" background="#ff0000">
+            <range start="51" end="52" foreground="#ffffff" background="#ff0000">
+            <range start="56" end="57" foreground="#ffffff" background="#ff0000">
+            <range start="60" end="61" foreground="#ffffff" background="#ff0000">
+        <line content="016070: 3412cdab 3412cdab 3412cdab 3412cdab ...4...4|...4...4">
+            <range start="8" end="16" foreground="#ffffff" background="#ff0000">
+            <range start="17" end="25" foreground="#ffffff" background="#ff0000">
+            <range start="26" end="34" foreground="#ffffff" background="#ff0000">
+            <range start="35" end="43" foreground="#ffffff" background="#ff0000">
+            <range start="47" end="48" foreground="#ffffff" background="#ff0000">
+            <range start="51" end="52" foreground="#ffffff" background="#ff0000">
+            <range start="56" end="57" foreground="#ffffff" background="#ff0000">
+            <range start="60" end="61" foreground="#ffffff" background="#ff0000">
+        <line content="016080: 3412cdab 3412cdab 3412cdab 3412cdab ...4...4|...4...4">
+            <range start="8" end="16" foreground="#ffffff" background="#ff0000">
+            <range start="17" end="25" foreground="#ffffff" background="#ff0000">
+            <range start="26" end="34" foreground="#ffffff" background="#ff0000">
+            <range start="35" end="43" foreground="#ffffff" background="#ff0000">
+            <range start="47" end="48" foreground="#ffffff" background="#ff0000">
+            <range start="51" end="52" foreground="#ffffff" background="#ff0000">
+            <range start="56" end="57" foreground="#ffffff" background="#ff0000">
+            <range start="60" end="61" foreground="#ffffff" background="#ff0000">
+        <line content="016090: 3412cdab 3412cdab 3412cdab 3412cdab ...4...4|...4...4">
+            <range start="8" end="16" foreground="#ffffff" background="#ff0000">
+            <range start="17" end="25" foreground="#ffffff" background="#ff0000">
+            <range start="26" end="34" foreground="#ffffff" background="#ff0000">
+            <range start="35" end="43" foreground="#ffffff" background="#ff0000">
+            <range start="47" end="48" foreground="#ffffff" background="#ff0000">
+            <range start="51" end="52" foreground="#ffffff" background="#ff0000">
+            <range start="56" end="57" foreground="#ffffff" background="#ff0000">
+            <range start="60" end="61" foreground="#ffffff" background="#ff0000">
+    </text>
+</TextCanvas>
+</view>

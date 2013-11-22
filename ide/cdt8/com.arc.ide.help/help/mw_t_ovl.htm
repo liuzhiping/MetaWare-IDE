@@ -1,0 +1,149 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN" "http://www.w3.org/MarkUp/Wilbur/HTML32.dtd">
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+    <meta name="GENERATOR" content="Quadralay WebWorks Publisher 2003 for FrameMaker 8.0.0.1194">
+    <meta name="TEMPLATEBASE" content="temp">
+    <link rel="StyleSheet" href="document.css" type="text/css" media="screen">
+    <title>Debugging with Overlays (ARCompact and ARCv2)</title>
+  </head>
+
+  <body>
+
+    <table width="100%" border="0" cellpadding="0" cellspacing="0" class="header">
+      <tr>
+<!--Disabling Breadcrumbs to use Eclipse version 10/2009
+        <td class="breadcrumbs">
+	<a href="ide_guid.htm"> DesignWare ARC MetaWare IDE User's Guide </a> > <a href="tasks.htm"><br>Tasks</a> > Debugging with Overlays (ARCompact and ARCv2)
+        </td>
+-->
+        <td align="right" valign="top" class="navigator" nowrap>
+<a href="mw_t_tim.htm"><img src="images/sprev.gif" border="0" alt="Previous"></a><a href="debuggid.htm"><img src="images/snext.gif" border="0" alt="Next"></a>
+        </td>
+      </tr>
+    </table>
+
+    <hr align="left">
+
+    <blockquote>
+<h3 >
+Debugging with Overlays (ARCompact and ARCv2)
+<a name="wp890384"> </a></h3>
+
+<p >
+The MetaWare debugger automatically understands applications that use the Automated Overlay Manager and takes care of the switching behind the scenes so that you can debug normally.
+<a name="wp890434"> </a></p>
+<blockquote >
+
+
+<table border="1" cellpadding="5" cellspacing="0">
+  <caption></caption>
+  <tr>
+    <td><table border="0" cellpadding="5" cellspacing="0">
+  <caption></caption>
+  <tr valign=top>
+    <td><div ><img border="0" src="images/note.png">
+</div></td>
+    <td><div ></div></td>
+</tr></table>
+<a name="wp927539"> </a>
+</td>
+    <td><div >When you use the ARC 600 SmaRT real-time-trace module with the Automated Overlay Manager, it is possible but unlikely that the SmaRT trace might show invalid disassembly at the top of the display if one overlay triggers its eviction and replacement immediately by another overlay in the same memory area.<a name="wp927541"> </a></div></td>
+  </tr>
+</table>
+
+
+
+
+
+<a name="wp927533"> </a></blockquote>
+ <a name="wp890544">
+  <h5 >
+4.19.0.1	 Viewing Overlays
+ </a></h5>
+<p >
+To open the <b>Overlays</b> window, select <b>Debugger &gt; Overlays</b>. The menu item is not available if the debugger does not detect overlays in the application. 
+<a name="wp890448"> </a></p>
+<p >
+The <b>Overlays</b> window is an XML tree view that displays the overlay executable name and memory-region size (as hex and decimal values), with nodes for each overlay set in the application.
+<a name="wp890450"> </a></p>
+<blockquote >
+
+
+<table border="1" cellpadding="5" cellspacing="0">
+  <caption></caption>
+  <tr>
+    <td><table border="0" cellpadding="5" cellspacing="0">
+  <caption></caption>
+  <tr valign=top>
+    <td><div ><img border="0" src="images/note.png">
+</div></td>
+    <td><div ></div></td>
+</tr></table>
+<a name="wp927560"> </a>
+</td>
+    <td><div >Some items appear only for currently loaded overlays.<a name="wp927562"> </a></div></td>
+  </tr>
+</table>
+
+
+
+
+
+<a name="wp927554"> </a></blockquote>
+ <blockquote >
+<div align="left"><img src="images/overlays.gif" alt="Overlays window" border="0" hspace="0" vspace="0"></div>
+
+<a name="wp890455"> </a></blockquote>
+ <a name="wp890456">
+  <h5 >
+Changing Sort Order
+ </a></h5>
+<ul> <li >To toggle sorting of sets by number or address, click <b>Sets sorted by set number</b> or <b>Sets sorted by address</b>.<a name="wp890586"> </a>
+ <li >To toggle sorting of the overlay mapping table (OMT) by index or address, click <b>OMT entries sorted by index</b> or <b>OMT entries sorted by address</b>.<a name="wp890593"> </a>
+</ul><a name="wp890597">
+  <h5 >
+Refreshing the Display
+ </a></h5>
+<p >
+Click the Refresh button: <img src="images/ovlrefre.gif" alt="Refresh button, Overlays window" border="0" hspace="0" vspace="0">
+<a name="wp890602"> </a></p>
+<a name="wp890609">
+  <h5 >
+Understanding the Display
+ </a></h5>
+<p >
+See <a href="mw_u_ovl.htm#wp982778">Overlays Window (ARCompact and ARCv2 Targets)</a> for an explanation of the items listed in the display.
+<a name="wp890613"> </a></p>
+<a name="wp917692">
+  <h5 >
+Related Tasks
+ </a></h5>
+<ul> <li ><a href="mw_t_set.htm#wp865705">Defining MetaWare Build Settings</a><a name="wp917700"> </a>
+ <li ><a href="debuggic.htm#wp929577">Debugging with SmaRT Real-Time Trace</a><a name="wp917785"> </a>
+</ul><a name="wp917740">
+  <h5 >
+Related Reference
+ </a></h5>
+<ul> <li ><a href="mw_u_ovl.htm#wp982778">Overlays Window (ARCompact and ARCv2 Targets)</a><a name="wp917771"> </a>
+ <li ><i>Automated Overlay Manager User's Guide</i><a name="wp917775"> </a>
+ <li >Eclipse <em>C/C++ Development User Guide</em><a name="wp917779"> </a>
+</ul>
+    </blockquote>
+    <p></p>
+    <hr>
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" class="footer">
+      <tr>
+        <td>
+
+        </td>
+        <td align="right" valign="top" class="navigator">
+<a href="mw_t_tim.htm"><img src="images/sprev.gif" border="0" alt="Previous"></a><a href="debuggid.htm"><img src="images/snext.gif" border="0" alt="Next"></a>
+        </td>
+      </tr>
+    </table>
+<p> <font size="-3">
+Copyright © 2012 Synopsys, Inc. <br />
+Some portions of this document copyright IBM Corporation and others 2000, 2004.</font></p>
+  </body>
+</html>

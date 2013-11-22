@@ -1,0 +1,8 @@
+
+macro multi_rendermain0 
+     prop cpunum=$cid simext)=^SCDIR/bin/arcmmu^ recursive_delay_slot=0 prefer_soft_bp=0 arcver=50 simext)=^/home/pickens/redhat/MetaWare/arc/bin/mwextlib^ dummy=1 simext)=^/home/pickens/redhat/MetaWare/arc/bin/mwextea^ simext)=^name=ssramInst_mmap_bank1_ram02.target,in=0x00e00000:0x01ffffff^ simext)=^name=ssramInst2.target,in=0x02000000:0x02000fff^ iss_internal_timers=1 xbarrel_shifter=1 xmpy=1 xswap=1 xnorm=1 xtimer0=1 timer0_regs=1 xtimer1=1 timer1_regs=1 icnts=1 killeds=1 delay_killeds=1 semint)=^/home/pickens/redhat/MetaWare/arc/bin/mwprof^ semint)=^/home/pickens/redhat/MetaWare/arc/bin/archw,^ ident=0 instrs_per_pass=500 include_local_symbols=1 stop_all=1 include_local_symbols=1 deadbeef=1 dname=MetaWare sys_cmpd=1 
+endm 
+defclass name=class_multi_rendermain0 newsys=multi_rendermain0 clone_noprops=1 system1=ARC_simulator system2=BRC_simulator 
+defset rendermain0 [3] 
+newcmd [rendermain0] class_multi_rendermain0 
+[rendermain0] defargs rendermain0/rendermain0 

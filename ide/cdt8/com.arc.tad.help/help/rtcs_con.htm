@@ -1,0 +1,122 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN" "http://www.w3.org/MarkUp/Wilbur/HTML32.dtd">
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+    <meta name="GENERATOR" content="Quadralay WebWorks Publisher 2003 for Word 8.0.0.1194">
+    <meta name="TEMPLATEBASE" content="ARCTechPubsv6">
+    <meta name="LASTUPDATED" content="01/27/12 13:02:36">
+<link rel="first" href="tad_help.htm">  <link rel="prev" href="rtcs_win.htm"><link rel="next" href="rtcs_exa.htm">
+    <link rel="StyleSheet" href="document.css" type="text/css" media="screen">
+    <title>RTCS Configuration Parameters Window</title>
+  </head>
+
+  <body>
+
+    <table width="100%" border="0" cellpadding="0" cellspacing="0" class="header">
+      <tr> 
+        <td class="breadcrumbs">
+	<a href="tad_help.htm"> MQX&#174; Task Aware Debug Help</a> > <a href="rtcs_win.htm"> RTCS Windows</a> > RTCS Configuration Parameters Window
+        </td>
+        <td align="right" valign="top" class="navigator" nowrap>
+<a href="rtcs_win.htm"><img src="images/sprev.gif" border="0" alt="Previous" title="Previous"></a><a href="rtcs_exa.htm"><img src="images/snext.gif" border="0" alt="Next" title="Next"></a>
+        </td>
+      </tr>
+    </table>
+
+    <hr align="left">
+
+    <blockquote>
+<h3 ><a name="wp9000951">
+RTCS Configuration Parameters Window</a></h3>
+
+
+<p >
+<a name="wp9000952">The <b>RTCS Configuration Parameters</b> window displays the RTCS configuration.</a></p>
+<p ><b><i><a name="wp9000953">Displayed Fields</a></i></b></p><p >
+<a name="wp9000954"><b>RTCS Version</b></a></p>
+<p >
+<a name="wp9000955">Version number of RTCS.</a></p>
+<p >
+<a name="wp9000956"><b>RTCS Tasks - Priority</b></a></p>
+<p >
+<a name="wp9000957">Task priority of the RTCS tasks. This is the value of the global variable <code>_RTCSTASK_priority</code>. </a></p>
+<p >
+<a name="wp9000958"><b>RTCS Tasks - Stack Size</b></a></p>
+<p >
+<a name="wp9000959">Additional stack size required by RTCS tasks for callback functions. This is the value of the global variable <code>_RTCSTASK_stacksize</code>.</a></p>
+<p >
+<a name="wp9000960"><b>Maximum Sockets</b></a></p>
+<p >
+<a name="wp9000961">Maximum number of sockets available to RTCS. This is the value of the global variable <code>_RTCSSOCK_max</code>.</a></p>
+<p >
+<a name="wp9000962"><b>Maximum PCBs</b></a></p>
+<p >
+<a name="wp9000963">Maximum number of outstanding packet control blocks (PCBs) that are available to RTCS. This is the value of the global variable <code>_RTCSPCB_max</code>.</a></p>
+<p >
+<a name="wp9000964"><b>RTCS Queue Base</b></a></p>
+<p >
+<a name="wp9000965">Value of the global variable <code>_RTCSQUEUE_base</code>. RTCS needs some message queues for its own use. RTCS uses message queue numbers starting at <code>_RTCSQUEUE_base</code>.</a></p>
+<p >
+<a name="wp9000966"><b>UDP Max Queue Size</b></a></p>
+<p >
+<a name="wp9000967">Maximum number of incoming UDP packets that can be enqueued. It is the value of the global variable <code>_UDP_max_queue_size</code>.</a></p>
+<p >
+<a name="wp9000968"><b>TCPIP Msg Pool</b></a></p>
+<p >
+<a name="wp9000969">Handle of a pool of messages used to pass commands and data to the RTCS TCP/IP Task. </a></p>
+<p >
+<a name="wp9000970"><b>TCPIP Queue</b></a></p>
+<p >
+<a name="wp9000971">Queue ID of the input queue for the RTCS TCP/IP Task.</a></p>
+<p ><b><i><a name="wp9000972">Displayed Fields-RTCS Options</a></i></b></p><p >
+<a name="wp9000973"><b>IP Forwarding</b></a></p>
+<p >
+<a name="wp9000974">Indicates whether IP forwarding is enabled. IP forwarding is the ability of the stack to route packets between network interfaces. </a></p>
+<p >
+<a name="wp9000975"><b>RTO Minimum</b></a></p>
+<p >
+<a name="wp9000976">Retransmission timeout-minimum value in milliseconds. RTCS dynamically determines the retransmission timeout, but the minimum possible value is displayed as the <b>RTO Minimum</b>.</a></p>
+<p >
+<a name="wp9000977"><b>Bypass Rx Checksum</b></a></p>
+<p >
+<a name="wp9000978">If the field is <code>True</code>, RTCS does not verify checksums on incoming packets. This means that RTCS does not detect errors in the incoming data stream. However, the probability of errors is low, because the underlying layer includes a checksum that detects errors in the data stream.</a></p>
+<p >
+<a name="wp9000979"><b>Bypass Tx Checksum</b></a></p>
+<p >
+<a name="wp9000980">If the field is <code>True</code>, RTCS does not generate checksums for outgoing packets. </a></p>
+<p ><b><i><a name="wp9000981">Displayed Fields-PCB Partition</a></i></b></p><p >
+<a name="wp9000982">Handle of the PCB partition, which is the partition from which RTCS allocates PCBs.</a></p>
+<p ><b><i><a name="wp9000983">Displayed Fields-Socket Partition</a></i></b></p><p >
+<a name="wp9000984">Handle of the socket partition, which is the partition from which RTCS allocates socket structures that maintain socket-specific information for each socket.</a></p>
+<p ><b><i><a name="wp9000985">Controls</a></i></b></p><p >
+<a name="wp9000986"><b>TCPIP Msg Pool </b></a></p>
+<p >
+<a name="wp9000987">Double-click the <img src="images/rtcs_coa.gif" height="16" width="14" border="0" hspace="0" vspace="0"> icon to open the <b>Examine Message Pool</b> window for the TCP/IP message pool.</a></p>
+<p >
+<a name="wp9000988"><b>TCPIP Queue </b></a></p>
+<p >
+<a name="wp9000989">Double-click the <img src="images/rtcs_cob.gif" height="16" width="14" border="0" hspace="0" vspace="0"> icon to open the <b>Examine Message Queue</b> window for the TCP/IP queue specified.</a></p>
+<p >
+<a name="wp9000990"><b>PCB Partition </b></a></p>
+<p >
+<a name="wp9000991">Double-click the <img src="images/rtcs_coc.gif" height="16" width="14" border="0" hspace="0" vspace="0"> icon to open the <b>Examine Partition</b> window for the partition that RTCS created to handle PCBs. </a></p>
+<p >
+<a name="wp9000992"><b>Socket Partition </b></a></p>
+<p >
+<a name="wp9000993">Double-click the <img src="images/rtcs_cod.gif" height="16" width="14" border="0" hspace="0" vspace="0"> icon to open the <b>Examine Partition</b> window for the partition that RTCS created manage socket information.</a></p>
+    </blockquote>
+    <p></p>
+    <hr>
+
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" class="footer">
+      <tr>
+        <td>
+          
+        </td>
+        <td align="right" valign="top" class="navigator">
+<a href="rtcs_win.htm"><img src="images/sprev.gif" border="0" alt="Previous" title="Previous"></a><a href="rtcs_exa.htm"><img src="images/snext.gif" border="0" alt="Next" title="Next"></a>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>

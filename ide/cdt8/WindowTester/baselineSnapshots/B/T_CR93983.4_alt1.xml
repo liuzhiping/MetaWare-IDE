@@ -1,0 +1,46 @@
+<view name="com.arc.cdt.debug.seecode.ui.views.SeeCodeCustomView:source">
+<TextCanvas>
+    <text lineCount="10" selection="-1">
+        <line content="  29       J++; *Q = False;">
+        <line content="  30       if (Asub(J) && Bsub(I+J) && Csub(I-J)) {">
+        <line content="  31          Xsub(I) = J;">
+        <line content="  32          Asub(J) = False; ">
+        <line content="  33          Bsub(I+J) = False; ">
+        <line content="  34          Csub(I-J) = False;">
+        <line content="  35          if (I < size) {">
+        <line content="  36             Try(I+1,Q);">
+        <line content="  37             if (!*Q) {">
+        <line content="  38                Asub(J) = True; ">
+    </text>
+    <icon x="2" y="0">
+        <image width="14" height="15">
+             ff ff ff ff ff ff ff c7 ff ff        </image>
+    <icon x="2" y="17">
+        <image width="14" height="15">
+             ff ff ff ff ff ff ff c7 ff ff        </image>
+    <icon x="2" y="34">
+        <image width="14" height="15">
+             ff ff ff ff ff ff ff c7 ff ff        </image>
+    <icon x="2" y="51">
+        <image width="14" height="15">
+             ff ff ff ff ff ff ff c7 ff ff        </image>
+    <icon x="2" y="68">
+        <image width="14" height="15">
+             ff ff ff ff ff ff ff c7 ff ff        </image>
+    <icon x="2" y="85">
+        <image width="14" height="15">
+             ff ff ff ff ff ff ff c7 ff ff        </image>
+    <icon x="2" y="102">
+        <image width="14" height="15">
+             ff ff ff ff ff ff ff c7 ff ff        </image>
+    <icon x="2" y="119">
+        <image width="14" height="15">
+             ff ff ff ff ff ff ff c7 ff ff        </image>
+    <icon x="2" y="136">
+        <image width="14" height="15">
+             ff ff ff ff ff ff ff c7 ff ff        </image>
+    <icon x="2" y="153">
+        <image width="14" height="15">
+             ff ff ff ff ff ff ff c7 ff ff        </image>
+</TextCanvas>
+</view>

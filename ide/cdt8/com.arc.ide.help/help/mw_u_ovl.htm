@@ -1,0 +1,100 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN" "http://www.w3.org/MarkUp/Wilbur/HTML32.dtd">
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+    <meta name="GENERATOR" content="Quadralay WebWorks Publisher 2003 for FrameMaker 8.0.0.1194">
+    <meta name="TEMPLATEBASE" content="temp">
+    <link rel="StyleSheet" href="document.css" type="text/css" media="screen">
+    <title>Overlays Window (ARCompact and ARCv2 Targets)</title>
+  </head>
+
+  <body>
+
+    <table width="100%" border="0" cellpadding="0" cellspacing="0" class="header">
+      <tr>
+<!--Disabling Breadcrumbs to use Eclipse version 10/2009
+        <td class="breadcrumbs">
+	<a href="ide_guid.htm"> DesignWare ARC MetaWare IDE User's Guide </a> > <a href="referenc.htm"><br>Reference</a> > <a href="mw_u_db_.htm">Debugger Windows and Views</a> > Overlays Window (ARCompact and ARCv2 Targets)
+        </td>
+-->
+        <td align="right" valign="top" class="navigator" nowrap>
+<a href="mw_u_icn.htm"><img src="images/sprev.gif" border="0" alt="Previous"></a><a href="mw_u_cac.htm"><img src="images/snext.gif" border="0" alt="Next"></a>
+        </td>
+      </tr>
+    </table>
+
+    <hr align="left">
+
+    <blockquote>
+<h4 >
+Overlays Window (ARCompact and ARCv2 Targets)
+<a name="wp982778"> </a></h4>
+
+<p >
+If your application uses overlays, you can open an <b>Overlays</b> window as soon as the debugger detects overlays. 
+<a name="wp982806"> </a></p>
+<blockquote >
+<div align="left"><img src="images/ovlwitho.gif" border="0" hspace="0" vspace="0"></div>
+
+<a name="wp982810"> </a></blockquote>
+ <p >
+The window displays the following information.
+<a name="wp982814"> </a></p>
+<a name="wp982818">
+  <h5 >
+Display for Each Function in an Overlay Set
+ </a></h5>
+<ul> <li >Offset within the set<a name="wp982819"> </a>
+ <li >Address in memory if loaded<a name="wp982820"> </a>
+ <li >Size in bytes<a name="wp982821"> </a>
+ <li >Name<a name="wp982822"> </a>
+</ul><a name="wp982824">
+  <h5 >
+Display for the Overlay Mapping Table 
+ </a></h5>
+<ul> <li >Index into the mapping table (e.g., <code>#0</code>)<a name="wp982825"> </a>
+ <li >Linker-created token referring to the overlay set (e.g., <code>tok=0000ffff</code>)<a name="wp982826"> </a>
+ <li ><font >%pc</font> start address for the entry <a name="wp982827"> </a>
+ <li ><font >%pc</font> end address for the entry <a name="wp982828"> </a>
+ <li >least-recently used value<a name="wp982829"> </a>
+</ul><dl>
+  <dt >This value is set to <code>0xffff</code> and decremented each time the overlay is accessed. The Automated Overlay Manager uses this value to evict the least-recently-used overlay. Only loaded entries (functions) have an LRU. Data entries do not have one. <a name="wp982831"> </a></dl>
+<ul> <li >Type of entry<a name="wp982832"> </a>
+</ul><dl>
+  <dt >Possible values are <code>region start</code>, <code>region end</code>, <code>loaded</code>, <code>locked</code>, <code>overlay offset table</code>, <code>delete</code>, or <code>move</code>. An entry can have several flags associated with it as well.<a name="wp982833"> </a></dl>
+<p >
+For information on using the window, see <a href="mw_t_ovl.htm#wp890384">Debugging with Overlays (ARCompact and ARCv2)</a>. 
+<a name="wp982815"> </a></p>
+<p >
+For information about using overlays, see the <i>Automated Overlay Manager User's Guide</i>.
+<a name="wp982845"> </a></p>
+<a name="wp991884">
+  <h5 >
+Related Tasks
+ </a></h5>
+<ul> <li ><a href="mw_t_ovl.htm#wp890384">Debugging with Overlays (ARCompact and ARCv2)</a><a name="wp991907"> </a>
+</ul><a name="wp991906">
+  <h5 >
+Related Reference
+ </a></h5>
+<ul> <li >Eclipse <em>C/C++ Development User Guide</em><a name="wp991896"> </a>
+ <li ><i>Automated Overlay Manager User's Guide</i><a name="wp982889"> </a>
+</ul>
+    </blockquote>
+    <p></p>
+    <hr>
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" class="footer">
+      <tr>
+        <td>
+
+        </td>
+        <td align="right" valign="top" class="navigator">
+<a href="mw_u_icn.htm"><img src="images/sprev.gif" border="0" alt="Previous"></a><a href="mw_u_cac.htm"><img src="images/snext.gif" border="0" alt="Next"></a>
+        </td>
+      </tr>
+    </table>
+<p> <font size="-3">
+Copyright © 2012 Synopsys, Inc. <br />
+Some portions of this document copyright IBM Corporation and others 2000, 2004.</font></p>
+  </body>
+</html>

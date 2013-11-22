@@ -1,0 +1,29 @@
+<view name="Source view popup after clearing">
+    <menu>
+        <item text="Breakpoint"/>
+        <item text="Hardware Breakpoint"/>
+        <item text="Software Breakpoint"/>
+        <item text="Run to cursor"/>
+        <item text="Set PC"/>
+        <item text="Evaluate"/>
+        <item text="Profiling">
+            <menu>
+                <item text="icnt"/>
+                <item text="LIMM cnt"/>
+                <item text="call count"/>
+                <item text="killed"/>
+                <item text="delay_killed"/>
+                <item text="profint"/>
+                <item text="Stmt cnt from icnt"/>
+                <item text=""/>
+                <item text="Stmt cnt from icnt display"/>
+                <item text="icnt display"/>
+                <item text="LIMM cnt display"/>
+                <item text="call count display"/>
+                <item text="killed display"/>
+                <item text="delay_killed display"/>
+                <item text="profint display"/>
+            </menu>
+        </item>
+    </menu>
+</view>

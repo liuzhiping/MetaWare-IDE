@@ -1,0 +1,436 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN" "http://www.w3.org/MarkUp/Wilbur/HTML32.dtd">
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+    <meta name="GENERATOR" content="Quadralay WebWorks Publisher 2003 for FrameMaker 8.0.0.1194">
+    <meta name="TEMPLATEBASE" content="temp">
+    <link rel="StyleSheet" href="document.css" type="text/css" media="screen">
+    <title>Debugger Commands</title>
+  </head>
+
+  <body>
+
+    <table width="100%" border="0" cellpadding="0" cellspacing="0" class="header">
+      <tr>
+<!--Disabling Breadcrumbs to use Eclipse version 10/2009
+        <td class="breadcrumbs">
+	<a href="ide_guid.htm"> DesignWare ARC MetaWare IDE User's Guide </a> > <a href="referenc.htm"><br>Reference</a> > Debugger Commands
+        </td>
+-->
+        <td align="right" valign="top" class="navigator" nowrap>
+<a href="referenc.htm"><img src="images/sprev.gif" border="0" alt="Previous"></a><a href="mw_u_reg.htm"><img src="images/snext.gif" border="0" alt="Next"></a>
+        </td>
+      </tr>
+    </table>
+
+    <hr align="left">
+
+    <blockquote>
+<h3 >
+Debugger Commands
+<a name="wp992756"> </a></h3>
+
+<p >
+The following is a list of debugger commands you can enter using the <b>Command-line input</b> view or using the command-line debugger. 
+<a name="wp992758"> </a></p>
+<p >
+To view a list of commands, enter <i>help </i><b>all</b>. See the <i>MetaWare Debugger User's Guide</i> for more details and examples.
+<a name="wp1000696"> </a></p>
+<blockquote >
+			  
+
+<table border="1" cellpadding="5" cellspacing="0">
+  <caption></caption>
+  <tr bgcolor="#CCCCCC">
+    <th><div ><strong>Command <a name="wp1014380"> </a></strong></div></th>
+    <th><div ><strong>Description <a name="wp1014382"> </a></strong></div></th>
+  </tr>
+  <tr>
+    <td><div ><code>addmap</code> <a name="wp1014385"> </a></div></td>
+    <td><div >Add information to a memory map<a name="wp1014387"> </a></div></td>
+  </tr>
+  <tr>
+    <td><div ><code>args</code> <a name="wp1014390"> </a></div></td>
+    <td><div >Display name and arguments of the current executable<a name="wp1014392"> </a></div></td>
+  </tr>
+  <tr>
+    <td><div ><code>attach</code> <a name="wp1014395"> </a></div></td>
+    <td><div >Attach an already running process<a name="wp1014397"> </a></div></td>
+  </tr>
+  <tr>
+    <td><div ><code>aux</code> <a name="wp1014400"> </a></div></td>
+    <td><div >Display ARC auxiliary registers<a name="wp1014402"> </a></div></td>
+  </tr>
+  <tr>
+    <td><div ><code>break</code> <a name="wp1014405"> </a></div></td>
+    <td><div >Set a breakpoint or display breakpoints<a name="wp1014407"> </a></div></td>
+  </tr>
+  <tr>
+    <td><div ><code>call</code> <a name="wp1014410"> </a></div></td>
+    <td><div >Call a function<a name="wp1014412"> </a></div></td>
+  </tr>
+  <tr>
+    <td><div ><code>continue</code> <a name="wp1014415"> </a></div></td>
+    <td><div >Start or continue execution of current process<a name="wp1014417"> </a></div></td>
+  </tr>
+  <tr>
+    <td><div ><code>delete break</code> <a name="wp1014420"> </a></div></td>
+    <td><div >Delete a breakpoint<a name="wp1014422"> </a></div></td>
+  </tr>
+  <tr>
+    <td><div ><code>delete mod</code> <a name="wp1014425"> </a></div></td>
+    <td><div >Delete an executable module<a name="wp1014427"> </a></div></td>
+  </tr>
+  <tr>
+    <td><div ><code>delete watch</code><a name="wp1014430"> </a></div></td>
+    <td><div >Delete a watchpoint<a name="wp1014432"> </a></div></td>
+  </tr>
+  <tr>
+    <td><div ><code>delmap</code> <a name="wp1014435"> </a></div></td>
+    <td><div >Delete an entry from a memory map<a name="wp1014437"> </a></div></td>
+  </tr>
+  <tr>
+    <td><div ><code>detach</code> <a name="wp1014440"> </a></div></td>
+    <td><div >Detach current process from the debugger<a name="wp1014442"> </a></div></td>
+  </tr>
+  <tr>
+    <td><div ><code>disable break</code> <a name="wp1014445"> </a></div></td>
+    <td><div >Disable a breakpoint<a name="wp1014447"> </a></div></td>
+  </tr>
+  <tr>
+    <td><div ><code>disable watch</code> <a name="wp1014450"> </a></div></td>
+    <td><div >Disable a watchpoint<a name="wp1014452"> </a></div></td>
+  </tr>
+  <tr>
+    <td><div ><code>disassemble</code> <a name="wp1014455"> </a></div></td>
+    <td><div >Show a disassembly listing of the current process<a name="wp1014457"> </a></div></td>
+  </tr>
+  <tr>
+    <td><div ><code>display</code> <a name="wp1014460"> </a></div></td>
+    <td><div >Show named command-line display<a name="wp1014462"> </a></div></td>
+  </tr>
+  <tr>
+    <td><div ><code>download</code><i> </i><a name="wp1014465"> </a></div></td>
+    <td><div >Load an executable and read its symbol table<a name="wp1014467"> </a></div></td>
+  </tr>
+  <tr>
+    <td><div ><code>emem</code> <a name="wp1014470"> </a></div></td>
+    <td><div >Enter values into memory<a name="wp1014472"> </a></div></td>
+  </tr>
+  <tr>
+    <td><div ><code>enable break</code> <a name="wp1014475"> </a></div></td>
+    <td><div >Enable a breakpoint<a name="wp1014477"> </a></div></td>
+  </tr>
+  <tr>
+    <td><div ><code>enable watch</code> <a name="wp1014480"> </a></div></td>
+    <td><div >Enable a watchpoint<a name="wp1014482"> </a></div></td>
+  </tr>
+  <tr>
+    <td><div ><code>endm</code> <a name="wp1014485"> </a></div></td>
+    <td><div >Terminate a macro definition<a name="wp1014487"> </a></div></td>
+  </tr>
+  <tr>
+    <td><div ><code>evalq</code> <a name="wp1014490"> </a></div></td>
+    <td><div >Evaluate or change the value of an expression quietly<a name="wp1014492"> </a></div></td>
+  </tr>
+  <tr>
+    <td><div ><code>evaluate</code> <a name="wp1014495"> </a></div></td>
+    <td><div >Evaluate or change the value of an expression<a name="wp1014497"> </a></div></td>
+  </tr>
+  <tr>
+    <td><div ><code>exec</code> <a name="wp1014500"> </a></div></td>
+    <td><div >Execute a command when breakpoint encountered<a name="wp1014502"> </a></div></td>
+  </tr>
+  <tr>
+    <td><div ><code>exit</code> <a name="wp1014505"> </a></div></td>
+    <td><div >Exit the debugger<a name="wp1014507"> </a></div></td>
+  </tr>
+  <tr>
+    <td><div ><code>file</code> <a name="wp1014510"> </a></div></td>
+    <td><div >Display name and arguments of the current executable<a name="wp1014512"> </a></div></td>
+  </tr>
+  <tr>
+    <td><div ><code>file2mem</code> <a name="wp1014515"> </a></div></td>
+    <td><div >Write a file to memory<a name="wp1014517"> </a></div></td>
+  </tr>
+  <tr>
+    <td><div ><code>fillmem</code> <a name="wp1014520"> </a></div></td>
+    <td><div >Fill memory<a name="wp1014522"> </a></div></td>
+  </tr>
+  <tr>
+    <td><div ><code>focus</code> <a name="wp1014525"> </a></div></td>
+    <td><div >Set CMPD focus<a name="wp1014527"> </a></div></td>
+  </tr>
+  <tr>
+    <td><div ><code>globals</code> <a name="wp1014530"> </a></div></td>
+    <td><div >Display global variables<a name="wp1014532"> </a></div></td>
+  </tr>
+  <tr>
+    <td><div ><code>go</code> <a name="wp1014535"> </a></div></td>
+    <td><div >Stop execution at a specified address<a name="wp1014537"> </a></div></td>
+  </tr>
+  <tr>
+    <td><div ><code>help</code> <a name="wp1014540"> </a></div></td>
+    <td><div >Get help on a specific topic<a name="wp1014542"> </a></div></td>
+  </tr>
+  <tr>
+    <td><div ><code>history</code> <a name="wp1014545"> </a></div></td>
+    <td><div >Display command history<a name="wp1014547"> </a></div></td>
+  </tr>
+  <tr>
+    <td><div ><code>if</code> <a name="wp1014550"> </a></div></td>
+    <td><div >Execute a command if condition is true<a name="wp1014552"> </a></div></td>
+  </tr>
+  <tr>
+    <td><div ><code>if ... endif</code> <a name="wp1014555"> </a></div></td>
+    <td><div >Nest conditional commands<a name="wp1014557"> </a></div></td>
+  </tr>
+  <tr>
+    <td><div ><code>isi</code> <a name="wp1014560"> </a></div></td>
+    <td><div >Step through machine instructions, into functions<a name="wp1014562"> </a></div></td>
+  </tr>
+  <tr>
+    <td><div ><code>iso</code> <a name="wp1014565"> </a></div></td>
+    <td><div >Step through machine instructions, over functions<a name="wp1014567"> </a></div></td>
+  </tr>
+  <tr>
+    <td><div ><code>kill</code> <a name="wp1014570"> </a></div></td>
+    <td><div >Terminate the current process<a name="wp1014572"> </a></div></td>
+  </tr>
+  <tr>
+    <td><div ><code>lbreak</code> <a name="wp1014575"> </a></div></td>
+    <td><div >Set a breakpoint on a symbol that has not been loaded yet<a name="wp1014577"> </a></div></td>
+  </tr>
+  <tr>
+    <td><div ><code>load</code> <a name="wp1014580"> </a></div></td>
+    <td><div >Load a program into the debugger<a name="wp1014582"> </a></div></td>
+  </tr>
+  <tr>
+    <td><div ><code>locals</code> <a name="wp1014585"> </a></div></td>
+    <td><div >Display local variables<a name="wp1014587"> </a></div></td>
+  </tr>
+  <tr>
+    <td><div ><code>log</code> <a name="wp1014590"> </a></div></td>
+    <td><div >Log commands and results to a file<a name="wp1014592"> </a></div></td>
+  </tr>
+  <tr>
+    <td><div ><code>macro</code> <a name="wp1014595"> </a></div></td>
+    <td><div >Declare a macro<a name="wp1014597"> </a></div></td>
+  </tr>
+  <tr>
+    <td><div ><code>mem2file</code> <a name="wp1014600"> </a></div></td>
+    <td><div >Dump memory to a binary file<a name="wp1014602"> </a></div></td>
+  </tr>
+  <tr>
+    <td><div ><code>mem2mem</code> <a name="wp1014605"> </a></div></td>
+    <td><div >Copy memory from one location to another<a name="wp1014607"> </a></div></td>
+  </tr>
+  <tr>
+    <td><div ><code>memmap</code> <a name="wp1014610"> </a></div></td>
+    <td><div >Define or print memory map<a name="wp1014612"> </a></div></td>
+  </tr>
+  <tr>
+    <td><div ><code>memory</code> <a name="wp1014615"> </a></div></td>
+    <td><div >Dump memory<a name="wp1014617"> </a></div></td>
+  </tr>
+  <tr>
+    <td><div ><code>memsb </code><a name="wp1014620"> </a></div></td>
+    <td><div >Search backward through memory<a name="wp1014622"> </a></div></td>
+  </tr>
+  <tr>
+    <td><div ><code>memsearch</code> <a name="wp1014625"> </a></div></td>
+    <td><div >Search forward through memory<a name="wp1014627"> </a></div></td>
+  </tr>
+  <tr>
+    <td><div ><code>memset</code> <a name="wp1014630"> </a></div></td>
+    <td><div >Set memory to value<a name="wp1014632"> </a></div></td>
+  </tr>
+  <tr>
+    <td><div ><code>mend</code> <a name="wp1014635"> </a></div></td>
+    <td><div >Terminate a macro definition<a name="wp1014637"> </a></div></td>
+  </tr>
+  <tr>
+    <td><div ><code>modules</code> <a name="wp1014640"> </a></div></td>
+    <td><div >List current executable and shared libraries<a name="wp1014642"> </a></div></td>
+  </tr>
+  <tr>
+    <td><div ><code>off</code> <a name="wp1014645"> </a></div></td>
+    <td><div >Turn off a debugger or extension toggle<a name="wp1014647"> </a></div></td>
+  </tr>
+  <tr>
+    <td><div ><code>on</code> <a name="wp1014650"> </a></div></td>
+    <td><div >Turn on a debugger or extension toggle<a name="wp1014652"> </a></div></td>
+  </tr>
+  <tr>
+    <td><div ><code>onexit command</code> <a name="wp1014655"> </a></div></td>
+    <td><div >Execute <i>command</i> on exiting the debugger<a name="wp1014657"> </a></div></td>
+  </tr>
+  <tr>
+    <td><div ><code>plot</code> <a name="wp1014660"> </a></div></td>
+    <td><div >Send commands to ARCPlotter. <a name="wp1014662"> </a></div></td>
+  </tr>
+  <tr>
+    <td><div ><code>print</code> <a name="wp1014665"> </a></div></td>
+    <td><div >Print a message<a name="wp1014667"> </a></div></td>
+  </tr>
+  <tr>
+    <td><div ><code>prop</code> <a name="wp1014670"> </a></div></td>
+    <td><div >Set a target system property<a name="wp1014672"> </a></div></td>
+  </tr>
+  <tr>
+    <td><div ><code>quit</code> <a name="wp1014675"> </a></div></td>
+    <td><div >Exit the debugger<a name="wp1014677"> </a></div></td>
+  </tr>
+  <tr>
+    <td><div ><code>read</code> <a name="wp1014680"> </a></div></td>
+    <td><div >Automatically process commands in a file<a name="wp1014682"> </a></div></td>
+  </tr>
+  <tr>
+    <td><div ><code>register</code> <a name="wp1014685"> </a></div></td>
+    <td><div >Display machine registers<a name="wp1014687"> </a></div></td>
+  </tr>
+  <tr>
+    <td><div ><code>restart</code> <a name="wp1014690"> </a></div></td>
+    <td><div >Restart the current running process<a name="wp1014692"> </a></div></td>
+  </tr>
+  <tr>
+    <td><div ><code>return</code> <a name="wp1014695"> </a></div></td>
+    <td><div >Return from the current function<a name="wp1014697"> </a></div></td>
+  </tr>
+  <tr>
+    <td><div ><code>run</code> <a name="wp1014700"> </a></div></td>
+    <td><div >Start or continue execution of the current process<a name="wp1014702"> </a></div></td>
+  </tr>
+  <tr>
+    <td><div ><code>set</code> <a name="wp1014705"> </a></div></td>
+    <td><div >Set or display debugger settings<a name="wp1014707"> </a></div></td>
+  </tr>
+  <tr>
+    <td><div ><code>show log</code> <a name="wp1014710"> </a></div></td>
+    <td><div >Show all commands and outputs thus far<a name="wp1014712"> </a></div></td>
+  </tr>
+  <tr>
+    <td><div ><code>simulate</code> <a name="wp1014715"> </a></div></td>
+    <td><div >Update status quietly<a name="wp1014717"> </a></div></td>
+  </tr>
+  <tr>
+    <td><div ><code>sleep</code> <a name="wp1014720"> </a></div></td>
+    <td><div >Sleep specified number of milliseconds<a name="wp1014722"> </a></div></td>
+  </tr>
+  <tr>
+    <td><div ><code>source</code> <a name="wp1014725"> </a></div></td>
+    <td><div >Display source code<a name="wp1014727"> </a></div></td>
+  </tr>
+  <tr>
+    <td><div ><code>ssi</code> <a name="wp1014730"> </a></div></td>
+    <td><div >Step through source-code statements, into functions<a name="wp1014732"> </a></div></td>
+  </tr>
+  <tr>
+    <td><div ><code>sso</code> <a name="wp1014735"> </a></div></td>
+    <td><div >Step through source-code statements, over functions<a name="wp1014737"> </a></div></td>
+  </tr>
+  <tr>
+    <td><div ><code>stack</code> <a name="wp1014740"> </a></div></td>
+    <td><div >Display the run-time function-call stack<a name="wp1014742"> </a></div></td>
+  </tr>
+  <tr>
+    <td><div ><code>status</code> <a name="wp1014745"> </a></div></td>
+    <td><div >Update status of application being debugged<a name="wp1014747"> </a></div></td>
+  </tr>
+  <tr>
+    <td><div ><code>stop</code> <a name="wp1014750"> </a></div></td>
+    <td><div >Stop the current process<a name="wp1014752"> </a></div></td>
+  </tr>
+  <tr>
+    <td><div ><code>symbols</code> <a name="wp1014755"> </a></div></td>
+    <td><div >Load symbols from executable<a name="wp1014757"> </a></div></td>
+  </tr>
+  <tr>
+    <td><div ><code>sysclone</code> <a name="wp1014760"> </a></div></td>
+    <td><div >Clone the current system<a name="wp1014762"> </a></div></td>
+  </tr>
+  <tr>
+    <td><div ><code>sysprop</code> <a name="wp1014765"> </a></div></td>
+    <td><div >Set properties of specified target system<a name="wp1014767"> </a></div></td>
+  </tr>
+  <tr>
+    <td><div ><code>system</code> <a name="wp1014770"> </a></div></td>
+    <td><div >Execute a command on the host system<a name="wp1014772"> </a></div></td>
+  </tr>
+  <tr>
+    <td><div ><code>tbreak</code> <a name="wp1014775"> </a></div></td>
+    <td><div >Set a temporary breakpoint<a name="wp1014777"> </a></div></td>
+  </tr>
+  <tr>
+    <td><div ><code>thread</code> <a name="wp1014780"> </a></div></td>
+    <td><div >Switch to an alternate thread<a name="wp1014782"> </a></div></td>
+  </tr>
+  <tr>
+    <td><div ><code>threads</code> <a name="wp1014785"> </a></div></td>
+    <td><div >Display a list of thread IDs<a name="wp1014787"> </a></div></td>
+  </tr>
+  <tr>
+    <td><div ><code>trace</code> <a name="wp1014790"> </a></div></td>
+    <td><div >Show instruction trace history<a name="wp1014792"> </a></div></td>
+  </tr>
+  <tr>
+    <td><div ><code>unmacro</code> <a name="wp1014795"> </a></div></td>
+    <td><div >Remove a macro definition<a name="wp1014797"> </a></div></td>
+  </tr>
+  <tr>
+    <td><div ><code>unset</code> <a name="wp1014800"> </a></div></td>
+    <td><div >Restore debugger setting to its default<a name="wp1014802"> </a></div></td>
+  </tr>
+  <tr>
+    <td><div ><code>variable</code> <a name="wp1014805"> </a></div></td>
+    <td><div >Declare a debugger variable<a name="wp1014807"> </a></div></td>
+  </tr>
+  <tr>
+    <td><div ><code>watch</code> <a name="wp1014810"> </a></div></td>
+    <td><div >Set a watchpoint or display watchpoints<a name="wp1014812"> </a></div></td>
+  </tr>
+  <tr>
+    <td><div ><code>watchreg</code> <a name="wp1014815"> </a></div></td>
+    <td><div >Set a watchpoint on a register<a name="wp1014817"> </a></div></td>
+  </tr>
+  <tr>
+    <td><div ><code>while</code> <a name="wp1014820"> </a></div></td>
+    <td><div >Execute a command while condition is true<a name="wp1014822"> </a></div></td>
+  </tr>
+</table>
+
+
+
+
+
+<a name="wp1014823"> </a></blockquote>
+ <blockquote >
+Related Task
+
+<a name="wp1003116"> </a></blockquote>
+ <ul> <li ><a href="mw_t_cmd.htm#wp918174">Using Debugger Commands</a><a name="wp994595"> </a>
+</ul><a name="wp993222">
+  <h5 >
+Related Reference
+ </a></h5>
+<ul> <li >Eclipse <em>C/C++ Development User Guide</em><a name="wp993226"> </a>
+ <li ><i>MetaWare Debugger User's Guide</i><a name="wp993227"> </a>
+</ul>
+    </blockquote>
+    <p></p>
+    <hr>
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" class="footer">
+      <tr>
+        <td>
+
+        </td>
+        <td align="right" valign="top" class="navigator">
+<a href="referenc.htm"><img src="images/sprev.gif" border="0" alt="Previous"></a><a href="mw_u_reg.htm"><img src="images/snext.gif" border="0" alt="Next"></a>
+        </td>
+      </tr>
+    </table>
+<p> <font size="-3">
+Copyright © 2012 Synopsys, Inc. <br />
+Some portions of this document copyright IBM Corporation and others 2000, 2004.</font></p>
+  </body>
+</html>

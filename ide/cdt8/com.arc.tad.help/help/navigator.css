@@ -1,0 +1,81 @@
+body {
+	background-color: white;
+	margin-left: 0;
+}
+
+
+ul {
+	margin-left: 1em;
+	padding-left: 0;
+}
+
+caption {
+	color: black;
+	font-weight: bold;
+	text-align:left;
+}
+.navigator a:link {
+	display: block;
+	border: outset thin silver;
+	background-color: silver;
+	color: black;
+	text-decoration: none;
+}
+
+.navigator a:visited {
+	display: block;
+	border: outset thin silver;
+	background-color: silver;
+	color: black;
+	text-decoration: none;
+}
+
+.navigator a:active {
+	display: block;
+	border: inset thin silver;
+	background-color: silver;
+	color: black;
+	text-decoration: none;
+}
+
+
+table {
+	padding-left: 0;
+	width: 100%;
+}
+
+td.navigator {
+	background-color: silver;
+	color: black;
+}
+
+td.toc
+ {
+	background-color: white;
+	border-top: solid silver;
+	padding-left: 0;
+}
+
+td.subhelpsets
+ {
+	background-color: white;
+	border-top: solid silver;
+	padding-left: 0;
+}
+
+
+
+
+a {
+	font-weight: normal;
+	font-size: small;
+
+}
+
+.subhelpsets ul {
+	list-style-type: none;
+	margin-left: 2em;
+}
+.subhelpsets li {
+	list-style-image: url(images/hsicon.gif)}
+

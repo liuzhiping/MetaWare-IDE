@@ -1,0 +1,181 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN" "http://www.w3.org/MarkUp/Wilbur/HTML32.dtd">
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+    <meta name="GENERATOR" content="Quadralay WebWorks Publisher 2003 for FrameMaker 8.0.0.1194">
+    <meta name="TEMPLATEBASE" content="temp">
+    <link rel="StyleSheet" href="document.css" type="text/css" media="screen">
+    <title>Building Projects from the Command Line</title>
+  </head>
+
+  <body>
+
+    <table width="100%" border="0" cellpadding="0" cellspacing="0" class="header">
+      <tr>
+<!--Disabling Breadcrumbs to use Eclipse version 10/2009
+        <td class="breadcrumbs">
+	<a href="ide_guid.htm"> DesignWare ARC MetaWare IDE User's Guide </a> > <a href="tasks.htm"><br>Tasks</a> > <a href="compilaa.htm">Compilation Extensions </a> > Building Projects from the Command Line
+        </td>
+-->
+        <td align="right" valign="top" class="navigator" nowrap>
+<a href="mw_t_stl.htm"><img src="images/sprev.gif" border="0" alt="Previous"></a><a href="mw_t_bat.htm"><img src="images/snext.gif" border="0" alt="Next"></a>
+        </td>
+      </tr>
+    </table>
+
+    <hr align="left">
+
+    <blockquote>
+<h4 >
+Building Projects from the Command Line
+<a name="wp928111"> </a></h4>
+
+<p >
+After you define build settings for your projects, you can build one or more projects from the command line without launching the IDE. This can be useful for automated nightly builds, for example. 
+<a name="wp927748"> </a></p>
+<blockquote >
+
+
+<table border="1" cellpadding="5" cellspacing="0">
+  <caption></caption>
+  <tr>
+    <td><table border="0" cellpadding="5" cellspacing="0">
+  <caption></caption>
+  <tr valign=top>
+    <td><div ><img border="0" src="images/note.png">
+</div></td>
+    <td><div ></div></td>
+</tr></table>
+<a name="wp927873"> </a>
+</td>
+    <td><div >If errors occur, a dialog opens and must to be dismissed before the build continues. For automated builds, include Eclipse option <i>--launcher.suppressErrors</i>.<a name="wp927875"> </a></div></td>
+  </tr>
+</table>
+
+
+
+
+
+<a name="wp927876"> </a></blockquote>
+ <p >
+When you specify <i>-build</i> or <i>-cleanBuild</i>, the IDE is not invoked. Instead, the specified projects are built, and then the command terminates. The build process runs silently unless you specify <i>-console</i>.
+<a name="wp927749"> </a></p>
+<p >
+You can also build a specific configuration of a project by including it in the command line after the project. For example, <code>mide -data myWorkspace -build myProject/Debug</code> builds only the Debug configuration for the project named myProject.
+<a name="wp928024"> </a></p>
+<p >
+On windows, the variable <code>%ERRORLEVEL%</code> is set to <code>1</code> in the case of an error and <code>0</code> if the build is clean.
+<a name="wp927852"> </a></p>
+<a name="wp925296">
+  <h5 >
+4.2.4.1	 Command-Line Options
+ </a></h5>
+<p >
+Type <i>mide</i>, followed by one or more of the following command-line options. 
+<a name="wp925335"> </a></p>
+<a name="wp925087">
+  <h5 >
+-build {<i>project_name</i> | all}
+ </a></h5>
+<p >
+Build all configurations of project <i>project_name</i>. 
+<a name="wp925088"> </a></p>
+<ul> <li >Specify this option multiple times to build more than one project.<a name="wp925179"> </a>
+ <li >Use -<i>build</i> <b>all</b> to build all projects.<a name="wp925091"> </a>
+</ul><a name="wp925092">
+  <h5 >
+-cleanBuild {<i>project_name</i> | all}
+ </a></h5>
+<p >
+Clean, then build all configurations of project <i>project_name</i>.
+<a name="wp925093"> </a></p>
+<ul> <li >Specify this option multiple times to clean and build more than one project.<a name="wp925223"> </a>
+ <li >Use -<i>build</i> <b>all</b> to clean and build all projects.<a name="wp925224"> </a>
+</ul><a name="wp927799">
+  <h5 >
+-console
+ </a></h5>
+<p >
+Launch a console window to view build output. If this option is not specified, the build process runs silently.
+<a name="wp927800"> </a></p>
+<a name="wp925097">
+  <h5 >
+-data <i>workspace_path</i>
+ </a></h5>
+<p >
+Specify the path to the workspace.
+<a name="wp925098"> </a></p>
+<a name="wp925099">
+  <h5 >
+-import [uri:/]/<i>path/to/project</i>
+ </a></h5>
+<p >
+Specify the path to a project to be imported into the workspace prior to the build. This option is only required if the referenced project is not already in the workspace. You can specify this option multiple times to import more than one project.
+<a name="wp925100"> </a></p>
+<a name="wp925113">
+  <h5 >
+4.2.4.2	 Examples
+ </a></h5>
+<blockquote >
+
+
+<table border="0" cellpadding="5" cellspacing="1" class="textlayout">
+
+  <tr>
+    <td><pre >//Clean and build projects in a specific workspace; display output on 
+console.
+<a name="wp927063"></a>mide -data C:/workspace -cleanBuild TestProject -cleanBuild MainProject 
+-console
+<a name="wp927803"></a></pre>
+<pre >//Build a project in a specific workspace with console display and no error 
+dialog.
+<a name="wp927818"></a>mide -build Queens -data C:\ARC\DemoWorkspace -console 
+--launcher.suppressErrors
+<a name="wp927824"></a></pre>
+<pre >//Build a project in a specific workspace and send errors to a file.
+<a name="wp927830"></a>mide -build Queens -data C:\ARC\DemoWorkspace --launcher.suppressErrors &gt; 
+errors.txt
+<a name="wp927847"></a></pre>
+</td>
+  </tr>
+</table>
+
+
+
+
+
+<a name="wp927056"> </a></blockquote>
+ <a name="wp927976">
+  <h5 >
+4.2.4.3	 Improving Build Speed
+ </a></h5>
+<p >
+Disabling the automatic C/C++ indexer can improve build speed. 
+<a name="wp927957"> </a></p>
+<ul> <li >To disable the C/C++ indexer for the entire IDE, uncheck <b>Window &gt; Preferences &gt; C/C++ Indexer</b>.<a name="wp927958"> </a>
+ <li >To disable the C/C++ indexer for a single project:, go to <b>Project properties &gt; C/C++ General &gt; Enable project specific settings</b>.<a name="wp927959"> </a>
+</ul><a name="wp925238">
+  <h5 >
+Related Tasks
+ </a></h5>
+<ul> <li ><a href="mw_t_con.htm#wp695471">Creating a Build Configuration</a><a name="wp927966"> </a>
+ <li ><a href="mw_t_deb.htm#wp919935">Launching a Debug Configuration at Startup</a><a name="wp927970"> </a>
+</ul>
+    </blockquote>
+    <p></p>
+    <hr>
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" class="footer">
+      <tr>
+        <td>
+
+        </td>
+        <td align="right" valign="top" class="navigator">
+<a href="mw_t_stl.htm"><img src="images/sprev.gif" border="0" alt="Previous"></a><a href="mw_t_bat.htm"><img src="images/snext.gif" border="0" alt="Next"></a>
+        </td>
+      </tr>
+    </table>
+<p> <font size="-3">
+Copyright © 2012 Synopsys, Inc. <br />
+Some portions of this document copyright IBM Corporation and others 2000, 2004.</font></p>
+  </body>
+</html>

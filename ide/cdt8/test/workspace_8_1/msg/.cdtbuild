@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?fileVersion 3.1.0?>
+
+<ManagedProjectBuildInfo>
+<project id="hello.com.arc.cdt.toolchain.arc.exeProject.799372468" name="ARCompact Executable" projectType="com.arc.cdt.toolchain.arc.exeProject">
+<configuration artifactExtension="elf" artifactName="msg" cleanCommand="rm -rf" description="ARC 600" errorParsers="com.arc.cdt.toolchain.ARCCompilerErrorParser;com.arc.cdt.toolchain.ARCLinkerErrorParser;com.arc.cdt.toolchain.ARCAssemblerErrorParser;org.eclipse.cdt.core.MakeErrorParser" id="com.arc.cdt.toolchain.arc.exeDebugConfig.215003907" name="arca6.met" parent="com.arc.cdt.toolchain.arc.exeDebugConfig">
+<toolChain id="com.arc.cdt.toolchain.arc.exeToolChainDebug.729946321" name="ARC EXE Tool Chain" superClass="com.arc.cdt.toolchain.arc.exeToolChainDebug">
+<tool id="arc.exe.debug.exeCompilerDebug.1406546192" name="MetaWare ARC C/C++ Compiler" superClass="arc.exe.debug.exeCompilerDebug">
+<option id="com.arc.cdt.toolchain.arc.compilerDebugOptLevel.1535017349" name="Optimization Level (-O...)" superClass="com.arc.cdt.toolchain.arc.compilerDebugOptLevel" value="arc.optimization.level.O" valueType="enumerated"/>
+<option id="arc.compiler.options.defines.1888448356" name="Preprocessor Defines (one per line)" superClass="arc.compiler.options.defines" valueType="definedSymbols">
+<listOptionValue builtIn="false" value="MQX_CPU=0xACA6"/>
+<listOptionValue builtIn="false" value="PSP_EXTENSION_REGISTERS=0"/>
+<listOptionValue builtIn="false" value="PSP_NUM_EXTENSION_REGISTERS=0"/>
+<listOptionValue builtIn="false" value="RTCS_OS_MQX25X"/>
+<listOptionValue builtIn="false" value="__MET__"/>
+</option>
+<option id="arc.compiler.options.include_dirs.383001344" name="Include Directories (one per line)" superClass="arc.compiler.options.include_dirs" valueType="includePath">
+<listOptionValue builtIn="false" value="${MQX_ROOT}/library/include"/>
+<listOptionValue builtIn="false" value="${MQX_ROOT}/library/io/pcb"/>
+<listOptionValue builtIn="false" value="${MQX_ROOT}/library/io/pcb/mqxa"/>
+<listOptionValue builtIn="false" value="${MQX_ROOT}/library/io/pcb/shmem"/>
+<listOptionValue builtIn="false" value="${MQX_ROOT}/library/psp/arc"/>
+<listOptionValue builtIn="false" value="${MQX_ROOT}/library/bsp/arcangel"/>
+<listOptionValue builtIn="false" value="${MQX_ROOT}/library/io"/>
+<listOptionValue builtIn="false" value="${MQX_ROOT}/library/io/io_mem"/>
+<listOptionValue builtIn="false" value="${MQX_ROOT}/library/io/io_null"/>
+<listOptionValue builtIn="false" value="${MQX_ROOT}/library/io/io_dun"/>
+<listOptionValue builtIn="false" value="${MQX_ROOT}/library/io/enet"/>
+<listOptionValue builtIn="false" value="${MQX_ROOT}/library/io/enet/vmac"/>
+<listOptionValue builtIn="false" value="${MQX_ROOT}/library/io/serial"/>
+<listOptionValue builtIn="false" value="${MQX_ROOT}/library/io/timer"/>
+<listOptionValue builtIn="false" value="${MQX_ROOT}/library/io/flashx"/>
+<listOptionValue builtIn="false" value="${MQX_ROOT}/library/io/flashx/istrata"/>
+<listOptionValue builtIn="false" value="${MQX_ROOT}/library/io/pipe"/>
+<listOptionValue builtIn="false" value="${MQX_ROOT}/library/io/io_ide"/>
+<listOptionValue builtIn="false" value="${MQX_ROOT}/library/io/io_ide/disk_ST3120022A"/>
+</option>
+<option id="arc.compiler.options.misc.pragmas.1293820204" name="Pragma specifications [e.g., offwarn(123)]" superClass="arc.compiler.options.misc.pragmas"/>
+<option id="arc.compiler.options.target.version.1308215432" name="ARC Core Version" superClass="arc.compiler.options.target.version" value="arc.compiler.options.target.arc600" valueType="enumerated"/>
+<option id="arc.compiler.options.norm.1589439819" name="Normalize instruction (-Xnorm)" superClass="arc.compiler.options.norm" value="false" valueType="boolean"/>
+<option id="arc.compiler.options.swap.1477545740" name="Swap instruction (-Xswap)" superClass="arc.compiler.options.swap" value="false" valueType="boolean"/>
+<option id="arc.compiler.options.ea.1964872193" name="Extended arithmetic (-Xea)" superClass="arc.compiler.options.ea" value="false" valueType="boolean"/>
+<option id="arc.compiler.options.timers.timer0.1045825516" name="Use Timer 0 (-Xtimer0)" superClass="arc.compiler.options.timers.timer0" value="false" valueType="boolean"/>
+<option id="arc.compiler.options.timers.timer1.517738308" name="Use timer 1 (-Xtimer1)" superClass="arc.compiler.options.timers.timer1" value="false" valueType="boolean"/>
+<option id="arc.arc.compiler.options.volatile_cache_bypass.1311408364" name="Bypass cache to reference volatile variables" superClass="arc.arc.compiler.options.volatile_cache_bypass" value="false" valueType="boolean"/>
+<option id="arc.compiler.options.misc.additional.1319926733" superClass="arc.compiler.options.misc.additional" valueType="stringList"/>
+</tool>
+<tool id="com.arc.cdt.toolchain.arc.asmDebugExe.549836972" name="ARCompact Assembler" superClass="com.arc.cdt.toolchain.arc.asmDebugExe">
+<option id="arc.compiler.options.target.asm.version.1832776477" name="ARC Core Version" superClass="arc.compiler.options.target.asm.version" value="arc.compiler.options.target.arc600" valueType="enumerated"/>
+<option id="arc.asm.options.norm.1613657007" name="Normalize instruction (-Xnorm)" superClass="arc.asm.options.norm" value="false" valueType="boolean"/>
+<option id="arc.asm.options.swap.1712022907" name="Swap instruction (-Xswap)" superClass="arc.asm.options.swap" value="false" valueType="boolean"/>
+<option id="arc.asm.options.ea.527553184" name="Extended arithmetic (-Xea)" superClass="arc.asm.options.ea" value="false" valueType="boolean"/>
+<option id="arc.asm.options.bs.1062210802" name="Barrel shifter (-Xbs)" superClass="arc.asm.options.bs" value="true" valueType="boolean"/>
+<option id="arc.asm.options.timers.timer0.1123732351" name="Use Timer 0 (-Xtimer0)" superClass="arc.asm.options.timers.timer0" value="false" valueType="boolean"/>
+<option id="arc.asm.options.timers.timer1.1001304135" name="Use timer 1 (-Xtimer1)" superClass="arc.asm.options.timers.timer1" value="false" valueType="boolean"/>
+<option id="com.arc.cdt.toolchain.asm.option.defines.1629037008" name="Preprocessor Defines (one per line)" superClass="com.arc.cdt.toolchain.asm.option.defines" valueType="definedSymbols">
+<listOptionValue builtIn="false" value="MQX_CPU=0xACA6"/>
+<listOptionValue builtIn="false" value="PSP_EXTENSION_REGISTERS=0"/>
+<listOptionValue builtIn="false" value="PSP_NUM_EXTENSION_REGISTERS=0"/>
+<listOptionValue builtIn="false" value="RTCS_OS_MQX25X"/>
+<listOptionValue builtIn="false" value="__MET__"/>
+</option>
+</tool>
+<tool id="com.arc.cdt.toolchain.arc.exeLinkerDebug.1068037103" name="MetaWare Linker" superClass="com.arc.cdt.toolchain.arc.exeLinkerDebug">
+<option id="arc.linker.options.target.version.1881244784" name="Target Runtime Libraries" superClass="arc.linker.options.target.version" value="arc.compiler.options.target.arc600" valueType="enumerated"/>
+<option id="arc.linker.options.norm.659472114" name="Normalize instruction (-Xnorm)" superClass="arc.linker.options.norm" value="false" valueType="boolean"/>
+<option id="arc.linker.options.swap.2008109021" name="Swap instruction (-Xswap)" superClass="arc.linker.options.swap" value="false" valueType="boolean"/>
+<option id="arc.linker.options.ea.75080082" name="Extended arithmetic (-Xea)" superClass="arc.linker.options.ea" value="false" valueType="boolean"/>
+<option id="arc.linker.options.bs.893022955" name="Barrel shifter (-Xbs)" superClass="arc.linker.options.bs" value="true" valueType="boolean"/>
+<option id="arc.link.ld.user_objs.1945491734" name="Additional Object Files &amp;&amp; Libraries" superClass="arc.link.ld.user_objs" valueType="userObjs">
+<listOptionValue builtIn="false" value="${MQX_ROOT}/library/arca6.met/mqx.a"/>
+</option>
+<option id="com.arc.cdt.toolchain.option.linker.svr3.199192672" name="SVR3-style command files" superClass="com.arc.cdt.toolchain.option.linker.svr3" valueType="userObjs">
+<listOptionValue builtIn="false" value="${MQX_ROOT}/library/bsp/arcangel/link.met"/>
+</option>
+<option id="com.arc.cdt.toolchain.linker.option.map.1219656222" name="Generate listing file (=.map)" superClass="com.arc.cdt.toolchain.linker.option.map" value="true" valueType="boolean"/>
+<option id="arc.linker.options.rtos.373421934" name="Include RTOS-specific thread library" superClass="arc.linker.options.rtos" value="arc.linker.options.rtos.mqx" valueType="enumerated"/>
+</tool>
+<macros/>
+</toolChain>
+</configuration>
+<macros/>
+</project>
+</ManagedProjectBuildInfo>

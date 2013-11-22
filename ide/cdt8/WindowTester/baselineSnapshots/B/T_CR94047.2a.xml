@@ -1,0 +1,13 @@
+<view name="com.arc.cdt.debug.seecode.ui.views.SeeCodeCustomView:watch">
+<TextCanvas>
+    <text lineCount="7" selection="-1">
+        <line content="H 0x00016000 data-write">
+        <line content="  value:  --------">
+        <line content=" ">
+        <line content="">
+        <line content=" ">
+        <line content="">
+        <line content=" ">
+    </text>
+</TextCanvas>
+</view>

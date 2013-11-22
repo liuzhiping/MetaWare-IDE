@@ -1,0 +1,16 @@
+<view name="com.arc.cdt.debug.seecode.ui.views.SeeCodeCustomView:source">
+<TextCanvas>
+    <text lineCount="10" selection="-1">
+        <line content="   1 /************************************************************************/">
+        <line content="   2 /************************************************************************/">
+        <line content="   3 /**                                                                     */">
+        <line content="   4 /** Copyright (c) ARC International 2008.                               */">
+        <line content="   5 /** All rights reserved                                                 */">
+        <line content="   6 /**                                                                     */">
+        <line content="   7 /** This software embodies materials and concepts which are             */">
+        <line content="   8 /** confidential to ARC International and is made                       */">
+        <line content="   9 /** available solely pursuant to the terms of a written license         */">
+        <line content="  10 /** agreement with ARC International                                    */">
+    </text>
+</TextCanvas>
+</view>

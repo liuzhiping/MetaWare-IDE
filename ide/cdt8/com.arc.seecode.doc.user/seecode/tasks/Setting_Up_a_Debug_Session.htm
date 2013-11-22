@@ -1,0 +1,49 @@
+<html>
+<!-- #BeginTemplate "/Templates/Help Topic.dwt" --> 
+<head>
+<!-- #BeginEditable "title" --> 
+<title>Starting the debug session</title>
+<!-- #EndEditable --> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel=StyleSheet href="../default.css">
+</head>
+<body>
+<h1><!-- #BeginEditable "Heading" -->Starting the debug session<!-- #EndEditable --></h1>
+<!-- #BeginEditable "BodyText" --> 
+<p>Use the <b>Debug a process or processes</b> window to start your debug session. 
+</p>
+<p><img src="../images/debug_processes_window.gif"></p>
+<ol>
+  <li>(Optional) Select <b>Use debug project</b> and select or create a project 
+    for your debug session. To create a new project, see <b><a href="Creating_and_Editing_Projects.htm">Creating 
+    and Editing Projects</a></b>. If you leave <b>Use debug project</b> deselected 
+    the debugger will create a directory named <i>.sc.project</i> in the directory 
+    where the debugger was launched. All debugger configuration files will be 
+    placed in the <i>.sc.project</i> directory.</li>
+  <li>Select the type of debug session:</li>
+  <ul>
+    <li> <b>Create new process</b> (single process session) will begin a single 
+      process session that involves one program running on one target.</li>
+    <li><b>Multi-process session</b> will begin a Coordinated Multi Process Debug 
+      session (CMPD). Select Multi-process session when you are debugging multiple 
+      programs or multiple targets. If you are starting a CMPD session, see <a href="Setting_up_CMPD.htm"><b>Setting 
+      up a Multi-Process Debug Session</b></a>.</li>
+  </ul>
+  <li>Enter the full path of the program in the <b>Program &amp; args</b> field or click 
+    the <b>Browse <img src="../images/browse.gif"></b> button to locate your executable.
+    You can provide program arguments and additional debugger command-line arguments following the path.
+    </li>
+  <li>Click the <a href="Setting_Options.htm"><b>Debugger options</b></a> button 
+    to set debugger options for a single process session. If you select Multi-process 
+    session, click the <b><a href="Setting_up_CMPD.htm">CMPD Options</a></b> button.</li>
+  <li>Click the <b><a href="Setting_Target_Hardware_Options.htm">Target-specific 
+    options</a></b> button to set the connection to your target system (hardware 
+    or simulator).</li>
+  <li>Click <b>OK</b> or press the <b>[ENTER]</b> key to start the debug session.</li>
+</ol>
+<p>&nbsp;</p>
+<!-- #EndEditable --> 
+<p>&nbsp;</p>
+</body>
+<!-- #EndTemplate -->
+</html>

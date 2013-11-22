@@ -1,0 +1,16 @@
+<view name="com.arc.cdt.debug.seecode.ui.views.SeeCodeCustomView:source">
+<TextCanvas>
+    <text lineCount="10" selection="-1">
+        <line content="   1 /* From Wirth's Algorithms+Data Structures = Programs. */">
+        <line content="   2 /* This program is suitable for a code-generation      */">
+        <line content="   3 /* benchmark, especially given common sub-expressions  */">
+        <line content="   4 /* in array indexing.  See the Programmer's Guide for  */">
+        <line content="   5 /* how to get a machine code interlisting.             */">
+        <line content="   6 ">
+        <line content="   7 #include <stdio.h>">
+        <line content="   8 #include <stdlib.h>">
+        <line content="   9 ">
+        <line content="  10 typedef enum{False,True} Boolean;">
+    </text>
+</TextCanvas>
+</view>

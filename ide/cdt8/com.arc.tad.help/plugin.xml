@@ -1,0 +1,16 @@
+<plugin>
+   <extension point="org.eclipse.help.toc">
+      <toc file="help/EHtoc.xml" primary="true" />
+   </extension>
+   <extension point="org.eclipse.help.index">
+     <index file="help/EHindex.xml"/>
+ </extension>
+
+  <extension
+         point="org.eclipse.help.contexts">
+      <contexts
+            file="help/contexts.xml"
+            plugin="com.arc.cdt.debug.seecode.ui">
+      </contexts>
+   </extension>
+</plugin>

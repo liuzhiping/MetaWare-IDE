@@ -1,0 +1,396 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ <index version="1.0">
+ <entry keyword="adding files to a project"><topic href="help/mw_t_add.htm#wp695194"/></entry>
+ <entry keyword="animating">
+  <entry keyword="a process">
+   <entry keyword="(1) Animation"><topic href="help/mw_c_ani.htm#wp878963"/></entry>
+   <entry keyword="(2) Debugging: Animating a Process"><topic href="help/mw_t_ani.htm#wp887495"/></entry>
+  </entry>
+ </entry>
+ <entry keyword="animation"><topic href="help/mw_t_ani.htm#wp887495"/>
+  <entry keyword="defined"><topic href="help/mw_c_ani.htm#wp878963"/></entry>
+  <entry keyword="starting"><topic href="help/starting.htm#wp923908"/></entry>
+  <entry keyword="stopping">
+   <entry keyword="(1) Starting Animation"><topic href="help/starting.htm#wp887428"/></entry>
+   <entry keyword="(2) Starting Animation"><topic href="help/starting.htm#wp887428"/></entry>
+  </entry>
+ </entry>
+ <entry keyword="Automated Overlay Manager"><topic href="help/download.htm#wp922446"/></entry>
+ <entry keyword="auxiliary registers"><topic href="help/mw_t_aux.htm#wp709498"/></entry>
+ <entry keyword="batch files and projects"><topic href="help/mw_t_bat.htm#wp709205"/></entry>
+ <entry keyword="BCRs"><topic href="help/mw_u_bcr.htm#wp910611"/></entry>
+ <entry keyword="binding, deep or shallow"><topic href="help/mw_t_exa.htm#wp945968"/></entry>
+ <entry keyword="breakpoints">
+  <entry keyword="(1) Defining MetaWare Debugger Settings"><topic href="help/mw_t_run.htm#wp921144"/></entry>
+  <entry keyword="(2) Viewing and Managing Current Breakpoints"><topic href="help/mw_t_bkp.htm#wp918964"/></entry>
+  <entry keyword="behavior in views and windows"><topic href="help/mw_w_trb.htm#wp844517"/></entry>
+  <entry keyword="can't set"><topic href="help/mw_t_src.htm#wp709330"/></entry>
+  <entry keyword="hardware">
+   <entry keyword="(1) Adding Breakpoints"><topic href="help/cdt_t_ad.htm#wp918900"/></entry>
+   <entry keyword="(2) Adding Breakpoints"><topic href="help/cdt_t_ad.htm#wp918905"/></entry>
+  </entry>
+  <entry keyword="inconsistent behavior"><topic href="help/mw_w_trb.htm#wp844517"/></entry>
+  <entry keyword="managing"><topic href="help/mw_t_bkp.htm#wp918964"/></entry>
+ </entry>
+ <entry keyword="Build All greyed out"><topic href="help/mw_w_trb.htm#wp844492"/></entry>
+ <entry keyword="build configurations, creating"><topic href="help/mw_t_con.htm#wp695116"/></entry>
+ <entry keyword="Build Project greyed out"><topic href="help/mw_w_trb.htm#wp844492"/></entry>
+ <entry keyword="building on the command line"><topic href="help/building.htm#wp927748"/></entry>
+ <entry keyword="C++">
+  <entry keyword="run-time libraries"><topic href="help/mw_t_stl.htm#wp928171"/></entry>
+ </entry>
+ <entry keyword="cache">
+  <entry keyword="analysis"><topic href="help/mw_u_cac.htm#wp990763"/></entry>
+  <entry keyword="performance"><topic href="help/mw_u_cac.htm#wp990763"/></entry>
+  <entry keyword="thrashing defined"><topic href="help/mw_u_cac.htm#wp911024"/></entry>
+ </entry>
+ <entry keyword="call stack"><topic href="help/mw_t_cst.htm#wp695815"/>
+  <entry keyword="and crashes"><topic href="help/mw_w_trb.htm#wp845240"/></entry>
+  <entry keyword="function activation records"><topic href="help/mw_t_cst.htm#wp919635"/></entry>
+ </entry>
+ <entry keyword="cannot find gmake"><topic href="help/mw_w_trb.htm#wp844497"/></entry>
+ <entry keyword="capturing a trace"><topic href="help/configur.htm#wp696863"/></entry>
+ <entry keyword="case-sensitivity">
+  <entry keyword="command-line options"><topic href="help/notes.htm#wp90852"/></entry>
+ </entry>
+ <entry keyword="CES"><topic href="help/mw_t_ces.htm#wp705745"/></entry>
+ <entry keyword="cJTAG see two-wire JTAG"><topic href="help/using_a_.htm#wp945481"/></entry>
+ <entry keyword="CMPD"><topic href="help/mw_c_cmp.htm#wp880153"/>
+  <entry keyword="extensions"><topic href="help/mw_c_cmp.htm#wp880153"/></entry>
+ </entry>
+ <entry keyword="COMM-port simulator">
+  <entry keyword="(1) Specifying a Terminal or COMM-Port Simulator"><topic href="help/mw_t_ter.htm#wp917942"/></entry>
+  <entry keyword="(2) Debugger: COMM-Port Simulator Settings"><topic href="help/mw_u_com.htm#wp993324"/></entry>
+ </entry>
+ <entry keyword="command-line builds"><topic href="help/building.htm#wp927748"/></entry>
+ <entry keyword="commands (debugger)"><topic href="help/mw_u_cmn.htm#wp992758"/>
+  <entry keyword="entering"><topic href="help/mw_t_cmd.htm#wp710969"/></entry>
+  <entry keyword="log"><topic href="help/mw_t_log.htm#wp796716"/></entry>
+  <entry keyword="processors"><topic href="help/mw_c_cmp.htm#wp880003"/></entry>
+ </entry>
+ <entry keyword="commands not found"><topic href="help/mw_w_trb.htm#wp845529"/></entry>
+ <entry keyword="Compact JTAG see two-wire JTAG"><topic href="help/using_a_.htm#wp945481"/></entry>
+ <entry keyword="Console"><topic href="help/mw_t_pou.htm#wp710928"/>
+  <entry keyword="as stdin"><topic href="help/mw_t_inp.htm#wp710878"/></entry>
+ </entry>
+ <entry keyword="conventions">
+  <entry keyword="typographic">
+   <entry keyword="(1) Notes"><topic href="help/notes.htm#wp90846"/></entry>
+   <entry keyword="(2) Cautions"><topic href="help/cautions.htm#wp90856"/></entry>
+   <entry keyword="(3) Hints"><topic href="help/hints.htm#wp90867"/></entry>
+  </entry>
+ </entry>
+ <entry keyword="converting MetaDeveloper projects"><topic href="help/mw_t_imp.htm#wp921827"/></entry>
+ <entry keyword="Coordinated Multiprocess Debugger">
+  <entry keyword="See CMPD"><topic href="help/mw_c_cmp.htm#wp880153"/></entry>
+ </entry>
+ <entry keyword="copying a file to memory"><topic href="help/mw_t_fia.htm#wp709925"/></entry>
+ <entry keyword="copying memory to a file"><topic href="help/mw_t_mea.htm#wp709967"/></entry>
+ <entry keyword="core registers, reduced"><topic href="help/mw_t_set.htm#wp695254"/></entry>
+ <entry keyword="customer support"><topic href="help/customer.htm#wp92081"/></entry>
+ <entry keyword="Cycle-Estimating Simulator"><topic href="help/mw_t_ces.htm#wp705745"/></entry>
+ <entry keyword="data cache analysis"><topic href="help/mw_u_cac.htm#wp990763"/></entry>
+ <entry keyword="Debug configuration"><topic href="help/mw_c_con.htm#wp877972"/></entry>
+ <entry keyword="Debug perspective"><topic href="help/mw_t_deb.htm#wp920049"/></entry>
+ <entry keyword="debugger">
+  <entry keyword="commands, list of"><topic href="help/mw_u_cmn.htm#wp992758"/></entry>
+  <entry keyword="windows">
+   <entry keyword="and views"><topic href="help/mw_o_deb.htm#wp695554"/></entry>
+   <entry keyword="out of synch"><topic href="help/mw_w_trb.htm#wp844513"/></entry>
+  </entry>
+ </entry>
+ <entry keyword="deep binding"><topic href="help/mw_t_exa.htm#wp945968"/></entry>
+ <entry keyword="Digilent cable">
+  <entry keyword="(1) Using a Digilent Cable to Connect to Hardware"><topic href="help/using_a_.htm#wp945459"/></entry>
+  <entry keyword="(2) Using a Digilent Cable to Connect to Hardware"><topic href="help/using_a_.htm#wp945461"/></entry>
+ </entry>
+ <entry keyword="disassembly">
+  <entry keyword="viewing"><topic href="help/mw_t_dis.htm#wp709373"/>
+   <entry keyword="at a specific address"><topic href="help/t_cus_di.htm#wp924086"/></entry>
+   <entry keyword="history"><topic href="help/mw_u_icn.htm#wp911618"/></entry>
+  </entry>
+ </entry>
+ <entry keyword="downloading multiple executables"><topic href="help/download.htm#wp922446"/></entry>
+ <entry keyword="enhanced system timers"><topic href="help/mw_t_tim.htm#wp918803"/></entry>
+ <entry keyword="entry point"><topic href="help/mw_t_run.htm#wp921143"/></entry>
+ <entry keyword="Error launching external scanner info generator"><topic href="help/mw_w_trb.htm#wp851218"/></entry>
+ <entry keyword="examining">
+  <entry keyword="deeper levels in data structures"><topic href="help/mw_t_exa.htm#wp711246"/></entry>
+  <entry keyword="variables"><topic href="help/mw_t_exa.htm#wp711212"/></entry>
+ </entry>
+ <entry keyword="executables, multiple">
+  <entry keyword="(1) Downloading Additional Executables"><topic href="help/download.htm#wp922446"/></entry>
+  <entry keyword="(2) Extracting Symbols from Additional Executables"><topic href="help/extracti.htm#wp922283"/></entry>
+ </entry>
+ <entry keyword="extensions, CMPD"><topic href="help/mw_c_cmp.htm#wp880153"/></entry>
+ <entry keyword="faster debugger response time"><topic href="help/mw_c_wat.htm#wp873980"/></entry>
+ <entry keyword="files">
+  <entry keyword="adding to a project"><topic href="help/mw_t_add.htm#wp695194"/></entry>
+  <entry keyword="copying memory to"><topic href="help/mw_t_mea.htm#wp709967"/></entry>
+  <entry keyword="copying to memory"><topic href="help/mw_t_fia.htm#wp709925"/></entry>
+ </entry>
+ <entry keyword="flags see toggles"><topic href="help/mw_t_set.htm#wp903359"/></entry>
+ <entry keyword="functions, debugging"><topic href="help/mw_t_fun.htm#wp696382"/>
+  <entry keyword="activation records defined"><topic href="help/mw_t_cst.htm#wp919635"/></entry>
+  <entry keyword="setting breakpoints"><topic href="help/setting_.htm#wp696394"/></entry>
+  <entry keyword="viewing disassembly"><topic href="help/viewinga.htm#wp696402"/></entry>
+ </entry>
+ <entry keyword="generating window, defined"><topic href="help/mw_u_ter.htm#wp993303"/></entry>
+ <entry keyword="global variables, debugging"><topic href="help/mw_t_glo.htm#wp711083"/></entry>
+ <entry keyword="gmake, error finding"><topic href="help/mw_w_trb.htm#wp844497"/></entry>
+ <entry keyword="hardware breakpoints">
+  <entry keyword="(1) Adding Breakpoints"><topic href="help/cdt_t_ad.htm#wp918900"/></entry>
+  <entry keyword="(2) Adding Breakpoints"><topic href="help/cdt_t_ad.htm#wp918905"/></entry>
+ </entry>
+ <entry keyword="hardware profiling"><topic href="help/adding_p.htm#wp927507"/></entry>
+ <entry keyword="hardware stack, debugging"><topic href="help/mw_t_hws.htm#wp710734"/></entry>
+ <entry keyword="hardware vs. software watchpoints"><topic href="help/mw_c_wat.htm#wp873998"/></entry>
+ <entry keyword="help">
+  <entry keyword="paging up or down in"><topic href="help/mw_w_trb.htm#wp844486"/></entry>
+  <entry keyword="Windows security alert"><topic href="help/mw_w_trb.htm#wp844534"/></entry>
+ </entry>
+ <entry keyword="hyphens in project name"><topic href="help/mw_w_trb.htm#wp849001"/></entry>
+ <entry keyword="IEEE 1149 see two-wire JTAG"><topic href="help/using_a_.htm#wp945481"/></entry>
+ <entry keyword="image, viewing from memory or a register"><topic href="help/mw_u_img.htm#wp911054"/></entry>
+ <entry keyword="input to the application being debugged"><topic href="help/mw_t_inp.htm#wp710878"/></entry>
+ <entry keyword="instruction cache analysis"><topic href="help/mw_u_cac.htm#wp990763"/></entry>
+ <entry keyword="instruction count history, debugging"><topic href="help/mw_u_icn.htm#wp911618"/></entry>
+ <entry keyword="instruction history"><topic href="help/using_ns.htm#wp928481"/></entry>
+ <entry keyword="instruction history, debugging"><topic href="help/mw_t_ins.htm#wp696739"/></entry>
+ <entry keyword="instructions, stepping into (command)"><topic href="help/extracti.htm#wp922283"/></entry>
+ <entry keyword="JTAG">
+  <entry keyword="two-wire"><topic href="help/using_a_.htm#wp945481"/></entry>
+ </entry>
+ <entry keyword="labeling lines of instruction history"><topic href="help/marking_.htm#wp696848"/></entry>
+ <entry keyword="labels in Disassembly window"><topic href="help/opening_.htm#wp919460"/></entry>
+ <entry keyword="Launching failed"><topic href="help/mw_w_trb.htm#wp851179"/></entry>
+ <entry keyword="libraries">
+  <entry keyword="C++"><topic href="help/mw_t_stl.htm#wp928171"/></entry>
+ </entry>
+ <entry keyword="license"><topic href="help/displayi.htm#wp922731"/></entry>
+ <entry keyword="linker command file"><topic href="help/editinga.htm#wp928950"/></entry>
+ <entry keyword="loading symbols from an executable"><topic href="help/extracti.htm#wp922283"/></entry>
+ <entry keyword="local variables, debugging"><topic href="help/mw_t_loc.htm#wp711144"/></entry>
+ <entry keyword="log (debugger), capturing"><topic href="help/mw_t_log.htm#wp796716"/></entry>
+ <entry keyword="LRU value (overlays)"><topic href="help/mw_u_ovl.htm#wp982831"/></entry>
+ <entry keyword="main(), stopping debugger at"><topic href="help/mw_t_run.htm#wp921144"/></entry>
+ <entry keyword="marking lines of instruction history"><topic href="help/marking_.htm#wp696848"/></entry>
+ <entry keyword="memory protection unit"><topic href="help/mw_t_mpu.htm#wp710523"/></entry>
+ <entry keyword="memory, debugging"><topic href="help/mw_t_mem.htm#wp709570"/>
+  <entry keyword="copying a file to"><topic href="help/mw_t_fia.htm#wp709925"/></entry>
+  <entry keyword="copying to a file"><topic href="help/mw_t_mea.htm#wp709967"/></entry>
+  <entry keyword="filling with a value or string"><topic href="help/mw_t_fil.htm#wp709882"/></entry>
+ </entry>
+ <entry keyword="MetaDeveloper, converting projects from"><topic href="help/mw_t_imp.htm#wp921827"/></entry>
+ <entry keyword="MetaWare tool versions">
+  <entry keyword="(1) Troubleshooting"><topic href="help/mw_w_trb.htm#wp844492"/></entry>
+  <entry keyword="(2) Displaying Toolset License and Version Information"><topic href="help/displayi.htm#wp922731"/></entry>
+ </entry>
+ <entry keyword="ML50x"><topic href="help/using_a_.htm#wp945459"/></entry>
+ <entry keyword="MMU">
+  <entry keyword="(1) Debugging with ARC 700 Exception and MMU Registers"><topic href="help/mw_t_mmu.htm#wp710455"/></entry>
+  <entry keyword="(2) Debugging with ARC 700 Exception and MMU Registers"><topic href="help/mw_t_mmu.htm#wp710455"/></entry>
+  <entry keyword="(3) Viewing MMU Contents"><topic href="help/mw_t_mma.htm#wp710484"/></entry>
+  <entry keyword="(4) Viewing MMU Contents"><topic href="help/mw_t_mma.htm#wp924657"/></entry>
+ </entry>
+ <entry keyword="modules, executable (debugging)"><topic href="help/mw_t_mod.htm#wp919247"/></entry>
+ <entry keyword="MPU"><topic href="help/mw_t_mpu.htm#wp710523"/></entry>
+ <entry keyword="MQX"><topic href="help/mw_t_ter.htm#wp917937"/></entry>
+ <entry keyword="multiple command processors"><topic href="help/mw_c_cmp.htm#wp880003"/></entry>
+ <entry keyword="multiprocess debugger extensions"><topic href="help/mw_c_cmp.htm#wp880153"/></entry>
+ <entry keyword="No rule to make target"><topic href="help/mw_w_trb.htm#wp851199"/></entry>
+ <entry keyword="Not stopped in known source"><topic href="help/mw_t_src.htm#wp709324"/></entry>
+ <entry keyword="nSIM">
+  <entry keyword="(1) Using nSIM"><topic href="help/using_ns.htm#wp943831"/></entry>
+  <entry keyword="(2) Defining MetaWare Debugger Settings"><topic href="help/mw_t_run.htm#wp945392"/></entry>
+  <entry keyword="(3) Using nSIM"><topic href="help/using_ns.htm#wp928459"/></entry>
+  <entry keyword="(4) Using Synopsys Virtualizer"><topic href="help/using_sy.htm#wp943064"/></entry>
+ </entry>
+ <entry keyword="options"><topic href="help/mw_t_set.htm#wp903359"/></entry>
+ <entry keyword="overlays">
+  <entry keyword="(1) Overlays"><topic href="help/mw_c_ovl.htm#wp879627"/></entry>
+  <entry keyword="(2) Debugging with Overlays (ARCompact and ARCv2)"><topic href="help/mw_t_ovl.htm#wp890434"/></entry>
+  <entry keyword="(3) Downloading Additional Executables"><topic href="help/download.htm#wp922446"/></entry>
+  <entry keyword="and SmaRT">
+   <entry keyword="(1) Debugging with SmaRT Real-Time Trace"><topic href="help/debuggic.htm#wp927450"/></entry>
+   <entry keyword="(2) Debugging with Overlays (ARCompact and ARCv2)"><topic href="help/mw_t_ovl.htm#wp927541"/></entry>
+  </entry>
+  <entry keyword="mapping table"><topic href="help/mw_u_ovl.htm#wp982824"/></entry>
+  <entry keyword="multiple executables"><topic href="help/debuggid.htm#wp922251"/></entry>
+ </entry>
+ <entry keyword="Overlays window"><topic href="help/mw_t_ovl.htm#wp890448"/></entry>
+ <entry keyword="paging up or down in help"><topic href="help/mw_w_trb.htm#wp844486"/></entry>
+ <entry keyword="performance monitoring"><topic href="help/adding_p.htm#wp927507"/></entry>
+ <entry keyword="Physical address 0 already mapped"><topic href="help/extracti.htm#wp922294"/></entry>
+ <entry keyword="post-processing with a batch file"><topic href="help/mw_t_bat.htm#wp709205"/></entry>
+ <entry keyword="power-management unit"><topic href="help/openinga.htm#wp867100"/></entry>
+ <entry keyword="pre-processing with a batch file"><topic href="help/mw_t_bat.htm#wp709205"/></entry>
+ <entry keyword="profiling"><topic href="help/mw_t_pro.htm#wp866549"/>
+  <entry keyword="in a Disassembly window"><topic href="help/t_cus_di.htm#wp856465"/></entry>
+  <entry keyword="in a Functions window"><topic href="help/mw_t_fun.htm#wp929438"/></entry>
+  <entry keyword="in a Source window"><topic href="help/mw_t_src.htm#wp882917"/></entry>
+  <entry keyword="timers"><topic href="help/mw_t_tim.htm#wp918803"/></entry>
+ </entry>
+ <entry keyword="profiling timer not present"><topic href="help/prof_win.htm#wp927488"/></entry>
+ <entry keyword="Profiling window"><topic href="help/mw_t_pro.htm#wp884543"/></entry>
+ <entry keyword="program has no statistical profiling data"><topic href="help/prof_win.htm#wp927488"/></entry>
+ <entry keyword="Program output  window"><topic href="help/mw_t_pou.htm#wp710928"/></entry>
+ <entry keyword="project configurations"><topic href="help/mw_c_con.htm#wp877972"/>
+  <entry keyword="creating"><topic href="help/mw_t_con.htm#wp695116"/></entry>
+ </entry>
+ <entry keyword="projects, adding files"><topic href="help/mw_t_add.htm#wp695194"/></entry>
+ <entry keyword="real-time trace"><topic href="help/debuggic.htm#wp929580"/></entry>
+ <entry keyword="rebuild while debugging"><topic href="help/mw_w_trb.htm#wp844513"/></entry>
+ <entry keyword="reduced register set"><topic href="help/mw_t_set.htm#wp695254"/></entry>
+ <entry keyword="reevaluating a data structure"><topic href="help/mw_t_exa.htm#wp945968"/></entry>
+ <entry keyword="registers">
+  <entry keyword="from trace"><topic href="help/stepping.htm#wp927426"/></entry>
+  <entry keyword="reduced set"><topic href="help/mw_t_set.htm#wp695254"/></entry>
+ </entry>
+ <entry keyword="regular expressions"><topic href="help/mw_u_reg.htm#wp993232"/></entry>
+ <entry keyword="Release configuration"><topic href="help/mw_c_con.htm#wp877972"/></entry>
+ <entry keyword="RTL"><topic href="help/mw_t_run.htm#wp945397"/></entry>
+ <entry keyword="saving a window to a file">
+  <entry keyword="(1) Working with Global Variables"><topic href="help/mw_t_glo.htm#wp711115"/></entry>
+  <entry keyword="(2) Working with Local Variables"><topic href="help/mw_t_loc.htm#wp739857"/></entry>
+  <entry keyword="(3) Examining Variables"><topic href="help/mw_t_exa.htm#wp711235"/></entry>
+  <entry keyword="(4) Debugging with Functions"><topic href="help/mw_t_fun.htm#wp916971"/></entry>
+ </entry>
+ <entry keyword="SCIT">
+  <entry keyword="(1) Using nSIM"><topic href="help/using_ns.htm#wp943831"/></entry>
+  <entry keyword="(2) Using nSIM"><topic href="help/using_ns.htm#wp928473"/></entry>
+  <entry keyword="(3) Using Synopsys Virtualizer"><topic href="help/using_sy.htm#wp943064"/></entry>
+  <entry keyword="(4) Additional CMPD Settings"><topic href="help/addition.htm#wp928710"/></entry>
+  <entry keyword="(5) Configuring Each Process Individually"><topic href="help/cmpd_ind.htm#wp928799"/></entry>
+ </entry>
+ <entry keyword="search escape sequences"><topic href="help/mw_t_sea.htm#wp709771"/></entry>
+ <entry keyword="searching memory"><topic href="help/mw_t_sea.htm#wp709741"/></entry>
+ <entry keyword="serial-port simulator">
+  <entry keyword="(1) Specifying a Terminal or COMM-Port Simulator"><topic href="help/mw_t_ter.htm#wp917942"/></entry>
+  <entry keyword="(2) Debugger: COMM-Port Simulator Settings"><topic href="help/mw_u_com.htm#wp993324"/></entry>
+ </entry>
+ <entry keyword="setting a breakpoint on a function"><topic href="help/setting_.htm#wp696394"/></entry>
+ <entry keyword="shallow binding"><topic href="help/mw_t_exa.htm#wp945968"/></entry>
+ <entry keyword="simulator, serial">
+  <entry keyword="enabling"><topic href="help/mw_t_ter.htm#wp917942"/></entry>
+  <entry keyword="settings"><topic href="help/mw_u_com.htm#wp993324"/></entry>
+ </entry>
+ <entry keyword="simulator, terminal">
+  <entry keyword="enabling"><topic href="help/mw_t_ter.htm#wp917942"/></entry>
+  <entry keyword="settings"><topic href="help/mw_u_ter.htm#wp993283"/></entry>
+ </entry>
+ <entry keyword="SmaRT"><topic href="help/debuggic.htm#wp929580"/>
+  <entry keyword="and overlays">
+   <entry keyword="(1) Debugging with SmaRT Real-Time Trace"><topic href="help/debuggic.htm#wp927450"/></entry>
+   <entry keyword="(2) Debugging with Overlays (ARCompact and ARCv2)"><topic href="help/mw_t_ovl.htm#wp927541"/></entry>
+  </entry>
+ </entry>
+ <entry keyword="software vs. hardware watchpoints"><topic href="help/mw_c_wat.htm#wp873998"/></entry>
+ <entry keyword="software watchpoints"><topic href="help/mw_c_ani.htm#wp883606"/></entry>
+ <entry keyword="Source files window"><topic href="help/mw_sf.htm#wp915049"/></entry>
+ <entry keyword="Source window"><topic href="help/mw_t_src.htm#wp882889"/></entry>
+ <entry keyword="source, adding to a project"><topic href="help/mw_t_add.htm#wp695194"/></entry>
+ <entry keyword="spaces in project name"><topic href="help/mw_w_trb.htm#wp849001"/></entry>
+ <entry keyword="splash screen, canceling"><topic href="help/getting_.htm#wp852756"/></entry>
+ <entry keyword="startup, stopping or resuming at"><topic href="help/mw_t_run.htm#wp921144"/></entry>
+ <entry keyword="stdin through Console view"><topic href="help/mw_t_inp.htm#wp710878"/></entry>
+ <entry keyword="STLport">
+  <entry keyword="(1) Selecting C++ Run-Time Libraries"><topic href="help/mw_t_stl.htm#wp928172"/></entry>
+  <entry keyword="(2) Selecting C++ Run-Time Libraries"><topic href="help/mw_t_stl.htm#wp928208"/></entry>
+ </entry>
+ <entry keyword="stopping">
+  <entry keyword="animation">
+   <entry keyword="(1) Starting Animation"><topic href="help/starting.htm#wp887428"/></entry>
+   <entry keyword="(2) Starting Animation"><topic href="help/starting.htm#wp887428"/></entry>
+  </entry>
+  <entry keyword="debugger at main()"><topic href="help/mw_t_run.htm#wp921144"/></entry>
+ </entry>
+ <entry keyword="support, technical"><topic href="help/customer.htm#wp92081"/></entry>
+ <entry keyword="switches see options"><topic href="help/mw_t_set.htm#wp903359"/></entry>
+ <entry keyword="Synopsys Virtualizer">
+  <entry keyword="(1) Using nSIM"><topic href="help/using_ns.htm#wp943831"/></entry>
+  <entry keyword="(2) Using nSIM"><topic href="help/using_ns.htm#wp943831"/></entry>
+  <entry keyword="(3) Using nSIM"><topic href="help/using_ns.htm#wp943831"/></entry>
+  <entry keyword="(4) Defining MetaWare Debugger Settings"><topic href="help/mw_t_run.htm#wp945390"/></entry>
+  <entry keyword="(5) Using Synopsys Virtualizer"><topic href="help/using_sy.htm#wp943052"/></entry>
+  <entry keyword="(6) Using Synopsys Virtualizer"><topic href="help/using_sy.htm#wp943052"/></entry>
+  <entry keyword="(7) Using Synopsys Virtualizer"><topic href="help/using_sy.htm#wp943064"/></entry>
+ </entry>
+ <entry keyword="SystemC">
+  <entry keyword="(1) Using nSIM"><topic href="help/using_ns.htm#wp943831"/></entry>
+  <entry keyword="(2) Defining MetaWare Debugger Settings"><topic href="help/mw_t_run.htm#wp945393"/></entry>
+  <entry keyword="(3) Using Synopsys Virtualizer"><topic href="help/using_sy.htm#wp943052"/></entry>
+ </entry>
+ <entry keyword="technical support"><topic href="help/customer.htm#wp92081"/></entry>
+ <entry keyword="terminal-window simulator">
+  <entry keyword="(1) Specifying a Terminal or COMM-Port Simulator"><topic href="help/mw_t_ter.htm#wp917937"/></entry>
+  <entry keyword="(2) Debugger: Terminal Simulator Settings"><topic href="help/mw_u_ter.htm#wp993283"/></entry>
+ </entry>
+ <entry keyword="There is no MMU present"><topic href="help/mw_t_mmu.htm#wp710460"/></entry>
+ <entry keyword="thrashing defined"><topic href="help/mw_u_cac.htm#wp911024"/></entry>
+ <entry keyword="timers"><topic href="help/mw_t_tim.htm#wp918803"/></entry>
+ <entry keyword="toggles"><topic href="help/mw_t_set.htm#wp903359"/></entry>
+ <entry keyword="tools"><topic href="help/displayi.htm#wp922731"/></entry>
+ <entry keyword="toolset">
+  <entry keyword="command not recognized"><topic href="help/mw_w_trb.htm#wp844501"/></entry>
+  <entry keyword="options and toggles"><topic href="help/mw_t_set.htm#wp903359"/></entry>
+ </entry>
+ <entry keyword="trace">
+  <entry keyword="capture"><topic href="help/configur.htm#wp696863"/></entry>
+  <entry keyword="real-time"><topic href="help/debuggic.htm#wp929580"/></entry>
+ </entry>
+ <entry keyword="tree-structured window, defined"><topic href="help/mw_t_exa.htm#wp711246"/></entry>
+ <entry keyword="tutorials and IDE"><topic href="help/mw_w_trb.htm#wp844491"/></entry>
+ <entry keyword="two-wire JTAG"><topic href="help/using_a_.htm#wp945481"/></entry>
+ <entry keyword="type-aware examination of data"><topic href="help/mw_t_exa.htm#wp711248"/></entry>
+ <entry keyword="typeface conventions"><topic href="help/document.htm#wp90799"/></entry>
+ <entry keyword="typographic conventions">
+  <entry keyword="(1) Notes"><topic href="help/notes.htm#wp90846"/></entry>
+  <entry keyword="(2) Cautions"><topic href="help/cautions.htm#wp90856"/></entry>
+  <entry keyword="(3) Hints"><topic href="help/hints.htm#wp90867"/></entry>
+ </entry>
+ <entry keyword="UARTs">
+  <entry keyword="(1) Specifying a Terminal or COMM-Port Simulator"><topic href="help/mw_t_ter.htm#wp917937"/></entry>
+  <entry keyword="(2) Using a Terminal Simulator"><topic href="help/mw_t_use.htm#wp918000"/></entry>
+  <entry keyword="(3) Debugger: Terminal Simulator Settings"><topic href="help/mw_u_ter.htm#wp993293"/></entry>
+ </entry>
+ <entry keyword="Unable to comply for filename"><topic href="help/extracti.htm#wp922294"/></entry>
+ <entry keyword="viewing">
+  <entry keyword="disassembly for a function"><topic href="help/viewinga.htm#wp696402"/></entry>
+  <entry keyword="function call stack"><topic href="help/mw_t_cst.htm#wp919635"/></entry>
+  <entry keyword="functions"><topic href="help/mw_t_fun.htm#wp696382"/></entry>
+  <entry keyword="history of instructions">
+   <entry keyword="(1) Debugging with Instruction History"><topic href="help/mw_t_ins.htm#wp696739"/></entry>
+   <entry keyword="(2) Debugging with Instruction History"><topic href="help/mw_t_ins.htm#wp696739"/></entry>
+  </entry>
+  <entry keyword="list of">
+   <entry keyword="current breakpoints">
+    <entry keyword="(1) Viewing and Managing Current Breakpoints"><topic href="help/mw_t_bkp.htm#wp918964"/></entry>
+    <entry keyword="(2) Viewing and Managing Current Breakpoints"><topic href="help/mw_t_bkp.htm#wp918964"/></entry>
+   </entry>
+   <entry keyword="current watchpoints"><topic href="help/mw_t_wpt.htm#wp919026"/></entry>
+  </entry>
+  <entry keyword="local variables in scope"><topic href="help/mw_t_loc.htm#wp711156"/></entry>
+  <entry keyword="memory at a specific address"><topic href="help/mw_t_mem.htm#wp709570"/></entry>
+ </entry>
+ <entry keyword="Virtualizer">
+  <entry keyword="(1) Using nSIM"><topic href="help/using_ns.htm#wp943831"/></entry>
+  <entry keyword="(2) Defining MetaWare Debugger Settings"><topic href="help/mw_t_run.htm#wp945390"/></entry>
+  <entry keyword="(3) Using Synopsys Virtualizer"><topic href="help/using_sy.htm#wp943052"/></entry>
+ </entry>
+ <entry keyword="VUARTs"><topic href="help/mw_u_ter.htm#wp993293"/></entry>
+ <entry keyword="watchpoints">
+  <entry keyword="defined"><topic href="help/mw_c_wat.htm#wp882297"/></entry>
+  <entry keyword="hardware vs. software"><topic href="help/mw_c_wat.htm#wp873998"/></entry>
+  <entry keyword="managing"><topic href="help/mw_t_wpt.htm#wp919026"/></entry>
+  <entry keyword="software">
+   <entry keyword="and animation"><topic href="help/mw_c_ani.htm#wp883606"/></entry>
+  </entry>
+ </entry>
+ <entry keyword="Watchpoints window"><topic href="help/mw_t_wpt.htm#wp919026"/></entry>
+ <entry keyword="windows and views, debugger"><topic href="help/mw_o_deb.htm#wp695554"/></entry>
+ <entry keyword="Windows security alert"><topic href="help/mw_w_trb.htm#wp844534"/></entry>
+ <entry keyword="xCAM"><topic href="help/mw_t_run.htm#wp945397"/></entry>
+ <entry keyword="_start"><topic href="help/mw_t_run.htm#wp921143"/></entry>
+ <entry keyword="-rf16 see reduced register set"><topic href="help/mw_t_set.htm#wp695254"/></entry>
+</index>

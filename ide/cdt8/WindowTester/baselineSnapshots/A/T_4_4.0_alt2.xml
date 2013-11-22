@@ -1,0 +1,55 @@
+<view name="org.eclipse.debug.ui.VariableView">
+    <tree columns="2">
+        <item>
+            <cell>argc</cell>
+            <cell>1</cell>
+        <item>
+            <cell>argv</cell>
+            <cell>0x00027a14</cell>
+            <item>
+                <cell>*argv</cell>
+                <cell>0x000279d0</cell>
+                <item>
+                    <cell></cell>
+                    <cell></cell>
+            </item>
+        </item>
+        <item>
+            <cell>I</cell>
+            <cell>0</cell>
+        <item>
+            <cell>Q</cell>
+            <cell>1 (True)</cell>
+        <item>
+            <cell>size</cell>
+            <cell>8</cell>
+        <item>
+            <cell>A</cell>
+            <cell></cell>
+            <item>
+                <cell>A[0]</cell>
+                <cell>0 (False)</cell>
+        </item>
+        <item>
+            <cell>B</cell>
+            <cell></cell>
+            <item>
+                <cell>B[0]</cell>
+                <cell>0 (False)</cell>
+        </item>
+        <item>
+            <cell>C</cell>
+            <cell></cell>
+            <item>
+                <cell>C[0]</cell>
+                <cell>0 (False)</cell>
+        </item>
+        <item>
+            <cell>X</cell>
+            <cell></cell>
+            <item>
+                <cell>X[0]</cell>
+                <cell>0</cell>
+        </item>
+    </tree>
+</view>

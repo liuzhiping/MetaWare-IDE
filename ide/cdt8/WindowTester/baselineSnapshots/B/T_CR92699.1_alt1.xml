@@ -1,0 +1,95 @@
+<view>
+    <text text="type filter text"/>
+    <tree>
+        <item text="Resource"/>
+        <item text="Builders"/>
+        <item text="C/C++ Build">
+            <item text="Build Variables"/>
+            <item text="Discovery Options"/>
+            <item text="Environment"/>
+            <item text="Settings" selected="true"/>
+            <item text="Tool Chain Editor"/>
+        </item>
+        <item text="C/C++ General">
+            <item text=""/>
+        </item>
+        <item text="Code Coverage"/>
+        <item text="Project References"/>
+        <item text="Refactoring History"/>
+        <item text="Run/Debug Settings"/>
+    </tree>
+    <label text=""/>
+    <label text="Settings"/>
+    <label text=""/>
+    <label text="Configuration: "/>
+    <combo text="Debug">
+        <item>Debug</item>
+        <item>Release</item>
+        <item>[ All configurations ]</item>
+    </combo>
+    <label text=""/>
+    <tree>
+        <item text="MetaWare ARC C/C++ Compiler">
+            <item text="General"/>
+            <item text="Optimization/Debugging"/>
+            <item text="Storage Mapping"/>
+            <item text="Preprocessor"/>
+            <item text="Include Directories"/>
+            <item text="Language Compatibility"/>
+            <item text="C++"/>
+            <item text="Esoteric Toggles"/>
+            <item text="Processor/Extensions" selected="true"/>
+            <item text="DSP Extensions"/>
+            <item text="Memory Model"/>
+            <item text="Overlay Support"/>
+            <item text="ARC 700 SIMD Support"/>
+        </item>
+        <item text="ARCompact Assembler">
+            <item text="Assembler Preprocessor"/>
+            <item text="General"/>
+            <item text="Include paths"/>
+            <item text="ARCompact Specific"/>
+            <item text="DSP Support"/>
+        </item>
+        <item text="MetaWare Linker">
+            <item text="Special Libraries"/>
+            <item text="Search Path"/>
+            <item text="Object Files & Libraries"/>
+            <item text="Command files"/>
+            <item text="Map Listing"/>
+            <item text="Output Generation"/>
+            <item text="Miscellaneous"/>
+            <item text="Extension settings (inherited from Compiler)"/>
+            <item text="Overlay Support"/>
+        </item>
+    </tree>
+    <label text="ARC Core Version"/>
+    <combo text="ARC 700">
+        <item>ARC 700</item>
+        <item>ARC 600</item>
+        <item>ARC 5</item>
+    </combo>
+    <label text="ARC 5 Core" enabled="false"/>
+    <combo text="Core 3" enabled="false"/>
+    <label text="ARC 600 Core" enabled="false"/>
+    <combo text="Core 1" enabled="false"/>
+    <label text="ARC 700 Core"/>
+    <combo text="Core 2">
+        <item>Core 1</item>
+        <item>Core 2</item>
+    </combo>
+    <checkbox text="Common extensions (-Xlib)" selected="0"/>
+    <checkbox text="Barrel shifter (-Xbs)" enabled="false"/>
+    <checkbox text="32-bit multiply instruction (-Xmult32)" enabled="false"/>
+    <checkbox text="32-bit multiply instruction (-Xmpy)" selected="0"/>
+    <checkbox text="Normalize instruction (-Xnorm)" enabled="false"/>
+    <checkbox text="Swap instruction (-Xswap)" enabled="false"/>
+    <checkbox text="Use Timer 0 (-Xtimer0)" enabled="false"/>
+    <checkbox text="Use timer 1 (-Xtimer1)" enabled="false"/>
+    <checkbox text="Reduced register set (-rf16)" enabled="false"/>
+    <checkbox text="Compact Single-precision floating point (-Xspfp_compact)" selected="0"/>
+    <checkbox text="Fast Single-precision floating point (-Xspfp_fast)" selected="0"/>
+    <checkbox text="Compact Double-precision floating point (-Xdpfp_compact)" selected="0"/>
+    <checkbox text="Fast Double-precision floating point (-Xdpfp_fast)" selected="0"/>
+    <label text=""/>
+</view>

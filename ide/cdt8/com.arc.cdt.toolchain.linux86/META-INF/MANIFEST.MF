@@ -1,0 +1,14 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Linux/x86 Plug-in
+Bundle-SymbolicName: com.arc.cdt.toolchain.linux86; singleton:=true
+Bundle-Version: 8.3.14
+Bundle-Activator: com.arc.cdt.toolchain.linux86.Linux86Plugin
+Bundle-Vendor: Synopsys Corporation
+Bundle-Localization: plugin
+Require-Bundle: org.eclipse.core.runtime,
+ org.eclipse.cdt.make.core,
+ org.eclipse.cdt.managedbuilder.core,
+ com.arc.cdt.toolchain
+Eclipse-LazyStart: true
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6

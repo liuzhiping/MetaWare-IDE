@@ -1,0 +1,29 @@
+#Tue Dec 11 22:41:13 PST 2007
+com.arc.cdt.toolchain.arc.exeDebugConfig.1799086580/internalBuilder/enabled=false
+com.arc.cdt.toolchain.arc.exeDebugConfig.1799086580/internalBuilder/ignoreErr=true
+com.arc.cdt.toolchain.arc.exeDebugConfig.1799086580/internalBuilder/parallel=true
+com.arc.cdt.toolchain.arc.exeDebugConfig.1799086580/internalBuilder/paralleldef=true
+com.arc.cdt.toolchain.arc.exeDebugConfig.1799086580/internalBuilder/parallelnumber=1
+com.arc.cdt.toolchain.arc.libDebugConfig.1505636593/internalBuilder/enabled=false
+com.arc.cdt.toolchain.arc.libDebugConfig.1505636593/internalBuilder/ignoreErr=true
+com.arc.cdt.toolchain.arc.libDebugConfig.1505636593/internalBuilder/parallel=true
+com.arc.cdt.toolchain.arc.libDebugConfig.1505636593/internalBuilder/paralleldef=true
+com.arc.cdt.toolchain.arc.libDebugConfig.1505636593/internalBuilder/parallelnumber=1
+com.arc.cdt.toolchain.arc.libDebugConfig.154184417/internalBuilder/enabled=false
+com.arc.cdt.toolchain.arc.libDebugConfig.154184417/internalBuilder/ignoreErr=true
+com.arc.cdt.toolchain.arc.libDebugConfig.154184417/internalBuilder/parallel=true
+com.arc.cdt.toolchain.arc.libDebugConfig.154184417/internalBuilder/paralleldef=true
+com.arc.cdt.toolchain.arc.libDebugConfig.154184417/internalBuilder/parallelnumber=1
+com.arc.cdt.toolchain.arc.libDebugConfig.259116312/internalBuilder/enabled=false
+com.arc.cdt.toolchain.arc.libDebugConfig.259116312/internalBuilder/ignoreErr=true
+com.arc.cdt.toolchain.arc.libDebugConfig.259116312/internalBuilder/parallel=true
+com.arc.cdt.toolchain.arc.libDebugConfig.259116312/internalBuilder/paralleldef=true
+com.arc.cdt.toolchain.arc.libDebugConfig.259116312/internalBuilder/parallelnumber=1
+com.arc.cdt.toolchain.arc.libReleaseConfig.1152940888/internalBuilder/enabled=false
+com.arc.cdt.toolchain.arc.libReleaseConfig.1152940888/internalBuilder/ignoreErr=true
+com.arc.cdt.toolchain.arc.libReleaseConfig.1152940888/internalBuilder/parallel=true
+com.arc.cdt.toolchain.arc.libReleaseConfig.1152940888/internalBuilder/paralleldef=true
+com.arc.cdt.toolchain.arc.libReleaseConfig.1152940888/internalBuilder/parallelnumber=1
+eclipse.preferences.version=1
+environment/project=<?xml version\="1.0" encoding\="UTF-8"?>\r\n<environment/>\r\n
+environment/project/com.arc.cdt.toolchain.arc.libDebugConfig.1505636593=<?xml version\="1.0" encoding\="UTF-8"?>\r\n<environment/>\r\n

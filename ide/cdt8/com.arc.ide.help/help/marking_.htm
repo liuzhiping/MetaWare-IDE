@@ -1,0 +1,80 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN" "http://www.w3.org/MarkUp/Wilbur/HTML32.dtd">
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+    <meta name="GENERATOR" content="Quadralay WebWorks Publisher 2003 for FrameMaker 8.0.0.1194">
+    <meta name="TEMPLATEBASE" content="temp">
+    <link rel="StyleSheet" href="document.css" type="text/css" media="screen">
+    <title>Marking Lines of Instruction History to Return to</title>
+  </head>
+
+  <body>
+
+    <table width="100%" border="0" cellpadding="0" cellspacing="0" class="header">
+      <tr>
+<!--Disabling Breadcrumbs to use Eclipse version 10/2009
+        <td class="breadcrumbs">
+	<a href="ide_guid.htm"> DesignWare ARC MetaWare IDE User's Guide </a> > <a href="tasks.htm"><br>Tasks</a> > <a href="mw_t_ins.htm">Debugging with Instruction History</a> > Marking Lines of Instruction History to Return to
+        </td>
+-->
+        <td align="right" valign="top" class="navigator" nowrap>
+<a href="restrict.htm"><img src="images/sprev.gif" border="0" alt="Previous"></a><a href="configur.htm"><img src="images/snext.gif" border="0" alt="Next"></a>
+        </td>
+      </tr>
+    </table>
+
+    <hr align="left">
+
+    <blockquote>
+<h4 >
+Marking Lines of Instruction History to Return to
+<a name="wp696845"> </a></h4>
+
+<p >
+To mark lines with a name and return to them later:
+<a name="wp696848"> </a></p>
+<ol type="1"> <li  value="1">Type the name in the <b>Marks</b> text field and press <font >Enter</font>. <a name="wp696849"> </a>
+ <li  value="2">Select a line and either right-click <b>Mark</b> or press the <b>Mark</b> button. That line is marked with the given name and an indicator appears to its left. <a name="wp696850"> </a>
+</ol><p >
+Later you can return to the marked line by name. Select the <b>Marks</b> drop-down and pick the name you want. The debugger returns to that line automatically.
+<a name="wp696851"> </a></p>
+<p >
+You can refer to a field of a marked line in a Boolean expression with the syntax <code>$</code><i>M</i><code>$</code><i>F</i> where <i>M</i> is your mark name and <i>F</i> the field name. Suppose you have marked some line as <code>init</code>, and that line has the fields <code>reg</code> and <code>addr</code>. You can then search on Boolean expressions such as the following:
+<a name="wp696852"> </a></p>
+<pre >$addr == $init$addr
+<a name="wp696853"></a>$reg == $init$reg || $addr &gt; $init$addr
+<a name="wp696854"></a></pre>
+<a name="wp917321">
+  <h5 >
+Related Tasks
+ </a></h5>
+<ul> <li ><a href="openingb.htm#wp917111">Opening an Instruction history - Simulator trace Window</a><a name="wp917325"> </a>
+ <li ><a href="stepping.htm#wp696765">Stepping through a History of Instructions</a><a name="wp917329"> </a>
+ <li ><a href="filterin.htm#wp696785">Filtering Trace Items and Configuring Buffers</a><a name="wp917333"> </a>
+ <li ><a href="restrict.htm#wp696799">Restricting Displayed Instructions</a><a name="wp917486"> </a>
+ <li ><a href="configur.htm#wp696861">Configuring Trace Capture</a><a name="wp917341"> </a>
+ <li ><a href="debuggic.htm#wp929577">Debugging with SmaRT Real-Time Trace</a><a name="wp917394"> </a>
+</ul><a name="wp917395">
+  <h5 >
+Related Reference
+ </a></h5>
+<ul> <li >Eclipse <em>C/C++ Development User Guide</em><a name="wp917399"> </a>
+</ul>
+    </blockquote>
+    <p></p>
+    <hr>
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" class="footer">
+      <tr>
+        <td>
+
+        </td>
+        <td align="right" valign="top" class="navigator">
+<a href="restrict.htm"><img src="images/sprev.gif" border="0" alt="Previous"></a><a href="configur.htm"><img src="images/snext.gif" border="0" alt="Next"></a>
+        </td>
+      </tr>
+    </table>
+<p> <font size="-3">
+Copyright © 2012 Synopsys, Inc. <br />
+Some portions of this document copyright IBM Corporation and others 2000, 2004.</font></p>
+  </body>
+</html>

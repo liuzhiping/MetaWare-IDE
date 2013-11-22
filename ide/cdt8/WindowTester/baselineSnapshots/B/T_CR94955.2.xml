@@ -1,0 +1,41 @@
+<view name="Source view popup after selection">
+    <menu>
+        <item text="Break"/>
+        <item text="Set PC"/>
+        <item text="Profiling">
+            <menu>
+                <item text="icnt"/>
+                <item text="LIMM cnt"/>
+                <item text="call count"/>
+                <item text="killed"/>
+                <item text="delay_killed"/>
+                <item text="profint"/>
+                <item text="always-hp0"/>
+                <item text="stalled-hp1" selection="1"/>
+                <item text="mispredict-hp2"/>
+                <item text="DMP_full-hp3" selection="1"/>
+                <item text="icache_fill-hp4"/>
+                <item text="dcache_fill-hp5" selection="1"/>
+                <item text="simd_busy-hp6"/>
+                <item text="simd_macro-hp7" selection="1"/>
+                <item text="Stmt cnt from icnt"/>
+                <item text=""/>
+                <item text="Stmt cnt from icnt display"/>
+                <item text="icnt display"/>
+                <item text="LIMM cnt display"/>
+                <item text="call count display"/>
+                <item text="killed display"/>
+                <item text="delay_killed display"/>
+                <item text="profint display"/>
+                <item text="always-hp0 display"/>
+                <item text="stalled-hp1 display"/>
+                <item text="mispredict-hp2 display"/>
+                <item text="DMP_full-hp3 display"/>
+                <item text="icache_fill-hp4 display"/>
+                <item text="dcache_fill-hp5 display"/>
+                <item text="simd_busy-hp6 display"/>
+                <item text="simd_macro-hp7 display"/>
+            </menu>
+        </item>
+    </menu>
+</view>

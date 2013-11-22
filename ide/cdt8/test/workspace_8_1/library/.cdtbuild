@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?fileVersion 3.1.0?>
+
+<ManagedProjectBuildInfo>
+<project id="library.com.arc.cdt.toolchain.arc.libProject.704108173" name="ARCompact Static Library" projectType="com.arc.cdt.toolchain.arc.libProject">
+<configuration artifactExtension="a" artifactName="mqx" cleanCommand="rm -rf" description="ARC 600" errorParsers="com.arc.cdt.toolchain.ARCCompilerErrorParser;com.arc.cdt.toolchain.ARCLinkerErrorParser;com.arc.cdt.toolchain.ARCAssemblerErrorParser;org.eclipse.cdt.core.MakeErrorParser" id="com.arc.cdt.toolchain.arc.libDebugConfig.1505636593" name="arca6.met" parent="com.arc.cdt.toolchain.arc.libDebugConfig" preannouncebuildStep="Copy .met assembly files to .s files" prebuildStep="..\prebuild.bat">
+<excludedfolder>profile</excludedfolder>
+<excludedfolder>io/timer</excludedfolder>
+<excludedfolder>io/enet/mwsim</excludedfolder>
+<excludedfolder>io/enet/ndis</excludedfolder>
+<excludedfolder>edserial</excludedfolder>
+<toolChain id="com.arc.cdt.toolchain.arc.libDebugToolChain.1144372875" name="MetaWare C Toolset" superClass="com.arc.cdt.toolchain.arc.libDebugToolChain">
+<tool id="arc.lib.debug.libCompiler.1958600948" name="MetaWare ARC C/C++ Compiler" superClass="arc.lib.debug.libCompiler">
+<option id="com.arc.cdt.toolchain.arc.compilerDebugOptLevel.1440031867" name="Optimization Level (-O...)" superClass="com.arc.cdt.toolchain.arc.compilerDebugOptLevel" value="arc.optimization.level.O" valueType="enumerated"/>
+<option id="arc.compiler.options.defines.290359563" name="Preprocessor Defines (one per line)" superClass="arc.compiler.options.defines" valueType="definedSymbols">
+<listOptionValue builtIn="false" value="MQX_CPU=0xACA6"/>
+<listOptionValue builtIn="false" value="PSP_EXTENSION_REGISTERS=0"/>
+<listOptionValue builtIn="false" value="PSP_NUM_EXTENSION_REGISTERS=0"/>
+<listOptionValue builtIn="false" value="RTCS_OS_MQX25X"/>
+<listOptionValue builtIn="false" value="__MET__"/>
+</option>
+<option id="arc.compiler.options.include_dirs.1997975092" name="Include Directories (one per line)" superClass="arc.compiler.options.include_dirs" valueType="includePath">
+<listOptionValue builtIn="false" value="${MQX_ROOT}/library/include"/>
+<listOptionValue builtIn="false" value="${MQX_ROOT}/library/bsp/arcangel"/>
+<listOptionValue builtIn="false" value="${MQX_ROOT}/library/io"/>
+<listOptionValue builtIn="false" value="${MQX_ROOT}/library/io/enet"/>
+<listOptionValue builtIn="false" value="${MQX_ROOT}/library/io/enet/vmac"/>
+<listOptionValue builtIn="false" value="${MQX_ROOT}/library/io/flashx"/>
+<listOptionValue builtIn="false" value="${MQX_ROOT}/library/io/flashx/istrata"/>
+<listOptionValue builtIn="false" value="${MQX_ROOT}/library/io/io_ide"/>
+<listOptionValue builtIn="false" value="${MQX_ROOT}/library/io/io_ide/disk_ST3120022A"/>
+<listOptionValue builtIn="false" value="${MQX_ROOT}/library/io/io_mem"/>
+<listOptionValue builtIn="false" value="${MQX_ROOT}/library/io/io_null"/>
+<listOptionValue builtIn="false" value="${MQX_ROOT}/library/io/pcb"/>
+<listOptionValue builtIn="false" value="${MQX_ROOT}/library/io/pipe"/>
+<listOptionValue builtIn="false" value="${MQX_ROOT}/library/io/serial"/>
+<listOptionValue builtIn="false" value="${MQX_ROOT}/library/profile"/>
+<listOptionValue builtIn="false" value="${MQX_ROOT}/library/psp/arc"/>
+</option>
+<option id="arc.compiler.options.misc.additional.692575600" name="Additional Compiler Flags" superClass="arc.compiler.options.misc.additional" valueType="stringList">
+<listOptionValue builtIn="false" value="-Hnocplus"/>
+</option>
+<option id="arc.compiler.options.longenums.1782929274" name="Always map enum types to full word" superClass="arc.compiler.options.longenums" value="true" valueType="boolean"/>
+<option id="arc.compiler.options.target.version.1047970395" name="ARC Core Version" superClass="arc.compiler.options.target.version" value="arc.compiler.options.target.arc600" valueType="enumerated"/>
+<option id="arc.compiler.options.norm.1108916002" name="Normalize instruction (-Xnorm)" superClass="arc.compiler.options.norm" value="false" valueType="boolean"/>
+<option id="arc.compiler.options.swap.521445365" name="Swap instruction (-Xswap)" superClass="arc.compiler.options.swap" value="false" valueType="boolean"/>
+<option id="arc.compiler.options.ea.144447109" name="Extended arithmetic (-Xea)" superClass="arc.compiler.options.ea" value="false" valueType="boolean"/>
+<option id="arc.compiler.options.timers.timer0.1497290172" name="Use Timer 0 (-Xtimer0)" superClass="arc.compiler.options.timers.timer0" value="false" valueType="boolean"/>
+<option id="arc.compiler.options.timers.timer1.614559245" name="Use timer 1 (-Xtimer1)" superClass="arc.compiler.options.timers.timer1" value="false" valueType="boolean"/>
+<option id="arc.arc.compiler.options.volatile_cache_bypass.357756522" name="Bypass cache to reference volatile variables" superClass="arc.arc.compiler.options.volatile_cache_bypass" value="false" valueType="boolean"/>
+<option id="arc.compiler.options.misc.pragmas.1536750638" name="Pragma specifications [e.g., offwarn(123)]" superClass="arc.compiler.options.misc.pragmas" valueType="stringList">
+<listOptionValue builtIn="false" value="Offwarn(240)"/>
+</option>
+<option id="com.arc.cdt.toolchain.arc.compilerDebugDebug.1757644580" superClass="com.arc.cdt.toolchain.arc.compilerDebugDebug" value="arc.debugging.level.default" valueType="enumerated"/>
+</tool>
+<tool id="com.arc.cdt.toolchain.arc.libDebugAsm.1427175492" name="ARCompact Assembler" superClass="com.arc.cdt.toolchain.arc.libDebugAsm">
+<option id="arc.compiler.options.target.asm.version.906726854" name="ARC Core Version" superClass="arc.compiler.options.target.asm.version" value="arc.compiler.options.target.arc600" valueType="enumerated"/>
+<option id="arc.asm.options.norm.279512172" name="Normalize instruction (-Xnorm)" superClass="arc.asm.options.norm" value="false" valueType="boolean"/>
+<option id="arc.asm.options.swap.725020441" name="Swap instruction (-Xswap)" superClass="arc.asm.options.swap" value="false" valueType="boolean"/>
+<option id="arc.asm.options.ea.1755137288" name="Extended arithmetic (-Xea)" superClass="arc.asm.options.ea" value="false" valueType="boolean"/>
+<option id="arc.asm.options.bs.570103811" name="Barrel shifter (-Xbs)" superClass="arc.asm.options.bs" value="true" valueType="boolean"/>
+<option id="arc.asm.options.timers.timer0.1818090587" name="Use Timer 0 (-Xtimer0)" superClass="arc.asm.options.timers.timer0" value="false" valueType="boolean"/>
+<option id="arc.asm.options.timers.timer1.2051342020" name="Use timer 1 (-Xtimer1)" superClass="arc.asm.options.timers.timer1" value="false" valueType="boolean"/>
+<option id="com.arc.cdt.toolchain.asm.option.defines.1268486626" name="Preprocessor Defines (one per line)" superClass="com.arc.cdt.toolchain.asm.option.defines" valueType="definedSymbols">
+<listOptionValue builtIn="false" value="MQX_CPU=0xACA6"/>
+<listOptionValue builtIn="false" value="PSP_EXTENSION_REGISTERS=0"/>
+<listOptionValue builtIn="false" value="PSP_NUM_EXTENSION_REGISTERS=0"/>
+<listOptionValue builtIn="false" value="RTCS_OS_MQX25X"/>
+<listOptionValue builtIn="false" value="__MET__"/>
+</option>
+<option id="com.arc.cdt.toolchain.option.asm.extra.465146592" name="Additional assembler options" superClass="com.arc.cdt.toolchain.option.asm.extra" valueType="stringList">
+<listOptionValue builtIn="false" value="-Hnocplus"/>
+</option>
+<option id="com.arc.cdt.toolchain.asm.option.includes.316979468" superClass="com.arc.cdt.toolchain.asm.option.includes" valueType="includePath">
+<listOptionValue builtIn="false" value="${MQX_ROOT}/library/psp/arc"/>
+</option>
+<option id="com.arc.cdt.toolchain.arc.asm.option.g.1141777459" superClass="com.arc.cdt.toolchain.arc.asm.option.g" value="true" valueType="boolean"/>
+</tool>
+<tool id="com.arc.cdt.toolchain.arc.ArDebug.1175195380" name="Archiver" superClass="com.arc.cdt.toolchain.arc.ArDebug"/>
+<macros/>
+</toolChain>
+<resourceConfiguration exclude="true" id="com.arc.cdt.toolchain.arc.libDebugConfig.1505636593./library/bsp/arcangel/initvusbd.c" name="initvusbd.c" rcbsApplicability="disable" resourcePath="/library/bsp/arcangel/initvusbd.c" toolsToInvoke="arc.lib.debug.libCompiler.779975108.986620974">
+<tool id="arc.lib.debug.libCompiler.779975108.986620974" name="MetaWare ARC C/C++ Compiler" superClass="arc.lib.debug.libCompiler.1958600948"/>
+</resourceConfiguration>
+<resourceConfiguration exclude="true" id="com.arc.cdt.toolchain.arc.libDebugConfig.1505636593./library/bsp/arcangel/initvusbh.c" name="initvusbh.c" rcbsApplicability="disable" resourcePath="/library/bsp/arcangel/initvusbh.c" toolsToInvoke="arc.lib.debug.libCompiler.779975108.344861609">
+<tool id="arc.lib.debug.libCompiler.779975108.344861609" name="MetaWare ARC C/C++ Compiler" superClass="arc.lib.debug.libCompiler.1958600948"/>
+</resourceConfiguration>
+<resourceConfiguration exclude="true" id="com.arc.cdt.toolchain.arc.libDebugConfig.1505636593./library/bsp/arcangel/usb_bsp.c" name="usb_bsp.c" rcbsApplicability="disable" resourcePath="/library/bsp/arcangel/usb_bsp.c" toolsToInvoke="arc.lib.debug.libCompiler.779975108.501893617">
+<tool id="arc.lib.debug.libCompiler.779975108.501893617" name="MetaWare ARC C/C++ Compiler" superClass="arc.lib.debug.libCompiler.1958600948"/>
+</resourceConfiguration>
+<resourceConfiguration exclude="true" id="com.arc.cdt.toolchain.arc.libDebugConfig.1505636593./library/event/ev_alli.c" name="ev_alli.c" rcbsApplicability="disable" resourcePath="/library/event/ev_alli.c" toolsToInvoke="arc.lib.debug.libCompiler.779975108.654776374">
+<tool id="arc.lib.debug.libCompiler.779975108.654776374" name="MetaWare ARC C/C++ Compiler" superClass="arc.lib.debug.libCompiler.1958600948"/>
+</resourceConfiguration>
+<resourceConfiguration exclude="true" id="com.arc.cdt.toolchain.arc.libDebugConfig.1505636593./library/event/ev_anyi.c" name="ev_anyi.c" rcbsApplicability="disable" resourcePath="/library/event/ev_anyi.c" toolsToInvoke="arc.lib.debug.libCompiler.779975108.1971235619">
+<tool id="arc.lib.debug.libCompiler.779975108.1971235619" name="MetaWare ARC C/C++ Compiler" superClass="arc.lib.debug.libCompiler.1958600948"/>
+</resourceConfiguration>
+<resourceConfiguration exclude="true" id="com.arc.cdt.toolchain.arc.libDebugConfig.1505636593./library/io/io_rev.h" name="io_rev.h" rcbsApplicability="disable" resourcePath="/library/io/io_rev.h" toolsToInvoke=""/>
+<resourceConfiguration exclude="true" id="com.arc.cdt.toolchain.arc.libDebugConfig.1505636593./library/bsp/arcangel/enetsini.c" name="enetsini.c" rcbsApplicability="disable" resourcePath="/library/bsp/arcangel/enetsini.c" toolsToInvoke="arc.lib.debug.libCompiler.779975108.2115847838">
+<tool id="arc.lib.debug.libCompiler.779975108.2115847838" name="MetaWare ARC C/C++ Compiler" superClass="arc.lib.debug.libCompiler.1958600948"/>
+</resourceConfiguration>
+<resourceConfiguration exclude="true" id="com.arc.cdt.toolchain.arc.libDebugConfig.1505636593./library/bsp/arcangel/arc_main.c" name="arc_main.c" rcbsApplicability="disable" resourcePath="/library/bsp/arcangel/arc_main.c" toolsToInvoke="arc.lib.debug.libCompiler.779975108.1129385997">
+<tool id="arc.lib.debug.libCompiler.779975108.1129385997" name="MetaWare ARC C/C++ Compiler" superClass="arc.lib.debug.libCompiler.1958600948"/>
+</resourceConfiguration>
+<resourceConfiguration exclude="true" id="com.arc.cdt.toolchain.arc.libDebugConfig.1505636593./library/psp/arc/psp_ticm.c" name="psp_ticm.c" rcbsApplicability="disable" resourcePath="/library/psp/arc/psp_ticm.c" toolsToInvoke="arc.lib.debug.libCompiler.779975108.1019168882">
+<tool id="arc.lib.debug.libCompiler.779975108.1019168882" name="MetaWare ARC C/C++ Compiler" superClass="arc.lib.debug.libCompiler.1958600948"/>
+</resourceConfiguration>
+<resourceConfiguration exclude="true" id="com.arc.cdt.toolchain.arc.libDebugConfig.1505636593./library/kernel/sc_grri.c" name="sc_grri.c" rcbsApplicability="disable" resourcePath="/library/kernel/sc_grri.c" toolsToInvoke="arc.lib.debug.libCompiler.779975108.1079689482">
+<tool id="arc.lib.debug.libCompiler.779975108.1079689482" name="MetaWare ARC C/C++ Compiler" superClass="arc.lib.debug.libCompiler.1958600948"/>
+</resourceConfiguration>
+</configuration>
+<macros/>
+</project>
+</ManagedProjectBuildInfo>

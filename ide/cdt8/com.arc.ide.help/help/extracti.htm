@@ -1,0 +1,74 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN" "http://www.w3.org/MarkUp/Wilbur/HTML32.dtd">
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+    <meta name="GENERATOR" content="Quadralay WebWorks Publisher 2003 for FrameMaker 8.0.0.1194">
+    <meta name="TEMPLATEBASE" content="temp">
+    <link rel="StyleSheet" href="document.css" type="text/css" media="screen">
+    <title>Extracting Symbols from Additional Executables</title>
+  </head>
+
+  <body>
+
+    <table width="100%" border="0" cellpadding="0" cellspacing="0" class="header">
+      <tr>
+<!--Disabling Breadcrumbs to use Eclipse version 10/2009
+        <td class="breadcrumbs">
+	<a href="ide_guid.htm"> DesignWare ARC MetaWare IDE User's Guide </a> > <a href="tasks.htm"><br>Tasks</a> > <a href="debuggid.htm">Debugging Multiple Executables</a> > Extracting Symbols from Additional Executables
+        </td>
+-->
+        <td align="right" valign="top" class="navigator" nowrap>
+<a href="download.htm"><img src="images/sprev.gif" border="0" alt="Previous"></a><a href="using_a_.htm"><img src="images/snext.gif" border="0" alt="Next"></a>
+        </td>
+      </tr>
+    </table>
+
+    <hr align="left">
+
+    <blockquote>
+<h4 >
+Extracting Symbols from Additional Executables
+<a name="wp922281"> </a></h4>
+
+<p >
+If an application (such as an RTOS or an application using overlays) loads additional executables, select <b>Debugger &gt; Load Symbols...</b>.to read the symbols from the executable into the debugger so that the debugger can debug the new executable (same as the<i> symbols</i> <i>filename </i>command). 
+<a name="wp922283"> </a></p>
+<blockquote >
+<div align="left"><img src="images/debdowna.gif" height="520" width="845" border="0" hspace="0" vspace="0"></div>
+
+<a name="wp922292"> </a></blockquote>
+ <p >
+The IDE prompts you for the filename of the executable from which symbols are to be read.
+<a name="wp922293"> </a></p>
+<p >
+If you attempt to load an executable file that has the same memory address as one already loaded, the debugger reports that it is unable to load the module. You might see an error message such as <code>Unable to comply for </code><i>filename</i>: <code>Physical address 0 already mapped</code>.
+<a name="wp922294"> </a></p>
+<p >
+To have the debugger load an additional executable <i>and</i> read its symbol table, use <b>File &gt; Download File...</b> instead.
+<a name="wp922297"> </a></p>
+<a name="wp922489">
+  <h5 >
+Related Topics
+ </a></h5>
+<ul> <li ><a href="download.htm#wp922261">Downloading Additional Executables</a><a name="wp922493"> </a>
+ <li ><a href="debuggii.htm#wp784340">Debugging with Commands</a><a name="wp922497"> </a>
+ <li ><i>Automated Overlay Manager User's Guide</i><a name="wp922501"> </a>
+</ul>
+    </blockquote>
+    <p></p>
+    <hr>
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" class="footer">
+      <tr>
+        <td>
+
+        </td>
+        <td align="right" valign="top" class="navigator">
+<a href="download.htm"><img src="images/sprev.gif" border="0" alt="Previous"></a><a href="using_a_.htm"><img src="images/snext.gif" border="0" alt="Next"></a>
+        </td>
+      </tr>
+    </table>
+<p> <font size="-3">
+Copyright © 2012 Synopsys, Inc. <br />
+Some portions of this document copyright IBM Corporation and others 2000, 2004.</font></p>
+  </body>
+</html>

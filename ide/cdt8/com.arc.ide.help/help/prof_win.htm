@@ -1,0 +1,113 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN" "http://www.w3.org/MarkUp/Wilbur/HTML32.dtd">
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+    <meta name="GENERATOR" content="Quadralay WebWorks Publisher 2003 for FrameMaker 8.0.0.1194">
+    <meta name="TEMPLATEBASE" content="temp">
+    <link rel="StyleSheet" href="document.css" type="text/css" media="screen">
+    <title>Profiling Using the Profiling Window</title>
+  </head>
+
+  <body>
+
+    <table width="100%" border="0" cellpadding="0" cellspacing="0" class="header">
+      <tr>
+<!--Disabling Breadcrumbs to use Eclipse version 10/2009
+        <td class="breadcrumbs">
+	<a href="ide_guid.htm"> DesignWare ARC MetaWare IDE User's Guide </a> > <a href="tasks.htm"><br>Tasks</a> > <a href="mw_t_pro.htm">Debugging: Profiling</a> > Profiling Using the Profiling Window
+        </td>
+-->
+        <td align="right" valign="top" class="navigator" nowrap>
+<a href="mw_t_pro.htm"><img src="images/sprev.gif" border="0" alt="Previous"></a><a href="mw_t_coa.htm"><img src="images/snext.gif" border="0" alt="Next"></a>
+        </td>
+      </tr>
+    </table>
+
+    <hr align="left">
+
+    <blockquote>
+<h4 >
+Profiling Using the Profiling Window
+<a name="wp917592"> </a></h4>
+
+<p >
+The <b>Profiling</b> window lets you see and configure the execution profiling information provided by the MetaWare C/C++ run time and profile your application. Profiling employs an interval timer that interrupts the executing program with regular frequency. A counter is incremented whenever the program is interrupted. Since each counter covers a range of code addresses, the resulting table of counters gives an approximate idea of where the program is spending its time.
+<a name="wp919579"> </a></p>
+<p >
+The <b>Profiling</b> window can also summarize how instruction count, cycle count, and cache-miss count are distributed among the functions in your program.
+<a name="wp919583"> </a></p>
+<blockquote >
+
+
+<table border="1" cellpadding="5" cellspacing="0">
+  <caption></caption>
+  <tr>
+    <td><table border="0" cellpadding="5" cellspacing="0">
+  <caption></caption>
+  <tr valign=top>
+    <td><div ><img border="0" src="images/note.png">
+</div></td>
+    <td><div ></div></td>
+</tr></table>
+<a name="wp927486"> </a>
+</td>
+    <td><div >Some types of profiling data are displayed only if your program is compiled to provide them. If you receive a message that your program has no statistical profiling data or a profiling timer is not present, check your project's <b>Properties &gt; C/C++ Build</b> dialog (or makefile, if yours is a standard-make project).<a name="wp927488"> </a></div></td>
+  </tr>
+</table>
+
+
+
+
+
+<a name="wp927480"> </a></blockquote>
+ <p >
+To view a profile of your application: 
+<a name="wp866553"> </a></p>
+<ol type="1"> <li  value="1">Open the <b>Profiling</b> window by selecting <b>Debugger &gt; Profiling.</b> <a name="wp866554"> </a>
+ <li  value="2">Select the data to be summarized using the <b>Address counters</b> drop-down list. Some data is available only if you compiled with a timer.<div align="left"><img src="images/sc_prof_.gif" alt="Profiling Window with Address Counters List" border="0" hspace="0" vspace="0"></div><a name="wp866555"> </a>
+ <li  value="3">Click <b>Get Profile</b>. <br>Statistical profiling data is not valid until your application has run long enough to gather statistics. A colored indicator shows when the statistical profiling data is valid:<div align="left"><img src="images/sc_profa.gif" alt="Statistical Profiling Data Ready" border="0" hspace="0" vspace="0"></div><a name="wp866559"> </a>
+ <li  value="4">Make selections to modify any of the parameters. For detailed explanations of the parameters, see the <i>MetaWare Debugger User's Guide</i>.<a name="wp866563"> </a>
+</ol><a name="wp944644">
+  <h5 >
+Saving to a File
+ </a></h5>
+<p >
+To save profiling output to a file:
+<a name="wp944645"> </a></p>
+<ol type="1"> <li  value="1">Right-click in the <b>Profiling</b> window. <a name="wp944646"> </a>
+ <li  value="2">Select <b>Save to File</b>. <a name="wp944647"> </a>
+ <li  value="3">Browse to the location for the saved file. <a name="wp944648"> </a>
+ <li  value="4">Enter a filename and extension. <a name="wp944649"> </a>
+ <li  value="5">Click <b>Save</b>. <a name="wp944650"> </a>
+</ol><a name="wp944651">
+  <h5 >
+Related Tasks
+ </a></h5>
+<ul> <li ><a href="mw_t_coa.htm#wp944532">Configuring Statistical Profiling</a><a name="wp944655"> </a>
+ <li ><a href="adding_p.htm#wp866572">Adding Profiling by Right-Clicking in a Window</a><a name="wp944668"> </a>
+ <li ><a href="mw_t_tim.htm#wp918801">Viewing ARC Enhanced System Timers</a><a name="wp944659"> </a>
+</ul><a name="wp944660">
+  <h5 >
+Related Reference
+ </a></h5>
+<ul> <li ><i>MetaWare Debugger User's Guide</i><a name="wp944661"> </a>
+ <li >Eclipse <em>C/C++ Development User Guide</em><a name="wp944665"> </a>
+</ul>
+    </blockquote>
+    <p></p>
+    <hr>
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" class="footer">
+      <tr>
+        <td>
+
+        </td>
+        <td align="right" valign="top" class="navigator">
+<a href="mw_t_pro.htm"><img src="images/sprev.gif" border="0" alt="Previous"></a><a href="mw_t_coa.htm"><img src="images/snext.gif" border="0" alt="Next"></a>
+        </td>
+      </tr>
+    </table>
+<p> <font size="-3">
+Copyright © 2012 Synopsys, Inc. <br />
+Some portions of this document copyright IBM Corporation and others 2000, 2004.</font></p>
+  </body>
+</html>

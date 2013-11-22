@@ -1,0 +1,75 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN" "http://www.w3.org/MarkUp/Wilbur/HTML32.dtd">
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+    <meta name="GENERATOR" content="Quadralay WebWorks Publisher 2003 for FrameMaker 8.0.0.1194">
+    <meta name="TEMPLATEBASE" content="temp">
+    <link rel="StyleSheet" href="document.css" type="text/css" media="screen">
+    <title>Debugging with ARC 700 Exception and MMU Registers</title>
+  </head>
+
+  <body>
+
+    <table width="100%" border="0" cellpadding="0" cellspacing="0" class="header">
+      <tr>
+<!--Disabling Breadcrumbs to use Eclipse version 10/2009
+        <td class="breadcrumbs">
+	<a href="ide_guid.htm"> DesignWare ARC MetaWare IDE User's Guide </a> > <a href="tasks.htm"><br>Tasks</a> > <a href="debuggia.htm">Debugging: Working with Registers</a> > Debugging with ARC 700 Exception and MMU Registers
+        </td>
+-->
+        <td align="right" valign="top" class="navigator" nowrap>
+<a href="mw_t_aux.htm"><img src="images/sprev.gif" border="0" alt="Previous"></a><a href="mw_t_mma.htm"><img src="images/snext.gif" border="0" alt="Next"></a>
+        </td>
+      </tr>
+    </table>
+
+    <hr align="left">
+
+    <blockquote>
+<h4 >
+Debugging with ARC 700 Exception and MMU Registers
+<a name="wp710452"> </a></h4>
+
+<p >
+You can view the ARC 700 Memory Management Unit (MMU) and exception registers for hardware or simulator. To view the MMU and exceptions registers, first specify them in the in the <b>Debug Configurations </b>dialog, <b>Debugger</b> tab, <b>Simulator Extensions &gt; MMU/MPU Support</b> before you start or restart debugging.
+<a name="wp946017"> </a></p>
+<p >
+The <b>MMU contents</b> and <b>Exception/MMU registers</b> windows are available from the <b>Debugger &gt; Hardware</b> menu after your application runs in the debugger far enough to activate the MMU. However, the <b>MMU contents</b> window is available only if you specified MMU in the <b>Debug Configurations </b>dialog (see <a href="mw_t_run.htm#wp913987">Defining MetaWare Debugger Settings</a>).
+<a name="wp710455"> </a></p>
+<blockquote >
+<div align="left"><img src="images/mmu_menu.gif" border="0" hspace="0" vspace="0"></div>
+
+<a name="wp924671"> </a></blockquote>
+ <p >
+If your processor does not contain an MMU, the <b>Exception/MMU registers</b> window displays the exception registers and reports <code>There is no MMU present</code>. If you see this message when trying to view your MMU using a simulator, be sure you have specified an MMU in the <b>Debug Configurations </b>dialog, <b>Debugger</b> tab, <b>Simulator Extensions &gt; MMU/MPU Support</b>.
+<a name="wp710460"> </a></p>
+<a name="wp915521">
+  <h5 >
+Related Tasks
+ </a></h5>
+<ul> <li ><a href="mw_t_mma.htm#wp710483">Viewing MMU Contents</a><a name="wp915533"> </a>
+ <li ><a href="mw_t_run.htm#wp913987">Defining MetaWare Debugger Settings</a><a name="wp915583"> </a>
+</ul><a name="wp915512">
+  <h5 >
+Related Reference
+ </a></h5>
+<ul> <li >Eclipse <em>C/C++ Development User Guide</em><a name="wp915538"> </a>
+</ul>
+    </blockquote>
+    <p></p>
+    <hr>
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" class="footer">
+      <tr>
+        <td>
+
+        </td>
+        <td align="right" valign="top" class="navigator">
+<a href="mw_t_aux.htm"><img src="images/sprev.gif" border="0" alt="Previous"></a><a href="mw_t_mma.htm"><img src="images/snext.gif" border="0" alt="Next"></a>
+        </td>
+      </tr>
+    </table>
+<p> <font size="-3">
+Copyright © 2012 Synopsys, Inc. <br />
+Some portions of this document copyright IBM Corporation and others 2000, 2004.</font></p>
+  </body>
+</html>

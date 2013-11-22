@@ -1,0 +1,163 @@
+<spirit:design xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:spirit="http://www.spiritconsortium.org/XMLSchema/SPIRIT/1.4"
+               xsi:schemaLocation="http://www.spiritconsortium.org/XMLSchema/SPIRIT/1.4 http://www.spiritconsortium.org/XMLSchema/SPIRIT/1.4/index.xsd">
+    <spirit:vendor>arc.com</spirit:vendor>
+    <spirit:library>hwarch_lib</spirit:library>
+    <spirit:name>hwarch</spirit:name>
+    <spirit:version>1.0</spirit:version>
+    <spirit:componentInstances>
+        <spirit:componentInstance>
+            <spirit:instanceName>arb_top</spirit:instanceName>
+            <spirit:displayName>arb_top</spirit:displayName>
+            <spirit:componentRef spirit:vendor="arc.com" spirit:library="am_series"
+                                 spirit:name="arb_top" spirit:version="1.0"/>
+        </spirit:componentInstance>
+        <spirit:componentInstance>
+            <spirit:instanceName>bridge_top</spirit:instanceName>
+            <spirit:displayName>bridge_top</spirit:displayName>
+            <spirit:componentRef spirit:vendor="arc.com" spirit:library="am_series"
+                                 spirit:name="bridge_top" spirit:version="1.0"/>
+        </spirit:componentInstance>
+        <spirit:componentInstance>
+            <spirit:instanceName>p_arb_top</spirit:instanceName>
+            <spirit:displayName>p_arb_top</spirit:displayName>
+            <spirit:componentRef spirit:vendor="arc.com" spirit:library="am_series"
+                                 spirit:name="p_arb_top" spirit:version="1.0"/>
+        </spirit:componentInstance>
+        <spirit:componentInstance>
+            <spirit:instanceName>mem_arb_top</spirit:instanceName>
+            <spirit:displayName>mem_arb_top</spirit:displayName>
+            <spirit:componentRef spirit:vendor="arc.com" spirit:library="am_series"
+                                 spirit:name="mem_arb_top" spirit:version="1.0"/>
+        </spirit:componentInstance>
+        <spirit:componentInstance>
+            <spirit:instanceName>sdram_controller</spirit:instanceName>
+            <spirit:displayName>sdram_controller</spirit:displayName>
+            <spirit:componentRef spirit:vendor="arc.com" spirit:library="am_series"
+                                 spirit:name="sdram_controller" spirit:version="1.0"/>
+        </spirit:componentInstance>
+        <spirit:componentInstance>
+            <spirit:instanceName>buart</spirit:instanceName>
+            <spirit:displayName>uart0</spirit:displayName>
+            <spirit:componentRef spirit:vendor="arc.com" spirit:library="am_series"
+                                 spirit:name="buart" spirit:version="1.0"/>
+        </spirit:componentInstance>
+        <spirit:componentInstance>
+            <spirit:instanceName>imemory_model</spirit:instanceName>
+            <spirit:componentRef spirit:vendor="arc.com" spirit:library="am_series"
+                                 spirit:name="memory_model" spirit:version="1.0"/>
+        </spirit:componentInstance>
+        <spirit:componentInstance>
+            <spirit:instanceName>cpu0</spirit:instanceName>
+            <spirit:displayName>cpu0</spirit:displayName>
+            <spirit:componentRef spirit:vendor="arc.com" spirit:library="am_series"
+                                 spirit:name="arc700" spirit:version="1.0"/>
+        </spirit:componentInstance>
+        <spirit:componentInstance>
+            <spirit:instanceName>cpu1</spirit:instanceName>
+            <spirit:displayName>cpu1</spirit:displayName>
+            <spirit:componentRef spirit:vendor="arc.com" spirit:library="am_series"
+                                 spirit:name="arc700" spirit:version="1.0"/>
+        </spirit:componentInstance>
+        <spirit:componentInstance>
+            <spirit:instanceName>cpu2</spirit:instanceName>
+            <spirit:displayName>cpu2</spirit:displayName>
+            <spirit:componentRef spirit:vendor="arc.com" spirit:library="am_series"
+                                 spirit:name="arc700" spirit:version="1.0"/>
+        </spirit:componentInstance>
+        <spirit:componentInstance>
+            <spirit:instanceName>cpu3</spirit:instanceName>
+            <spirit:displayName>cpu3</spirit:displayName>
+            <spirit:componentRef spirit:vendor="arc.com" spirit:library="am_series"
+                                 spirit:name="arc700" spirit:version="1.0"/>
+        </spirit:componentInstance>
+    </spirit:componentInstances>
+    <spirit:interconnections>
+        <spirit:interconnection>
+            <spirit:name>bgt_bus</spirit:name>
+            <spirit:activeInterface spirit:componentRef="arb_top" spirit:busRef="bgt"/>
+            <spirit:activeInterface spirit:componentRef="bridge_top" spirit:busRef="bgt"/>
+        </spirit:interconnection>
+        <spirit:interconnection>
+            <spirit:name>bgi_bus</spirit:name>
+            <spirit:activeInterface spirit:componentRef="arb_top" spirit:busRef="bgi"/>
+            <spirit:activeInterface spirit:componentRef="bridge_top" spirit:busRef="bgi"/>
+        </spirit:interconnection>
+        <spirit:interconnection>
+            <spirit:name>memarb_bus</spirit:name>
+            <spirit:activeInterface spirit:componentRef="arb_top" spirit:busRef="sm"/>
+            <spirit:activeInterface spirit:componentRef="mem_arb_top" spirit:busRef="sm"/>
+        </spirit:interconnection>
+        <spirit:interconnection>
+            <spirit:name>arbi_bus</spirit:name>
+            <spirit:activeInterface spirit:componentRef="p_arb_top" spirit:busRef="arbi"/>
+            <spirit:activeInterface spirit:componentRef="bridge_top" spirit:busRef="arbi"/>
+        </spirit:interconnection>
+        <spirit:interconnection>
+            <spirit:name>arbt_bus</spirit:name>
+            <spirit:activeInterface spirit:componentRef="p_arb_top" spirit:busRef="arbt"/>
+            <spirit:activeInterface spirit:componentRef="bridge_top" spirit:busRef="arbt"/>
+        </spirit:interconnection>
+        <spirit:interconnection>
+            <spirit:name>sdram_ctrl_bus</spirit:name>
+            <spirit:activeInterface spirit:componentRef="mem_arb_top" spirit:busRef="smem"/>
+            <spirit:activeInterface spirit:componentRef="sdram_controller" spirit:busRef="smem"/>
+        </spirit:interconnection>
+        <spirit:interconnection>
+            <spirit:name>uart0_bus</spirit:name>
+            <spirit:activeInterface spirit:componentRef="p_arb_top" spirit:busRef="uart0"/>
+            <spirit:activeInterface spirit:componentRef="buart" spirit:busRef="BVCITarget"/>
+        </spirit:interconnection>
+        <spirit:interconnection>
+            <spirit:name>sdram_bus</spirit:name>
+            <spirit:activeInterface spirit:componentRef="sdram_controller" spirit:busRef="phySdram"/>
+            <spirit:activeInterface spirit:componentRef="imemory_model" spirit:busRef="xsdram"/>
+        </spirit:interconnection>
+        <spirit:interconnection>
+            <spirit:name>cpu0_bus</spirit:name>
+            <spirit:activeInterface spirit:componentRef="cpu0" spirit:busRef="iini"/>
+            <spirit:activeInterface spirit:componentRef="arb_top" spirit:busRef="iini"/>
+        </spirit:interconnection>
+        <spirit:interconnection>
+            <spirit:name>cpu1_bus</spirit:name>
+            <spirit:activeInterface spirit:componentRef="cpu1" spirit:busRef="iini"/>
+            <spirit:activeInterface spirit:componentRef="arb_top" spirit:busRef="dini"/>
+        </spirit:interconnection>
+        <spirit:interconnection>
+            <spirit:name>cpu2_bus</spirit:name>
+            <spirit:activeInterface spirit:componentRef="cpu2" spirit:busRef="iini"/>
+            <spirit:activeInterface spirit:componentRef="arb_top" spirit:busRef="as"/>
+        </spirit:interconnection>
+        <spirit:interconnection>
+            <spirit:name>cpu3_bus</spirit:name>
+            <spirit:activeInterface spirit:componentRef="cpu3" spirit:busRef="iini"/>
+            <spirit:activeInterface spirit:componentRef="arb_top" spirit:busRef="vdi"/>
+        </spirit:interconnection>
+    </spirit:interconnections>
+    <spirit:vendorExtensions>
+        <systemDesigner>
+            <routing router ="0"/>
+            <element name="cpu0" type="component_instance" x="20" y="20" width="100"
+                     height="50"/>
+            <element name="cpu1" type="component_instance" x="220" y="20" width="100"
+                     height="50"/>
+            <element name="cpu2" type="component_instance" x="420" y="20" width="100"
+                     height="50"/>
+            <element name="cpu3" type="component_instance" x="620" y="20" width="100"
+                     height="50"/>
+            <element name="arb_top" type="component_instance" x="20" y="140" width="700"
+                     height="50"/>
+            <element name="mem_arb_top" type="component_instance" x="20" y="260"
+                     width="175" height="50"/>
+            <element name="bridge_top" type="component_instance" x="253" y="260"
+                     width="175" height="50"/>
+            <element name="sdram_controller" type="component_instance" x="20" y="380"
+                     width="175" height="50"/>
+            <element name="p_arb_top" type="component_instance" x="486" y="380" width="175"
+                     height="50"/>
+            <element name="imemory_model" type="component_instance" x="20" y="500"
+                     width="175" height="50"/>
+            <element name="buart" type="component_instance" x="486" y="500" width="175"
+                     height="50"/>
+        </systemDesigner>
+    </spirit:vendorExtensions>
+</spirit:design>

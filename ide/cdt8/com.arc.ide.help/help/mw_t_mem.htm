@@ -1,0 +1,163 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN" "http://www.w3.org/MarkUp/Wilbur/HTML32.dtd">
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+    <meta name="GENERATOR" content="Quadralay WebWorks Publisher 2003 for FrameMaker 8.0.0.1194">
+    <meta name="TEMPLATEBASE" content="temp">
+    <link rel="StyleSheet" href="document.css" type="text/css" media="screen">
+    <title>Working with the Debugger Memory Window</title>
+  </head>
+
+  <body>
+
+    <table width="100%" border="0" cellpadding="0" cellspacing="0" class="header">
+      <tr>
+<!--Disabling Breadcrumbs to use Eclipse version 10/2009
+        <td class="breadcrumbs">
+	<a href="ide_guid.htm"> DesignWare ARC MetaWare IDE User's Guide </a> > <a href="tasks.htm"><br>Tasks</a> > <a href="mw_o_mem.htm">Debugging: Working with Memory</a> > Working with the Debugger Memory Window
+        </td>
+-->
+        <td align="right" valign="top" class="navigator" nowrap>
+<a href="mw_o_mem.htm"><img src="images/sprev.gif" border="0" alt="Previous"></a><a href="mw_t_sea.htm"><img src="images/snext.gif" border="0" alt="Next"></a>
+        </td>
+      </tr>
+    </table>
+
+    <hr align="left">
+
+    <blockquote>
+<h4 >
+Working with the Debugger Memory Window
+<a name="wp709568"> </a></h4>
+
+<p >
+To view the contents of a region of memory associated with your program, use the <b>Memory</b> window. By default, the <b>Memory</b> window shows the contents of memory in ascending order by address. 
+<a name="wp709570"> </a></p>
+<p >
+To open a <b>Memory</b> window, select <b>Debugger &gt; Memory</b>. 
+<a name="wp709577"> </a></p>
+<blockquote >
+<div align="left"><img src="images/sc_mem.gif" alt="Memory Window" border="0" hspace="0" vspace="0"></div>
+
+<a name="wp709581"> </a></blockquote>
+ <blockquote >
+
+
+<table border="1" cellpadding="5" cellspacing="0">
+  <caption></caption>
+  <tr>
+    <td><table border="0" cellpadding="5" cellspacing="0">
+  <caption></caption>
+  <tr valign=top>
+    <td><div ><img border="0" src="images/note.png">
+</div></td>
+    <td><div ></div></td>
+</tr></table>
+<a name="wp927293"> </a>
+</td>
+    <td><div >Each <b>Memory</b> window includes a number (such as <b>#1</b>) that you can use to compare several <b>Memory</b> windows.<a name="wp927295"> </a></div></td>
+  </tr>
+</table>
+
+
+
+
+
+<a name="wp709585"> </a></blockquote>
+ <p >
+By default, the <b>Memory</b> window shows 16 bytes of memory per line, grouped in hexadecimal, four-byte words, in ascending order from the starting address you specified. 
+<a name="wp924893"> </a></p>
+<p >
+Each line of text in the <b>Memory</b> window begins with an address on the left (for example, 0804826c), followed by a string of 32 hexadecimal digits representing the contents of 16 bytes of memory starting at that address.
+<a name="wp849703"> </a></p>
+<a name="wp849582">
+  <h5 >
+Changing Display Parameters
+ </a></h5>
+<p >
+You can use the window controls to change the display: <img src="images/mem_disp.gif" alt="Register Display Parameters" border="0" hspace="0" vspace="0">
+<a name="wp924827"> </a></p>
+<ul> <li ><img src="images/goto_combo.gif" border="0" hspace="0" vspace="0"> Starting point. Enter the register name, hexadecimal start address, or symbolic label of a memory region from which to begin the display, then press Enter. <a name="wp924834"> </a>
+ <li ><img src="images/16_button.gif" border="0" hspace="0" vspace="0"> Base. Choose the numeric base in which to display the memory values.<a name="wp924838"> </a>
+ <li ><img src="images/16_button.gif" border="0" hspace="0" vspace="0"> Bytes per line <a name="wp924842"> </a>
+ <li ><img src="images/word_button.gif" border="0" hspace="0" vspace="0"> Size. Choose the data type in which to display the memory values.<a name="wp924846"> </a>
+ <li ><img src="images/sc_change_reg.gif" border="0" hspace="0" vspace="0"> Change the value at a memory location (select the line first). <a name="wp924854"> </a>
+ <li ><img src="images/arrow.vertical.gif" border="0" hspace="0" vspace="0"> Toggle display of columns by increasing or decreasing offsets (addresses).<a name="wp924858"> </a>
+ <li ><img src="images/refresh.gif" alt="Click the Set Watchpoint button" border="0" hspace="0" vspace="0"> Refresh the display<a name="wp929376"> </a>
+</ul><a name="wp709591">
+  <h5 >
+Changing a Value
+ </a></h5>
+<p >
+To change a value in memory:
+<a name="wp709592"> </a></p>
+<ol type="1"> <li  value="1">Click a line to select it. <a name="wp709593"> </a>
+ <li  value="2">Click the <b>Change </b>button <img src="images/sc_change_reg.gif" border="0" hspace="0" vspace="0"> or right-click and select <b>Change</b>. <a name="wp709597"> </a>
+ <li  value="3">Enter the new value and click <b>OK</b>. <a name="wp709598"> </a>
+</ol><a name="wp709599">
+  <h5 >
+Examining a Location
+ </a></h5>
+<p >
+To examine a memory location in an <b>Examine</b> window, right-click a line, and then select <b>Examine</b> from the pop-up menu.
+<a name="wp709600"> </a></p>
+<p >
+The selected address is displayed with the prefix <i>*</i><code>(</code><i>int*</i><code>)</code>, which means that the address has been cast to a pointer-to-integer. You can then change the <i>int</i> part of the prefix to any type. Subsequent examine selections from the <b>Memory</b> window change the address only: Your selected type preference is preserved.
+<a name="wp709601"> </a></p>
+<blockquote >
+
+
+<table border="1" cellpadding="5" cellspacing="0">
+  <caption></caption>
+  <tr>
+    <td><table border="0" cellpadding="5" cellspacing="0">
+  <caption></caption>
+  <tr valign=top>
+    <td><div ><img border="0" src="images/note.png">
+</div></td>
+    <td><div ></div></td>
+</tr></table>
+<a name="wp927310"> </a>
+</td>
+    <td><div >The Eclipse the <b>Memory</b> display available from <b>Window &gt; Show View</b> provides essentially the same functionality.<a name="wp927312"> </a></div></td>
+  </tr>
+</table>
+
+
+
+
+
+<a name="wp919468"> </a></blockquote>
+ <a name="wp916017">
+  <h5 >
+Related Tasks
+ </a></h5>
+<ul> <li ><a href="mw_t_sea.htm#wp709740">Searching Memory</a> <a name="wp916030"> </a>
+ <li ><a href="mw_t_fil.htm#wp709881">Filling Memory with a Value or String</a><a name="wp916034"> </a>
+ <li ><a href="mw_t_fia.htm#wp709924">Copying a File to Memory</a><a name="wp916038"> </a>
+ <li ><a href="mw_t_mea.htm#wp709966">Copying Memory to a File</a><a name="wp916042"> </a>
+ <li ><a href="mw_t_cha.htm#wp915887">Changing a Value in a Debugger Window</a><a name="wp916267"> </a>
+</ul><a name="wp916021">
+  <h5 >
+Related Reference
+ </a></h5>
+<ul> <li >Eclipse <em>C/C++ Development User Guide</em><a name="wp916065"> </a>
+</ul>
+    </blockquote>
+    <p></p>
+    <hr>
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" class="footer">
+      <tr>
+        <td>
+
+        </td>
+        <td align="right" valign="top" class="navigator">
+<a href="mw_o_mem.htm"><img src="images/sprev.gif" border="0" alt="Previous"></a><a href="mw_t_sea.htm"><img src="images/snext.gif" border="0" alt="Next"></a>
+        </td>
+      </tr>
+    </table>
+<p> <font size="-3">
+Copyright © 2012 Synopsys, Inc. <br />
+Some portions of this document copyright IBM Corporation and others 2000, 2004.</font></p>
+  </body>
+</html>

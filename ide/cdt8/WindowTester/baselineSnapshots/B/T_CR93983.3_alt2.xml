@@ -1,0 +1,15 @@
+<view name="com.arc.cdt.debug.seecode.ui.views.SeeCodeCustomView:source">
+<TextCanvas>
+    <text lineCount="9" selection="-1">
+        <line content="  11 typedef int Integer;">
+        <line content="  12 ">
+        <line content="  13 #define MAX_SIZE 30">
+        <line content="  14 static int size;">
+        <line content="  15 ">
+        <line content="  16 #define Asub(I)  A[(I)-1] /* C's restriction that array*/">
+        <line content="  17 #define Bsub(I)  B[(I)-2] /* indices start at zero     */">
+        <line content="  18 #define Csub(I)  C[(I)+size-1] /* prompts definition of     */">
+        <line content="  19 #define Xsub(I)  X[(I)-1] /* macros to do subscripting.*/">
+    </text>
+</TextCanvas>
+</view>

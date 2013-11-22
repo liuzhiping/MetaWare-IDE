@@ -1,0 +1,75 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN" "http://www.w3.org/MarkUp/Wilbur/HTML32.dtd">
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+    <meta name="GENERATOR" content="Quadralay WebWorks Publisher 2003 for FrameMaker 8.0.0.1194">
+    <meta name="TEMPLATEBASE" content="temp">
+    <link rel="StyleSheet" href="document.css" type="text/css" media="screen">
+    <title>Cache Analysis Window</title>
+  </head>
+
+  <body>
+
+    <table width="100%" border="0" cellpadding="0" cellspacing="0" class="header">
+      <tr>
+<!--Disabling Breadcrumbs to use Eclipse version 10/2009
+        <td class="breadcrumbs">
+	<a href="ide_guid.htm"> DesignWare ARC MetaWare IDE User's Guide </a> > <a href="referenc.htm"><br>Reference</a> > <a href="mw_u_db_.htm">Debugger Windows and Views</a> > Cache Analysis Window
+        </td>
+-->
+        <td align="right" valign="top" class="navigator" nowrap>
+<a href="mw_u_ovl.htm"><img src="images/sprev.gif" border="0" alt="Previous"></a><a href="mw_u_img.htm"><img src="images/snext.gif" border="0" alt="Next"></a>
+        </td>
+      </tr>
+    </table>
+
+    <hr align="left">
+
+    <blockquote>
+<h4 >
+Cache Analysis Window
+<a name="wp911015"> </a></h4>
+
+<p >
+Open a <b>Data cache analysis</b> or <b>Instruction cache analysis</b> window by clicking <b>Analyze</b> in the <b>Data cache</b> or <b>Instruction cache</b> window when cycle estimation is enabled. This window presents an analysis of the cache performance, including identification of lines that thrashed during program execution, possibly impacting program performance.
+<a name="wp990763"> </a></p>
+<p >
+Each line is presented in the following form
+<a name="wp911020"> </a></p>
+<pre >(Addr co C mi M cy Y)
+<a name="wp911021"></a></pre>
+<p >
+<i>Addr</i> is the line address, <i>C</i> is the access cost, <i>M</i> is the total number of misses, and <i>Y</i> the total number of access cycles.
+<a name="wp911022"> </a></p>
+<ul> <li >First, each set of the cache is shown, and all lines that at one time or the other occupied that set. In this way you can see which lines compete with others for residence in the cache.<a name="wp911023"> </a>
+ <li >Next, a thrash analysis is performed, identifying for each set lines in that set that appear to have <i>thrashed</i> (were loaded into the cache, accessed infrequently, and dumped from the cache by a contending line or lines from memory). We attempt to pair up lines that thrashed each other, signified by similar miss counts. The solution to thrashing lines may be adding ways to your cache or reorganizing your program in memory via linker directives to locate contending lines in different sets.<a name="wp911024"> </a>
+ <li >Finally, all the lines in your program are printed, with the total number of misses, hits, access cycles, access cost, and the program label corresponding to the line. Look closely at lines identified with <code>&lt;- !</code> as they have high access cost. The lines are printed first in address order, then sorted according to access cost.<a name="wp911025"> </a>
+</ul><a name="wp991921">
+  <h5 >
+Related Tasks
+ </a></h5>
+<ul> <li ><a href="mw_t_ces.htm#wp705744">Using the Cycle-Estimating Simulator</a><a name="wp991943"> </a>
+</ul><a name="wp991926">
+  <h5 >
+Related Reference
+ </a></h5>
+<ul> <li >Eclipse <em>C/C++ Development User Guide</em><a name="wp991930"> </a>
+</ul>
+    </blockquote>
+    <p></p>
+    <hr>
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" class="footer">
+      <tr>
+        <td>
+
+        </td>
+        <td align="right" valign="top" class="navigator">
+<a href="mw_u_ovl.htm"><img src="images/sprev.gif" border="0" alt="Previous"></a><a href="mw_u_img.htm"><img src="images/snext.gif" border="0" alt="Next"></a>
+        </td>
+      </tr>
+    </table>
+<p> <font size="-3">
+Copyright © 2012 Synopsys, Inc. <br />
+Some portions of this document copyright IBM Corporation and others 2000, 2004.</font></p>
+  </body>
+</html>

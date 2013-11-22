@@ -1,0 +1,68 @@
+<view name="com.arc.cdt.debug.seecode.ui.views.SeeCodeCustomView:mem#1">
+<TextCanvas>
+    <text lineCount="8" selection="-1">
+        <line content="016000: 20796857 61207369 756f6d20 77206573 Why is a| mouse w">
+            <range start="8" end="16" foreground="#ffffff" background="#ff0000">
+            <range start="17" end="25" foreground="#ffffff" background="#ff0000">
+            <range start="26" end="31" foreground="#ffffff" background="#ff0000">
+            <range start="32" end="34" foreground="#ffffff" background="#ff0000">
+            <range start="35" end="43" foreground="#ffffff" background="#ff0000">
+            <range start="44" end="52" foreground="#ffffff" background="#ff0000">
+            <range start="53" end="61" foreground="#ffffff" background="#ff0000">
+        <line content="016010: 206e6568 73207469 736e6970 79685700 hen it s|pins.Why">
+            <range start="8" end="16" foreground="#ffffff" background="#ff0000">
+            <range start="17" end="25" foreground="#ffffff" background="#ff0000">
+            <range start="26" end="34" foreground="#ffffff" background="#ff0000">
+            <range start="35" end="43" foreground="#ffffff" background="#ff0000">
+            <range start="44" end="52" foreground="#ffffff" background="#ff0000">
+            <range start="53" end="57" foreground="#ffffff" background="#ff0000">
+            <range start="58" end="61" foreground="#ffffff" background="#ff0000">
+        <line content="016020: 20736920 6f6d2061 20657375 6e656877  is a mo|use when">
+            <range start="8" end="16" foreground="#ffffff" background="#ff0000">
+            <range start="17" end="25" foreground="#ffffff" background="#ff0000">
+            <range start="26" end="34" foreground="#ffffff" background="#ff0000">
+            <range start="35" end="43" foreground="#ffffff" background="#ff0000">
+            <range start="44" end="52" foreground="#ffffff" background="#ff0000">
+            <range start="53" end="61" foreground="#ffffff" background="#ff0000">
+        <line content="016030: 20746920 6e697073 68570073 73692079  it spin|s.Why is">
+            <range start="8" end="16" foreground="#ffffff" background="#ff0000">
+            <range start="17" end="25" foreground="#ffffff" background="#ff0000">
+            <range start="26" end="34" foreground="#ffffff" background="#ff0000">
+            <range start="35" end="43" foreground="#ffffff" background="#ff0000">
+            <range start="44" end="52" foreground="#ffffff" background="#ff0000">
+            <range start="53" end="54" foreground="#ffffff" background="#ff0000">
+            <range start="55" end="61" foreground="#ffffff" background="#ff0000">
+        <line content="016040: 6d206120 6573756f 65687720 7469206e  a mouse| when it">
+            <range start="8" end="16" foreground="#ffffff" background="#ff0000">
+            <range start="17" end="25" foreground="#ffffff" background="#ff0000">
+            <range start="26" end="34" foreground="#ffffff" background="#ff0000">
+            <range start="35" end="36" foreground="#ffffff" background="#ff0000">
+            <range start="37" end="43" foreground="#ffffff" background="#ff0000">
+            <range start="44" end="52" foreground="#ffffff" background="#ff0000">
+            <range start="53" end="61" foreground="#ffffff" background="#ff0000">
+        <line content="016050: 69707320 5700736e 69207968 20612073  spins.W|hy is a ">
+            <range start="8" end="16" foreground="#ffffff" background="#ff0000">
+            <range start="17" end="25" foreground="#ffffff" background="#ff0000">
+            <range start="26" end="34" foreground="#ffffff" background="#ff0000">
+            <range start="35" end="43" foreground="#ffffff" background="#ff0000">
+            <range start="44" end="50" foreground="#ffffff" background="#ff0000">
+            <range start="51" end="52" foreground="#ffffff" background="#ff0000">
+            <range start="53" end="61" foreground="#ffffff" background="#ff0000">
+        <line content="016060: 73756f6d 68772065 69206e65 70732074 mouse wh|en it sp">
+            <range start="8" end="16" foreground="#ffffff" background="#ff0000">
+            <range start="17" end="25" foreground="#ffffff" background="#ff0000">
+            <range start="26" end="34" foreground="#ffffff" background="#ff0000">
+            <range start="35" end="43" foreground="#ffffff" background="#ff0000">
+            <range start="44" end="52" foreground="#ffffff" background="#ff0000">
+            <range start="53" end="61" foreground="#ffffff" background="#ff0000">
+        <line content="016070: 00736e69 20796857 61207369 756f6d20 ins.Why |is a mou">
+            <range start="8" end="16" foreground="#ffffff" background="#ff0000">
+            <range start="17" end="25" foreground="#ffffff" background="#ff0000">
+            <range start="26" end="34" foreground="#ffffff" background="#ff0000">
+            <range start="35" end="40" foreground="#ffffff" background="#ff0000">
+            <range start="41" end="43" foreground="#ffffff" background="#ff0000">
+            <range start="44" end="52" foreground="#ffffff" background="#ff0000">
+            <range start="53" end="61" foreground="#ffffff" background="#ff0000">
+    </text>
+</TextCanvas>
+</view>

@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<windowLayout version="3" model="sash">
+  <mdiFrame model="sash" x="0" y="0" width="1024" height="768">
+    <splitPane orientation="horizontal" divider="320">
+      <splitPane orientation="vertical" divider="409">
+        <pane>
+          <tabbedPanel name="locals" process="1" selected="1">
+            <toolBar id="0" visible="0"/>
+            <toolBar id="1" visible="1"/>
+            <toolBar id="2" visible="0"/>
+          </tabbedPanel>
+          <tabbedPanel name="locals" process="2">
+            <toolBar id="0" visible="0"/>
+            <toolBar id="1" visible="1"/>
+            <toolBar id="2" visible="0"/>
+          </tabbedPanel>
+          <tabbedPanel name="locals" process="3">
+            <toolBar id="0" visible="0"/>
+            <toolBar id="1" visible="1"/>
+            <toolBar id="2" visible="0"/>
+          </tabbedPanel>
+          <tabbedPanel name="locals" process="4">
+            <toolBar id="0" visible="0"/>
+            <toolBar id="1" visible="1"/>
+            <toolBar id="2" visible="0"/>
+          </tabbedPanel>
+        </pane>
+        <pane>
+          <tabbedPanel name="stack" process="1" selected="1">
+            <toolBar id="0" visible="0"/>
+            <toolBar id="1" visible="1"/>
+            <toolBar id="2" visible="0"/>
+          </tabbedPanel>
+          <tabbedPanel name="stack" process="2">
+            <toolBar id="0" visible="0"/>
+            <toolBar id="1" visible="1"/>
+            <toolBar id="2" visible="0"/>
+          </tabbedPanel>
+          <tabbedPanel name="stack" process="3">
+            <toolBar id="0" visible="0"/>
+            <toolBar id="1" visible="1"/>
+            <toolBar id="2" visible="0"/>
+          </tabbedPanel>
+          <tabbedPanel name="stack" process="4">
+            <toolBar id="0" visible="0"/>
+            <toolBar id="1" visible="1"/>
+            <toolBar id="2" visible="0"/>
+          </tabbedPanel>
+        </pane>
+      </splitPane>
+      <splitPane orientation="vertical" divider="478">
+        <pane>
+          <tabbedPanel name="source" process="1">
+            <toolBar id="0" visible="0"/>
+            <toolBar id="1" visible="1"/>
+            <toolBar id="2" visible="0"/>
+            <toolBar id="3" visible="0"/>
+          </tabbedPanel>
+          <tabbedPanel name="source" process="2">
+            <toolBar id="0" visible="0"/>
+            <toolBar id="1" visible="1"/>
+            <toolBar id="2" visible="0"/>
+            <toolBar id="3" visible="0"/>
+          </tabbedPanel>
+          <tabbedPanel name="source" process="3">
+            <toolBar id="0" visible="0"/>
+            <toolBar id="1" visible="1"/>
+            <toolBar id="2" visible="0"/>
+            <toolBar id="3" visible="0"/>
+          </tabbedPanel>
+          <tabbedPanel name="source" process="4">
+            <toolBar id="0" visible="0"/>
+            <toolBar id="1" visible="1"/>
+            <toolBar id="2" visible="0"/>
+            <toolBar id="3" visible="0"/>
+          </tabbedPanel>
+          <tabbedPanel name="image" process="1" selected="1">
+            <toolBar id="0" visible="0"/>
+            <toolBar id="1" visible="1"/>
+            <toolBar id="2" visible="0"/>
+          </tabbedPanel>
+        </pane>
+        <pane>
+          <tabbedPanel name="brk" process="1">
+            <toolBar id="0" visible="0"/>
+            <toolBar id="1" visible="1"/>
+            <toolBar id="2" visible="0"/>
+          </tabbedPanel>
+          <tabbedPanel name="brk" process="2">
+            <toolBar id="0" visible="0"/>
+            <toolBar id="1" visible="1"/>
+            <toolBar id="2" visible="0"/>
+          </tabbedPanel>
+          <tabbedPanel name="brk" process="3" selected="1">
+            <toolBar id="0" visible="0"/>
+            <toolBar id="1" visible="1"/>
+            <toolBar id="2" visible="0"/>
+          </tabbedPanel>
+          <tabbedPanel name="brk" process="4">
+            <toolBar id="0" visible="0"/>
+            <toolBar id="1" visible="1"/>
+            <toolBar id="2" visible="0"/>
+          </tabbedPanel>
+          <tabbedPanel name="watch" process="1">
+            <toolBar id="0" visible="0"/>
+            <toolBar id="1" visible="1"/>
+            <toolBar id="2" visible="0"/>
+          </tabbedPanel>
+          <tabbedPanel name="watch" process="2">
+            <toolBar id="0" visible="0"/>
+            <toolBar id="1" visible="1"/>
+            <toolBar id="2" visible="0"/>
+          </tabbedPanel>
+          <tabbedPanel name="watch" process="3">
+            <toolBar id="0" visible="0"/>
+            <toolBar id="1" visible="1"/>
+            <toolBar id="2" visible="0"/>
+          </tabbedPanel>
+          <tabbedPanel name="watch" process="4">
+            <toolBar id="0" visible="0"/>
+            <toolBar id="1" visible="1"/>
+            <toolBar id="2" visible="0"/>
+          </tabbedPanel>
+          <tabbedPanel name="command"/>
+        </pane>
+      </splitPane>
+    </splitPane>
+  </mdiFrame>
+</windowLayout>

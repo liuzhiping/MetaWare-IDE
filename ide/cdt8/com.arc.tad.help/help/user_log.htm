@@ -1,0 +1,73 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN" "http://www.w3.org/MarkUp/Wilbur/HTML32.dtd">
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+    <meta name="GENERATOR" content="Quadralay WebWorks Publisher 2003 for Word 8.0.0.1194">
+    <meta name="TEMPLATEBASE" content="ARCTechPubsv6">
+    <meta name="LASTUPDATED" content="01/27/12 13:02:36">
+<link rel="first" href="tad_help.htm">  <link rel="prev" href="log_summ.htm"><link rel="next" href="message_.htm">
+    <link rel="StyleSheet" href="document.css" type="text/css" media="screen">
+    <title>User Logs</title>
+  </head>
+
+  <body>
+
+    <table width="100%" border="0" cellpadding="0" cellspacing="0" class="header">
+      <tr> 
+        <td class="breadcrumbs">
+	<a href="tad_help.htm"> MQX&#174; Task Aware Debug Help</a> > <a href="tad_wind.htm"> TAD Windows</a> > User Logs
+        </td>
+        <td align="right" valign="top" class="navigator" nowrap>
+<a href="log_summ.htm"><img src="images/sprev.gif" border="0" alt="Previous" title="Previous"></a><a href="message_.htm"><img src="images/snext.gif" border="0" alt="Next" title="Next"></a>
+        </td>
+      </tr>
+    </table>
+
+    <hr align="left">
+
+    <blockquote>
+<h3 ><a name="wp9000406">
+User Logs</a></h3>
+
+
+<p >
+<a name="wp9000407">User logs are also listed in the <b>Log Summary</b> window.</a></p>
+<p >
+<img src="images/user_loa.gif" height="370" width="577" border="0" hspace="0" vspace="0">
+<a name="wp9000408"> </a></p>
+<p ><b><i><a name="wp9000409">Displayed Fields</a></i></b></p><p >
+<a name="wp9000410"><b>Log Component</b></a></p>
+<p >
+<a name="wp9000411">Indicates whether the log component is installed. Logging can occur only if the component is installed.</a></p>
+<p >
+<a name="wp9000412"><b>Log Enabled</b></a></p>
+<p >
+<a name="wp9000413">Indicates whether log write operations are enabled. At any time, an application can disable a log (no write operations are allowed) by calling <strong>_log_disable</strong>(). The application can subsequently enable the log by calling <strong>_log_enable</strong>().</a></p>
+<p >
+<a name="wp9000414"><b>Log Used</b></a></p>
+<p >
+<a name="wp9000415">The format of the field is <b>current log size</b>/<b>maximum size</b>. When an application creates a log, it sets the maximum size, which is the maximum amount of data (in long words) that can be written into the log. Current log size is the amount of data written into the log so far.</a></p>
+<p >
+<a name="wp9000416"><b>Overwrite</b></a></p>
+<p >
+<a name="wp9000417">If this field is set to <code>Yes</code>, then new entries overwrite the oldest entries when the log becomes full.  If it is set to <code>No</code>, then no further write operations occur when the log becomes full.</a></p>
+<p >
+<a name="wp9000418"><b>Log Entries</b></a></p>
+<p >
+<a name="wp9000419">Each log entry is represented by an entry in the list. Each entry contains a sequence number, a timestamp, and application-defined data. The log entries are displayed in chronological order, with the oldest entry first. If the first entry is not sequence number 1, the oldest entries in the log were overwritten. MQX assigns the timestamp when it logs the entry.</a></p>
+    </blockquote>
+    <p></p>
+    <hr>
+
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" class="footer">
+      <tr>
+        <td>
+          
+        </td>
+        <td align="right" valign="top" class="navigator">
+<a href="log_summ.htm"><img src="images/sprev.gif" border="0" alt="Previous" title="Previous"></a><a href="message_.htm"><img src="images/snext.gif" border="0" alt="Next" title="Next"></a>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>

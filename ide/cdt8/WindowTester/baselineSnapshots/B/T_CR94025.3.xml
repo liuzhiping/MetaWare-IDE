@@ -1,0 +1,5 @@
+<view>
+    <label text=""/>
+    <label text="The specified file is not a VDK configuration file, or it is corrupt."/>
+    <label text=""/>
+</view>

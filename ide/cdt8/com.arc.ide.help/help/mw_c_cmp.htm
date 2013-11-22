@@ -1,0 +1,83 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN" "http://www.w3.org/MarkUp/Wilbur/HTML32.dtd">
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+    <meta name="GENERATOR" content="Quadralay WebWorks Publisher 2003 for FrameMaker 8.0.0.1194">
+    <meta name="TEMPLATEBASE" content="temp">
+    <link rel="StyleSheet" href="document.css" type="text/css" media="screen">
+    <title>Coordinated Multiprocess Debugger (CMPD)</title>
+  </head>
+
+  <body>
+
+    <table width="100%" border="0" cellpadding="0" cellspacing="0" class="header">
+      <tr>
+<!--Disabling Breadcrumbs to use Eclipse version 10/2009
+        <td class="breadcrumbs">
+	<a href="ide_guid.htm"> DesignWare ARC MetaWare IDE User's Guide </a> > <a href="concepts.htm"><br>Concepts</a> > <a href="debuggin.htm">Debugging Extensions</a> > Coordinated Multiprocess Debugger (CMPD)
+        </td>
+-->
+        <td align="right" valign="top" class="navigator" nowrap>
+<a href="mw_c_ani.htm"><img src="images/sprev.gif" border="0" alt="Previous"></a><a href="tasks.htm"><img src="images/snext.gif" border="0" alt="Next"></a>
+        </td>
+      </tr>
+    </table>
+
+    <hr align="left">
+
+    <blockquote>
+<h4 >
+Coordinated Multiprocess Debugger (CMPD)
+<a name="wp880034"> </a></h4>
+
+<p >
+The Coordinated Multiprocess Debugger (CMPD) extensions to the MetaWare debugger let you debug multiple processes at the same time. 
+<a name="wp880153"> </a></p>
+<p >
+CMPD extensions let you perform tasks such as the following:
+<a name="wp880155"> </a></p>
+<ul> <li >Debug multiple processes, applying commands to one, some, or all<a name="wp880173"> </a>
+ <li >Debug multiple copies of the same process on different processors and operating systems<a name="wp880202"> </a>
+ <li >Debug multiple processes running on different processors and operating systems<a name="wp880178"> </a>
+ <li >Run processes on the appropriate processor in a multicore SoC to debug the whole SoC simultaneously<a name="wp880179"> </a>
+</ul><p >
+In a CMPD session, a command applies to all processes or only to a subset that you select. 
+<a name="wp880003"> </a></p>
+<a name="wp880124">
+  <h5 >
+How It Works
+ </a></h5>
+<p >
+The debugger creates a command processor to execute toolbar actions or command-line commands for each process. The command processors remain as processes come and go. A process might complete, and you might start debugging another process; CMPD debugs the new process using the same command processor as the process that just completed. If you restart a process, the debugger kills the process and reloads it as a distinct process, but again using the same command processor. 
+<a name="wp879948"> </a></p>
+<p >
+You select the process or processes to apply commands to in the <b>Debug</b> view.
+<a name="wp881097"> </a></p>
+<blockquote >
+<div align="left"><img src="images/SelMultiprocDebugView.gif" alt="Selecting processes to apply commands to" border="0" hspace="0" vspace="0"></div>
+
+<a name="wp881102"> </a></blockquote>
+ <div align="left" <strong >Figure&nbsp;3-1	 Selecting Processes to Apply Commands<a name="wp881131"> </a></strong></div><p >
+Related Reference
+<a name="wp878914"> </a></p>
+<ul> <li ><i>MetaWare Debugger User's Guide</i><a name="wp881995"> </a>
+ <li >Eclipse <em>C/C++ Development User Guide</em><a name="wp890232"> </a>
+</ul>
+    </blockquote>
+    <p></p>
+    <hr>
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" class="footer">
+      <tr>
+        <td>
+
+        </td>
+        <td align="right" valign="top" class="navigator">
+<a href="mw_c_ani.htm"><img src="images/sprev.gif" border="0" alt="Previous"></a><a href="tasks.htm"><img src="images/snext.gif" border="0" alt="Next"></a>
+        </td>
+      </tr>
+    </table>
+<p> <font size="-3">
+Copyright © 2012 Synopsys, Inc. <br />
+Some portions of this document copyright IBM Corporation and others 2000, 2004.</font></p>
+  </body>
+</html>

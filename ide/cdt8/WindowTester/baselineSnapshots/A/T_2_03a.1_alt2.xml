@@ -1,0 +1,17 @@
+<view name="org.eclipse.ui.views.ProblemView">
+    <tree columns="5">
+        <item>
+            <cell>Errors (2 items)</cell>
+            <cell></cell>
+            <cell></cell>
+            <cell></cell>
+            <cell></cell>
+            <item>
+                <cell></cell>
+                <cell></cell>
+                <cell></cell>
+                <cell></cell>
+                <cell></cell>
+        </item>
+    </tree>
+</view>

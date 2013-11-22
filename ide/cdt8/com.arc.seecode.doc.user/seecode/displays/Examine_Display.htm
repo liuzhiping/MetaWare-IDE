@@ -1,0 +1,43 @@
+<html>
+
+<head>
+
+<title>Examine window</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel=StyleSheet href="../default.css">
+
+</head>
+
+<body>
+
+<h1>Examine window</h1>
+
+<p>Use the Examine window to examine program data in type-aware
+ fashion. You can dereference (follow) pointers and traverse into structures, arrays, and unions.</p>
+
+<p><I>Note:</I>&nbsp;&nbsp;The Examine window is available only for programs that have been compiled with debugging information (the <b>-g</b> option).</p>
+
+<p>In the Examine window, information about structures, arrays, and pointers can 
+  be expanded or collapsed through a tree control. Double-click an item in the 
+  tree control to examine related information in a detailed view. For example, 
+  if the item represents a function pointer, the debugger opens a source or assembly 
+  window showing you that function.</p>
+
+<h2>Saving your data to a file</h2>
+<p>To save your data to a file, right click and select <b>Save to File.</b></p>
+
+<h2>Using deep and shallow bindings</h2>
+
+<p>The Examine window can use either &quot;deep&quot; or &quot;shallow&quot;
+  binding for any expression that you enter. The default is shallow binding. Click
+  the <b>Deep</b> button to switch from shallow to deep binding. Click the button
+  again to switch back to shallow binding.</p>
+
+<p>When deep binding is selected, expressions are evaluated as they are first entered; they are not evaluated again. For example, if you enter <tt>A[i]</tt>, <tt>i</tt> and <tt>A</tt> are evaluated once. If <tt>i = 5</tt>, the window forever shows <tt>A[5]</tt>. This is useful when you want to know who modifies <tt>A[5]</tt> in the future, even if <tt>i</tt> changes.</p>
+
+<p>When shallow binding is selected, expressions are re-evaluated each time
+ the window is updated. For example, when the expression is <tt>A[i]</tt> and the program is in a loop with control variable <tt>i</tt>, the value changes each time <tt>i</tt> changes. The expression can become invalid when control leaves the loop (for example, if <tt>i</tt> is local). The expression can later denote an entirely different array <tt>A</tt> and integer <tt>i</tt>.</p>
+
+<p>&nbsp;</p>
+</body>
+</html>

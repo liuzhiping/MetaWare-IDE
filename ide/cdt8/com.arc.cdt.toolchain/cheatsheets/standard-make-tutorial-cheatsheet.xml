@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8" ?> 
+<cheatsheet title="Standard Make Tutorial">
+	<intro
+		href="/org.eclipse.cdt.doc.user/getting_started/cdt_w_standard.htm">
+		<description>
+			Welcome to the MetaWare IDE Standard Make tutorial.
+			Running through this tutorial will help you understand how to create a new project 
+			and have the MetaWare IDE use the makefile within your build environment!
+		</description>
+	</intro>
+	<item
+		href="/org.eclipse.cdt.doc.user/getting_started/cdt_w_standard.htm?2"
+		title="Create a Project">
+		<description>
+			Create a C/C++ project by selecting the menu item File &gt; New &gt; Standard Make C Project.
+		</description>
+	</item>
+	<item
+		href="/org.eclipse.cdt.doc.user/getting_started/cdt_w_standard.htm?3"
+		title="New Project Wizard">
+		<description>
+			The New Project wizard starts.<br/> 
+			Enter a project name, such as HelloWorld, for the new project. 
+			<br/>
+			You can also enter a new path for your project by deselecting the &quot;Use Default&quot; 
+			checkbox and entering the new path in the Directory: text box. Click Next.
+		</description>
+	</item>
+	<item
+		href="/org.eclipse.cdt.doc.user/getting_started/cdt_w_standard.htm?5"
+		title="Project Settings">
+		<description>
+			The Projects tab appears first. Here you can select other referenced C/C++ projects. 
+			Because this is a simple Hello World project, you do not need to make any selections 
+			here. <br/>Click Next.
+		</description>
+	</item>
+	<item
+		href="/org.eclipse.cdt.doc.user/getting_started/cdt_w_standard.htm?6"
+		title="Make Builder">
+		<description>
+			Click the Make Builder tab. Note that the MetaWare Development Toolkit uses gmake, which 
+			is selected by default.
+		</description>
+	</item>
+	<item
+		href="/org.eclipse.cdt.doc.user/getting_started/cdt_w_standard.htm?7"
+		title="Error Parsers">
+		<description>
+			Click the Error Parsers tab. Here you can select the error parsers you require for a project 
+			and change the order in which error parsers are called. For this tutorial, you can leave all
+			parsers selected.
+		</description>
+	</item>
+	<item
+		href="/org.eclipse.cdt.doc.user/getting_started/cdt_w_standard.htm?8"
+		title="Binary Parser">
+		<description>
+			Click the Binary Parser tab and select the binary parsers you require for the project. You 
+			can also change the order in which binary parsers are called. For this tutorial, you can leave 
+			only the ELF Parser selected.
+		</description>
+	</item>
+	<item
+		href="/org.eclipse.cdt.doc.user/getting_started/cdt_w_standard.htm?9"
+		title="Discovery Options">
+		<description>
+			Click the Discovery Options tab. This tab defines the configuration for autodiscovery of 
+			include paths and preprocessor symbols for the parser to enable the parser to understand 
+			the contents of the C/C++ source code. This helps you more effectively use the search and 
+			code completion features. Make sure ARC C/C++ Compiler Specs Parser is selected under 
+			&quot;Command output parser&quot;.
+		</description>
+	</item>
+	<item
+		href="/org.eclipse.cdt.doc.user/getting_started/cdt_w_standard.htm?10"
+		title="C/C++ Indexer">
+		<description>
+			You can enable or disable the C/C++ Indexer here. The indexer is necessary for search and 
+			related features, like content assist and refactoring. While there may be situations where 
+			the indexer is not required, for this project you can leave it enabled.
+			<br/>
+			When you have completed setting your C/C++ project preferences, click Finish. 
+		</description>
+	</item>
+	<item
+		href="/org.eclipse.cdt.doc.user/getting_started/cdt_w_standard.htm?11"
+		title="New Project">
+		<description>
+			You should now see the new project in the C/C++ Projects view. 
+		</description>
+	</item>
+	<item
+		href="/org.eclipse.cdt.doc.user/getting_started/cdt_w_standard.htm?12"
+		title="Create a Makefile">
+		<description>
+			Create the makefile by right-clicking your project and selecting New > File. 
+		</description>
+	</item>
+	<item
+		href="/org.eclipse.cdt.doc.user/getting_started/cdt_w_standard.htm?13"
+		title="New File Wizard">
+		<description>
+			You now see the New File wizard.
+			<br/>
+			Enter makefile as the name of the file in the File name text box, and click Finish. 
+		</description>
+	</item>
+	<item
+		href="/org.eclipse.cdt.doc.user/getting_started/cdt_w_standard.htm?14"
+		title="New Makefile">
+		<description>
+			You now see the empty makefile in the Projects view under the project, and makefile 
+			is open in the Editor view. 
+		</description>
+	</item>
+	<item
+		href="/org.eclipse.cdt.doc.user/getting_started/cdt_w_standard.htm?15"
+		title="Enter the Make Script">
+		<description>
+			Enter the build instruction for the makefile you just created. The Outline view updates 
+			to display the structure of the makefile as you add components. When you enter the code, 
+			note the asterisk in front of the file name on the tab in the Editor view. The asterisk 
+			tells you the file was changed but has not been saved.
+			<br/>
+			<b>Note:</b> Ensure you have tabs, not spaces, before your indented code, as gmake does not 
+			accept spaces before commands.
+		</description>
+	</item>
+	<item
+		href="/org.eclipse.cdt.doc.user/getting_started/cdt_w_standard.htm?16"
+		title="Create a C File">
+		<description>
+			Create the hello.c file by right-clicking your project and selecting New > File.
+		</description>
+	</item>
+	<item
+		href="/org.eclipse.cdt.doc.user/getting_started/cdt_w_standard.htm?17"
+		title="New File Wizard">
+		<description>
+			The New File wizard appears.
+			<br/>
+			Enter hello.c in the File name text box and click Finish.
+		</description>
+	</item>
+	<item
+		href="/org.eclipse.cdt.doc.user/getting_started/cdt_w_standard.htm?18"
+		title="New C File">
+		<description>
+			&quot;hello.c&quot; is now listed in the Projects view under the project, and the empty file is open in 
+			the Editor view.
+		</description>
+	</item>
+	<item
+		href="/org.eclipse.cdt.doc.user/getting_started/cdt_w_standard.htm?19"
+		title="Enter Code">
+		<description>
+			Enter the code in the hello.c file you just created. You can double-click the hello.c tab in 
+			the Editor view to expand the view.
+			<br/>
+			Note the asterisk in the Editor tab next to each filename. It indicates that changes to 
+			the file have not yet been saved.
+		</description>
+	</item>
+	<item
+		href="/org.eclipse.cdt.doc.user/getting_started/cdt_w_standard.htm?20"
+		title="Build the Project">
+		<description>
+			By default, your project is built on save. To build, save the files by selecting File &gt; Save All or pressing Ctrl+Shift+S.
+			<br/>
+			If you disabled &quot;Build automatically&quot;, you can build manually by selecting Project &gt; Build All (Ctrl+b).
+			<br/>
+			Read through the build messages in the Console view. If any errors occurred, you can see them in the Problems view.
+		</description>
+	</item>
+	<item
+		href="/org.eclipse.cdt.doc.user/getting_started/cdt_w_standard.htm?21"
+		title="Run the Application">
+		<description>
+			The executable is now listed in the C/C++ Projects view with all other files in the project.
+			<br/>
+			You can run your application within the C/C++ perspective by creating a "run configuration." To do so, select Run &gt; Run....
+		</description>
+	</item>
+	<item
+		href="/org.eclipse.cdt.doc.user/getting_started/cdt_w_standard.htm?22"
+		title="Run Configuration">
+		<description>
+			The initial Run dialog appears. Make sure C/C++ Local Application is selected in the Configurations: view, and click New.
+		</description>
+	</item>
+	<item
+		href="/org.eclipse.cdt.doc.user/getting_started/cdt_w_standard.htm?23"
+		title="New Configuration">
+		<description>
+			Make sure HelloWorld is selected in the Configurations: view and click the Main tab. This is where you select your C/C++ application and other settings that will impact how your application is run.
+			<br/>
+			If the program is not specified, click Search and locate HelloWorld.elf. 
+		</description>
+	</item>
+	<item
+		href="/org.eclipse.cdt.doc.user/getting_started/cdt_w_standard.htm?24"
+		title="Manage Configuration">
+		<description>
+			HelloWorld.elf now appears in the C/C++ Application:  text box. The other tabs allow you to make additional settings. For the tutorial, accept the defaults.
+			<br/>
+			Click Run to run the application.
+		</description>
+	</item>
+	<item
+		href="/org.eclipse.cdt.doc.user/getting_started/cdt_w_standard.htm?25"
+		title="Console View">
+		<description>
+			Output from the application appears in the Console view.
+			<br/>
+			If your project contains multiple applications, the title bar of the Console view shows which application is running.
+			<br/>
+			Because HelloWorld is a short application, it runs to completion.			
+		</description>
+	</item>
+</cheatsheet>

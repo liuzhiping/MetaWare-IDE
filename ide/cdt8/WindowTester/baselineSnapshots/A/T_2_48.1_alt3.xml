@@ -1,0 +1,156 @@
+<view name="org.eclipse.ui.views.ProblemView">
+    <tree columns="5">
+        <item>
+            <cell>Errors (15 items)</cell>
+            <cell></cell>
+            <cell></cell>
+            <cell></cell>
+            <cell></cell>
+            <item>
+                <cell>(syntactic)  unexpected symbol:'<IDENTIFIER>':initial_data REPAIR:   '<IDENTIFIER>':initial_data@"uarttest.c",L45/C15 was deleted</cell>
+                <cell>uarttest.c</cell>
+                <cell>/uarttest</cell>
+                <cell>line 45</cell>
+                <cell>C/C++ Problem</cell>
+            <item>
+                <cell>(syntactic)  unexpected symbol:'<IDENTIFIER>':MQX_template_list REPAIR:   ',' was inserted before '<IDENTIFIER>':MQX_template_list@"uarttest.c",L30/C23</cell>
+                <cell>uarttest.c</cell>
+                <cell>/uarttest</cell>
+                <cell>line 30</cell>
+                <cell>C/C++ Problem</cell>
+            <item>
+                <cell>Can't open "bsp.h": No such file or directory</cell>
+                <cell>uarttest.c</cell>
+                <cell>/uarttest</cell>
+                <cell>line 22</cell>
+                <cell>C/C++ Problem</cell>
+            <item>
+                <cell>Can't open "fio.h": No such file or directory</cell>
+                <cell>uarttest.c</cell>
+                <cell>/uarttest</cell>
+                <cell>line 23</cell>
+                <cell>C/C++ Problem</cell>
+            <item>
+                <cell>Can't open "mqx.h": No such file or directory</cell>
+                <cell>uarttest.c</cell>
+                <cell>/uarttest</cell>
+                <cell>line 21</cell>
+                <cell>C/C++ Problem</cell>
+            <item>
+                <cell>gmake: *** [uarttest.o] Error 6</cell>
+                <cell>uarttest</cell>
+                <cell></cell>
+                <cell> </cell>
+                <cell>C/C++ Problem</cell>
+            <item>
+                <cell>make: *** [bad.o] Error 1</cell>
+                <cell>Assemble_err_asm</cell>
+                <cell></cell>
+                <cell> </cell>
+                <cell>C/C++ Problem</cell>
+            <item>
+                <cell>make: *** [NoMain.elf] Error 1</cell>
+                <cell>NoMain</cell>
+                <cell></cell>
+                <cell> </cell>
+                <cell>C/C++ Problem</cell>
+            <item>
+                <cell>make: *** [unresolved_sym.o] Error 1</cell>
+                <cell>unresolved_symbols</cell>
+                <cell></cell>
+                <cell> </cell>
+                <cell>C/C++ Problem</cell>
+            <item>
+                <cell>syntax error</cell>
+                <cell>bad.asm</cell>
+                <cell>/Assemble_err_asm</cell>
+                <cell>line 3</cell>
+                <cell>C/C++ Problem</cell>
+            <item>
+                <cell>uint_32 Function parameter names are allowed only on function definitions, not declarations.</cell>
+                <cell>uarttest.c</cell>
+                <cell>/uarttest</cell>
+                <cell>line 28</cell>
+                <cell>C/C++ Problem</cell>
+            <item>
+                <cell>Unrecognized opcode: badderop</cell>
+                <cell>bad.asm</cell>
+                <cell>/Assemble_err_asm</cell>
+                <cell>line 2</cell>
+                <cell>C/C++ Problem</cell>
+            <item>
+                <cell>Unrecognized opcode: badderop2</cell>
+                <cell>bad.asm</cell>
+                <cell>/Assemble_err_asm</cell>
+                <cell>line 3</cell>
+                <cell>C/C++ Problem</cell>
+            <item>
+                <cell>Unresolved reference: main</cell>
+                <cell>NoMain</cell>
+                <cell></cell>
+                <cell> </cell>
+                <cell>C/C++ Problem</cell>
+            <item>
+                <cell>y: Identifier is undeclared.</cell>
+                <cell>unresolved_sym.c</cell>
+                <cell>/unresolved_symbols</cell>
+                <cell>line 3</cell>
+                <cell>C/C++ Problem</cell>
+        </item>
+        <item>
+            <cell>Warnings (8 items)</cell>
+            <cell></cell>
+            <cell></cell>
+            <cell></cell>
+            <cell></cell>
+            <item>
+                <cell>../../hello.c (#291) printf: Function called but not declared.</cell>
+                <cell>Outside</cell>
+                <cell></cell>
+                <cell>line 2</cell>
+                <cell>C/C++ Problem</cell>
+            <item>
+                <cell>(#291) nonfunc1: Function called but not declared.</cell>
+                <cell>unresolved_sym.c</cell>
+                <cell>/unresolved_symbols</cell>
+                <cell>line 4</cell>
+                <cell>C/C++ Problem</cell>
+            <item>
+                <cell>(#291) nonfunc2: Function called but not declared.</cell>
+                <cell>unresolved_sym.c</cell>
+                <cell>/unresolved_symbols</cell>
+                <cell>line 5</cell>
+                <cell>C/C++ Problem</cell>
+            <item>
+                <cell>(#291) printf: Function called but not declared.</cell>
+                <cell>foo.c</cell>
+                <cell>/DependentProject</cell>
+                <cell>line 2</cell>
+                <cell>C/C++ Problem</cell>
+            <item>
+                <cell>(#291) printf: Function called but not declared.</cell>
+                <cell>header.h</cell>
+                <cell>/inlinecase</cell>
+                <cell>line 7</cell>
+                <cell>C/C++ Problem</cell>
+            <item>
+                <cell>(Warning) No section mapped to GROUP.</cell>
+                <cell>link.txt</cell>
+                <cell>/linkwarn</cell>
+                <cell>line 18</cell>
+                <cell>C/C++ Problem</cell>
+            <item>
+                <cell>C:/Users/pickensd/AppData/Local/Temp/05.39g (#872) Toggle "STRING_SECTION" is not recognized.</cell>
+                <cell>InlineTest</cell>
+                <cell></cell>
+                <cell>line 47, external location: C:\Users\pickensd\AppData\Local\Temp\05.39g</cell>
+                <cell>C/C++ Problem</cell>
+            <item>
+                <cell>Error launching external scanner info generator (gcc -E -P -v -dD C:/Users/pickensd/workspaces/workspace-cdt7/test/workspace2/.metadata/.plugins/org.eclipse.cdt.make.core/specs.c)</cell>
+                <cell>graphics_pipeline</cell>
+                <cell></cell>
+                <cell>Unknown</cell>
+                <cell>C/C++ Problem</cell>
+        </item>
+    </tree>
+</view>

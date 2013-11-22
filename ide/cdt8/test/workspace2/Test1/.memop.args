@@ -1,0 +1,5 @@
+op=fillmem
+addr=0x16000
+length=0x200
+charstring=1
+string="Why is a mouse when it spins?"

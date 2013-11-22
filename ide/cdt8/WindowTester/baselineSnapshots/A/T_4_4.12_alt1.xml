@@ -1,0 +1,12 @@
+<view name="org.eclipse.cdt.debug.ui.RegisterView">
+    <table columns="2">
+        <row>
+            <cell>icnt</cell>
+            <cell>0000130d</cell>
+        </row>
+        <row>
+            <cell>sleep</cell>
+            <cell>00000000</cell>
+        </row>
+    </table>
+</view>

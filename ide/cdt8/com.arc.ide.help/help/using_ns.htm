@@ -1,0 +1,102 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN" "http://www.w3.org/MarkUp/Wilbur/HTML32.dtd">
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+    <meta name="GENERATOR" content="Quadralay WebWorks Publisher 2003 for FrameMaker 8.0.0.1194">
+    <meta name="TEMPLATEBASE" content="temp">
+    <link rel="StyleSheet" href="document.css" type="text/css" media="screen">
+    <title>Using nSIM</title>
+  </head>
+
+  <body>
+
+    <table width="100%" border="0" cellpadding="0" cellspacing="0" class="header">
+      <tr>
+<!--Disabling Breadcrumbs to use Eclipse version 10/2009
+        <td class="breadcrumbs">
+	<a href="ide_guid.htm"> DesignWare ARC MetaWare IDE User's Guide </a> > <a href="tasks.htm"><br>Tasks</a> > <a href="debuggie.htm">Debugging with Special Simulators</a> > Using nSIM
+        </td>
+-->
+        <td align="right" valign="top" class="navigator" nowrap>
+<a href="debuggie.htm"><img src="images/sprev.gif" border="0" alt="Previous"></a><a href="using_sy.htm"><img src="images/snext.gif" border="0" alt="Next"></a>
+        </td>
+      </tr>
+    </table>
+
+    <hr align="left">
+
+    <blockquote>
+<h4 >
+Using nSIM
+<a name="wp917885"> </a></h4>
+
+<p >
+The nSIM simulator is significantly faster than the MetaWare ISS, although it does not have all the capabilities of the MetaWare ISS; see the nSIM documentation for details.
+<a name="wp928459"> </a></p>
+<div >
+
+<table border="1" cellpadding="5" cellspacing="0">
+  <caption></caption>
+  <tr>
+    <td><table border="0" cellpadding="5" cellspacing="0">
+  <caption></caption>
+  <tr valign=top>
+    <td><div ><img border="0" src="images/hint.png">
+</div></td>
+    <td><div ></div></td>
+</tr></table>
+<a name="wp943821"> </a>
+</td>
+    <td><div >If you are using the nSIM Synopsys Virtualizer nSIM SystemC implementation, you do not have to set up a SCIT connection if you select <b>Synopsys Virtualizer</b> instead of <b>nSIM</b> as the target.<a name="wp943831"> </a></div></td>
+  </tr>
+</table>
+
+
+
+<a name="wp943838"> </a></div><p >
+You can configure nSIM using the <b>Debugger Options</b> tree view:
+<a name="wp928562"> </a></p>
+<ol type="1"> <li  value="1">In the <b>C/C++ Projects</b> view, select a project. <a name="wp928563"> </a>
+ <li  value="2">Open the drop-down menu next to the <b>Debug</b> button and select<b> Debug Configurations...</b>. <div align="left"><img src="images/md2_debug.gif" alt="Opening the Debug dialog" border="0" hspace="0" vspace="0"></div><a name="wp928567"> </a>
+ <li  value="3">Click the <b>Debugger</b> tab.<a name="wp928568"> </a>
+ <li  value="4">Ensure that <b>MetaWare Debugger</b> is selected in the drop-down menu.<a name="wp928572"> </a>
+ <li  value="5">In the <b>Debugger Options</b> tree view, select <b>Target Selection</b>.<a name="wp928573"> </a>
+ <li  value="6">Select nSIM from the <b>Select the target</b> drop-down list:<div align="left"><img src="images/nsim.gif" height="442" width="1000" alt="Selecting xISS in Select the target:" border="0" hspace="0" vspace="0"></div><a name="wp928577"> </a>
+</ol><dl>
+  <dt >The target processor is inherited from the build configuration. See <a href="mw_t_set.htm#wp865705">Defining MetaWare Build Settings</a>.<a name="wp928467"> </a></dl>
+<ul> <li >Select Enable JIT (just-in-time compilation) for maximum performance. You can further specify the number of JIT threads to use (improves performance on multicore hosts).<a name="wp928468"> </a>
+ <li >Select SystemC/SCIT Simulation to connect to an nSIM session already started using SystemC or a SCIT server. For more information, see the nSIM documentation for more information.<a name="wp928473"> </a>
+ <li >Enable Instruction History Tracing must be selected to enable the <b>Instruction history -- Simulator trace</b> window (see <a href="mw_t_ins.htm#wp696733">Debugging with Instruction History</a>). Note that this option increases performance overhead. <a name="wp928481"> </a>
+ <li  value="7">Click OK after making your selections. <a name="wp928485"> </a>
+ <li  value="8">Click <b>Debug</b> to start debugging.<a name="wp928601"> </a>
+</ul><a name="wp928530">
+  <h5 >
+Related Tasks
+ </a></h5>
+<ul> <li ><a href="using_sy.htm#wp928446">Using Synopsys Virtualizer</a><a name="wp928534"> </a>
+ <li ><a href="debuggig.htm#wp710877">Debugging with ARC EM Interrupts</a><a name="wp943684"> </a>
+</ul><a name="wp928539">
+  <h5 >
+Related Reference
+ </a></h5>
+<ul> <li >Eclipse <em>C/C++ Development User Guide</em><a name="wp928543"> </a>
+ <li ><a href="mw_u_db_.htm#wp992752">Debugger Windows and Views</a><a name="wp928547"> </a>
+</ul>
+    </blockquote>
+    <p></p>
+    <hr>
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" class="footer">
+      <tr>
+        <td>
+
+        </td>
+        <td align="right" valign="top" class="navigator">
+<a href="debuggie.htm"><img src="images/sprev.gif" border="0" alt="Previous"></a><a href="using_sy.htm"><img src="images/snext.gif" border="0" alt="Next"></a>
+        </td>
+      </tr>
+    </table>
+<p> <font size="-3">
+Copyright © 2012 Synopsys, Inc. <br />
+Some portions of this document copyright IBM Corporation and others 2000, 2004.</font></p>
+  </body>
+</html>

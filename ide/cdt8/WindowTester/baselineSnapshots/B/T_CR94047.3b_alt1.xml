@@ -1,0 +1,14 @@
+<view name="com.arc.cdt.debug.seecode.ui.views.SeeCodeCustomView:watch">
+<TextCanvas>
+    <text lineCount="8" selection="-1">
+        <line content="No watchpoints.">
+        <line content="">
+        <line content="">
+        <line content="">
+        <line content="">
+        <line content="">
+        <line content="">
+        <line content="">
+    </text>
+</TextCanvas>
+</view>

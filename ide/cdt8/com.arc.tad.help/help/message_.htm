@@ -1,0 +1,178 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN" "http://www.w3.org/MarkUp/Wilbur/HTML32.dtd">
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+    <meta name="GENERATOR" content="Quadralay WebWorks Publisher 2003 for Word 8.0.0.1194">
+    <meta name="TEMPLATEBASE" content="ARCTechPubsv6">
+    <meta name="LASTUPDATED" content="01/27/12 13:02:36">
+<link rel="first" href="tad_help.htm">  <link rel="prev" href="user_log.htm"><link rel="next" href="memory_b.htm">
+    <link rel="StyleSheet" href="document.css" type="text/css" media="screen">
+    <title>Message Pools Window</title>
+  </head>
+
+  <body>
+
+    <table width="100%" border="0" cellpadding="0" cellspacing="0" class="header">
+      <tr> 
+        <td class="breadcrumbs">
+	<a href="tad_help.htm"> MQX&#174; Task Aware Debug Help</a> > <a href="tad_wind.htm"> TAD Windows</a> > Message Pools Window
+        </td>
+        <td align="right" valign="top" class="navigator" nowrap>
+<a href="user_log.htm"><img src="images/sprev.gif" border="0" alt="Previous" title="Previous"></a><a href="memory_b.htm"><img src="images/snext.gif" border="0" alt="Next" title="Next"></a>
+        </td>
+      </tr>
+    </table>
+
+    <hr align="left">
+
+    <blockquote>
+<h3 ><a name="wp9000420">
+Message Pools Window</a></h3>
+
+
+<p >
+<a name="wp9000421">The <b>Message Pools</b> window shows the state of the message pools in tabular form. Each row corresponds to a single message pool.</a></p>
+<p >
+<img src="images/messagec.gif" height="193" width="437" border="0" hspace="0" vspace="0">
+<a name="wp9000422"> </a></p>
+<p ><b><i><a name="wp9000423">Displayed Fields</a></i></b></p><p >
+<a name="wp9000424"><b>Type/ID</b></a></p>
+<p >
+<a name="wp9000425">For private pools, the address of the memory pool descriptor. For system pools, the type <code>System</code> is displayed.</a></p>
+<p >
+<a name="wp9000426"><b>Size</b></a></p>
+<p >
+<a name="wp9000427">The maximum size of a message in this pool.</a></p>
+<p >
+<a name="wp9000428"><b>Total#</b></a></p>
+<p >
+<a name="wp9000429">The total number of messages allocated for the pool.</a></p>
+<p >
+<a name="wp9000430"><b>Free</b></a></p>
+<p >
+<a name="wp9000431">The number of the messages that are free.</a></p>
+<p >
+<a name="wp9000432"><b>Limit</b></a></p>
+<p >
+<a name="wp9000433">Maximum number of messages allowed in the pool. The pool size does not grow beyond the value even if all messages are allocated and a grow number was specified.</a></p>
+<p ><b><i><a name="wp9000434">Message Pool Details</a></i></b></p><p >
+<a name="wp9000435">To show more details about a message pool, expand the corresponding row in the table. A list of messages in the pool is shown. These can also be expanded:</a></p>
+<p >
+<img src="images/messaged.gif" height="429" width="576" border="0" hspace="0" vspace="0">
+<a name="wp9000436"> </a></p>
+<p ><b><i><a name="wp9000437">Displayed Fields for Each Memory Pool</a></i></b></p><p >
+<a name="wp9000438"><b>Pool Type</b></a></p>
+<p >
+<a name="wp9000439">Indicates whether the message pool is a private pool or a system pool. If the pool is a private pool, the title of the window displays the pool ID.</a></p>
+<p >
+<a name="wp9000440"><b>Message Size</b></a></p>
+<p >
+<a name="wp9000441">Maximum size of the messages in the pool.</a></p>
+<p >
+<a name="wp9000442"><b>Msgs in Pool</b></a></p>
+<p >
+<a name="wp9000443">Total number of messages in the pool.</a></p>
+<p >
+<a name="wp9000444"><b>Free Msgs</b></a></p>
+<p >
+<a name="wp9000445">Current number of free messages in the pool.</a></p>
+<p >
+<a name="wp9000446"><b>Grow Number</b></a></p>
+<p >
+<a name="wp9000447">Number of messages the pool is to grow by if all current messages are allocated. (Message pools can be created with the ability to grow if their supply of messages is depleted.)</a></p>
+<p >
+<a name="wp9000448"><b>Grow Limit</b></a></p>
+<p >
+<a name="wp9000449">Maximum number of messages allowed in the pool. The pool size does not grow beyond this value even if all messages become allocated and a grow number was specified.</a></p>
+<p >
+<a name="wp9000450"><b>Header</b></a></p>
+<p >
+<a name="wp9000451">Indicates whether the message-pool header is corrupted. A corrupted pool header indicates that the integrity of the application is in jeopardy. Corruption is probably the result of an application that writes past the end of an allocated message.</a></p>
+<p >
+<a name="wp9000452"><b>List Entries</b></a></p>
+<p >
+<a name="wp9000453">A list with one entry for each message in the specified pool. The information that is displayed depends on what state each message is in.</a></p>
+<table border="1" cellpadding="5" cellspacing="0">
+  <caption></caption>
+  <tr>
+    <td><div ><b><a name="wp9000037">Message State	</a></b></div></td>
+    <td><div ><b><a name="wp9000038">Information Displayed</a></b></div></td>
+  </tr>
+  <tr>
+    <td><div ><a name="wp9000039">Allocated to a task, but not queued</a></div></td>
+    <td><ul> <li >Address of the message<a name="wp9000040"> </a>
+ <li >OWNED<a name="wp9000041"> </a>
+ <li >Task descriptor of the task that owns the message<a name="wp9000042"> </a>
+</ul></td>
+  </tr>
+  <tr>
+    <td><div ><a name="wp9000043">Free</a></div></td>
+    <td><ul> <li >Address of the message<a name="wp9000044"> </a>
+ <li >FREE<a name="wp9000045"> </a>
+</ul></td>
+  </tr>
+  <tr>
+    <td><div ><a name="wp9000046">In a message queue</a></div></td>
+    <td><ul> <li >Address of the message<a name="wp9000047"> </a>
+ <li >QUEUED<a name="wp9000048"> </a>
+ <li >Target queue number and processor number<a name="wp9000049"> </a>
+</ul></td>
+  </tr>
+</table>
+<p ><b><i><a name="wp9000455">Free Messages</a></i></b></p><p >
+<a name="wp9000456">If a message is free, it is in the message pool and is available for allocation to any task. Any information or data contained in the header or body of the message is left over from the previous message owner. </a></p>
+<p ><b><i><a name="wp9000457">Queued Messages</a></i></b></p><p >
+<a name="wp9000458">When a task sends a message, MQX queues it on a message queue. You can examine the source and target of the message to determine where the message came from and where it was sent. When an application closes a message queue, MQX frees all the messages in the queue.</a></p>
+<p ><b><i><a name="wp9000459">Owned Messages</a></i></b></p><p >
+<a name="wp9000460">Messages become owned by a task if the task calls one of the following functions:</a></p>
+<ul> <li ><strong>_msg_alloc_system()</strong> or <strong>_msg_alloc()</strong><a name="wp9000461"> </a>
+ <li ><strong>_msgq_receive()</strong> or <strong>_msgq_poll()</strong><a name="wp9000462"> </a>
+</ul><p >
+<a name="wp9000463">The task is now responsible for either freeing the message or sending it to another task. If a task is destroyed dynamically, MQX frees all the messages that the task owns.</a></p>
+<p >
+<a name="wp9000464">Be careful when you decipher an owned message, because the information or data in the message header or body might not be valid. If an application received a message but has not yet updated it, the source queue can indicate the source of the message and the message body probably contains valid data. If a message was obtained by calling <strong>_msg_alloc_system</strong>() or <strong>_msg_alloc</strong>(), the message body might contain old data. You can examine a message before it is sent to verify addressing and its contents.</a></p>
+<p >
+<a name="wp9000465">A common programming error occurs when a task neglects to free a message after it has processed the message. This leads to <em>message leakage</em>. Because the messages are not freed, they are lost. As a result, the application might run out of messages or it might create message pools larger than it needs to compensate for the leakage. A task with an unusually high number of owned messages is probably not freeing messages.</a></p>
+<p >
+<a name="wp9000466">Message Details</a></p>
+<p >
+<a name="wp9000467">Based on the state of the message, you can examine the message itself, the target and source queues, the task that owns the message, or the message pool to which the message belongs.</a></p>
+<p ><b><i><a name="wp9000468">Displayed Fields</a></i></b></p><p >
+<a name="wp9000469"><b>Target Queue</b></a></p>
+<p >
+<a name="wp9000470">Queue number and processor number specified in the <b>Target Queue</b> field of the message.</a></p>
+<p >
+<a name="wp9000471"><b>Source Queue</b></a></p>
+<p >
+<a name="wp9000472">Queue number and processor number specified in the <b>Source Queue</b> field of the message.</a></p>
+<p >
+<a name="wp9000473"><b>Message Size</b></a></p>
+<p >
+<a name="wp9000474">Number of bytes in the message.</a></p>
+<p >
+<a name="wp9000475"><b>Message Status </b></a></p>
+<p >
+<a name="wp9000476">One of the following:</a></p>
+<ul> <li ><code>Free</code>-the message is on the free list of the message pool<a name="wp9000477"> </a>
+ <li ><code>Queued</code>-the message is in a message queue<a name="wp9000478"> </a>
+ <li ><code>Owned by</code>-the message is owned by the task whose task descriptor is displayed<a name="wp9000479"> </a>
+</ul><p >
+<a name="wp9000480"><b>Overwritten</b></a></p>
+<p >
+<a name="wp9000481">Indicates whether the internal message header has been overwritten. If it has, the sanity of the entire message is questionable. The probable cause is a task that writes past the end of the previous physical message.</a></p>
+    </blockquote>
+    <p></p>
+    <hr>
+
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" class="footer">
+      <tr>
+        <td>
+          
+        </td>
+        <td align="right" valign="top" class="navigator">
+<a href="user_log.htm"><img src="images/sprev.gif" border="0" alt="Previous" title="Previous"></a><a href="memory_b.htm"><img src="images/snext.gif" border="0" alt="Next" title="Next"></a>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>

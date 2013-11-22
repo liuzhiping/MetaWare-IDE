@@ -1,0 +1,42 @@
+<view name="com.arc.cdt.debug.seecode.ui.views.SeeCodeCustomView:source">
+<TextCanvas>
+    <text lineCount="9" selection="5">
+        <line content="  47    }">
+        <line content="  48 void main (int argc, char **argv) {">
+        <line content="  49    Integer I; Boolean Q = False;">
+        <line content="  50    size = 8;  /* default */">
+        <line content="  51    if (argc > 1){">
+        <line content="  52        long i = atoi(argv[1]);">
+        <line content="  53        if (i <= 0 ) printf("Bad size; 8 assumed\n");">
+        <line content="  54        else">
+        <line content="  55        if ( i > MAX_SIZE) printf("Size too big; %d assumed\n",MAX_SIZE),">
+    </text>
+    <icon x="2" y="0">
+        <image width="14" height="15">
+             1 1 1 1 1 1 1 1 1 1        </image>
+    <icon x="19" y="20">
+        <image width="14" height="15">
+             28 28 28 15 28 0 28 8 28 28        </image>
+    <icon x="2" y="20">
+        <image width="14" height="15">
+             1 1 1 1 1 1 1 1 1 1        </image>
+    <icon x="2" y="40">
+        <image width="14" height="15">
+             1 1 1 1 1 1 1 1 1 1        </image>
+    <icon x="2" y="60">
+        <image width="14" height="15">
+             1 1 1 1 1 1 1 1 1 1        </image>
+    <icon x="2" y="80">
+        <image width="14" height="15">
+             1 1 1 1 1 1 1 1 1 1        </image>
+    <icon x="2" y="100">
+        <image width="14" height="15">
+             1 1 1 1 1 1 1 1 1 1        </image>
+    <icon x="2" y="120">
+        <image width="14" height="15">
+             1 1 1 1 1 1 1 1 1 1        </image>
+    <icon x="2" y="160">
+        <image width="14" height="15">
+             1 1 1 1 1 1 1 1 1 1        </image>
+</TextCanvas>
+</view>

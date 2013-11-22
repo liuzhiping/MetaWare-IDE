@@ -1,0 +1,96 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN" "http://www.w3.org/MarkUp/Wilbur/HTML32.dtd">
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+    <meta name="GENERATOR" content="Quadralay WebWorks Publisher 2003 for FrameMaker 8.0.0.1194">
+    <meta name="TEMPLATEBASE" content="temp">
+    <link rel="StyleSheet" href="document.css" type="text/css" media="screen">
+    <title>Waking up the Processor</title>
+  </head>
+
+  <body>
+
+    <table width="100%" border="0" cellpadding="0" cellspacing="0" class="header">
+      <tr>
+<!--Disabling Breadcrumbs to use Eclipse version 10/2009
+        <td class="breadcrumbs">
+	<a href="ide_guid.htm"> DesignWare ARC MetaWare IDE User's Guide </a> > <a href="tasks.htm"><br>Tasks</a> > <a href="mw_t_pwr.htm">Debugging with a PMU (ARC 600 Only)</a> > Waking up the Processor
+        </td>
+-->
+        <td align="right" valign="top" class="navigator" nowrap>
+<a href="openinga.htm"><img src="images/sprev.gif" border="0" alt="Previous"></a><a href="mw_o_mem.htm"><img src="images/snext.gif" border="0" alt="Next"></a>
+        </td>
+      </tr>
+    </table>
+
+    <hr align="left">
+
+    <blockquote>
+<h4 >
+Waking up the Processor
+<a name="wp867081"> </a></h4>
+
+<p >
+To wake up (power up) the processor, do the following:
+<a name="wp867085"> </a></p>
+<ol type="1"> <li  value="1">Right-click the <font >PD1</font> bit in the <font >PMU_Status</font> register in the <b>Power Management Unit</b> window<a name="wp868588"> </a>
+ <li  value="2">Select <b>Change</b> from the pop-up menu.<a name="wp868592"> </a>
+ <li  value="3">Type <code>0</code> in the <b>Change value</b> dialog and press <font >Enter</font> or click <b>OK</b>.<a name="wp927262"> </a>
+</ol><blockquote >
+<div align="left"><img src="images/awaken.gif" alt="Change register value to power up/down" border="0" hspace="0" vspace="0"></div>
+
+<a name="wp927266"> </a></blockquote>
+ <p >
+When you power up or power down the processor, a confirmation message appears in the <b>Console</b> view: 
+<a name="wp927267"> </a></p>
+<blockquote >
+
+
+<table border="0" cellpadding="5" cellspacing="1" class="textlayout">
+
+  <tr>
+    <td><pre >ARC is powered down.
+<a name="wp927280"></a>(off=pmu_message removes this message)
+<a name="wp927281"></a></pre>
+</td>
+  </tr>
+</table>
+
+
+
+
+
+<a name="wp927270"> </a></blockquote>
+ <p >
+To prevent this message from appearing, specify <i>-off=</i><b>pmu_message</b> in <b>Specify Command-Line options</b> text box in the <b>Debug Configurations </b>dialog, <b>Command-Line Options </b>page.
+<a name="wp883847"> </a></p>
+<a name="wp915740">
+  <h5 >
+Related Tasks
+ </a></h5>
+<ul> <li ><a href="enabling.htm#wp866932">Enabling the PMU Window</a><a name="wp915749"> </a>
+ <li ><a href="openinga.htm#wp915658">Opening the PMU Window</a><a name="wp915753"> </a>
+</ul><a name="wp915760">
+  <h5 >
+Related Reference
+ </a></h5>
+<ul> <li >Eclipse <em>C/C++ Development User Guide</em><a name="wp915780"> </a>
+</ul>
+    </blockquote>
+    <p></p>
+    <hr>
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" class="footer">
+      <tr>
+        <td>
+
+        </td>
+        <td align="right" valign="top" class="navigator">
+<a href="openinga.htm"><img src="images/sprev.gif" border="0" alt="Previous"></a><a href="mw_o_mem.htm"><img src="images/snext.gif" border="0" alt="Next"></a>
+        </td>
+      </tr>
+    </table>
+<p> <font size="-3">
+Copyright © 2012 Synopsys, Inc. <br />
+Some portions of this document copyright IBM Corporation and others 2000, 2004.</font></p>
+  </body>
+</html>

@@ -1,0 +1,56 @@
+<view name="com.arc.cdt.debug.seecode.ui.views.SeeCodeCustomView:mem#1">
+<TextCanvas>
+    <text lineCount="10" selection="-1">
+        <line content="016000: deadbeef deadbeef deadbeef deadbeef ........|........">
+            <range start="8" end="16" foreground="#ffffff" background="#ff0000">
+            <range start="17" end="25" foreground="#ffffff" background="#ff0000">
+            <range start="26" end="34" foreground="#ffffff" background="#ff0000">
+            <range start="35" end="43" foreground="#ffffff" background="#ff0000">
+        <line content="016010: deadbeef deadbeef deadbeef deadbeef ........|........">
+            <range start="8" end="16" foreground="#ffffff" background="#ff0000">
+            <range start="17" end="25" foreground="#ffffff" background="#ff0000">
+            <range start="26" end="34" foreground="#ffffff" background="#ff0000">
+            <range start="35" end="43" foreground="#ffffff" background="#ff0000">
+        <line content="016020: deadbeef deadbeef deadbeef deadbeef ........|........">
+            <range start="8" end="16" foreground="#ffffff" background="#ff0000">
+            <range start="17" end="25" foreground="#ffffff" background="#ff0000">
+            <range start="26" end="34" foreground="#ffffff" background="#ff0000">
+            <range start="35" end="43" foreground="#ffffff" background="#ff0000">
+        <line content="016030: deadbeef deadbeef deadbeef deadbeef ........|........">
+            <range start="8" end="16" foreground="#ffffff" background="#ff0000">
+            <range start="17" end="25" foreground="#ffffff" background="#ff0000">
+            <range start="26" end="34" foreground="#ffffff" background="#ff0000">
+            <range start="35" end="43" foreground="#ffffff" background="#ff0000">
+        <line content="016040: deadbeef deadbeef deadbeef deadbeef ........|........">
+            <range start="8" end="16" foreground="#ffffff" background="#ff0000">
+            <range start="17" end="25" foreground="#ffffff" background="#ff0000">
+            <range start="26" end="34" foreground="#ffffff" background="#ff0000">
+            <range start="35" end="43" foreground="#ffffff" background="#ff0000">
+        <line content="016050: deadbeef deadbeef deadbeef deadbeef ........|........">
+            <range start="8" end="16" foreground="#ffffff" background="#ff0000">
+            <range start="17" end="25" foreground="#ffffff" background="#ff0000">
+            <range start="26" end="34" foreground="#ffffff" background="#ff0000">
+            <range start="35" end="43" foreground="#ffffff" background="#ff0000">
+        <line content="016060: deadbeef deadbeef deadbeef deadbeef ........|........">
+            <range start="8" end="16" foreground="#ffffff" background="#ff0000">
+            <range start="17" end="25" foreground="#ffffff" background="#ff0000">
+            <range start="26" end="34" foreground="#ffffff" background="#ff0000">
+            <range start="35" end="43" foreground="#ffffff" background="#ff0000">
+        <line content="016070: deadbeef deadbeef deadbeef deadbeef ........|........">
+            <range start="8" end="16" foreground="#ffffff" background="#ff0000">
+            <range start="17" end="25" foreground="#ffffff" background="#ff0000">
+            <range start="26" end="34" foreground="#ffffff" background="#ff0000">
+            <range start="35" end="43" foreground="#ffffff" background="#ff0000">
+        <line content="016080: deadbeef deadbeef deadbeef deadbeef ........|........">
+            <range start="8" end="16" foreground="#ffffff" background="#ff0000">
+            <range start="17" end="25" foreground="#ffffff" background="#ff0000">
+            <range start="26" end="34" foreground="#ffffff" background="#ff0000">
+            <range start="35" end="43" foreground="#ffffff" background="#ff0000">
+        <line content="016090: deadbeef deadbeef deadbeef deadbeef ........|........">
+            <range start="8" end="16" foreground="#ffffff" background="#ff0000">
+            <range start="17" end="25" foreground="#ffffff" background="#ff0000">
+            <range start="26" end="34" foreground="#ffffff" background="#ff0000">
+            <range start="35" end="43" foreground="#ffffff" background="#ff0000">
+    </text>
+</TextCanvas>
+</view>

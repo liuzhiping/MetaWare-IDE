@@ -1,0 +1,141 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN" "http://www.w3.org/MarkUp/Wilbur/HTML32.dtd">
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+    <meta name="GENERATOR" content="Quadralay WebWorks Publisher 2003 for FrameMaker 8.0.0.1194">
+    <meta name="TEMPLATEBASE" content="temp">
+    <link rel="StyleSheet" href="document.css" type="text/css" media="screen">
+    <title>Viewing and Managing Current Breakpoints</title>
+  </head>
+
+  <body>
+
+    <table width="100%" border="0" cellpadding="0" cellspacing="0" class="header">
+      <tr>
+<!--Disabling Breadcrumbs to use Eclipse version 10/2009
+        <td class="breadcrumbs">
+	<a href="ide_guid.htm"> DesignWare ARC MetaWare IDE User's Guide </a> > <a href="tasks.htm"><br>Tasks</a> > <a href="cdt_o_br.htm">Debugging with Breakpoints and Watchpoints</a> > Viewing and Managing Current Breakpoints
+        </td>
+-->
+        <td align="right" valign="top" class="navigator" nowrap>
+<a href="cdt_t_ad.htm"><img src="images/sprev.gif" border="0" alt="Previous"></a><a href="mw_t_wpt.htm"><img src="images/snext.gif" border="0" alt="Next"></a>
+        </td>
+      </tr>
+    </table>
+
+    <hr align="left">
+
+    <blockquote>
+<h4 >
+Viewing and Managing Current Breakpoints
+<a name="wp918944"> </a></h4>
+
+<p >
+You can use the <b>Breakpoints</b> window to view breakpoints, enable and disable breakpoints, delete breakpoints, and view source code at a breakpoint location.
+<a name="wp918946"> </a></p>
+<a name="wp918947">
+  <h5 >
+In This Topic
+ </a></h5>
+<ul> <li ><a href="mw_t_bkp.htm#wp918957">Viewing Breakpoints</a><a name="wp918951"> </a>
+ <li ><a href="mw_t_bkp.htm#wp918979">Managing Breakpoints</a><a name="wp918955"> </a>
+</ul><a name="wp918957">
+  <h5 >
+4.9.2.1	 Viewing Breakpoints
+ </a></h5>
+<p >
+To see a list of current breakpoints, open a <b>Breakpoints</b> window by choosing <b>Debugger &gt; Breakpoints</b> after your application is running in the debugger.
+<a name="wp918964"> </a></p>
+<blockquote >
+<div align="left"><img src="images/bkpts_wi.gif" alt="Breakpoints Window" border="0" hspace="0" vspace="0"></div>
+
+<a name="wp918968"> </a></blockquote>
+ <p >
+Each line in the listing shows the following information for a particular breakpoint:
+<a name="wp918969"> </a></p>
+<ul> <li >'H' to indicate a hardware breakpoint if applicable<a name="wp924104"> </a>
+ <li >the address of the instruction or source line<a name="wp918970"> </a>
+ <li >the name and line number of the source file (if available)<a name="wp918971"> </a>
+ <li >the text of the instruction or source line (if available) <a name="wp918972"> </a>
+ <li >whether the breakpoint is enabled or disabled <a name="wp919566"> </a>
+ <li >the attributes of the breakpoint, such as count or condition <a name="wp919567"> </a>
+</ul><blockquote >
+
+
+<table border="1" cellpadding="5" cellspacing="0">
+  <caption></caption>
+  <tr>
+    <td><table border="0" cellpadding="5" cellspacing="0">
+  <caption></caption>
+  <tr valign=top>
+    <td><div ><img border="0" src="images/note.png">
+</div></td>
+    <td><div ></div></td>
+</tr></table>
+<a name="wp927156"> </a>
+</td>
+    <td><div >If the debugger cannot find a source file associated with the breakpoint, or if the breakpoint is set on a machine instruction that exists outside of known source files, the <b>Breakpoints</b> window lists the breakpoint's address and symbolic label, and the disassembly code for the instruction.<a name="wp927158"> </a></div></td>
+  </tr>
+</table>
+
+
+
+
+
+<a name="wp927150"> </a></blockquote>
+ <a name="wp918979">
+  <h5 >
+4.9.2.2	 Managing Breakpoints
+ </a></h5>
+<p >
+You can manage breakpoints using the <b>Breakpoints</b> window toolbar. <img src="images/bkpt_too.gif" alt="Breakpoints Window Toolbar" border="0" hspace="0" vspace="0">
+<a name="wp918983"> </a></p>
+<p >
+You can use the buttons on the toolbar to do the following:
+<a name="wp918984"> </a></p>
+<ul> <li >Click <img src="images/viewingb.gif" height="30" width="30" border="0" hspace="0" vspace="0"> to remove the currently selected breakpoint<a name="wp918985"> </a>
+ <li >Click <img src="images/bkpt_rea.gif" border="0" hspace="0" vspace="0"> to remove all breakpoints shown<a name="wp918986"> </a>
+ <li >Click <img src="images/bkpt_dia.gif" border="0" hspace="0" vspace="0"> to enable or disable the breakpoint on the currently selected line<a name="wp918987"> </a>
+ <li >Click <img src="images/bkpt_remove.gif" border="0" hspace="0" vspace="0"> to enable or disable all breakpoints on the currently selected line<a name="wp918988"> </a>
+ <li >Click <img src="images/creatbkp.gif" border="0" hspace="0" vspace="0"> to create a new breakpoint (a Create breakpoint dialog opens)<a name="wp929052"> </a>
+ <li >Click <img src="images/editbkpt.gif" border="0" hspace="0" vspace="0"> to edit the attributes of an existing breakpoint (an Edit breakpoint dialog opens)<a name="wp929053"> </a>
+ <li >Click <img src="images/bkpt_sho.gif" border="0" hspace="0" vspace="0"> to open a <b>Source</b> window starting with the line where the breakpoint is set<a name="wp918989"> </a>
+</ul><blockquote >
+<div align="left"><img src="images/bkpts_en.gif" border="0" hspace="0" vspace="0"></div>
+
+<a name="wp921297"> </a></blockquote>
+ <div align="left" <strong >Figure&nbsp;4-2	 Enabled and Disabled Breakpoints<a name="wp921301"> </a></strong></div><a name="wp918990">
+  <h5 >
+Related Concept
+ </a></h5>
+<ul> <li ><a href="mw_c_wat.htm#wp873973">Watchpoints</a><a name="wp918994"> </a>
+</ul><a name="wp918995">
+  <h5 >
+Related Tasks
+ </a></h5>
+<ul> <li ><a href="cdt_t_ad.htm#wp918897">Adding Breakpoints</a><a name="wp918999"> </a>
+ <li ><a href="mw_t_wpt.htm#wp919023">Working with Watchpoints</a><a name="wp919003"> </a>
+</ul><a name="wp919004">
+  <h5 >
+Related Reference
+ </a></h5>
+<ul> <li >Eclipse <em>C/C++ Development User Guide</em><a name="wp919020"> </a>
+</ul>
+    </blockquote>
+    <p></p>
+    <hr>
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" class="footer">
+      <tr>
+        <td>
+
+        </td>
+        <td align="right" valign="top" class="navigator">
+<a href="cdt_t_ad.htm"><img src="images/sprev.gif" border="0" alt="Previous"></a><a href="mw_t_wpt.htm"><img src="images/snext.gif" border="0" alt="Next"></a>
+        </td>
+      </tr>
+    </table>
+<p> <font size="-3">
+Copyright © 2012 Synopsys, Inc. <br />
+Some portions of this document copyright IBM Corporation and others 2000, 2004.</font></p>
+  </body>
+</html>

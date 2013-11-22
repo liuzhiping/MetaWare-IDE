@@ -1,0 +1,78 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN" "http://www.w3.org/MarkUp/Wilbur/HTML32.dtd">
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+    <meta name="GENERATOR" content="Quadralay WebWorks Publisher 2003 for Word 8.0.0.1194">
+    <meta name="TEMPLATEBASE" content="ARCTechPubsv6">
+    <meta name="LASTUPDATED" content="01/27/12 13:02:36">
+<link rel="first" href="tad_help.htm">  <link rel="prev" href="check_fo.htm"><link rel="next" href="log_summ.htm">
+    <link rel="StyleSheet" href="document.css" type="text/css" media="screen">
+    <title>Events Window</title>
+  </head>
+
+  <body>
+
+    <table width="100%" border="0" cellpadding="0" cellspacing="0" class="header">
+      <tr> 
+        <td class="breadcrumbs">
+	<a href="tad_help.htm"> MQX&#174; Task Aware Debug Help</a> > <a href="tad_wind.htm"> TAD Windows</a> > Events Window
+        </td>
+        <td align="right" valign="top" class="navigator" nowrap>
+<a href="check_fo.htm"><img src="images/sprev.gif" border="0" alt="Previous" title="Previous"></a><a href="log_summ.htm"><img src="images/snext.gif" border="0" alt="Next" title="Next"></a>
+        </td>
+      </tr>
+    </table>
+
+    <hr align="left">
+
+    <blockquote>
+<h3 ><a name="wp9000363">
+Events Window</a></h3>
+
+
+<p >
+<a name="wp9000364">The <b>Events </b>window lists the created event groups on this processor.  Each row corresponds to an event group. Columns display information pertaining to the event group.</a></p>
+<p >
+<img src="images/events_a.gif" height="163" width="528" border="0" hspace="0" vspace="0">
+<a name="wp9000365"> </a></p>
+<p ><b><i><a name="wp9000366">Displayed Fields</a></i></b></p><p >
+<a name="wp9000367">The information displayed for each event group is:</a></p>
+<ul> <li ><b>Event</b>: the address of the event group.<a name="wp9000368"> </a>
+ <li ><b>Waiting #</b>: the number of tasks waiting for this event.<a name="wp9000369"> </a>
+ <li ><b>Bit Mask</b>: the current bit mask (value of the event group).<a name="wp9000370"> </a>
+ <li ><b>Name</b>: the identifier or name of the event group.<a name="wp9000371"> </a>
+</ul><p ><b><i><a name="wp9000372">Examining Individual Event Groups</a></i></b></p><p >
+<a name="wp9000373">Expand an event group to view it in more detail:</a></p>
+<p >
+<img src="images/events_b.gif" height="358" width="521" border="0" hspace="0" vspace="0">
+<a name="wp9000374"> </a></p>
+<p ><b><i><a name="wp9000375">Displayed Fields</a></i></b></p><p >
+<a name="wp9000376"><b>Valid?</b></a></p>
+<p >
+<a name="wp9000377">Certain structures and components within MQX contain internal verification fields. If these fields are not set to the appropriate validation stamp, the integrity of the data displayed in the current window is suspect. A <b>No</b> value here might indicate that a component is not installed or internal MQX data structures are corrupted.</a></p>
+<p >
+<a name="wp9000378"><b>Events</b></a></p>
+<p >
+<a name="wp9000379">Event groups are 32 bits. The application defines what each bit represents. A task can wait for any combination of these bits. The fields show the current setting of each of the event bits. An application can set event bits by calling <strong>_event_set</strong>() and clear them by calling <strong>_event_clear</strong>().</a></p>
+<p >
+<a name="wp9000380"><b>Task List</b></a></p>
+<p >
+<a name="wp9000381">The list contains an entry for each task that is waiting for event bits in the event group.</a></p>
+<p >
+<a name="wp9000382">The entries in the task list can be expanded to show details about the associated task. This information is identical to the information shown in the <b>Task Summary</b> window. </a></p>
+    </blockquote>
+    <p></p>
+    <hr>
+
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" class="footer">
+      <tr>
+        <td>
+          
+        </td>
+        <td align="right" valign="top" class="navigator">
+<a href="check_fo.htm"><img src="images/sprev.gif" border="0" alt="Previous" title="Previous"></a><a href="log_summ.htm"><img src="images/snext.gif" border="0" alt="Next" title="Next"></a>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>

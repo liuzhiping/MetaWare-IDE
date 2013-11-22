@@ -1,0 +1,35 @@
+<view name="org.eclipse.ui.views.ProblemView">
+    <tree columns="5">
+        <item>
+            <cell>Errors (4 items)</cell>
+            <cell></cell>
+            <cell></cell>
+            <cell></cell>
+            <cell></cell>
+            <item>
+                <cell>make: *** [bad.o] Error 1</cell>
+                <cell>Assembler_err_s</cell>
+                <cell></cell>
+                <cell>line 0</cell>
+                <cell>C/C++ Problem</cell>
+            <item>
+                <cell>syntax error</cell>
+                <cell>bad.s</cell>
+                <cell>/Assembler_err_s</cell>
+                <cell>line 3</cell>
+                <cell>C/C++ Problem</cell>
+            <item>
+                <cell>Unrecognized opcode: badop2</cell>
+                <cell>bad.s</cell>
+                <cell>/Assembler_err_s</cell>
+                <cell>line 3</cell>
+                <cell>C/C++ Problem</cell>
+            <item>
+                <cell>Unrecognized opcode: badop</cell>
+                <cell>bad.s</cell>
+                <cell>/Assembler_err_s</cell>
+                <cell>line 2</cell>
+                <cell>C/C++ Problem</cell>
+        </item>
+    </tree>
+</view>

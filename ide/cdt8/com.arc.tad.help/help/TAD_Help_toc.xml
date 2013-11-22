@@ -1,0 +1,273 @@
+<?xml version='1.0' encoding='ISO-8859-1' ?>
+<?xml-stylesheet type="text/xsl" href="hs2web.xsl"?>
+
+<toc version="2.0" categoryclosedimage="images.category" categoryopenimage="images.categoryopen" topicimage="images.topic">
+ <tocitem target="tad_help_htm_wp9000015" text="MQX&#174; Task Aware Debug Help">
+  <tocitem target="overview_htm_wp9000190" text="Overview" />
+
+  <tocitem target="what_is__htm_wp9000195" text="What Is TAD?" />
+
+  <tocitem target="identify_htm_wp9000219" text="Identifying Tasks" />
+
+  <tocitem target="configur_htm_wp9000226" text="Configuring TAD" />
+
+  <tocitem target="enabling_htm_wp9000228" text="Enabling TAD in the MetaWare Debugger" />
+
+  <tocitem target="getting__htm_wp9000233" text="Getting Help" />
+
+  <tocitem target="viewing__htm_wp9000237" text="Viewing the Context of Blocked Tasks Using TAD" />
+
+  <tocitem target="tad_menu_htm_wp9000244" text="TAD Menus">
+   <tocitem target="tad_menu_htm_wp9000245" text="MQX">
+    <tocitem target="mqx__gen_htm_wp9000247" text="MQX &gt; General Menu" />
+
+    <tocitem target="mqx__tas_htm_wp9000270" text="MQX &gt; Tasks Menu" />
+
+    <tocitem target="mqx__syn_htm_wp9000279" text="MQX &gt; Synchronization Menu" />
+
+    <tocitem target="mqx__rtc_htm_wp9000296" text="MQX &gt; RTCS Menu" />
+
+   </tocitem>
+
+   <tocitem target="performa_htm_wp9000327" text="Performance Data" />
+
+   <tocitem target="mqx_data_htm_wp9000329" text="MQX Data" />
+
+   <tocitem target="help_htm_wp9000331" text="Help" />
+
+   <tocitem target="about_htm_wp9000333" text="About" />
+
+  </tocitem>
+
+  <tocitem target="tad_wind_htm_wp9000335" text="TAD Windows">
+   <tocitem target="tad_wind_htm_wp9000336" text="Updating TAD Windows" />
+
+   <tocitem target="about_wi_htm_wp9000338" text="About Window" />
+
+   <tocitem target="check_fo_htm_wp9000341" text="Check For Errors Window" />
+
+   <tocitem target="events_w_htm_wp9000363" text="Events Window" />
+
+   <tocitem target="log_summ_htm_wp9000383" text="Log Summary Window" />
+
+   <tocitem target="user_log_htm_wp9000406" text="User Logs" />
+
+   <tocitem target="message__htm_wp9000420" text="Message Pools Window" />
+
+   <tocitem target="memory_b_htm_wp9000482" text="Memory Blocks Window" />
+
+   <tocitem target="messagea_htm_wp9000517" text="Message Queues Window" />
+
+   <tocitem target="mutexes__htm_wp9000550" text="Mutexes Window" />
+
+   <tocitem target="partitio_htm_wp9000581" text="Partitions Window" />
+
+   <tocitem target="semaphor_htm_wp9000603" text="Semaphores Window" />
+
+   <tocitem target="task_sum_htm_wp9000631" text="Task Summary Window" />
+
+   <tocitem target="task_que_htm_wp9000702" text="Task Queues Window" />
+
+   <tocitem target="stack_su_htm_wp9000713" text="Stack Summary window" />
+
+   <tocitem target="io_devic_htm_wp9000723" text="I/O Devices Window" />
+
+   <tocitem target="initiali_htm_wp9000736" text="Initialization Window" />
+
+   <tocitem target="interrup_htm_wp9000759" text="Interrupts Window" />
+
+   <tocitem target="kernel_d_htm_wp9000774" text="Kernel Data Window" />
+
+   <tocitem target="names_wi_htm_wp9000836" text="Names Window" />
+
+   <tocitem target="saving_m_htm_wp9000841" text="Saving MQX Data window, Saving Performance Data window" />
+
+   <tocitem target="ready_qu_htm_wp9000847" text="Ready Queue Window" />
+
+   <tocitem target="lightwei_htm_wp9000856" text="Lightweight Message Queues Window" />
+
+   <tocitem target="lightwea_htm_wp9000859" text="Lightweight Timers Window" />
+
+   <tocitem target="lightweb_htm_wp9000875" text="Lightweight Semaphores Window" />
+
+   <tocitem target="lightwec_htm_wp9000885" text="Lightweight Events Window" />
+
+   <tocitem target="power_ma_htm_wp9000899" text="Power Management Window" />
+
+  </tocitem>
+
+  <tocitem target="rtcs_win_htm_wp9000920" text="RTCS Windows">
+   <tocitem target="rtcs_win_htm_wp9000921" text="RTCS ARP Statistics Window" />
+
+   <tocitem target="rtcs_con_htm_wp9000951" text="RTCS Configuration Parameters Window" />
+
+   <tocitem target="rtcs_exa_htm_wp9000994" text="RTCS Examine Interface Connection Window" />
+
+   <tocitem target="rtcs_exb_htm_wp9001024" text="RTCS Examine NAT Session Window" />
+
+   <tocitem target="rtcs_exc_htm_wp9001048" text="RTCS Examine Socket Window" />
+
+   <tocitem target="rtcs_exd_htm_wp9001089" text="RTCS Examine TCP Control Block Window" />
+
+   <tocitem target="rtcs_exe_htm_wp9001152" text="RTCS Examine UCB Window" />
+
+   <tocitem target="rtcs_icm_htm_wp9001175" text="RTCS ICMP Statistics Window" />
+
+   <tocitem target="rtcs_igm_htm_wp9001197" text="RTCS IGMP Statistics Window" />
+
+   <tocitem target="rtcs_ip__htm_wp9001223" text="RTCS IP Configuration Window" />
+
+   <tocitem target="rtcs_ipa_htm_wp9001241" text="RTCS IP Statistics Window" />
+
+   <tocitem target="rtcs_ipi_htm_wp9001289" text="RTCS IPIF Statistics Window" />
+
+   <tocitem target="rtcs_nat_htm_wp9001319" text="RTCS NAT Configuration Window" />
+
+   <tocitem target="rtcs_naa_htm_wp9001334" text="RTCS NAT Statistics Window" />
+
+   <tocitem target="rtcs_soc_htm_wp9001355" text="RTCS Socket Configuration Window" />
+
+   <tocitem target="rtcs_soa_htm_wp9001367" text="RTCS Socket Summary Window" />
+
+   <tocitem target="rtcs_tcp_htm_wp9001386" text="RTCS TCP Configuration Window" />
+
+   <tocitem target="rtcs_tca_htm_wp9001420" text="RTCS TCP Control Block Summary Window" />
+
+   <tocitem target="rtcs_tcb_htm_wp9001433" text="RTCS TCP Statistics Window" />
+
+   <tocitem target="rtcs_udp_htm_wp9001517" text="RTCS UDP Configuration Window" />
+
+   <tocitem target="rtcs_uda_htm_wp9001537" text="RTCS UDP Statistics Window" />
+
+  </tocitem>
+
+  <tocitem target="error_me_htm_wp9001559" text="Error Messages">
+   <tocitem target="creation_htm_wp9001628" text="Creation of Window Failed" />
+
+   <tocitem target="all_mqx__htm_wp9001630" text="All MQX Data Is Invalid Until Kernel Is Initialized" />
+
+   <tocitem target="mqx_init_htm_wp9001632" text="MQX_init_struct Not Found. Kernel Aware Debugging Not Available" />
+
+   <tocitem target="kernel_a_htm_wp9001634" text="Kernel Data Not Valid" />
+
+   <tocitem target="cannot_d_htm_wp9001636" text="Cannot display Contents of a Log That Was Not Created" />
+
+   <tocitem target="mqx_datb_htm_wp9001638" text="MQX Data Incorrect, TAD Version May Not Be Compatible with MQX Version" />
+
+   <tocitem target="rtcs_com_htm_wp9001640" text="RTCS Component Not Installed" />
+
+   <tocitem target="enet_isr_htm_wp9001642" text="ENET ISR Could Not Be Found. ENET Statistics Not Available" />
+
+   <tocitem target="enet_con_htm_wp9001644" text="ENET Configuration Address Invalid ENET Statistics Not Available" />
+
+   <tocitem target="mqxutil_htm_wp9001646" text="Mqxutil.dll Could Not Be Found" />
+
+   <tocitem target="continue_htm_wp9001648" text="Continue this operation if kernel is not in the process of writing to the log." />
+
+   <tocitem target="display__htm_wp9001650" text="Display Cancelled by User" />
+
+   <tocitem target="this_tas_htm_wp9001652" text="This Task Is the Current Task Context" />
+
+   <tocitem target="kernel_b_htm_wp9001654" text="Kernel Data is Not Valid. Data Dump Not Done" />
+
+   <tocitem target="could_no_htm_wp9001656" text="Could Not Allocate Memory" />
+
+   <tocitem target="unimplem_htm_wp9001658" text="Unimplemented CPU Family" />
+
+   <tocitem target="invoking_htm_wp9001660" text="Invoking Help Failed" />
+
+   <tocitem target="kernel_f_htm_wp9001662" text="Kernel Files Were Compiled without Debug Switch. Kernel Aware Debug Is Not Available" />
+
+   <tocitem target="messageb_htm_wp9001664" text="Message Component Not Installed, Window Closed" />
+
+   <tocitem target="componen_htm_wp9001666" text="Component Not Installed, Window Closed" />
+
+   <tocitem target="data_fil_htm_wp9001668" text="Data File Written to abcd" />
+
+   <tocitem target="performb_htm_wp9001670" text="Performance Data Written to abcd" />
+
+   <tocitem target="request__htm_wp9001672" text="Request to Display Invalid Data Type" />
+
+   <tocitem target="invalid__htm_wp9001674" text="Invalid Address Detected XXX, Corruption of Kernel Data Has Occurred" />
+
+   <tocitem target="no_socke_htm_wp9001676" text="No Sockets Have Been Created" />
+
+   <tocitem target="event_co_htm_wp9001678" text="Event Component Not Installed" />
+
+   <tocitem target="mutex_co_htm_wp9001680" text="Mutex Component Not Installed" />
+
+   <tocitem target="semaphoa_htm_wp9001682" text="Semaphore Component Not Installed" />
+
+   <tocitem target="rtcs_ver_htm_wp9001684" text="RTCS Version Not Compatible with TAD" />
+
+   <tocitem target="no_symbo_htm_wp9001686" text="No Symbols Loaded. Task Aware Debug Not Available" />
+
+   <tocitem target="target_i_htm_wp9001688" text="Target is No Longer Responding to Read Memory Requests" />
+
+   <tocitem target="error_wr_htm_wp9001690" text="Error Writing to File" />
+
+   <tocitem target="unconnec_htm_wp9001692" text="Unconnected State. No Valid Data to Display" />
+
+   <tocitem target="file_cou_htm_wp9001694" text="File Could Not Be Opened" />
+
+   <tocitem target="file_det_htm_wp9001696" text="File Details Not Provided, File Could Not Be Opened" />
+
+   <tocitem target="attempti_htm_wp9001698" text="Attempting to Access Data Not Stored in Data File" />
+
+   <tocitem target="data_rea_htm_wp9001700" text="Data Read Timed Out, Connection to Target No Longer Appears to Be Valid" />
+
+   <tocitem target="error_in_htm_wp9001702" text="Error Initializing Serial Connection" />
+
+   <tocitem target="cannot_o_htm_wp9001704" text="Cannot Open Serial Port" />
+
+   <tocitem target="communic_htm_wp9001706" text="Communication Failure, File Not Written" />
+
+   <tocitem target="error_se_htm_wp9001708" text="Error Sending Serial Data" />
+
+   <tocitem target="error_sa_htm_wp9001710" text="Error Serial Receive Timeout" />
+
+   <tocitem target="error_re_htm_wp9001712" text="Error Receiving Serial Data" />
+
+   <tocitem target="unknown__htm_wp9001714" text="Unknown Serial Error: xx" />
+
+   <tocitem target="abcd_not_htm_wp9001716" text="abcd Not Found in Hosts File, Error: xxx" />
+
+   <tocitem target="connect__htm_wp9001718" text="Connect Failed, Error: xxx" />
+
+   <tocitem target="sendto_e_htm_wp9001720" text="sendto Error xxx" />
+
+   <tocitem target="recvfrom_htm_wp9001722" text="recvfrom Error xxx" />
+
+   <tocitem target="winsock__htm_wp9001724" text="WinSock Error: xxx" />
+
+   <tocitem target="windows__htm_wp9001726" text="Windows Timer Could Not Be Set" />
+
+   <tocitem target="performc_htm_wp9001728" text="Performance Tool Has Been Closed, Automation Has Been Terminated" />
+
+   <tocitem target="microsof_htm_wp9001730" text="Microsoft Excel Could Not Be Loaded" />
+
+   <tocitem target="main_win_htm_wp9001734" text="Main Window of Microsoft Excel Cannot Be Found" />
+
+   <tocitem target="performd_htm_wp9001736" text="Performance Tool Could Not Be Loaded" />
+
+   <tocitem target="plugin_o_htm_wp9001740" text="Plugin Obtaining Initial Data, Try Again" />
+
+   <tocitem target="another__htm_wp9001742" text="Another Window Is Reading, Data Cannot Be Obtained" />
+
+   <tocitem target="mqxutila_htm_wp9001744" text="Mqxutil.dll Is Out of Date" />
+
+   <tocitem target="mqx_menu_htm_wp9001746" text="MQX Menu Is Not Available" />
+
+   <tocitem target="log_comp_htm_wp9001748" text="Log Component Not Installed" />
+
+   <tocitem target="invalida_htm_wp9001750" text="Invalid MQX Version, or MQX Not Properly Initialized" />
+
+   <tocitem target="current__htm_wp9001752" text="Current Excel Automation Will Be Stopped" />
+
+  </tocitem>
+
+  <tocitem target="troubles_htm_wp9001754" text="Troubleshooting" />
+
+ </tocitem>
+
+</toc>

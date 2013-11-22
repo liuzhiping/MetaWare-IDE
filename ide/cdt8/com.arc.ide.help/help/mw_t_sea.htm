@@ -1,0 +1,239 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN" "http://www.w3.org/MarkUp/Wilbur/HTML32.dtd">
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+    <meta name="GENERATOR" content="Quadralay WebWorks Publisher 2003 for FrameMaker 8.0.0.1194">
+    <meta name="TEMPLATEBASE" content="temp">
+    <link rel="StyleSheet" href="document.css" type="text/css" media="screen">
+    <title>Searching Memory</title>
+  </head>
+
+  <body>
+
+    <table width="100%" border="0" cellpadding="0" cellspacing="0" class="header">
+      <tr>
+<!--Disabling Breadcrumbs to use Eclipse version 10/2009
+        <td class="breadcrumbs">
+	<a href="ide_guid.htm"> DesignWare ARC MetaWare IDE User's Guide </a> > <a href="tasks.htm"><br>Tasks</a> > <a href="mw_o_mem.htm">Debugging: Working with Memory</a> > Searching Memory
+        </td>
+-->
+        <td align="right" valign="top" class="navigator" nowrap>
+<a href="mw_t_mem.htm"><img src="images/sprev.gif" border="0" alt="Previous"></a><a href="mw_t_fil.htm"><img src="images/snext.gif" border="0" alt="Next"></a>
+        </td>
+      </tr>
+    </table>
+
+    <hr align="left">
+
+    <blockquote>
+<h4 >
+Searching Memory
+<a name="wp709740"> </a></h4>
+
+<p >
+To access the <b>Memory Search</b> dialog, select <b>Debugger &gt; Search memory</b> when your application is running in the debugger (the <b>Debugger</b> menu is present in the menubar).
+<a name="wp709741"> </a></p>
+<p >
+You can search the following ways:
+<a name="wp916212"> </a></p>
+<ul> <li ><a href="mw_t_sea.htm#wp709742">Searching for an Integer Value</a><a name="wp916213"> </a>
+ <li ><a href="mw_t_sea.htm#wp709765">Searching for a Character String</a><a name="wp916221"> </a>
+ <li ><a href="mw_t_sea.htm#wp709830">Searching for a Hexadecimal String</a><a name="wp916226"> </a>
+</ul><a name="wp709742">
+  <h5 >
+4.13.2.1	 Searching for an Integer Value
+ </a></h5>
+<p >
+An integer can be an arbitrary expression that evaluates to a 1-, 2-, or 4-byte value. For example:
+<a name="wp709743"> </a></p>
+<blockquote >
+
+
+<table border="0" cellpadding="5" cellspacing="1" class="textlayout">
+
+  <tr>
+    <td><pre >r15
+<a name="wp927331"></a>p-&gt;x
+<a name="wp927332"></a>0x1234
+<a name="wp927333"></a>a[i+1]
+<a name="wp927334"></a></pre>
+</td>
+  </tr>
+</table>
+
+
+
+
+
+<a name="wp927321"> </a></blockquote>
+ <p >
+You can specify binary numbers with the syntax 0x2x<i>binary_digits</i>. This is the same extension as in the MetaWare C/C++ language. For example, 0x2x1001_1110 is the same as 0x9e.
+<a name="wp709748"> </a></p>
+<p >
+To search for an integer value, do the following:
+<a name="wp709749"> </a></p>
+<ol type="1"> <li  value="1">Select <b>Debugger &gt; Search</b> <b>memory</b> to open the <b>Memory Search</b> dialog.<a name="wp709750"> </a>
+ <li  value="2">Click the <b>Integer value</b> radio button if it is not already selected.<div align="left"><img src="images/sc_mem_s.gif" alt="Click Integer value in the Memory Search dialog" border="0" hspace="0" vspace="0"></div><a name="wp709751"> </a>
+ <li  value="3">Click the <b>Integer size</b> you want to search for.<a name="wp709756"> </a>
+ <li  value="4">If you want to find the first occurrence that does <i>not</i> match the masked value you enter below, check <b>Invert</b>.<a name="wp709757"> </a>
+ <li  value="5">Enter the integer value you want to search for in the <b>Value:</b> field, or choose a previously searched-for value from the drop-down list.<a name="wp709758"> </a>
+ <li  value="6">You can search under a mask, where a match occurs <code>if (search_int &amp; mask) == (value_in_memory &amp; mask)</code>. The default mask has no restrictive effect. If you want to specify a mask, enter your own hexadecimal value in the <b>Mask:</b> field.<a name="wp919513"> </a>
+ <li  value="7">Enter the start address and the length of memory you wish to search. <br>The debugger searches at the start address plus multiples of the size. For example, if you search for a two-byte integer starting at address 0x1000, the debugger searches locations 0x1000, 0x1002, 0x1004, and so on.<a name="wp919514"> </a>
+ <li  value="8">Click a radio button to indicate whether you wish to search forward or backward (reverse) in memory.<a name="wp709761"> </a>
+ <li  value="9">Click <b>Search</b>.<a name="wp709762"> </a>
+</ol><p >
+Results are reported in the <b>Console</b> view. For little-endian targets, the debugger extracts integers from the searched location with the appropriate endian reversal. For example, the value <code>0xaabb</code> is represented in memory as the sequence of bytes <code>bb aa</code>. Thus searching for the integer <code>0xaabb</code> is like searching for the hexadecimal string <code>bbaa</code>.
+<a name="wp709763"> </a></p>
+<p >
+To search again starting from a search hit, click <b>Search</b> again.
+<a name="wp709764"> </a></p>
+<a name="wp709765">
+  <h5 >
+4.13.2.2	 Searching for a Character String
+ </a></h5>
+<p >
+If you choose <b>Char string</b>, enter a sequence of characters with or without quotes. You can enter the wildcard character '?' to represent any single character, but <i>not</i> to represent zero or more characters.
+<a name="wp709769"> </a></p>
+<p >
+You can also enter the following two-character escape sequences:
+<a name="wp709771"> </a></p>
+<blockquote >
+
+
+<table border="1" cellpadding="5" cellspacing="0">
+  <caption></caption>
+  <tr bgcolor="#CCCCCC">
+    <th><div ><strong>Escape Sequence<a name="wp709774"> </a></strong></div></th>
+    <th><div ><strong>Represents This Character<a name="wp709776"> </a></strong></div></th>
+  </tr>
+  <tr>
+    <td><div > \? <a name="wp709778"> </a></div></td>
+    <td><div >? <a name="wp709780"> </a></div></td>
+  </tr>
+  <tr>
+    <td><div > \n <a name="wp709782"> </a></div></td>
+    <td><div >Newline (ASCII 10)<a name="wp709784"> </a></div></td>
+  </tr>
+  <tr>
+    <td><div > \t <a name="wp709786"> </a></div></td>
+    <td><div >Tab (ASCII 9)<a name="wp709788"> </a></div></td>
+  </tr>
+  <tr>
+    <td><div > \0 <a name="wp709790"> </a></div></td>
+    <td><div >0 (ASCII 0)<a name="wp709792"> </a></div></td>
+  </tr>
+  <tr>
+    <td><div ><b>...</b> <a name="wp709794"> </a></div></td>
+    <td><div ><b>...</b> <a name="wp709796"> </a></div></td>
+  </tr>
+  <tr>
+    <td><div > \9 <a name="wp709798"> </a></div></td>
+    <td><div >9 (ASCII 9)<a name="wp709800"> </a></div></td>
+  </tr>
+  <tr>
+    <td><div > \&quot; <a name="wp709802"> </a></div></td>
+    <td><div >Double-quote<a name="wp709804"> </a></div></td>
+  </tr>
+  <tr>
+    <td><div > \\ <a name="wp709806"> </a></div></td>
+    <td><div >Backslash <a name="wp709808"> </a></div></td>
+  </tr>
+  <tr>
+    <td><div > \X <a name="wp709810"> </a></div></td>
+    <td><div >Character <i>X</i>, where <i>X</i> is anything not in this table<a name="wp709812"> </a></div></td>
+  </tr>
+</table>
+
+
+
+
+
+<a name="wp709813"> </a></blockquote>
+ <a name="wp709814">
+  <h5 >
+Examples
+ </a></h5>
+<pre >abc
+<a name="wp709815"></a>&quot;Hello, world.\n&quot;
+<a name="wp709816"></a>&quot;Hello, ?????.\n&quot;
+<a name="wp709817"></a></pre>
+<p >
+To search for a character string, do the following:
+<a name="wp709818"> </a></p>
+<ol type="1"> <li  value="1">Select <b>Debugger &gt; Search memory</b> to open the <b>Memory Search</b> dialog.<a name="wp709819"> </a>
+ <li  value="2">Click the <b>Char</b> string radio button if it is not already selected.<a name="wp709820"> </a>
+</ol><blockquote >
+<div align="left"><img src="images/sc_mem_a.gif" alt="Click Char string to search for a character string" border="0" hspace="0" vspace="0"></div>
+
+<a name="wp709824"> </a></blockquote>
+ <ol type="1"> <li  value="3">Enter the character string you want to search for between double quotes in the A char string field, or choose a previously searched-for string from the drop-down list. Note that the debugger does <i>not</i> provide a wildcard character '*' to represent &quot;zero or more characters&quot;.<a name="wp709825"> </a>
+ <li  value="4">Click a radio button to indicate whether you wish to search forward or backward (reverse) in memory.<a name="wp709827"> </a>
+ <li  value="5">Click <b>Search</b>.<a name="wp709828"> </a>
+</ol><p >
+Results are reported in the <b>Console</b> view. To search again starting from a search hit, click <b>Search</b> again.
+<a name="wp709829"> </a></p>
+<a name="wp709830">
+  <h5 >
+4.13.2.3	 Searching for a Hexadecimal String
+ </a></h5>
+<p >
+You can search memory for a hexadecimal string. 
+<a name="wp709831"> </a></p>
+<p >
+You can enter the wildcard character &quot;?&quot; for &quot;any single hex digit,&quot; but <i>not</i> &quot;*&quot; for &quot;zero or more digits.&quot;
+<a name="wp709832"> </a></p>
+<a name="wp709833">
+  <h5 >
+Examples
+ </a></h5>
+<pre >7ff
+<a name="wp709834"></a>deadbeef
+<a name="wp709835"></a>dea?beef
+<a name="wp709836"></a></pre>
+<p >
+<code>0x2x1001_1110</code> for <code>0x9e</code> (MetaWare C extension: second 'x' for radix) 
+<a name="wp709840"> </a></p>
+<p >
+To search for a hexadecimal string, do the following:
+<a name="wp709841"> </a></p>
+<ol type="1"> <li  value="1">Select <b>Debugger &gt; Search memory</b> to open the <b>Memory Search</b> dialog.<a name="wp709842"> </a>
+ <li  value="2">Click the <b>Hex string</b> radio button if it is not already selected.<div align="left"><img src="images/sc_mem_b.gif" alt="Click Hex string to search for a hex string" border="0" hspace="0" vspace="0"></div><a name="wp709843"> </a>
+ <li  value="3">Enter the hex string you want to search for between double quotes in the <b>Hex string</b> field, or choose a previously searched-for string from the drop-down list. <br>A hexadecimal string can contain the wildcard character '?' denoting &quot;any single hex digit,&quot; but the debugger does <i>not</i> support a wildcard character '*' meaning &quot;zero or more hex digits.&quot;<a name="wp709848"> </a>
+ <li  value="4">Select the address range you wish to search.<a name="wp709850"> </a>
+ <li  value="5">Click a radio button to indicate whether you wish to search forward or backward (reverse) in memory.<a name="wp919503"> </a>
+ <li  value="6">Click <b>Search</b>.<a name="wp709851"> </a>
+</ol><p >
+Results are reported in the <b>Console</b> view. To search again starting from a click <b>Search</b> again.
+<a name="wp709852"> </a></p>
+<a name="wp916071">
+  <h5 >
+Related Tasks
+ </a></h5>
+<ul> <li ><a href="mw_t_mem.htm#wp709568">Working with the Debugger Memory Window</a> <a name="wp916075"> </a>
+ <li ><a href="mw_t_fil.htm#wp709881">Filling Memory with a Value or String</a><a name="wp916083"> </a>
+ <li ><a href="mw_t_fia.htm#wp709924">Copying a File to Memory</a><a name="wp916087"> </a>
+ <li ><a href="mw_t_mea.htm#wp709966">Copying Memory to a File</a><a name="wp916091"> </a>
+</ul><a name="wp916092">
+  <h5 >
+Related Reference
+ </a></h5>
+<ul> <li >Eclipse <em>C/C++ Development User Guide</em><a name="wp916100"> </a>
+</ul>
+    </blockquote>
+    <p></p>
+    <hr>
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" class="footer">
+      <tr>
+        <td>
+
+        </td>
+        <td align="right" valign="top" class="navigator">
+<a href="mw_t_mem.htm"><img src="images/sprev.gif" border="0" alt="Previous"></a><a href="mw_t_fil.htm"><img src="images/snext.gif" border="0" alt="Next"></a>
+        </td>
+      </tr>
+    </table>
+<p> <font size="-3">
+Copyright © 2012 Synopsys, Inc. <br />
+Some portions of this document copyright IBM Corporation and others 2000, 2004.</font></p>
+  </body>
+</html>

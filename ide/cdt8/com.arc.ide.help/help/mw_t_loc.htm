@@ -1,0 +1,113 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN" "http://www.w3.org/MarkUp/Wilbur/HTML32.dtd">
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+    <meta name="GENERATOR" content="Quadralay WebWorks Publisher 2003 for FrameMaker 8.0.0.1194">
+    <meta name="TEMPLATEBASE" content="temp">
+    <link rel="StyleSheet" href="document.css" type="text/css" media="screen">
+    <title>Working with Local Variables</title>
+  </head>
+
+  <body>
+
+    <table width="100%" border="0" cellpadding="0" cellspacing="0" class="header">
+      <tr>
+<!--Disabling Breadcrumbs to use Eclipse version 10/2009
+        <td class="breadcrumbs">
+	<a href="ide_guid.htm"> DesignWare ARC MetaWare IDE User's Guide </a> > <a href="tasks.htm"><br>Tasks</a> > <a href="mw_o_var.htm">Debugging: Working with Variables</a> > Working with Local Variables
+        </td>
+-->
+        <td align="right" valign="top" class="navigator" nowrap>
+<a href="mw_t_glo.htm"><img src="images/sprev.gif" border="0" alt="Previous"></a><a href="mw_t_exa.htm"><img src="images/snext.gif" border="0" alt="Next"></a>
+        </td>
+      </tr>
+    </table>
+
+    <hr align="left">
+
+    <blockquote>
+<h4 >
+Working with Local Variables
+<a name="wp711139"> </a></h4>
+
+<p >
+After your application is running in the debugger, you can display local variables in two different ways:
+<a name="wp711140"> </a></p>
+<ul> <li >Select <b>Window &gt; Show View</b> to open an Eclipse <b>Variables</b> view. <a name="wp711141"> </a>
+ <li >Select <b>Debugger &gt; Locals</b> to open a debugger <b>Local Variables</b> window. <a name="wp711144"> </a>
+</ul><p >
+This topic tells how to use the debugger-supplied <b>Local Variables</b> window. For information about the Eclipse <b>Variables</b> view, see the Eclipse <em>C/C++ Development User Guide</em>.
+<a name="wp916352"> </a></p>
+<blockquote >
+<div align="left"><img src="images/sc_local.gif" alt="Local Variables Window" border="0" hspace="0" vspace="0"></div>
+
+<a name="wp711148"> </a></blockquote>
+ <a name="wp711150">
+  <h5 >
+4.14.2.1	 Viewing Local Variables Currently in Scope
+ </a></h5>
+<p >
+When you open the <b>Local Variables</b> window, all non-global variables currently in scope are displayed. All scopes from the current function's innermost scope out to the file scope are included. Non-exported (static) variables are also shown (non-exported variables are local to the current file).
+<a name="wp711156"> </a></p>
+<p >
+Each line of text represents either the name and scope of a function, or one variable defined within the scope of that function. As the process executes, the debugger updates the <b>Local Variables</b> window to show the current value of each variable currently in scope. 
+<a name="wp919602"> </a></p>
+<p >
+All variables defined within a function's scope are listed below the line representing that function. In the case of nested scopes, the top-most scope displayed is the innermost one.
+<a name="wp711160"> </a></p>
+<a name="wp925001">
+  <h5 >
+4.14.2.2	 Changing the Display
+ </a></h5>
+<ul> <li >To show or hide data types, click <img src="images/sc_show_field_vals.gif" border="0" hspace="0" vspace="0"> on the toolbar. <a name="wp925005"> </a>
+ <li >To show or hide addresses, click <b>&amp;</b>.<a name="wp925006"> </a>
+ <li >To toggle alphabetical listing of variables, click <img src="images/alpha_button.gif" border="0" hspace="0" vspace="0">.<a name="wp925017"> </a>
+</ul><a name="wp925018">
+  <h5 >
+4.14.2.3	 Working with a Variable in the Local Variables Window
+ </a></h5>
+<p >
+You can use the <b>Local Variables</b> window to select a variable, then perform the following debugging operations on the variable:
+<a name="wp711169"> </a></p>
+<ul> <li >To add a variable to an <b>Expressions</b> window, select it and click <img src="images/ExprnsButton.gif" border="0" hspace="0" vspace="0">.<br><a name="wp943803"> </a>
+ <li >Click <img src="images/WatchIcon.jpg" border="0" hspace="0" vspace="0"> to set a watchpoint on the variable. <br><a name="wp711177"> </a>
+ <li >Click <img src="images/ChangeIcon.jpg" border="0" hspace="0" vspace="0"> to change the value of the variable.<a name="wp711181"> </a>
+</ul><p >
+To save the data to a file, right click and select <b>Save to File</b>.
+<a name="wp739857"> </a></p>
+<a name="wp920739">
+  <h5 >
+Related Concept
+ </a></h5>
+<ul> <li ><a href="global_a.htm#wp875213">Global and Local Variables</a><a name="wp920743"> </a>
+</ul><a name="wp916313">
+  <h5 >
+Related Tasks
+ </a></h5>
+<ul> <li ><a href="mw_t_glo.htm#wp711078">Working with Global Variables</a><a name="wp916317"> </a>
+ <li ><a href="mw_t_cha.htm#wp915887">Changing a Value in a Debugger Window</a><a name="wp916321"> </a>
+ <li ><a href="mw_t_exa.htm#wp739878">Examining Variables</a><a name="wp916390"> </a>
+</ul><a name="wp916322">
+  <h5 >
+Related Reference
+ </a></h5>
+<ul> <li >Eclipse <em>C/C++ Development User Guide</em><a name="wp916330"> </a>
+</ul>
+    </blockquote>
+    <p></p>
+    <hr>
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" class="footer">
+      <tr>
+        <td>
+
+        </td>
+        <td align="right" valign="top" class="navigator">
+<a href="mw_t_glo.htm"><img src="images/sprev.gif" border="0" alt="Previous"></a><a href="mw_t_exa.htm"><img src="images/snext.gif" border="0" alt="Next"></a>
+        </td>
+      </tr>
+    </table>
+<p> <font size="-3">
+Copyright © 2012 Synopsys, Inc. <br />
+Some portions of this document copyright IBM Corporation and others 2000, 2004.</font></p>
+  </body>
+</html>

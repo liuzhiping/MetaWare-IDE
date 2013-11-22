@@ -1,0 +1,10 @@
+width=176
+height=144
+addr=0xe00000
+indirect=0
+auto_update=1
+timed_update=1
+time=500
+scale=0
+kind=8-bit grayscale
+source=Memory

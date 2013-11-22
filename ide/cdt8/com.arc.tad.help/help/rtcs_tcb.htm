@@ -1,0 +1,161 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN" "http://www.w3.org/MarkUp/Wilbur/HTML32.dtd">
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+    <meta name="GENERATOR" content="Quadralay WebWorks Publisher 2003 for Word 8.0.0.1194">
+    <meta name="TEMPLATEBASE" content="ARCTechPubsv6">
+    <meta name="LASTUPDATED" content="01/27/12 13:02:36">
+<link rel="first" href="tad_help.htm">  <link rel="prev" href="rtcs_tca.htm"><link rel="next" href="rtcs_udp.htm">
+    <link rel="StyleSheet" href="document.css" type="text/css" media="screen">
+    <title>RTCS TCP Statistics Window</title>
+  </head>
+
+  <body>
+
+    <table width="100%" border="0" cellpadding="0" cellspacing="0" class="header">
+      <tr> 
+        <td class="breadcrumbs">
+	<a href="tad_help.htm"> MQX&#174; Task Aware Debug Help</a> > <a href="rtcs_win.htm"> RTCS Windows</a> > RTCS TCP Statistics Window
+        </td>
+        <td align="right" valign="top" class="navigator" nowrap>
+<a href="rtcs_tca.htm"><img src="images/sprev.gif" border="0" alt="Previous" title="Previous"></a><a href="rtcs_udp.htm"><img src="images/snext.gif" border="0" alt="Next" title="Next"></a>
+        </td>
+      </tr>
+    </table>
+
+    <hr align="left">
+
+    <blockquote>
+<h3 ><a name="wp9001433">
+RTCS TCP Statistics Window</a></h3>
+
+
+<p >
+<a name="wp9001434">The <b>RTCS TCP Statistics</b> window displays the statistics that RTCS collected for TCP.</a></p>
+<p ><b><i><a name="wp9001435">Displayed fields</a></i></b></p><p ><b><i><a name="wp9001436">[R/T]X_TOTAL</a></i></b></p><p >
+<a name="wp9001437">Total number of packets sent or received.</a></p>
+<p ><b><i><a name="wp9001438">[R/T]X_MISSED</a></i></b></p><p >
+<a name="wp9001439">Number of packets that were discarded due to lack of resources.</a></p>
+<p ><b><i><a name="wp9001440">[R/T]X_DISCARDED</a></i></b></p><p >
+<a name="wp9001441">Number of packets that were discarded for all other reasons.</a></p>
+<p ><b><i><a name="wp9001442">[R/T]X_ERRORS </a></i></b></p><p >
+<a name="wp9001443">Number of times that an internal error occurred. Internal errors indicate a catastrophic failure, and the <b>Rx Errors</b> and <b>Tx Error</b>s fields record the nature of the failure.</a></p>
+<table border="1" cellpadding="5" cellspacing="0">
+  <caption></caption>
+  <tr>
+    <td><div ><b><a name="wp9000162">Field Value</a></b></div></td>
+    <td><div ><b><a name="wp9000163">Meaning</a></b></div></td>
+  </tr>
+  <tr>
+    <td><div ><a name="wp9000164"><code>Error</code></a></div></td>
+    <td><div ><a name="wp9000165">RTCS error code that indicates the type of failure</a></div></td>
+  </tr>
+  <tr>
+    <td><div ><a name="wp9000166"><code>Parameter</code></a></div></td>
+    <td><div ><a name="wp9000167">Parameter that might help you debug the failure (parameter type or value depends on the error that occurred)</a></div></td>
+  </tr>
+  <tr>
+    <td><div ><a name="wp9000168"><code>Task Id</code></a></div></td>
+    <td><div ><a name="wp9000169">Task ID of the task that was active when the error occurred</a></div></td>
+  </tr>
+  <tr>
+    <td><div ><a name="wp9000170"><code>TaskErrCode</code></a></div></td>
+    <td><div ><a name="wp9000171">Task error code of the active task</a></div></td>
+  </tr>
+  <tr>
+    <td><div ><a name="wp9000172"><code>MemPtr</code></a></div></td>
+    <td><div ><a name="wp9000173">Current highwater mark for core memory</a></div></td>
+  </tr>
+  <tr>
+    <td><div ><a name="wp9000174"><code>Stack</code></a></div></td>
+    <td><div ><a name="wp9000175">If non-zero, indicates that the stack of the active task was out of bounds when the error occurred</a></div></td>
+  </tr>
+</table>
+<p ><b><i><a name="wp9001445">Rx, Dest port zero</a></i></b></p><p >
+<a name="wp9001446">Number of received segments with a destination port of <code>0</code>.</a></p>
+<p ><b><i><a name="wp9001447">Rx, Invalid Checksum</a></i></b></p><p >
+<a name="wp9001448">Number of received segments with an invalid checksum. </a></p>
+<p ><b><i><a name="wp9001449">Rx, Invalid Options</a></i></b></p><p >
+<a name="wp9001450">Number of received segments with invalid options.</a></p>
+<p ><b><i><a name="wp9001451">Rx, Invalid Source</a></i></b></p><p >
+<a name="wp9001452">Number of received segments with an invalid source address.</a></p>
+<p ><b><i><a name="wp9001453">Rx, Header Too Small</a></i></b></p><p >
+<a name="wp9001454">Number of received segments with a header size smaller than the minimum.</a></p>
+<p ><b><i><a name="wp9001455">Rx, Larger Than Frame</a></i></b></p><p >
+<a name="wp9001456">Number of received segments that are larger than the internal frames used to receive data. </a></p>
+<p ><b><i><a name="wp9001457">Rx, Ack for Unsent Data</a></i></b></p><p >
+<a name="wp9001458">Number of ACKs received for data that was not sent.</a></p>
+<p ><b><i><a name="wp9001459">Rx, Data Outside Window</a></i></b></p><p >
+<a name="wp9001460">Number of ACKs received for data that is outside the current buffer.</a></p>
+<p ><b><i><a name="wp9001461">Rx, Data After Close</a></i></b></p><p >
+<a name="wp9001462">Number of data segments received after the connection was closed.</a></p>
+<p ><b><i><a name="wp9001463">Rx, Segments with MSS set</a></i></b></p><p >
+<a name="wp9001464">Number of received segments with the maximum segment size (MSS) option set.</a></p>
+<p ><b><i><a name="wp9001465">Rx, Segments with other options</a></i></b></p><p >
+<a name="wp9001466">Number of received segments with options other than MSS set.</a></p>
+<p ><b><i><a name="wp9001467">Data Segments Received</a></i></b></p><p >
+<a name="wp9001468">Total number of data segments received.</a></p>
+<p ><b><i><a name="wp9001469">Duplicate Data Received</a></i></b></p><p >
+<a name="wp9001470">Number of data segments received with duplicated data.</a></p>
+<p ><b><i><a name="wp9001471">Acks Received</a></i></b></p><p >
+<a name="wp9001472">Number of acknowledgements received.</a></p>
+<p ><b><i><a name="wp9001473">Duplicate Acks Received</a></i></b></p><p >
+<a name="wp9001474">Number of duplicate acknowledgements received.</a></p>
+<p ><b><i><a name="wp9001475">Rx, Reset Segments</a></i></b></p><p >
+<a name="wp9001476">Number of reset segments received.</a></p>
+<p ><b><i><a name="wp9001477">Rx, Window Probes</a></i></b></p><p >
+<a name="wp9001478">Number of probes received.</a></p>
+<p ><b><i><a name="wp9001479">Rx, Window Updates</a></i></b></p><p >
+<a name="wp9001480">Number of window updates received.</a></p>
+<p ><b><i><a name="wp9001481">SYN Not Received</a></i></b></p><p >
+<a name="wp9001482">Number of SYN segments expected, but not received.</a></p>
+<p ><b><i><a name="wp9001483">ACK Not Received</a></i></b></p><p >
+<a name="wp9001484">Number of ACK segments expected, but not received.</a></p>
+<p ><b><i><a name="wp9001485">Rx, SYN Not Expected</a></i></b></p><p >
+<a name="wp9001486">Number of SYN segments received, but not expected.</a></p>
+<p ><b><i><a name="wp9001487">Rx, Multicast Packets</a></i></b></p><p >
+<a name="wp9001488">Number of multicast segments received.</a></p>
+<p ><b><i><a name="wp9001489">Tx, Data Segment</a></i></b></p><p >
+<a name="wp9001490">Total number of data segments sent.</a></p>
+<p ><b><i><a name="wp9001491">Data Segment Retransmit</a></i></b></p><p >
+<a name="wp9001492">Number of data segments retransmitted.</a></p>
+<p ><b><i><a name="wp9001493">Tx, Ack-only Segment</a></i></b></p><p >
+<a name="wp9001494">Number of ACK-only segments sent.</a></p>
+<p ><b><i><a name="wp9001495">Tx, Delayed Ack</a></i></b></p><p >
+<a name="wp9001496">Number of delayed Acks sent.</a></p>
+<p ><b><i><a name="wp9001497">Tx, Reset Segment</a></i></b></p><p >
+<a name="wp9001498">Number of reset segments sent.</a></p>
+<p ><b><i><a name="wp9001499">Tx, Window Probe</a></i></b></p><p >
+<a name="wp9001500">Number of window probes sent.</a></p>
+<p ><b><i><a name="wp9001501">Tx, Window Update</a></i></b></p><p >
+<a name="wp9001502">Number of window updates sent.</a></p>
+<p ><b><i><a name="wp9001503">Active Opens</a></i></b></p><p >
+<a name="wp9001504">Number of active open requests.</a></p>
+<p ><b><i><a name="wp9001505">Passive Opens</a></i></b></p><p >
+<a name="wp9001506">Number of passive open requests.</a></p>
+<p ><b><i><a name="wp9001507">Established Connections</a></i></b></p><p >
+<a name="wp9001508">Total number of established connections.</a></p>
+<p ><b><i><a name="wp9001509">Graceful Shutdowns</a></i></b></p><p >
+<a name="wp9001510">Number of graceful shutdown operations.</a></p>
+<p ><b><i><a name="wp9001511">Connections Aborted</a></i></b></p><p >
+<a name="wp9001512">Number of aborted connections.</a></p>
+<p ><b><i><a name="wp9001513">Failed Connections</a></i></b></p><p >
+<a name="wp9001514">Number of failed connections.</a></p>
+<p ><b><i><a name="wp9001515">Aborts</a></i></b></p><p >
+<a name="wp9001516">Total number of abort requests received.</a></p>
+    </blockquote>
+    <p></p>
+    <hr>
+
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" class="footer">
+      <tr>
+        <td>
+          
+        </td>
+        <td align="right" valign="top" class="navigator">
+<a href="rtcs_tca.htm"><img src="images/sprev.gif" border="0" alt="Previous" title="Previous"></a><a href="rtcs_udp.htm"><img src="images/snext.gif" border="0" alt="Next" title="Next"></a>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>

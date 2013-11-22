@@ -1,0 +1,71 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN" "http://www.w3.org/MarkUp/Wilbur/HTML32.dtd">
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+    <meta name="GENERATOR" content="Quadralay WebWorks Publisher 2003 for Word 8.0.0.1194">
+    <meta name="TEMPLATEBASE" content="ARCTechPubsv6">
+    <meta name="LASTUPDATED" content="01/27/12 13:02:36">
+<link rel="first" href="tad_help.htm">  <link rel="prev" href="lightweb.htm"><link rel="next" href="power_ma.htm">
+    <link rel="StyleSheet" href="document.css" type="text/css" media="screen">
+    <title>Lightweight Events Window</title>
+  </head>
+
+  <body>
+
+    <table width="100%" border="0" cellpadding="0" cellspacing="0" class="header">
+      <tr> 
+        <td class="breadcrumbs">
+	<a href="tad_help.htm"> MQX&#174; Task Aware Debug Help</a> > <a href="tad_wind.htm"> TAD Windows</a> > Lightweight Events Window
+        </td>
+        <td align="right" valign="top" class="navigator" nowrap>
+<a href="lightweb.htm"><img src="images/sprev.gif" border="0" alt="Previous" title="Previous"></a><a href="power_ma.htm"><img src="images/snext.gif" border="0" alt="Next" title="Next"></a>
+        </td>
+      </tr>
+    </table>
+
+    <hr align="left">
+
+    <blockquote>
+<h3 ><a name="wp9000885">
+Lightweight Events Window</a></h3>
+
+
+<p >
+<a name="wp9000886">The <b>LIghtweight Events</b> window displays the state of lightweight events.</a></p>
+<p >
+<img src="images/lightweg.gif" height="155" width="577" border="0" hspace="0" vspace="0">
+<a name="wp9000887"> </a></p>
+<p ><b><i><a name="wp9000888">Displayed Fields</a></i></b></p><p >
+<a name="wp9000889"><b>LWEvent</b> - the address (or variable name) of the event descriptor.</a></p>
+<p >
+<a name="wp9000890"><b>Valid</b> - indication as to whether or not the descriptor is valid. This field reads <b>No</b> if the event descriptor appears to be corrupted.</a></p>
+<p >
+<a name="wp9000891"><b>Value</b> or <b>BitMask </b>- the current settings of this event group (i.e., which of the 32 individual events are set or cleared)</a></p>
+<p >
+<a name="wp9000892"><b>AutoClear </b>- Indicates whether autoclear is set for this event. Events can be created with a property to autoclear themselves, so that after an event is set, a task is readied, then the event is automatically cleared, so the application does not have to do it.</a></p>
+<p >
+<a name="wp9000893"><b>Waiting#</b> - number of tasks that are suspended waiting for this event.</a></p>
+<p >
+<a name="wp9000894">The expanded tree contains a list of tasks waiting for the event. Each task can also be expanded to see its description.</a></p>
+<p ><b><i><a name="wp9000895">Waiting Task Field Details</a></i></b></p><p >
+<a name="wp9000896"><b>Waiting Task</b> - a task that is waiting for this event.</a></p>
+<p >
+<a name="wp9000897"><b>All/Any</b>  -  Indicates whether to wait until all bits in the bitmask are set before returning from the wait.  If this property is set to <b>Any</b>, wait only until any of the bits is set (similar to a logical <code>AND</code> vs <code>OR</code> for waiting).</a></p>
+<p >
+<a name="wp9000898"><b>Waiting BitMask</b> - Indicates the group of bits being waited for.  Can be a single event bit, or a combination.  The <b>All/Any</b> property helps determine what to do when one or more of these bits is set.</a></p>
+    </blockquote>
+    <p></p>
+    <hr>
+
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" class="footer">
+      <tr>
+        <td>
+          
+        </td>
+        <td align="right" valign="top" class="navigator">
+<a href="lightweb.htm"><img src="images/sprev.gif" border="0" alt="Previous" title="Previous"></a><a href="power_ma.htm"><img src="images/snext.gif" border="0" alt="Next" title="Next"></a>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>

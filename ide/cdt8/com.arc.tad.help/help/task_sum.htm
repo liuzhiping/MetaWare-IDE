@@ -1,0 +1,155 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN" "http://www.w3.org/MarkUp/Wilbur/HTML32.dtd">
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+    <meta name="GENERATOR" content="Quadralay WebWorks Publisher 2003 for Word 8.0.0.1194">
+    <meta name="TEMPLATEBASE" content="ARCTechPubsv6">
+    <meta name="LASTUPDATED" content="01/27/12 13:02:36">
+<link rel="first" href="tad_help.htm">  <link rel="prev" href="semaphor.htm"><link rel="next" href="task_que.htm">
+    <link rel="StyleSheet" href="document.css" type="text/css" media="screen">
+    <title>Task Summary Window</title>
+  </head>
+
+  <body>
+
+    <table width="100%" border="0" cellpadding="0" cellspacing="0" class="header">
+      <tr> 
+        <td class="breadcrumbs">
+	<a href="tad_help.htm"> MQX&#174; Task Aware Debug Help</a> > <a href="tad_wind.htm"> TAD Windows</a> > Task Summary Window
+        </td>
+        <td align="right" valign="top" class="navigator" nowrap>
+<a href="semaphor.htm"><img src="images/sprev.gif" border="0" alt="Previous" title="Previous"></a><a href="task_que.htm"><img src="images/snext.gif" border="0" alt="Next" title="Next"></a>
+        </td>
+      </tr>
+    </table>
+
+    <hr align="left">
+
+    <blockquote>
+<h3 ><a name="wp9000631">
+Task Summary Window</a></h3>
+
+
+<p >
+<a name="wp9000632">The Task Summary window lists all of the tasks of the application. Entries can be expanded to see details for each task.</a></p>
+<p >
+<img src="images/task_sua.gif" height="103" width="576" border="0" hspace="0" vspace="0">
+<a name="wp9000633"> </a></p>
+<p ><b><i><a name="wp9000634">Displayed fields - Task identification</a></i></b></p><p >
+<a name="wp9000635"><b>Task Name</b></a></p>
+<p >
+<a name="wp9000636">Task name for the task template.</a></p>
+<p >
+<a name="wp9000637"><b>Task ID</b></a></p>
+<p >
+<a name="wp9000638">When MQX creates a task, it assigns a unique task ID, which acts as a task identifier. The task ID of a newly created task is returned by <strong>_task_create</strong>(). A task can determine its own task ID by calling <strong>_task_get_id</strong>(). A task can determine the task ID of the task that created it by calling <strong>_task_get_creator</strong>().</a></p>
+<p >
+<a name="wp9000639"><b>TD</b></a></p>
+<p >
+<a name="wp9000640">The task-descriptor address. For each created task, MQX allocates a task-descriptor structure, which contains the context of the task (its program pointer, stack pointer, stack base and limit, and storage for machine registers). The address of a task descriptor is called the task-descriptor pointer or <code>TD_PTR</code>.</a></p>
+<p >
+<a name="wp9000641"><b>State</b></a></p>
+<p >
+<a name="wp9000642">Current state of the task. If the task is in the timeout queue, <code>TQ</code> is appended to the state string.</a></p>
+<p >
+<a name="wp9000643">Task states:</a></p>
+<ul> <li ><code>Ready</code>-task is in the ready queue and is in a position to be active.<a name="wp9000644"> </a>
+ <li ><code>Active</code>-the task that is currently running.<a name="wp9000645"> </a>
+ <li ><code>Receive Specific Blocked</code>-task called <strong>_msgq_receive()</strong> for a specific queue ID, and no messages are available in the queue. The task remains in this state until a message is received in the queue or a specified timeout expires.<a name="wp9000646"> </a>
+ <li ><code>Receive Any Blocked</code>-task called <strong>_msgq_receive()</strong> for any queue that it owns, and no messages are available in any of its queues. The task remains in this state until a message is received in any of the queues it owns or a specified timeout expires.<a name="wp9000647"> </a>
+ <li ><code>Dying</code>-task is in the process of being destroyed, and MQX is releasing all the task's resources. The task is not destroyed until all the resources are released.<a name="wp9000648"> </a>
+ <li ><code>Unhandled Interrupt</code>-task was active when an unhandled interrupt occurred. The task is now blocked.<a name="wp9000649"> </a>
+ <li ><code>Blocked</code>-task is blocked because it called <strong>_task_block()</strong>.<a name="wp9000650"> </a>
+ <li ><code>Send Blocked</code>-task sent a synchronous message and is waiting for an acknowledgment of its completion. This state is used when MQX creates the task.<a name="wp9000651"> </a>
+ <li ><code>Breakpoint Blocked</code>-task stopped because of a software breakpoint.<a name="wp9000652"> </a>
+ <li ><code>IO Blocked</code>-task is waiting for an I/O operation to complete.<a name="wp9000653"> </a>
+ <li ><code>Semaphore Blocked</code>-task is waiting for a semaphore.<a name="wp9000654"> </a>
+ <li ><code>Mutex Blocked</code>-task is waiting for a mutex.<a name="wp9000655"> </a>
+ <li ><code>Event Blocked</code>-task is waiting for an event bit to be set.<a name="wp9000656"> </a>
+ <li ><code>Task Queue Blocked</code>-task has placed itself in a task queue by calling <strong>_sched_suspend</strong>(). Another task must remove the task from the queue by either calling <strong>_sched_resume</strong>() or destroying the task queue.<a name="wp9000657"> </a>
+ <li ><code>Lightweight Sem Blocked</code>-task is waiting for a lightweight semaphore.<a name="wp9000658"> </a>
+</ul><p >
+<a name="wp9000659"><b>Priority</b></a></p>
+<p >
+<a name="wp9000660">Current priority of the task. If MQX boosted the priority of the task, <b>Priority</b> also indicates the following:</a></p>
+<ul> <li >how many times MQX boosted the priority<a name="wp9000661"> </a>
+ <li >original priority of the task<a name="wp9000662"> </a>
+</ul><p >
+<a name="wp9000663">When MQX creates the task, it sets the task priority to the priority that the task template specifies. An application can change the priority by calling <strong>_sched_setparam</strong>().</a></p>
+<p >
+<a name="wp9000664">MQX mutexes and semaphores might temporarily raise (boost) the priority of a task. When the conditions that caused MQX to boost the priority are removed, MQX returns the priority to its original value. </a></p>
+<p >
+<a name="wp9000665"><b>Task Error Code</b></a></p>
+<p >
+<a name="wp9000666">Each task has a task error code that is associated with its context. MQX functions set the task error code when they detect an operation-affecting error. Generally, if MQX sets the task error code to any value other than okay, something is wrong.</a></p>
+<p >
+<a name="wp9000667">If the application ignores an error that an MQX function detects, additional errors might occur. Usually the first-detected error gives you the best clue to the problem; subsequent errors might be misleading. When MQX sets the task error code to a value other than okay, subsequent errors that MQX detects do not cause MQX to change the task error code. MQX changes the task error code only if the application first clears the task error code. </a></p>
+<p >
+<a name="wp9000668">A task can get its own task error code by calling <strong>_task_get_error</strong>(). A task can clear its task error code by calling <strong>_task_set_error</strong>().</a></p>
+<p ><b><i><a name="wp9000669">Additional Details</a></i></b></p><p ><b><i><a name="wp9000670">You can see additional details for a task by expanding its entry:</a></i></b></p><p >
+<img src="images/task_sub.gif" height="454" width="576" border="0" hspace="0" vspace="0">
+<a name="wp9000671"> </a></p>
+<p >
+<a name="wp9000672"><b>Creator</b></a></p>
+<p >
+<a name="wp9000673">Task ID of the task that created the task.</a></p>
+<p ><b><i><a name="wp9000674">Displayed fields-Messages</a></i></b></p><p >
+<a name="wp9000675"><b>Cur Msg:</b></a></p>
+<p >
+<a name="wp9000676">Address of the message that the task most recently received.</a></p>
+<p >
+<a name="wp9000677"><b># Pending</b></a></p>
+<p >
+<a name="wp9000678">Number of messages that are pending for the task in all queues that the task owns. The value is returned by calling:</a></p>
+<pre ><a name="wp9000679"></a>_msgq_get_count(<i>0</i>);
+</pre>
+<p ><b><i><a name="wp9000680">Displayed fields-Scheduling</a></i></b></p><p >
+<a name="wp9000681"><b>Flags:</b></a></p>
+<p >
+<a name="wp9000682">Set of mutually exclusive bit flags that indicate the current attributes of the task. If the flags are set for the task, they are displayed. If they are set, they have the following meanings:</a></p>
+<ul> <li ><code>Log</code>-kernel logging is in effect for the task.<a name="wp9000683"> </a>
+ <li ><code>Priority Boosted</code>-MQX temporarily raised the task's priority.<a name="wp9000684"> </a>
+ <li ><code>Watchdog</code>-software watchdog active for the task.<a name="wp9000685"> </a>
+ <li ><code>Auto Start</code>-MQX automatically created the task when MQX started.<a name="wp9000686"> </a>
+ <li ><code>Floating Point</code>-task was declared to be a floating-point task.<a name="wp9000687"> </a>
+ <li ><code>Time Slice</code>-task is using round robin scheduling (if the flag is not set, the task is using FIFO scheduling)<a name="wp9000688"> </a>
+</ul><p >
+<a name="wp9000689"><b>Time Slice Expired</b></a></p>
+<p >
+<a name="wp9000690">Number of milliseconds left in the current time slice (relevant only if the task is the active task), followed by the length of the task's time slice. The field is valid only if the <code>Time Slice</code> flag is set in the <b>Flags</b> field. </a></p>
+<p ><b><i><a name="wp9000691">Displayed fields-Task Status</a></i></b></p><p >
+<a name="wp9000692"><b>Status Register</b></a></p>
+<p >
+<a name="wp9000693">Enable <code>status register</code> value used for the task.</a></p>
+<p >
+<a name="wp9000694"><b>Task Queued?</b></a></p>
+<p >
+<a name="wp9000695">Indicates whether the task is in the ready queue, the timeout queue, or neither.</a></p>
+<p >
+<a name="wp9000696"><b>Disabled Level</b></a></p>
+<p >
+<a name="wp9000697">Nested disable level of the task.</a></p>
+<p >
+<a name="wp9000698"><b>Stack Overflow?</b></a></p>
+<p >
+<a name="wp9000699">Indicates whether the stack is in an overflow condition for the task.</a></p>
+<p >
+<a name="wp9000700"><b>Timeout</b></a></p>
+<p >
+<a name="wp9000701">Number of seconds and milliseconds until the timeout expires. This field applies only if the task is in the timeout queue.</a></p>
+    </blockquote>
+    <p></p>
+    <hr>
+
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" class="footer">
+      <tr>
+        <td>
+          
+        </td>
+        <td align="right" valign="top" class="navigator">
+<a href="semaphor.htm"><img src="images/sprev.gif" border="0" alt="Previous" title="Previous"></a><a href="task_que.htm"><img src="images/snext.gif" border="0" alt="Next" title="Next"></a>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>

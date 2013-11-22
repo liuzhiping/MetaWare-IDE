@@ -1,0 +1,105 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN" "http://www.w3.org/MarkUp/Wilbur/HTML32.dtd">
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+    <meta name="GENERATOR" content="Quadralay WebWorks Publisher 2003 for Word 8.0.0.1194">
+    <meta name="TEMPLATEBASE" content="ARCTechPubsv6">
+    <meta name="LASTUPDATED" content="01/27/12 13:02:36">
+<link rel="first" href="tad_help.htm">  <link rel="prev" href="memory_b.htm"><link rel="next" href="mutexes_.htm">
+    <link rel="StyleSheet" href="document.css" type="text/css" media="screen">
+    <title>Message Queues Window</title>
+  </head>
+
+  <body>
+
+    <table width="100%" border="0" cellpadding="0" cellspacing="0" class="header">
+      <tr> 
+        <td class="breadcrumbs">
+	<a href="tad_help.htm"> MQX&#174; Task Aware Debug Help</a> > <a href="tad_wind.htm"> TAD Windows</a> > Message Queues Window
+        </td>
+        <td align="right" valign="top" class="navigator" nowrap>
+<a href="memory_b.htm"><img src="images/sprev.gif" border="0" alt="Previous" title="Previous"></a><a href="mutexes_.htm"><img src="images/snext.gif" border="0" alt="Next" title="Next"></a>
+        </td>
+      </tr>
+    </table>
+
+    <hr align="left">
+
+    <blockquote>
+<h3 ><a name="wp9000517">
+Message Queues Window</a></h3>
+
+
+<p >
+<a name="wp9000518">The <b>Message Queues</b> window shows a description of each  message queue and provides access to the messages in the queue as well as the owner of the queue and the notification function that is associated with the queue.</a></p>
+<p >
+<img src="images/messagee.gif" height="228" width="576" border="0" hspace="0" vspace="0">
+<a name="wp9000519"> </a></p>
+<p ><b><i><a name="wp9000520">Displayed Fields-Queue Entries</a></i></b></p><p >
+<a name="wp9000521"><b>Queue #</b></a></p>
+<p ><b><i><a name="wp9000522">The ID number of the queue.</a></i></b></p><p >
+<a name="wp9000523"><b>Entries</b></a></p>
+<p >
+<a name="wp9000524">Current number of messages in the queue.</a></p>
+<p >
+<a name="wp9000525"><b>Type/Owner</b></a></p>
+<p >
+<a name="wp9000526">In the case of a private queue, then the owning task is shown. In the case of a system queue, the type <code>System Q</code> is shown.</a></p>
+<p ><b><i><a name="wp9000527">Displayed Fields-Queue Details</a></i></b></p><p >
+<a name="wp9000528"><b>Maximum</b></a></p>
+<p >
+<a name="wp9000529">Maximum number of entries allowed in the queue. Some queues are of unlimited size.</a></p>
+<p >
+<a name="wp9000530"><b>First Entry</b></a></p>
+<p >
+<a name="wp9000531">Address of the first message in the queue.</a></p>
+<p >
+<a name="wp9000532"><b>Queue Type</b></a></p>
+<p >
+<a name="wp9000533"><b>Private Queue</b> or <b>System Queue</b>.</a></p>
+<p >
+<a name="wp9000534"><b>Owner Task</b></a></p>
+<p >
+<a name="wp9000535">For a private queue, the task descriptor of the task that owns the queue is displayed.  This field is not applicable for a system queue.</a></p>
+<p >
+<a name="wp9000536"><b>Notification Function</b></a></p>
+<p >
+<a name="wp9000537">The name of the function or the address of the function, if applicable. MQX calls the function when it puts a message in the queue.</a></p>
+<p >
+<a name="wp9000538"><b>Notification Function Parameter</b></a></p>
+<p >
+<a name="wp9000539">The parameter passed to the notification function if a notification function is applicable.</a></p>
+<p ><b><i><a name="wp9000540">Message List</a></i></b></p><p >
+<a name="wp9000541">List of messages, if any, within the queue. Each message has the following fields displayed:</a></p>
+<p >
+<a name="wp9000542"><b>Message</b></a></p>
+<p >
+<a name="wp9000543">The address of the message.</a></p>
+<p >
+<a name="wp9000544"><b>Source Q#</b></a></p>
+<p >
+<a name="wp9000545">The ID number of the source queue of this message.</a></p>
+<p >
+<a name="wp9000546"><b>Processor#</b></a></p>
+<p >
+<a name="wp9000547">The processor where the message originated.</a></p>
+<p >
+<a name="wp9000548"><b>Msg Size</b></a></p>
+<p >
+<a name="wp9000549">The size of the message in bytes.</a></p>
+    </blockquote>
+    <p></p>
+    <hr>
+
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" class="footer">
+      <tr>
+        <td>
+          
+        </td>
+        <td align="right" valign="top" class="navigator">
+<a href="memory_b.htm"><img src="images/sprev.gif" border="0" alt="Previous" title="Previous"></a><a href="mutexes_.htm"><img src="images/snext.gif" border="0" alt="Next" title="Next"></a>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN" "http://www.w3.org/MarkUp/Wilbur/HTML32.dtd">
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+    <meta name="GENERATOR" content="Quadralay WebWorks Publisher 2003 for Word 8.0.0.1194">
+    <meta name="TEMPLATEBASE" content="ARCTechPubsv6">
+    <meta name="LASTUPDATED" content="01/27/12 13:02:36">
+<link rel="first" href="tad_help.htm">  <link rel="prev" href="events_w.htm"><link rel="next" href="user_log.htm">
+    <link rel="StyleSheet" href="document.css" type="text/css" media="screen">
+    <title>Log Summary Window</title>
+  </head>
+
+  <body>
+
+    <table width="100%" border="0" cellpadding="0" cellspacing="0" class="header">
+      <tr> 
+        <td class="breadcrumbs">
+	<a href="tad_help.htm"> MQX&#174; Task Aware Debug Help</a> > <a href="tad_wind.htm"> TAD Windows</a> > Log Summary Window
+        </td>
+        <td align="right" valign="top" class="navigator" nowrap>
+<a href="events_w.htm"><img src="images/sprev.gif" border="0" alt="Previous" title="Previous"></a><a href="user_log.htm"><img src="images/snext.gif" border="0" alt="Next" title="Next"></a>
+        </td>
+      </tr>
+    </table>
+
+    <hr align="left">
+
+    <blockquote>
+<h3 ><a name="wp9000383">
+Log Summary Window</a></h3>
+
+
+<p >
+<a name="wp9000384">MQX can log all MQX and RTCS function calls, context switches, and interrupts. You can choose to log all information or a subset of the information in the kernel log. User-defined logs may also be listed.</a></p>
+<p >
+<a name="wp9000385">MQX has logs and LWLogs. The kernel log (klog) uses LWLog #0.The <b>Log Summary</b> window displays all types of logs, and only those created are shown.</a></p>
+<p >
+<img src="images/log_suma.gif" height="402" width="576" border="0" hspace="0" vspace="0">
+<a name="wp9000386"> </a></p>
+<p ><b><i><a name="wp9000387">Displayed Fields</a></i></b></p><p >
+<a name="wp9000388"><b>Log Number</b></a></p>
+<p >
+<a name="wp9000389">The ID number of the log. This value is a number between zero and 15, inclusive. An ID of <code>0</code> denotes the Kernel log.</a></p>
+<p >
+<a name="wp9000390"><b>Current Status</b></a></p>
+<p >
+<a name="wp9000391">If the corresponding log has not been created by the application, this entry shows <code>Not Created</code>. Otherwise, the current size and maximum size of the log are shown, in words.</a></p>
+<p >
+<a name="wp9000392">When an application creates the log, it sets the maximum size, which is the maximum amount of data (in long words) that can be written into the log. Current log size is the amount of data that has been written into the log so far.</a></p>
+<p >
+<a name="wp9000393"><b>Enabled?</b></a></p>
+<p >
+<a name="wp9000394">At any time, the application can disable a log (and prevent all write operations) by calling  <strong>_log_disable</strong>(). The application can subsequently enable a log by calling <strong>_log_enable</strong>().</a></p>
+<p >
+<a name="wp9000395"><b>Overwrite?</b></a></p>
+<ul> <li ><code>Yes</code>: When the log becomes full, newest entries overwrite the oldest entries. <a name="wp9000396"> </a>
+ <li ><code>No</code>: when the log becomes full, no further writing occurs.<a name="wp9000397"> </a>
+</ul><p ><b><i><a name="wp9000398">Viewing Log Entries</a></i></b></p><p >
+<a name="wp9000399">You can view log entries by expanding a Log that is created and has non-zero words used:</a></p>
+<p >
+<img src="images/log_sumb.gif" height="402" width="576" border="0" hspace="0" vspace="0">
+<a name="wp9000400"> </a></p>
+<p >
+<a name="wp9000401">Each log entry is represented by an entry in the list. Each entry contains a sequence number, a timestamp, and application-defined data. The log entries are displayed in chronological order, with the oldest entry first. If the first entry is not sequence-number 1, the oldest entries in the log are being overwritten. MQX assigns the timestamp from the kernel time when it logs the entry.</a></p>
+<p >
+<a name="wp9000402"> Because MQX defines the format of the data in the kernel log (ID <code>0</code>), it can display it more effectively than it can display application-defined logs.</a></p>
+<p ><b><i><a name="wp9000403">The Kernel Log</a></i></b></p><p >
+<a name="wp9000404">To view the kernel log, be sure to compile MQX with the <code>MQX_KERNEL_LOGGING</code> compile-time option set to <code>1</code>. The type of entry determines the information that is stored with the entry, as follows.</a></p>
+<table border="1" cellpadding="5" cellspacing="0">
+  <caption></caption>
+  <tr>
+    <td><div ><b><a name="wp9000009">Type of Entry</a></b></div></td>
+    <td><div ><b><a name="wp9000010">Data</a></b></div></td>
+  </tr>
+  <tr>
+    <td><div ><a name="wp9000011">Context switch</a></div></td>
+    <td><ul> <li >entry number<a name="wp9000012"> </a>
+ <li >timestamp<a name="wp9000013"> </a>
+ <li ><b>Context switch to</b><a name="wp9000014"> </a>
+ <li >name of the task<a name="wp9000015"> </a>
+ <li >task ID<a name="wp9000016"> </a>
+</ul></td>
+  </tr>
+  <tr>
+    <td><div ><a name="wp9000017">Interrupt generated</a></div></td>
+    <td><ul> <li >entry number<a name="wp9000018"> </a>
+ <li >timestamp<a name="wp9000019"> </a>
+ <li ><b>interrupt generated</b><a name="wp9000020"> </a>
+ <li >interrupt number<a name="wp9000021"> </a>
+</ul></td>
+  </tr>
+  <tr>
+    <td><div ><a name="wp9000022">Interrupt return</a></div></td>
+    <td><ul> <li >entry number<a name="wp9000023"> </a>
+ <li >timestamp<a name="wp9000024"> </a>
+ <li ><b>ISR </b>returns<a name="wp9000025"> </a>
+</ul></td>
+  </tr>
+  <tr>
+    <td><div ><a name="wp9000026">MQX or RTCS function enter</a></div></td>
+    <td><ul> <li >entry number<a name="wp9000027"> </a>
+ <li >timestamp<a name="wp9000028"> </a>
+ <li >function being entered<a name="wp9000029"> </a>
+ <li >input parameters<a name="wp9000030"> </a>
+</ul></td>
+  </tr>
+  <tr>
+    <td><div ><a name="wp9000031">MQX or RTCS function exit</a></div></td>
+    <td><ul> <li >entry number<a name="wp9000032"> </a>
+ <li >timestamp<a name="wp9000033"> </a>
+ <li >MQX or RTCS function being exited<a name="wp9000034"> </a>
+ <li ><b>returns</b><a name="wp9000035"> </a>
+ <li >any return values<a name="wp9000036"> </a>
+</ul></td>
+  </tr>
+</table>
+    </blockquote>
+    <p></p>
+    <hr>
+
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" class="footer">
+      <tr>
+        <td>
+          
+        </td>
+        <td align="right" valign="top" class="navigator">
+<a href="events_w.htm"><img src="images/sprev.gif" border="0" alt="Previous" title="Previous"></a><a href="user_log.htm"><img src="images/snext.gif" border="0" alt="Next" title="Next"></a>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>

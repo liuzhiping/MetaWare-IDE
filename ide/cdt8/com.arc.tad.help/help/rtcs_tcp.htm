@@ -1,0 +1,84 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN" "http://www.w3.org/MarkUp/Wilbur/HTML32.dtd">
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+    <meta name="GENERATOR" content="Quadralay WebWorks Publisher 2003 for Word 8.0.0.1194">
+    <meta name="TEMPLATEBASE" content="ARCTechPubsv6">
+    <meta name="LASTUPDATED" content="01/27/12 13:02:36">
+<link rel="first" href="tad_help.htm">  <link rel="prev" href="rtcs_soa.htm"><link rel="next" href="rtcs_tca.htm">
+    <link rel="StyleSheet" href="document.css" type="text/css" media="screen">
+    <title>RTCS TCP Configuration Window</title>
+  </head>
+
+  <body>
+
+    <table width="100%" border="0" cellpadding="0" cellspacing="0" class="header">
+      <tr> 
+        <td class="breadcrumbs">
+	<a href="tad_help.htm"> MQX&#174; Task Aware Debug Help</a> > <a href="rtcs_win.htm"> RTCS Windows</a> > RTCS TCP Configuration Window
+        </td>
+        <td align="right" valign="top" class="navigator" nowrap>
+<a href="rtcs_soa.htm"><img src="images/sprev.gif" border="0" alt="Previous" title="Previous"></a><a href="rtcs_tca.htm"><img src="images/snext.gif" border="0" alt="Next" title="Next"></a>
+        </td>
+      </tr>
+    </table>
+
+    <hr align="left">
+
+    <blockquote>
+<h3 ><a name="wp9001386">
+RTCS TCP Configuration Window</a></h3>
+
+
+<p >
+<a name="wp9001387">The <b>RTCS TCP Configuration</b> window displays the configuration information for TCP.</a></p>
+<p ><b><i><a name="wp9001388">Displayed Fields</a></i></b></p><p ><b><i><a name="wp9001389">TCPIP Status</a></i></b></p><p >
+<a name="wp9001390">Status of the TCP/IP layer. The field is set to <code>OK</code> unless an error occurred that makes it difficult for the TPC/IP layer to continue to operate.</a></p>
+<p ><b><i><a name="wp9001391">Active TCP Control Blocks?</a></i></b></p><p >
+<a name="wp9001392">Indicates whether any current TCP control blocks exist.</a></p>
+<p >
+<a name="wp9001393">For each TCP connection, RTCS allocates a TCP control block, which maintains the relevant TCP data for the connection.</a></p>
+<p ><b><i><a name="wp9001394">Active Rx Chunk Blocks?</a></i></b></p><p >
+<a name="wp9001395">Indicates whether any current Tx chunk blocks exist.</a></p>
+<p >
+<a name="wp9001396">Under some circumstances, RTCS must receive data into internal TCP buffers. RTCS uses Rx chunk blocks to define the internal TCP buffers.</a></p>
+<p ><b><i><a name="wp9001397">Free Rx Chunk Blocks?</a></i></b></p><p >
+<a name="wp9001398">Whether any current entries exist in the free list.</a></p>
+<p >
+<a name="wp9001399">When RTCS no longer needs an allocated Rx chunk block, it places the block in the free list. RTCS allocates Rx chunk blocks from the free list before it allocates them from core memory</a></p>
+<p ><b><i><a name="wp9001400">Free Send Buffer Chains?</a></i></b></p><p >
+<a name="wp9001401">Indicates whether there are any send-buffer chains in the free list.</a></p>
+<p >
+<a name="wp9001402">RTCS uses send-buffer chains to define the contents of transmit buffers. RTCS allocates send-buffer chains per TCP control block and puts them on the free list when it no longer needs them. RTCS allocates send-buffer chains from the free list before it allocates them from core memory.</a></p>
+<p ><b><i><a name="wp9001403">Next port to assign</a></i></b></p><p >
+<a name="wp9001404">Next port number returned when an open request is received with the local port set to <code>0</code>.</a></p>
+<p ><b><i><a name="wp9001405">Timeout Queue?</a></i></b></p><p >
+<a name="wp9001406">Indicates whether any current entries exist in the pending timeout queue.</a></p>
+<p ><b><i><a name="wp9001407">Expired Delayed ACK timers?</a></i></b></p><p >
+<a name="wp9001408">Indicates whether any delayed ACK timers expired and are awaiting to be serviced.</a></p>
+<p ><b><i><a name="wp9001409">Expired rexmit/probe/timewait?</a></i></b></p><p >
+<a name="wp9001410">Indicates whether any retransmit, probe, or timewait timers expired and are waiting to be serviced.</a></p>
+<p ><b><i><a name="wp9001411">Expired ack-of-transmission timers?</a></i></b></p><p >
+<a name="wp9001412">Indicates whether any transmission-acknowledgement timers expired and are waiting to be serviced.</a></p>
+<p ><b><i><a name="wp9001413">Expired receive timeout timers?</a></i></b></p><p >
+<a name="wp9001414">Indicates whether any receive timers expired and are waiting to be serviced.</a></p>
+<p ><b><i><a name="wp9001415">Pending Open Requests?</a></i></b></p><p >
+<a name="wp9001416">Indicates whether any open requests are pending.</a></p>
+<p ><b><i><a name="wp9001417">Controls</a></i></b></p><p ><b><i><a name="wp9001418">Active TCP Control Blocks field</a></i></b></p><p >
+<a name="wp9001419">Double-click the field to open the <b>RTCS TCP Control Block Summary</b> window.</a></p>
+    </blockquote>
+    <p></p>
+    <hr>
+
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" class="footer">
+      <tr>
+        <td>
+          
+        </td>
+        <td align="right" valign="top" class="navigator">
+<a href="rtcs_soa.htm"><img src="images/sprev.gif" border="0" alt="Previous" title="Previous"></a><a href="rtcs_tca.htm"><img src="images/snext.gif" border="0" alt="Next" title="Next"></a>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>

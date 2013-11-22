@@ -1,0 +1,16 @@
+<view name="org.eclipse.tm.arc.terminal.view.TerminalView">
+    <terminalText>
+        <line><text background="WHITE" foreground="RED">Connection established...</text><text>         </text></line>
+        <line><text>                                  </text></line>
+        <line><text background="WHITE" foreground="BLACK">Enter a string:</text><text>                   </text></line>
+        <line><text>                                  </text></line>
+        <line><text>                                  </text></line>
+        <line><text>                                  </text></line>
+        <line><text>                                  </text></line>
+        <line><text>                                  </text></line>
+        <line><text>                                  </text></line>
+        <line><text>                                  </text></line>
+        <line><text>                                  </text></line>
+        <line><text>                                  </text></line>
+    </terminalText>
+</view>

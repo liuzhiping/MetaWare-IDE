@@ -1,0 +1,136 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN" "http://www.w3.org/MarkUp/Wilbur/HTML32.dtd">
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+    <meta name="GENERATOR" content="Quadralay WebWorks Publisher 2003 for FrameMaker 8.0.0.1194">
+    <meta name="TEMPLATEBASE" content="temp">
+    <link rel="StyleSheet" href="document.css" type="text/css" media="screen">
+    <title>DesignWare ARC MetaWare IDE User's Guide</title>
+  </head>
+
+  <body>
+
+    <table width="100%" border="0" cellpadding="0" cellspacing="0" class="header">
+      <tr>
+<!--Disabling Breadcrumbs to use Eclipse version 10/2009
+        <td class="breadcrumbs">
+	<a href="ide_guid.htm"> DesignWare ARC MetaWare IDE User's Guide </a> > <a href="referenc.htm"><br>Reference</a> > Copyright Notice and Proprietary Information
+        </td>
+-->
+        <td align="right" valign="top" class="navigator" nowrap>
+<img src="images/prevx.gif" border="0" alt="Previous"><a href="before_y.htm"><img src="images/snext.gif" border="0" alt="Next"></a>
+        </td>
+      </tr>
+    </table>
+
+    <hr align="left">
+
+    <blockquote>
+<img height="138" width="300" src='images/logo.gif'>
+  <h1 >
+<a name="wp127660">
+DesignWare ARC MetaWare IDE User's Guide  </a></h1>
+
+<hr>
+
+
+
+
+
+
+
+
+
+
+
+<h3 >
+Copyright Notice and Proprietary Information
+<a name="wp99251"> </a></h3>
+
+<p >
+Copyright &#169; 2012 Synopsys, Inc. All rights reserved. This software and documentation contain confidential and proprietary information that is the property of Synopsys, Inc. The software and documentation are furnished under a license agreement and may be used or copied only in accordance with the terms of the license agreement. No part of the software and documentation may be reproduced, transmitted, or translated, in any form or by any means, electronic, mechanical, manual, optical, or otherwise, without prior written permission of Synopsys, Inc., or as expressly provided by the license agreement.
+<a name="wp99252"> </a></p>
+<a name="wp99253">
+  <h5 >
+Destination Control Statement
+ </a></h5>
+<p >
+All technical data contained in this publication is subject to the export control laws of the United States of America. Disclosure to nationals of other countries contrary to United States law is prohibited. It is the reader's responsibility to determine the applicable regulations and to comply with them.
+<a name="wp99254"> </a></p>
+<a name="wp99255">
+  <h5 >
+Disclaimer
+ </a></h5>
+<p >
+SYNOPSYS, INC., AND ITS LICENSORS MAKE NO WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, WITH REGARD TO THIS MATERIAL, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
+<a name="wp99256"> </a></p>
+<a name="wp99257">
+  <h5 >
+Registered Trademarks (&#174;)
+ </a></h5>
+<p >
+Synopsys, AEON, AMPS, ARC, Astro, Behavior Extracting Synthesis Technology, Cadabra, CATS, Certify, CHIPit, CoMET, Confirma, CODE V, Design Compiler, DesignSphere, DesignWare, Eclypse, Formality, Galaxy Custom Designer, Global Synthesis, HAPS, HapsTrak, HDL Analyst, HSIM, HSPICE, Identify, Leda,  LightTools, MAST, MaVeric, METeor, ModelTools, NanoSim, NOVeA, OpenVera, ORA, PathMill, Physical Compiler, PrimeTime, SCOPE, SiVL, SNUG, SolvNet, Sonic Focus, STAR Memory System, SVP Café, Syndicated, Synplicity, the Synplicity logo, Synplify, Synplify Pro, Synthesis Constraints Optimization Environment, TetraMAX, UMRBus, VCS, Vera, and YieldExplorer are registered trademarks of Synopsys, Inc.
+<a name="wp99258"> </a></p>
+<a name="wp99259">
+  <h5 >
+Trademarks (&#8482;)
+ </a></h5>
+<p >
+AFGen, Apollo, ASAP, Astro-Rail, Astro-Xtalk, Aurora, AvanWaves, BEST, Columbia, Columbia-CE, Cosmos, CosmosLE, CosmosScope,  CRITIC, CustomExplorer, CustomSim, Custom WaveView, DC Expert, DC Professional, DC Ultra, Design Analyzer, Design Vision, DesignerHDL, DesignPower, DFTMAX, Direct Silicon Access, Discovery, Encore,  EPIC, Galaxy, HANEX, HDL Compiler, Hercules, Hierarchical Optimization Technology, High-performance ASIC Prototyping System, HSIMplus, i-Virtual Stepper, IC Compiler, IICE, in-Sync, iN-Tandem, Intelli, Jupiter, Jupiter-DP, JupiterXT, JupiterXT-ASIC, Liberty, Libra-Passport, Library Compiler,  Macro-PLUS, Magellan, Mars, Mars-Rail, Mars-Xtalk, Milkyway, ModelSource, Module Compiler, MultiPoint, ORAengineering, Physical Analyst, Planet, Planet-PL, Platform Architect, Polaris, Power Compiler, Processor Designer, Raphael, RippledMixer, Saturn, Scirocco, Scirocco-i, SiWare, SPW, Star-RCXT, Star-SimXT, StarRC, Synphony Model System Compiler, System Designer, System Studio, Taurus, TotalRecall, TSUPREM-4, VCSi, VHDL Compiler, VMC, and Worksheet Buffer are trademarks of Synopsys, Inc.
+<a name="wp99260"> </a></p>
+<a name="wp99261">
+  <h5 >
+Service Marks (sm)
+ </a></h5>
+<p >
+MAP-in and TAP-in are service marks of Synopsys, Inc.
+<a name="wp99262"> </a></p>
+<a name="wp99263">
+  <h5 >
+Third Party Trademark Acknowledgements
+ </a></h5>
+<p >
+SystemC is a trademark of the Open SystemC Initiative and is used under license.
+<a name="wp99264"> </a></p>
+<p >
+ARM and AMBA are registered trademarks of ARM Limited.
+<a name="wp99265"> </a></p>
+<p >
+Saber is a registered trademark of SabreMark Limited Partnership and is used under license.
+<a name="wp99266"> </a></p>
+<p >
+Entrust is a registered trademark of Entrust Inc. in the United States and in certain other countries. In Canada, Entrust is a trademark or registered trademark of Entrust Technologies Limited. Used by Entrust.net Inc. under license.
+<a name="wp99267"> </a></p>
+<p >
+All other product or company names may be trademarks of their respective owners.
+<a name="wp99268"> </a></p>
+<p >
+Synopsys, Inc.<br>700 E. Middlefield Road<br>Mountain View, CA 94043
+<a name="wp99270"> </a></p>
+<p >
+<a href="www.synopsys.com" target="_window">www.synopsys.com</a>
+<a name="wp99272"> </a></p>
+<p >
+Some portions of this document copyright IBM Corporation and others 2000, 2004.
+<a name="wp127468"> </a></p>
+<p >
+0017-022&nbsp;September 2012
+<a name="wp76531"> </a></p>
+    </blockquote>
+    <p></p>
+    <hr>
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" class="footer">
+      <tr>
+        <td>
+
+        </td>
+        <td align="right" valign="top" class="navigator">
+<img src="images/prevx.gif" border="0" alt="Previous"><a href="before_y.htm"><img src="images/snext.gif" border="0" alt="Next"></a>
+        </td>
+      </tr>
+    </table>
+<p> <font size="-3">
+Copyright 2012 Synopsys, Inc. <br />
+Some portions of this document copyright IBM Corporation and others 2000, 2004.</font></p>
+  </body>
+</html>

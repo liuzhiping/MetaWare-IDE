@@ -1,0 +1,95 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN" "http://www.w3.org/MarkUp/Wilbur/HTML32.dtd">
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+    <meta name="GENERATOR" content="Quadralay WebWorks Publisher 2003 for Word 8.0.0.1194">
+    <meta name="TEMPLATEBASE" content="ARCTechPubsv6">
+    <meta name="LASTUPDATED" content="01/27/12 13:02:36">
+<link rel="first" href="tad_help.htm">  <link rel="prev" href="messagea.htm"><link rel="next" href="partitio.htm">
+    <link rel="StyleSheet" href="document.css" type="text/css" media="screen">
+    <title>Mutexes Window</title>
+  </head>
+
+  <body>
+
+    <table width="100%" border="0" cellpadding="0" cellspacing="0" class="header">
+      <tr> 
+        <td class="breadcrumbs">
+	<a href="tad_help.htm"> MQX&#174; Task Aware Debug Help</a> > <a href="tad_wind.htm"> TAD Windows</a> > Mutexes Window
+        </td>
+        <td align="right" valign="top" class="navigator" nowrap>
+<a href="messagea.htm"><img src="images/sprev.gif" border="0" alt="Previous" title="Previous"></a><a href="partitio.htm"><img src="images/snext.gif" border="0" alt="Next" title="Next"></a>
+        </td>
+      </tr>
+    </table>
+
+    <hr align="left">
+
+    <blockquote>
+<h3 ><a name="wp9000550">
+Mutexes Window</a></h3>
+
+
+<p >
+<a name="wp9000551">The <b>Mutexes </b><b>window shows list of mutexes. Each entry contains the </b>current state of the mutex, the attributes of the mutex, the task that has the mutex locked, and a list of the tasks waiting to lock the mutex. </a></p>
+<p >
+<img src="images/mutexesa.gif" height="151" width="577" border="0" hspace="0" vspace="0">
+<a name="wp9000552"> </a></p>
+<p ><b><i><a name="wp9000553">Displayed Fields</a></i></b></p><p >
+<a name="wp9000554"><b>Mutex</b></a></p>
+<p ><b><i><a name="wp9000555">The name of the variable containing the Mutex descriptor, if it is static. Otherwise, the address of the descriptor.</a></i></b></p><p >
+<a name="wp9000556"><b>Locked By</b></a></p>
+<p >
+<a name="wp9000557">The name of the task, if any, that has this mutex locked. <code>Unlocked</code> is displayed if the mutex is not locked.</a></p>
+<p >
+<a name="wp9000558"><b>Waiting</b></a></p>
+<p ><b><i><a name="wp9000559">The number of tasks waiting for this mutex.</a></i></b></p><p >
+<a name="wp9000560"><b>Destroy</b></a></p>
+<p >
+<a name="wp9000561">Indicates if the mutex is in a delayed destroy state.</a></p>
+<p >
+<a name="wp9000562"><b>Boost Count</b></a></p>
+<p >
+<a name="wp9000563">If the mutex is locked, this field indicates the number of times that the priority of the locking task was boosted. <b>Boost Count</b> has no meaning if the mutex is unlocked. </a></p>
+<p ><b><i><a name="wp9000564">Displayed Fields-Policy</a></i></b></p><p >
+<a name="wp9000565"><b>Waiting Policy</b></a></p>
+<p >
+<a name="wp9000566">One of the attributes associated with a mutex is the waiting policy that is in effect for tasks that want to gain access to the mutex. The waiting policy is one of the following:</a></p>
+<ul> <li ><code>Limited Spin</code><a name="wp9000567"> </a>
+ <li ><code>Priority Queued</code><a name="wp9000568"> </a>
+ <li ><code>Queued</code>-if the mutex is not available, the waiting task is blocked and placed in a waiting queue<a name="wp9000569"> </a>
+ <li ><code>Spin</code><a name="wp9000570"> </a>
+</ul><p >
+<a name="wp9000571"><b>Spin Count</b></a></p>
+<p >
+<a name="wp9000572">Number of <strong>_sched_yield</strong>() loops that can occur before the mutex-lock request fails. <b>Spin Count</b> is used only if the waiting policy is <code>Limited Spin</code>. </a></p>
+<p >
+<a name="wp9000573"><b>Priority Policy</b></a></p>
+<p >
+<a name="wp9000574">One of the attributes associated with a mutex is the priority policy. The priority policy may cause the priority of the task that owns the mutex to change while the task owns the mutex.</a></p>
+<p >
+<a name="wp9000575">The priority policy is either priority Inherit or priority protect.</a></p>
+<p >
+<a name="wp9000576"><b>Priority</b></a></p>
+<p >
+<a name="wp9000577">Minimum priority that an owner task can have while it owns the mutex. If an owner task has a lower priority, its priority is raised to this level. <b>Priority</b> is only used if the priority policy is priority protect.</a></p>
+<p ><b><i><a name="wp9000578">Displayed Fields-Task List</a></i></b></p><p >
+<a name="wp9000579">If the mutex is locked, the locking task is shown.</a></p>
+<p >
+<a name="wp9000580">The waiting-tasks list contains an entry for each task that is waiting for the mutex. The entries contain the task name and task ID of the tasks.</a></p>
+    </blockquote>
+    <p></p>
+    <hr>
+
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" class="footer">
+      <tr>
+        <td>
+          
+        </td>
+        <td align="right" valign="top" class="navigator">
+<a href="messagea.htm"><img src="images/sprev.gif" border="0" alt="Previous" title="Previous"></a><a href="partitio.htm"><img src="images/snext.gif" border="0" alt="Next" title="Next"></a>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>

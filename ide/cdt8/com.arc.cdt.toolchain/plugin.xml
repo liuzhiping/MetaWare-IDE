@@ -1,0 +1,1674 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+<plugin>
+   <extension
+         id="ARCLoadedAtStartup"
+         name="Class that runs operations at startup"
+         point="org.eclipse.ui.startup">
+      <startup class="com.arc.intro.LoadedAtStartup"/>
+   </extension>
+
+   <extension
+         id="ARCCompilerErrorParser"
+         name="MetaWare C/C++ Error Parser"
+         point="org.eclipse.cdt.core.ErrorParser">
+      <errorparser
+            class="com.arc.cdt.errorparsers.CompilerErrorParser">
+      </errorparser>
+   </extension>
+   <extension
+         id="ARCLinkerErrorParser"
+         name="MetaWare Linker Error Parser"
+         point="org.eclipse.cdt.core.ErrorParser">
+      <errorparser
+            class="com.arc.cdt.errorparsers.LinkerErrorParser">
+      </errorparser>
+   </extension>
+   <extension
+         id="ARCAssemblerErrorParser"
+         name="ARC Assembler Error parser"
+         point="org.eclipse.cdt.core.ErrorParser">
+      <errorparser
+            class="com.arc.cdt.errorparsers.AssemblerErrorParser">
+      </errorparser>
+   </extension>
+   <!-- extension
+         id="ARCScannerInfoConsoleParser"
+         name="ARC C/C++ Compiler Specs Parser"
+         point="org.eclipse.cdt.make.core.ScannerInfoConsoleParser">
+      <scannerInfoConsoleParser
+            commandId="externalScannerInfoProvider"
+            class="com.arc.cdt.scannerconfig.ARCScannerInfoConsoleParser"/>
+   </extension> -->
+   <!-- extension
+         id="ARCExternalScannerInfoProvider"
+         name="ARC External Scanner Info Provider"
+         point="org.eclipse.cdt.make.core.ExternalScannerInfoProvider">
+      <externalScannerInfoProvider >
+         <run class="org.eclipse.cdt.make.internal.core.scannerconfig.DefaultExternalScannerInfoProvider">
+            <parameter
+                  value="hcac"
+                  name="defaultCommand"/>
+            <parameter
+                  value="-Hbatchnotmp -Hnoobj ${plugin_state_location}/${specs_file}"
+                  name="defaultAttributes"/>
+         </run>
+      </externalScannerInfoProvider>
+   </extension> -->
+   <extension
+   		 id="ide"
+         point="org.eclipse.core.runtime.products">
+          <product
+                application="org.eclipse.ui.ide.workbench"
+                description="%productBlurb"
+                name="MetaWare IDE">
+             <property
+                   name="aboutImage"
+                   value="About.gif"/>
+             <property
+                   name="aboutText"
+                   value="%productBlurb"/>
+             <property
+                   name="appName"
+                   value="MetaWare IDE"/>
+             <property
+                   name="preferenceCustomization"
+                   value="plugin_customization.ini"/>
+             <property
+                   name="windowImage"
+                   value="%windowImages"/>
+             <property
+                   name="windowImages"
+                   value="ide-16x16.gif,ide-32x32.gif,ide-48x48.gif"/>
+              <property
+                name="startupForegroundColor"
+                value="4e2683"/>
+              <property
+                name="startupMessageRect"
+                value="150,350,500,20"/>
+              <property
+                name="startupProgressRect"
+                value="150,370,500,10"/> 
+          </product> 
+   </extension>
+   
+      <extension  
+         point="org.eclipse.ui.intro">
+      <intro
+            class="org.eclipse.ui.intro.config.CustomizableIntroPart"
+            icon="welcome16.gif"
+            id="com.arc.cdt.toolchain.intro">
+      </intro>
+      <introProductBinding
+            introId="com.arc.cdt.toolchain.intro"
+            productId="com.arc.cdt.toolchain.ide">
+      </introProductBinding>
+   </extension>
+   <extension   
+         id="intro"
+         point="org.eclipse.ui.intro.config">
+      <config
+            content="$nl$/introContent.xml"
+            id="com.arc.cdt.toolchain.introConfig"
+            introId="com.arc.cdt.toolchain.intro">
+         <presentation
+               home-page-id="root" standby-page-id="standby">
+            <implementation
+                  style="css/shared.css"
+                  kind="html"
+                  os="win32,linux">
+            </implementation>
+            <implementation
+                  kind="swt">
+            </implementation>
+         </presentation>
+      </config>
+   </extension>
+   <extension
+         point="org.eclipse.cdt.managedbuilder.core.buildDefinitions">
+      <managedBuildRevision fileVersion="4.0.0"/>
+      
+      <!-- builder
+            arguments="-k"
+            buildfileGenerator="org.eclipse.cdt.managedbuilder.makegen.gnu.GnuMakefileGenerator2"
+            command="gmake"
+            errorParsers="com.arc.cdt.toolchain.ARCCompilerErrorParser;com.arc.cdt.toolchain.ARCLinkerErrorParser;com.arc.cdt.toolchain.ARCAssemblerErrorParser;org.eclipse.cdt.core.MakeErrorParser"
+            id="com.arc.highc.builder"
+            isAbstract="true"
+            isVariableCaseSensitive="true"
+            macroInputDirRelPathValue="$(dir $&lt;)"
+            macroInputFileBaseNameValue="$(basename $(notdir $&lt;))"
+            macroInputFileExtValue="$(suffix $(notdir $&lt;))"
+            macroInputFileNameValue="$(notdir $&lt;)"
+            macroInputFileRelPathValue="$&lt;"
+            macroOutputDirRelPathValue="$(dir $@)"
+            macroOutputFileBaseNameValue="$(basename $(notdir $@))"
+            macroOutputFileExtValue="$(suffix $(notdir $@))"
+            macroOutputFileNameValue="$(notdir $@)"
+            macroOutputFileRelPathValue="$@"
+            name="MetaWare C Builder"
+            reservedMacroNames="ROOT,DEPS,OBJS,.*_SRCS,EXECUTABLES,SUBDIRS,LIBS,USER_OBJS,.*_INPUTS,.*_OUTPUTS"
+            variableFormat="${=}">
+   	  </builder>     --> 
+
+      <targetPlatform
+            isAbstract="true"
+            osList="win32,linux,solaris"
+            binaryParser="org.eclipse.cdt.core.ELF"
+            name="Generic platform"
+            id="com.arc.cdt.toolchain.elfBasedPlatform"/>
+            
+            <!-- must include GCC error parser to deal with ccac output -->
+      <toolChain
+            archList="all"
+            errorParsers="com.arc.cdt.toolchain.ARCCompilerErrorParser;com.arc.cdt.toolchain.ARCLinkerErrorParser;com.arc.cdt.toolchain.ARCAssemblerErrorParser;org.eclipse.cdt.core.GCCErrorParser;org.eclipse.cdt.core.MakeErrorParser"
+            id="com.arc.cdt.toolchain.toolChain"
+            isAbstract="true"
+            isToolChainSupported="com.arc.cdt.toolchain.ManagedIsToolChainSupported"
+            name="MetaWare C Toolset"
+            osList="win32,linux,solaris"
+            targetTool="com.arc.cdt.toolchain.toolLinker;com.arc.cdt.toolchain.archiver">
+         <targetPlatform
+               isAbstract="false"
+               id="hcTargetPlatform"
+               superClass="com.arc.cdt.toolchain.elfBasedPlatform"/>
+         <builder
+               id="makeBuilder"
+               isAbstract="false"
+               superClass="cdt.managedbuild.target.gnu.builder"/>
+      </toolChain>
+ 
+              <tool
+                    commandLineGenerator="com.arc.cdt.managedbuilder.makegen.HighCCommandLineGenerator"
+                    commandLinePattern="${COMMAND} -c ${FLAGS} ${OUTPUT_FLAG} ${OUTPUT} ${INPUTS}"
+                    errorParsers="com.arc.cdt.toolchain.ARCCompilerErrorParser;org.eclipse.cdt.core.GCCErrorParser"
+                    id="com.arc.cdt.toolchain.toolCompiler"
+                    isAbstract="true"
+                    name="MetaWare C/C++ Compiler"
+                    natureFilter="both"
+                    outputFlag="-o ">
+                <supportedProperties>
+          		  <property id="org.eclipse.cdt.build.core.buildType">
+	         		   <value id="org.eclipse.cdt.build.core.buildType.debug"/>
+    	       			  <value id="org.eclipse.cdt.build.core.buildType.release"/>
+           		 </property>
+            	</supportedProperties>
+            <optionCategory
+                  name="General"
+                  id="com.arc.cdt.toolchain.compiler.category.general"/>
+            <optionCategory
+                  name="Optimization/Debugging"
+                  id="com.arc.cdt.toolchain.compiler.category.opt"/>
+            <optionCategory
+                  name="Storage Mapping"
+                  id="com.arc.cdt.toolchain.compiler.category.storemapping">
+            </optionCategory>
+            <option
+                  category="com.arc.cdt.toolchain.compiler.category.opt"
+                  defaultValue="arc.optimization.level.Os"
+                  id="arc.compiler.options.general.optimization.level"
+                  name="Optimization Level (-O...)"
+                  tip="Specify optimization level"
+                  valueType="enumerated">
+               <enumeratedOptionValue
+                     id="arc.optimization.level.none"
+                     isDefault="false"
+                     name="Default optimization">
+               </enumeratedOptionValue>
+               <enumeratedOptionValue
+                     isDefault="false"
+                     command="-O0"
+                     name="Disable optimization (-O0)"
+                     id="arc.optimization.level.O0"/>
+               <enumeratedOptionValue
+                     isDefault="false"
+                     command="-Os"
+                     name="Smallest code (-Os)"
+                     id="arc.optimization.level.Os"/>
+               <enumeratedOptionValue
+                     isDefault="false"
+                     command="-O"
+                     name="Fastest code (-O)"
+                     id="arc.optimization.level.O"/>
+               <enumeratedOptionValue
+                     command="-O1"
+                     name="Optimization level 1 (-O1)"
+                     id="arc.optimization.level.O1"/>
+               <enumeratedOptionValue
+                     isDefault="false"
+                     command="-O2"
+                     name="Optimization level 2 (-O2)"
+                     id="arc.optimization.level.O2"/>
+               <enumeratedOptionValue
+                     isDefault="false"
+                     command="-O3"
+                     name="Optimization level 3 (-O3)"
+                     id="arc.optimization.level.O3"/>
+               <enumeratedOptionValue
+                     isDefault="false"
+                     command="-O4"
+                     name="Optimization  level 4 (-O4)"
+                     id="arc.optimization.level.O4"/>
+               <enumeratedOptionValue
+                     isDefault="false"
+                     command="-O5"
+                     name="Optimization  level 5 (-O5)"
+                     id="arc.optimization.level.O5"/>
+               <enumeratedOptionValue
+                     isDefault="false"
+                     command="-O6"
+                     name="Optimization  level 6 (-O6)"
+                     id="arc.optimization.level.O6"/>
+               <enumeratedOptionValue
+                           command="-O7"
+                           name="Optimization  level 7 (-O7)"
+                           id="arc.optimization.level.O7"/>
+                    
+            </option>
+            <option
+                  defaultValue="arc.debugging.level.none"
+                  isAbstract="true"
+                  valueType="enumerated"
+                  tip="Amount of debugger information to be generated"
+                  category="com.arc.cdt.toolchain.compiler.category.opt"
+                  name="Debug Level (-g, -g0, -g1)"
+                  id="arc.compiler.options.debugging.level">
+               <enumeratedOptionValue
+                     isDefault="true"
+                     name="None"
+                     id="arc.debugging.level.none">
+               </enumeratedOptionValue>
+               <enumeratedOptionValue
+                     name="Emit full debug information (-g)"
+                     isDefault="false"
+                     command="-g"
+                     id="arc.debugging.level.default">
+               </enumeratedOptionValue>
+               <enumeratedOptionValue
+                     name="Line Numbers Only (-g0)"
+                     command="-g0"
+                     id="arc.debugging.level.line_numbers_only">
+               </enumeratedOptionValue>
+               
+               <enumeratedOptionValue
+                     command="-g1"
+                     id="arc.debugging.level.g1"
+                     isDefault="false"
+                     name="Line Numbers with minimal symbolic (-g1)"/>
+            </option>
+            <optionCategory
+                  name="Preprocessor"
+                  id="com.arc.cdt.toolchain.compiler.category.preprocessor">
+            </optionCategory>
+            <option
+                  category="com.arc.cdt.toolchain.compiler.category.preprocessor"
+                  command="-D"
+                  id="arc.compiler.options.defines"
+                  name="Preprocessor Defines (one per line)"
+                  tip="Define preprocessor symbols"
+                  valueType="definedSymbols">
+            </option>
+            <option
+                  category="com.arc.cdt.toolchain.compiler.category.preprocessor"
+                  command="-U"
+                  id="arc.compiler.options.undefines"
+                  name="Preprocessor Undefines (one per line)"
+                  tip="Undefine those preprocessor symbols that are predefined"
+                  valueType="undefDefinedSymbols">
+            </option>
+            <optionCategory
+                  name="Include Directories"
+                  id="com.arc.cdt.toolchain.compiler.category.includes">
+            </optionCategory>
+            <option
+                  browseType="directory"
+                  category="com.arc.cdt.toolchain.compiler.category.includes"
+                  command="-I"
+                  id="arc.compiler.options.include_dirs"
+                  name="Include Directories (one per line)"
+                  tip="Specify directories to search for include files"
+                  valueType="includePath">
+            </option>
+        
+            <option
+                  category="com.arc.cdt.toolchain.compiler.category.general"
+                  command="-pg"
+                  defaultValue="false"
+                  id="arc.compiler.options.profiling.call_graph"
+                  name="Include Profiling Information (-pg) (affects linking also)"
+                  tip="Generate profiling information at runtime"
+                  valueType="boolean">
+            </option>
+            <optionCategory
+                  name="Language Compatibility"
+                  id="com.arc.cdt.toolchain.compiler.category.language"/>
+            <optionCategory
+                  name="C++"
+                  id="com.arc.cdt.toolchain.compiler.category.c++">
+            </optionCategory>
+            <option
+                  category="com.arc.cdt.toolchain.compiler.category.c++"
+                  command="-Hecpp"
+                  defaultValue="false"
+                  id="arc.compiler.options.c++.ecpp"
+                  name="Embedded C++ (-Hecpp)"
+                  applicabilityCalculator="com.arc.cdt.toolchain.ApplicabilityCalculator"                                       
+                  tip="Restrict language to Embedded C++ subset"
+                  valueType="boolean">
+            </option>
+            <!-- need to go thru ApplicabilityCalculator because ARC needs to obvserve
+                 this to set the right STL library -->
+            <option
+                  category="com.arc.cdt.toolchain.compiler.category.c++"
+                  command="-Hexcept"
+                  defaultValue="false"
+                  id="arc.compiler.options.c++.except"
+                  name="Generate Exception-Aware Code (-Hexcept)"
+                  tip="Enable exception-aware code."
+                  applicabilityCalculator="com.arc.cdt.toolchain.ApplicabilityCalculator"                                       
+                  valueType="boolean">
+            </option>
+             <option
+                   category="com.arc.cdt.toolchain.compiler.category.c++"
+                   commandFalse="-Hoff=bool"
+                   defaultValue="true"
+                   id="arc.compiler.options.c++.bool"
+                   name="Recognize &quot;bool&quot; keyword (C++ only)"
+                   tip="If true, &quot;bool&quot; will be recognized as a keyword"
+                   applicabilityCalculator="com.arc.cdt.toolchain.ApplicabilityCalculator"                                                         
+                   valueType="boolean"/>
+            <option
+                  commandFalse="-Hoff=for_dcln_local"
+                  defaultValue="true"
+                  id="arc.compiler.options.c++.forloop"
+                  category="com.arc.cdt.toolchain.compiler.category.c++"
+                  name="Restrict scope of for-loop variables"
+                  tip="For-loop index variable&apos;s scope to restricted to the for loop"
+                  applicabilityCalculator="com.arc.cdt.toolchain.ApplicabilityCalculator"                                                         
+                  valueType="boolean"/>
+
+            <option
+                  category="com.arc.cdt.toolchain.compiler.category.general"
+                  commandFalse="-Hnocopyr"
+                  defaultValue="false"
+                  id="arc.compiler.options.quiet"
+                  name="Display copyright (-Hcopyr/-Hnocopyr)"
+                  tip="when unchecked, the copyright message is suppressed"
+                  valueType="boolean"/>
+                  
+           
+             <option
+                   category="com.arc.cdt.toolchain.compiler.category.general"
+                   id="arc.compiler.options.misc.additional"
+                   name="Additional Compiler Flags"
+                   tip="Specify additional compiler flags"
+                   valueType="stringList"/>
+             <option
+                   category="com.arc.cdt.toolchain.compiler.category.general"
+                   command="-Hpragma="
+                   id="arc.compiler.options.misc.pragmas"
+                   isAbstract="false"
+                   name="Pragma specifications [e.g., offwarn(123)]"
+                   tip="Specify pragmas to be processed at start of compilation"
+                   valueType="stringList"/>
+             <optionCategory
+                   name="Esoteric Toggles"
+                   id="com.arc.cdt.toolchain.option.compiler.toggles"/>
+            
+                <option
+                      category="com.arc.cdt.toolchain.option.compiler.toggles"
+                      tip="Assume pointer contents are typed as declared"
+                      valueType="enumerated"
+                      applicabilityCalculator="com.arc.cdt.toolchain.ApplicabilityCalculator"                                                         
+                      id="com.arc.cdt.toolchain.options.toggles.behaved"
+                      name="Behaved - assume program is &quot;behaved&quot;">
+                      <enumeratedOptionValue
+                         isDefault="true"
+                         name="Default"
+                         id="arc.toggle.behaved.none"/>
+                      <enumeratedOptionValue
+                         name="Enable"
+                         command="-Hon=behaved"
+                         id="arc.toggle.behaved.on"/>
+                      <enumeratedOptionValue
+                         name="Disable"
+                         command="-Hoff=behaved"
+                         id="arc.toggle.behaved.off"/>
+                </option>
+                
+                 <option
+                      category="com.arc.cdt.toolchain.option.compiler.toggles"
+                      tip="Generate tracing code at each call"
+                      applicabilityCalculator="com.arc.cdt.toolchain.ApplicabilityCalculator"
+                      valueType="boolean"
+                      command="-Hon=Call_trace"
+                      id="com.arc.cdt.toolchain.options.toggles.calltrace"
+                      defaultValue="false"
+                      name="Call_trace - Generate tracing code at each call"/>
+                 <option
+                      category="com.arc.cdt.toolchain.option.compiler.toggles"
+                      tip="Generate object file comment with compiler information"
+                      applicabilityCalculator="com.arc.cdt.toolchain.ApplicabilityCalculator"
+                      valueType="boolean"
+                      commandFalse="-Hoff=command_line_ident"
+                      id="com.arc.cdt.toolchain.options.toggles.command_line_ident"
+                      defaultValue="true"
+                      name="Command_line_ident - emit compiler version in object file"/>
+                  <option
+                      category="com.arc.cdt.toolchain.option.compiler.toggles"
+                      tip="Treat small common variables as export"
+                      applicabilityCalculator="com.arc.cdt.toolchain.ApplicabilityCalculator"
+                      valueType="boolean"
+                      commandFalse="-Hoff=common_in_small_data"
+                      id="com.arc.cdt.toolchain.options.toggles.common_in_small_data"
+                      defaultValue="true"
+                      name="Common_in_small_data"/>
+                   <option
+                      category="com.arc.cdt.toolchain.option.compiler.toggles"
+                      tip="Implicitly define static class variables (C++)"
+                      applicabilityCalculator="com.arc.cdt.toolchain.ApplicabilityCalculator"
+                      valueType="boolean"
+                      command="-Hon=define_static_members"
+                      id="com.arc.cdt.toolchain.options.toggles.define_static_members"
+                      defaultValue="false"
+                      name="Define_static_members - implicitly define static class variables (C++)"/>
+                  <option
+                      category="com.arc.cdt.toolchain.option.compiler.toggles"
+                      tip="Do all floating point operations in at least double precision"
+                      applicabilityCalculator="com.arc.cdt.toolchain.ApplicabilityCalculator"
+                      valueType="enumerated"
+                      id="com.arc.cdt.toolchain.options.toggles.double_math_only"
+                      name="Double_math_only - do floating point in double precision">
+                      <enumeratedOptionValue
+                         isDefault="true"
+                         name="Default"
+                         id="arc.toggle.double_math_only.none"/>
+                      <enumeratedOptionValue
+                         name="Enable"
+                         command="-Hon=double_math_only"
+                         id="arc.toggle.double_math_only.on"/>
+                      <enumeratedOptionValue
+                         name="Disable"
+                         command="-Hoff=double_math_only"
+                         id="arc.toggle.double_math_only.off"/>
+                </option>    
+                 <option
+                      category="com.arc.cdt.toolchain.option.compiler.toggles"
+                      applicabilityCalculator="com.arc.cdt.toolchain.ApplicabilityCalculator"
+                      tip="Treat non-prototyped functions returning &quot;float&quot; as if returning &quot;double&quot;"
+                      valueType="boolean"
+                      command="-Hon=double_return"
+                      id="com.arc.cdt.toolchain.options.toggles.double_return"
+                      defaultValue="false"
+                      name="Double_return - non-prototyped functions returning &quot;float&quot; treated as double"/> 
+                <option
+                      category="com.arc.cdt.toolchain.option.compiler.toggles"
+                      tip="Downshift file names in all #include directives"
+                      valueType="boolean"
+                      command="-Hon=downshift_file_names"
+                      applicabilityCalculator="com.arc.cdt.toolchain.ApplicabilityCalculator"
+                      id="com.arc.cdt.toolchain.options.toggles.downshift_file_names"
+                      defaultValue="false"
+                      name="Downshift_file_names - downshift file names in all #include directives"/> 
+                      <!-- Redundant
+                 <option
+                      category="com.arc.cdt.toolchain.option.compiler.toggles"
+                      tip="Place each function in its own text section"
+                      valueType="enumerated"
+                      id="com.arc.cdt.toolchain.options.toggles.each_function_in_own_section"
+                      name="Each_function_in_own_section">
+                      <enumeratedOptionValue
+                         isDefault="true"
+                         name="Default"
+                         id="arc.toggle.each_function_in_own_section.none"/>
+                      <enumeratedOptionValue
+                         name="Enable"
+                         command="-Hon=Each_function_in_own_section"
+                         id="arc.toggle.each_function_in_own_section.on"/>
+                      <enumeratedOptionValue
+                         name="Disable"
+                         command="-Hoff=each_function_in_own_section"
+                         id="arc.toggle.each_function_in_own_section.off"/>
+                </option>  -->
+                <option
+                      category="com.arc.cdt.toolchain.option.compiler.toggles"
+                      tip="Insert code in each function epilog to display information"
+                      valueType="boolean"
+                      command="-Hon=epilog_trace"
+                      applicabilityCalculator="com.arc.cdt.toolchain.ApplicabilityCalculator"
+                      id="com.arc.cdt.toolchain.options.toggles.epilog_trace"
+                      defaultValue="false"
+                      name="Epilog_trace - display each function exit"/>
+                <option
+                      category="com.arc.cdt.toolchain.option.compiler.toggles"
+                      tip="Warn about functions with no return type that fail to return an integer"
+                      valueType="boolean"
+                      command="-Hon=int_function_warnings"
+                      applicabilityCalculator="com.arc.cdt.toolchain.ApplicabilityCalculator"
+                      id="com.arc.cdt.toolchain.options.toggles.int_function_warnings"
+                      defaultValue="false"
+                      name="Int_function_warnings -- warn about functions with no return type"/>
+                 <option
+                      category="com.arc.cdt.toolchain.option.compiler.toggles"
+                      tip="Remove superflious &quot;../&quot; sequences in file names of diagnostic messages"
+                      valueType="boolean"
+                      command="-Hon=normalize_file_names"
+                      applicabilityCalculator="com.arc.cdt.toolchain.ApplicabilityCalculator"
+                      id="com.arc.cdt.toolchain.options.toggles.normalize_files_names"
+                      defaultValue="false"
+                      name="Normalize_file_names"/>
+                 <option
+                      category="com.arc.cdt.toolchain.option.compiler.toggles"
+                      applicabilityCalculator="com.arc.cdt.toolchain.ApplicabilityCalculator"
+                      tip="Suppress the alignment of packed structs"
+                      valueType="boolean"
+                      command="-Hon=packed_means_unaligned"
+                      id="com.arc.cdt.toolchain.options.toggles.packed_means_unaligned"
+                      defaultValue="false"
+                      name="Packed_means_unaligned - Suppress the alignment of packed structs"/>
+                  <option
+                      category="com.arc.cdt.toolchain.option.compiler.toggles"
+                      tip="Warn about assignments into parameter variables"
+                      applicabilityCalculator="com.arc.cdt.toolchain.ApplicabilityCalculator"
+                      valueType="boolean"
+                      command="-Hon=parm_assignment_warnings"
+                      id="com.arc.cdt.toolchain.options.toggles.parm_assignment_warnings"
+                      defaultValue="false"
+                      name="Parm_assignment_warnings - warn about assignments into parameters"/>
+                   <option
+                      category="com.arc.cdt.toolchain.option.compiler.toggles"
+                      tip="Insert calls at each function prolog to display information"
+                      valueType="boolean"
+                      applicabilityCalculator="com.arc.cdt.toolchain.ApplicabilityCalculator"
+                      command="-Hon=prolog_trace"
+                      id="com.arc.cdt.toolchain.options.toggles.prolog_trace"
+                      defaultValue="false"
+                      name="Prolog_trace - display function name in prolog"/>
+                   <option
+                      category="com.arc.cdt.toolchain.option.compiler.toggles"
+                      tip="Map all string constants into a read-only data section"
+                      valueType="enumerated"
+                      applicabilityCalculator="com.arc.cdt.toolchain.ApplicabilityCalculator"
+                      id="com.arc.cdt.toolchain.options.toggles.read_only_strings"
+                      name="Read_only_strings -- map all strings in read-only section">
+                      <enumeratedOptionValue
+                         isDefault="true"
+                         name="Default"
+                         id="arc.toggle.read_only_strings.none"/>
+                      <enumeratedOptionValue
+                         name="Enable"
+                         command="-Hon=read_only_strings"
+                         id="arc.toggle.read_only_strings.on"/>
+                      <enumeratedOptionValue
+                         name="Disable"
+                         command="-Hoff=read_only_strings"
+                         id="arc.toggle.read_only_strings.off"/>
+                    </option> 
+                    <option
+                      category="com.arc.cdt.toolchain.option.compiler.toggles"
+                      applicabilityCalculator="com.arc.cdt.toolchain.ApplicabilityCalculator"
+                      tip="Inline certain functions of the ANSI C library"
+                      valueType="boolean"
+                      commandFalse="-Hoff=recognize_library"
+                      id="com.arc.cdt.toolchain.options.toggles.recognize_library"
+                      defaultValue="true"
+                      name="Recognize_library - Inline certain functions of ANSI C library"/>
+                    <option
+                      category="com.arc.cdt.toolchain.option.compiler.toggles"
+                      applicabilityCalculator="com.arc.cdt.toolchain.ApplicabilityCalculator"
+                      tip="Recognize the ANSI C trigraph sequences"
+                      valueType="enumerated"
+                      id="com.arc.cdt.toolchain.options.toggles.recognize_trigraphs"
+                      name="Recognize_trigraphs">
+                      <enumeratedOptionValue
+                         isDefault="true"
+                         name="Default"
+                         id="arc.toggle.recognize_trigraphs.none"/>
+                      <enumeratedOptionValue
+                         name="Enable"
+                         command="-Hon=recognize_trigraphs"
+                         id="arc.toggle.recognize_trigraphs.on"/>
+                      <enumeratedOptionValue
+                         name="Disable"
+                         command="-Hoff=recognize_trigraphs"
+                         id="arc.toggle.recognize_trigraphs.off"/>
+                    </option> 
+               
+             <option
+                   command="-Hon=pointers_compatible"
+                   defaultValue="false"
+                   isAbstract="false"
+                   valueType="boolean"
+                   tip="Relaxes compatibility rules between pointer types"
+                   category="com.arc.cdt.toolchain.compiler.category.language"
+                   applicabilityCalculator="com.arc.cdt.toolchain.ApplicabilityCalculator"
+                   name="Make all pointers assignment compatible"
+                   id="arc.compiler.options.ptrscompat"/>
+             <option
+                   command="-Hon=pointers_compatible_with_ints"
+                   defaultValue="false"
+                   isAbstract="false"
+                   applicabilityCalculator="com.arc.cdt.toolchain.ApplicabilityCalculator"
+                   valueType="boolean"
+                   tip="Allow integers and pointers to be assignment compatible"
+                   category="com.arc.cdt.toolchain.compiler.category.language"
+                   name="Make pointers compatible with integers"
+                   id="arc.compiler.options.ptrint"/>
+             <option
+                   command="-Hon=long_enums"
+                   defaultValue="false"
+                   isAbstract="false"
+                   valueType="boolean"
+                   tip="Enum variables will always be mapped to a full 32 bits"
+                   category="com.arc.cdt.toolchain.compiler.category.storemapping"
+                   name="Always map enum types to full word"
+                   id="arc.compiler.options.longenums"/>
+             <option
+                   category="com.arc.cdt.toolchain.compiler.category.language"
+                   command="-Hoff=char_default_unsigned"
+                   defaultValue="false"
+                   applicabilityCalculator="com.arc.cdt.toolchain.ApplicabilityCalculator"
+                   id="arc.compiler.options.unsignedchar"
+                   isAbstract="false"
+                   name="Make &quot;char&quot; signed by default"
+                   tip="Specify &quot;char&quot; is signed or unsigned."
+                   valueType="boolean"/>
+             <option
+                   category="com.arc.cdt.toolchain.compiler.category.language"
+                   command="-Hon=char_is_rep"
+                   defaultValue="false"
+                   id="arc.compiler.options.char_is_rep"
+                   applicabilityCalculator="com.arc.cdt.toolchain.ApplicabilityCalculator"
+                   isAbstract="false"
+                   name="Treat &quot;char&quot; and the signed/unsigned equivalent the same"
+                   tip="Specify whether &quot;char&quot; is to be equivalent to &quot;signed char&quot; or &quot;unsigned char&quot;."
+                   valueType="boolean"/>
+             <option
+                   category="com.arc.cdt.toolchain.compiler.category.opt"
+                   commandFalse="-Hoff=recognize_library"
+                   defaultValue="true"
+                   id="arc.compiler.options.recognize_library"
+                   isAbstract="false"
+                   name="Inline certain ANSI functions"
+                   tip="Permit compiler to inline a subset of the ANSI functions"
+                   valueType="boolean"/>
+              <option
+                    category="com.arc.cdt.toolchain.compiler.category.language"
+                    command="-Hpcc"
+                    defaultValue="false"
+                    id="arc.compiler.options.pcc"
+                    applicabilityCalculator="com.arc.cdt.toolchain.ApplicabilityCalculator"
+                    isAbstract="false"
+                    name="Be compatible with the Portable C Compiler (PCC) "
+                    tip="Relax language rules to coincide with the Portable C Compiler"
+                    valueType="boolean"/>
+               <option
+                     category="com.arc.cdt.toolchain.compiler.category.opt"
+                     command="-Hnoinline"
+                     defaultValue="false"
+                     id="arc.compiler.options.noinline"
+                     isAbstract="false"
+                     name="Suppress all function inlining (-Hnoinline)"
+                     tip="Suppress the inlining of functions"
+                     valueType="boolean"/>
+               <option
+                     category="com.arc.cdt.toolchain.compiler.category.general"
+                     command="-Hkeepasm"
+                     defaultValue="false"
+                     id="arc.compiler.options.keepasm"
+                     isAbstract="false"
+                     name="Preserve generated assembly files"
+                     tip="Prevent the deletion of the generated assembly file"
+                     valueType="boolean"/>
+               <option
+                     applicabilityCalculator="com.arc.cdt.toolchain.ApplicabilityCalculator"
+                     category="com.arc.cdt.toolchain.compiler.category.general"
+                     command="-Hanno"
+                     defaultValue="false"
+                     id="arc.compiler.options.anno"
+                     isAbstract="false"
+                     name="Annotate assembly files (-Hanno)"
+                     tip="Annotate the generated assembly file with source statements"
+                     valueType="boolean"/>
+               <option
+                     category="com.arc.cdt.toolchain.compiler.category.storemapping"
+                     command="-Hon=multiple_var_defs"
+                     defaultValue="false"
+                     id="arc.compiler.options.multiple_var_defs"
+                     isAbstract="false"
+                     name="Map uninitialized globals as &quot;common&quot;"
+                     tip="Map uninitialized global variables to named common"
+                     valueType="boolean"/>
+               <option
+                     category="com.arc.cdt.toolchain.compiler.category.storemapping"
+                     commandFalse="-Hnosdata"
+                     defaultValue="true"
+                     id="arc.compiler.options.nosdata"
+                     isAbstract="false"
+                     name="Map qualifying variables to &quot;small data&quot; section"
+                     tip="Place qualifying static variables into &quot;small data&quot; section (.sdata)"
+                     valueType="boolean"/>
+               <option
+                     category="com.arc.cdt.toolchain.compiler.category.storemapping"
+                     id="arc.compiler.options.endian"
+                     isAbstract="false"
+                     name="Endian"
+                     tip="Specify the endianess of the target code"
+                     valueType="enumerated">
+                  <enumeratedOptionValue
+                        isDefault="true"
+                        name="Little Endian"
+                        id="arc.compiler.option.endian.little"/>
+                  <enumeratedOptionValue
+                        command="-HB"
+                        name="Big Endian (-HB)"
+                        id="arc.compiler.option.endian.big"/>
+               </option>
+                <inputType
+                      dependencyCalculator="com.arc.cdt.managedbuilder.makegen.HighCDependencyGenerator"
+                      dependencyContentType="org.eclipse.cdt.core.cxxHeader"
+                      dependencyExtensions="h,H,hpp"
+                      id="com.arc.cdt.toolchain.inputTypeCPP"
+                      languageId="org.eclipse.cdt.core.g++"
+                      languageInfoCalculator="com.arc.cdt.toolchain.ARCLanguageCalculator"
+                      name="MetaWare C++ Input"
+                      primaryInput="true"
+                      scannerConfigDiscoveryProfileId="com.arc.cdt.toolchain.ScannerConfigurationDiscoveryProfile"
+                      sourceContentType="org.eclipse.cdt.core.cxxSource"
+                      sources="cc,cpp,C,CC,ii">
+         </inputType>
+         <inputType
+               dependencyCalculator="com.arc.cdt.managedbuilder.makegen.HighCDependencyGenerator"
+               dependencyContentType="org.eclipse.cdt.core.cHeader"
+               id="com.arc.cdt.toolchain.inputTypeC"
+               languageId="org.eclipse.cdt.core.gcc"
+               languageInfoCalculator="com.arc.cdt.toolchain.ARCLanguageCalculator"
+               name="MetaWare C Input"
+               primaryInput="true"
+               scannerConfigDiscoveryProfileId="com.arc.cdt.toolchain.ScannerConfigurationDiscoveryProfile"
+               sourceContentType="org.eclipse.cdt.core.cSource">
+         </inputType>
+               <option
+                     category="com.arc.cdt.toolchain.compiler.category.storemapping"
+                     command="-Hon=each_function_in_own_section"
+                     defaultValue="false"
+                     id="arc.compiler.options.own_section"
+                     isAbstract="false"
+                     name="Map each function in its own text section"
+                     tip="Place each function definition in its own control section"
+                     valueType="boolean"/>
+               <outputType
+                     buildVariable="OBJS"
+                     id="com.arc.cdt.toolchain.highC.output"
+                     name="MetaWare C Output"
+                     outputs="o"/>               
+         </tool>
+              <tool
+                    id="com.arc.cdt.toolchain.toolCompilerDebug"
+                    isAbstract="true"
+                    name="MetaWare C/C++ compiler for debug"
+                    superClass="com.arc.cdt.toolchain.toolCompiler">
+                 <option
+                       defaultValue="arc.optimization.level.none"
+                       isAbstract="false"
+                       id="arc.compiler.options.debug.optimization.level"
+                       superClass="arc.compiler.options.general.optimization.level"/>
+                 <option
+                       defaultValue="arc.debugging.level.default"
+                       isAbstract="false"
+                       id="arc.compiler.options.debugging.debugLevel"
+                       superClass="arc.compiler.options.debugging.level"/>
+              </tool>
+              <tool
+                    commandLineGenerator="com.arc.cdt.managedbuilder.makegen.HighCCommandLineGenerator"
+                    commandLinePattern="${COMMAND} -c ${FLAGS} ${OUTPUT_FLAG} ${OUTPUT} ${INPUTS}"
+                    errorParsers="com.arc.cdt.toolchain.ARCAssemblerErrorParser"
+                    id="com.arc.cdt.toolchain.assembler"
+                    isAbstract="true"
+                    name="Assembler"
+                    natureFilter="both"
+                    outputFlag="-o">
+                 <option
+                       category="com.arc.cdt.toolchain.asm.optionCategory.misc"
+                       command="-Hasopt=-L"
+                       defaultValue="false"
+                       id="com.arc.cdt.toolchain.asm.option.privateLabels"
+                       isAbstract="false"
+                       name="Place private labels into symbol table (-L)"
+                       tip="Don&apos;t exclude private labels from symbol table"
+                       valueType="boolean">
+                 </option>
+                 <option
+                       category="com.arc.cdt.toolchain.asm.optionCategory.misc"
+                       command="-Hasopt=-g"
+                       defaultValue="false"
+                       id="com.arc.cdt.toolchain.asm.option.g"
+                       isAbstract="false"
+                       name="Include debug line information (-g)"
+                       tip="Generate line table information for the debugger"
+                       valueType="boolean">
+                 </option>
+                 <optionCategory
+                       id="com.arc.cdt.toolchain.asm.optionCategory.preprocessor"
+                       name="Assembler Preprocessor">
+                 </optionCategory>
+                 <option
+                       browseType="directory"
+                       category="com.arc.cdt.toolchain.asm.optionCategory.includes"
+                       command="-Hasopt=-I"
+                       id="com.arc.cdt.toolchain.asm.option.includes"
+                       isAbstract="false"
+                       name="Directories to search for .include files"
+                       tip="Specify directories to search for include files"
+                       valueType="includePath">
+                 </option>
+                 <option
+                       category="com.arc.cdt.toolchain.asm.optionCategory.preprocessor"
+                       command="-Hasopt=-D"
+                       id="com.arc.cdt.toolchain.asm.option.defines"
+                       isAbstract="false"
+                       name="Preprocessor Defines (one per line)"
+                       tip="Define preprocessor symbols"
+                       valueType="definedSymbols">
+                 </option>
+                 <option
+                       category="com.arc.cdt.toolchain.asm.optionCategory.preprocessor"
+                       command="-Hasopt=-U"
+                       id="com.arc.cdt.toolchain.asm.options.undefines"
+                       isAbstract="false"
+                       name="Preprocessor Undefines (one per line)"
+                       tip="Specify predefined symbols to be undefined"
+                       valueType="definedSymbols">
+                 </option>
+                 <optionCategory
+                       id="com.arc.cdt.toolchain.asm.optionCategory.misc"
+                       name="General">
+                 </optionCategory>
+                 <option
+                       category="com.arc.cdt.toolchain.asm.optionCategory.misc"
+                       commandFalse="-Hnocopyr"
+                       defaultValue="false"
+                       id="com.arc.cdt.toolchain.asm.option.copyr"
+                       isAbstract="false"
+                       name="Display copyright (-Hcopyr/-Hnocopyr)"
+                       tip="when unchecked, the copyright message is suppressed"
+                       valueType="boolean">
+                 </option>
+                 <option
+                       category="com.arc.cdt.toolchain.asm.optionCategory.misc"
+                       id="com.arc.cdt.toolchain.option.asm.extra"
+                       isAbstract="false"
+                       name="Additional assembler options"
+                       tip="Specify additional assembler options that are not otherwise available"
+                       valueType="stringList">
+                 </option>
+                 <option
+                       category="com.arc.cdt.toolchain.asm.optionCategory.misc"
+                       command="-Hasopt=-w"
+                       defaultValue="false"
+                       id="com.arc.cdt.toolchain.option.asm.w"
+                       isAbstract="false"
+                       name="Suppress warning messages (-w)"
+                       tip="Suppress warning messages"
+                       valueType="boolean">
+                 </option>
+                 <option
+                       category="com.arc.cdt.toolchain.asm.optionCategory.misc"
+                       id="arc.assembler.options.endian"
+                       isAbstract="false"
+                       name="Endian"
+                       superClass="arc.compiler.options.endian"
+                       tip="Specify the endian of the target">
+                 </option>
+                 <optionCategory
+                       id="com.arc.cdt.toolchain.asm.optionCategory.includes"
+                       name="Include paths">
+                 </optionCategory>
+                 <inputType
+                       dependencyCalculator="com.arc.cdt.managedbuilder.makegen.HighCDependencyGenerator"
+                       id="com.arc.cdt.toolchain.asminput"
+                       name="Assembler Inputs"
+                       primaryInput="true"
+                       sourceContentType="org.eclipse.cdt.core.asmSource"
+                       sources="s,asm">
+                 </inputType>
+                 <outputType
+                       buildVariable="OBJS"
+                       id="com.arc.cdt.toolchain.asmoutput"
+                       name="Assembler Output"
+                       outputs="o">
+                 </outputType>
+              </tool>
+              <tool
+                    id="com.arc.cdt.toolchain.assemblerDebug"
+                    isAbstract="false"
+                    name="Assembler for debug">
+                 <option
+                       defaultValue="true"
+                       id="com.arc.cdt.toolchain.asmDebug.option.g"
+                       isAbstract="false"
+                       superClass="com.arc.cdt.toolchain.asm.option.g">
+                 </option>
+              </tool>
+              <tool
+                    commandLineGenerator="com.arc.cdt.managedbuilder.makegen.LinkCommandLineGenerator"
+                    commandLinePattern="${COMMAND}  ${FLAGS} ${OUTPUT_FLAG} ${OUTPUT} ${INPUTS}"
+                    errorParsers="com.arc.cdt.toolchain.ARCLinkerErrorParser"
+                    id="com.arc.cdt.toolchain.toolLinker"
+                    isAbstract="true"
+                    name="MetaWare Linker"
+                    natureFilter="both"
+                    outputFlag="-o">
+                 <supportedProperties>
+                    <property
+                          id="org.eclipse.cdt.build.core.buildArtefactType">
+                       <value
+                             id="org.eclipse.cdt.build.core.buildArtefactType.exe">
+                       </value>
+                       <value
+                             id="org.eclipse.cdt.build.core.buildArtefactType.sharedLib">
+                       </value>
+                    </property>
+                 </supportedProperties>
+                 <enablement type="ALL">
+                      <not>
+                         <checkBuildProperty
+                               property="org.eclipse.cdt.build.core.buildArtefactType"
+                              value="org.eclipse.cdt.build.core.buildArtefactType.staticLib">
+                          </checkBuildProperty>
+                     </not>
+                 </enablement>
+                 <optionCategory
+                       id="arc.linker.category.special"
+                       name="Runtime Libraries">
+                 </optionCategory>
+                 
+             <option
+                  
+               category="arc.linker.category.special"
+               defaultValue="false"
+               id="arc.compiler.options.heap"
+               name="Specify Heap Size (values are power of 2 such as 256,512,1K,...,16M)"
+               tip="when checked, user needs to specify heap size"
+               valueType="boolean"/>
+                  
+             <option
+               
+               category="arc.linker.category.special"
+               command="-Hheap="
+               id="arc.compiler.options.heapsize"
+               name="Heap Size (-Hheap=)"
+               resourceFilter="all"
+               tip="Heap Size's values are power of 2 such as 256, 512, 1k, 2k, 4k, 8k, 16k, 32k, 64k, 128k,...,16M"
+               defaultValue="0"
+               applicabilityCalculator="com.arc.cdt.toolchain.ApplicabilityCalculator"   
+               valueType="string"/>
+               
+            <option
+                 
+               category="arc.linker.category.special"
+               defaultValue="false"
+               id="arc.compiler.options.stack"
+               name="Specify Stack Size (values are power of 2 such as 256,512,1K,...,128K)"
+               tip="when checked, user needs to specify stack size"
+               valueType="boolean"/>
+                  
+            <option
+               
+               category="arc.linker.category.special"
+               command="-Hstack="
+               id="arc.compiler.options.stacksize"
+               name="Heap Size (-Hstack=)"
+               resourceFilter="all"
+               tip="Stack Size's values are power of 2 such as 256, 512, 1k, 2k, 4k, 8k, 16k 32k 64k 128k"
+               defaultValue="64K"
+               applicabilityCalculator="com.arc.cdt.toolchain.ApplicabilityCalculator"   
+               valueType="string"/>
+                    
+           <option
+               category="arc.linker.category.special"
+               commandFalse="-Hhostlib="
+               defaultValue="true"
+               id="arc.link.options.hostlink"
+               name="Link in the Hostlink Libraries"
+               tip="Link in the hostlink libraries so that the simulator can do I/O"
+               valueType="boolean">
+           </option>
+                 <optionCategory
+                       id="arc.linker.category.search_path"
+                       name="Search Path">
+                 </optionCategory>
+                 <option
+                       browseType="directory"
+                       category="arc.linker.category.search_path"
+                       command="-L"
+                       id="arc.link.paths"
+                       name="Library Search Paths (for -lx)"
+                       tip="Specify library seasrch paths for the &quot;-lx&quot; options"
+                       valueType="stringList">
+                 </option>
+                 <optionCategory
+                       id="arc.linker.category.user_objs"
+                       name="Additional Object Files &amp; Libraries">
+                 </optionCategory>
+                 <option
+                       browseType="file"
+                       category="arc.linker.category.user_objs"
+                       id="arc.link.ld.user_objs"
+                       name="Additional Object Files &amp;&amp; Libraries"
+                       tip="List paths to additional object files and libraries"
+                       valueType="userObjs">
+                 </option>
+                 <option
+                       category="arc.linker.category.other"
+                       commandFalse="-Hldopt=-q"
+                       defaultValue="false"
+                       id="arc.link.options.quiet"
+                       name="Display copyright (-q)"
+                       tip="Specify whether or not to display copyright message"
+                       valueType="boolean">
+                 </option>
+                 <option
+                       category="arc.linker.category.other"
+                       id="arc.link.options.ldflags"
+                       name="Additional options for linking (one per line)"
+                       tip="Specify any additional options for linking that are not otherwise available"
+                       valueType="stringList">
+                 </option>
+                 <option
+                       category="arc.linker.category.special"
+                       command="-pg"
+                       defaultValue="false"
+                       id="arc.link.options.profiling"
+                       name="Include profiling code (-pg)"
+                       tip="Arrange to generate profilling information at runtime"
+                       valueType="boolean">
+                 </option>
+                 <optionCategory
+                       id="com.arc.cdt.toolchain.linker.category.command"
+                       name="Command files">
+                 </optionCategory>
+                 <option
+                       browseType="file"
+                       category="com.arc.cdt.toolchain.linker.category.command"
+                       id="com.arc.cdt.toolchain.option.linker.svr3"
+                       isAbstract="false"
+                       name="SVR3-style command files"
+                       tip="Specify Unix SVR3-style command files"
+                       valueType="userObjs">
+                 </option>
+                 <option
+                       browseType="file"
+                       category="com.arc.cdt.toolchain.linker.category.command"
+                       command="-Hldopt=-M,"
+                       id="com.arc.cdt.toolchain.option.linker.svr4"
+                       isAbstract="false"
+                       name="SVR4-style command files"
+                       tip="Specify SVR4-style command files"
+                       valueType="symbolFiles">
+                 </option>
+                 <optionCategory
+                       id="com.arc.cdt.toolchain.linker.category.listing"
+                       name="Map Listing">
+                 </optionCategory>
+                 <optionCategory
+                       id="arc.linker.category.output"
+                       name="Output Generation">
+                 </optionCategory>
+                 <optionCategory
+                       id="arc.linker.category.other"
+                       name="Miscellaneous ">
+                 </optionCategory>
+                 <option
+                       category="arc.linker.category.other"
+                       command="-Bgrouplib"
+                       defaultValue="false"
+                       id="com.arc.cdt.toolchain.option.linker.grouplib"
+                       isAbstract="false"
+                       name="Search libraries together as a group (-Bgrouplib)"
+                       tip="Effectively combine all libraries so that early ones can resolve unresolved symbols in later ones"
+                       valueType="boolean">
+                 </option>
+                 <option
+                       category="com.arc.cdt.toolchain.linker.category.listing"
+                       command="-Hldopt=-Coutput=${BuildArtifactFileBaseName}.map"
+                       defaultValue="false"
+                       id="com.arc.cdt.toolchain.linker.option.map"
+                       isAbstract="false"
+                       name="Generate listing file (=.map)"
+                       tip="Generate a listing file"
+                       valueType="boolean">
+                 </option>
+                 <option
+                       applicabilityCalculator="com.arc.cdt.toolchain.ApplicabilityCalculator"
+                       category="com.arc.cdt.toolchain.linker.category.listing"
+                       command="-Hldopt=-Ccrossref"
+                       defaultValue="false"
+                       id="com.arc.cdt.toolchain.crossref"
+                       isAbstract="false"
+                       name="Display cross-reference in map file (-Ccrossref)"
+                       tip="Display cross-reference information in listing file against section and object file."
+                       valueType="boolean">
+                 </option>
+                  <option
+                       applicabilityCalculator="com.arc.cdt.toolchain.ApplicabilityCalculator"
+                       category="com.arc.cdt.toolchain.linker.category.listing"
+                       command="-Hldopt=-Ccrossfunc"
+                       defaultValue="false"
+                       id="com.arc.cdt.toolchain.linker.option.crossfunc"
+                       isAbstract="false"
+                       name="Display cross-reference against referencing function (-Ccrossfunc)"
+                       tip="Display cross-reference information in listing file against the function from which each reference occurs."
+                       valueType="boolean">
+                 </option>
+                 <option
+                       applicabilityCalculator="com.arc.cdt.toolchain.ApplicabilityCalculator"
+                       category="com.arc.cdt.toolchain.linker.category.listing"
+                       command="-Hldopt=-Cglobals"
+                       defaultValue="false"
+                       id="com.arc.cdt.toolchain.linker.option.globals"
+                       isAbstract="false"
+                       name="Display globals in map file (-Cglobals)"
+                       tip="Display global symbols within listing file"
+                       valueType="boolean">
+                 </option>
+                 <option
+                       applicabilityCalculator="com.arc.cdt.toolchain.ApplicabilityCalculator"
+                       category="com.arc.cdt.toolchain.linker.category.listing"
+                       command="-Hldopt=-Cfunctions"
+                       defaultValue="false"
+                       id="com.arc.cdt.toolchain.linker.option.functions"
+                       isAbstract="false"
+                       name="Display symbols referenced from each function (-Cfunctions)"
+                       tip="For each function, list the symbols referenced and the relative offset of the reference."
+                       valueType="boolean">
+                 </option>
+                 <option
+                       applicabilityCalculator="com.arc.cdt.toolchain.ApplicabilityCalculator"
+                       category="com.arc.cdt.toolchain.linker.category.listing"
+                       command="-Hldopt=-Csections"
+                       defaultValue="true"
+                       id="com.arc.cdt.toolchain.linker.option.sections"
+                       isAbstract="false"
+                       name="Display section mappings (-Csections)"
+                       tip="Display section addresses within listing file"
+                       valueType="boolean">
+                 </option>
+                 <option
+                       applicabilityCalculator="com.arc.cdt.toolchain.ApplicabilityCalculator"
+                       category="com.arc.cdt.toolchain.linker.category.listing"
+                       command="-Hldopt=-Csymbols"
+                       defaultValue="false"
+                       id="com.arc.cdt.toolchain.linker.option.symbols"
+                       isAbstract="false"
+                       name="Display symbol table (-Csymbols)"
+                       tip="Display complete symbol table within the listing file."
+                       valueType="boolean">
+                 </option>
+                 <option
+                       applicabilityCalculator="com.arc.cdt.toolchain.ApplicabilityCalculator"
+                       category="com.arc.cdt.toolchain.linker.category.listing"
+                       command="-Hldopt=-Ctables"
+                       defaultValue="false"
+                       id="com.arc.cdt.toolchain.linker.option.tables"
+                       isAbstract="false"
+                       name="Display summary of linker-generated tables (-Ctables)"
+                       tip="Generate a summary of various linker-defined tables in the listing file."
+                       valueType="boolean">
+                 </option>
+                 <option
+                       applicabilityCalculator="com.arc.cdt.toolchain.ApplicabilityCalculator"
+                       category="com.arc.cdt.toolchain.linker.category.listing"
+                       command="-Hldopt=-Csize"
+                       defaultValue="true"
+                       id="com.arc.cdt.toolchain.linker.option.size"
+                       isAbstract="false"
+                       name="Display size summary (-Csize)"
+                       resourceFilter="all"
+                       tip="display size summary of generated output file"
+                       valueType="boolean">
+                 </option>
+                 <option
+                       applicabilityCalculator="com.arc.cdt.toolchain.ApplicabilityCalculator"
+                       category="com.arc.cdt.toolchain.linker.category.listing"
+                       command="-Hldopt=-Cunmangle"
+                       defaultValue="true"
+                       id="com.arc.cdt.toolchain.linker.option.unmangle"
+                       isAbstract="false"
+                       name="Unmangle C++ names (-Cunmangle)"
+                       tip="Display C++ symbols in a readable form"
+                       valueType="boolean">
+                 </option>
+                 <option
+                       category="com.arc.cdt.toolchain.linker.category.listing"
+                       command="-Hldopt=-zlistunref"
+                       defaultValue="false"
+                       id="com.arc.cdt.toolchain.linker.option.listunref"
+                       isAbstract="false"
+                       name="List unreferenced files or sections (-zlistunref)"
+                       tip="Produce list of unreferenced files and control sections"
+                       valueType="boolean">
+                 </option>
+                 <option
+                       category="arc.linker.category.special"
+                       id="arc.linker.options.endian"
+                       isAbstract="false"
+                       name="Endian"
+                       tip="Indicate which library to link against based on endian"
+                       valueType="enumerated">
+                    <enumeratedOptionValue
+                          id="arc.compiler.option.endian.little"
+                          isDefault="true"
+                          name="Little Endian">
+                    </enumeratedOptionValue>
+                    <enumeratedOptionValue
+                          command="-HB"
+                          id="arc.compiler.option.endian.big"
+                          name="Big Endian">
+                    </enumeratedOptionValue>
+                 </option>
+                 <option
+                       category="arc.linker.category.output"
+                       command="-Hpictable"
+                       defaultValue="false"
+                       id="arc.linker.options.pictable"
+                       isAbstract="false"
+                       name="Generate PIC table (-Hpictable)"
+                       tip="Generate position-independent code"
+                       valueType="boolean">
+                 </option>
+                 <option
+                       category="arc.linker.category.output"
+                       command="-Bcopydata"
+                       defaultValue="false"
+                       id="arc.linker.options.copydata"
+                       isAbstract="false"
+                       name="Initialize read/write data from ROM .initdat section (-Bcopydata)"
+                       tip="Arrange to create read/writable data sections by copying from the &quot;.initdat&quot; section in ROM"
+                       valueType="boolean">
+                 </option>
+                 <option
+                       category="arc.linker.category.output"
+                       command="-Bzerobss"
+                       defaultValue="false"
+                       id=" arc.linker.options.zerobss"
+                       isAbstract="false"
+                       name="Zero BSS at startup (-Bzerobss)"
+                       tip="Arrange to zero BSS during runtime startup"
+                       valueType="boolean">
+                 </option>
+                 <option
+                       category="arc.linker.category.output"
+                       command="-zpurgetext"
+                       defaultValue="false"
+                       id="arc.linker.options.purgetext"
+                       isAbstract="false"
+                       name="Purge unreferenced text sections (-zpurgetext)"
+                       tip="Transitively delete all unreferenced sections."
+                       valueType="boolean">
+                 </option>
+                 <option
+                       category="arc.linker.category.output"
+                       commandFalse="-Hldopt=-Xnocompress"
+                       defaultValue="true"
+                       id="arc.linker.options.nocomporess"
+                       isAbstract="false"
+                       name="Compress the .initdat section content (-Xnocompress)"
+                       tip="Specify whether or not to compress the content of the .initdat section."
+                       valueType="boolean">
+                 </option>
+                 <option
+                       category="arc.linker.category.output"
+                       command="-Hldopt=-Xcompress_stats"
+                       defaultValue="false"
+                       id="arc.linker.options.nocompress"
+                       isAbstract="false"
+                       name="Show compression statistics for .initdata section (-Xcompress_stats)"
+                       tip="Display compression statistics for the .initdata section (not recognized if no .initdat section in link) "
+                       valueType="boolean">
+                 </option>
+                 <option
+                       category="arc.linker.category.special"
+                       commandFalse="-Hnocrt"
+                       defaultValue="true"
+                       id="arc.linker.options.nocrt"
+                       isAbstract="false"
+                       name="Link in default startup code (-Hnocrt)"
+                       tip="Specify whether or not to include C startup code"
+                       valueType="boolean">
+                 </option>
+                 <option
+                       category="arc.linker.category.special"
+                       commandFalse="-Hnolib"
+                       defaultValue="true"
+                       id="arc.linker.options.nolib"
+                       applicabilityCalculator="com.arc.cdt.toolchain.ApplicabilityCalculator"                      
+                       isAbstract="false"
+                       name="Link in standard C/C++ library (-Hnolib)"
+                       tip="Specify whether or not to include the C runtime library"
+                       valueType="boolean">
+                 </option>
+                 <option
+                       category="arc.linker.category.special"
+                       id="arc.linker.options.rtos"
+                       isAbstract="false"
+                       name="Include RTOS-specific thread library"
+                       tip="Specify RTOS library to link against"
+                       valueType="enumerated">
+                    <enumeratedOptionValue
+                          id="arc.linker.options.rtos.NONE"
+                          isDefault="true"
+                          name="(None)">
+                    </enumeratedOptionValue>
+                    <enumeratedOptionValue
+                          command="-Heos=mqx"
+                          id="arc.linker.options.rtos.mqx"
+                          name="MQX">
+                    </enumeratedOptionValue>
+                    <enumeratedOptionValue
+                          command="-Heos=threadx"
+                          id="arc.linker.options.rtos.threadx"
+                          name="ThreadX">
+                    </enumeratedOptionValue>
+                    <enumeratedOptionValue
+                          command="-Heos=nucleus"
+                          id="arc.linker.options.rtos.nucleus"
+                          name="Nucleus">
+                    </enumeratedOptionValue>
+                 </option>
+                 <option
+                       category="arc.linker.category.other"
+                       command="-e "
+                       defaultValue="_start"
+                       id="arc.linker.options.entrypoint"
+                       isAbstract="false"
+                       name="Entry point (-e)"
+                       tip="Specify the entry-point name"
+                       valueType="string">
+                 </option>
+                 <option
+                       category="arc.linker.category.other"
+                       command="-zdup"
+                       defaultValue="false"
+                       id="arc.linker.options.zdup"
+                       isAbstract="false"
+                       name="Permit duplicate symbols with warning (-zdups)"
+                       tip="Specifiy whether duplicate symbols are permitted"
+                       valueType="boolean">
+                 </option>
+                 <outputType
+                       buildVariable="EXECUTABLES"
+                       id="com.arc.cdt.toolchain.linker.output"
+                       name="Linker Output"
+                       nameProvider="org.eclipse.cdt.managedbuilder.makegen.gnu.GnuLinkOutputNameProvider"
+                       outputs=",elf,so"
+                       primaryOutput="true">
+                 </outputType>
+                 <inputType
+                       buildVariable="OBJS"
+                       dependencyCalculator="org.eclipse.cdt.managedbuilder.makegen.internal.DefaultNoDependencyCalculator"
+                       id="com.arc.cdt.toolchain.linker.input"
+                       multipleOfType="true"
+                       name="Linker Input"
+                       sources="o,a,lib">
+                    <additionalInput
+                          kind="additionalinputdependency"
+                          paths="$(USER_OBJS)">
+                    </additionalInput>
+                    <additionalInput
+                          kind="additionalinput"
+                          paths="$(LIBS)">
+                    </additionalInput>
+                 </inputType>
+                 <outputType
+                       buildVariable="MAPFILE"
+                       id="com.arc.cdt.toolchain.linker.mapoutput"
+                       name="Linker Map File"
+                       nameProvider="com.arc.cdt.managedbuilder.makegen.LinkerNameProvider"
+                       outputNames="${BuildArtifactFileBaseName}.map"
+                       primaryOutput="false">
+                 </outputType>
+              </tool>
+       <tool
+             command="arac"
+             commandLinePattern="${COMMAND} ${OUTPUT_FLAG} ${OUTPUT} ${INPUTS}"
+             id="com.arc.cdt.toolchain.archiver"
+             isAbstract="true"
+             name="MetaWare Archiver"
+             natureFilter="both"
+             outputFlag="-r">
+           <supportedProperties>
+                <property id="org.eclipse.cdt.build.core.buildArtefactType">
+    	            <value id="org.eclipse.cdt.build.core.buildArtefactType.staticLib"/>
+                </property>
+           </supportedProperties>
+           <enablement type="ALL">
+                <checkBuildProperty
+                  property="org.eclipse.cdt.build.core.buildArtefactType"
+                  value="org.eclipse.cdt.build.core.buildArtefactType.staticLib">
+                </checkBuildProperty>
+           </enablement>
+           <inputType
+                 buildVariable="OBJS"
+                 dependencyCalculator="org.eclipse.cdt.managedbuilder.makegen.internal.DefaultNoDependencyCalculator"
+                 id="com.arc.cdt.toolchain.archiveInput"
+                 multipleOfType="true"
+                 sourceContentType="org.eclipse.cdt.managedbuilder.core.compiledObjectFile"
+                 sources="o,obj"/>
+           <outputType
+                buildVariable="ARCHIVES"
+                id="com.arc.cdt.toolchain.archiveOutput"
+                outputs="a,lib"/>
+       </tool>
+             <!--           scannerInfoParserID="com.arc.cdt.toolchain.ARCScannerInfoConsoleParser"
+            scannerInfoProviderID="com.arc.cdt.toolchain.arc.ARCExternalScannerInfoProvider"
+            scannerInfoCollector="com.arc.cdt.managedbuilder.scannerconfig.ARCScannerInfoCollector"
+            -->
+ 
+      <projectType
+            id="com.arc.toolchain.projectType"
+            isAbstract="true"
+            />
+      <projectType
+            buildArtefactType="org.eclipse.cdt.build.core.buildArtefactType.exe"
+            buildProperties="org.eclipse.cdt.build.core.buildArtefactType=org.eclipse.cdt.build.core.buildArtefactType.exe"
+            id="com.arc.cdt.toolchain.projectType.exe"
+            isAbstract="true"
+            superClass="com.arc.toolchain.projectType">
+      </projectType>
+      <projectType
+            buildArtefactType="org.eclipse.cdt.build.core.buildArtefactType.staticLib"
+            buildProperties="org.eclipse.cdt.build.core.buildArtefactType=org.eclipse.cdt.build.core.buildArtefactType.staticLib"
+            id="com.arc.cdt.toolchain.projectType.lib"
+            isAbstract="true"
+            superClass="com.arc.toolchain.projectType">
+      </projectType>
+      <configuration
+            cleanCommand="rm -rf"
+            id="com.arc.cdt.toolchain.configuration.base">
+             <enablement type="CONTAINER_ATTRIBUTE" 
+              	attribute="artifactExtension"
+              	value="so"
+              	extensionAdjustment="false">
+			  	<checkBuildProperty 
+			  		property="org.eclipse.cdt.build.core.buildArtefactType"
+			  		value="org.eclipse.cdt.build.core.buildArtefactType.sharedLib"/>
+			  </enablement>
+		    <enablement type="CONTAINER_ATTRIBUTE" 
+              	attribute="artifactExtension" 
+              	value="a"
+              	extensionAdjustment="false">
+			  	<checkBuildProperty 
+			  		property="org.eclipse.cdt.build.core.buildArtefactType"
+			  		value="org.eclipse.cdt.build.core.buildArtefactType.staticLib"/>
+			  </enablement>
+      </configuration>
+   </extension>
+   <!-- NOTE: we only supply this for older (pre 8.2) projects. Newer ones don't use it -->
+   <extension
+         id="ScannerConfigurationDiscoveryProfile"
+         name="MetaWare C/C++ Scanner Configuration Discovery Profile"
+         point="org.eclipse.cdt.make.core.ScannerConfigurationDiscoveryProfile">
+      <scannerInfoCollector
+            class="org.eclipse.cdt.make.internal.core.scannerconfig2.PerProjectSICollector"
+            scope="project"/>
+      <scannerInfoProvider providerId="HighCSpecsFile">
+         <run
+               arguments="-Hbatchnotmp -Hnoobj ${plugin_state_location}/${specs_file}"
+               class="org.eclipse.cdt.make.internal.core.scannerconfig2.GCCSpecsRunSIProvider"
+               command="mcc"/>
+         <scannerInfoConsoleParser class="com.arc.cdt.scannerconfig.ARCScannerInfoConsoleParser"/>
+      </scannerInfoProvider>
+      <buildOutputProvider>
+         <scannerInfoConsoleParser
+               class="org.eclipse.cdt.make.internal.core.scannerconfig.gnu.GCCScannerInfoConsoleParser"
+               compilerCommands="mcc,hcarm,cc,gcc,hcvc,hcn386,hcl386,hcppc,hcac,ccac"/>
+      </buildOutputProvider>
+   </extension> 
+   
+   <extension point="org.eclipse.core.contenttype.contentTypes"> 
+      <file-association 
+       content-type="org.eclipse.cdt.core.cxxSource"
+       file-extensions="c"/>
+   </extension>
+   <!-- For backward compatibility with pre-8.1 projects -->
+   <!-- extension
+         point="org.eclipse.cdt.make.ui.DiscoveryProfilePage">
+      <profilePage
+            class="com.arc.cdt.toolchain.ui.HighCDiscoveryPage"
+            name="MetaWare C/C++ Includes &amp; Symbol Discovery"
+            profileId="com.arc.cdt.toolchain.ScannerConfigurationDiscoveryProfile"/>
+   </extension> -->
+   <!--
+   <extension
+         point="org.eclipse.ui.cheatsheets.cheatSheetContent">
+      <cheatsheet
+            category="C/C++ Development"
+            contentFile="cheatsheets/managed-make-tutorial-cheatsheet.xml"
+            id="com.arc.cdt.toolchain.managedmake"
+            name="MetaWare IDE Managed Project Tutorial">
+         <description>Learn how to create a new project using the Managed Make configuration.</description>
+      </cheatsheet>
+      <cheatsheet
+            category="C/C++ Development"
+            contentFile="cheatsheets/standard-make-tutorial-cheatsheet.xml"
+            id="com.arc.cdt.toolchain.standardmake"
+            name="MetaWare IDE Makefile Project Tutorial">
+         <description>
+            Learn how to create a project that relies on a makefile that you supply.
+         </description>
+      </cheatsheet>
+   </extension>
+   <extension
+         point="org.eclipse.ui.cheatsheets.cheatSheetContent">
+      <cheatsheet
+            name="%cheatsheet.cvs.name"
+            contentFile="$nl$/cheatsheets/CVS_1.xml"
+            id="org.eclipse.platform.cvs_1">
+         <description>
+            %cheatsheet.cvs.desc
+         </description>
+      </cheatsheet>
+   </extension> -->
+   
+    <extension
+         point="org.eclipse.ui.actionSets">
+      <actionSet
+            id="com.arc.cdt.toolchain.PDFs"
+            label="MetaWare Toolkit Documentation..."
+            visible="true">
+         <action
+               class="com.arc.cdt.toolchain.ui.PDFAction"
+               id="PDFAction"
+               label="MetaWare Toolkit Documentation..."
+               menubarPath="help/group.tutorials"
+               style="push"
+               tooltip="Open MetaWare tool set online documentation.">
+         </action>
+      </actionSet>
+   </extension>
+   <extension point="org.eclipse.cdt.managedbuilder.core.MakefileAugmenter">
+         <contributor projectType="com.arc.toolchain.projectType" class="com.arc.cdt.managedbuilder.makegen.MakefileAugmenter"/>       
+   </extension>
+   
+  <extension point="org.eclipse.cdt.core.templates">
+     
+      <template
+            id="com.arc.toolchain.cdt.build.templates.HelloWorldHighCCProject"
+            filterPattern=".*"
+            location="$nl$/templates/HelloWorldHighCCProject/template.xml"
+            projectType="org.eclipse.cdt.build.core.buildArtefactType.exe">
+         <toolChain
+               id="com.arc.cdt.toolchain.toolChain">
+         </toolChain>
+      </template>
+   </extension>
+   
+   <extension
+         point="org.eclipse.cdt.core.templateAssociations">
+      <template id="org.eclipse.cdt.build.core.templates.EmptyProject">
+            <toolChain id="com.arc.cdt.toolchain.toolChain"/>
+      </template>
+      <template id="org.eclipse.cdt.build.core.templates.HelloWorldCAnsiProject">
+            <toolChain id="com.arc.cdt.toolchain.toolChain"/>
+      </template>
+      <template
+            id="org.eclipse.cdt.build.core.templates.MakefileHelloWorldCCProject">
+            <toolChain id="com.arc.cdt.toolchain.toolChain"/>
+      </template>
+  </extension>
+   <extension
+         point="org.eclipse.core.contenttype.contentTypes">
+      <content-type
+            base-type="org.eclipse.core.runtime.text"
+            file-extensions="cmd,lnk,map"
+            id="com.arc.cdt.toolchain.linkcmd.cmd"
+            name="Linker command file"
+            priority="normal">
+      </content-type>
+   </extension>
+   <extension
+         point="org.eclipse.ui.perspectiveExtensions">
+      <perspectiveExtension
+            targetID="org.eclipse.cdt.ui.CPerspective">
+         <viewShortcut
+               id="org.eclipse.pde.runtime.LogView">
+         </viewShortcut>
+      </perspectiveExtension>
+   </extension>
+   <!--
+   <extension
+         point="org.eclipse.ui.viewActions">
+      <viewContribution
+            id="com.arc.cdt.toolchain.viewContribution1"
+            targetID="com.arc.cdt.toolchain.viewContribution1">
+         <action
+               class="com.arc.cdt.toolchain.ViewActionDelegateBuildProject"
+               disabledIcon="arc.gif"
+               hoverIcon="arc.gif"
+               icon="arc.gif"
+               id="com.arc.cdt.toolchain.action1"
+               label="XYZXYZ"
+               menubarPath="help/helpStart"
+               style="push"
+               toolbarPath="org.eclipse.debug.ui.launchActionSet/external"
+               tooltip="Build the currently selected project"/>
+      </viewContribution>
+   </extension>
+   -->
+   <!-- =====================================================  -->
+   <!-- Standby Content Part contributions                     -->
+   <!-- =====================================================  --> 
+   <!--
+   <extension
+         id="ARCMakeErrorParser"
+         name="Makefile Error Parser"
+         point="org.eclipse.cdt.core.ErrorParser">
+      <errorparser
+            class="com.arc.cdt.errorparsers.MakeErrorParser">
+      </errorparser>
+   </extension>
+   -->
+  
+
+</plugin>

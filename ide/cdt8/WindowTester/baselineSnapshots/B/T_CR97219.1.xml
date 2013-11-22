@@ -1,0 +1,38 @@
+<view name="org.eclipse.debug.ui.VariableView">
+    <tree columns="2">
+        <item>
+            <cell>init_array</cell>
+            <cell></cell>
+            <item>
+                <cell>init_array[0]</cell>
+                <cell>'5' (53=0x35)</cell>
+            <item>
+                <cell>init_array[1]</cell>
+                <cell>'\'' (39=0x27)</cell>
+            <item>
+                <cell>init_array[2]</cell>
+                <cell>'7' (55=0x37)</cell>
+            <item>
+                <cell>init_array[3]</cell>
+                <cell>'8' (56=0x38)</cell>
+            <item>
+                <cell></cell>
+                <cell></cell>
+            <item>
+                <cell></cell>
+                <cell></cell>
+            <item>
+                <cell></cell>
+                <cell></cell>
+            <item>
+                <cell></cell>
+                <cell></cell>
+            <item>
+                <cell></cell>
+                <cell></cell>
+            <item>
+                <cell></cell>
+                <cell></cell>
+        </item>
+    </tree>
+</view>

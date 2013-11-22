@@ -1,0 +1,15 @@
+Manifest-Version: 1.0
+Bundle-Name: MetaWare Utilities
+Bundle-SymbolicName: com.arc.mw.util
+Bundle-Version: 9.0.0
+Bundle-Vendor: Synopsys Corporation
+Bundle-Localization: plugin
+Require-Bundle: org.dom4j
+Bundle-ActivationPolicy: lazy
+Provide-Package: com.arc.flex,
+ com.arc.mw.util,
+ com.arc.mw.util.elf,
+ com.arc.mw.util.enc,
+ com.arc.mw.util.print,
+ com.arc.mw.util.ver
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6

@@ -1,0 +1,111 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN" "http://www.w3.org/MarkUp/Wilbur/HTML32.dtd">
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+    <meta name="GENERATOR" content="Quadralay WebWorks Publisher 2003 for FrameMaker 8.0.0.1194">
+    <meta name="TEMPLATEBASE" content="temp">
+    <link rel="StyleSheet" href="document.css" type="text/css" media="screen">
+    <title>Enabling the PMU Window</title>
+  </head>
+
+  <body>
+
+    <table width="100%" border="0" cellpadding="0" cellspacing="0" class="header">
+      <tr>
+<!--Disabling Breadcrumbs to use Eclipse version 10/2009
+        <td class="breadcrumbs">
+	<a href="ide_guid.htm"> DesignWare ARC MetaWare IDE User's Guide </a> > <a href="tasks.htm"><br>Tasks</a> > <a href="mw_t_pwr.htm">Debugging with a PMU (ARC 600 Only)</a> > Enabling the PMU Window
+        </td>
+-->
+        <td align="right" valign="top" class="navigator" nowrap>
+<a href="mw_t_pwr.htm"><img src="images/sprev.gif" border="0" alt="Previous"></a><a href="openinga.htm"><img src="images/snext.gif" border="0" alt="Next"></a>
+        </td>
+      </tr>
+    </table>
+
+    <hr align="left">
+
+    <blockquote>
+<h4 >
+Enabling the PMU Window
+<a name="wp866932"> </a></h4>
+
+<p >
+On hardware, the presence of a PMU is automatically detected; on simulators, you must enable it. 
+<a name="wp915716"> </a></p>
+<ol type="1"> <li  value="1">Select your ELF executable in the <b>Project Explorer</b> in the <b>C/C++</b> perspective.<div align="left"><img src="images/select_e.gif" alt="ELF executable selected in C/C++ Projects view" border="0" hspace="0" vspace="0"></div><a name="wp866933"> </a>
+</ol><ol type="1"> <li  value="2">Click the downward arrow next to the <b>Debug </b>button:<div align="left"><img src="images/debug.gif" alt="Click the downward arrow next to the Debug button." border="0" hspace="0" vspace="0"></div> <a name="wp868631"> </a>
+ <li  value="3">Select <b>Debug Configurations...</b> from the drop-down menu:<img src="images/md2_sel_debug.gif" border="0" hspace="0" vspace="0"><a name="wp868621"> </a>
+</ol><dl>
+  <dt >The <b>Debug Configurations </b>dialog appears.<a name="wp866937"> </a></dl>
+<ol type="1"> <li  value="4">Select <b>C/C++ Application</b>.<div align="left"><img src="images/c_cpp_lo.gif" alt="Select C/C++ Local Application in the Debug launch dialog." border="0" hspace="0" vspace="0"></div><a name="wp874902"> </a>
+ <li  value="5">Click the <b>New launch configuration</b> button: <img src="images/debug_ne.gif" alt="New launch configuration button" border="0" hspace="0" vspace="0"><a name="wp874824"> </a>
+</ol><dl>
+  <dt >The <b>Debug Configurations </b>dialog opens with a default name for your configuration in the <b>Name:</b> text box <div align="left"><img src="images/manage_d.gif" alt="Debug launch dialog with Debugger tab" border="0" hspace="0" vspace="0"></div><a name="wp874825"> </a></dl>
+<ol type="1"> <li  value="6">Change the name of your debug configuration if desired.<a name="wp874826"> </a>
+ <li  value="7">Select the <b>Debugger</b> tab if it is not already selected. <a name="wp883833"> </a>
+ <li  value="8">If you are using xISS, select <b>Target Selection</b> in the <b>Debugger Options</b> tree view and select <b>Fast ISS (xISS)</b> from the <b>Select the target</b> drop-down list:<div align="left"><img src="images/xiss.gif" alt="Selecting xISS in Select the target:" border="0" hspace="0" vspace="0"></div><a name="wp883834"> </a>
+ <li  value="9">Select <b>Simulator Extensions &gt; Power Management Unit</b> in the <b>Debugger Options</b> tree view. <a name="wp925681"> </a>
+ <li  value="10">The right side of the dialog changes to show <b>PMU</b> settings. Check the <b>Enable Power Management Unit (PMU)</b> checkbox:<div align="left"><img src="images/pmu_ide_.jpg" alt="Type -pmu in the Specify Command-Line options text box." border="0" hspace="0" vspace="0"></div><a name="wp925695"> </a>
+</ol><dl>
+  <dt >The option <i>-pmu</i> now appears in the list of <b>Debugger Options</b>.<a name="wp866940"> </a></dl>
+<ol type="1"> <li  value="11">Click <b>Apply</b>.<a name="wp883842"> </a>
+ <li  value="12">Make any other selections you require and click Debug to launch your debug configuration. <a name="wp925813"> </a>
+ <li  value="13">If a <b>Confirm Perspective Switch</b> window appears, click <b>Yes</b>.<a name="wp874857"> </a>
+</ol><p >
+A<b> Debug</b> perspective opens for your application. To open the PMU window, see <a href="openinga.htm#wp915658">Opening the PMU Window</a>.
+<a name="wp874871"> </a></p>
+<blockquote >
+
+
+<table border="1" cellpadding="5" cellspacing="0">
+  <caption></caption>
+  <tr>
+    <td><table border="0" cellpadding="5" cellspacing="0">
+  <caption></caption>
+  <tr valign=top>
+    <td><div ><img border="0" src="images/note.png">
+</div></td>
+    <td><div ></div></td>
+</tr></table>
+<a name="wp927247"> </a>
+</td>
+    <td><div >If you are already debugging the application, you must click the <b>Restart</b> button <img src="images/restart.gif" border="0" hspace="0" vspace="0"> for your changes to take effect. <a name="wp927249"> </a></div></td>
+  </tr>
+</table>
+
+
+
+
+
+<a name="wp927241"> </a></blockquote>
+ <a name="wp915811">
+  <h5 >
+Related Tasks
+ </a></h5>
+<ul> <li ><a href="openinga.htm#wp915658">Opening the PMU Window</a><a name="wp915819"> </a>
+ <li ><a href="waking_u.htm#wp867081">Waking up the Processor</a><a name="wp915823"> </a>
+</ul><a name="wp915824">
+  <h5 >
+Related Reference
+ </a></h5>
+<ul> <li >Eclipse <em>C/C++ Development User Guide</em><a name="wp915832"> </a>
+</ul>
+    </blockquote>
+    <p></p>
+    <hr>
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" class="footer">
+      <tr>
+        <td>
+
+        </td>
+        <td align="right" valign="top" class="navigator">
+<a href="mw_t_pwr.htm"><img src="images/sprev.gif" border="0" alt="Previous"></a><a href="openinga.htm"><img src="images/snext.gif" border="0" alt="Next"></a>
+        </td>
+      </tr>
+    </table>
+<p> <font size="-3">
+Copyright © 2012 Synopsys, Inc. <br />
+Some portions of this document copyright IBM Corporation and others 2000, 2004.</font></p>
+  </body>
+</html>

@@ -1,0 +1,8 @@
+<view name="org.eclipse.debug.ui.BreakpointView">
+    <tree>
+        <item text="${WORKSPACE}/graphics_pipeline/generated/software/displaymain/displaymain [expression: '0x00016000']" checked="true"/>
+        <item text="${WORKSPACE}/graphics_pipeline/generated/software/grmain/grmain [expression: '0x00016000']" checked="true"/>
+        <item text="${WORKSPACE}/graphics_pipeline/generated/software/rendermain0/rendermain0 [expression: '0x00016000']" checked="true"/>
+        <item text="${WORKSPACE}/graphics_pipeline/generated/software/rendermain1/rendermain1 [expression: '0x00016000']" checked="true"/>
+    </tree>
+</view>

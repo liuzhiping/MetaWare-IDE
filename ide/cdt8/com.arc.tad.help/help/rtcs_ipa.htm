@@ -1,0 +1,135 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN" "http://www.w3.org/MarkUp/Wilbur/HTML32.dtd">
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+    <meta name="GENERATOR" content="Quadralay WebWorks Publisher 2003 for Word 8.0.0.1194">
+    <meta name="TEMPLATEBASE" content="ARCTechPubsv6">
+    <meta name="LASTUPDATED" content="01/27/12 13:02:36">
+<link rel="first" href="tad_help.htm">  <link rel="prev" href="rtcs_ip_.htm"><link rel="next" href="rtcs_ipi.htm">
+    <link rel="StyleSheet" href="document.css" type="text/css" media="screen">
+    <title>RTCS IP Statistics Window</title>
+  </head>
+
+  <body>
+
+    <table width="100%" border="0" cellpadding="0" cellspacing="0" class="header">
+      <tr> 
+        <td class="breadcrumbs">
+	<a href="tad_help.htm"> MQX&#174; Task Aware Debug Help</a> > <a href="rtcs_win.htm"> RTCS Windows</a> > RTCS IP Statistics Window
+        </td>
+        <td align="right" valign="top" class="navigator" nowrap>
+<a href="rtcs_ip_.htm"><img src="images/sprev.gif" border="0" alt="Previous" title="Previous"></a><a href="rtcs_ipi.htm"><img src="images/snext.gif" border="0" alt="Next" title="Next"></a>
+        </td>
+      </tr>
+    </table>
+
+    <hr align="left">
+
+    <blockquote>
+<h3 ><a name="wp9001241">
+RTCS IP Statistics Window</a></h3>
+
+
+<p >
+<a name="wp9001242">The <b>RTCS IP Statistics</b> window displays the statistics that RTCS collected for IP.</a></p>
+<p ><b><i><a name="wp9001243">Displayed Fields</a></i></b></p><p ><b><i><a name="wp9001244">[R/T]X_TOTAL</a></i></b></p><p >
+<a name="wp9001245">Total number of packets received or sent.</a></p>
+<p ><b><i><a name="wp9001246">[R/T]X_MISSED</a></i></b></p><div ><a name="wp9001247">Number of packets that were discarded due to lack of resources.</a></div><p ><b><i><a name="wp9001248">[R/T]X_DISCARDED</a></i></b></p><p >
+<a name="wp9001249">Number of packets that were discarded for all other reasons.</a></p>
+<p ><b><i><a name="wp9001250">[R/T]X_ERRORS </a></i></b></p><p >
+<a name="wp9001251">Number of times that an internal error occurred. Internal errors indicate a catastrophic failure, and the <b>Rx Errors</b> and <b>Tx Errors</b> fields record the nature of the failure.</a></p>
+<table border="1" cellpadding="5" cellspacing="0">
+  <caption></caption>
+  <tr>
+    <td><div ><b><a name="wp9000134">Field Value</a></b></div></td>
+    <td><div ><b><a name="wp9000135">Meaning</a></b></div></td>
+  </tr>
+  <tr>
+    <td><p >
+<a name="wp9000136"><code>Error</code></a></p>
+</td>
+    <td><div ><a name="wp9000137">RTCS error code that indicates the type of failure</a></div></td>
+  </tr>
+  <tr>
+    <td><p >
+<a name="wp9000138"><code>Parameter</code></a></p>
+</td>
+    <td><div ><a name="wp9000139">Parameter that might help you debug the failure (parameter type or value depends on the error that occurred)</a></div></td>
+  </tr>
+  <tr>
+    <td><p >
+<a name="wp9000140"><code>Task Id</code></a></p>
+</td>
+    <td><div ><a name="wp9000141">Task ID of the task that was active when the error occurred</a></div></td>
+  </tr>
+  <tr>
+    <td><p >
+<a name="wp9000142"><code>TaskErrCode</code></a></p>
+</td>
+    <td><div ><a name="wp9000143">Task error code of the active task</a></div></td>
+  </tr>
+  <tr>
+    <td><p >
+<a name="wp9000144"><code>MemPtr</code></a></p>
+</td>
+    <td><div ><a name="wp9000145">Current highwater mark for core memory</a></div></td>
+  </tr>
+  <tr>
+    <td><p >
+<a name="wp9000146"><code>Stack</code></a></p>
+</td>
+    <td><div ><a name="wp9000147">If non-zero, indicates that the stack of the active task was out of bounds when the error occurred</a></div></td>
+  </tr>
+</table>
+<p ><b><i><a name="wp9001253">Discarded, error in IP Header </a></i></b></p><p >
+<a name="wp9001254">Number of received packets that were discarded due to an error in the IP header.</a></p>
+<p ><b><i><a name="wp9001255">Discarded, illegal destination</a></i></b></p><p >
+<a name="wp9001256">Number of received packets that were discarded because of an illegal destination.</a></p>
+<p ><b><i><a name="wp9001257">Discarded, unrecognized protocol</a></i></b></p><p >
+<a name="wp9001258">Number of received packets whose protocol field did not match the protocols currently being serviced.</a></p>
+<p ><b><i><a name="wp9001259">Packets delivered to upper layer</a></i></b></p><p >
+<a name="wp9001260">Number of packets that IP delivered to upper-layer protocols.</a></p>
+<p ><b><i><a name="wp9001261">Packets forwarded</a></i></b></p><p >
+<a name="wp9001262">Number of IP packets that were forwarded.</a></p>
+<p ><b><i><a name="wp9001263">Packets with incorrect version</a></i></b></p><p >
+<a name="wp9001264">Number of received packets with an invalid version number. These packets are included in <b>Discarded, error in IP Header</b>. </a></p>
+<p ><b><i><a name="wp9001265">Packets with invalid checksum</a></i></b></p><p >
+<a name="wp9001266">Number of received packets with an invalid checksum. These packets are included in <b>Discarded, error in IP Header</b>.</a></p>
+<p ><b><i><a name="wp9001267">Packets with invalid src addr</a></i></b></p><p >
+<a name="wp9001268">Number of received packets with an invalid source address. These packets are included in <b>Discarded, error in IP Header</b>.</a></p>
+<p ><b><i><a name="wp9001269">Packets with header too small</a></i></b></p><p >
+<a name="wp9001270">Number of received packets with headers smaller than the minimum size. These packets are included in <b>Discarded, error in IP Header</b>.</a></p>
+<p ><b><i><a name="wp9001271">Packets smaller than header</a></i></b></p><p >
+<a name="wp9001272">Number of received packets with a packet size that is smaller than the header size. These packets are included in <b>Discarded, error in IP Header</b>.</a></p>
+<p ><b><i><a name="wp9001273">Packets larger than frame</a></i></b></p><p >
+<a name="wp9001274">Number of received packets that are larger than the internal frames used to receive data. These packets are included in <b>Discarded, error in IP Header</b>.</a></p>
+<p ><b><i><a name="wp9001275">Packets with TTL=0</a></i></b></p><p >
+<a name="wp9001276">Number of received packets with the time to live set to 0. These packets are included in <b>Discarded, error in IP Header</b>.</a></p>
+<p ><b><i><a name="wp9001277">Number of received IP fragments</a></i></b></p><p >
+<a name="wp9001278">Number of received IP fragments.</a></p>
+<p ><b><i><a name="wp9001279">Number of reassembled fragments</a></i></b></p><p >
+<a name="wp9001280">Number of reassembled fragments.</a></p>
+<p ><b><i><a name="wp9001281">Number of discarded fragments</a></i></b></p><p >
+<a name="wp9001282">Number of received fragment packets that were discarded.</a></p>
+<p ><b><i><a name="wp9001283">Number of sent fragments</a></i></b></p><p >
+<a name="wp9001284">Number of sent fragment packets.</a></p>
+<p ><b><i><a name="wp9001285">Number of packets fragmented</a></i></b></p><p >
+<a name="wp9001286">Number of sent IP packets that were fragmented.</a></p>
+<p ><b><i><a name="wp9001287">Number of fragmentation failures</a></i></b></p><p >
+<a name="wp9001288">Total number of fragmentation failures on transmission.</a></p>
+    </blockquote>
+    <p></p>
+    <hr>
+
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" class="footer">
+      <tr>
+        <td>
+          
+        </td>
+        <td align="right" valign="top" class="navigator">
+<a href="rtcs_ip_.htm"><img src="images/sprev.gif" border="0" alt="Previous" title="Previous"></a><a href="rtcs_ipi.htm"><img src="images/snext.gif" border="0" alt="Next" title="Next"></a>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>

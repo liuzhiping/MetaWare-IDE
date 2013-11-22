@@ -1,0 +1,42 @@
+
+# Set up the profiler.
+
+# Most commands to the hardware counter module are primitive
+# and will shift to a tree-based syntax a la the plotter, later.
+
+# This programs PR_PARAM to profile these conditions, plus switches 
+# the profiler to "conditions".
+
+hwc profile cond="iall,ijmp,ijmptak"
+hwc profile cond="iuser" 
+hwc profile cond="iuser" 
+hwc unprofile cond="ijmp"
+
+
+variable queens = 1
+variable BS = 4
+
+# Now set up the profiler params.
+if (queens) then 
+    evalq $mem=0x100_000
+    // Sample in function Try
+     hwc profile lo=Try hi=main mem="$mem" period=100 binsize=BS
+    // hwc profile lo=0x1_000 hi=0x8_000 mem="$mem" period=100 binsize=BS
+else 
+    evalq $mem=0x100_000
+    // Dummy test program
+    hwc profile lo=main hi=after_main mem="$mem" period=100 binsize=BS
+    // hwc profile lo=0 hi=0x20_000 mem="$mem" period=100 binsize=BS
+    endif
+
+# file2mem $mem prof_setup
+mem $mem
+hwc profile clear=1 enable=1
+mem $mem
+
+# parameters:
+# lo= hi= mem= period= binsize=
+# cond=condname or cond="condname,condname,..."
+# If you omit binsize we keep the previous value for it.
+# A hwc profile command disables profiling unless you enable it.
+# It does not clear memory unless you ask.

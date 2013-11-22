@@ -1,0 +1,165 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN" "http://www.w3.org/MarkUp/Wilbur/HTML32.dtd">
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+    <meta name="GENERATOR" content="Quadralay WebWorks Publisher 2003 for FrameMaker 8.0.0.1194">
+    <meta name="TEMPLATEBASE" content="temp">
+    <link rel="StyleSheet" href="document.css" type="text/css" media="screen">
+    <title>Working with Watchpoints</title>
+  </head>
+
+  <body>
+
+    <table width="100%" border="0" cellpadding="0" cellspacing="0" class="header">
+      <tr>
+<!--Disabling Breadcrumbs to use Eclipse version 10/2009
+        <td class="breadcrumbs">
+	<a href="ide_guid.htm"> DesignWare ARC MetaWare IDE User's Guide </a> > <a href="tasks.htm"><br>Tasks</a> > <a href="cdt_o_br.htm">Debugging with Breakpoints and Watchpoints</a> > Working with Watchpoints
+        </td>
+-->
+        <td align="right" valign="top" class="navigator" nowrap>
+<a href="mw_t_bkp.htm"><img src="images/sprev.gif" border="0" alt="Previous"></a><a href="mw_t_mod.htm"><img src="images/snext.gif" border="0" alt="Next"></a>
+        </td>
+      </tr>
+    </table>
+
+    <hr align="left">
+
+    <blockquote>
+<h4 >
+Working with Watchpoints
+<a name="wp919023"> </a></h4>
+
+<p >
+You can set watchpoints and manage the current watchpoints using the debugger-supplied <b>Watchpoints</b> window. Select <b>Debugger &gt; Watchpoints</b> after your application is running in the debugger.
+<a name="wp919026"> </a></p>
+<blockquote >
+<div align="left"><img src="images/watchoin.gif" alt="Debugger Watchpoints Window" border="0" hspace="0" vspace="0"></div>
+
+<a name="wp919031"> </a></blockquote>
+ <a name="wp919032">
+  <h5 >
+In This Topic
+ </a></h5>
+<ul> <li ><a href="mw_t_wpt.htm#wp924356">Setting Watchpoints</a><a name="wp919036"> </a>
+ <li ><a href="mw_t_wpt.htm#wp919106">Viewing Watchpoints</a><a name="wp919040"> </a>
+</ul><a name="wp924356">
+  <h5 >
+4.9.3.1	 Setting Watchpoints
+ </a></h5>
+<p >
+To set a watchpoint in the <b>Watchpoints</b> window, click the <b>Set Watchpoint</b> button: <img src="images/set_wpt.gif" alt="Click the Set Watchpoint button" border="0" hspace="0" vspace="0">
+<a name="wp924360"> </a></p>
+<p >
+The <i>Create</i><b> Watchpoint</b> dialog opens.<div align="left"><img src="images/set_wpt_.gif" alt="Set a watchpoint in the Set Watchpoint dialog" border="0" hspace="0" vspace="0"></div>
+<a name="wp924364"> </a></p>
+<ol type="1"> <li  value="1">Use the radio buttons in the <b>Kind</b> area to select what you want to set the watchpoint on:<a name="wp924133"> </a>
+<ul>  <li ><b>Expression</b><a name="wp929115"> </a>
+  <li ><b>Address</b><a name="wp929130"> </a>
+  <li ><b>Register</b><a name="wp929124"> </a>
+</ul> <li  value="2">Use the combobox to enter the specific address, register, or expression you want to set the watchpoint on. The interface changes based on the Kind of watchpoint selected; for an address watchpoint, you can also select the Size (number of bytes starting at the hexadecimal address specified). <a name="wp919057"> </a>
+</ol><dl>
+  <dt >Previous entries are stored in a drop-down list.<a name="wp929186"> </a></dl>
+<ol type="1"> <li  value="3">In the <b>Mode</b> area, select write, read, or read/write.<a name="wp924149"> </a>
+ <li  value="4">To make the watchpoint conditional, select Conditional and enter a conditional expression in the <b>Expression:</b> input field (for permitted expressions, see <a href="mw_u_reg.htm#wp993229">Debugger Conventions for Regular Expressions</a>). <a name="wp924301"> </a>
+ <li  value="5">Click <b>OK</b>. <a name="wp919059"> </a>
+</ol><div align="left" <strong >Table&nbsp;4-2	 Kinds of Watchpoint<a name="wp924324"> </a></strong></div><blockquote >
+
+
+<table border="1" cellpadding="5" cellspacing="0">
+  <caption></caption>
+  <tr bgcolor="#CCCCCC">
+    <th><div ><strong>Radio Button<a name="wp924234"> </a></strong></div></th>
+    <th><div ><strong>Set watchpoint on:<a name="wp924236"> </a></strong></div></th>
+    <th><div ><strong>Example<a name="wp924232"> </a></strong></div></th>
+  </tr>
+  <tr>
+    <td><div ><b>Address</b> <a name="wp924192"> </a></div></td>
+    <td><div >Hexadecimal address<br>Symbolic label<a name="wp924194"> </a></div></td>
+    <td><div >0x34 <br><code>main+0x57 </code><a name="wp924196"> </a></div></td>
+  </tr>
+  <tr>
+    <td><div ><b>Register</b> <a name="wp924198"> </a></div></td>
+    <td><div >Register name<a name="wp924200"> </a></div></td>
+    <td><div ><font >r12</font> <a name="wp924202"> </a></div></td>
+  </tr>
+  <tr>
+    <td><div ><b>Expression</b> <a name="wp924204"> </a></div></td>
+    <td><div >Expression that evaluates to an address in memory; must be a modifiable value (one that can appear on the left side of an assignment expression)<a name="wp924206"> </a></div></td>
+    <td></td>
+  </tr>
+</table>
+
+
+
+
+
+<a name="wp919103"> </a></blockquote>
+ <a name="wp919106">
+  <h5 >
+4.9.3.2	 Viewing Watchpoints
+ </a></h5>
+<p >
+Each line in the listing shows the following information for a particular watchpoint:
+<a name="wp919107"> </a></p>
+<ul> <li >Whether the watchpoint is a hardware ('H') watchpoint.<a name="wp919108"> </a>
+ <li >Whether the watchpoint is disabled ('-').<a name="wp919109"> </a>
+ <li >The name of the watched variable or register.<a name="wp919110"> </a>
+ <li >The value of the watched variable or register. In the case of an aggregate data structure, such as an array or a <i>struct</i>, the value of each element is displayed; for example, <i>X [1,3,5,7,6,2,4,8]</i> <a name="wp919111"> </a>
+</ul><dl>
+  <dt >If the value of the variable has changed, the previous value (followed by =&gt; and the current value) appears to the right of the variable name. Changed values are highlighted in red.<a name="wp919112"> </a></dl>
+<blockquote >
+<div align="left"><img src="images/watchoia.gif" alt="Watchpoint with Changed Value" border="0" hspace="0" vspace="0"></div>
+
+<a name="wp919116"> </a></blockquote>
+ <a name="wp919117">
+  <h5 >
+4.9.3.3	 Managing Watchpoints
+ </a></h5>
+<p >
+You can manage watchpoints using the <b>Watchpoints</b> window toolbar. <img src="images/wpt_tool.gif" alt="Watchpoints Window Toolbar" border="0" hspace="0" vspace="0">
+<a name="wp919121"> </a></p>
+<p >
+You can use the buttons on the toolbar to do the following:
+<a name="wp919122"> </a></p>
+<ul> <li >Click <img src="images/working_.gif" height="30" width="30" border="0" hspace="0" vspace="0"> to remove the currently selected breakpoint.<a name="wp924338"> </a>
+ <li >Click <img src="images/bkpt_remove.gif" border="0" hspace="0" vspace="0"> to remove all breakpoints shown.<a name="wp924342"> </a>
+ <li >Click <img src="images/bkpt_disable.gif" border="0" hspace="0" vspace="0"> to enable or disable the breakpoint on the currently selected line.<a name="wp924346"> </a>
+ <li >Click <img src="images/bkpt_remove.gif" border="0" hspace="0" vspace="0"> to enable or disable all breakpoints on the currently selected line.<a name="wp924350"> </a>
+ <li >Click <img src="images/set_wpt.gif" alt="Click the Set Watchpoint button" border="0" hspace="0" vspace="0"> to set a watchpoint.<a name="wp919127"> </a>
+ <li >Click <img src="images/examinea.jpg" border="0" hspace="0" vspace="0"> to open an <b>Examine</b> window for the register or variable on the currently selected line.<a name="wp924367"> </a>
+</ul><a name="wp919128">
+  <h5 >
+Related Concept
+ </a></h5>
+<ul> <li ><a href="mw_c_wat.htm#wp873973">Watchpoints</a><a name="wp919132"> </a>
+</ul><a name="wp919133">
+  <h5 >
+Related Tasks
+ </a></h5>
+<ul> <li ><a href="cdt_t_ad.htm#wp918897">Adding Breakpoints</a><a name="wp919137"> </a>
+ <li ><a href="mw_t_bkp.htm#wp918944">Viewing and Managing Current Breakpoints</a><a name="wp919141"> </a>
+</ul><a name="wp919142">
+  <h5 >
+Related Reference
+ </a></h5>
+<ul> <li >Eclipse <em>C/C++ Development User Guide</em><a name="wp919158"> </a>
+</ul>
+    </blockquote>
+    <p></p>
+    <hr>
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" class="footer">
+      <tr>
+        <td>
+
+        </td>
+        <td align="right" valign="top" class="navigator">
+<a href="mw_t_bkp.htm"><img src="images/sprev.gif" border="0" alt="Previous"></a><a href="mw_t_mod.htm"><img src="images/snext.gif" border="0" alt="Next"></a>
+        </td>
+      </tr>
+    </table>
+<p> <font size="-3">
+Copyright © 2012 Synopsys, Inc. <br />
+Some portions of this document copyright IBM Corporation and others 2000, 2004.</font></p>
+  </body>
+</html>

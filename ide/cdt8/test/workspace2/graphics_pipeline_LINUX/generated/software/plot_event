@@ -1,0 +1,22 @@
+# $1 = namespace name
+# $2 = datasource name
+# $3 = variable to watch
+# $4 = expn to send
+
+eval $channel_defined
+if ($channel_defined == 0) then
+
+print Executing body of if.
+
+plot channel name=info (value name=$2 eval="$val") namespace=$1 cpu_mangle=0 named_time=0
+evalq $channel_defined = 1
+endif
+
+// Macros are across processes, so give it a unique name.
+// Use cond_macro to avoid redefining it.
+cond_macro sendit_$1 expn
+evalq $val = $expn
+plot send channel=info
+endm
+
+watch $3, exec sendit_$1 $4, eval 0

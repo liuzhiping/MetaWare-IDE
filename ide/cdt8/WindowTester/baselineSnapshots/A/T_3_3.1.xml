@@ -1,0 +1,17 @@
+<view name="org.eclipse.ui.views.ProblemView">
+    <tree columns="5">
+        <item>
+            <cell>Warnings (1 item)</cell>
+            <cell></cell>
+            <cell></cell>
+            <cell></cell>
+            <cell></cell>
+            <item>
+                <cell>(#652) i_unused: Variable is never used.</cell>
+                <cell>main.c</cell>
+                <cell>/Test1</cell>
+                <cell>line 6</cell>
+                <cell>C/C++ Problem</cell>
+        </item>
+    </tree>
+</view>

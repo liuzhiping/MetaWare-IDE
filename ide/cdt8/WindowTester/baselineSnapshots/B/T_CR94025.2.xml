@@ -1,0 +1,5 @@
+<view>
+    <label text=""/>
+    <label text="".cproject" is not a valid, open C/C++ project"/>
+    <label text=""/>
+</view>

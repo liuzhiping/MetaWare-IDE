@@ -1,0 +1,93 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN" "http://www.w3.org/MarkUp/Wilbur/HTML32.dtd">
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+    <meta name="GENERATOR" content="Quadralay WebWorks Publisher 2003 for FrameMaker 8.0.0.1194">
+    <meta name="TEMPLATEBASE" content="temp">
+    <link rel="StyleSheet" href="document.css" type="text/css" media="screen">
+    <title>Configuring Each Process Individually</title>
+  </head>
+
+  <body>
+
+    <table width="100%" border="0" cellpadding="0" cellspacing="0" class="header">
+      <tr>
+<!--Disabling Breadcrumbs to use Eclipse version 10/2009
+        <td class="breadcrumbs">
+	<a href="ide_guid.htm"> DesignWare ARC MetaWare IDE User's Guide </a> > <a href="tasks.htm"><br>Tasks</a> > <a href="mw_o_cmp.htm">Debugging with CMPD Extensions</a> > Configuring Each Process Individually
+        </td>
+-->
+        <td align="right" valign="top" class="navigator" nowrap>
+<a href="addition.htm"><img src="images/sprev.gif" border="0" alt="Previous"></a><a href="mw_t_cma.htm"><img src="images/snext.gif" border="0" alt="Next"></a>
+        </td>
+      </tr>
+    </table>
+
+    <hr align="left">
+
+    <blockquote>
+<h4 >
+Configuring Each Process Individually
+<a name="wp922560"> </a></h4>
+
+<p >
+You can use the <b>Edit Process</b> dialog to specify the following:
+<a name="wp918425"> </a></p>
+<ul> <li ><b>Process Name:</b> Your name for the process must start with an alphabetical character and may not include spaces.<a name="wp918426"> </a>
+ <li ><b>Instance Count:</b> The number of instances of this process you want to debug<br><b>Select Project:</b> The project where the process resides<a name="wp918427"> </a>
+ <li ><b>Path and arguments</b> for the process<br><i>Note:</i> If the path contains spaces, it must be quoted. Backslashes must be escaped as double backslashes (e.g., <code>&quot;C:\\Document and Settings\\</code>...<code>&quot;</code>). If you use the <b>Search Project...</b> or <b>Browse...</b> buttons, the IDE handles any necessary quoting and escaping automatically. <a name="wp918428"> </a>
+ <li >Debugger settings<a name="wp918429"> </a>
+</ul><a name="wp918430">
+  <h5 >
+4.26.3.1	 Configuring Debugger Settings for Each Process
+ </a></h5>
+<ol type="1"> <li  value="1">Click <b>Configure...</b> to configure debugger settings for each process.<div align="left"><img src="images/cmpdconf.gif" alt="Click Configure... to set options per process" border="0" hspace="0" vspace="0"></div><br>A <b>Configure process</b> window opens with the same tree view as in the <b>Debugger</b> tab in the <b>Debug Configurations </b>dialog. Note that if you select <b>Program Options</b>, the dialog allows you to specify the RTOS for the current process.<div align="left"><img src="images/configpr.gif" alt="Configuration process window" border="0" hspace="0" vspace="0"></div><a name="wp918434"> </a>
+ <li  value="2">Make any settings you desire in the dialogs associated with each item in the tree view and click <b>OK</b>. <a name="wp918438"> </a>
+ <li  value="3">Click <b>OK</b> to save this process and add and configure additional processes as desired. <br>After you enter processes they appear in the <b>Process</b> table: <img src="images/procTable.gif" border="0" hspace="0" vspace="0"><br>Here you can select processes and click the <b>Edit</b> or <b>Delete</b> buttons to edit or delete them.<a name="wp918439"> </a>
+ <li  value="4">Use the <b>Additional Settings</b> tab to select directories, if desired:<a name="wp920257"> </a>
+ <li >The default <b>Working directory</b> for target applications is the directory where they are launched. To specify a working directory, uncheck <b>Use default</b> and enter a new directory, or use the buttons to specify one.<img src="images/cmpd_working_dir.gif" border="0" hspace="0" vspace="0"><a name="wp920258"> </a>
+<ul>  <li ><b>Workspace...</b> opens a <b>Folder Selection</b> dialog so you can select a working directory in your workspace.<a name="wp928796"> </a>
+  <li ><b>File System...</b> opens a <b>Browse for Folder</b> dialog so you can browse and select a working directory anywhere on your file system. <a name="wp928797"> </a>
+  <li ><b>Variables...</b> opens a <b>Select Variable</b> dialog where you can select Eclipse directory variables related to your project. Enter a string in the <b>Choose a variable</b> box to filter the listed variables. You can specify a subdirectory as an <b>Argument</b> to the variable. Click <b>Edit variables...</b> to open a <b>Preferences</b> dialog where you can create <b>New</b>, <b>Edit</b>, or <b>Remove</b> variables.<a name="wp928798"> </a>
+</ul> <li >Check Application to invoke prior to launch: to specify an application to invoke before invoking the debugger, such as a SCIT server process that a debugger DLL might need to communicate with. <a name="wp928799"> </a>
+</ol><dl>
+  <dt >You can specify a Command to invoke prior to debugger launch and the Working directory from which to launch. If you need more time before the debugger starts, you can specify the number of seconds to Delay before launching the debugger.<a name="wp928800"> </a></dl>
+<ol type="1"> <li  value="5">When you have all your processes configured, click <b>Apply</b> to make additional settings or <b>Debug</b> to start debugging.<a name="wp920283"> </a>
+</ol><a name="wp920284">
+  <h5 >
+Related Concepts
+ </a></h5>
+<ul> <li ><a href="mw_c_cmp.htm#wp880034">Coordinated Multiprocess Debugger (CMPD)</a><a name="wp920288"> </a>
+</ul><a name="wp920692">
+  <h5 >
+Related Tasks
+ </a></h5>
+<ul> <li ><a href="mw_t_cmp.htm#wp918334">Configuring a CMPD Session</a><a name="wp920292"> </a>
+ <li ><a href="mw_t_cma.htm#wp920254">Running a CMPD Session</a><a name="wp920296"> </a>
+ <li ><a href="mw_t_ani.htm#wp887492">Debugging: Animating a Process</a><a name="wp920300"> </a>
+ <li ><a href="mw_t_ter.htm#wp917934">Specifying a Terminal or COMM-Port Simulator</a><a name="wp920304"> </a>
+ <li ><a href="mw_t_run.htm#wp913987">Defining MetaWare Debugger Settings</a><a name="wp920308"> </a>
+</ul><a name="wp920312">
+  <h5 >
+Related Reference
+ </a></h5>
+<ul> <li >Eclipse <em>C/C++ Development User Guide</em><a name="wp920696"> </a>
+</ul>
+    </blockquote>
+    <p></p>
+    <hr>
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" class="footer">
+      <tr>
+        <td>
+
+        </td>
+        <td align="right" valign="top" class="navigator">
+<a href="addition.htm"><img src="images/sprev.gif" border="0" alt="Previous"></a><a href="mw_t_cma.htm"><img src="images/snext.gif" border="0" alt="Next"></a>
+        </td>
+      </tr>
+    </table>
+<p> <font size="-3">
+Copyright © 2012 Synopsys, Inc. <br />
+Some portions of this document copyright IBM Corporation and others 2000, 2004.</font></p>
+  </body>
+</html>

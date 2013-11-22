@@ -1,0 +1,79 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN" "http://www.w3.org/MarkUp/Wilbur/HTML32.dtd">
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+    <meta name="GENERATOR" content="Quadralay WebWorks Publisher 2003 for Word 8.0.0.1194">
+    <meta name="TEMPLATEBASE" content="ARCTechPubsv6">
+    <meta name="LASTUPDATED" content="01/27/12 13:02:36">
+<link rel="first" href="tad_help.htm">  <link rel="prev" href="lightwec.htm"><link rel="next" href="rtcs_win.htm">
+    <link rel="StyleSheet" href="document.css" type="text/css" media="screen">
+    <title>Power Management Window</title>
+  </head>
+
+  <body>
+
+    <table width="100%" border="0" cellpadding="0" cellspacing="0" class="header">
+      <tr> 
+        <td class="breadcrumbs">
+	<a href="tad_help.htm"> MQX&#174; Task Aware Debug Help</a> > <a href="tad_wind.htm"> TAD Windows</a> > Power Management Window
+        </td>
+        <td align="right" valign="top" class="navigator" nowrap>
+<a href="lightwec.htm"><img src="images/sprev.gif" border="0" alt="Previous" title="Previous"></a><a href="rtcs_win.htm"><img src="images/snext.gif" border="0" alt="Next" title="Next"></a>
+        </td>
+      </tr>
+    </table>
+
+    <hr align="left">
+
+    <blockquote>
+<h3 ><a name="wp9000899">
+Power Management Window</a></h3>
+
+
+<p >
+<a name="wp9000900">The <b>Power Management</b> window is available with MQX-EP.</a></p>
+<p ><b><i><a name="wp9000901">Displayed fields</a></i></b></p><p ><b><i><a name="wp9000902">PMU</a></i></b></p><p >
+<a name="wp9000903"><b>Power Down Mode:</b>&nbsp; <b>0</b>=disabled, <b>1</b>=power down CPU, <b>2</b>=power down CPU and memory</a></p>
+<p >
+<a name="wp9000904"><b>Power Down Threshold:</b> The number of consecutive times MQX returns to the idle task before enabling the power-down mode.</a></p>
+<p >
+<a name="wp9000905"><b>Maximum Slow Down Number:</b> Number of times to lengthen the timer period&nbsp; (You can lengthen the timer period to allow a longer power-down interval. You can also specify the number of times the timer interval is increased.)</a></p>
+<p >
+<a name="wp9000906"><b>Current Slow Down Number:</b> The number of times the timer interval has been increased (from 0 to the <b>Maximum Slow Down Number)</b>.</a></p>
+<p >
+<a name="wp9000907"><b>PMU Power Consumption:</b>&nbsp; Estimated power consumption</a></p>
+<p >
+<a name="wp9000908"><b>Current Idle Count:</b>&nbsp; Number of times the idle task has been entered (power down occurs after the <b>Power Down Threshold</b> is reached).</a></p>
+<p ><b><i><a name="wp9000909">DVFS</a></i></b></p><p >
+<a name="wp9000910"><b>Global DVFS Mode</b>: System-wide DVFS mode, one of the following:</a></p>
+<ul> <li ><b>0</b> = Full Power (default)<a name="wp9000911"> </a>
+ <li ><b>1</b> = 75% Power<a name="wp9000912"> </a>
+ <li ><b>2</b> = 50% Power<a name="wp9000913"> </a>
+ <li ><b>3</b> = 25% Power<a name="wp9000914"> </a>
+</ul><p >
+<a name="wp9000915">This setting applies to all tasks unless specifically overridden. </a></p>
+<p >
+<a name="wp9000916"><b>Automatic DVFS Mode Enabled:</b>&nbsp; <b>Yes</b>=On, <b>No</b>=Off; default <b>No</b>. </a></p>
+<p >
+<a name="wp9000917"><b>Power Consumption For DVFS Mode </b><i>N</i><b>:</b>&nbsp; Estimated power consumption</a></p>
+<p >
+<a name="wp9000918"><b>Current DVFS Mode:</b>&nbsp; Same as <b>Global DVFS Mode</b>.</a></p>
+<p >
+<img src="images/power_mb.gif" height="334" width="556" border="0" hspace="0" vspace="0">
+<a name="wp9000919"> </a></p>
+    </blockquote>
+    <p></p>
+    <hr>
+
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" class="footer">
+      <tr>
+        <td>
+          
+        </td>
+        <td align="right" valign="top" class="navigator">
+<a href="lightwec.htm"><img src="images/sprev.gif" border="0" alt="Previous" title="Previous"></a><a href="rtcs_win.htm"><img src="images/snext.gif" border="0" alt="Next" title="Next"></a>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>

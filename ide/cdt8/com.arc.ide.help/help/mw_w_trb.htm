@@ -1,0 +1,186 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN" "http://www.w3.org/MarkUp/Wilbur/HTML32.dtd">
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+    <meta name="GENERATOR" content="Quadralay WebWorks Publisher 2003 for FrameMaker 8.0.0.1194">
+    <meta name="TEMPLATEBASE" content="temp">
+    <link rel="StyleSheet" href="document.css" type="text/css" media="screen">
+    <title>Troubleshooting</title>
+  </head>
+
+  <body>
+
+    <table width="100%" border="0" cellpadding="0" cellspacing="0" class="header">
+      <tr>
+<!--Disabling Breadcrumbs to use Eclipse version 10/2009
+        <td class="breadcrumbs">
+	<a href="ide_guid.htm"> DesignWare ARC MetaWare IDE User's Guide </a> > <a href="getting_.htm"><br>Getting Started</a> > <a href="helpful_.htm">Helpful Tips</a> > Troubleshooting
+        </td>
+-->
+        <td align="right" valign="top" class="navigator" nowrap>
+<a href="helpful_.htm"><img src="images/sprev.gif" border="0" alt="Previous"></a><a href="concepts.htm"><img src="images/snext.gif" border="0" alt="Next"></a>
+        </td>
+      </tr>
+    </table>
+
+    <hr align="left">
+
+    <blockquote>
+<h4 >
+Troubleshooting
+<a name="wp844564"> </a></h4>
+
+<p >
+This section lists some common problems and their solutions. If the solutions listed do not solve your problem, go to <a href="http://solvnet.synopsys.com/" target="_window">http://solvnet.synopsys.com/</a> for application notes and technical support.
+<a name="wp849147"> </a></p>
+<p >
+<font ><b>Problem</b></font><i>:</i> Can't page down to subsequent topics in help. <br>Cause: Eclipse Help does not offer paging between topics. <br><font ><b>Solution:</b></font> With most browsers and mouse devices, you can use the keyboard to page topics in the help:
+<a name="wp844486"> </a></p>
+<ol type="1"> <li  value="1">Give the <b>Contents</b> pane focus by clicking an entry. <a name="wp844487"> </a>
+ <li  value="2">Use the up- or down-arrow key to highlight the previous or next topic the <b>Contents</b> pane (use the right- and left-arrow keys to expand and close categories). <a name="wp844488"> </a>
+ <li  value="3">Use the <font >Enter</font> key to display the highlighted topic. <a name="wp844489"> </a>
+</ol><p >
+With most browsers and mouse devices, if a topic is longer than one screen, you can drag the scroll bar or use a mouse wheel to scroll up or down pages without removing focus from the <b>Contents</b> pane. Or you can repeatedly press the <font >F6</font> key to shift focus between the <b>Contents</b> and help-topic panes, then use <font >PgUp</font> and <font >PgDn</font> to scroll. 
+<a name="wp844490"> </a></p>
+<p >
+<font ><b>Problem:</b></font> Can't go to next topic in tutorial when I am performing a step in an IDE dialog.<br><font ><b>Cause:</b></font> The dialog windows are modal, that is, they cause the GUI to enter a dedicated mode.<br><font ><b>Solution:</b></font> On Windows, you can use the Task Manager to force minimization of the main IDE window.<br>Solution: Open two instances of the IDE.<br><font ><b>Solution:</b></font> Read ahead several steps in the tutorial before performing actions that open a dialog.
+<a name="wp844491"> </a></p>
+<p >
+<font ><b>Problem:</b></font> <b>Build All</b> and <b>Build Project</b> are greyed out on the <b>Project</b> menu.<br><font ><b>Solution:</b></font> Make sure you have a MetaWare toolkit installed (the location doesn't matter; the IDE looks for it by checking the <code>PATH</code> variable).
+<a name="wp844492"> </a></p>
+<p >
+<font ><b>Problem:</b></font> Building produces the following error:
+<a name="wp844494"> </a></p>
+<blockquote >
+
+
+<table border="0" cellpadding="5" cellspacing="1" class="textlayout">
+
+  <tr>
+    <td><pre >Error launching builder (make -k clean all )
+<a name="wp851177"></a>    (Exec error:Launching failed)
+<a name="wp851179"></a></pre>
+</td>
+  </tr>
+</table>
+
+
+
+
+
+<a name="wp851170"> </a></blockquote>
+ <p >
+<font ><b>Cause:</b></font> The IDE cannot find <i>gmake</i>.<br><font ><b>Solution:</b></font> Make sure your MetaWare Development Toolkit is in <code>ARC/MetaWare/arc</code>, and make sure the toolkit's <code>bin</code> directory is in your path. 
+<a name="wp844497"> </a></p>
+<p >
+<font ><b>Problem:</b></font> Build fails with an error such as the following:<br><code>'mcc' is not recognized as an internal or external command.<br></code><font ><b>Cause:</b></font> Toolset for the specified target processor is no longer available (removed).
+<a name="wp844501"> </a></p>
+<p >
+<font ><b>Problem:</b></font> Build fails with an error such as the following:
+<a name="wp844507"> </a></p>
+<blockquote >
+
+
+<table border="0" cellpadding="5" cellspacing="1" class="textlayout">
+
+  <tr>
+    <td><pre >gmake -k clean all
+<a name="wp851197"></a>gmake: *** No rule to make target `clean'.
+<a name="wp851199"></a>gmake: *** No rule to make target `all'.
+<a name="wp851200"></a></pre>
+</td>
+  </tr>
+</table>
+
+
+
+
+
+<a name="wp844508"> </a></blockquote>
+ <p >
+<font ><b>Cause:</b></font> No makefile exists in a makefile project.<br><font ><b>Solution:</b></font> Add a makefile to your project.<br>
+<a name="wp844511"> </a></p>
+<p >
+<font ><b>Problem:</b></font> Toolset sometimes rejects hyphens in project name.<br><font ><b>Solution:</b></font> Rename the project without hyphens (right-click the project and select <b>Rename</b>). Spaces are acceptable.
+<a name="wp849001"> </a></p>
+<p >
+<font ><b>Problem:</b></font> Debugger windows not synchronized, source changes not apparent in program output.<br><font ><b>Cause:</b></font> If you rebuild while debugging, the debugger continues debugging the old executable until you restart the executable.<br><font ><b>Solution:</b></font> Click <b>Restart</b> <img src="images/restart.gif" border="0" hspace="0" vspace="0">.
+<a name="wp844513"> </a></p>
+<p >
+<font ><b>Problem:</b></font> Breakpoint disappears when I try to select it in <b>Debugger -&gt; Breakpoints</b>.<br><font ><b>Problem:</b></font> Breakpoint behavior no longer consistent between <b>Debugger -&gt; Breakpoints</b> and <b>Window &gt; Show View &gt; Breakpoints</b>.<br><font ><b>Cause:</b></font> If you rebuild while debugging, then restart, the debugger engine detects that the file has changed and attempts to re-apply breakpoints at the same source location. If a source file has lines added or deleted, the breakpoints might no longer be in expected places. <br><font ><b>Solution:</b></font> Delete and re-set the breakpoints.
+<a name="wp844517"> </a></p>
+<p >
+<font ><b>Problem:</b></font> When I create a new project, I get an error like the one below, even though I am sure <code>mcc</code> is in my path: 
+<a name="wp844530"> </a></p>
+<blockquote >
+
+
+<table border="0" cellpadding="5" cellspacing="1" class="textlayout">
+
+  <tr>
+    <td><pre >Severity Description Resource In Folder Location Creation Time
+<a name="wp851216"></a>1        Error launching external scanner info generator (mcc -Hbatchnotmp 
+-Hnoobj C:/Documents and 
+Settings/users/arc/workspace/.metadata/.plugins/org.eclipse.cdt.make.core/spe
+cs.cpp)hello test1 June 1, 2005 4:58:08 PM
+<a name="wp851218"></a></pre>
+</td>
+  </tr>
+</table>
+
+
+
+
+
+<a name="wp851205"> </a></blockquote>
+ <p >
+<font ><b>Cause:</b></font> The IDE is invoking your toolset (<i>mcc</i>) to capture output and deduce the predefined macros and include files. Possibly <i>mcc</i> is returning a non-zero return code.<br><font ><b>Solution:</b></font> You can safely ignore this error. 
+<a name="wp844533"> </a></p>
+<p >
+<font ><b>Problem:</b></font> The IDE errors out when I select <b>Run &gt; Debug</b> and expand <b>C/C++ Local Application</b>.<br><font ><b>Solution</b></font>: Select your ELF file, not just your project, under <b>Binaries</b>.
+<a name="wp848159"> </a></p>
+<p >
+<font ><b>Problem:</b></font> When performing some operations, I get a Windows security alert:
+<a name="wp844534"> </a></p>
+<blockquote >
+<div align="left"><img src="images/alert.jpg" alt="Security Alert" border="0" hspace="0" vspace="0"></div>
+
+<a name="wp844538"> </a></blockquote>
+ <p >
+<font ><b>Cause:</b></font> Windows often issues this alert when running new Java programs.<br><font ><b>Solution:</b></font> Click <b>Unblock</b> when this alert is generated by the IDE.
+<a name="wp844539"> </a></p>
+<p >
+<font ><b>Problem</b></font>: Debugger crashes when <b>Call Stack</b> window displays many calls.<br><font ><b>Cause</b></font>: Calculation of the call stack might be looping.<br><font ><b>Solution</b></font>: Manually specify the maximum number of stack frames to display using command-line option <i>-max_stack_depth=</i><i>N</i>.
+<a name="wp845240"> </a></p>
+<p >
+<font ><b>Problem</b></font>: Building my standard-make project fails with errors about some commands not being found.<br><font ><b>Cause</b></font>: Some copies of <i>make</i> or <i>gmake</i> use backlashes as escape characters, and some use backslashes as directory separators. If a directory separator is interpreted as an escape, the <i>Build</i> command sees only a long string of characters where a path was intended.<br><font ><b>Solution</b></font>: Make sure you have the latest IDE patch installed, and use the <i>gmake</i> supplied with it.
+<a name="wp845529"> </a></p>
+<a name="wp849453">
+  <h5 >
+Related Task
+ </a></h5>
+<ul> <li ><a href="mw_t_log.htm#wp796719">Capturing a Debugger Command Log</a><a name="wp849457"> </a>
+</ul><a name="wp849793">
+  <h5 >
+Related Reference
+ </a></h5>
+<ul> <li >Eclipse <em>C/C++ Development User Guide</em><a name="wp849734"> </a>
+</ul>
+    </blockquote>
+    <p></p>
+    <hr>
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" class="footer">
+      <tr>
+        <td>
+
+        </td>
+        <td align="right" valign="top" class="navigator">
+<a href="helpful_.htm"><img src="images/sprev.gif" border="0" alt="Previous"></a><a href="concepts.htm"><img src="images/snext.gif" border="0" alt="Next"></a>
+        </td>
+      </tr>
+    </table>
+<p> <font size="-3">
+Copyright © 2012 Synopsys, Inc. <br />
+Some portions of this document copyright IBM Corporation and others 2000, 2004.</font></p>
+  </body>
+</html>

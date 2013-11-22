@@ -1,0 +1,71 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN" "http://www.w3.org/MarkUp/Wilbur/HTML32.dtd">
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+    <meta name="GENERATOR" content="Quadralay WebWorks Publisher 2003 for Word 8.0.0.1194">
+    <meta name="TEMPLATEBASE" content="ARCTechPubsv6">
+    <meta name="LASTUPDATED" content="01/27/12 13:02:36">
+<link rel="first" href="tad_help.htm">  <link rel="prev" href="about_wi.htm"><link rel="next" href="events_w.htm">
+    <link rel="StyleSheet" href="document.css" type="text/css" media="screen">
+    <title>Check For Errors Window</title>
+  </head>
+
+  <body>
+
+    <table width="100%" border="0" cellpadding="0" cellspacing="0" class="header">
+      <tr> 
+        <td class="breadcrumbs">
+	<a href="tad_help.htm"> MQX&#174; Task Aware Debug Help</a> > <a href="tad_wind.htm"> TAD Windows</a> > Check For Errors Window
+        </td>
+        <td align="right" valign="top" class="navigator" nowrap>
+<a href="about_wi.htm"><img src="images/sprev.gif" border="0" alt="Previous" title="Previous"></a><a href="events_w.htm"><img src="images/snext.gif" border="0" alt="Next" title="Next"></a>
+        </td>
+      </tr>
+    </table>
+
+    <hr align="left">
+
+    <blockquote>
+<h3 ><a name="wp9000341">
+Check For Errors Window</a></h3>
+
+
+<p >
+<a name="wp9000342">The <b>Check For Errors</b> window provides a list of possible problem areas that were detected when the MQX internal data structures were examined for correctness.</a></p>
+<p ><b><i><a name="wp9000343">Displayed Fields</a></i></b></p><p >
+<a name="wp9000344">All internal MQX data structures are examined and any detected data corruption, system errors, or application errors are indicated. The types of errors that are monitored include the following:</a></p>
+<ul> <li >tasks with a non-zero task error code<a name="wp9000345"> </a>
+ <li >tasks with a stack overflow<a name="wp9000346"> </a>
+ <li >interrupt stack overflow<a name="wp9000347"> </a>
+ <li >highest memory address used and end-of-pool value<a name="wp9000348"> </a>
+ <li >memory blocks that fail a checksum verification<a name="wp9000349"> </a>
+ <li >maximum allowed message-queue number<a name="wp9000350"> </a>
+ <li >message queues that are full (that is, the number of entries is equal to the maximum allowed)<a name="wp9000351"> </a>
+ <li >messages in a message queue whose header fails a validity check<a name="wp9000352"> </a>
+ <li >partitions that do not pass a validity check<a name="wp9000353"> </a>
+ <li >event structures that fail a validity check (structures include the event component structure, all event structures, all name structures for event, and all event connection structures for all event groups)<a name="wp9000354"> </a>
+ <li >semaphore structures that fail a validity check (structures include the semaphore component structure, all semaphore structures, all name structures for semaphores, and all semaphore-connection structures for all semaphores)<a name="wp9000355"> </a>
+ <li >current number of message pools and maximum number of allowed message pools<a name="wp9000356"> </a>
+ <li >message pools with an invalid header<a name="wp9000357"> </a>
+ <li >messages with an invalid header in a message pool<a name="wp9000358"> </a>
+ <li >task queues with an invalid header<a name="wp9000359"> </a>
+ <li >lightweight semaphores with an invalid header<a name="wp9000360"> </a>
+ <li >mutex structures that fail a validity check (structures include the mutex component structure and all mutex structures)<a name="wp9000361"> </a>
+ <li >tasks that are blocked because of an unhandled interrupt<a name="wp9000362"> </a>
+</ul>
+    </blockquote>
+    <p></p>
+    <hr>
+
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" class="footer">
+      <tr>
+        <td>
+          
+        </td>
+        <td align="right" valign="top" class="navigator">
+<a href="about_wi.htm"><img src="images/sprev.gif" border="0" alt="Previous" title="Previous"></a><a href="events_w.htm"><img src="images/snext.gif" border="0" alt="Next" title="Next"></a>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>

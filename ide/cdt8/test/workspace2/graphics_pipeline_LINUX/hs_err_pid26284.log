@@ -1,0 +1,324 @@
+#
+# An unexpected error has been detected by Java Runtime Environment:
+#
+#  SIGSEGV (0xb) at pc=0xad5be973, pid=26284, tid=2882427792
+#
+# Java VM: Java HotSpot(TM) Server VM (10.0-b22 mixed mode linux-x86)
+# Problematic frame:
+# C  [libcrout.so+0x1d3973]
+#
+# If you would like to submit a bug report, please visit:
+#   http://java.sun.com/webapps/bugreport/crash.jsp
+# The crash happened outside the Java Virtual Machine in native code.
+# See problematic frame for where to report the bug.
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x0837ac00):  JavaThread "Engine Thread" [_thread_in_native, id=26302, stack(0xabc69000,0xabce6000)]
+
+siginfo:si_signo=SIGSEGV: si_errno=0, si_code=1 (SEGV_MAPERR), si_addr=0x00000004
+
+Registers:
+EAX=0x00000000, EBX=0x0865c250, ECX=0x0865c250, EDX=0x00000009
+ESP=0xabce4744, EBP=0xabce4768, ESI=0x0865c2e0, EDI=0xabce47f8
+EIP=0xad5be973, CR2=0x00000004, EFLAGS=0x00010296
+
+Top of Stack: (sp=0xabce4744)
+0xabce4744:   0865c250 ad5c23e5 08518188 0065c148
+0xabce4754:   0865a055 0865a048 abce4790 ad5c23d5
+0xabce4764:   abce47c8 abce4790 ad5c23cb 0865c250
+0xabce4774:   00000008 087d6c30 ad5bea9b 00000000
+0xabce4784:   ad5be890 abce47c8 00000009 abce47c8
+0xabce4794:   ad5bea82 08518188 ad5be890 abce47c8
+0xabce47a4:   087d1468 00000000 00000000 00000000
+0xabce47b4:   0000000c ad5beca2 087d6c30 0000003a 
+
+Instructions: (pc=0xad5be973)
+0xad5be963:   49 f8 8b 45 08 50 51 8b 41 0c ff 50 24 83 c4 0c
+0xad5be973:   83 78 04 04 0f 85 82 00 00 00 8b 40 0c 89 45 f8 
+
+Stack: [0xabc69000,0xabce6000],  sp=0xabce4744,  free space=493k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+C  [libcrout.so+0x1d3973]
+C  [libcrout.so+0x1d73cb]  each_compunit__10TranslatorFCFP6Recordi_vB+0x43
+C  [libcrout.so+0x1d3a82]
+C  [libcrout.so+0x1d3bc1]  each_stmtlist__11SymboltableFCFi_vBPcT2R9Stmt_list+0x111
+C  [libcrout.so+0x1f225e]
+C  [libcrout.so+0x1d8655]
+C  [libcrout.so+0x1e0f02]  each_item__11Linked_listFCFP4Item_vB+0xf2
+C  [libcrout.so+0x1d8680]  each_lmodule__11Lmodule_mgrFCFP7LModule_vB+0x18
+C  [libcrout.so+0x1d45ca]  each_lmodule__11SymboltableFCFP7LModule_vB+0x1a
+C  [libcrout.so+0x1f23e7]  lookupSource__17MyEngineInterfaceFPCci+0x11f
+C  [libcrout.so+0x1ee44f]  Java_com_arc_seecode_engine_internal_EngineAPI_lookupSource+0x37
+v  ~BufferBlob::Interpreter
+v  ~BufferBlob::StubRoutines (1)
+V  [libjvm.so+0x37354d]
+V  [libjvm.so+0x4fd568]
+V  [libjvm.so+0x3733e0]
+V  [libjvm.so+0x5469b5]
+V  [libjvm.so+0x54958c]
+V  [libjvm.so+0x3df495]
+C  [libjava.so+0x15214]  Java_sun_reflect_NativeMethodAccessorImpl_invoke0+0x34
+v  ~BufferBlob::Interpreter
+v  ~BufferBlob::Interpreter
+v  ~BufferBlob::Interpreter
+v  ~BufferBlob::Interpreter
+v  ~BufferBlob::Interpreter
+v  ~BufferBlob::Interpreter
+v  ~BufferBlob::Interpreter
+v  ~BufferBlob::Interpreter
+v  ~BufferBlob::StubRoutines (1)
+V  [libjvm.so+0x37354d]
+V  [libjvm.so+0x4fd568]
+V  [libjvm.so+0x372e60]
+V  [libjvm.so+0x372eed]
+V  [libjvm.so+0x3e30f5]
+V  [libjvm.so+0x5b617d]
+V  [libjvm.so+0x4fe219]
+C  [libpthread.so.0+0x52db]
+
+Java frames: (J=compiled Java code, j=interpreted, Vv=VM code)
+v  ~BufferBlob::Interpreter
+v  ~BufferBlob::StubRoutines (1)
+v  ~BufferBlob::Interpreter
+v  ~BufferBlob::Interpreter
+v  ~BufferBlob::Interpreter
+v  ~BufferBlob::Interpreter
+v  ~BufferBlob::Interpreter
+v  ~BufferBlob::Interpreter
+v  ~BufferBlob::Interpreter
+v  ~BufferBlob::Interpreter
+v  ~BufferBlob::StubRoutines (1)
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+  0x08381c00 JavaThread "EventCallback" daemon [_thread_blocked, id=26305, stack(0xabaf2000,0xabb6f000)]
+  0x0837c400 JavaThread "PacketReceiver" daemon [_thread_in_native, id=26304, stack(0xabb6f000,0xabbec000)]
+  0x0837bc00 JavaThread "PacketSender" daemon [_thread_blocked, id=26303, stack(0xabbec000,0xabc69000)]
+=>0x0837ac00 JavaThread "Engine Thread" [_thread_in_native, id=26302, stack(0xabc69000,0xabce6000)]
+  0x0811e000 JavaThread "Low Memory Detector" daemon [_thread_blocked, id=26297, stack(0xb00ff000,0xb017c000)]
+  0x0811c800 JavaThread "CompilerThread1" daemon [_thread_blocked, id=26296, stack(0xb017c000,0xb01fd000)]
+  0x0811a000 JavaThread "CompilerThread0" daemon [_thread_blocked, id=26295, stack(0xb01fd000,0xb027e000)]
+  0x08118c00 JavaThread "Signal Dispatcher" daemon [_thread_blocked, id=26294, stack(0xb027e000,0xb02fb000)]
+  0x080ff400 JavaThread "Finalizer" daemon [_thread_blocked, id=26293, stack(0xb04fb000,0xb0578000)]
+  0x080fe400 JavaThread "Reference Handler" daemon [_thread_blocked, id=26292, stack(0xb0578000,0xb05f5000)]
+  0x08058c00 JavaThread "main" [_thread_blocked, id=26286, stack(0xf7f54000,0xf7fd1000)]
+
+Other Threads:
+  0x080f9800 VMThread [stack: 0xb05f5000,0xb0676000] [id=26291]
+  0x0811f800 WatcherThread [stack: 0xb007e000,0xb00ff000] [id=26298]
+
+VM state:not at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+Heap
+ PSYoungGen      total 12224K, used 2773K [0xedc80000, 0xeea20000, 0xf4e40000)
+  eden space 10496K, 26% used [0xedc80000,0xedf354f8,0xee6c0000)
+  from space 1728K, 0% used [0xee870000,0xee870000,0xeea20000)
+  to   space 1728K, 0% used [0xee6c0000,0xee6c0000,0xee870000)
+ PSOldGen        total 111744K, used 0K [0xb4e40000, 0xbbb60000, 0xedc80000)
+  object space 111744K, 0% used [0xb4e40000,0xb4e40000,0xbbb60000)
+ PSPermGen       total 16384K, used 2847K [0xb0e40000, 0xb1e40000, 0xb4e40000)
+  object space 16384K, 17% used [0xb0e40000,0xb1107f28,0xb1e40000)
+
+Dynamic libraries:
+06000000-0665d000 r-xp 00000000 00:12 6095710                            /gol/3/jre1.6.0_06_Linux/lib/i386/server/libjvm.so
+0665d000-066a1000 rwxp 0065c000 00:12 6095710                            /gol/3/jre1.6.0_06_Linux/lib/i386/server/libjvm.so
+066a1000-06ac3000 rwxp 066a1000 00:00 0 
+08048000-08052000 r-xp 00000000 00:12 6095684                            /gol/3/jre1.6.0_06_Linux/bin/java
+08052000-08053000 rwxp 00009000 00:12 6095684                            /gol/3/jre1.6.0_06_Linux/bin/java
+08053000-087fa000 rwxp 08053000 00:00 0                                  [heap]
+47047000-47060000 r-xp 00000000 fd:00 114230297                          /lib/ld-2.5.so
+47060000-47061000 r-xp 00018000 fd:00 114230297                          /lib/ld-2.5.so
+47061000-47062000 rwxp 00019000 fd:00 114230297                          /lib/ld-2.5.so
+47064000-4719b000 r-xp 00000000 fd:00 114229265                          /lib/libc-2.5.so
+4719b000-4719d000 r-xp 00137000 fd:00 114229265                          /lib/libc-2.5.so
+4719d000-4719e000 rwxp 00139000 fd:00 114229265                          /lib/libc-2.5.so
+4719e000-471a1000 rwxp 4719e000 00:00 0 
+471a3000-471b6000 r-xp 00000000 fd:00 114229325                          /lib/libpthread-2.5.so
+471b6000-471b7000 r-xp 00012000 fd:00 114229325                          /lib/libpthread-2.5.so
+471b7000-471b8000 rwxp 00013000 fd:00 114229325                          /lib/libpthread-2.5.so
+471b8000-471ba000 rwxp 471b8000 00:00 0 
+471bc000-471e1000 r-xp 00000000 fd:00 114229272                          /lib/libm-2.5.so
+471e1000-471e2000 r-xp 00024000 fd:00 114229272                          /lib/libm-2.5.so
+471e2000-471e3000 rwxp 00025000 fd:00 114229272                          /lib/libm-2.5.so
+471e5000-471e7000 r-xp 00000000 fd:00 114229280                          /lib/libdl-2.5.so
+471e7000-471e8000 r-xp 00001000 fd:00 114229280                          /lib/libdl-2.5.so
+471e8000-471e9000 rwxp 00002000 fd:00 114229280                          /lib/libdl-2.5.so
+4722a000-4723c000 r-xp 00000000 fd:00 114229373                          /lib/libnsl-2.5.so
+4723c000-4723d000 r-xp 00012000 fd:00 114229373                          /lib/libnsl-2.5.so
+4723d000-4723e000 rwxp 00013000 fd:00 114229373                          /lib/libnsl-2.5.so
+4723e000-47240000 rwxp 4723e000 00:00 0 
+47546000-4754d000 r-xp 00000000 fd:00 114229322                          /lib/librt-2.5.so
+4754d000-4754e000 r-xp 00006000 fd:00 114229322                          /lib/librt-2.5.so
+4754e000-4754f000 rwxp 00007000 fd:00 114229322                          /lib/librt-2.5.so
+a842a000-a8437000 r-xp 00000000 00:21 8163306                            /home/pickens/redhat/MetaWare/arc/bin/xmldisp.so
+a8437000-a8439000 rwxp 0000c000 00:21 8163306                            /home/pickens/redhat/MetaWare/arc/bin/xmldisp.so
+a8439000-a8447000 r-xp 00000000 00:21 5936488                            /home/pickens/redhat/MetaWare/arc/bin/mmud.so
+a8447000-a8449000 rwxp 0000d000 00:21 5936488                            /home/pickens/redhat/MetaWare/arc/bin/mmud.so
+a8449000-aae3f000 rwxp a8449000 00:00 0 
+aae3f000-aae5c000 r-xp 00000000 00:21 8163301                            /home/pickens/redhat/MetaWare/arc/bin/plotter.so
+aae5c000-aae5e000 rwxp 0001c000 00:21 8163301                            /home/pickens/redhat/MetaWare/arc/bin/plotter.so
+aae5e000-aae68000 rwxp aae5e000 00:00 0 
+aae68000-aae75000 r-xp 00000000 00:21 6913647                            /home/pickens/redhat/MetaWare/arc/bin/mwprof.so
+aae75000-aae77000 rwxp 0000c000 00:21 6913647                            /home/pickens/redhat/MetaWare/arc/bin/mwprof.so
+aae77000-aaf41000 rwxp aae77000 00:00 0 
+aaf41000-ab000000 ---p aaf41000 00:00 0 
+ab003000-ab004000 ---p ab003000 00:00 0 
+ab004000-aba04000 rwxp ab004000 00:00 0 
+aba04000-aba13000 r-xp 00000000 fd:00 114229282                          /lib/libresolv-2.5.so
+aba13000-aba14000 r-xp 0000e000 fd:00 114229282                          /lib/libresolv-2.5.so
+aba14000-aba15000 rwxp 0000f000 fd:00 114229282                          /lib/libresolv-2.5.so
+aba15000-aba17000 rwxp aba15000 00:00 0 
+aba17000-aba1b000 r-xp 00000000 fd:00 114229286                          /lib/libnss_dns-2.5.so
+aba1b000-aba1c000 r-xp 00003000 fd:00 114229286                          /lib/libnss_dns-2.5.so
+aba1c000-aba1d000 rwxp 00004000 fd:00 114229286                          /lib/libnss_dns-2.5.so
+aba1e000-aba22000 r-xp 00000000 00:21 5936486                            /home/pickens/redhat/MetaWare/arc/bin/archw.so
+aba22000-aba23000 rwxp 00003000 00:21 5936486                            /home/pickens/redhat/MetaWare/arc/bin/archw.so
+aba23000-aba26000 r-xp 00000000 00:21 6913640                            /home/pickens/redhat/MetaWare/arc/bin/mwextea.so
+aba26000-aba27000 rwxp 00002000 00:21 6913640                            /home/pickens/redhat/MetaWare/arc/bin/mwextea.so
+aba27000-aba2a000 r-xp 00000000 00:21 5936500                            /home/pickens/redhat/MetaWare/arc/bin/mwextlib.so
+aba2a000-aba2b000 rwxp 00002000 00:21 5936500                            /home/pickens/redhat/MetaWare/arc/bin/mwextlib.so
+aba2b000-aba34000 r-xp 00000000 00:21 6913656                            /home/pickens/redhat/MetaWare/arc/bin/arcmmu.so
+aba34000-aba35000 rwxp 00008000 00:21 6913656                            /home/pickens/redhat/MetaWare/arc/bin/arcmmu.so
+aba35000-aba3d000 r-xp 00000000 00:21 5936480                            /home/pickens/redhat/MetaWare/arc/bin/bridge.so
+aba3d000-aba3e000 rwxp 00007000 00:21 5936480                            /home/pickens/redhat/MetaWare/arc/bin/bridge.so
+aba3e000-abae3000 r-xp 00000000 00:21 7305571                            /home/pickens/working/Licensing/LicenseDLL/build/flexlm/l386/obj/libflex-l386.so
+abae3000-abaeb000 rwxp 000a4000 00:21 7305571                            /home/pickens/working/Licensing/LicenseDLL/build/flexlm/l386/obj/libflex-l386.so
+abaeb000-abaf2000 rwxp abaeb000 00:00 0 
+abaf2000-abaf5000 ---p abaf2000 00:00 0 
+abaf5000-abb6f000 rwxp abaf5000 00:00 0 
+abb6f000-abb72000 ---p abb6f000 00:00 0 
+abb72000-abbec000 rwxp abb72000 00:00 0 
+abbec000-abbef000 ---p abbec000 00:00 0 
+abbef000-abc69000 rwxp abbef000 00:00 0 
+abc69000-abc6c000 ---p abc69000 00:00 0 
+abc6c000-ad3eb000 rwxp abc6c000 00:00 0 
+ad3eb000-ad967000 r-xp 00000000 00:21 5504305                            /home/pickens/working/sc/test/l386_o/libcrout.so
+ad967000-ad9ae000 rwxp 0057b000 00:21 5504305                            /home/pickens/working/sc/test/l386_o/libcrout.so
+ad9ae000-b006a000 rwxp ad9ae000 00:00 0 
+b006a000-b007d000 r-xp 00000000 00:12 6162609                            /gol/3/jre1.6.0_06_Linux/lib/i386/libnet.so
+b007d000-b007e000 rwxp 00013000 00:12 6162609                            /gol/3/jre1.6.0_06_Linux/lib/i386/libnet.so
+b007e000-b007f000 ---p b007e000 00:00 0 
+b007f000-b00ff000 rwxp b007f000 00:00 0 
+b00ff000-b0102000 ---p b00ff000 00:00 0 
+b0102000-b017c000 rwxp b0102000 00:00 0 
+b017c000-b017f000 ---p b017c000 00:00 0 
+b017f000-b01fd000 rwxp b017f000 00:00 0 
+b01fd000-b0200000 ---p b01fd000 00:00 0 
+b0200000-b027e000 rwxp b0200000 00:00 0 
+b027e000-b0281000 ---p b027e000 00:00 0 
+b0281000-b02fb000 rwxp b0281000 00:00 0 
+b02fb000-b04fb000 r-xp 00000000 fd:00 4919147                            /usr/lib/locale/locale-archive
+b04fb000-b04fe000 ---p b04fb000 00:00 0 
+b04fe000-b0578000 rwxp b04fe000 00:00 0 
+b0578000-b057b000 ---p b0578000 00:00 0 
+b057b000-b05f5000 rwxp b057b000 00:00 0 
+b05f5000-b05f6000 ---p b05f5000 00:00 0 
+b05f6000-b06a8000 rwxp b05f6000 00:00 0 
+b06a8000-b0833000 r-xs 0290d000 00:12 726587                             /gol/3/jre1.6.0_06_Linux/lib/rt.jar
+b0833000-b0834000 ---p b0833000 00:00 0 
+b0834000-b08b4000 rwxp b0834000 00:00 0 
+b08b4000-b08b5000 ---p b08b4000 00:00 0 
+b08b5000-b0935000 rwxp b08b5000 00:00 0 
+b0935000-b0936000 ---p b0935000 00:00 0 
+b0936000-b09b6000 rwxp b0936000 00:00 0 
+b09b6000-b09b7000 ---p b09b6000 00:00 0 
+b09b7000-b0a3f000 rwxp b09b7000 00:00 0 
+b0a3f000-b0a57000 rwxp b0a3f000 00:00 0 
+b0a57000-b0a8e000 rwxp b0a57000 00:00 0 
+b0a8e000-b0c1f000 rwxp b0a8e000 00:00 0 
+b0c1f000-b0c27000 rwxp b0c1f000 00:00 0 
+b0c27000-b0c3f000 rwxp b0c27000 00:00 0 
+b0c3f000-b0c76000 rwxp b0c3f000 00:00 0 
+b0c76000-b0e06000 rwxp b0c76000 00:00 0 
+b0e06000-b0e0d000 rwxp b0e06000 00:00 0 
+b0e0d000-b0e3f000 rwxp b0e0d000 00:00 0 
+b0e3f000-b1e40000 rwxp b0e3f000 00:00 0 
+b1e40000-b4e40000 rwxp b1e40000 00:00 0 
+b4e40000-bbb60000 rwxp b4e40000 00:00 0 
+bbb60000-edc80000 rwxp bbb60000 00:00 0 
+edc80000-eea20000 rwxp edc80000 00:00 0 
+eea20000-f4e40000 rwxp eea20000 00:00 0 
+f4e43000-f4e4a000 r-xs 00000000 fd:00 5013764                            /usr/lib/gconv/gconv-modules.cache
+f4e4a000-f4e53000 rwxp f4e4a000 00:00 0 
+f4e53000-f4f0a000 rwxp f4e53000 00:00 0 
+f4f0a000-f514a000 rwxp f4f0a000 00:00 0 
+f514a000-f7f0a000 rwxp f514a000 00:00 0 
+f7f0a000-f7f19000 r-xp 00000000 00:12 6162605                            /gol/3/jre1.6.0_06_Linux/lib/i386/libzip.so
+f7f19000-f7f1b000 rwxp 0000e000 00:12 6162605                            /gol/3/jre1.6.0_06_Linux/lib/i386/libzip.so
+f7f1b000-f7f3e000 r-xp 00000000 00:12 6162601                            /gol/3/jre1.6.0_06_Linux/lib/i386/libjava.so
+f7f3e000-f7f40000 rwxp 00023000 00:12 6162601                            /gol/3/jre1.6.0_06_Linux/lib/i386/libjava.so
+f7f40000-f7f4b000 r-xp 00000000 00:12 6162600                            /gol/3/jre1.6.0_06_Linux/lib/i386/libverify.so
+f7f4b000-f7f4c000 rwxp 0000b000 00:12 6162600                            /gol/3/jre1.6.0_06_Linux/lib/i386/libverify.so
+f7f4c000-f7f54000 rwxs 00000000 fd:00 108135039                          /tmp/hsperfdata_pickens/26284
+f7f54000-f7f57000 ---p f7f54000 00:00 0 
+f7f57000-f7fd3000 rwxp f7f57000 00:00 0 
+f7fd3000-f7fda000 r-xp 00000000 00:12 6162603                            /gol/3/jre1.6.0_06_Linux/lib/i386/jli/libjli.so
+f7fda000-f7fdc000 rwxp 00006000 00:12 6162603                            /gol/3/jre1.6.0_06_Linux/lib/i386/jli/libjli.so
+f7fdf000-f7fe7000 r-xp 00000000 fd:00 114229292                          /lib/libnss_nis-2.5.so
+f7fe7000-f7fe8000 r-xp 00007000 fd:00 114229292                          /lib/libnss_nis-2.5.so
+f7fe8000-f7fe9000 rwxp 00008000 fd:00 114229292                          /lib/libnss_nis-2.5.so
+f7fe9000-f7ff2000 r-xp 00000000 fd:00 114229288                          /lib/libnss_files-2.5.so
+f7ff2000-f7ff3000 r-xp 00008000 fd:00 114229288                          /lib/libnss_files-2.5.so
+f7ff3000-f7ff4000 rwxp 00009000 fd:00 114229288                          /lib/libnss_files-2.5.so
+f7ff4000-f7ffa000 r-xp 00000000 00:12 6095708                            /gol/3/jre1.6.0_06_Linux/lib/i386/native_threads/libhpi.so
+f7ffa000-f7ffb000 rwxp 00006000 00:12 6095708                            /gol/3/jre1.6.0_06_Linux/lib/i386/native_threads/libhpi.so
+f7ffb000-f7ffc000 rwxp f7ffb000 00:00 0 
+f7ffc000-f7ffd000 r-xp f7ffc000 00:00 0 
+f7ffd000-f7ffe000 rwxp f7ffd000 00:00 0 
+ffc73000-ffc7b000 rwxp ffc73000 00:00 0                                  [stack]
+ffffe000-fffff000 r-xp ffffe000 00:00 0 
+
+VM Arguments:
+jvm_args: -Xss512000 
+java_command: com.arc.seecode.server.Server -CMPD=4 51265 /home/pickens/redhat/MetaWare/arc/bin/libcrout.so
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+JAVA_HOME=/gol/3/jre1.6.0_01_Linux
+CLASSPATH=/gol/3/jre1.6.0_01_Linux/lib/classes.zip:/home/pickens/java:.
+PATH=/home/pickens/redhat/MetaWare/arc/bin:.:/usr/local/bin:/gol/3/jre1.6.0_01_Linux/bin:/home/pickens/bin/l386:/home/pickens/bin:/usr/ucb:/bin:/sol/3/bin:/sol/3/bin/l386:/usr/bin:/usr/bin/X11:/usr/local/lang:/etc:/usr/etc:/sol/3rdparty/starteam:/sol/3rdparty/pvcs/l386:/sol/3/tws/bin_l386:/sol/3/drivers/bin@l386:/sol/lib/bin:/usr/lib/uucp:/home/pickens/Sather/bin.l386:/opt/GNU/bin:/gol/3/jre1.6.0_01_Linux/bin:/gol/3/Eclipse-3.1M3-Linux
+LD_LIBRARY_PATH=/gol/3/jre1.6.0_06_Linux/lib/i386/server:/gol/3/jre1.6.0_06_Linux/lib/i386:/gol/3/jre1.6.0_06_Linux/../lib/i386:/gol/3/jre1.5.0_09_Linux/lib/i386/client::/gol/3/jre1.5.0_09_Linux/lib/i386::/usr/lib/firefox-1.5.0.9:/usr/lib/firefox-1.5.0.9
+SHELL=/bin/tcsh
+DISPLAY=:1.0
+HOSTTYPE=x86_64-linux
+OSTYPE=linux
+MACHTYPE=x86_64
+
+Signal Handlers:
+SIGSEGV: [libjvm.so+0x5edbc0], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGBUS: [libjvm.so+0x5edbc0], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGFPE: [libjvm.so+0x4fc630], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGPIPE: [libjvm.so+0x4fc630], sa_mask[0]=0x00000000, sa_flags=0x00000000, flags was changed from 0x10000004, consider using jsig library
+SIGXFSZ: [libjvm.so+0x4fc630], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGILL: [libjvm.so+0x4fc630], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGUSR1: SIG_DFL, sa_mask[0]=0x00000000, sa_flags=0x00000000
+SIGUSR2: [libjvm.so+0x4fe670], sa_mask[0]=0x00000004, sa_flags=0x10000004
+SIGHUP: [libjvm.so+0x4fe410], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGINT: SIG_IGN, sa_mask[0]=0x00000000, sa_flags=0x00000000
+SIGTERM: [libjvm.so+0x4fe410], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGQUIT: [libjvm.so+0x4fe410], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+
+
+---------------  S Y S T E M  ---------------
+
+OS:Red Hat Enterprise Linux Client release 5 (Tikanga)
+
+uname:Linux 2.6.18-53.1.19.el5 #1 SMP Tue Apr 22 03:01:10 EDT 2008 x86_64
+libc:glibc 2.5 NPTL 2.5 
+rlimit: STACK 10240k, CORE 0k, NPROC 73216, NOFILE 1024, AS infinity
+load average:0.01 0.02 0.03
+
+CPU:total 4 (4 cores per cpu, 1 threads per core) family 6 model 15 stepping 11, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3
+
+Memory: 4k page, physical 8041992k(3037576k free), swap 2031608k(2031608k free)
+
+vm_info: Java HotSpot(TM) Server VM (10.0-b22) for linux-x86 JRE (1.6.0_06-b02), built on Mar 25 2008 00:26:44 by "java_re" with gcc 3.2.1-7a (J2SE release)
+
+time: Thu May 29 14:08:55 2008
+elapsed time: 1 seconds
+

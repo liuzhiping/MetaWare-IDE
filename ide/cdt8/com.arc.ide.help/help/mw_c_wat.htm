@@ -1,0 +1,91 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN" "http://www.w3.org/MarkUp/Wilbur/HTML32.dtd">
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+    <meta name="GENERATOR" content="Quadralay WebWorks Publisher 2003 for FrameMaker 8.0.0.1194">
+    <meta name="TEMPLATEBASE" content="temp">
+    <link rel="StyleSheet" href="document.css" type="text/css" media="screen">
+    <title>Watchpoints</title>
+  </head>
+
+  <body>
+
+    <table width="100%" border="0" cellpadding="0" cellspacing="0" class="header">
+      <tr>
+<!--Disabling Breadcrumbs to use Eclipse version 10/2009
+        <td class="breadcrumbs">
+	<a href="ide_guid.htm"> DesignWare ARC MetaWare IDE User's Guide </a> > <a href="concepts.htm"><br>Concepts</a> > <a href="debuggin.htm">Debugging Extensions</a> > Watchpoints
+        </td>
+-->
+        <td align="right" valign="top" class="navigator" nowrap>
+<a href="global_a.htm"><img src="images/sprev.gif" border="0" alt="Previous"></a><a href="mw_c_ani.htm"><img src="images/snext.gif" border="0" alt="Next"></a>
+        </td>
+      </tr>
+    </table>
+
+    <hr align="left">
+
+    <blockquote>
+<h4 >
+Watchpoints
+<a name="wp873973"> </a></h4>
+
+<p >
+Watchpoints monitor a region of memory and stop execution if any changes occur in the contents of that region. Unlike breakpoints, which are line-specific, watchpoints are associated with addresses. They take effect whenever a specified condition is true regardless of where it occurs. 
+<a name="wp882297"> </a></p>
+<p >
+Use watchpoints to find statements that unexpectedly change your program's code or data (for example, an array index that addresses elements beyond the array's allocated space). If the value of a variable, array, structure, or other data item in your program is changing unexpectedly, you can set a watchpoint on the region of memory containing that data item, then animate your program. When a watchpoint's value changes, the program stops and the debugger updates all values in open windows.
+<a name="wp873977"> </a></p>
+<p >
+Each watchpoint is assigned an index number when you create it; these numbers are successive integers, starting with 1 (one).
+<a name="wp873978"> </a></p>
+<p >
+To speed up the debugger's response time when you are watching a region of memory, close any open windows that update frequently (for example, the <b>Disassembly</b>, <b>Memory</b>, <b>Registers</b>, and <b>Source</b> windows). This saves the overhead of updating these windows as your program executes.
+<a name="wp873980"> </a></p>
+<a name="wp873993">
+  <h5 >
+3.3.2.1	 Hardware and Software Watchpoints
+ </a></h5>
+<p >
+The debugger can set hardware watchpoints on systems that support hardware watchpoints, and can set software watchpoints on any system; the instruction-set simulator can simulate software watchpoints even if your hardware build does not include them. Software watchpoints are not as reliable as hardware watchpoints, but can be very useful for resolving problems not visible elsewhere. 
+<a name="wp873998"> </a></p>
+<p >
+If your target system supports hardware watchpoints, the debugger uses those instead of software watchpoints wherever it can. Usually there are certain system constraints on what a hardware watchpoint can watch, and the debugger does not set a hardware watchpoint on any variable that passes into and out of scope. 
+<a name="wp874001"> </a></p>
+<p >
+Depending on your target processor, you can set a watchpoint on a machine register or variable using the <b>Registers</b>, <b>Local Variables</b>, or <b>Global Variables</b> window. You can also set watchpoints using the Eclipse <b>Variables</b> and <b>Outline</b> views (see the Eclipse <em>C/C++ Development User Guide</em>).
+<a name="wp881648"> </a></p>
+<a name="wp882155">
+  <h5 >
+Related Tasks
+ </a></h5>
+<ul> <li ><a href="mw_t_reg.htm#wp918766">Working with the Registers Window</a><a name="wp882195"> </a>
+ <li ><a href="mw_t_loc.htm#wp711139">Working with Local Variables</a><a name="wp882199"> </a>
+ <li ><a href="mw_t_glo.htm#wp711078">Working with Global Variables</a><a name="wp882203"> </a>
+ <li ><a href="cdt_t_ad.htm#wp918897">Adding Breakpoints</a><a name="wp882159"> </a>
+ <li ><a href="cdt_t_ad.htm#wp918897">Adding Breakpoints</a><a name="wp882163"> </a>
+ <li ><a href="mw_t_wpt.htm#wp919023">Working with Watchpoints</a><a name="wp882167"> </a>
+</ul><a name="wp882168">
+  <h5 >
+Related Reference
+ </a></h5>
+<ul> <li >Eclipse <em>C/C++ Development User Guide</em><a name="wp882184"> </a>
+</ul>
+    </blockquote>
+    <p></p>
+    <hr>
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" class="footer">
+      <tr>
+        <td>
+
+        </td>
+        <td align="right" valign="top" class="navigator">
+<a href="global_a.htm"><img src="images/sprev.gif" border="0" alt="Previous"></a><a href="mw_c_ani.htm"><img src="images/snext.gif" border="0" alt="Next"></a>
+        </td>
+      </tr>
+    </table>
+<p> <font size="-3">
+Copyright © 2012 Synopsys, Inc. <br />
+Some portions of this document copyright IBM Corporation and others 2000, 2004.</font></p>
+  </body>
+</html>

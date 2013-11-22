@@ -1,0 +1,4 @@
+<view name="org.eclipse.debug.ui.BreakpointView">
+    <tree>
+    </tree>
+</view>

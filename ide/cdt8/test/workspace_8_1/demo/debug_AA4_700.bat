@@ -1,0 +1,1 @@
+scac C:\ARC\mqx_rtos2.52_arc\examples\demo\arca7.met\demo.elf -OS=MQX -arc700 -DLLprop=gclk=60 -blast=C:\ARC\mqx_rtos2.52_arc\library\bsp\arcangel\xbf\aa4j1_ARC700_aurora_sdram_95mhz_r2.xbf -hard -jtag -off=cache_target_memory -port=0x378 -targs=AC -timeout=100 -toggle=deadbeef=1 -toggle=include_local_symbols=1 -nogoifmain -OK

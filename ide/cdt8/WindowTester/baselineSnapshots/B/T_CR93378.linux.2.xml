@@ -1,0 +1,13 @@
+<TextCanvas>
+    <text lineCount="6" selection="-1">
+        <line content="unsigned int C.0.3391 = 3730080 (0x38eaa0)">
+        <line content="unsigned int blanks.3312 = 538976288 (0x20202020)">
+        <line content="unsigned int buf.1506 = 0">
+        <line content="unsigned int buf.1788 = 0">
+        <line content="int channel_index = 0">
+        <line content="vr_channel_t channel_list[2] = [2,4]">
+    </text>
+    <icon x="19" y="85">
+        <image width="12" height="12">
+             ff 49 e7 ff e7 4a e7 ff e7 4a ff        </image>
+</TextCanvas>

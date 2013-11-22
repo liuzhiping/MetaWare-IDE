@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="com.arc.cdt.debug.seecode.core.CMPDType">
+<intAttribute key="SeeCodeDisplay.disasm.profilingColumns" value="0"/>
+<mapAttribute key="SeeCodeDisplay.disasm.valueUpdates">
+<mapEntry key="include_instr_hex" value="1"/>
+<mapEntry key="labels_in_hex" value="1"/>
+</mapAttribute>
+<intAttribute key="SeeCodeDisplay.funcs.profilingColumns" value="0"/>
+<mapAttribute key="SeeCodeDisplay.funcs.valueUpdates"/>
+<intAttribute key="SeeCodeDisplay.image.profilingColumns" value="0"/>
+<mapAttribute key="SeeCodeDisplay.image.valueUpdates"/>
+<intAttribute key="SeeCodeDisplay.instrhist.profilingColumns" value="0"/>
+<mapAttribute key="SeeCodeDisplay.instrhist.valueUpdates"/>
+<intAttribute key="SeeCodeDisplay.source.profilingColumns" value="0"/>
+<mapAttribute key="SeeCodeDisplay.source.valueUpdates"/>
+<intAttribute key="com.arc.cdt.debug.seecode.core.CMPD_COUNT" value="4"/>
+<stringAttribute key="com.arc.cdt.debug.seecode.core.CMPD_PROCESS_ID_LIST_0" value="1"/>
+<stringAttribute key="com.arc.cdt.debug.seecode.core.CMPD_PROCESS_ID_LIST_1" value="2"/>
+<stringAttribute key="com.arc.cdt.debug.seecode.core.CMPD_PROCESS_ID_LIST_2" value="3"/>
+<stringAttribute key="com.arc.cdt.debug.seecode.core.CMPD_PROCESS_ID_LIST_3" value="4"/>
+<intAttribute key="com.arc.cdt.debug.seecode.core.CMPD_PROCESS_INSTANCE_COUNT_0" value="1"/>
+<intAttribute key="com.arc.cdt.debug.seecode.core.CMPD_PROCESS_INSTANCE_COUNT_1" value="1"/>
+<intAttribute key="com.arc.cdt.debug.seecode.core.CMPD_PROCESS_INSTANCE_COUNT_2" value="1"/>
+<intAttribute key="com.arc.cdt.debug.seecode.core.CMPD_PROCESS_INSTANCE_COUNT_3" value="1"/>
+<stringAttribute key="com.arc.cdt.debug.seecode.core.CMPD_PROCESS_NAME_0" value="grmain"/>
+<stringAttribute key="com.arc.cdt.debug.seecode.core.CMPD_PROCESS_NAME_1" value="displaymain"/>
+<stringAttribute key="com.arc.cdt.debug.seecode.core.CMPD_PROCESS_NAME_2" value="rendermain0"/>
+<stringAttribute key="com.arc.cdt.debug.seecode.core.CMPD_PROCESS_NAME_3" value="rendermain1"/>
+<stringAttribute key="com.arc.cdt.debug.seecode.core.CMPD_PROCESS_PATH_0" value="generated/software/grmain/grmain"/>
+<stringAttribute key="com.arc.cdt.debug.seecode.core.CMPD_PROCESS_PATH_1" value="generated/software/displaymain/displaymain"/>
+<stringAttribute key="com.arc.cdt.debug.seecode.core.CMPD_PROCESS_PATH_2" value="generated/software/rendermain0/rendermain0"/>
+<stringAttribute key="com.arc.cdt.debug.seecode.core.CMPD_PROCESS_PATH_3" value="generated/software/rendermain1/rendermain1"/>
+<stringAttribute key="com.arc.cdt.debug.seecode.core.CMPD_PROJECT_NAME_0" value="graphics_pipeline"/>
+<stringAttribute key="com.arc.cdt.debug.seecode.core.CMPD_PROJECT_NAME_1" value="graphics_pipeline"/>
+<stringAttribute key="com.arc.cdt.debug.seecode.core.CMPD_PROJECT_NAME_2" value="graphics_pipeline"/>
+<stringAttribute key="com.arc.cdt.debug.seecode.core.CMPD_PROJECT_NAME_3" value="graphics_pipeline"/>
+<stringAttribute key="com.arc.cdt.debug.seecode.core.CMPD_TARGET_CPU_0" value="ac"/>
+<stringAttribute key="com.arc.cdt.debug.seecode.core.CMPD_TARGET_CPU_1" value="ac"/>
+<stringAttribute key="com.arc.cdt.debug.seecode.core.CMPD_TARGET_CPU_2" value="ac"/>
+<stringAttribute key="com.arc.cdt.debug.seecode.core.CMPD_TARGET_CPU_3" value="ac"/>
+<mapAttribute key="com.arc.cdt.debug.seecode.core.GUIHILI_PROPS_0">
+<mapEntry key="A7_mmu" value="1"/>
+<mapEntry key="AC_dcache" value="1"/>
+<mapEntry key="AC_dcache_line_size" value="32"/>
+<mapEntry key="AC_dcache_repalg" value="Random"/>
+<mapEntry key="AC_dcache_size" value="32768"/>
+<mapEntry key="AC_dcache_ways" value="4"/>
+<mapEntry key="AC_icache" value="1"/>
+<mapEntry key="AC_icache_line_size" value="32"/>
+<mapEntry key="AC_icache_repalg" value="Random"/>
+<mapEntry key="AC_icache_size" value="32768"/>
+<mapEntry key="AC_icache_ways" value="2"/>
+<mapEntry key="ARC_ExtDLL1" value="name=imemory_model1.initiator,out=0x03c00000"/>
+<mapEntry key="ARC_ExtDLL2" value="name=imemory_model2.initiator,out=0x03c00000"/>
+<mapEntry key="ARC_ExtDLL3" value="name=imemory_model3.initiator,out=0x03c00000"/>
+<mapEntry key="ARC_mpy" value="1"/>
+<mapEntry key="ARC_target" value="ARC_simulator"/>
+<mapEntry key="Local_symbols" value="1"/>
+<mapEntry key="Program_toggles_on" value="stop_all"/>
+<mapEntry key="SIDLL1" value="SCDIR/bin/plotter,plot=1"/>
+<mapEntry key="cmd_line_option" value="-nogoifmain -prop=instrs_per_pass=50 -cmpd=soc -toggle=deadbeef=1"/>
+<mapEntry key="profiling_window" value="1"/>
+<mapEntry key="which_arc" value="ARC7"/>
+</mapAttribute>
+<mapAttribute key="com.arc.cdt.debug.seecode.core.GUIHILI_PROPS_1">
+<mapEntry key="A7_mmu" value="1"/>
+<mapEntry key="AC_dcache" value="1"/>
+<mapEntry key="AC_dcache_line_size" value="32"/>
+<mapEntry key="AC_dcache_repalg" value="Random"/>
+<mapEntry key="AC_dcache_size" value="32768"/>
+<mapEntry key="AC_dcache_ways" value="4"/>
+<mapEntry key="AC_icache" value="1"/>
+<mapEntry key="AC_icache_line_size" value="32"/>
+<mapEntry key="AC_icache_repalg" value="Random"/>
+<mapEntry key="AC_icache_size" value="32768"/>
+<mapEntry key="AC_icache_ways" value="2"/>
+<mapEntry key="ARC_ExtDLL1" value="name=imemory_model1.target,in=0x03c00000:0x0fffffff"/>
+<mapEntry key="ARC_mpy" value="1"/>
+<mapEntry key="ARC_target" value="ARC_simulator"/>
+<mapEntry key="Local_symbols" value="1"/>
+<mapEntry key="Program_toggles_on" value="stop_all"/>
+<mapEntry key="SIDLL1" value="SCDIR/bin/plotter,plot=1"/>
+<mapEntry key="cmd_line_option" value="-nogoifmain -prop=instrs_per_pass=50 -cmpd=soc -toggle=deadbeef=1"/>
+<mapEntry key="profiling_window" value="1"/>
+<mapEntry key="which_arc" value="ARC7"/>
+</mapAttribute>
+<mapAttribute key="com.arc.cdt.debug.seecode.core.GUIHILI_PROPS_2">
+<mapEntry key="A7_mmu" value="1"/>
+<mapEntry key="AC_dcache" value="1"/>
+<mapEntry key="AC_dcache_line_size" value="32"/>
+<mapEntry key="AC_dcache_repalg" value="Random"/>
+<mapEntry key="AC_dcache_size" value="32768"/>
+<mapEntry key="AC_dcache_ways" value="4"/>
+<mapEntry key="AC_icache" value="1"/>
+<mapEntry key="AC_icache_line_size" value="32"/>
+<mapEntry key="AC_icache_repalg" value="Random"/>
+<mapEntry key="AC_icache_size" value="32768"/>
+<mapEntry key="AC_icache_ways" value="2"/>
+<mapEntry key="ARC_ExtDLL1" value="name=imemory_model2.target,in=0x03c00000:0x0fffffff"/>
+<mapEntry key="ARC_mpy" value="1"/>
+<mapEntry key="ARC_target" value="ARC_simulator"/>
+<mapEntry key="Local_symbols" value="1"/>
+<mapEntry key="Program_toggles_on" value="stop_all"/>
+<mapEntry key="SIDLL1" value="SCDIR/bin/plotter,plot=1"/>
+<mapEntry key="cmd_line_option" value="-nogoifmain -prop=instrs_per_pass=50 -cmpd=soc -toggle=deadbeef=1"/>
+<mapEntry key="profiling_window" value="1"/>
+<mapEntry key="which_arc" value="ARC7"/>
+</mapAttribute>
+<mapAttribute key="com.arc.cdt.debug.seecode.core.GUIHILI_PROPS_3">
+<mapEntry key="A7_mmu" value="1"/>
+<mapEntry key="AC_dcache" value="1"/>
+<mapEntry key="AC_dcache_line_size" value="32"/>
+<mapEntry key="AC_dcache_repalg" value="Random"/>
+<mapEntry key="AC_dcache_size" value="32768"/>
+<mapEntry key="AC_dcache_ways" value="4"/>
+<mapEntry key="AC_icache" value="1"/>
+<mapEntry key="AC_icache_line_size" value="32"/>
+<mapEntry key="AC_icache_repalg" value="Random"/>
+<mapEntry key="AC_icache_size" value="32768"/>
+<mapEntry key="AC_icache_ways" value="2"/>
+<mapEntry key="ARC_ExtDLL1" value="name=imemory_model3.target,in=0x03c00000:0x0fffffff"/>
+<mapEntry key="ARC_mpy" value="1"/>
+<mapEntry key="ARC_target" value="ARC_simulator"/>
+<mapEntry key="Local_symbols" value="1"/>
+<mapEntry key="Program_toggles_on" value="stop_all"/>
+<mapEntry key="SIDLL1" value="SCDIR/bin/plotter,plot=1"/>
+<mapEntry key="cmd_line_option" value="-nogoifmain -prop=instrs_per_pass=50 -cmpd=soc -toggle=deadbeef=1"/>
+<mapEntry key="profiling_window" value="1"/>
+<mapEntry key="which_arc" value="ARC7"/>
+</mapAttribute>
+<listAttribute key="com.arc.cdt.debug.seecode.core.SWAHILI_ARGS">
+<listEntry value="-cmpd=soc"/>
+<listEntry value="-off=cr_for_more"/>
+<listEntry value="-simexts=bridge,instance=imemory_model1"/>
+<listEntry value="-simexts=bridge,instance=imemory_model2"/>
+<listEntry value="-simexts=bridge,instance=imemory_model3"/>
+</listAttribute>
+<listAttribute key="com.arc.cdt.debug.seecode.core.SWAHILI_ARGS_0">
+<listEntry value="-nogoifmain"/>
+<listEntry value="-prop=instrs_per_pass=50"/>
+<listEntry value="-cmpd=soc"/>
+<listEntry value="-semint=SCDIR/bin/plotter,plot=1"/>
+<listEntry value="-simextp=name=imemory_model1.initiator,out=0x03c00000"/>
+<listEntry value="-simextp=name=imemory_model2.initiator,out=0x03c00000"/>
+<listEntry value="-simextp=name=imemory_model3.initiator,out=0x03c00000"/>
+<listEntry value="-toggle=include_local_symbols=1"/>
+<listEntry value="-profile"/>
+<listEntry value="-sim"/>
+<listEntry value="-a7"/>
+<listEntry value="-Xmpy"/>
+<listEntry value="-mmu"/>
+<listEntry value="-toggle=deadbeef=1"/>
+<listEntry value="-icache=32768,32,2,a"/>
+<listEntry value="-dcache=32768,32,4,a"/>
+<listEntry value="-on=stop_all"/>
+</listAttribute>
+<listAttribute key="com.arc.cdt.debug.seecode.core.SWAHILI_ARGS_1">
+<listEntry value="-nogoifmain"/>
+<listEntry value="-prop=instrs_per_pass=50"/>
+<listEntry value="-cmpd=soc"/>
+<listEntry value="-semint=SCDIR/bin/plotter,plot=1"/>
+<listEntry value="-simextp=name=imemory_model1.target,in=0x03c00000:0x0fffffff"/>
+<listEntry value="-toggle=include_local_symbols=1"/>
+<listEntry value="-profile"/>
+<listEntry value="-sim"/>
+<listEntry value="-a7"/>
+<listEntry value="-Xmpy"/>
+<listEntry value="-mmu"/>
+<listEntry value="-toggle=deadbeef=1"/>
+<listEntry value="-icache=32768,32,2,a"/>
+<listEntry value="-dcache=32768,32,4,a"/>
+<listEntry value="-on=stop_all"/>
+</listAttribute>
+<listAttribute key="com.arc.cdt.debug.seecode.core.SWAHILI_ARGS_2">
+<listEntry value="-nogoifmain"/>
+<listEntry value="-prop=instrs_per_pass=50"/>
+<listEntry value="-cmpd=soc"/>
+<listEntry value="-semint=SCDIR/bin/plotter,plot=1"/>
+<listEntry value="-simextp=name=imemory_model2.target,in=0x03c00000:0x0fffffff"/>
+<listEntry value="-toggle=include_local_symbols=1"/>
+<listEntry value="-profile"/>
+<listEntry value="-sim"/>
+<listEntry value="-a7"/>
+<listEntry value="-Xmpy"/>
+<listEntry value="-mmu"/>
+<listEntry value="-toggle=deadbeef=1"/>
+<listEntry value="-icache=32768,32,2,a"/>
+<listEntry value="-dcache=32768,32,4,a"/>
+<listEntry value="-on=stop_all"/>
+</listAttribute>
+<listAttribute key="com.arc.cdt.debug.seecode.core.SWAHILI_ARGS_3">
+<listEntry value="-nogoifmain"/>
+<listEntry value="-prop=instrs_per_pass=50"/>
+<listEntry value="-cmpd=soc"/>
+<listEntry value="-semint=SCDIR/bin/plotter,plot=1"/>
+<listEntry value="-simextp=name=imemory_model3.target,in=0x03c00000:0x0fffffff"/>
+<listEntry value="-toggle=include_local_symbols=1"/>
+<listEntry value="-profile"/>
+<listEntry value="-sim"/>
+<listEntry value="-a7"/>
+<listEntry value="-Xmpy"/>
+<listEntry value="-mmu"/>
+<listEntry value="-toggle=deadbeef=1"/>
+<listEntry value="-icache=32768,32,2,a"/>
+<listEntry value="-dcache=32768,32,4,a"/>
+<listEntry value="-on=stop_all"/>
+</listAttribute>
+<stringAttribute key="com.arc.cdt.debug.seecode.coreVDK_CONFIG_PATH" value="generated/software/dbgconfig.xml"/>
+<stringAttribute key="org.eclipse.cdt.launch.DEBUGGER_REGISTER_GROUPS" value=""/>
+<booleanAttribute key="org.eclipse.cdt.launch.DEBUGGER_RESUME_AT_START" value="true"/>
+<stringAttribute key="org.eclipse.cdt.launch.FORMAT" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;no&quot;?&gt;&lt;contentList/&gt;"/>
+<stringAttribute key="org.eclipse.cdt.launch.GLOBAL_VARIABLES" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;no&quot;?&gt;&#13;&#10;&lt;globalVariableList/&gt;&#13;&#10;"/>
+<stringAttribute key="org.eclipse.cdt.launch.MEMORY_BLOCKS" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;no&quot;?&gt;&#13;&#10;&lt;memoryBlockExpressionList/&gt;&#13;&#10;"/>
+<stringAttribute key="org.eclipse.cdt.launch.PROJECT_ATTR" value="graphics_pipeline"/>
+<stringAttribute key="org.eclipse.cdt.launch.PROJECT_BUILD_CONFIG_ID_ATTR" value="org.eclipse.cdt.core.default.config.630100091"/>
+<stringAttribute key="org.eclipse.cdt.launch.disassemblyViewID" value="com.arc.cdt.debug.seecode.ui.views.disasm"/>
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
+<listEntry value="/graphics_pipeline"/>
+</listAttribute>
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES">
+<listEntry value="4"/>
+</listAttribute>
+<booleanAttribute key="org.eclipse.debug.core.appendEnvironmentVariables" value="true"/>
+<stringAttribute key="process_factory_id" value="com.arc.cdt.debug.seecode.processFactory"/>
+</launchConfiguration>

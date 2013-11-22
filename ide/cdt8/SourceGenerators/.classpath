@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry excluding="**/.svn/**" kind="src" path="src"/>
+	<classpathentry kind="src" path="/com.arc.seecode.engine"/>
+	<classpathentry kind="src" path="/org.dom4j"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="C:/work/trunk/build_env/jdk/1.6.0_20/win32/lib/tools.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

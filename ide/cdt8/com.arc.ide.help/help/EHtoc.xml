@@ -1,0 +1,183 @@
+<?xml version='1.0' encoding='ISO-8859-1' ?>
+<?NLS TYPE="org.eclipse.help.toc"?>
+<toc label="MetaWare IDE Help" topic="help/ide_guid.htm">
+ <topic label="DesignWare ARC MetaWare IDE User's Guide" href="help/ide_guid.htm#wp127660 ">
+  <topic label="" href="help/ ">
+   <topic label="Copyright Notice and Proprietary Information" href="help/ide_guid.htm#wp99251  "/>
+  </topic>
+  <topic label=" Before You Begin" href="help/before_y.htm#wp48609 ">
+   <topic label="Customer Support" href="help/customer.htm#wp92078 ">
+    <topic label="Accessing SolvNet" href="help/accessin.htm#wp90726  "/>
+    <topic label="Contacting the Synopsys Technical Support Center" href="help/contacti.htm#wp90733  "/>
+    <topic label="Accessing ARC Application Notes" href="help/accessia.htm#wp90747  "/>
+   </topic>
+   <topic label="About This Document" href="help/about_th.htm#wp90391  "/>
+   <topic label="Document Conventions" href="help/document.htm#wp90799 ">
+    <topic label="Typographical Conventions" href="help/document.htm#wp90800  "/>
+    <topic label="Notes" href="help/notes.htm#wp90843  "/>
+    <topic label="Cautions" href="help/cautions.htm#wp90854  "/>
+    <topic label="Hints" href="help/hints.htm#wp90864  "/>
+   </topic>
+  </topic>
+  <topic label=" Getting Started" href="help/getting_.htm#wp849417 ">
+   <topic label="Tutorials" href="help/tutorial.htm#wp849433 ">
+    <topic label="Building and Debugging" href="help/mw_w_que.htm#wp846721  "/>
+    <topic label="Debugging with Breakpoints" href="help/debuggif.htm#wp846878  "/>
+    <topic label="Editing and Rebuilding in the Debug Perspective" href="help/editing_.htm#wp846912  "/>
+   </topic>
+   <topic label="Helpful Tips" href="help/helpful_.htm#wp849704 ">
+    <topic label="Troubleshooting" href="help/mw_w_trb.htm#wp844564  "/>
+   </topic>
+  </topic>
+  <topic label=" Concepts" href="help/concepts.htm#wp881153 ">
+   <topic label="Workbench Extensions" href="help/workbenc.htm#wp881570 ">
+    <topic label="Project Configurations" href="help/mw_c_con.htm#wp881715  "/>
+    <topic label="Building C/C++ Projects" href="help/cdt_c_bu.htm#wp881736  "/>
+   </topic>
+   <topic label="Compilation Extensions" href="help/compilat.htm#wp881601 ">
+    <topic label="Overlays" href="help/mw_c_ovl.htm#wp879623  "/>
+   </topic>
+   <topic label="Debugging Extensions" href="help/debuggin.htm#wp881968 ">
+    <topic label="Global and Local Variables" href="help/global_a.htm#wp875213  "/>
+    <topic label="Watchpoints" href="help/mw_c_wat.htm#wp873973  "/>
+    <topic label="Animation" href="help/mw_c_ani.htm#wp878960  "/>
+    <topic label="Coordinated Multiprocess Debugger (CMPD)" href="help/mw_c_cmp.htm#wp880034  "/>
+   </topic>
+  </topic>
+  <topic label=" Tasks" href="help/tasks.htm#wp947064 ">
+   <topic label="Workbench Extensions" href="help/workbena.htm#wp912578 ">
+    <topic label="Creating a Build Configuration" href="help/mw_t_con.htm#wp695471  "/>
+    <topic label="Changing Project Type (Executable or Shared Library)" href="help/changing.htm#wp922718  "/>
+    <topic label="Displaying Toolset License and Version Information" href="help/displayi.htm#wp922825  "/>
+    <topic label="Editing a Linker Command File" href="help/editinga.htm#wp922814  "/>
+    <topic label="Converting MetaDeveloper Projects" href="help/mw_t_imp.htm#wp921824  "/>
+    <topic label="Making the MetaWare IDE a Plugin to Your Existing Eclipse" href="help/making_t.htm#wp921178  "/>
+   </topic>
+   <topic label="Compilation Extensions" href="help/compilaa.htm#wp920854 ">
+    <topic label="Adding Files to a Project" href="help/mw_t_add.htm#wp695193  "/>
+    <topic label="Defining MetaWare Build Settings" href="help/mw_t_set.htm#wp865705  "/>
+    <topic label="Selecting C++ Run-Time Libraries" href="help/mw_t_stl.htm#wp847893  "/>
+    <topic label="Building Projects from the Command Line" href="help/building.htm#wp928111  "/>
+    <topic label="Post-Processing Using a Batch File" href="help/mw_t_bat.htm#wp927973  "/>
+   </topic>
+   <topic label="Defining MetaWare Debugger Settings" href="help/mw_t_run.htm#wp913987  "/>
+   <topic label="Launching a Debug Configuration at Startup" href="help/mw_t_deb.htm#wp919935  "/>
+   <topic label="Debug Views and Windows" href="help/mw_o_deb.htm#wp919939 ">
+    <topic label="Changing a Value in a Debugger Window" href="help/mw_t_cha.htm#wp915887  "/>
+   </topic>
+   <topic label="Debugging: Animating a Process" href="help/mw_t_ani.htm#wp887492 ">
+    <topic label="Displaying the Animation Toolbar" href="help/displaya.htm#wp887496  "/>
+    <topic label="Starting Animation" href="help/starting.htm#wp887525  "/>
+   </topic>
+   <topic label="Debugging with Source" href="help/mw_o_src.htm#wp915019 ">
+    <topic label="Viewing Source" href="help/mw_t_src.htm#wp923924  "/>
+    <topic label="Viewing All Source Files" href="help/mw_sf.htm#wp915042  "/>
+   </topic>
+   <topic label="Debugging with Disassembly" href="help/mw_t_dis.htm#wp709372 ">
+    <topic label="Opening a Disassembly Window" href="help/opening_.htm#wp924029  "/>
+    <topic label="Customizing the Disassembly Window" href="help/t_cus_di.htm#wp709381  "/>
+   </topic>
+   <topic label="Debugging with Breakpoints and Watchpoints" href="help/cdt_o_br.htm#wp918881 ">
+    <topic label="Adding Breakpoints" href="help/cdt_t_ad.htm#wp918897  "/>
+    <topic label="Viewing and Managing Current Breakpoints" href="help/mw_t_bkp.htm#wp918944  "/>
+    <topic label="Working with Watchpoints" href="help/mw_t_wpt.htm#wp919023  "/>
+   </topic>
+   <topic label="Debugging: Listing All Executable Modules" href="help/mw_t_mod.htm#wp919246  "/>
+   <topic label="Debugging: Working with Registers" href="help/debuggia.htm#wp709428 ">
+    <topic label="Working with the Registers Window" href="help/mw_t_reg.htm#wp918766  "/>
+    <topic label="Viewing and Modifying Auxiliary Registers" href="help/mw_t_aux.htm#wp709496  "/>
+    <topic label="Debugging with ARC 700 Exception and MMU Registers" href="help/mw_t_mmu.htm#wp710452  "/>
+    <topic label="Viewing MMU Contents" href="help/mw_t_mma.htm#wp710483  "/>
+    <topic label="Viewing the MPU Registers" href="help/mw_t_mpu.htm#wp710519  "/>
+   </topic>
+   <topic label="Debugging with a PMU (ARC 600 Only)" href="help/mw_t_pwr.htm#wp866929 ">
+    <topic label="Enabling the PMU Window" href="help/enabling.htm#wp866932  "/>
+    <topic label="Opening the PMU Window" href="help/openinga.htm#wp915658  "/>
+    <topic label="Waking up the Processor" href="help/waking_u.htm#wp867081  "/>
+   </topic>
+   <topic label="Debugging: Working with Memory" href="help/mw_o_mem.htm#wp866038 ">
+    <topic label="Working with the Debugger Memory Window" href="help/mw_t_mem.htm#wp709568  "/>
+    <topic label="Searching Memory" href="help/mw_t_sea.htm#wp709740  "/>
+    <topic label="Filling Memory with a Value or String" href="help/mw_t_fil.htm#wp709881  "/>
+    <topic label="Copying a File to Memory" href="help/mw_t_fia.htm#wp709924  "/>
+    <topic label="Copying Memory to a File" href="help/mw_t_mea.htm#wp709966  "/>
+   </topic>
+   <topic label="Debugging: Working with Variables" href="help/mw_o_var.htm#wp866220 ">
+    <topic label="Working with Global Variables" href="help/mw_t_glo.htm#wp711078  "/>
+    <topic label="Working with Local Variables" href="help/mw_t_loc.htm#wp711139  "/>
+    <topic label="Examining Variables" href="help/mw_t_exa.htm#wp739878  "/>
+   </topic>
+   <topic label="Debugging with Stack" href="help/debuggib.htm#wp695796 ">
+    <topic label="Working with the Call Stack" href="help/mw_t_cst.htm#wp916772  "/>
+    <topic label="Working with a Hardware Stack" href="help/mw_t_hws.htm#wp710733  "/>
+   </topic>
+   <topic label="Debugging with Functions" href="help/mw_t_fun.htm#wp696377 ">
+    <topic label="Viewing a Specific Function or a Subset of Functions" href="help/viewing_.htm#wp916904  "/>
+    <topic label="Setting or Removing a Breakpoint on a Function" href="help/setting_.htm#wp696393  "/>
+    <topic label="Viewing Disassembly for a Function" href="help/viewinga.htm#wp696401  "/>
+   </topic>
+   <topic label="Debugging with Instruction History" href="help/mw_t_ins.htm#wp696733 ">
+    <topic label="Opening an Instruction history - Simulator trace Window" href="help/openingb.htm#wp917111  "/>
+    <topic label="Stepping through a History of Instructions" href="help/stepping.htm#wp696765  "/>
+    <topic label="Filtering Trace Items and Configuring Buffers" href="help/filterin.htm#wp696785  "/>
+    <topic label="Restricting Displayed Instructions" href="help/restrict.htm#wp696799  "/>
+    <topic label="Marking Lines of Instruction History to Return to" href="help/marking_.htm#wp696845  "/>
+    <topic label="Configuring Trace Capture" href="help/configur.htm#wp696861  "/>
+    <topic label="Debugging with SmaRT Real-Time Trace" href="help/debuggic.htm#wp929577  "/>
+   </topic>
+   <topic label="Debugging: Profiling" href="help/mw_t_pro.htm#wp866547 ">
+    <topic label="Profiling Using the Profiling Window" href="help/prof_win.htm#wp917592  "/>
+    <topic label="Configuring Statistical Profiling" href="help/mw_t_coa.htm#wp944532  "/>
+    <topic label="Adding Profiling by Right-Clicking in a Window" href="help/adding_p.htm#wp866572  "/>
+    <topic label="Viewing ARC Enhanced System Timers" href="help/mw_t_tim.htm#wp918801  "/>
+   </topic>
+   <topic label="Debugging with Overlays (ARCompact and ARCv2)" href="help/mw_t_ovl.htm#wp890384  "/>
+   <topic label="Debugging Multiple Executables" href="help/debuggid.htm#wp922249 ">
+    <topic label="Downloading Additional Executables" href="help/download.htm#wp922261  "/>
+    <topic label="Extracting Symbols from Additional Executables" href="help/extracti.htm#wp922281  "/>
+   </topic>
+   <topic label="Using a Digilent Cable to Connect to Hardware" href="help/using_a_.htm#wp945456  "/>
+   <topic label="Debugging with Special Simulators" href="help/debuggie.htm#wp922246 ">
+    <topic label="Using nSIM" href="help/using_ns.htm#wp917885  "/>
+    <topic label="Using Synopsys Virtualizer" href="help/using_sy.htm#wp928446  "/>
+    <topic label="Specifying a Terminal or COMM-Port Simulator" href="help/mw_t_ter.htm#wp917934  "/>
+    <topic label="Using a Terminal Simulator" href="help/mw_t_use.htm#wp917993  "/>
+    <topic label="Using the Cycle-Estimating Simulator" href="help/mw_t_ces.htm#wp705744  "/>
+   </topic>
+   <topic label="Debugging with ARC EM Interrupts" href="help/debuggig.htm#wp710877 ">
+    <topic label="Register bank Windows" href="help/register.htm#wp943962  "/>
+    <topic label="Interrupt state Window" href="help/interrup.htm#wp943415  "/>
+   </topic>
+   <topic label="Debugging with Application Input and Output" href="help/debuggih.htm#wp943736 ">
+    <topic label="Entering Input to the Application Being Debugged" href="help/mw_t_inp.htm#wp918116  "/>
+    <topic label="Working with Application Output" href="help/mw_t_pou.htm#wp710927  "/>
+   </topic>
+   <topic label="Debugging with Commands" href="help/debuggii.htm#wp784340 ">
+    <topic label="Using Debugger Commands" href="help/mw_t_cmd.htm#wp918174  "/>
+    <topic label="Capturing a Debugger Command Log" href="help/mw_t_log.htm#wp796719  "/>
+   </topic>
+   <topic label="Debugging with CMPD Extensions" href="help/mw_o_cmp.htm#wp918309 ">
+    <topic label="Configuring a CMPD Session" href="help/mw_t_cmp.htm#wp918334  "/>
+    <topic label="Additional CMPD Settings" href="help/addition.htm#wp918424  "/>
+    <topic label="Configuring Each Process Individually" href="help/cmpd_ind.htm#wp922560  "/>
+    <topic label="Running a CMPD Session" href="help/mw_t_cma.htm#wp920254  "/>
+   </topic>
+  </topic>
+  <topic label=" Reference" href="help/referenc.htm#wp985114 ">
+   <topic label="Debugger Commands" href="help/mw_u_cmn.htm#wp992756  "/>
+   <topic label="Debugger Conventions for Regular Expressions" href="help/mw_u_reg.htm#wp993229  "/>
+   <topic label="Debugger: Terminal Simulator Settings" href="help/mw_u_ter.htm#wp993280  "/>
+   <topic label="Debugger: COMM-Port Simulator Settings" href="help/mw_u_com.htm#wp993321  "/>
+   <topic label="Debugger Windows and Views" href="help/mw_u_db_.htm#wp992752 ">
+    <topic label="Debugger Options Tree View" href="help/mw_u_db_.htm#wp992722  "/>
+    <topic label="ARC Build-Configuration-Registers Window" href="help/mw_u_bcr.htm#wp910607  "/>
+    <topic label="Instruction-Count History Window" href="help/mw_u_icn.htm#wp911617  "/>
+    <topic label="Overlays Window (ARCompact and ARCv2 Targets)" href="help/mw_u_ovl.htm#wp982778  "/>
+    <topic label="Cache Analysis Window" href="help/mw_u_cac.htm#wp911015  "/>
+    <topic label="Image Window" href="help/mw_u_img.htm#wp911053  "/>
+    <topic label="Image Memory Window" href="help/img_mem.htm#wp911101  "/>
+   </topic>
+   <topic label="IDE Command-Line Options" href="help/ide_comm.htm#wp991214  "/>
+  </topic>
+ </topic>
+</toc>

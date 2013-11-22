@@ -1,0 +1,23 @@
+<view name="org.eclipse.ui.views.ProblemView">
+    <tree columns="5">
+        <item>
+            <cell>Errors (2 items)</cell>
+            <cell></cell>
+            <cell></cell>
+            <cell></cell>
+            <cell></cell>
+            <item>
+                <cell>undefined: Identifier is undeclared.</cell>
+                <cell>undef.c</cell>
+                <cell>/undefined</cell>
+                <cell>line 2</cell>
+                <cell>C/C++ Problem</cell>
+            <item>
+                <cell>make: *** [undef.o] Error 1</cell>
+                <cell>undefined</cell>
+                <cell></cell>
+                <cell>line 0</cell>
+                <cell>C/C++ Problem</cell>
+        </item>
+    </tree>
+</view>

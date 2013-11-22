@@ -1,0 +1,91 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN" "http://www.w3.org/MarkUp/Wilbur/HTML32.dtd">
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+    <meta name="GENERATOR" content="Quadralay WebWorks Publisher 2003 for FrameMaker 8.0.0.1194">
+    <meta name="TEMPLATEBASE" content="temp">
+    <link rel="StyleSheet" href="document.css" type="text/css" media="screen">
+    <title>Selecting C++ Run-Time Libraries</title>
+  </head>
+
+  <body>
+
+    <table width="100%" border="0" cellpadding="0" cellspacing="0" class="header">
+      <tr>
+<!--Disabling Breadcrumbs to use Eclipse version 10/2009
+        <td class="breadcrumbs">
+	<a href="ide_guid.htm"> DesignWare ARC MetaWare IDE User's Guide </a> > <a href="tasks.htm"><br>Tasks</a> > <a href="compilaa.htm">Compilation Extensions </a> > Selecting C++ Run-Time Libraries
+        </td>
+-->
+        <td align="right" valign="top" class="navigator" nowrap>
+<a href="mw_t_set.htm"><img src="images/sprev.gif" border="0" alt="Previous"></a><a href="building.htm"><img src="images/snext.gif" border="0" alt="Next"></a>
+        </td>
+      </tr>
+    </table>
+
+    <hr align="left">
+
+    <blockquote>
+<h4 >
+Selecting C++ Run-Time Libraries
+<a name="wp847893"> </a></h4>
+
+<p >
+A minimal MetaWare C++ Run-Time Library is linked in by default. You can choose to compile and/or link with the STLport Standard Template Library for a full C++ STL. 
+<a name="wp928171"> </a></p>
+<a name="wp928201">
+  <h5 >
+Compiling and Linking
+ </a></h5>
+<p >
+To compile and link with the STLport STL, select <b>Use STLPort C++ Library (-Hstl)</b> in the <b>C++</b> category in <b>Project &gt; Properties &gt; Settings</b>,<b> Tool Settings </b>tab,<b> MetaWare ARC C/C++ Compiler</b>. By default, a smaller, faster version without exceptions is supplied; for exception-aware libraries, additionally select <b>Generate Exception-Aware Code (-Hexcept)</b>.
+<a name="wp928172"> </a></p>
+<blockquote >
+<div align="left"><img src="images/stlcompi.gif" border="0" hspace="0" vspace="0"></div>
+
+<a name="wp928209"> </a></blockquote>
+ <a name="wp928200">
+  <h5 >
+Linking
+ </a></h5>
+<p >
+To link in the STLport STL without compiling, select your preferred version (with or without exceptions) from the <b>Runtime C++ library</b> drop-down list in <b>Project &gt; Properties &gt; Settings</b>,<b> Tool Settings </b>tab,<b> MetaWare Linker for ARCompact &gt; Special Libraries</b>. 
+<a name="wp928208"> </a></p>
+<blockquote >
+<div align="left"><img src="images/stllinke.gif" border="0" hspace="0" vspace="0"></div>
+
+<a name="wp928230"> </a></blockquote>
+ <p >
+You can make other library-related linking selections here as well.
+<a name="wp928231"> </a></p>
+<a name="wp928173">
+  <h5 >
+Related Tasks
+ </a></h5>
+<ul> <li ><a href="mw_t_set.htm#wp865705">Defining MetaWare Build Settings</a><a name="wp928118"> </a>
+ <li ><a href="mw_t_con.htm#wp695471">Creating a Build Configuration</a><a name="wp928140"> </a>
+</ul><a name="wp928119">
+  <h5 >
+Related Reference
+ </a></h5>
+<ul> <li >Eclipse <em>C/C++ Development User Guide</em><a name="wp928123"> </a>
+ <li ><i>MetaWare C/C++ Programmer's Guide</i><a name="wp928126"> </a>
+</ul>
+    </blockquote>
+    <p></p>
+    <hr>
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" class="footer">
+      <tr>
+        <td>
+
+        </td>
+        <td align="right" valign="top" class="navigator">
+<a href="mw_t_set.htm"><img src="images/sprev.gif" border="0" alt="Previous"></a><a href="building.htm"><img src="images/snext.gif" border="0" alt="Next"></a>
+        </td>
+      </tr>
+    </table>
+<p> <font size="-3">
+Copyright © 2012 Synopsys, Inc. <br />
+Some portions of this document copyright IBM Corporation and others 2000, 2004.</font></p>
+  </body>
+</html>

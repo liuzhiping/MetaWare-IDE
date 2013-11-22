@@ -1,0 +1,15 @@
+<view name="org.eclipse.ui.views.ProblemView">
+    <tree columns="5">
+        <item>
+            <cell>Warnings (1 item)</cell>
+            <cell></cell>
+            <cell></cell>
+            <cell></cell>
+            <item>
+                <cell>(Warning) No section mapped to GROUP.</cell>
+                <cell>link.txt</cell>
+                <cell>linkwarn</cell>
+                <cell>line 18</cell>
+        </item>
+    </tree>
+</view>

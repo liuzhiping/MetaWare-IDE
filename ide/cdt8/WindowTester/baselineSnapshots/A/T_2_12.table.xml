@@ -1,0 +1,10 @@
+<view>
+    <table columns="1">
+        <row>
+            <cell>MetaWare C++ Input</cell>
+        </row>
+        <row>
+            <cell>MetaWare C Input</cell>
+        </row>
+    </table>
+</view>

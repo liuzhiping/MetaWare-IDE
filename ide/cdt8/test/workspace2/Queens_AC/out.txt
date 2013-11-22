@@ -1,0 +1,42 @@
+SC> sysprop command_processor flex_license_dll)=^C:\ARC\MetaWare\arc/../../license/bin/flex.dll^ flex_license_file)=^1650@arc1.arc.com^ 
+SC> sysprop command_processor onlinedocfile)=^C:\ARC\MetaWare\arc/docs/pdf/contents.pdf^ 
+SC> sysprop command_processor DOCDIR)=#C:\ARC\MetaWare\arc/docs/pdf# 
+SC> sysprop command_processor WHICHARC=a5_
+SC> sysprop command_processor onlinereadme)=^C:\ARC\MetaWare\arc/mdb/doc/seecode.txt^ 
+SC> sysprop command_processor idename=MetaDeveloper:EditMsg,Workbench 
+SC> sysdef ARC_simulator 
+SC> sysdef BRC_simulator 
+SC> sysprop ARC_hardware icnts=1 killeds=1 delay_killeds=1 semint)=^C:\ARC\MetaWare\arc/bin/mwprof^ semint)=^C:\ARC\MetaWare\arc/bin/archw^ port=0x378 include_local_symbols=1 include_local_symbols=1 deadbeef=1 dname=MetaWare
+SC> sysprop BRC_hardware icnts=1 killeds=1 delay_killeds=1 semint)=^C:\ARC\MetaWare\arc/bin/mwprof^ semint)=^C:\ARC\MetaWare\arc/bin/archw^ port=0x378 include_local_symbols=1 include_local_symbols=1 deadbeef=1 dname=MetaWare
+SC> sysprop ARC_simulator arcver=33 simext)=^C:\ARC\MetaWare\arc/bin/mwextlib^ xbarrel_shifter=1 xswap=1 xnorm=1 icnts=1 killeds=1 delay_killeds=1 semint)=^C:\ARC\MetaWare\arc/bin/mwprof^ semint)=^C:\ARC\MetaWare\arc/bin/archw,^ include_local_symbols=1 include_local_symbols=1 deadbeef=1 dname=MetaWare
+SC> sysprop BRC_simulator arcver=33 simext)=^C:\ARC\MetaWare\arc/bin/mwextlib^ xbarrel_shifter=1 xswap=1 xnorm=1 icnts=1 killeds=1 delay_killeds=1 semint)=^C:\ARC\MetaWare\arc/bin/mwprof^ semint)=^C:\ARC\MetaWare\arc/bin/archw,^ include_local_symbols=1 include_local_symbols=1 deadbeef=1 dname=MetaWare
+SC> sysprop ARC_DLL arcver=33 xbarrel_shifter=1 xswap=1 xnorm=1 cloneable=1 icnts=1 killeds=1 delay_killeds=1 semint)=^C:\ARC\MetaWare\arc/bin/mwprof^ semint)=^C:\ARC\MetaWare\arc/bin/archw^ port=0x378 include_local_symbols=1 include_local_symbols=1 deadbeef=1 dname=MetaWare
+SC> sysprop BRC_DLL arcver=33 xbarrel_shifter=1 xswap=1 xnorm=1 cloneable=1 icnts=1 killeds=1 delay_killeds=1 semint)=^C:\ARC\MetaWare\arc/bin/mwprof^ semint)=^C:\ARC\MetaWare\arc/bin/archw^ port=0x378 include_local_symbols=1 include_local_symbols=1 deadbeef=1 dname=MetaWare
+SC> sysprop command_processor include_local_symbols=1 include_local_symbols=1 deadbeef=1 dname=MetaWare
+SC> readq ..scrc
+SC> sysprop command_processor mdi=1 
+Debugging C:\ARC\MetaWare\workspace2\Queens_AC\Debug\Queens_AC.elf on ARCompact Instruction Set Simulator (ARC_simulator).
+C:\ARC\MetaWare\workspace2\Queens_AC\Debug\Queens_AC.elf: Process created
+Simulator extensions loaded:  Extension Library.
+Downloading to ARCompact Instruction Set Simulator.
+ELF segment #0 addr 0x010000 size 0x005aea
+ELF segment #1 addr 0x016000 size 0x0010ac
+ELF segment #1 addr 0x0170ac zero 0x010980
+Semantic inspection loaded: Profiling Plugin.
+SC> readq ".scrc" 
+E> ok_to_load_windows SC> readq "C:\ARC\MetaWare\arc/bin/scrc" 
++SC> 
+ELF segment #0 addr 0x010000 size 0x005aea	...
+ELF segment #1 addr 0x016000 size 0x0010ac	.
+ELF segment #1 addr 0x0170ac zero 0x010980	.........
+Breakpoint 1 set.
+    1:    0x0101f8 condition:[temporary]
+                   main         push_s       %blink
+Process started    101f8 main         push_s       %blink
+Execution stopped at breakpoint.
+Breakpoint 1 (break 0x101f8) removed.
+Execution stopped.
+Process is not executing.
+C:\ARC\MetaWare\workspace2\Queens_AC\Debug\Queens_AC.elf: Process terminated
+Shutting down all processes...Done
+Server terminating

@@ -1,0 +1,140 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN" "http://www.w3.org/MarkUp/Wilbur/HTML32.dtd">
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+    <meta name="GENERATOR" content="Quadralay WebWorks Publisher 2003 for FrameMaker 8.0.0.1194">
+    <meta name="TEMPLATEBASE" content="temp">
+    <link rel="StyleSheet" href="document.css" type="text/css" media="screen">
+    <title>Examining Variables</title>
+  </head>
+
+  <body>
+
+    <table width="100%" border="0" cellpadding="0" cellspacing="0" class="header">
+      <tr>
+<!--Disabling Breadcrumbs to use Eclipse version 10/2009
+        <td class="breadcrumbs">
+	<a href="ide_guid.htm"> DesignWare ARC MetaWare IDE User's Guide </a> > <a href="tasks.htm"><br>Tasks</a> > <a href="mw_o_var.htm">Debugging: Working with Variables</a> > Examining Variables
+        </td>
+-->
+        <td align="right" valign="top" class="navigator" nowrap>
+<a href="mw_t_loc.htm"><img src="images/sprev.gif" border="0" alt="Previous"></a><a href="debuggib.htm"><img src="images/snext.gif" border="0" alt="Next"></a>
+        </td>
+      </tr>
+    </table>
+
+    <hr align="left">
+
+    <blockquote>
+<h4 >
+Examining Variables
+<a name="wp739878"> </a></h4>
+
+<p >
+Use an <b>Examine</b> window to inspect the value of a variable or the value of an element of an aggregate data structure (array element, structure member, and so on). You can also toggle on and off the display of the variable's data type. 
+<a name="wp711212"> </a></p>
+<blockquote >
+
+
+<table border="1" cellpadding="5" cellspacing="0">
+  <caption></caption>
+  <tr>
+    <td><table border="0" cellpadding="5" cellspacing="0">
+  <caption></caption>
+  <tr valign=top>
+    <td><div ><img border="0" src="images/note.png">
+</div></td>
+    <td><div ></div></td>
+</tr></table>
+<a name="wp927351"> </a>
+</td>
+    <td><div >The <b>Examine</b> window is available only for applications compiled with debugging information (option <i>-g</i>).<a name="wp927353"> </a></div></td>
+  </tr>
+</table>
+
+
+
+
+
+<a name="wp927345"> </a></blockquote>
+ <p >
+To open an <b>Examine</b> window, select <b>Debugger &gt; Examine</b> while your application is running in the debugger, or right-click and select <b>Examine</b> in a <b>Global Variables</b> or <b>Local Variables</b> window.
+<a name="wp711213"> </a></p>
+<p >
+The <b>Examine</b> window opens.
+<a name="wp711220"> </a></p>
+<blockquote >
+<div align="left"><img src="images/sc_exam.gif" border="0" hspace="0" vspace="0"></div>
+
+<a name="wp711224"> </a></blockquote>
+ <p >
+You can examine items by typing them in the <b>Examine:</b> input field and pressing <font >Enter</font>. To remove an item, right-click it and choose <b>Remove</b> from the pop-up menu that appears.
+<a name="wp711229"> </a></p>
+<ul> <li >To show or hide data types, click <b>(...)</b> on the toolbar.<a name="wp884024"> </a>
+ <li >To show or hide addresses, click <b>&amp;</b>.<a name="wp884025"> </a>
+ <li >Following an item shows the component parts of an aggregate or dereferences a pointer. To follow an item, right-click it and select <b>Follow</b>, or select the item and then click the <b>Follow</b> button. <img src="images/follow_b.gif" border="0" hspace="0" vspace="0"><a name="wp711233"> </a>
+</ul><p >
+You can also select a line and do one of the following:
+<a name="wp884048"> </a></p>
+<ul> <li >Click <img src="images/WatchIcon.jpg" border="0" hspace="0" vspace="0"> to set a watchpoint on a variable. <a name="wp884035"> </a>
+ <li >Click <img src="images/ChangeIcon.jpg" border="0" hspace="0" vspace="0"> to change the value of a variable.<a name="wp884039"> </a>
+</ul><p >
+To save the data to a file, right click and select <b>Save to File</b>.
+<a name="wp711235"> </a></p>
+<a name="wp711237">
+  <h5 >
+4.14.3.1	 Examining Deeper Levels in an Aggregate Data Structure
+ </a></h5>
+<p >
+When you open an <b>Examine</b> window on an aggregate data structure, the <b>Examine</b> window's default configuration is <i>tree-structured</i>; that is, all components of the data structure are listed below it, joined by a tree diagram. Components that are themselves data structures are marked with a data-structure symbol.
+<a name="wp711246"> </a></p>
+<p >
+Generally, you can learn all you need to about a simple data element by looking at it in the original <b>Examine</b> window. There are several ways you can examine the components of a data structure that are themselves nested structures.
+<a name="wp711248"> </a></p>
+<ul> <li >Click the nested-data symbol (<b>[+]</b>) next to the structure to expand the tree structure and display the structure's elements in the current <b>Examine</b> window. <a name="wp711256"> </a>
+</ul><dl>
+  <dt >You can navigate through many levels of nested structures in this way.<a name="wp711260"> </a></dl>
+<ul> <li >Click the structure to select it, then click <b>Follow</b> on the <b>Examine Options</b> toolbar to display the structure by itself in the current <b>Examine</b> window. <a name="wp711267"> </a>
+</ul><dl>
+  <dt >This method is useful if you have a very large data structure or one that contains nested components with many levels; examining all the levels of such a structure at once in an <b>Examine</b> window can result in a very large, awkward tree structure.<a name="wp711271"> </a></dl>
+<a name="wp711275">
+  <h5 >
+4.14.3.2	 Reevaluating the Value of Data Structures
+ </a></h5>
+<p >
+You can use the <b>Deep/Shallow Binding</b> button <img src="images/deep_sha.gif" border="0" hspace="0" vspace="0"> to switch between <i>deep</i> or <i>shallow binding.</i> In deep binding (the default), the address is computed just once. In shallow binding, the expression containing the data structure is re-evaluated each time the <b>Examine</b> window is refreshed (typically every time execution stops).
+<a name="wp945968"> </a></p>
+<p >
+To reevaluate a data structure, click the button to its left.
+<a name="wp711281"> </a></p>
+<a name="wp916404">
+  <h5 >
+Related Tasks
+ </a></h5>
+<ul> <li ><a href="mw_t_loc.htm#wp711139">Working with Local Variables</a><a name="wp916408"> </a>
+ <li ><a href="mw_t_glo.htm#wp711078">Working with Global Variables</a><a name="wp916434"> </a>
+ <li ><a href="mw_t_cha.htm#wp915887">Changing a Value in a Debugger Window</a><a name="wp916412"> </a>
+</ul><a name="wp916417">
+  <h5 >
+Related Reference
+ </a></h5>
+<ul> <li >Eclipse <em>C/C++ Development User Guide</em><a name="wp916425"> </a>
+</ul>
+    </blockquote>
+    <p></p>
+    <hr>
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" class="footer">
+      <tr>
+        <td>
+
+        </td>
+        <td align="right" valign="top" class="navigator">
+<a href="mw_t_loc.htm"><img src="images/sprev.gif" border="0" alt="Previous"></a><a href="debuggib.htm"><img src="images/snext.gif" border="0" alt="Next"></a>
+        </td>
+      </tr>
+    </table>
+<p> <font size="-3">
+Copyright © 2012 Synopsys, Inc. <br />
+Some portions of this document copyright IBM Corporation and others 2000, 2004.</font></p>
+  </body>
+</html>

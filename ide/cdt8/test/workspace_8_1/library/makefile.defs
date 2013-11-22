@@ -1,0 +1,34 @@
+## * IDE MAKEFILE DEPENDENCIES ****************************************
+## ********************************************************************
+##
+## Copyright (c) 1989-2007 ARC International
+## All rights reserved
+##
+## This software embodies materials and concepts which are
+## confidential to ARC International and is made
+## available solely pursuant to the terms of a written license
+## agreement with ARC International
+##
+## File: makefile.defs
+##
+## Comments:
+##    This file defines dependencies for building MQX (the PSP)
+##
+##
+## ********************************************************************
+## *END****************************************************************
+
+#psp/arc/dispatch.o: pspcont.s psp_prv.met
+psp/arc/dispatch.o: pspcont.s
+psp/arc/prof_isr.o: pspcont.s
+psp/arc/psp_dsp52.o: pspcont.s
+psp/arc/psp_dsp52prv.o: pspcont.s
+psp/arc/psp_prv.o: pspcont.s
+
+## pspcont.s is automatically generated from psp_ctx.c by the
+## MetaWare compiler.  We do this so the compiler will calculate
+## structure member offsets for assembly code so that the assembly
+## will always be in sync with C/C++.
+pspcont.s: psp/arc/psp_ctx.o
+pspcont.o: pspcont.s
+

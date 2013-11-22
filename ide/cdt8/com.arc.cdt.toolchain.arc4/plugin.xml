@@ -1,0 +1,742 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+<plugin>
+   
+<!--   <extension
+         id="ARCExternalScannerInfoProvider"
+         name="ARC External Scanner Info Provider"
+         point="org.eclipse.cdt.make.core.ExternalScannerInfoProvider">
+      <externalScannerInfoProvider >
+         <run class="org.eclipse.cdt.make.internal.core.scannerconfig.DefaultExternalScannerInfoProvider">
+            <parameter
+                  value="hcarc"
+                  name="defaultCommand"/>
+            <parameter
+                  value="-Hbatchnotmp -Hnoobj ${plugin_state_location}/${specs_file}"
+                  name="defaultAttributes"/>
+         </run>
+      </externalScannerInfoProvider>
+   </extension> -->
+   <extension
+         point="org.eclipse.cdt.managedbuilder.core.buildDefinitions">
+         <tool
+               command="hcarc"
+               id="com.arc.cdt.toolchain.arc4.compiler"
+               isAbstract="true"
+               name="MetaWare ARC4 C/C++ Compiler"
+               superClass="com.arc.cdt.toolchain.toolCompiler">
+               <optionCategory
+                  name="Core"
+                  id="arc4.compiler.options.category.core">
+               </optionCategory>
+               <option
+                  valueType="enumerated"
+                  category="arc4.compiler.options.category.core"
+                  name="ARC 4 Core"
+                  id="arc4.compiler.options.arc4core">
+               <enumeratedOptionValue
+                     command="-core5"
+                     name="Core 5"
+                     id="arc4.compiler.options.arc4core.core5"/>
+               <enumeratedOptionValue
+                     command="-core6"
+                     name="Core 6"
+                     id="arc4.compiler.options.arc4core.core6"/>
+               <enumeratedOptionValue
+                     command="-core7"
+                     name="Core 7"
+                     id="arc4.compiler.options.arc4core.core7"/>
+               <enumeratedOptionValue
+		      isDefault="true"
+                     name="Core 8"
+                     id="arc4.compiler.options.arc4core.core8"/>
+            </option>
+               <optionCategory
+                  name="Processor Extensions"
+                  id="arc4.compiler.options.extensions"/>
+               <option
+                     applicabilityCalculator="com.arc.cdt.toolchain.arc4.Arc4ApplicabilityCalculator"
+                     category="arc4.compiler.options.extensions"
+                     command="-Xlib"
+                     id="arc4.compiler.options.xlib"
+                     isAbstract="false"
+                     name="Common extensions (-Xlib)"
+                     resourceFilter="all"
+                     valueType="boolean"/>
+            <option
+                  applicabilityCalculator="com.arc.cdt.toolchain.arc4.Arc4ApplicabilityCalculator"
+                  category="arc4.compiler.options.extensions"
+                  command="-Xbs"
+                  id="arc4.compiler.options.bs"
+                  name="Barrel shifter"
+                  valueType="boolean"/>
+            <option
+                  applicabilityCalculator="com.arc.cdt.toolchain.arc4.Arc4ApplicabilityCalculator"
+                  category="arc4.compiler.options.extensions"
+                  command="-Xmin_max"
+                  id="arc4.compiler.options.minmax"
+                  name="Min/max instructions"
+                  valueType="boolean"/>
+            <option
+                  applicabilityCalculator="com.arc.cdt.toolchain.arc4.Arc4ApplicabilityCalculator"
+                  category="arc4.compiler.options.extensions"
+                  command="-Xmult32"
+                  id="arc4.compiler.options.mult32"
+                  name="32-bit multiply instruction"
+                  valueType="boolean"/>
+            <option
+                  applicabilityCalculator="com.arc.cdt.toolchain.arc4.Arc4ApplicabilityCalculator"
+                  category="arc4.compiler.options.extensions"
+                  command="-Xnorm"
+                  id="arc4.compiler.options.norm"
+                  name="Normalize instruction"
+                  valueType="boolean"/>
+            <option
+                  applicabilityCalculator="com.arc.cdt.toolchain.arc4.Arc4ApplicabilityCalculator"
+                  category="arc4.compiler.options.extensions"
+                  command="-Xswap"
+                  id="arc4.compiler.options.swap"
+                  name="Swap instruction"
+                  valueType="boolean"/>
+            <optionCategory
+                  name="Timers Support"
+                  id="arc4.compiler.options.timers"/>
+            <option
+                  applicabilityCalculator="com.arc.cdt.toolchain.arc4.Arc4ApplicabilityCalculator"
+                  category="arc4.compiler.options.timers"
+                  command="-Xtimer0"
+                  id="arc4.compiler.options.timers.timer0"
+                  name="Link in timer 0"
+                  valueType="boolean"/>
+            <option
+                  applicabilityCalculator="com.arc.cdt.toolchain.arc4.Arc4ApplicabilityCalculator"
+                  category="arc4.compiler.options.timers"
+                  command="-Xtimer1"
+                  id="arc4.compiler.options.timers.timer1"
+                  name="Link in timer 1"
+                  valueType="boolean"/>
+            <optionCategory
+                  name="DSP Support"
+                  id="arc4.compiler.options.dsp"/>
+            <option
+                  applicabilityCalculator="com.arc.cdt.toolchain.arc4.Arc4ApplicabilityCalculator"
+                  category="arc4.compiler.options.dsp"
+                  command="-Xadds"
+                  id="arc4.compiler.options.adds"
+                  name="Saturated add/sub instructions"
+                  valueType="boolean"/>
+            <option
+                  applicabilityCalculator="com.arc.cdt.toolchain.arc4.Arc4ApplicabilityCalculator"
+                  category="arc4.compiler.options.dsp"
+                  command="-Xea"
+                  id="arc4.compiler.options.ea"
+                  name="Extended arithmetic"
+                  valueType="boolean"/>
+            <option
+                  applicabilityCalculator="com.arc.cdt.toolchain.arc4.Arc4ApplicabilityCalculator"
+                  category="arc4.compiler.options.dsp"
+                  command="-Xdvbf"
+                  id="arc4.compiler.options.dvbf"
+                  name="Dual viterbi butterfly"
+                  valueType="boolean"/>
+            <option
+                  applicabilityCalculator="com.arc.cdt.toolchain.arc4.Arc4ApplicabilityCalculator"
+                  category="arc4.compiler.options.dsp"
+                  command="-Xcrc"
+                  id="arc4.compiler.options.crc"
+                  name="Variable polynomial CRC"
+                  valueType="boolean"/>
+            <option
+                  applicabilityCalculator="com.arc.cdt.toolchain.arc4.Arc4ApplicabilityCalculator"
+                  category="arc4.compiler.options.dsp"
+                  id="arc4.compiler.options.xmac"
+                  name="XMAC support"
+                  valueType="enumerated">
+               <enumeratedOptionValue
+                     isDefault="true"
+                     name="No XMAC"
+                     id="arc4.compiler.options.xmac.noxmac"/>
+               <enumeratedOptionValue
+                     isDefault="false"
+                     name="16x16 XMAC"
+                     id="arc4.compiler.options.xmac.xmac16"
+		     command="-Xxmac_16"/> 
+               <enumeratedOptionValue
+                     isDefault="false"
+                     name="24x24 XMAC"
+                     id="arc4.compiler.options.xmac.xmac24"
+		     command="-Xxmac_24"/>
+               <enumeratedOptionValue
+                     isDefault="false"
+                     name="Dual 16x16 XMAC"
+                     id="arc4.compiler.options.xmac.xmacd16"
+		     command="-Xxmac_d16"/>
+               <enumeratedOptionValue
+                     isDefault="false"
+                     name="16-bit MUL/MAC"
+                     id="arc4.compiler.options.xmac.mulmac"
+		     command="-Xmul_mac"/> 
+            </option>
+            
+             <option
+                        command="-Hharvard"
+                        defaultValue="false"
+                        isAbstract="false"
+                        valueType="boolean"
+                        category="com.arc.cdt.toolchain.compiler.category.storemapping"
+
+                        name="Conform to Harvard memory model"
+                        id="arc4.compiler.options.harvard"/>
+              <option
+                        defaultValue="true"
+                        isAbstract="false"
+                        valueType="boolean"
+                        category="com.arc.cdt.toolchain.compiler.category.storemapping"
+                        name="Bypass cache to reference volatile variables"
+                        commandFalse="-Hoff=volatile_cache_bypass"
+                        id="arc4.compiler.options.volatile_cache_bypass"/>
+                  <option
+                        applicabilityCalculator="com.arc.cdt.toolchain.arc4.Arc4ApplicabilityCalculator"
+                        category="com.arc.cdt.toolchain.compiler.category.storemapping"
+                        commandFalse="-Hoff=uncached_in_own_section"
+                        defaultValue="true"
+                        id="arc4.compiler.options.uncached_in_own_section"
+                        isAbstract="false"
+                        name="Map uncached data into .ucdata section"
+                        valueType="boolean"/>
+               
+                <option
+                        isAbstract="false"
+                        valueType="enumerated"
+                        name="Small-data section"
+                        id="arc4.compiler.options.nosdata"
+                        superClass="arc.compiler.options.nosdata">
+                     <enumeratedOptionValue
+                           name="Enable (Default)"
+                           id="sdata"/>
+                     <enumeratedOptionValue
+                           isDefault="true"
+                           command="-Hsdata0"
+                           name="Disable but reserve %gp register (-Hsdata0)"
+                           id="sdata0"/>
+                     <enumeratedOptionValue
+                           command="-Hnosdata"
+                           name="Assume no small-data in executable (-Hnosdata)"
+                           id="nosdata"/>
+                  </option>
+            <inputType
+                  dependencyCalculator="com.arc.cdt.managedbuilder.makegen.HighCDependencyGenerator"
+                  dependencyContentType="org.eclipse.cdt.core.cxxHeader"
+                  dependencyExtensions="h,H,hpp"
+                  id="com.arc.cdt.toolchain.arc4.inputTypeCPP"
+                  primaryInput="true"
+                  scannerConfigDiscoveryProfileId="com.arc.cdt.toolchain.arc4.ScannerConfigurationDiscoveryProfile"
+                  sourceContentType="org.eclipse.cdt.core.cxxSource"
+                  sources="cc,cpp,C,CC,ii"
+                  superClass="com.arc.cdt.toolchain.inputTypeCPP"/>
+               <inputType
+                     dependencyCalculator="com.arc.cdt.managedbuilder.makegen.HighCDependencyGenerator"
+                     dependencyContentType="org.eclipse.cdt.core.cHeader"
+                     id="com.arc.cdt.toolchain.arc4.inputTypeC"
+                     name="MetaWare C Input"
+                     primaryInput="true"
+                     scannerConfigDiscoveryProfileId="com.arc.cdt.toolchain.arc4.ScannerConfigurationDiscoveryProfile"
+                     sourceContentType="org.eclipse.cdt.core.cSource"
+                     superClass="com.arc.cdt.toolchain.inputTypeC"/>
+
+         </tool>
+       <tool
+         isAbstract="true"
+         id="com.arc.cdt.toolchain.arc4.compilerDebug"
+         superClass="com.arc.cdt.toolchain.arc4.compiler">
+      <option
+            defaultValue="arc.optimization.level.none"
+            isAbstract="false"
+            id="com.arc.cdt.toolchain.arc4.compilerDebugOptLevel"
+            superClass="arc.compiler.options.general.optimization.level"/>
+      <option
+            defaultValue="arc.debugging.level.default"
+            isAbstract="false"
+            id="com.arc.cdt.toolchain.arc4.compilerDebugDebug"
+            superClass="arc.compiler.options.debugging.level"/>
+   </tool>
+   <tool
+             command="hcarc"
+             isAbstract="true"
+             name="ARCtangent-A4 Assembler"
+             id="com.arc.cdt.toolchain.arc4.asm"
+             superClass="com.arc.cdt.toolchain.assembler">
+ 
+      <option
+            defaultValue="true"
+            isAbstract="false"
+            valueType="boolean"
+            category="com.arc.cdt.toolchain.asm.optionCategory.misc"
+            name="Allow C-style escapes in strings"
+            commandFalse="-Hasopt=-off=esc"
+            id="com.arc.cdt.toolchain.arc4.asm.option.cstyle"/>
+      <option
+            command="-Hasopt=-on=mathu"
+            category="com.arc.cdt.toolchain.asm.optionCategory.misc"
+            defaultValue="false"
+            isAbstract="false"
+            valueType="boolean"
+            name="Use unsigned math for integer expressions"
+            id="com.arc.cdt.toolchain.arc4.asm.option.umath"/>
+       <optionCategory
+                  name="Core"
+                  id="arc4.asm.options.category.core">
+               </optionCategory>
+               <option
+                     applicabilityCalculator="com.arc.cdt.toolchain.arc4.Arc4ApplicabilityCalculator"
+                     category="arc4.asm.options.category.core"
+                     id="arc4.asm.options.arc4core"
+                     name="ARC 4 Core"
+                     valueType="enumerated">
+               <enumeratedOptionValue
+                     command="-core5"
+                     name="Core 5"
+                     id="arc4.compiler.options.arc4core.core5"/>
+               <enumeratedOptionValue
+                     command="-core6"
+                     name="Core 6"
+                     id="arc4.compiler.options.arc4core.core6"/>
+               <enumeratedOptionValue
+                     command="-core7"
+                     name="Core 7"
+                     id="arc4.compiler.options.arc4core.core7"/>
+               <enumeratedOptionValue
+		      isDefault="true"
+                     name="Core 8"
+                     id="arc4.compiler.options.arc4core.core8"/>
+            </option>
+               <optionCategory
+                  name="Processor Extensions"
+                  id="arc4.asm.options.extensions"/>
+               <option
+                     applicabilityCalculator="com.arc.cdt.toolchain.arc4.Arc4ApplicabilityCalculator"
+                     command="-Xlib"
+                     category="arc4.asm.options.extensions"
+                     id="arc4.asm.options.xlib"
+                     isAbstract="false"
+                     name="Common extensions (-Xlib)"
+                     resourceFilter="all"
+                     valueType="boolean"/>
+            <option
+                  applicabilityCalculator="com.arc.cdt.toolchain.arc4.Arc4ApplicabilityCalculator"
+                  category="arc4.asm.options.extensions"
+                  command="-Xbs"
+                  id="arc4.asm.options.bs"
+                  name="Barrel shifter"
+                  valueType="boolean"/>
+            <option
+                  applicabilityCalculator="com.arc.cdt.toolchain.arc4.Arc4ApplicabilityCalculator"
+                  category="arc4.asm.options.extensions"
+                  command="-Xmin_max"
+                  id="arc4.asm.options.minmax"
+                  name="Min/max instructions"
+                  valueType="boolean"/>
+            <option
+                  applicabilityCalculator="com.arc.cdt.toolchain.arc4.Arc4ApplicabilityCalculator"
+                  category="arc4.asm.options.extensions"
+                  command="-Xmult32"
+                  id="arc4.asm.options.mult32"
+                  name="32-bit multiply instruction"
+                  valueType="boolean"/>
+            <option
+                  applicabilityCalculator="com.arc.cdt.toolchain.arc4.Arc4ApplicabilityCalculator"
+                  category="arc4.asm.options.extensions"
+                  command="-Xnorm"
+                  id="arc4.asm.options.norm"
+                  name="Normalize instruction"
+                  valueType="boolean"/>
+            <option
+                  applicabilityCalculator="com.arc.cdt.toolchain.arc4.Arc4ApplicabilityCalculator"
+                  category="arc4.asm.options.extensions"
+                  command="-Xswap"
+                  id="arc4.asm.options.swap"
+                  name="Swap instruction"
+                  valueType="boolean"/>
+            <optionCategory
+                  name="Timers Support"
+                  id="arc4.asm.options.timers"/>
+            <option
+                  applicabilityCalculator="com.arc.cdt.toolchain.arc4.Arc4ApplicabilityCalculator"
+                  category="arc4.asm.options.timers"
+                  command="-Xtimer0"
+                  id="arc4.asm.options.timers.timer0"
+                  name="Link in timer 0"
+                  valueType="boolean"/>
+            <option
+                  applicabilityCalculator="com.arc.cdt.toolchain.arc4.Arc4ApplicabilityCalculator"
+                  category="arc4.asm.options.timers"
+                  command="-Xtimer1"
+                  id="arc4.asm.options.timers.timer1"
+                  name="Link in timer 1"
+                  valueType="boolean"/>
+            <optionCategory
+                  name="DSP Support"
+                  id="arc4.asm.options.dsp"/>
+            <option
+                  applicabilityCalculator="com.arc.cdt.toolchain.arc4.Arc4ApplicabilityCalculator"
+                  category="arc4.asm.options.dsp"
+                  command="-Xadds"
+                  id="arc4.asm.options.adds"
+                  name="Saturated add/sub instructions"
+                  valueType="boolean"/>
+            <option
+                  applicabilityCalculator="com.arc.cdt.toolchain.arc4.Arc4ApplicabilityCalculator"
+                  category="arc4.asm.options.dsp"
+                  command="-Xea"
+                  id="arc4.asm.options.ea"
+                  name="Extended arithmetic"
+                  valueType="boolean"/>
+            <option
+                  applicabilityCalculator="com.arc.cdt.toolchain.arc4.Arc4ApplicabilityCalculator"
+                  category="arc4.asm.options.dsp"
+                  command="-Xdvbf"
+                  id="arc4.asm.options.dvbf"
+                  name="Dual viterbi butterfly"
+                  valueType="boolean"/>
+            <option
+                  applicabilityCalculator="com.arc.cdt.toolchain.arc4.Arc4ApplicabilityCalculator"
+                  category="arc4.asm.options.dsp"
+                  command="-Xcrc"
+                  id="arc4.asm.options.crc"
+                  name="Variable polynomial CRC"
+                  valueType="boolean"/>
+            <option
+                  applicabilityCalculator="com.arc.cdt.toolchain.arc4.Arc4ApplicabilityCalculator"
+                  category="arc4.asm.options.dsp"
+                  id="arc4.asm.options.xmac"
+                  name="XMAC support"
+                  valueType="enumerated">
+               <enumeratedOptionValue
+                     isDefault="true"
+                     name="No XMAC"
+                     id="arc4.compiler.options.xmac.noxmac"/>
+               <enumeratedOptionValue
+                     isDefault="false"
+                     name="16x16 XMAC"
+                     id="arc4.compiler.options.xmac.xmac16"
+		     command="-Xxmac_16"/> 
+               <enumeratedOptionValue
+                     isDefault="false"
+                     name="24x24 XMAC"
+                     id="arc4.compiler.options.xmac.xmac24"
+		     command="-Xxmac_24"/>
+               <enumeratedOptionValue
+                     isDefault="false"
+                     name="Dual 16x16 XMAC"
+                     id="arc4.compiler.options.xmac.xmacd16"
+		     command="-Xxmac_d16"/>
+               <enumeratedOptionValue
+                     isDefault="false"
+                     name="16-bit MUL/MAC"
+                     id="arc4.compiler.options.xmac.mulmac"
+		     command="-Xmul_mac"/> 
+            </option>
+   </tool>
+
+   <tool
+         command="hcarc"
+         id="com.arc.cdt.toolchain.arc4.Linker"
+         isAbstract="true"
+         name="MetaWare Linker for ARCTangent-A4"
+         superClass="com.arc.cdt.toolchain.toolLinker">
+       <option
+                        command="-Hharvard"
+                        defaultValue="false"
+                        isAbstract="false"
+                        valueType="boolean"
+                        category="arc.linker.category.output"
+                        name="Conform to Harvard memory model"
+                        id="arc4.linker.options.harvard"/>
+        <option
+              applicabilityCalculator="com.arc.cdt.toolchain.arc4.Arc4ApplicabilityCalculator"
+              category="arc.linker.category.special"
+              id="arc.arc4.linker.options.xtimer"
+              isAbstract="false"
+              name="Timer for hardware profiling"
+              valueType="enumerated">
+             <enumeratedOptionValue
+                   isDefault="true"
+                   name="(None)"
+                   id="arc.linker.options.timer.none"/>
+             <enumeratedOptionValue
+                   command="-Xtimer0"
+                   name="Timer 0"
+                   id="arc.linker.options.timer.timer0"/>
+             <enumeratedOptionValue
+                   command="-Xtimer1"
+                   name="Timer 1"
+                   id="arc.linker.options.timer.timer1"/>
+          </option>
+            <option
+                     applicabilityCalculator="com.arc.cdt.toolchain.arc4.Arc4ApplicabilityCalculator"
+                     category="arc4.linker.options.extensions"
+                     command="-Xlib"
+                     id="arc4.linker.options.xlib"
+                     isAbstract="false"
+                     name="Common extensions (-Xlib)"
+                     resourceFilter="all"
+                     valueType="boolean"/>
+            <option
+                  applicabilityCalculator="com.arc.cdt.toolchain.arc4.Arc4ApplicabilityCalculator"
+                  category="arc4.linker.options.extensions"
+                  command="-Xbs"
+                  id="arc4.linker.options.bs"
+                  name="Barrel shifter"
+                  valueType="boolean"/>
+            <option
+                  applicabilityCalculator="com.arc.cdt.toolchain.arc4.Arc4ApplicabilityCalculator"
+                  category="arc4.linker.options.extensions"
+                  command="-Xmin_max"
+                  id="arc4.linker.options.minmax"
+                  name="Min/max instructions"
+                  valueType="boolean"/>
+            <option
+                  applicabilityCalculator="com.arc.cdt.toolchain.arc4.Arc4ApplicabilityCalculator"
+                  category="arc4.linker.options.extensions"
+                  command="-Xmult32"
+                  id="arc4.linker.options.mult32"
+                  name="32-bit multiply instruction"
+                  valueType="boolean"/>
+            <option
+                  applicabilityCalculator="com.arc.cdt.toolchain.arc4.Arc4ApplicabilityCalculator"
+                  category="arc4.linker.options.extensions"
+                  command="-Xnorm"
+                  id="arc4.linker.options.norm"
+                  name="Normalize instruction"
+                  valueType="boolean"/>
+            <option
+                  applicabilityCalculator="com.arc.cdt.toolchain.arc4.Arc4ApplicabilityCalculator"
+                  category="arc4.linker.options.extensions"
+                  command="-Xswap"
+                  id="arc4.linker.options.swap"
+                  name="Swap instruction"
+                  valueType="boolean"/>
+            
+            <option
+                  applicabilityCalculator="com.arc.cdt.toolchain.arc4.Arc4ApplicabilityCalculator"
+                  category="arc4.linker.options.extensions"
+                  command="-Xadds"
+                  id="arc4.linker.options.adds"
+                  name="Saturated add/sub instructions"
+                  valueType="boolean"/>
+            <option
+                  applicabilityCalculator="com.arc.cdt.toolchain.arc4.Arc4ApplicabilityCalculator"
+                  category="arc4.linker.options.extensions"
+                  command="-Xea"
+                  id="arc4.linker.options.ea"
+                  name="Extended arithmetic"
+                  valueType="boolean"/>
+            <option
+                  applicabilityCalculator="com.arc.cdt.toolchain.arc4.Arc4ApplicabilityCalculator"
+                  category="arc4.linker.options.extensions"
+                  command="-Xdvbf"
+                  id="arc4.linker.options.dvbf"
+                  name="Dual viterbi butterfly"
+                  valueType="boolean"/>
+            <option
+                  applicabilityCalculator="com.arc.cdt.toolchain.arc4.Arc4ApplicabilityCalculator"
+                  category="arc4.linker.options.extensions"
+                  command="-Xcrc"
+                  id="arc4.linker.options.crc"
+                  name="Variable polynomial CRC"
+                  valueType="boolean"/>
+            <optionCategory
+                  id="arc4.linker.options.extensions"
+                  name="Extension settings (inherited from compiler)"/>
+            
+             
+   </tool>
+ 
+		 <tool
+         command="ararc"
+         id="com.arc.cdt.toolchain.arc4.archiver"
+         isAbstract="true"
+         name="MetaWare Archiver for ARCTangent-A4"
+         outputFlag="-r"
+         superClass="com.arc.cdt.toolchain.archiver"/>
+
+	      <projectType
+             buildProperties="org.eclipse.cdt.build.core.buildArtefactType=org.eclipse.cdt.build.core.buildArtefactType.exe"
+             id="com.arc.cdt.toolchain.arc4.exeProject"
+             isAbstract="false"
+             >
+		 <configuration
+         artifactExtension="elf"
+         buildProperties="org.eclipse.cdt.build.core.buildType=org.eclipse.cdt.build.core.buildType.debug"
+         cleanCommand="rm -rf"
+         errorParsers="com.arc.cdt.toolchain.ARCCompilerErrorParser;com.arc.cdt.toolchain.ARCLinkerErrorParser;com.arc.cdt.toolchain.ARCAssemblerErrorParser;org.eclipse.cdt.core.MakeErrorParser"
+         id="com.arc.cdt.toolchain.arc4.exeDebugConfig"
+         name="Debug">
+		      <toolChain
+              id="com.arc.cdt.toolchain.arc4.exeToolChainDebug"
+              isAbstract="false"
+              name="ARCtangent 4"
+              scannerConfigDiscoveryProfileId="com.arc.cdt.toolchain.arc4.ScannerConfigurationDiscoveryProfile"
+              superClass="com.arc.cdt.toolchain.toolChain">
+			     <tool
+              id="com.arc.cdt.toolchain.arc4..exeCompilerDebug"
+              isAbstract="false"
+              obsoleteIDs=".exeCompilerDebug"
+              superClass="com.arc.cdt.toolchain.arc4.compilerDebug">
+        </tool>
+			     
+        <tool
+              isAbstract="false"
+              id="com.arc.cdt.toolchain.arc4.asmexedebug"
+              superClass="com.arc.cdt.toolchain.arc4.asmdebug"/>
+	<tool
+				id="com.arc.cdt.toolchain.arc4.exeLinkerDebug"
+				superClass="com.arc.cdt.toolchain.arc4.Linker"/>
+		      </toolChain>
+		 </configuration>
+         <configuration
+               artifactExtension="elf"
+               buildProperties="org.eclipse.cdt.build.core.buildType=org.eclipse.cdt.build.core.buildType.release"
+               cleanCommand="rm -rf"
+               errorParsers="com.arc.cdt.toolchain.ARCCompilerErrorParser;com.arc.cdt.toolchain.ARCLinkerErrorParser;com.arc.cdt.toolchain.ARCAssemblerErrorParser;org.eclipse.cdt.core.MakeErrorParser"
+               id="com.arc.cdt.toolchain.arc4.exeReleaseConfig"
+               name="Release">
+            <toolChain
+                  id="com.arc.cdt.toolchain.arc4.exeReleaseToolChain"
+                  isAbstract="false"
+                  name="ARCtangent 4"
+                  scannerConfigDiscoveryProfileId="com.arc.cdt.toolchain.arc4.ScannerConfigurationDiscoveryProfile"
+                  superClass="com.arc.cdt.toolchain.toolChain">
+               <tool
+                     id="com.arc.cdt.toolchain.arc4.exeCompilerRelease"
+                     isAbstract="false"
+                     obsoleteIDs="exeCompilerRelease"
+                     superClass="com.arc.cdt.toolchain.arc4.compiler">
+               </tool>
+              
+               <tool
+                     isAbstract="false"
+                     id="com.arc.cdt.toolchain.arc4.asmexerel"
+                     superClass="com.arc.cdt.toolchain.arc4.asm"/>
+               <tool
+                     id="com.arc.cdt.toolchain.arc4.exeLinkerRelease"
+                     isAbstract="false"
+                     obsoleteIDs="arc4.tool11"
+                     superClass="com.arc.cdt.toolchain.arc4.Linker"/>
+            </toolChain>
+         </configuration>
+      </projectType>
+      <projectType
+            buildProperties="org.eclipse.cdt.build.core.buildArtefactType=org.eclipse.cdt.build.core.buildArtefactType.staticLib"
+            id="com.arc.cdt.toolchain.arc4.libProject"
+            isAbstract="false"
+            >
+      <configuration
+            artifactExtension="a"
+            buildProperties="org.eclipse.cdt.build.core.buildType=org.eclipse.cdt.build.core.buildType.debug"
+            cleanCommand="rm -rf"
+            errorParsers="com.arc.cdt.toolchain.ARCCompilerErrorParser;com.arc.cdt.toolchain.ARCLinkerErrorParser;com.arc.cdt.toolchain.ARCAssemblerErrorParser;org.eclipse.cdt.core.MakeErrorParser"
+            id="com.arc.cdt.toolchain.arc4.libDebugConfig"
+            name="Debug">
+         <toolChain
+               id="com.arc.cdt.toolchain.arc4.libDebugToolChain"
+               isAbstract="false"
+               name="ARCtangent 4"
+               scannerConfigDiscoveryProfileId="com.arc.cdt.toolchain.arc4.ScannerConfigurationDiscoveryProfile"
+               superClass="com.arc.cdt.toolchain.toolChain">
+            <tool
+                  id="com.arc.cdt.toolchain.arc4.libCompilerDebug"
+                  isAbstract="false"
+                  obsoleteIDs="arc4.tool12"
+                  superClass="com.arc.cdt.toolchain.arc4.compilerDebug"/>
+            <tool
+                  id="com.arc.cdt.toolchain.arc4.asmDebugStat"
+                  isAbstract="false"
+                  obsoleteIDs="arc4.asmstat"
+                  superClass="com.arc.cdt.toolchain.arc4.asmdebug"/>
+            <tool
+                  id="com.arc.cdt.toolchain.arc4.ArDebugStat"
+                  isAbstract="false"
+                  obsoleteIDs="toolArchiver"
+                  superClass="com.arc.cdt.toolchain.arc4.archiver"/>
+         </toolChain>
+ 
+           
+         </configuration>
+         <configuration
+               artifactExtension="a"
+               buildProperties="org.eclipse.cdt.build.core.buildType=org.eclipse.cdt.build.core.buildType.release"
+               cleanCommand="rm -rf"
+               errorParsers="com.arc.cdt.toolchain.ARCCompilerErrorParser;com.arc.cdt.toolchain.ARCLinkerErrorParser;com.arc.cdt.toolchain.ARCAssemblerErrorParser;org.eclipse.cdt.core.MakeErrorParser"
+               id="com.arc.cdt.toolchain.arc4.libReleaseConfig"
+               name="Release">
+            <toolChain
+                  id="com.arc.cdt.toolchain.arc4.libReleaseToolChain"
+                  isAbstract="false"
+                  name="ARCtangent 4"
+                  scannerConfigDiscoveryProfileId="com.arc.cdt.toolchain.arc4.ScannerConfigurationDiscoveryProfile"
+                  superClass="com.arc.cdt.toolchain.toolChain">
+               <tool
+                     id="com.arc.cdt.toolchain.arc4.libCompilerRelease"
+                     isAbstract="false"
+                     obsoleteIDs="arc4.tool16"
+                     superClass="com.arc.cdt.toolchain.arc4.compiler"/>
+                <tool
+                      id="com.arc.cdt.toolchain.arc4.asmReleaseStat"
+                      isAbstract="false"
+                      obsoleteIDs="asmstat"
+                      superClass="com.arc.cdt.toolchain.arc4.asm"/>
+                <tool
+                      id="com.arc.cdt.toolchain.arc4.ArReleaseStat"
+                      isAbstract="false"
+                      obsoleteIDs="toolArchiver"
+                      superClass="com.arc.cdt.toolchain.arc4.archiver"/>
+            </toolChain>
+         </configuration>
+      </projectType>
+      <tool
+            id="com.arc.cdt.toolchain.arc4.asmdebug"
+            isAbstract="false"
+            superClass="com.arc.cdt.toolchain.arc4.asm">
+         <option
+               defaultValue="true"
+               id="com.arc.cdt.toolchain.arc4.asm.option.g"
+               isAbstract="false"
+               resourceFilter="all"
+               superClass="com.arc.cdt.toolchain.asm.option.g"
+               valueType="boolean"/>
+      </tool>
+
+   </extension>
+   
+   <extension
+         id="ScannerConfigurationDiscoveryProfile"
+         name="MetaWare C/C++ Scanner Configuration Discovery Profile"
+         point="org.eclipse.cdt.make.core.ScannerConfigurationDiscoveryProfile">
+      <scannerInfoCollector
+            class="com.arc.cdt.scannerconfig.HighCScannerInfoCollector"
+            scope="project"/>
+      <scannerInfoProvider providerId="HighCSpecsFile">
+         <run
+               arguments="-a4 -Hbatchnotmp -Hnoobj ${plugin_state_location}/${specs_file}"
+               class="org.eclipse.cdt.make.internal.core.scannerconfig2.GCCSpecsRunSIProvider"
+               command="mcc"/>
+         <scannerInfoConsoleParser class="com.arc.cdt.scannerconfig.ARCScannerInfoConsoleParser"/>
+      </scannerInfoProvider>
+      <buildOutputProvider>
+         <scannerInfoConsoleParser
+               class="com.arc.cdt.scannerconfig.ARCBuildInfoConsoleParser">
+         </scannerInfoConsoleParser>
+      </buildOutputProvider>
+   </extension>
+   
+   
+   <extension
+         point="org.eclipse.cdt.make.ui.DiscoveryProfilePage">
+      <profilePage
+            class="com.arc.cdt.toolchain.ui.HighCDiscoveryPage"
+            name="MetaWare C/C++ Includes &amp; Symbol Discovery for ARC 4"
+            profileId="com.arc.cdt.toolchain.arc4.ScannerConfigurationDiscoveryProfile"/>
+   </extension>
+
+</plugin>

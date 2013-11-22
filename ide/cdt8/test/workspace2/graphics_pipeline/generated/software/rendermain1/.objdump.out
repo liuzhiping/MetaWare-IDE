@@ -1,0 +1,55 @@
+
+C:/workspace/test/workspace2/graphics_pipeline/generated/software/rendermain1/rendermain1:     file format elf32-little
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .vectors      00000000  00000000  00000000  00000174  2**0
+                  ALLOC
+  1 .fini         00000014  03900000  03900000  00000174  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  2 .init         00000050  03900014  03900014  00000188  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  3 .text         0000a05c  03900070  03900070  000001e4  2**4
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  4 .rodata       00000ec4  0390a0cc  0390a0cc  0000a240  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+  5 .data         00001118  0390b000  0390b000  0000b104  2**8
+                  CONTENTS, ALLOC, LOAD, DATA
+  6 .bss          00000900  0390c118  0390c118  0000c21c  2**2
+                  ALLOC
+  7 .heap         00040000  0390ca18  0390ca18  0000c21c  2**3
+                  ALLOC
+  8 .stack        00004000  0394ca18  0394ca18  0000c21c  2**3
+                  ALLOC
+  9 .aframe_for_displaymain 00006300  03c00000  03c00000  0000c21c  2**0
+                  ALLOC
+ 10 .display_channel0_for_displaymain 00000110  03c06300  03c06300  0000c21c  2**0
+                  ALLOC
+ 11 .display_channel1 00000110  03c06410  03c06410  0000c21c  2**2
+                  CONTENTS, ALLOC, LOAD, DATA
+ 12 .grcmd_pool   00010010  03c06520  03c06520  0000c32c  2**2
+                  CONTENTS, ALLOC, LOAD, DATA
+ 13 .raster_pool  00031850  03c16530  03c16530  0001c33c  2**2
+                  CONTENTS, ALLOC, LOAD, DATA
+ 14 .render_channel0_for_grmain 00000210  03c47d80  03c47d80  0004db8c  2**0
+                  ALLOC
+ 15 .render_channel1 00000210  03c47f90  03c47f90  0004db8c  2**2
+                  CONTENTS, ALLOC, LOAD, DATA
+ 16 .zbarrier     00000010  03c481a0  03c481a0  0004dd9c  2**3
+                  CONTENTS, ALLOC, LOAD, DATA
+ 17 .comment      0000236b  00000000  00000000  0004ddac  2**0
+                  CONTENTS, READONLY
+ 18 .arcextmap    00005fef  00000000  00000000  00050117  2**0
+                  CONTENTS, READONLY
+ 19 .debug_pubnames 00001072  00000000  00000000  00056106  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 20 .debug_aranges 00000280  00000000  00000000  00057178  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 21 .debug_frame  00005d18  00000000  00000000  000573f8  2**2
+                  CONTENTS, READONLY, DEBUGGING
+ 22 .debug_line   00003a99  00000000  00000000  0005d110  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 23 .debug_info   000176ec  00000000  00000000  00060ba9  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 24 .debug_abbrev 00001525  00000000  00000000  00078295  2**0
+                  CONTENTS, READONLY, DEBUGGING

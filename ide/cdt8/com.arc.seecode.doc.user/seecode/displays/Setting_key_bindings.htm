@@ -1,0 +1,136 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+	<link rel="StyleSheet" href="../default.css">
+	<TITLE>Setting keyboard shortcuts for commands and macros</TITLE>
+</HEAD>
+<BODY LANG="en-US" TEXT="#000000" BGCOLOR="#ffffff" DIR="LTR">
+<H1>Setting keyboard shortcuts for commands and macros</H1>
+<P>The Debugger Preferences dialog allows you to create, change, and remove keyboard 
+  shortcuts, or key bindings, for debugger commands and user-defined macros. This 
+  feature allows you to easily access macros and debugger commands by entering 
+  a keyboard sequence involving a command key or combination of CTRL, ALT, and 
+  SHIFT plus a numeric key (0-9). </P>
+<P>The Debugger also has a GUI for setting keyboard-shortcuts for the
+stepping actions, see <A HREF="Setting_stepping_keys.htm">Setting
+Keyboard Shortcuts for stepping commands</A>.
+</P>
+<P>For a list and descriptions of available debugger commands, see
+the <A HREF="command_summary.htm">Debugger Command Reference</A>. Or
+type <code>help all</code> in the <B>Command</B> field.</P>
+<H2>Opening the keyboard shortcut editor<A NAME="open"></A></H2>
+<P>To access the GUI for adding, changing, and removing keyboard
+shortcuts for commands and macros: 
+</P>
+<OL>
+	<LI><P STYLE="margin-bottom: 0in">With the debugger running, select
+	<B>Tools | Debugger Preferences</B>. 
+	</P>
+	<LI><P>Click the <B>Command/Macro Keys</B> tab. 
+	</P>
+</OL>
+<H2>Adding a keyboard shortcut for a user-defined macro</H2>
+<OL>
+	<LI><P STYLE="margin-bottom: 0in">Define or load your macro
+	definitions into the debugger (see the <I>MetaWare Debugger User's
+	Guide</I> for more information). 
+	</P>
+	<LI><P STYLE="margin-bottom: 0in"><A HREF="#open">Open</A> the
+	Command/Macro keys editor. 
+	</P>
+	<LI><P STYLE="margin-bottom: 0in">The macros you loaded into the
+	debugger will appear in the table. Select a macro from the table. 
+	</P>
+	<LI><P STYLE="margin-bottom: 0in">(Optional) You can modify the
+	macro command using the text field. <BR><B><I>Note:</I></B> If you
+	modify the command string of the macro, the originally defined macro
+	command will still appear in the table when it is reloaded. Click
+	the <B>Reload Defined</B> button to synchronize the defined values
+	with the table. 
+	</P>
+	<LI><P STYLE="margin-bottom: 0in">Select a command key or command
+	key combo from the first drop-down list. 
+	</P>
+	<LI><P STYLE="margin-bottom: 0in">Select a number key from the
+	second drop-down list. 
+	</P>
+	<LI><P>Click <B>Apply</B> or <B>OK</B> to commit changes. 
+	</P>
+</OL>
+<H2>Adding a keyboard shortcut for a command</H2>
+<P>See the <A HREF="command_summary.htm">Command reference</A> for a
+list of commands you can use. 
+</P>
+<OL>
+	<LI><P STYLE="margin-bottom: 0in"><A HREF="#open">Open</A> the
+	Command/Macro keys editor. 
+	</P>
+	<LI><P STYLE="margin-bottom: 0in">Click <B>Add</B>. 
+	</P>
+	<LI><P STYLE="margin-bottom: 0in">Type the name of a command in the
+	text field. 
+	</P>
+	<LI><P STYLE="margin-bottom: 0in">Select a command key or command
+	key combo from the first drop-down list. 
+	</P>
+	<LI><P STYLE="margin-bottom: 0in">Select a number key from the
+	second drop-down list. 
+	</P>
+	<LI><P>Click <B>Apply</B> or <B>OK</B> to commit changes. 
+	</P>
+</OL>
+<H2>Editing a keyboard shortcut</H2>
+<OL>
+	<LI><P STYLE="margin-bottom: 0in"><A HREF="#open">Open</A> the
+	Command/Macro keys editor. 
+	</P>
+	<LI><P STYLE="margin-bottom: 0in">Select an entry from the table. 
+	</P>
+	<LI><P STYLE="margin-bottom: 0in">(Optional) Edit the name of a
+	command or macro in the text field. 
+	</P>
+	<LI><P STYLE="margin-bottom: 0in">(Optional) Select a command key or
+	command key combo from the first drop-down list. 
+	</P>
+	<LI><P>(Optional) Select a number key from the second drop-down
+	list. 
+	</P>
+</OL>
+<H2>Removing a keyboard shortcut</H2>
+<OL>
+	<LI><P STYLE="margin-bottom: 0in"><A HREF="#open">Open</A> the
+	Command/Macro keys editor. 
+	</P>
+	<LI><P STYLE="margin-bottom: 0in">Select an entry from the table. 
+	</P>
+	<LI><P>Click <B>Remove</B>. 
+	</P>
+</OL>
+<H2>Help on setting keyboard shortcuts</H2>
+<P>The following are a few guidelines for creating keyboard
+shortcuts: 
+</P>
+<UL>
+	<LI>You must specify both a command
+	key, or combination such as CTRL+SHIFT, and a number key
+	(0-9) for every keyboard shortcut. A value for both command and number keys must be
+	specified in order for the setting to be saved.<p></P>
+	<LI>No two keyboard shortcuts can
+	share the same key sequence. Distinct values must be set for all
+	keyboard shortcuts in order for the setting to be saved.<p></P>
+	<LI>Clicking the <B>Reload Defined</B>
+	button will populate the table with ONLY the commands and macros
+	that have already been defined. If you edited the command string of
+	a macro the table will add the original macro command string as it
+	was received from the debugger.<p></P>
+	<LI><P>If you add a new keyboard shortcut and do not specify a name
+	other than the default <CODE>&quot;&lt;undefined&gt;</CODE>,&quot;
+	the changes will be lost. The GUI ignores entries named
+	&quot;<CODE>&lt;undefined&gt;</CODE>,&quot; and will not keep these
+	rows in the table after it the <B>Debugger Preferences</B> dialog
+	has been closed.</P>
+</UL>
+<P>&nbsp;</P>
+</BODY>
+</HTML>

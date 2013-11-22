@@ -1,0 +1,21 @@
+cond_macro map_pc_internal_macro ARG
+  if ($# == 1) then
+    print Generating process table ...
+    system sh -c "echo >code/pcmap \<pcmap\>
+    print ... processing process 'grmain'
+    system sh -c "$ARCPLOTTER/bin/dump_prog_info.sh code/grmain/grmain $ARG.grmain >>code/pcmap"
+    print ... processing process 'displaymain'
+    system sh -c "$ARCPLOTTER/bin/dump_prog_info.sh code/displaymain/displaymain $ARG.displaymain >>code/pcmap"
+    print ... processing process 'rendermain0'
+    system sh -c "$ARCPLOTTER/bin/dump_prog_info.sh code/rendermain0/rendermain0 $ARG.rendermain0 >>code/pcmap"
+    print ... processing process 'rendermain1'
+    system sh -c "$ARCPLOTTER/bin/dump_prog_info.sh code/rendermain1/rendermain1 $ARG.rendermain1 >>code/pcmap"
+    system sh -c "echo >>code/pcmap \</pcmap\>
+    print Process table generated in file 'code/pcmap'
+  else
+    print ERROR: missing namespace argument for 'map_pc' script
+  endif
+  endm
+
+[1] map_pc_internal_macro $1
+

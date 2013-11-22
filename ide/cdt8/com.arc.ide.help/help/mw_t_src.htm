@@ -1,0 +1,188 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN" "http://www.w3.org/MarkUp/Wilbur/HTML32.dtd">
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+    <meta name="GENERATOR" content="Quadralay WebWorks Publisher 2003 for FrameMaker 8.0.0.1194">
+    <meta name="TEMPLATEBASE" content="temp">
+    <link rel="StyleSheet" href="document.css" type="text/css" media="screen">
+    <title>Viewing Source</title>
+  </head>
+
+  <body>
+
+    <table width="100%" border="0" cellpadding="0" cellspacing="0" class="header">
+      <tr>
+<!--Disabling Breadcrumbs to use Eclipse version 10/2009
+        <td class="breadcrumbs">
+	<a href="ide_guid.htm"> DesignWare ARC MetaWare IDE User's Guide </a> > <a href="tasks.htm"><br>Tasks</a> > <a href="mw_o_src.htm">Debugging with Source</a> > Viewing Source
+        </td>
+-->
+        <td align="right" valign="top" class="navigator" nowrap>
+<a href="mw_o_src.htm"><img src="images/sprev.gif" border="0" alt="Previous"></a><a href="mw_sf.htm"><img src="images/snext.gif" border="0" alt="Next"></a>
+        </td>
+      </tr>
+    </table>
+
+    <hr align="left">
+
+    <blockquote>
+<h4 >
+Viewing Source
+<a name="wp923924"> </a></h4>
+
+<p >
+If your program contains debug information, you can view the source two ways in the <b>Debug</b> perspective: 
+<a name="wp709293"> </a></p>
+<ul> <li >In the Eclipse <b>C/C++ Editor</b> view <a name="wp882886"> </a>
+ <li >In the debugger <b>Source</b> window <a name="wp882889"> </a>
+</ul><p >
+Both displays indicate your current location as you run or step your program, and both displays let you set and remove breakpoints.
+<a name="wp882893"> </a></p>
+<ul> <li >The <b>C/C++ Editor</b> lets you edit your source, save, and rebuild without leaving the <b>Debug</b> perspective. For more information about the C/C++ <b>Editor</b> view, see the Eclipse <em>C/C++ Development User Guide</em>.<a name="wp709294"> </a>
+</ul><blockquote >
+
+
+<table border="1" cellpadding="5" cellspacing="0">
+  <caption></caption>
+  <tr>
+    <td><table border="0" cellpadding="5" cellspacing="0">
+  <caption></caption>
+  <tr valign=top>
+    <td><div ><img border="0" src="images/note.png">
+</div></td>
+    <td><div ></div></td>
+</tr></table>
+<a name="wp927687"> </a>
+</td>
+    <td><div >If you rebuild while debugging, the debugger continues debugging the old executable until you restart the executable, and Debugger windows might lose synchronization. After restart, the debugger engine detects that the file has changed and attempts to re-apply breakpoints at the same source location. If a source file has lines added or deleted, the breakpoints might no longer be in expected places. <a name="wp927689"> </a></div></td>
+  </tr>
+</table>
+
+
+
+
+
+<a name="wp927088"> </a></blockquote>
+ <ul> <li >		The <b>Source</b> window permits source lines to be annotated with profiling information by right-clicking and making choices from the resulting pop-up menu. <a name="wp882900"> </a>
+</ul><p >
+To open a <b>Source</b> window, select <b>Debugger &gt; Source</b> after your program is running in the debugger.
+<a name="wp882901"> </a></p>
+<blockquote >
+<div align="left"><img src="images/sc_src.gif" alt="Source Window" border="0" hspace="0" vspace="0"></div>
+
+<a name="wp882905"> </a></blockquote>
+ <a name="wp882934">
+  <h5 >
+4.7.1.1	 Working with Breakpoints in the Source Window
+ </a></h5>
+<p >
+To set or remove a breakpoint, do any one of the following in the <b>Source</b> window:
+<a name="wp882943"> </a></p>
+<ul> <li >Double-click a line of source. <a name="wp882935"> </a>
+ <li >Right-click a line of source, and then click <b>Break</b>. <a name="wp882936"> </a>
+ <li >Select a line of source, and then click the <b>Break</b> button: <img src="images/sc_bkpt.gif" alt="Break Button" border="0" hspace="0" vspace="0"><a name="wp882940"> </a>
+</ul><a name="wp882920">
+  <h5 >
+4.7.1.2	 Profiling in the Source Window
+ </a></h5>
+<p >
+If the code was compiled with profiling information, you can view profiling data in the <b>Source</b> window. 
+<a name="wp882917"> </a></p>
+<ol type="1"> <li  value="1">Right-click, and then select <b>Profiling</b>. <a name="wp709316"> </a>
+ <li  value="2">Select any number of menu items from the top half of the menu. <a name="wp709317"> </a>
+</ol><dl>
+  <dt >A column is added to the Source window that contains a profile for the type of profiling you chose.<a name="wp709318"> </a></dl>
+<blockquote >
+
+
+<table border="1" cellpadding="5" cellspacing="0">
+  <caption></caption>
+  <tr>
+    <td><table border="0" cellpadding="5" cellspacing="0">
+  <caption></caption>
+  <tr valign=top>
+    <td><div ><img border="0" src="images/hint.png">
+</div></td>
+    <td><div ></div></td>
+</tr></table>
+<a name="wp927104"> </a>
+</td>
+    <td><div >Reselecting the item removes the column.<a name="wp927106"> </a></div></td>
+  </tr>
+</table>
+
+
+
+
+
+<a name="wp927098"> </a></blockquote>
+ <a name="wp709322">
+  <h5 >
+4.7.1.3	 Troubleshooting the Source Window
+ </a></h5>
+<a name="wp709323">
+  <h5 >
+Problem: Source window is not showing source code 
+ </a></h5>
+<dl>
+  <dt >If the <b>Source</b> window displays <code>Not stopped in known source</code>, your source file may have been moved, renamed, or deleted from the directory in which it was compiled. <a name="wp709324"> </a></dl>
+<a name="wp709325">
+  <h5 >
+Solution
+ </a></h5>
+<dl>
+  <dt >Select <b>Debugger &gt; Command-line Input</b> and type: <i>set</i><code> </code><b>source_path</b><code>=</code><i>path</i>, where <i>path</i> is the full path to the source file. <a name="wp709326"> </a></dl>
+<a name="wp709327">
+  <h5 >
+Example
+ </a></h5>
+<blockquote >
+
+
+<table border="0" cellpadding="5" cellspacing="1" class="textlayout">
+
+  <tr>
+    <td><pre >   set source_path=c:\arc\metaware\arc\demos\ 
+<a name="wp927125"></a></pre>
+</td>
+  </tr>
+</table>
+
+
+
+
+
+<a name="wp927115"> </a></blockquote>
+ <a name="wp709329">
+  <h5 >
+Problem: Unable to set a breakpoint 
+ </a></h5>
+<dl>
+  <dt >To set a breakpoint, you must first compile with debugging information (<i>-g</i>). <a name="wp709330"> </a></dl>
+<p >
+Related Task
+<a name="wp865829"> </a></p>
+<ul> <li ><a href="mw_sf.htm#wp915042">Viewing All Source Files</a><a name="wp915269"> </a>
+</ul><p >
+Related Reference
+<a name="wp915268"> </a></p>
+<ul> <li >Eclipse <em>C/C++ Development User Guide</em><a name="wp915240"> </a>
+</ul>
+    </blockquote>
+    <p></p>
+    <hr>
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" class="footer">
+      <tr>
+        <td>
+
+        </td>
+        <td align="right" valign="top" class="navigator">
+<a href="mw_o_src.htm"><img src="images/sprev.gif" border="0" alt="Previous"></a><a href="mw_sf.htm"><img src="images/snext.gif" border="0" alt="Next"></a>
+        </td>
+      </tr>
+    </table>
+<p> <font size="-3">
+Copyright © 2012 Synopsys, Inc. <br />
+Some portions of this document copyright IBM Corporation and others 2000, 2004.</font></p>
+  </body>
+</html>

@@ -1,0 +1,12 @@
+<view name="org.eclipse.cdt.debug.ui.RegisterView">
+    <table columns="2">
+        <row>
+            <cell>r12</cell>
+            <cell>00000024</cell>
+        </row>
+        <row>
+            <cell>r22</cell>
+            <cell>00000000</cell>
+        </row>
+    </table>
+</view>

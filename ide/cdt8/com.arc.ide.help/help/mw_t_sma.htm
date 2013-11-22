@@ -1,0 +1,109 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN" "http://www.w3.org/MarkUp/Wilbur/HTML32.dtd">
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+    <meta name="GENERATOR" content="Quadralay WebWorks Publisher 2003 for FrameMaker 8.0.0.1194">
+    <meta name="TEMPLATEBASE" content="temp">
+    <link rel="StyleSheet" href="document.css" type="text/css" media="screen">
+    <title>Debugging with SmaRT Real-Time Trace (ARC 600 and ARC 700)</title>
+  </head>
+
+  <body>
+
+    <table width="100%" border="0" cellpadding="0" cellspacing="0" class="header">
+      <tr>
+<!--Disabling Breadcrumbs to use Eclipse version 10/2009
+        <td class="breadcrumbs">
+	<a href="ide_guid.htm"> DesignWare ARC MetaWare IDE User's Guide </a> > <a href="tasks.htm">Tasks</a> > <a href="mw_t_ins.htm">Debugging with Instruction History</a> > Debugging with SmaRT Real-Time Trace (ARC 600 and ARC 700)
+        </td>
+-->
+        <td align="right" valign="top" class="navigator" nowrap>
+<a href="configur.htm"><img src="images/sprev.gif" border="0" alt="Previous"></a><a href="mw_t_pro.htm"><img src="images/snext.gif" border="0" alt="Next"></a>
+        </td>
+      </tr>
+    </table>
+
+    <hr align="left">
+
+    <blockquote>
+<h4 >
+Debugging with SmaRT Real-Time Trace (ARC 600 and ARC 700)
+<a name="wp919180"> </a></h4>
+
+<p >
+Select <b>Debugger &gt; SmaRT Trace</b> to open the <b>Instruction history -- SmaRT Trace</b> window if your processor includes a SmaRT unit. Data are retrieved and displayed only when the processor is stopped. 
+<a name="wp919183"> </a></p>
+<blockquote >
+			 <div align="left"><img src="images/selectsm.gif" alt="Selecting SmaRT trace" border="0" hspace="0" vspace="0"></div>
+
+<a name="wp919187"> </a></blockquote>
+ <blockquote >
+			 
+
+<table border="1" cellpadding="5" cellspacing="0">
+  <caption></caption>
+  <tr>
+    <td><div ><strong>NOTE <a name="wp927448"> </a></strong></div></td>
+    <td><div >When you use the ARC 600 SmaRT module with the Automated Overlay Manager, it is possible but unlikely that the SmaRT trace might show invalid disassembly at the top of the display if one overlay triggers its eviction and replacement immediately by another overlay in the same memory area.<a name="wp927450"> </a></div></td>
+  </tr>
+</table>
+
+
+
+
+
+<a name="wp927442"> </a></blockquote>
+ <p >
+To enable or disable SmaRT capture, right-click in the <b>Instruction history -- SmaRT Trace</b> window select <b>Enable SmaRT Capture</b> on the popup menu.
+<a name="wp919193"> </a></p>
+<blockquote >
+			 <div align="left"><img src="images/ihistsma.gif" alt="Enabling SmaRT trace capture" border="0" hspace="0" vspace="0"></div>
+
+<a name="wp919197"> </a></blockquote>
+ <p >
+By default, the window shows all instructions executed while trace capture is enabled, in order of execution, similar to the display in the <b>Instruction history -- Simulator trace</b> window, and has similar functionality; see <a href="mw_t_ins.htm#wp696733">Debugging with Instruction History</a> for details.
+<a name="wp919198"> </a></p>
+<a name="wp919205">
+  <h5 >
+Displaying Data for Flow Control Changes Only
+ </a></h5>
+<p >
+To display only instructions involved in a flow-control change, right-click in the <b>Instruction history -- Smart Trace</b> window and select <b>Flow-control Changes Only</b> from the popup menu. Displaying only flow-control changes filters out sequences of more than one instruction between changes in flow control.
+<a name="wp919206"> </a></p>
+<a name="wp919207">
+  <h5 >
+Handling of Innermost Loops
+ </a></h5>
+<p >
+SmaRT Trace does not show every iteration of innermost loops; instead the SmaRT Trace window labels instructions within a loop as <code>[repeated]</code> to indicate that the preceding flow-control changes were repeated at least twice. 
+<a name="wp919208"> </a></p>
+<a name="wp919209">
+  <h5 >
+Related Tasks
+ </a></h5>
+<ul> <li ><a href="mw_t_ins.htm#wp696733">Debugging with Instruction History</a><a name="wp919213"> </a>
+ <li ><a href="mw_t_ovl.htm#wp890384">Debugging with Overlays (ARCompact and ARCv2)</a><a name="wp919217"> </a>
+</ul><a name="wp919218">
+  <h5 >
+Related Reference
+ </a></h5>
+<ul> <li >Eclipse <em>C/C++ Development User Guide</em><a name="wp919226"> </a>
+</ul>
+    </blockquote>
+    <p></p>
+    <hr>
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" class="footer">
+      <tr>
+        <td>
+
+        </td>
+        <td align="right" valign="top" class="navigator">
+<a href="configur.htm"><img src="images/sprev.gif" border="0" alt="Previous"></a><a href="mw_t_pro.htm"><img src="images/snext.gif" border="0" alt="Next"></a>
+        </td>
+      </tr>
+    </table>
+<p> <font size="-3">
+Copyright © 2012 Synopsys, Inc. <br />
+Some portions of this document copyright IBM Corporation and others 2000, 2004.</font></p>
+  </body>
+</html>

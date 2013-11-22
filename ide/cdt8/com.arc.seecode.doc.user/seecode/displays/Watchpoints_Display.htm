@@ -1,0 +1,94 @@
+<html>
+<head>
+<title>Watchpoints window</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel=StyleSheet href="../default.css">
+
+</head>
+
+<body>
+
+<h1>Watchpoints window</h1>
+
+<p>The Watchpoints window shows all set <a href="Watchpoint.htm">watchpoints</a>. 
+  Use the window to monitor, manage, and control watchpoints.</p>
+
+<p>The letter H in the left margin indicates a hardware watchpoint. Hardware
+  watchpoints allow programs to run at full speed--program execution stops when access to the watched entity occurs. If you are stepping through source
+  or disassembly and the program stops execution, the debugger shows if there has been any change in value after the current step is completed.</p>
+
+<p>If your target system does not support hardware watchpoints, your program will
+  stop on a watchpoint only if you are running in <a href="../tasks/Animate.htm">animation</a>
+  mode. Typically, processors that offer hardware assist do so only for memory,
+  and in sizes of 1, 2, and 4 bytes. However, simulators such as the <a href="ISS.htm">ISS</a> offer more &quot;hardware&quot; assist, such as register watchpoints. Without
+  hardware assist, the only way to run the program and still detect watchpoint
+  changes is by <a href="../tasks/Animate.htm">animating</a> a step action. When the debugger detects that a watchpoint
+  has changed, it stops <a href="../tasks/Animate.htm">animation</a> and displays the previous and changed
+  values separated by an arrow (=&gt;).</p>
+
+<p>For example:</p>
+
+<pre>
+H register r3 [hit:4 times] data-write
+value: 0x01c9b4 =&gt; 0x0384a2
+</pre>
+
+<h2>Adding and removing watchpoints</h2>
+
+<p>To add a watchpoint:</p>
+
+<ol>
+  <li>Click the <b>Set</b> button. <br>
+    Or <br>
+    Right-click and then select <b>Set</b>.</li>
+  <li>Use the <a href="../tasks/set_watchpoint.htm">Set Watchpoint</a> dialog 
+    to set the breakpoint.<br>
+  </li>
+</ol>
+
+<p>To remove a watchpoint:</p>
+
+<ol>
+  <li>Select the watchpoint.</li>
+  <li>Click the <b>Remove</b> button.
+  <br>Or
+  <br>Right-click and then select <b>Remove</b>.</li>
+</ol>
+
+<p>To remove all watchpoints:</p>
+
+<ol>
+  <li>Click the <b>All</b> button next to the <b>Remove</b> button.
+  <br>Or
+  <br>
+    Right-click and then select <b>Remove All</b>. 
+    <p></p>
+</ol>
+
+<h3>Enabling and disabling watchpoints</h3>
+
+<p>Disabled watchpoints do not halt execution or animation. You can disable a watchpoint or re-enable a disabled watchpoint anytime after the watchpoint has been added.</p>
+
+<p>To disable a breakpoint:</p>
+
+<ol>
+  <li>Select the watchpoint.</li>
+  <li>Click the <b>Enable/disable</b> button.
+  <br>Or
+  <br>
+    Right-click and then select <b>Enable/disable</b>. </li>
+  <p>When '-' is displayed in the left margin, the watchpoint on that line has been disabled.</p>
+</ol>
+
+<p>To disable all watchpoints:
+
+<ol>
+  <li>Click the <b>All</b> button beside the <b>Enable/Disable</b> button.
+  <br>Or
+  <br>
+    Right-click and then select <b>Enable/Disable All</b>. 
+</ol>
+
+<p>&nbsp;</p>
+</body>
+</html>

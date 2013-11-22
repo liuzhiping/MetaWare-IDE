@@ -1,0 +1,23 @@
+/AbstractCScanner.java/1.2/Fri Jun  4 19:20:50 2010//Tcdt_7_0
+/AsmSourceViewerConfiguration.java/1.2/Fri Jun  4 19:20:50 2010//Tcdt_7_0
+/CSourceViewerConfiguration.java/1.4/Fri Jun  4 19:20:50 2010//Tcdt_7_0
+/ICColorConstants.java/1.2/Fri Jun  4 19:20:50 2010//Tcdt_7_0
+/ICCompletionProposal.java/1.4/Fri Jun  4 19:20:50 2010//Tcdt_7_0
+/ICHelpInvocationContext.java/1.5/Fri Jun  4 19:20:50 2010//Tcdt_7_0
+/ICPartitions.java/1.7/Fri Jun  4 19:20:50 2010//Tcdt_7_0
+/ICTokenScanner.java/1.2/Fri Jun  4 19:20:50 2010//Tcdt_7_0
+/IColorManager.java/1.2/Fri Jun  4 19:20:50 2010//Tcdt_7_0
+/IContentAssistHelpInvocationContext.java/1.1/Fri Jun  4 19:20:50 2010//Tcdt_7_0
+/IHoverHelpInvocationContext.java/1.1/Fri Jun  4 19:20:50 2010//Tcdt_7_0
+/IInvocationContext.java/1.4/Fri Jun  4 19:20:50 2010//Tcdt_7_0
+/IProblemLocation.java/1.4/Fri Jun  4 19:20:50 2010//Tcdt_7_0
+/IQuickAssistProcessor.java/1.2/Fri Jun  4 19:20:50 2010//Tcdt_7_0
+/IQuickFixProcessor.java/1.1/Fri Jun  4 19:20:50 2010//Tcdt_7_0
+/ITokenStore.java/1.2/Fri Jun  4 19:20:50 2010//Tcdt_7_0
+/ITokenStoreFactory.java/1.2/Fri Jun  4 19:20:50 2010//Tcdt_7_0
+/SharedASTJob.java/1.2/Fri Jun  4 19:20:50 2010//Tcdt_7_0
+/TaskTagRule.java/1.6/Fri Jun  4 19:20:50 2010//Tcdt_7_0
+D/c////
+D/contentassist////
+D/doctools////
+D/folding////

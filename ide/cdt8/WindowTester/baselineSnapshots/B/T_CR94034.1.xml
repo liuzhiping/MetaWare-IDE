@@ -1,0 +1,20 @@
+<view>
+    <label text="Choose VDK configuration file"/>
+    <text text=""/>
+    <label text="Discovered file list"/>
+    <table columns="1">
+        <row>
+            <cell>dbgconfig.xml</cell>
+        </row>
+        <row>
+            <cell>dbgconfig_SCIT.xml</cell>
+        </row>
+    </table>
+    <label text="Qualifier:"/>
+    <table columns="1">
+        <row>
+            <cell>generated/software/dbgconfig.xml</cell>
+        </row>
+    </table>
+    <label text=""/>
+</view>

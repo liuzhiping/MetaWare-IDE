@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ 
+<contexts>
+  <context id="register_view">
+    <description>For information on this debugger feature, select the following link:</description>
+    <topic label="Working with Registers" href="../com.arc.ide.help/help/mw_t_reg.htm"/>
+  </context>
+</contexts>

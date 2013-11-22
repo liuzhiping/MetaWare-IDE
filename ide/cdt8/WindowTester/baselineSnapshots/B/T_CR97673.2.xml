@@ -1,0 +1,6 @@
+<view name="Used tools list">
+    <text text="MetaWare ARC C/C++ Compiler
+ARCompact Assembler
+GCC Archiver
+"/>
+</view>

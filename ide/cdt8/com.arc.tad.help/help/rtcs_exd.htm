@@ -1,0 +1,110 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN" "http://www.w3.org/MarkUp/Wilbur/HTML32.dtd">
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+    <meta name="GENERATOR" content="Quadralay WebWorks Publisher 2003 for Word 8.0.0.1194">
+    <meta name="TEMPLATEBASE" content="ARCTechPubsv6">
+    <meta name="LASTUPDATED" content="01/27/12 13:02:36">
+<link rel="first" href="tad_help.htm">  <link rel="prev" href="rtcs_exc.htm"><link rel="next" href="rtcs_exe.htm">
+    <link rel="StyleSheet" href="document.css" type="text/css" media="screen">
+    <title>RTCS Examine TCP Control Block Window</title>
+  </head>
+
+  <body>
+
+    <table width="100%" border="0" cellpadding="0" cellspacing="0" class="header">
+      <tr> 
+        <td class="breadcrumbs">
+	<a href="tad_help.htm"> MQX&#174; Task Aware Debug Help</a> > <a href="rtcs_win.htm"> RTCS Windows</a> > RTCS Examine TCP Control Block Window
+        </td>
+        <td align="right" valign="top" class="navigator" nowrap>
+<a href="rtcs_exc.htm"><img src="images/sprev.gif" border="0" alt="Previous" title="Previous"></a><a href="rtcs_exe.htm"><img src="images/snext.gif" border="0" alt="Next" title="Next"></a>
+        </td>
+      </tr>
+    </table>
+
+    <hr align="left">
+
+    <blockquote>
+<h3 ><a name="wp9001089">
+RTCS Examine TCP Control Block Window</a></h3>
+
+
+<p >
+<a name="wp9001090">The <b>RTCS Examine TCP Control Block</b> window displays the current state of a TCP control block.</a></p>
+<p ><b><i><a name="wp9001091">Displayed Fields</a></i></b></p><p >
+<a name="wp9001092"><b>TCP Control Block - State</b></a></p>
+<p >
+<a name="wp9001093">Current state of the TCP control block, one of the following:</a></p>
+<ul> <li ><code>Bound</code><a name="wp9001094"> </a>
+ <li ><code>Close Wait</code><a name="wp9001095"> </a>
+ <li ><code>Closed</code><a name="wp9001096"> </a>
+ <li ><code>Closing</code><a name="wp9001097"> </a>
+ <li ><code>Established</code><a name="wp9001098"> </a>
+ <li ><code>FinWait 1</code><a name="wp9001099"> </a>
+ <li ><code>FinWait 2</code><a name="wp9001100"> </a>
+ <li ><code>Last Ack</code><a name="wp9001101"> </a>
+ <li ><code>Listen</code><a name="wp9001102"> </a>
+ <li ><code>Syn Received</code><a name="wp9001103"> </a>
+ <li ><code>Syn Sent</code><a name="wp9001104"> </a>
+ <li ><code>Time Wait</code><a name="wp9001105"> </a>
+</ul><p ><b><i><a name="wp9001106">TCP Control Block-Last Error</a></i></b></p><p >
+<a name="wp9001107">Last error code received from the lower layer or the last soft error.</a></p>
+<p ><b><i><a name="wp9001108">Local End Point</a></i></b></p><p >
+<a name="wp9001109">Local host IP address and port number.</a></p>
+<p ><b><i><a name="wp9001110">Remote End Point</a></i></b></p><p >
+<a name="wp9001111">Remote host IP address and port number.</a></p>
+<p ><b><i><a name="wp9001112">Type of Service</a></i></b></p><p >
+<a name="wp9001113">IP type of service.</a></p>
+<p ><b><i><a name="wp9001114">Displayed fields-Receive Parameters</a></i></b></p><p ><b><i><a name="wp9001115">Window size</a></i></b></p><p >
+<a name="wp9001116">Size of the receive buffer.</a></p>
+<p ><b><i><a name="wp9001117">Rx Buffer Address</a></i></b></p><p >
+<a name="wp9001118">Address of the default receive buffer. </a></p>
+<p ><b><i><a name="wp9001119">Seq# first byte</a></i></b></p><p >
+<a name="wp9001120">Sequence number for the first byte in the receive buffer. </a></p>
+<p ><b><i><a name="wp9001121">Seq# to receive</a></i></b></p><p >
+<a name="wp9001122">Sequence number for the next byte received.</a></p>
+<p ><b><i><a name="wp9001123">Window used</a></i></b></p><p >
+<a name="wp9001124">Size of the window that was used.</a></p>
+<p ><b><i><a name="wp9001125">Window Remaining</a></i></b></p><p >
+<a name="wp9001126">Size of the window remaining.</a></p>
+<p ><b><i><a name="wp9001127">Max Segment Size</a></i></b></p><p >
+<a name="wp9001128">Maximum segment size for receiving.</a></p>
+<p ><b><i><a name="wp9001129">Pending Rcvs</a></i></b></p><p >
+<a name="wp9001130">Number of pending receive commands for the connection.</a></p>
+<p ><b><i><a name="wp9001131">Displayed fields-Send Parameters</a></i></b></p><p ><b><i><a name="wp9001132">Window Size</a></i></b></p><p >
+<a name="wp9001133">Size of the send buffer.</a></p>
+<p ><b><i><a name="wp9001134">Tx Buffer Address</a></i></b></p><p >
+<a name="wp9001135">Address of the default send buffer.</a></p>
+<p ><b><i><a name="wp9001136">Next Available Byte</a></i></b></p><p >
+<a name="wp9001137">Next available byte in the send buffer.</a></p>
+<p ><b><i><a name="wp9001138">First Seq#</a></i></b></p><p >
+<a name="wp9001139">Sequence number for the first byte in the send buffer.</a></p>
+<p ><b><i><a name="wp9001140">ReTx Timeout</a></i></b></p><p >
+<a name="wp9001141">Current value of the retransmission timeout.</a></p>
+<p ><b><i><a name="wp9001142">Max ReTx Timeout</a></i></b></p><p >
+<a name="wp9001143">Current value of the maximum retransmission timeout.</a></p>
+<p ><b><i><a name="wp9001144">Round Trip Time</a></i></b></p><p >
+<a name="wp9001145">Average estimated round-trip time.</a></p>
+<p ><b><i><a name="wp9001146">Max Segment Size</a></i></b></p><p >
+<a name="wp9001147">Maximum segment size for sending.</a></p>
+<p ><b><i><a name="wp9001148">Pending Sends</a></i></b></p><p >
+<a name="wp9001149">Number of pending send commands.</a></p>
+<p ><b><i><a name="wp9001150">Size of Send Buffers</a></i></b></p><p >
+<a name="wp9001151">Total size of send buffers.</a></p>
+    </blockquote>
+    <p></p>
+    <hr>
+
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" class="footer">
+      <tr>
+        <td>
+          
+        </td>
+        <td align="right" valign="top" class="navigator">
+<a href="rtcs_exc.htm"><img src="images/sprev.gif" border="0" alt="Previous" title="Previous"></a><a href="rtcs_exe.htm"><img src="images/snext.gif" border="0" alt="Next" title="Next"></a>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>

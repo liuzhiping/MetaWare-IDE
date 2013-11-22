@@ -1,0 +1,41 @@
+<view name="Popup after recomputing">
+    <menu>
+        <item text="Break"/>
+        <item text="Set PC"/>
+        <item text="Profiling">
+            <menu>
+                <item text="icnt"/>
+                <item text="LIMM cnt"/>
+                <item text="call count"/>
+                <item text="killed"/>
+                <item text="delay_killed"/>
+                <item text="profint"/>
+                <item text="iall-hp0"/>
+                <item text="hp1" selection="1"/>
+                <item text="ijmptak-hp2"/>
+                <item text="iuser-hp3" selection="1"/>
+                <item text="hp4"/>
+                <item text="hp5" selection="1"/>
+                <item text="hp6"/>
+                <item text="hp7" selection="1"/>
+                <item text="Stmt cnt from icnt"/>
+                <item text=""/>
+                <item text="Stmt cnt from icnt display"/>
+                <item text="icnt display"/>
+                <item text="LIMM cnt display"/>
+                <item text="call count display"/>
+                <item text="killed display"/>
+                <item text="delay_killed display"/>
+                <item text="profint display"/>
+                <item text="iall-hp0 display"/>
+                <item text="hp1 display"/>
+                <item text="ijmptak-hp2 display"/>
+                <item text="iuser-hp3 display"/>
+                <item text="hp4 display"/>
+                <item text="hp5 display"/>
+                <item text="hp6 display"/>
+                <item text="hp7 display"/>
+            </menu>
+        </item>
+    </menu>
+</view>

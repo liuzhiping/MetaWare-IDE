@@ -1,0 +1,9 @@
+<content>
+
+**** Clean-only build of configuration Debug for project No Cygwin ****
+
+gmake clean 
+C:\ARC\MetaWare\ide\utils\rm.exe -f  ./queens.o  ./depend/queens.u   NoCygwin.elf
+' '
+
+</content>

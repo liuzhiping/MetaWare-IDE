@@ -1,0 +1,150 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN" "http://www.w3.org/MarkUp/Wilbur/HTML32.dtd">
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+    <meta name="GENERATOR" content="Quadralay WebWorks Publisher 2003 for FrameMaker 8.0.0.1194">
+    <meta name="TEMPLATEBASE" content="temp">
+    <link rel="StyleSheet" href="document.css" type="text/css" media="screen">
+    <title>Running a CMPD Session</title>
+  </head>
+
+  <body>
+
+    <table width="100%" border="0" cellpadding="0" cellspacing="0" class="header">
+      <tr>
+<!--Disabling Breadcrumbs to use Eclipse version 10/2009
+        <td class="breadcrumbs">
+	<a href="ide_guid.htm"> DesignWare ARC MetaWare IDE User's Guide </a> > <a href="tasks.htm"><br>Tasks</a> > <a href="mw_o_cmp.htm">Debugging with CMPD Extensions</a> > Running a CMPD Session
+        </td>
+-->
+        <td align="right" valign="top" class="navigator" nowrap>
+<a href="cmpd_ind.htm"><img src="images/sprev.gif" border="0" alt="Previous"></a><a href="referenc.htm"><img src="images/snext.gif" border="0" alt="Next"></a>
+        </td>
+      </tr>
+    </table>
+
+    <hr align="left">
+
+    <blockquote>
+<h4 >
+Running a CMPD Session
+<a name="wp920254"> </a></h4>
+
+<p >
+After you configure a CMPD session, click <b>Debug</b> to launch it. The processes appear in the <b>Debug</b> view. Multiple instances of the same application are followed by a number in brackets [ ]. 
+<a name="wp918476"> </a></p>
+<a name="wp918477">
+  <h5 >
+4.26.4.1	 Basic Debugging
+ </a></h5>
+<p >
+Select the process or processes to which you wish commands to apply.<div align="left"><img src="images/SelMultiprocDebugView.gif" alt="Selecting processes to apply commands to" border="0" hspace="0" vspace="0"></div>
+<a name="wp918481"> </a></p>
+<p >
+You can apply any of the following to the selected process or processes:
+<a name="wp918482"> </a></p>
+<ul> <li >Buttons on the <b>Debug</b> view toolbar (running and stepping commands, suspend, animation items, etc.)<a name="wp918483"> </a>
+ <li >Debugger commands you enter in the debugger <b>Commands</b> view <div align="left"><img src="images/sc_cmd.gif" alt="Commands view for entering debugger commands" border="0" hspace="0" vspace="0"></div><a name="wp918487"> </a>
+</ul><dl>
+  <dt >See the <i>MetaWare Debugger User's Guide</i> for special CMPD command-line commands.<a name="wp918488"> </a></dl>
+<blockquote >
+
+
+<table border="1" cellpadding="5" cellspacing="0">
+  <caption></caption>
+  <tr>
+    <td><table border="0" cellpadding="5" cellspacing="0">
+  <caption></caption>
+  <tr valign=top>
+    <td><div ><img border="0" src="images/note.png">
+</div></td>
+    <td><div ></div></td>
+</tr></table>
+<a name="wp927635"> </a>
+</td>
+    <td><div >When you set a breakpoint, the IDE attempts to apply it to every process if possible. The only way to limit a breakpoint to a single process is to set it using a command, for example:<br><code>[1] break queens.c!69</code><a name="wp927637"> </a></div></td>
+  </tr>
+</table>
+
+
+
+
+
+<a name="wp927629"> </a></blockquote>
+ <a name="wp918490">
+  <h5 >
+4.26.4.2	 Additional Techniques
+ </a></h5>
+<ul> <li >Debugger windows apply to the currently selected process. For example, the content of the <b>Source</b> window changes as you select different processes in the <b>Debug</b> view (unless the processes are suspended).<a name="wp918491"> </a>
+ <li >You can override the GUI and address processes by their <code>[</code><i>instance_number</i><code>]</code> and name using debugger commands. Thus, if process 1 is selected and you enter <code>[2]</code><i>run</i>, the command applies to process 2, not 1.<a name="wp918492"> </a>
+ <li >Expand a process in the <b>Debug</b> view to see its threads. In a multithreaded application, you can double-click any thread in the expanded list to lock windows for that process to that thread. <a name="wp918493"> </a>
+ <li >To set a thread-specific breakpoint, do the following:<a name="wp918494"> </a>
+ <li >Set a breakpoint using the <b>C/C++ Editor</b> view. <a name="wp918495"> </a>
+ <li >Right-click your breakpoint and select <b>Breakpoint Properties...</b>.<a name="wp918496"> </a>
+ <li >Click <b>Filtering</b>. <a name="wp918497"> </a>
+ <li >Check the threads to which to apply the breakpoint and click <b>OK</b>.<a name="wp918498"> </a>
+</ul><blockquote >
+
+
+<table border="1" cellpadding="5" cellspacing="0">
+  <caption></caption>
+  <tr>
+    <td><table border="0" cellpadding="5" cellspacing="0">
+  <caption></caption>
+  <tr valign=top>
+    <td><div ><img border="0" src="images/hint.png">
+</div></td>
+    <td><div ></div></td>
+</tr></table>
+<a name="wp927652"> </a>
+</td>
+    <td><div >The <code>ARC/MetaWare/arc/cmpd</code> directory contains example applications that are discussed in detail in the <i>MetaWare Debugger User's Guide</i>.<a name="wp927654"> </a></div></td>
+  </tr>
+</table>
+
+
+
+
+
+<a name="wp927646"> </a></blockquote>
+ <a name="wp918500">
+  <h5 >
+Related Concept
+ </a></h5>
+<ul> <li ><a href="mw_c_cmp.htm#wp880034">Coordinated Multiprocess Debugger (CMPD)</a><a name="wp918504"> </a>
+</ul><a name="wp918505">
+  <h5 >
+Related Tasks
+ </a></h5>
+<ul> <li ><a href="mw_t_cmp.htm#wp918334">Configuring a CMPD Session</a><a name="wp918509"> </a>
+ <li ><a href="mw_t_cma.htm#wp920254">Running a CMPD Session</a><a name="wp918513"> </a>
+ <li ><a href="mw_t_ani.htm#wp887492">Debugging: Animating a Process</a><a name="wp918517"> </a>
+ <li ><a href="mw_t_ter.htm#wp917934">Specifying a Terminal or COMM-Port Simulator</a><a name="wp918521"> </a>
+ <li ><a href="mw_t_run.htm#wp913987">Defining MetaWare Debugger Settings</a><a name="wp918525"> </a>
+ <li ><a href="mw_t_cmd.htm#wp918174">Using Debugger Commands</a><a name="wp918529"> </a>
+</ul><a name="wp918530">
+  <h5 >
+Related Reference
+ </a></h5>
+<ul> <li ><a href="mw_u_cmn.htm#wp992756">Debugger Commands</a><a name="wp918534"> </a>
+ <li >Eclipse <em>C/C++ Development User Guide</em><a name="wp918538"> </a>
+ <li ><i>MetaWare Debugger User's Guide</i><a name="wp918539"> </a>
+</ul>
+    </blockquote>
+    <p></p>
+    <hr>
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" class="footer">
+      <tr>
+        <td>
+
+        </td>
+        <td align="right" valign="top" class="navigator">
+<a href="cmpd_ind.htm"><img src="images/sprev.gif" border="0" alt="Previous"></a><a href="referenc.htm"><img src="images/snext.gif" border="0" alt="Next"></a>
+        </td>
+      </tr>
+    </table>
+<p> <font size="-3">
+Copyright © 2012 Synopsys, Inc. <br />
+Some portions of this document copyright IBM Corporation and others 2000, 2004.</font></p>
+  </body>
+</html>

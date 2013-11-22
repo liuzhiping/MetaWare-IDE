@@ -1,0 +1,103 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN" "http://www.w3.org/MarkUp/Wilbur/HTML32.dtd">
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+    <meta name="GENERATOR" content="Quadralay WebWorks Publisher 2003 for Word 8.0.0.1194">
+    <meta name="TEMPLATEBASE" content="ARCTechPubsv6">
+    <meta name="LASTUPDATED" content="01/27/12 13:02:36">
+<link rel="first" href="tad_help.htm">  <link rel="prev" href="rtcs_icm.htm"><link rel="next" href="rtcs_ip_.htm">
+    <link rel="StyleSheet" href="document.css" type="text/css" media="screen">
+    <title>RTCS IGMP Statistics Window</title>
+  </head>
+
+  <body>
+
+    <table width="100%" border="0" cellpadding="0" cellspacing="0" class="header">
+      <tr> 
+        <td class="breadcrumbs">
+	<a href="tad_help.htm"> MQX&#174; Task Aware Debug Help</a> > <a href="rtcs_win.htm"> RTCS Windows</a> > RTCS IGMP Statistics Window
+        </td>
+        <td align="right" valign="top" class="navigator" nowrap>
+<a href="rtcs_icm.htm"><img src="images/sprev.gif" border="0" alt="Previous" title="Previous"></a><a href="rtcs_ip_.htm"><img src="images/snext.gif" border="0" alt="Next" title="Next"></a>
+        </td>
+      </tr>
+    </table>
+
+    <hr align="left">
+
+    <blockquote>
+<h3 ><a name="wp9001197">
+RTCS IGMP Statistics Window</a></h3>
+
+
+<p >
+<a name="wp9001198">The <b>RTCS IGMP Statistics</b> window displays the statistics that RTCS collected for IGMP.</a></p>
+<p ><b><i><a name="wp9001199">Displayed Fields</a></i></b></p><p ><b><i><a name="wp9001200">[R/T]X_TOTAL</a></i></b></p><p >
+<a name="wp9001201">Total number of packets received or sent.</a></p>
+<p ><b><i><a name="wp9001202">[R/T]X_MISSED</a></i></b></p><p >
+<a name="wp9001203">Number of packets that were discarded due to lack of resources.</a></p>
+<p ><b><i><a name="wp9001204">[R/T]X_DISCARDED</a></i></b></p><p >
+<a name="wp9001205">Number of packets that were discarded for all other reasons.</a></p>
+<p ><b><i><a name="wp9001206">[R/T]X_ERRORS </a></i></b></p><p >
+<a name="wp9001207">Number of times that an internal error occurred. Internal errors indicate a catastrophic failure, and the <b>Rx Errors</b> and <b>Tx Errors</b> fields record the nature of the failure.</a></p>
+<table border="1" cellpadding="5" cellspacing="0">
+  <caption></caption>
+  <tr>
+    <td><div ><b><a name="wp9000092">Field Value</a></b></div></td>
+    <td><div ><b><a name="wp9000093">Meaning</a></b></div></td>
+  </tr>
+  <tr>
+    <td><div ><a name="wp9000094"><code>Error</code></a></div></td>
+    <td><div ><a name="wp9000095">RTCS error code that indicates the type of failure</a></div></td>
+  </tr>
+  <tr>
+    <td><div ><a name="wp9000096"><code>Parameter</code></a></div></td>
+    <td><div ><a name="wp9000097">Parameter that might help you debug the failure (parameter type or value depends on the error that occurred)</a></div></td>
+  </tr>
+  <tr>
+    <td><div ><a name="wp9000098"><code>Task Id</code></a></div></td>
+    <td><div ><a name="wp9000099">Task ID of the task that was active when the error occurred</a></div></td>
+  </tr>
+  <tr>
+    <td><div ><a name="wp9000100"><code>TaskErrCode</code></a></div></td>
+    <td><div ><a name="wp9000101">Task error code of the active task</a></div></td>
+  </tr>
+  <tr>
+    <td><div ><a name="wp9000102"><code>MemPtr</code></a></div></td>
+    <td><div ><a name="wp9000103">Current highwater mark for core memory</a></div></td>
+  </tr>
+  <tr>
+    <td><div ><a name="wp9000104"><code>Stack</code></a></div></td>
+    <td><div ><a name="wp9000105">If non-zero, indicates that the stack of the active task was out of bounds when the error occurred</a></div></td>
+  </tr>
+</table>
+<p ><b><i><a name="wp9001209">Rx, Bad Type</a></i></b></p><p >
+<a name="wp9001210">Number of packets received with an unrecognized or invalid type.</a></p>
+<p ><b><i><a name="wp9001211">Rx, Bad Checksum</a></i></b></p><p >
+<a name="wp9001212">Number of received packets with an invalid checksum.</a></p>
+<p ><b><i><a name="wp9001213">Rx, Smaller Datagram</a></i></b></p><p >
+<a name="wp9001214">Number of packets received that were smaller than the minimum size.</a></p>
+<p ><b><i><a name="wp9001215">Rx, Query</a></i></b></p><p >
+<a name="wp9001216">Number of packets received of type query.</a></p>
+<p ><b><i><a name="wp9001217">Rx, Report</a></i></b></p><p >
+<a name="wp9001218">Number of report packets received. </a></p>
+<p ><b><i><a name="wp9001219">Tx, Query</a></i></b></p><p >
+<a name="wp9001220">Number of query packets sent.</a></p>
+<p ><b><i><a name="wp9001221">Tx, Report</a></i></b></p><p >
+<a name="wp9001222">Number of report packets sent. </a></p>
+    </blockquote>
+    <p></p>
+    <hr>
+
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" class="footer">
+      <tr>
+        <td>
+          
+        </td>
+        <td align="right" valign="top" class="navigator">
+<a href="rtcs_icm.htm"><img src="images/sprev.gif" border="0" alt="Previous" title="Previous"></a><a href="rtcs_ip_.htm"><img src="images/snext.gif" border="0" alt="Next" title="Next"></a>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>

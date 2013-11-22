@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+<plugin
+>
+   <extension
+         point="org.eclipse.cdt.managedbuilder.ui.newWizardPages">
+      <wizardPage
+            ID="com.arc.cdt.toolchain.bcf"
+            operationClass="com.arc.cdt.toolchain.internal.ui.bcf.ArcBcfWizardAction"
+            pageClass="com.arc.cdt.toolchain.internal.ui.bcf.ArcBcfWizardPage">
+         <projectType
+               projectTypeID="com.arc.cdt.toolchain.arc.exeProject">
+         </projectType>
+         <projectType
+               projectTypeID="com.arc.cdt.toolchain.arc.libProject">
+         </projectType>
+         <projectType
+               projectTypeID="com.arc.cdt.toolchain.arc.av2em.exeProject">
+         </projectType>
+         <projectType
+               projectTypeID="com.arc.cdt.toolchain.arc.av2em.libProject">
+         </projectType>
+         <projectType
+               projectTypeID="com.arc.cdt.toolchain.arc.av2hs.exeProject">
+         </projectType>
+         <projectType
+               projectTypeID="com.arc.cdt.toolchain.arc.av2hs.libProject">
+         </projectType>
+         <projectType
+               projectTypeID="com.arc.cdt.toolchain.arc.arc700.exeProject">
+         </projectType>
+         <projectType
+               projectTypeID="com.arc.cdt.toolchain.arc.arc700.libProject">
+         </projectType>
+         <projectType
+               projectTypeID="com.arc.cdt.toolchain.arc.arc600.exeProject">
+         </projectType>
+         <projectType
+               projectTypeID="com.arc.cdt.toolchain.arc.arc600.libProject">
+         </projectType>
+         <projectType
+               projectTypeID="com.arc.cdt.toolchain.arc.arc601.exeProject">
+         </projectType>
+         <projectType
+               projectTypeID="com.arc.cdt.toolchain.arc.arc601.libProject">
+         </projectType>
+         <projectType
+               projectTypeID="com.arc.cdt.toolchain.arc.arc5.exeProject">
+         </projectType>
+         <projectType
+               projectTypeID="com.arc.cdt.toolchain.arc.arc5.libProject">
+         </projectType>
+         <projectType
+               projectTypeID="com.arc.cdt.toolchain.arc.av2em4.exeProject">
+         </projectType>
+         <projectType
+               projectTypeID="com.arc.cdt.toolchain.arc.av2em4.libProject">
+         </projectType>
+      </wizardPage>
+   </extension>
+   <extension
+         point="org.eclipse.cdt.ui.cPropertyTab">
+      <tab
+            class="com.arc.cdt.toolchain.internal.ui.bcf.BcfPropertyTab"
+            name="TCF Association"
+            parent="org.eclipse.cdt.managedbuilder.ui.properties.Page_BuildSettings"
+            tooltip="ARChitect-generated TCF file from which option defaults are to be extracted">
+      </tab>
+   </extension>
+</plugin>

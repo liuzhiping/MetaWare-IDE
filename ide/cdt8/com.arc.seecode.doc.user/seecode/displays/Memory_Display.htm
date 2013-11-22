@@ -1,0 +1,33 @@
+<html>
+<head>
+<title>Memory window</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel=StyleSheet href="../default.css">
+</head>
+
+<body>
+
+<h1>Memory window</h1>
+
+<p>The Memory window provides memory usage information. By default, memory is 
+  displayed in ascending order by address. To display the information in descending 
+  order instead, click the <b>memdown</b> button.</p>
+
+<p>In addition, memory usage can be shown in a column configuration. To display memory usage in a column, set the number of bytes per line to 4. To change the minimum width of hexadecimal addresses displayed, enter the following in the <b>Command:</b> field, </p><p><code>set addr_width=<i>value</i></code></p><p>where <i>value</i> is the desired width.</p>
+
+
+<p><i>Tip:</i>&nbsp;&nbsp;If the value of a register (such as the stack pointer) happens to coincide with the address on display (the stack pointer register is pointing to the memory address), that register is displayed to the right of the column.</p>
+
+<h2>Examining memory</h2>
+
+<p>To display memory as a certain type, view the memory in an Examine window. To examine memory:</p>
+
+<ol>
+  <li>In the Memory window, right-click a line, and then click <b>Examine</b>. 
+</ol>
+
+<p>The selected address is displayed with the prefix <tt>*(int*)</tt>, which means that the address has been cast to a pointer-to-integer. You can then change the &quot;int&quot; part of the prefix to any type. Subsequent examine selections from the Memory display change the address only: your selected type preference is preserved.</p>
+
+<p>&nbsp;</p>
+</body>
+</html>
