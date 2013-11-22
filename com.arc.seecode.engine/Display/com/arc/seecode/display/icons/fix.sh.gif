@@ -1,6 +1,0 @@
-for f in $*; do
-    case $f in
-       *.java);;
-       *) mv $f $f.gif;;
-    esac
-done

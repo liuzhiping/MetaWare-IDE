@@ -1,7 +1,0 @@
-Manifest-Version: 1.0
-Bundle-ManifestVersion: 2
-Bundle-Name: Debugger Engine for Linux
-Bundle-SymbolicName: com.arc.debugger.linux
-Bundle-Version: 8.3.10
-Bundle-Vendor: ARC International
-Fragment-Host: com.arc.debugger;bundle-version="8.3.10"

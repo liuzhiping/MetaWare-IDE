@@ -1,8 +1,0 @@
-Manifest-Version: 1.0
-Bundle-ManifestVersion: 2
-Bundle-Name: Win32 Fragment
-Bundle-SymbolicName: com.arc.debugger.win32
-Bundle-Version: 8.3.10.1374
-Bundle-Vendor: ARC
-Fragment-Host: com.arc.debugger;bundle-version="8.3.10"
-Bundle-RequiredExecutionEnvironment: JavaSE-1.6

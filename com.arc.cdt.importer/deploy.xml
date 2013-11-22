@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<project default="plugin_export" name="build">
-	<target name="plugin_export">
-		<pde.exportPlugins destination="C:\Eclipse-3.1" exportSource="false" exportType="directory" plugins="com.arc.cdt.toolchain.arc" source="1.5" target="1.5" useJARFormat="false"/>
-	</target>
-</project>

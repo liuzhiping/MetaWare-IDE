@@ -1,8 +1,0 @@
-/BuildDescriptionManager.java/1.10/Thu Mar  4 00:56:32 2010/-kk/Tcdt_7_0
-/IBuildCommand.java/1.3/Thu Mar  4 00:56:34 2010/-kk/Tcdt_7_0
-/IBuildDescription.java/1.7/Thu Mar  4 00:56:34 2010/-kk/Tcdt_7_0
-/IBuildDescriptionFactory.java/1.4/Thu Mar  4 00:56:34 2010/-kk/Tcdt_7_0
-/IBuildIOType.java/1.4/Thu Mar  4 00:56:34 2010/-kk/Tcdt_7_0
-/IBuildResource.java/1.7/Thu Mar  4 00:56:34 2010/-kk/Tcdt_7_0
-/IBuildStep.java/1.4/Thu Mar  4 00:56:34 2010/-kk/Tcdt_7_0
-/IStepVisitor.java/1.5/Thu Mar  4 00:56:34 2010/-kk/Tcdt_7_0
